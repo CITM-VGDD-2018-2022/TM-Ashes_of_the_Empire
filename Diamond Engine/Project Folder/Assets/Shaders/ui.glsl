@@ -28,7 +28,7 @@ void main()
 {
 	if (uiHasBlendTexture == true)
 	{
-		fragmentColor = mix(texture(ourTexture, textureCoords), texture(uiBlendTexture, textureCoords), uiBlendTextureValue);
+		fragmentColor = mix(texture(uiBlendTexture, textureCoords), texture(ourTexture, textureCoords), uiBlendTextureValue);
 	}
 	
 	else
@@ -36,6 +36,7 @@ void main()
 }
 
 #endif
+
 
 
 
