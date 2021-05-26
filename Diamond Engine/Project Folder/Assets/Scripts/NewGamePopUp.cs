@@ -10,7 +10,7 @@ public class NewGamePopUp : DiamondComponent
 	{
         if (confirmNewGame)
         {
-            StartMenu.StartGame();
+            StartMenu.StartFadeIn();
         }
         else
         {

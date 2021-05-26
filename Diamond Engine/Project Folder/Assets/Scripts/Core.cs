@@ -691,7 +691,7 @@ public class Core : Entity
 
 
             if ((Input.GetKey(DEKeyCode.LSHIFT) == KeyState.KEY_REPEAT && Input.GetKey(DEKeyCode.LALT) == KeyState.KEY_REPEAT &&
-                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN)
+                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f)/* || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN*/)
             {
                 InternalCalls.CreateUIPrefab("Library/Prefabs/1342862578.prefab", new Vector3(0, 0, 0), new Quaternion(0, 0, 0), new Vector3(1, 1, 1));
             }
@@ -732,7 +732,7 @@ public class Core : Entity
 
 
             if ((Input.GetKey(DEKeyCode.LSHIFT) == KeyState.KEY_REPEAT && Input.GetKey(DEKeyCode.LALT) == KeyState.KEY_REPEAT &&
-                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN)
+                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f)/* || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN*/)
             {
                 InternalCalls.CreateUIPrefab("Library/Prefabs/1342862578.prefab", new Vector3(0, 0, 0), new Quaternion(0, 0, 0), new Vector3(1, 1, 1));
             }
@@ -790,7 +790,7 @@ public class Core : Entity
 
 
             if ((Input.GetKey(DEKeyCode.LSHIFT) == KeyState.KEY_REPEAT && Input.GetKey(DEKeyCode.LALT) == KeyState.KEY_REPEAT &&
-                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN)
+                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) /*|| Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN*/)
             {
                 InternalCalls.CreateUIPrefab("Library/Prefabs/1342862578.prefab", new Vector3(0, 0, 0), new Quaternion(0, 0, 0), new Vector3(1, 1, 1));
             }
@@ -830,7 +830,7 @@ public class Core : Entity
 
 
             if ((Input.GetKey(DEKeyCode.LSHIFT) == KeyState.KEY_REPEAT && Input.GetKey(DEKeyCode.LALT) == KeyState.KEY_REPEAT &&
-                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN)
+                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) /*|| Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN*/)
             {
                 InternalCalls.CreateUIPrefab("Library/Prefabs/1342862578.prefab", new Vector3(0, 0, 0), new Quaternion(0, 0, 0), new Vector3(1, 1, 1));
             }
@@ -898,7 +898,7 @@ public class Core : Entity
 
 
             if ((Input.GetKey(DEKeyCode.LSHIFT) == KeyState.KEY_REPEAT && Input.GetKey(DEKeyCode.LALT) == KeyState.KEY_REPEAT &&
-                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f) || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN)
+                Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN && myDeltaTime != 0.0f)/* || Input.GetGamepadButton(DEControllerButton.BACK) == KeyState.KEY_DOWN*/)
             {
                 InternalCalls.CreateUIPrefab("Library/Prefabs/1342862578.prefab", new Vector3(0, 0, 0), new Quaternion(0, 0, 0), new Vector3(1, 1, 1));
             }
@@ -3375,9 +3375,9 @@ public class Core : Entity
 
     public void NotifyEnemyDeath(GameObject enemy)
     {
-        if(myGrenade1 != null)
+        if (myGrenade1 != null)
         {
-            if(myGrenade1.IsEnabled() == true)
+            if (myGrenade1.IsEnabled() == true)
             {
                 SlowGrenade grenadeComp = myGrenade1.GetComponent<SlowGrenade>();
 

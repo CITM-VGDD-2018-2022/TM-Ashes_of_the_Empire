@@ -377,12 +377,12 @@ public class HubTextController : DiamondComponent
         DiamondPrefs.Write("boKatanStage", boKatanStage);
         DiamondPrefs.Write("greefStage", greefStage);
         DiamondPrefs.Write("ashokaStage", ashokaStage);
-        DiamondPrefs.Write("ashokaStage", caraStage);
+        DiamondPrefs.Write("caraStage", caraStage);
         DiamondPrefs.Write("groguStage", groguStage);
         DiamondPrefs.Write("boKatanInteractionNum", boKatanInteractionNum);
         DiamondPrefs.Write("greefInteractionNum", greefInteractionNum);
         DiamondPrefs.Write("ashokaInteractionNum", ashokaInteractionNum);
-        DiamondPrefs.Write("ashokaInteractionNum", caraInteractionNum);
+        DiamondPrefs.Write("caraInteractionNum", caraInteractionNum);
         DiamondPrefs.Write("groguInteractionNum", groguInteractionNum);
     }
 
@@ -405,7 +405,7 @@ public class HubTextController : DiamondComponent
     }
     public bool GroguHasInteractions()
     {
-        return groguInteractionNum % 3 != 0 && !groguHasInteracted;
+        return groguInteractionNum % 2 != 0 && !groguHasInteracted;
     }
     public bool BoKatanHasInteractions()
     {
@@ -426,7 +426,7 @@ public class HubTextController : DiamondComponent
     }
     public bool GroguCanUpgrade()
     {
-        return groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return groguInteractionNum % 2 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
     public bool BoKatanCanUpgrade()
     {

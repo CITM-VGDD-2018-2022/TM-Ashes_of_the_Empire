@@ -36,16 +36,28 @@ public class StartMenu : DiamondComponent
         
         if (gameObject.Name == "New Game" || gameObject.Name == "Load Game")
         {
-            if (InternalCalls.FindObjectWithName("BlackFade") != null)
+            if (gameObject.Name == "New Game")
             {
-                BlackFade.StartFadeIn();
-                BlackFade.onFadeInCompleted = StartGameButton;
+                DiamondPrefs.LoadData();
+                if (DiamondPrefs.ReadBool("loadData") == true && popUpNewGame != null && menuButtons != null)
+                {
+                    popUpNewGame.EnableNav(true);
+                    menuButtons.EnableNav(false);
+                    if (default_selected != null)
+                        default_selected.GetComponent<Navigation>().Select();
+                    DiamondPrefs.Clear();
+                    return;
+                }
+                DiamondPrefs.Clear();
             }
             else
             {
-                StartGameButton();
-
+                DiamondPrefs.LoadData();
+                if (DiamondPrefs.ReadBool("loadData") == false)
+                    return;
             }
+
+            StartFadeIn();
         }
         else if (gameObject.Name == "Options")
         {
@@ -73,6 +85,19 @@ public class StartMenu : DiamondComponent
         }
     }
 
+    public static void StartFadeIn()
+    {
+        if (InternalCalls.FindObjectWithName("BlackFade") != null)
+        {
+            BlackFade.StartFadeIn();
+            BlackFade.onFadeInCompleted = StartGame;
+        }
+        else
+        {
+            StartGame();
+
+        }
+    }
     public static void StartGame()
     {
         DiamondPrefs.Write("reset", true);
@@ -86,32 +111,6 @@ public class StartMenu : DiamondComponent
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Exploring");
             Debug.Log("Exploring");
         }
-    }
-
-    private void StartGameButton()
-    {
-        if (gameObject.Name == "Load Game")
-        {
-            DiamondPrefs.LoadData();
-            if (DiamondPrefs.ReadBool("loadData") == false)
-                return;
-        }
-        else
-        {
-            DiamondPrefs.LoadData();
-            if (DiamondPrefs.ReadBool("loadData") == true && popUpNewGame != null && menuButtons != null)
-            {
-                popUpNewGame.EnableNav(true);
-                menuButtons.EnableNav(false);
-                if (default_selected != null)
-                    default_selected.GetComponent<Navigation>().Select();
-                DiamondPrefs.Clear();
-                return;
-            }
-            DiamondPrefs.Clear();
-
-        }
-        StartGame();
     }
 
 }
