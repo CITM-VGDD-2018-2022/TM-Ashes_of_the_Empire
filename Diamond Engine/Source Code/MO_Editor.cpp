@@ -542,6 +542,19 @@ void M_Editor::DrawCreateMenu()
 		ImGui::EndMenu();
 	}
 
+	if (ImGui::BeginMenu("Light"))
+	{
+		//TODO: This is temporal, meshes should not laod every time and 
+		//should be stored only once, then only copy mesh pointers.
+		if (ImGui::MenuItem("Directional", nullptr))
+			EngineExternal->moduleGui->CreateDirectionalLight();
+
+		if (ImGui::MenuItem("Area", nullptr))
+			EngineExternal->moduleGui->CreateAreaLight();
+
+		ImGui::EndMenu();
+	}
+
 	if (ImGui::MenuItem("Particle System", nullptr))
 	{
 		GameObject* auxObj= App->moduleScene->CreateGameObject("Particle System", App->moduleScene->root);

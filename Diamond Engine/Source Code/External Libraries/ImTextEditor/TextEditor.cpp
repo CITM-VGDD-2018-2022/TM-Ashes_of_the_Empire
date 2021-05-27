@@ -2902,7 +2902,7 @@ const TextEditor::LanguageDefinition* TextEditor::LanguageDefinition::GLSL()
 		static const char* const keywords[] = {
 			"auto", "break", "case", "char", "const", "continue", "default", "do", "double", "else", "enum", "extern", "float", "for", "goto", "if", "inline", "int", "long", "register", "restrict", "return", "short",
 			"signed", "sizeof", "static", "struct", "switch", "typedef", "union", "unsigned", "void", "volatile", "while", "_Alignas", "_Alignof", "_Atomic", "_Bool", "_Complex", "_Generic", "_Imaginary",
-			"_Noreturn", "_Static_assert", "_Thread_local", "bool", "vec2", "vec3", "vec4", "mat2", "mat3", "mat4", "sampler2D"
+			"_Noreturn", "_Static_assert", "_Thread_local", "bool", "vec2", "vec3", "vec4", "mat2", "mat3", "mat4", "sampler2D", "location"
 		};
 		for (auto& k : keywords)
 			langDef->mKeywords.insert(k);
@@ -2910,7 +2910,8 @@ const TextEditor::LanguageDefinition* TextEditor::LanguageDefinition::GLSL()
 		static const char* const identifiers[] = {
 			"abort", "abs", "acos", "asin", "atan", "atexit", "atof", "atoi", "atol", "ceil", "clock", "cosh", "ctime", "div", "exit", "fabs", "floor", "fmod", "getchar", "getenv", "isalnum", "isalpha", "isdigit", "isgraph",
 			"ispunct", "isspace", "isupper", "kbhit", "log10", "log2", "log", "memcmp", "modf", "pow", "putchar", "putenv", "puts", "rand", "remove", "rename", "sinh", "sqrt", "srand", "strcat", "strcmp", "strerror", "time", "tolower", "toupper",
-			"uniform", "layout", "dot", "max", "min", "in", "out", "mix", "normalize", "texture", "clamp", "distance", "length", "isnan", "cross", "transpose"
+			"uniform", "layout", "dot", "max", "min", "in", "out", "mix", "normalize", "texture", "clamp", "distance", "length", "isnan", "cross", "transpose", "gl_Position", "gl_FragDepth", "gl_Layer", "EmitVertex", "EndPrimitive", "gl_in", 
+			"samplerCube"
 		};
 		for (auto& k : identifiers)
 		{

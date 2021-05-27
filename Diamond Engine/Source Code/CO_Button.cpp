@@ -17,8 +17,16 @@
 
 
 
-C_Button::C_Button(GameObject* gameObject) :Component(gameObject), sprite_button_pressed(nullptr), sprite_button_hovered(nullptr), sprite_button_unhovered(nullptr), script_name(""),
-num_sprite_used(BUTTONSTATE::BUTTONUNHOVERED), is_selected(false), pressedSFX(""), hoverSFX("")
+C_Button::C_Button(GameObject* gameObject) : Component(gameObject), 
+	sprite_button_pressed(nullptr), 
+	sprite_button_hovered(nullptr), 
+	sprite_button_unhovered(nullptr), 
+	script_name(""),
+	num_sprite_used(BUTTONSTATE::BUTTONUNHOVERED), 
+	is_selected(false), 
+	pressedSFX(""), 
+	hoverSFX(""), 
+	textureBlendTimer(0.0f)
 {
 	name = "Button";
 	thisAudSource = new C_AudioSource(gameObject);
@@ -63,12 +71,30 @@ void C_Button::Update()
 		if (is_selected)
 		{
 			PlayHoveredSFX();
-			ChangeTexture(BUTTONSTATE::BUTTONHOVERED);
+			ChangeTexture(BUTTONSTATE::BUTTONHOVERED, BUTTONSTATE::BUTTONUNHOVERED);
 		}
 		break;
 	}
 
+
+	if (textureBlendTimer < TEXTURE_BLEND_DURATION)
+	{
+		textureBlendTimer += EngineExternal->GetDT();
+
+		C_Image2D* img = static_cast<C_Image2D*>(gameObject->GetComponent(TYPE::IMAGE_2D));
+
+		if (img != nullptr)
+			img->blendValue = textureBlendTimer / TEXTURE_BLEND_DURATION;
+	}
+	else
+	{
+		C_Image2D* img = static_cast<C_Image2D*>(gameObject->GetComponent(TYPE::IMAGE_2D));
+
+		if (img != nullptr)
+			img->blendValue = 1.0f;
+	}
 }
+
 
 void C_Button::ExecuteButton()
 {
@@ -79,55 +105,77 @@ void C_Button::ExecuteButton()
 		script->ExecuteButton();
 }
 
+
 void C_Button::ReleaseButton()
 {
 	if (is_selected)
-		ChangeTexture(BUTTONSTATE::BUTTONHOVERED);
+		ChangeTexture(BUTTONSTATE::BUTTONHOVERED, BUTTONSTATE::BUTTONPRESSED);
 	else
 		ChangeTexture(BUTTONSTATE::BUTTONUNHOVERED);
 }
 
-void C_Button::ChangeTexture(BUTTONSTATE new_num_sprite)
+
+void C_Button::ChangeTexture(BUTTONSTATE new_num_sprite, BUTTONSTATE previousState)
 {
 	num_sprite_used = new_num_sprite;
 	switch (new_num_sprite)
 	{
 	case BUTTONSTATE::BUTTONPRESSED:
 	{
-		if (sprite_button_pressed == nullptr)
+		if (sprite_button_pressed == nullptr || sprite_button_hovered == nullptr)
 		{
 			return;
 		}
 		C_Image2D* img = static_cast<C_Image2D*>(gameObject->GetComponent(TYPE::IMAGE_2D));
 
 		if (img != nullptr)
+		{
 			img->SetTexture(sprite_button_pressed);
+			img->SetBlendTexture(sprite_button_hovered);
+
+			textureBlendTimer = 0.0f;
+		}
 		break;
 	}
 
 	case BUTTONSTATE::BUTTONHOVERED:
 	{
-		if (sprite_button_hovered == nullptr) {
+		if (sprite_button_hovered == nullptr || sprite_button_unhovered == nullptr)
 			return;
-		}
 
 		C_Image2D* img = static_cast<C_Image2D*>(gameObject->GetComponent(TYPE::IMAGE_2D));
 
 		if (img != nullptr)
+		{
 			img->SetTexture(sprite_button_hovered);
+
+			if (previousState == BUTTONSTATE::BUTTONPRESSED)
+				img->SetBlendTexture(sprite_button_pressed);
+
+			else if (previousState == BUTTONSTATE::BUTTONUNHOVERED)
+				img->SetBlendTexture(sprite_button_pressed);
+
+			textureBlendTimer = 0.0f;
+		}
 		break;
 	}
 
 	case BUTTONSTATE::BUTTONUNHOVERED:
 	{
-		if (sprite_button_unhovered == nullptr) {
+		if (sprite_button_unhovered == nullptr || sprite_button_hovered == nullptr)
+		{
 			return;
 		}
 
 		C_Image2D* img = static_cast<C_Image2D*>(gameObject->GetComponent(TYPE::IMAGE_2D));
 
 		if (img != nullptr)
+		{
 			img->SetTexture(sprite_button_unhovered);
+			img->SetBlendTexture(sprite_button_hovered);
+
+			textureBlendTimer = 0.0f;
+		}
 		break;
 	}
 	}

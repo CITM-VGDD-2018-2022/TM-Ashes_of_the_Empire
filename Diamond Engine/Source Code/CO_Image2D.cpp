@@ -11,6 +11,7 @@
 #include "OpenGL.h"
 
 C_Image2D::C_Image2D(GameObject* gameObject) : Component(gameObject),
+	blendValue(1.0f),
 	texture(nullptr),
 	fadeValue(1.0f)
 {
@@ -22,6 +23,9 @@ C_Image2D::~C_Image2D()
 {
 	if (texture != nullptr)
 		EngineExternal->moduleResources->UnloadResource(texture->GetUID(), !LOADING_SCENE);
+
+	if (blendTexture != nullptr)
+		EngineExternal->moduleResources->UnloadResource(blendTexture->GetUID(), !LOADING_SCENE);
 }
 
 
@@ -81,14 +85,41 @@ void C_Image2D::RenderImage(float* transform, ResourceMaterial* material, unsign
 	material->shader->Bind();
 	material->PushUniforms();
 
-	if (texture != nullptr)
-		glBindTexture(GL_TEXTURE_2D, texture->textureID);
+	GLint modelLoc = 0;
 
-	GLint modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "model_matrix");
+	if (texture != nullptr)
+	{
+		glActiveTexture(GL_TEXTURE0);
+		modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "ourTexture");
+		glUniform1i(modelLoc, 0);
+
+		glBindTexture(GL_TEXTURE_2D, texture->textureID);
+	}
+
+	modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "model_matrix");
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, transform);
 
 	modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "uiFadeValue");
 	glUniform1f(modelLoc, fadeValue);
+
+	if (blendTexture != nullptr)
+	{
+		glActiveTexture(GL_TEXTURE1);
+		modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "uiBlendTexture");
+		glUniform1i(modelLoc, 1);
+		glBindTexture(GL_TEXTURE_2D, blendTexture->textureID);
+
+		modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "uiBlendTextureValue");
+		glUniform1f(modelLoc, blendValue);
+
+		modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "uiHasBlendTexture");
+		glUniform1i(modelLoc, true);
+	}
+	else
+	{
+		modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "uiHasBlendTexture");
+		glUniform1i(modelLoc, false);
+	}
 
 	glBindBuffer(GL_ARRAY_BUFFER, VAO);
 	//glVertexPointer(2, GL_FLOAT, 0, NULL);
@@ -97,8 +128,11 @@ void C_Image2D::RenderImage(float* transform, ResourceMaterial* material, unsign
 
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 
-	//glActiveTexture(GL_TEXTURE0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, 0);
+	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, 0);
 
 	
@@ -145,6 +179,17 @@ void C_Image2D::SetTexture(int UID, Resource::Type _type)
 		EngineExternal->moduleResources->UnloadResource(texture->GetUID());
 
 	texture = tex;
+}
+
+
+void C_Image2D::SetBlendTexture(ResourceTexture* bTexture)
+{
+	EngineExternal->moduleResources->RequestResource(bTexture->GetUID(), bTexture->GetLibraryPath());
+
+	if (blendTexture != nullptr)
+		EngineExternal->moduleResources->UnloadResource(blendTexture->GetUID());
+
+	blendTexture = bTexture;
 }
 
 

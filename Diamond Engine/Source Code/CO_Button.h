@@ -4,13 +4,18 @@
 class ResourceTexture;
 class C_AudioSource;
 
-enum class BUTTONSTATE {
+#define TEXTURE_BLEND_DURATION 0.12
+
+enum class BUTTONSTATE 
+{
+	BUTTON_NULL,
 	BUTTONPRESSED,
 	BUTTONHOVERED,
 	BUTTONUNHOVERED
 };
 
-class C_Button :public Component {
+class C_Button : public Component 
+{
 public:
 	C_Button(GameObject* gameObject);
 	~C_Button() override;
@@ -20,7 +25,7 @@ public:
 	void ExecuteButton();
 	void ReleaseButton();
 
-	void ChangeTexture(BUTTONSTATE new_num_sprite);
+	void ChangeTexture(BUTTONSTATE new_num_sprite, BUTTONSTATE previousState = BUTTONSTATE::BUTTON_NULL);
 
 	void SaveData(JSON_Object* nObj) override;
 	void LoadData(DEConfig& nObj) override;
@@ -43,6 +48,7 @@ private:
 
 public:
 	bool is_selected;
+
 private:
 	ResourceTexture* sprite_button_pressed;
 	ResourceTexture* sprite_button_hovered;
@@ -53,4 +59,6 @@ private:
 
 	std::string hoverSFX;
 	std::string pressedSFX;
+
+	float textureBlendTimer = 0.0f;
 };
