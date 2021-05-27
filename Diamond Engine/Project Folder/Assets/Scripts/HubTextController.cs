@@ -90,7 +90,6 @@ public class HubTextController : DiamondComponent
     {
         ResetInteractionBools();
 
-        PlayerResources.AddResourceBy1(RewardType.REWARD_MILK);
         total_interactions_and_stages = total_stages * total_interactions;
         if (DiamondPrefs.ReadBool("reset"))
             return;
@@ -130,11 +129,6 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.GREEF;
                 npcInteraction = greef.GetComponent<NPCInteraction>();
-                //if (npcInteraction.canUpgrade)
-                //{
-                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                //    IncreaseStage(Interaction.GREEF);
-                //}
             }
         }
 
@@ -218,6 +212,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(greef_portrait_size_x, greef_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages) + greefInteractionNum;
+                greefHasInteracted = true;
                 if (greefInteractionNum % 4 != 0)
                 {
                     greefInteractionNum++;
@@ -230,10 +225,10 @@ public class HubTextController : DiamondComponent
                 else if (greefInteractionNum % 4 == 0 && npcInteraction.canUpgrade)
                 {
                     onUpgrade?.Invoke();
+                    greefHasInteracted = true;
                     IncreaseStage(Interaction.GREEF);
                 }
                 
-                greefHasInteracted = true;
 
                 if (npcInteraction != null)
                 {
@@ -325,7 +320,9 @@ public class HubTextController : DiamondComponent
             case Interaction.GREEF:
                 if (greefStage <= total_stages)
                 {
-                    greefInteractionNum = (greefStage * total_interactions) + 1;
+                    //greefInteractionNum = (greefStage * total_interactions) + 1;
+                    greefInteractionNum += 2;
+                    Debug.Log("NUM GREED AFTER INCREASE: " + greefInteractionNum);
                     DiamondPrefs.Write("greefInteractionNum", greefInteractionNum);
                     ++greefStage;
                     DiamondPrefs.Write("greefStage", greefStage);
@@ -429,22 +426,62 @@ public class HubTextController : DiamondComponent
 
     public bool GreefCanUpgrade()
     {
-        return greefInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        if (greefInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        {
+            greefHasInteracted = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public bool AshokaCanUpgrade()
     {
-        return ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        if(ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        {
+            ashokaHasInteracted = false;
+        return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public bool GroguCanUpgrade()
     {
-        return groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        if(groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        {
+            groguHasInteracted = false;
+            return true;
+        }
+        else
+        {
+            return true;
+        }
     }
     public bool BoKatanCanUpgrade()
     {
-        return boKatanInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        if (boKatanInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        {
+            boKatanHasInteracted = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public bool CaraDuneCanUpgrade()
     {
-        return caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        if(caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        {
+            caraHasInteracted = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
