@@ -224,6 +224,7 @@
 		<Compile Include="Assets\Scripts\PullArea.cs" />
 		<Compile Include="Assets\Scripts\LaserTrap.cs" />
 		<Compile Include="Assets\Scripts\TutoTriggerSwitch.cs" />
+		<Compile Include="Assets\Scripts\AreaLightOscilate.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
