@@ -16,21 +16,31 @@ public class NPCInteraction : DiamondComponent
     public bool canInteract = false;
     public bool canUpgrade = false;
 
+    private bool start = true;
 
     public void Awake()
     {
+        start = true;
         canUpgrade = false;
         if (hubTextController == null)
         {
             return;
         }
+
+
+    }
+
+    private void StartFunction()
+    {
+
+
         HubTextController hubScript = hubTextController.GetComponent<HubTextController>();
         if (hubScript == null)
         {
             return;
         }
-
         hubScript.onUpgrade += UpdateUpgrade;
+        Debug.Log("NNPC ENUM: " + npc.ToString());
 
         switch (npc)
         {
@@ -55,11 +65,25 @@ public class NPCInteraction : DiamondComponent
                 canUpgrade = hubScript.GroguCanUpgrade();
                 break;
         }
+        if (canInteract)
+        {
+            Debug.Log(npc.ToString() + " Can interact");
+        }
+        else
+        {
+            Debug.Log(npc.ToString() + " Can't interact");
 
+        }
     }
 
     public void Update()
     {
+
+        if (start)
+        {
+            StartFunction();
+            start = false;
+        }
         InteractionImage();
         NotificationImage();
     }
@@ -96,7 +120,7 @@ public class NPCInteraction : DiamondComponent
         if (notificationImage == null)
             return;
 
-        if (canUpgrade || canInteract && !notificationImage.IsEnabled())
+        if ((canUpgrade || canInteract) && !notificationImage.IsEnabled())
         {
             notificationImage.Enable(true);
         }

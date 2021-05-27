@@ -90,6 +90,7 @@ public class HubTextController : DiamondComponent
     {
         ResetInteractionBools();
 
+        PlayerResources.AddResourceBy1(RewardType.REWARD_MILK);
         total_interactions_and_stages = total_stages * total_interactions;
         if (DiamondPrefs.ReadBool("reset"))
             return;
@@ -115,11 +116,11 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.BO_KATAN;
                 npcInteraction = bo_katan.GetComponent<NPCInteraction>();
-                if (npcInteraction.canUpgrade)
-                {
-                    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                    IncreaseStage(Interaction.BO_KATAN);
-                }
+                //if (npcInteraction.canUpgrade)
+                //{
+                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
+                //    IncreaseStage(Interaction.BO_KATAN);
+                //}
             }
         }
 
@@ -129,11 +130,11 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.GREEF;
                 npcInteraction = greef.GetComponent<NPCInteraction>();
-                if (npcInteraction.canUpgrade)
-                {
-                    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                    IncreaseStage(Interaction.GREEF);
-                }
+                //if (npcInteraction.canUpgrade)
+                //{
+                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
+                //    IncreaseStage(Interaction.GREEF);
+                //}
             }
         }
 
@@ -143,11 +144,11 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.ASHOKA;
                 npcInteraction = ashoka.GetComponent<NPCInteraction>();
-                if (npcInteraction.canUpgrade)
-                {
-                    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                    IncreaseStage(Interaction.ASHOKA);
-                }
+                //if (npcInteraction.canUpgrade)
+                //{
+                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
+                //    IncreaseStage(Interaction.ASHOKA);
+                //}
             }
         }
 
@@ -157,11 +158,11 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.CARA_DUNE;
                 npcInteraction = cara_dune.GetComponent<NPCInteraction>();
-                if (npcInteraction.canUpgrade)
-                {
-                    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                    IncreaseStage(Interaction.CARA_DUNE);
-                }
+                //if (npcInteraction.canUpgrade)
+                //{
+                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
+                //    IncreaseStage(Interaction.CARA_DUNE);
+                //}
             }
         }
 
@@ -171,11 +172,11 @@ public class HubTextController : DiamondComponent
             {
                 interaction = Interaction.GROGU;
                 npcInteraction = grogu.GetComponent<NPCInteraction>();
-                if (npcInteraction.canUpgrade)
-                {
-                    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
-                    IncreaseStage(Interaction.GROGU);
-                }
+                //if (npcInteraction.canUpgrade)
+                //{
+                //    PlayerResources.SubstractResource(RewardType.REWARD_MILK, 1);
+                //    IncreaseStage(Interaction.GROGU);
+                //}
             }
         }
 
@@ -196,7 +197,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(bo_katan_portrait_size_x, bo_katan_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = boKatanInteractionNum;
-                if (boKatanInteractionNum % 3 != 0)
+                if (boKatanInteractionNum % 4 != 0)
                 {
                     boKatanInteractionNum++;
                     DiamondPrefs.Write("boKatanInteractionNum", boKatanInteractionNum);
@@ -217,12 +218,21 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(greef_portrait_size_x, greef_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages) + greefInteractionNum;
-                if (greefInteractionNum % 3 != 0)
+                if (greefInteractionNum % 4 != 0)
                 {
                     greefInteractionNum++;
                     DiamondPrefs.Write("greefInteractionNum", greefInteractionNum);
                 }
-
+                if (greefInteractionNum % 4 == 0 && !npcInteraction.canUpgrade)
+                {
+                    onUpgrade?.Invoke();
+                }
+                else if (greefInteractionNum % 4 == 0 && npcInteraction.canUpgrade)
+                {
+                    onUpgrade?.Invoke();
+                    IncreaseStage(Interaction.GREEF);
+                }
+                
                 greefHasInteracted = true;
 
                 if (npcInteraction != null)
@@ -239,7 +249,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(ashoka_portrait_size_x, ashoka_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 2) + ashokaInteractionNum;
-                if (ashokaInteractionNum % 3 != 0)
+                if (ashokaInteractionNum % 4 != 0)
                 {
                     ashokaInteractionNum++;
                     DiamondPrefs.Write("ashokaInteractionNum", ashokaInteractionNum);
@@ -261,7 +271,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(ashoka_portrait_size_x, ashoka_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 3) + caraInteractionNum;
-                if (caraInteractionNum % 3 != 0)
+                if (caraInteractionNum % 4 != 0)
                 {
                     caraInteractionNum++;
                     DiamondPrefs.Write("caraInteractionNum", caraInteractionNum);
@@ -281,7 +291,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(grogu_portrait_size_x, grogu_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 4) + groguInteractionNum;
-                if (groguInteractionNum % 2 != 0)
+                if (groguInteractionNum % 3 != 0)
                 {
                     groguInteractionNum++;
                     DiamondPrefs.Write("groguInteractionNum", groguInteractionNum);
@@ -397,43 +407,44 @@ public class HubTextController : DiamondComponent
 
     public bool GreefHasInteractions()
     {
-        return greefInteractionNum % 3 != 0 && !greefHasInteracted;
+        Debug.Log("Greef Nums: " + greefInteractionNum);
+        return greefInteractionNum % 4 != 0 && !greefHasInteracted;
     }
     public bool AshokaHasInteractions()
     {
-        return ashokaInteractionNum % 3 != 0 && !ashokaHasInteracted;
+        return ashokaInteractionNum % 4 != 0 && !ashokaHasInteracted;
     }
     public bool GroguHasInteractions()
     {
-        return groguInteractionNum % 2 != 0 && !groguHasInteracted;
+        return groguInteractionNum % 3 != 0 && !groguHasInteracted;
     }
     public bool BoKatanHasInteractions()
     {
-        return boKatanInteractionNum % 3 != 0 && !boKatanHasInteracted;
+        return boKatanInteractionNum % 4 != 0 && !boKatanHasInteracted;
     }
     public bool CaraDuneHasInteractions()
     {
-        return caraInteractionNum % 3 != 0 && !caraHasInteracted;
+        return caraInteractionNum % 4 != 0 && !caraHasInteracted;
     }
 
     public bool GreefCanUpgrade()
     {
-        return greefInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return greefInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
     public bool AshokaCanUpgrade()
     {
-        return ashokaInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
     public bool GroguCanUpgrade()
     {
-        return groguInteractionNum % 2 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
     public bool BoKatanCanUpgrade()
     {
-        return boKatanInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return boKatanInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
     public bool CaraDuneCanUpgrade()
     {
-        return caraInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
+        return caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0;
     }
 }
