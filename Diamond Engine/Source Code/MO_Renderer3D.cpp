@@ -390,6 +390,7 @@ update_status ModuleRenderer3D::PostUpdate(float dt)
 		}
 
 		gameCamera->resolvedFBO.BindFrameBuffer();
+		glClear(GL_DEPTH_BUFFER_BIT);
 		App->moduleGui->RenderCanvas2D();
 		glEnable(GL_DEPTH_TEST);
 		glClear(GL_DEPTH_BUFFER_BIT);
