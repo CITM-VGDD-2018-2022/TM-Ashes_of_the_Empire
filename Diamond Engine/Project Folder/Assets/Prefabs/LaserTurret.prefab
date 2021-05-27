@@ -48,10 +48,11 @@
                     "dieTime": 2,
                     "damageMaxTimer": 0.34999999403953552,
                     "feedbackTime": 1,
+                    "laserWidth": 5,
                     "laserRange": 20,
                     "shotTotalAngle": 90,
                     "lasersNumber": 4,
-                    "laserOffser": 0.89999997615814209,
+                    "laserOffset": 0,
                     "hit": 1126881442,
                     "sniperHitObj": 1622092012,
                     "grenadeHitObj": 1337086120

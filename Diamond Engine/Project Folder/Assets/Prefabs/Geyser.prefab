@@ -47,9 +47,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -3.2720832824707031,
-                -2.5006556510925293,
-                -2.947047233581543
+                0,
+                0,
+                0
             ],
             "Rotation": [
                 0,
@@ -102,6 +102,7 @@
                                 1
                             ],
                             "paPerSec": 500,
+                            "paRelative": true,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -187,6 +188,7 @@
                                 1
                             ],
                             "paPerSec": 501,
+                            "paRelative": true,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,

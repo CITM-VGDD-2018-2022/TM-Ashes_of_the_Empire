@@ -37,8 +37,8 @@ public class LaserTurret : Enemy
     public float dieTime = 0.0f;
 
     public float damageMaxTimer = 0.0f;
-
     public float feedbackTime = 0.0f;
+    public float laserWidth = 5.0f;
 
     //Speeds
     private float angle = 0.0f;
@@ -57,7 +57,7 @@ public class LaserTurret : Enemy
 
     private Vector3[] laserDirections;
     public int lasersNumber = 4;
-    public float laserOffser;
+    public float laserOffset;
 
     //Explosion effect
     public GameObject hit = null;
@@ -342,7 +342,7 @@ public class LaserTurret : Enemy
         for (int i = 0; i < laserDirections.Length; i++)
         {
             float hitDistance = 0;
-            GameObject hit = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * laserOffser), laserDirections[i], laserRange, ref hitDistance);
+            GameObject hit = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * laserOffset), laserDirections[i], laserRange, ref hitDistance);
             if (hit != null)
             {
                 PlayerHealth health = hit.GetComponent<PlayerHealth>();
@@ -354,7 +354,8 @@ public class LaserTurret : Enemy
                 }
             }
 
-            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up /*+ (laserDirections[i] * laserOffser)*/, gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * (hitDistance != 0 ? (hitDistance + laserOffser) : laserRange)), new Vector3(1, 0, 0));
+            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up, gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * (hitDistance != 0 ? (hitDistance + laserOffset) : laserRange)),
+                                    new Vector3(1.0f, 0.0f, 0.0f), laserWidth);
             //Debug.Log(laserPoints[i].ToString());
         }
     }

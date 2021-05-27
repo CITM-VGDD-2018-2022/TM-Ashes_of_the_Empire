@@ -581,13 +581,11 @@ public class HeavyTrooper : Enemy
     {
         if (!agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition))
         {
-            //inputsList.Add(INPUT.IN_IDLE);
-            //return;
+            inputsList.Add(INPUT.IN_WANDER);
+            return;
         }
 
         LookAt(agent.GetDestination());
-        //if (skill_slowDownActive)
-        //    agent.MoveToCalculatedPos(runningSpeed * (1 - Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownAmount));
 
         agent.MoveToCalculatedPos(runningSpeed * speedMult);
 
@@ -670,9 +668,13 @@ public class HeavyTrooper : Enemy
     {
         //Debug.Log("HEAVYTROOPER DASH");
         if (!straightPath)
+        {
             dashTimer = (dashLength / (dashSpeed * dashSpeedReduction * speedMult));
+        }
         else
+        {
             dashTimer = (dashLength / (dashSpeed * speedMult));
+        }
 
         StraightPath();
 
