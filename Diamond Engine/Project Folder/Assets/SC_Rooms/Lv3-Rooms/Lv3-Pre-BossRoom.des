@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        3.3984963893890381,
-        6.6610860824584961,
-        18.522233963012695
+        -8.9426374435424805,
+        18.738903045654297,
+        -16.962604522705078
     ],
     "EditorCameraZ": [
-        0.25706702470779419,
-        -0.57144296169281006,
-        0.77933907508850098
+        0.49756059050559998,
+        -0.42027232050895691,
+        0.75881791114807129
     ],
     "EditorCameraY": [
-        0.1790052056312561,
-        0.82064175605773926,
-        0.54268240928649902
+        0.23046846687793732,
+        0.9073980450630188,
+        0.35144433379173279
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -39212,6 +39212,41 @@
                         1530020591,
                         2047958449
                     ]
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0.18223613500595093,
+                        0,
+                        0.98325479030609131
+                    ],
+                    "Scale": [
+                        0.84999996423721313,
+                        1.5,
+                        0.84999996423721313
+                    ]
                 }
             ]
         },
@@ -41188,6 +41223,41 @@
                         632648729,
                         66776966
                     ]
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.85000002384185791,
+                        1.3500000238418579,
+                        0.85000002384185791
+                    ]
                 }
             ]
         },
@@ -42558,6 +42628,41 @@
                     "Animations": [
                         1703171261,
                         1115578127
+                    ]
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.85000002384185791,
+                        1.5,
+                        0.85000002384185791
                     ]
                 }
             ]
@@ -44172,6 +44277,41 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.69999998807907104,
+                        1,
+                        0.69999998807907104
+                    ]
                 }
             ]
         },
@@ -44685,6 +44825,41 @@
                     "MeshRendererUID": 142513231,
                     "Animations": [
                         854978645
+                    ]
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.85000002384185791,
+                        1.5,
+                        0.85000002384185791
                     ]
                 }
             ]
