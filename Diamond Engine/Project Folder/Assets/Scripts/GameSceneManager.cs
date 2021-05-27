@@ -72,8 +72,7 @@ public class GameSceneManager : DiamondComponent
                 ApplyReward();
                 if (InternalCalls.FindObjectWithName("BlackFade") != null)
                 {
-                    BlackFade.StartFadeIn();
-                    BlackFade.onFadeInCompleted = ChangeScene;
+                    BlackFade.StartFadeIn(ChangeScene);
                 }
                 else
                 {

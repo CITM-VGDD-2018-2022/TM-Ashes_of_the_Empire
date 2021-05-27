@@ -21,7 +21,6 @@ public class PlayerHealth : DiamondComponent
         if (currHealth <= 0 && currMaxHealth <= 0)
             ResetMaxAndCurrentHPToDefault();
 
-        BlackFade.onFadeInCompleted = Die;
 
     }
 

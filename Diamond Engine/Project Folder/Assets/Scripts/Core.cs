@@ -1944,7 +1944,7 @@ public class Core : Entity
 
     private void EndDead()
     {
-        BlackFade.StartFadeIn();
+        BlackFade.StartFadeIn(gameObject.GetComponent<PlayerHealth>().Die);
     }
 
     private void DeadInput()

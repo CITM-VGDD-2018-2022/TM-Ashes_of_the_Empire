@@ -14,8 +14,7 @@ public class HubRoomSwitch : DiamondComponent
         GameObject blackFade = InternalCalls.FindObjectWithName("BlackFade");
         if (blackFade != null)
         {
-            BlackFade.StartFadeIn();
-            BlackFade.onFadeInCompleted = ChangeScene;
+            BlackFade.StartFadeIn(ChangeScene);
         }
         else
         {

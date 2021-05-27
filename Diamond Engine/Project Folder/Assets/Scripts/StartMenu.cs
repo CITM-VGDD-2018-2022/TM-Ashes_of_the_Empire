@@ -89,8 +89,7 @@ public class StartMenu : DiamondComponent
     {
         if (InternalCalls.FindObjectWithName("BlackFade") != null)
         {
-            BlackFade.StartFadeIn();
-            BlackFade.onFadeInCompleted = StartGame;
+            BlackFade.StartFadeIn(StartGame);
         }
         else
         {

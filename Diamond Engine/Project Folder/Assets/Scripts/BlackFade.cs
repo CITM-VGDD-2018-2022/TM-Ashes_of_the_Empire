@@ -76,11 +76,21 @@ public class BlackFade : DiamondComponent
     public static void StartFadeIn()
     {
         state = STATE.FADE_IN;
+    }
 
+    public static void StartFadeIn(Action action)
+    {
+        onFadeInCompleted = action;
+        state = STATE.FADE_IN;
     }
 
     public static void StartFadeOut()
     {
+        state = STATE.FADE_OUT;
+    }
+    public static void StartFadeOut(Action action)
+    {
+        onFadeOutCompleted = action;
         state = STATE.FADE_OUT;
     }
 
