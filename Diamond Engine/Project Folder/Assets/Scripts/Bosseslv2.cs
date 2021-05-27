@@ -340,7 +340,8 @@ public class Bosseslv2 : Entity
         Animator.Play(gameObject, "Skel_Rush_Start", speedMult);
         UpdateAnimationSpd(speedMult);
         bounceRushTimer = bounceRushTime;
-        GameObject nearestColumn = Level2BossRoom.columns[0];
+        GameObject nearestSkelColumn = Level2BossRoom.columns[0];
+        GameObject nearestPlayerColumn = Level2BossRoom.columns[0];
         float nerestDistance = 10000f;
         foreach (GameObject column in Level2BossRoom.columns)
         {
@@ -348,12 +349,23 @@ public class Bosseslv2 : Entity
             if (nerestDistance > distance)
             {
                 nerestDistance = distance;
-                nearestColumn = column;
+                nearestSkelColumn = column;
             }
         }
 
-        initTarget = nearestColumn;
-        finalTarget = nearestColumn.GetComponent<TargetColumn>().GetTarget(gameObject.transform.globalPosition);
+        nerestDistance = 10000f;
+        foreach (GameObject column in Level2BossRoom.columns)
+        {
+            float distance = Mathf.Distance(Core.instance.gameObject.transform.globalPosition, column.transform.globalPosition);
+            if (nerestDistance > distance)
+            {
+                nerestDistance = distance;
+                nearestPlayerColumn = column;
+            }
+        }
+
+        initTarget = nearestSkelColumn;
+        finalTarget = nearestPlayerColumn;//.GetComponent<TargetColumn>().GetTarget(gameObject.transform.globalPosition);
         currentTarget = initTarget;
         returnToInitTarget = false;
 
@@ -380,7 +392,7 @@ public class Bosseslv2 : Entity
         float distance = Mathf.Distance(gameObject.transform.globalPosition, currentTarget.transform.globalPosition);
         if (distance > 2f)
         {
-            MoveToPosition(currentTarget.transform.globalPosition, 12f);
+            MoveToPosition(currentTarget.transform.globalPosition, 20f);
             LookAt(currentTarget.transform.globalPosition);
             if (currentTarget == finalTarget)
             {
