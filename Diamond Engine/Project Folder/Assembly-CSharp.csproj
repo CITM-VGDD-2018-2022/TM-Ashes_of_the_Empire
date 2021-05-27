@@ -118,7 +118,6 @@
     <Compile Include="Assets\Scripts\StormTrooperParticles.cs" />
     <Compile Include="Assets\Scripts\TextController.cs" />
     <Compile Include="Assets\Scripts\VelocityTest.cs" />
-    <Compile Include="Assets\Scripts\AreaLightTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

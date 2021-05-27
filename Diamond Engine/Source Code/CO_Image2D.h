@@ -23,14 +23,21 @@ public:
 	void SetTexture(ResourceTexture* tex);
 	void SetTexture(int UID, const char* library_path);
 	void SetTexture(int UID, Resource::Type _type);
+
+	void SetBlendTexture(ResourceTexture* bTexture);
+
 	void SetFadeValue(float fadeValue);
 
 
 	void SaveData(JSON_Object* nObj) override;
 	void LoadData(DEConfig& nObj) override;
 
+public:
+	float blendValue;
+
 private:
 	ResourceTexture* texture = nullptr;
+	ResourceTexture* blendTexture = nullptr;
 
 	float fadeValue = 1.0f;
 };

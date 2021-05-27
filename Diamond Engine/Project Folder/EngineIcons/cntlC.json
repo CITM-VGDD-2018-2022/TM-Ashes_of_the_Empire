@@ -1,46 +1,12 @@
 {
     "Game Objects": [
         {
-            "name": "BossRoom",
+            "name": "Button",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1860386171,
-            "ParentUID": 1676501951,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -6.4585671424865723,
-                -23.279727935791016,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Ground",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 764409680,
-            "ParentUID": 1860386171,
+            "UID": 892102907,
+            "ParentUID": 1220408822,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -67,224 +33,66 @@
                     "Active": true
                 },
                 {
-                    "Type": 2,
+                    "Type": 6,
                     "Active": true,
-                    "Path": "Library\/Meshes\/327484566.mmh",
-                    "UID": 327484566,
-                    "NormalMapAssetPath": "Empty",
-                    "NormalMapLibraryPath": "Library\/Textures\/459243839.dds",
-                    "NormalMapUID": 459243839,
-                    "SpecularMapAssetPath": "Empty",
-                    "SpecularMapLibraryPath": "Library\/Textures\/1117794463.dds",
-                    "SpecularMapUID": 1117794463,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        0.99998998641967773,
-                        0.99998998641967773
+                    "Position": [
+                        0,
+                        0
                     ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
+                    "Rotation": 0,
+                    "Size": [
+                        20,
+                        20
+                    ]
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Rocks",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 26591326,
-            "ParentUID": 1860386171,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
                 },
                 {
-                    "Type": 2,
+                    "Type": 7,
                     "Active": true,
-                    "Path": "Library\/Meshes\/2116572934.mmh",
-                    "UID": 2116572934,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
+                    "Pressed_AssetsPath": "Assets\/UI\/MENU\/arrow_left.png",
+                    "Pressed_LibraryPath": "Library\/Textures\/1148197231.dds",
+                    "Pressed_UID": 1148197231,
+                    "Hovered_AssetsPath": "Assets\/UI\/MENU\/arrow_left_hover.png",
+                    "Hovered_LibraryPath": "Library\/Textures\/708143523.dds",
+                    "Hovered_UID": 708143523,
+                    "Unhovered_AssetsPath": "Assets\/UI\/MENU\/arrow_left_pressed.png",
+                    "Unhovered_LibraryPath": "Library\/Textures\/1878130604.dds",
+                    "Unhovered_UID": 1878130604,
+                    "ButtonState": 2,
+                    "Is Selected": true,
+                    "HoverSFX": "Empty",
+                    "PressedSFX": "Empty"
                 },
                 {
-                    "Type": 3,
+                    "Type": 11,
                     "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "BonesDecoration",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 183803732,
-            "ParentUID": 1860386171,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
+                    "AssetPath": "Assets\/UI\/MENU\/arrow_left_hover.png",
+                    "LibraryPath": "Library\/Textures\/708143523.dds",
+                    "UID": 708143523,
+                    "fadeValue": 1
                 },
                 {
-                    "Type": 2,
+                    "Type": 17,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1891348168.mmh",
-                    "UID": 1891348168,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
+                    "Map": [
+                        {
+                            "Index": 0,
+                            "UID": 892102907,
+                            "Action": 2,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        }
                     ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Doors",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1892056746,
-            "ParentUID": 1860386171,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/296021229.mmh",
-                    "UID": 296021229,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
+                    "Button Being Used": -1,
+                    "Type Of UI": 7,
+                    "Is Selected": true
                 }
             ]
         }

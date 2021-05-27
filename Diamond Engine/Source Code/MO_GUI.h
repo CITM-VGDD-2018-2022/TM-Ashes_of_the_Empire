@@ -25,6 +25,9 @@ public:
 	void CreateCheckbox();
 	void CreateText();
 
+	void CreateDirectionalLight();
+	void CreateAreaLight();
+
 	void SetCanvas(int uid);
 	int GetCanvasId() const;
 	void EraseCanvas();

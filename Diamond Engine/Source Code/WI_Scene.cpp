@@ -139,6 +139,7 @@ void W_Scene::Draw()
 
 }
 
+
 ImVec2 W_Scene::NormalizeOnWindow(float x, float y, float w, float h, ImVec2 point)
 {
 	ImVec2 normalizedPoint;
@@ -148,6 +149,7 @@ ImVec2 W_Scene::NormalizeOnWindow(float x, float y, float w, float h, ImVec2 poi
 
 	return normalizedPoint;
 }
+
 
 ImVec2 W_Scene::GetRegionAvailable()
 {

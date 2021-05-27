@@ -14,6 +14,9 @@
 #include "CO_Image2D.h"
 #include "CO_Text.h"
 
+#include "CO_DirectionalLight.h"
+#include "CO_AreaLight.h"
+
 #include "RE_Material.h"
 #include "RE_Shader.h"
 
@@ -212,6 +215,20 @@ void M_Gui::CreateText()
 	text->AddComponent(Component::TYPE::TRANSFORM_2D);
 	text->AddComponent(Component::TYPE::MATERIAL);
 	text->AddComponent(Component::TYPE::TEXT_UI);
+}
+
+
+void M_Gui::CreateDirectionalLight()
+{
+	GameObject* light = new GameObject("Directional Light", App->moduleScene->root);
+	light->AddComponent(Component::TYPE::DIRECTIONAL_LIGHT);
+}
+
+
+void M_Gui::CreateAreaLight()
+{
+	GameObject* light = new GameObject("Area Light", App->moduleScene->root);
+	light->AddComponent(Component::TYPE::AREA_LIGHT);
 }
 
 

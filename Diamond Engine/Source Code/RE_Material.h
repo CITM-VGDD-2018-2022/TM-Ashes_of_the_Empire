@@ -44,11 +44,11 @@ struct ShaderVariable
 
 static const char* defaultUniforms[] = { "position", "tangents", "texCoord", "normals",
 										 "model_matrix", "view", "projection", "normalMatrix", 
-										 "cameraPosition",
-										 "time", "ourTexture","altColor", "hasTexture", 
+										 "cameraPosition", "time", "ourTexture","altColor", "hasTexture", 
 										 "lightPos", "lightPosition", "viewPos", "lightColor", "lightSpaceMatrix",
 										 "ambientLightColor", "lightIntensity", "specularValue", "shadowMap",
-										 "normalMap", "specularMap", "bumpDepth", "farPlaneDistance"};
+										 "normalMap", "specularMap", "bumpDepth", "farPlaneDistance", "uiFadeValue", 
+										 "uiBlendTexture", "uiBlendTextureValue", "uiHasBlendTexture"};
 
 static const char* defaultUniformStructures[] = { "lightInfo", "areaLightInfo", "cubeShadowMap" };
 
