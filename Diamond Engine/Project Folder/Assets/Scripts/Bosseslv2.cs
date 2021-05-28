@@ -73,6 +73,8 @@ public class Bosseslv2 : Entity
     public float projectileDamage = 10.0f;
     public float rushDamage = 15.0f;
     public float damageBounceRush = 20f;
+    private bool wampaRushCharged = false;
+    private float wampaRushChargeCounter = 0.0f;
     List<WampaProjectile> projectiles = new List<WampaProjectile>();
 
     //Jump Slam
@@ -241,12 +243,19 @@ public class Bosseslv2 : Entity
     #region RUSH
     public void StartFastRush()
     {
+        wampaRushCharged = false;
+        wampaRushChargeCounter = 0.0f;
         fastChasingTimer = fastChasingTime;
         Debug.Log("Fast Rush");
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
         if (gameObject.CompareTag("Wampa"))
-            Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
+        {
+            //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
+            Animator.Play(gameObject, "WP_Roar", speedMult*2);
+            UpdateAnimationSpd(speedMult);
+            Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
+        }
         else if (gameObject.CompareTag("Skel"))
             Audio.PlayAudio(gameObject, "Play_Skel_Preparation");
 
@@ -262,16 +271,24 @@ public class Bosseslv2 : Entity
     }
     public void UpdateFastRush()
     {
-        agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
-        LookAt(agent.GetDestination());
-        agent.MoveToCalculatedPos(fastRushSpeed * speedMult);
-        //Debug.Log("Rush");
-
-        UpdateAnimationSpd(speedMult);
-        if (gameObject.CompareTag("Skel") && rushOnce)
+        if (!wampaRushCharged)
         {
-            Audio.PlayAudio(gameObject, "Play_Skel_In_Progress");
-            rushOnce = false;
+            wampaRushChargeCounter += Time.deltaTime;
+            if (wampaRushChargeCounter >= 3.0f) wampaRushCharged = true;
+        }
+        else
+        {
+            agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
+            LookAt(agent.GetDestination());
+            agent.MoveToCalculatedPos(fastRushSpeed * speedMult);
+            //Debug.Log("Rush");
+
+            UpdateAnimationSpd(speedMult);
+            if (gameObject.CompareTag("Skel") && rushOnce)
+            {
+                Audio.PlayAudio(gameObject, "Play_Skel_In_Progress");
+                rushOnce = false;
+            }
         }
     }
 
@@ -535,7 +552,7 @@ public class Bosseslv2 : Entity
                     MoveToPosition(targetPos, speed * 10);
                     jumpslamTimer -= myDeltaTime;
 
-                    if (jumpslamTimer <= 0 || Mathf.Distance(targetPos, gameObject.transform.globalPosition) <= 0.1f)
+                    if (jumpslamTimer <= 0 || Mathf.Distance(targetPos, gameObject.transform.globalPosition) <= 0.5f)
                     {
                         jumpslamTimer = recoveryTime;
                         jumpslam = JUMPSLAM.RECOVERY;
