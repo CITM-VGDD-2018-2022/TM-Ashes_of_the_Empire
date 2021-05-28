@@ -650,7 +650,7 @@ public class SoloQuickDraw : GameResources
 }
 public class GeotermalMarker : GameResources
 {
-    public GeotermalMarker() : base(65111559, RewardType.REWARD_BOON, 1.0f, "any enemy affected by any kind of negative status takes +33% damage")
+    public GeotermalMarker() : base(1781189074, RewardType.REWARD_BOON, 1.0f, "any enemy affected by any kind of negative status takes +33% damage")
     {
         name = "Cad Bane’s rocket boots";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -670,7 +670,7 @@ public class GeotermalMarker : GameResources
 }
 public class GreefPaycheck : GameResources
 {
-    public GreefPaycheck() : base(65111559, RewardType.REWARD_BOON, 1.0f, "75% Discount on the next item bought in the shop")
+    public GreefPaycheck() : base(38657284, RewardType.REWARD_BOON, 1.0f, "75% Discount on the next item bought in the shop")
     {
         name = "Cad Bane’s rocket boots";
         price = ShopPrice.SHOP_EXPENSIVE;
