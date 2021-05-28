@@ -19,12 +19,26 @@ in vec2 textureCoords;
 out vec4 fragmentColor;
 
 uniform sampler2D ourTexture;
+uniform sampler2D uiBlendTexture;
+
+uniform float uiBlendTextureValue;
+uniform bool uiHasBlendTexture;
+
 uniform float uiFadeValue;
 
-void main() {
-	fragmentColor = texture(ourTexture,textureCoords);
-	fragmentColor.a *= uiFadeValue;
+void main() 
+{
+	if (uiHasBlendTexture == true)
+	{
+		fragmentColor = mix(texture(uiBlendTexture, textureCoords), texture(ourTexture, textureCoords), uiBlendTextureValue);
+	}
+	
+	else
+		fragmentColor = texture(ourTexture,textureCoords);
+		
+		fragmentColor.a *= uiFadeValue;
 }
 
 #endif
+
 
