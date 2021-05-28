@@ -1,19 +1,19 @@
 {
     "NavMesh": 759541763,
     "EditorCameraPosition": [
-        -11.703242301940918,
-        31.17010498046875,
-        1.1188509464263916
+        17.906890869140625,
+        10.42436695098877,
+        16.466623306274414
     ],
     "EditorCameraZ": [
-        -0.41726303100585938,
-        -0.8225446343421936,
-        -0.38640904426574707
+        0.091858893632888794,
+        -0.86898446083068848,
+        0.48623856902122498
     ],
     "EditorCameraY": [
-        -0.60350155830383301,
-        0.56870061159133911,
-        -0.55889672040939331
+        0.16131286323070526,
+        0.4948393702507019,
+        0.85388064384460449
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -28,7 +28,8 @@
         1
     ],
     "tags": [
-        "WorldLimit"
+        "WorldLimit",
+        "ExplosiveBarrel"
     ],
     "layers": [],
     "Game Objects": [
@@ -6125,7 +6126,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                17.383255004882813,
+                17.383255004882812,
                 0.050000045448541641,
                 -14.904062271118164
             ],
@@ -6589,7 +6590,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -14.732192993164063,
+                -14.732192993164062,
                 0.050000142306089401,
                 7.9611268043518066
             ],
@@ -6671,19 +6672,19 @@
         },
         {
             "name": "Barrel",
-            "tag": "Untagged",
+            "tag": "ExplosiveBarrel",
             "layer": "Default",
             "Active": true,
-            "UID": 1482655204,
+            "UID": 918082480,
             "ParentUID": 2143770936,
             "PrefabReference": 1482655204,
             "PrefabID": 384586228,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -21.357538223266602,
+                -21.485815048217773,
                 0,
-                -4.0048794746398926
+                3.7186884880065918
             ],
             "Rotation": [
                 0,
@@ -6692,9 +6693,9 @@
                 1
             ],
             "Scale": [
+                0.9999997615814209,
                 1,
-                1,
-                1
+                0.9999997615814209
             ],
             "PrefabObjects": [
                 {
@@ -6702,8 +6703,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 841497335,
-                    "ParentUID": 1482655204,
+                    "UID": 117070772,
+                    "ParentUID": 918082480,
                     "PrefabID": 0,
                     "PrefabReference": 841497335,
                     "DontDestroy": false,
@@ -6724,24 +6725,136 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "RecastDetection",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 883777047,
+                    "ParentUID": 918082480,
+                    "PrefabID": 0,
+                    "PrefabReference": 2075004042,
+                    "DontDestroy": false,
+                    "Static": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.28591179847717285,
+                        0.85974591970443726,
+                        0.27513054013252258
+                    ]
+                },
+                {
+                    "name": "Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1887818990,
+                    "ParentUID": 918082480,
+                    "PrefabID": 0,
+                    "PrefabReference": 851837632,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.72875523567199707,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Barrel Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1551739096,
+                    "ParentUID": 1887818990,
+                    "PrefabID": 0,
+                    "PrefabReference": 879381920,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.066840648651123047,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 167772987,
+                    "ParentUID": 1887818990,
+                    "PrefabID": 0,
+                    "PrefabReference": 837359997,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.25276088714599609,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
         {
             "name": "Barrel",
-            "tag": "Untagged",
+            "tag": "ExplosiveBarrel",
             "layer": "Default",
             "Active": true,
-            "UID": 451668792,
+            "UID": 724933414,
             "ParentUID": 2143770936,
             "PrefabReference": 1482655204,
             "PrefabID": 384586228,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -21.49336051940918,
-                9.5134521416184725e-07,
-                3.7088215351104736
+                -21.367082595825195,
+                0,
+                -4.0146217346191406
             ],
             "Rotation": [
                 0,
@@ -6750,9 +6863,9 @@
                 1
             ],
             "Scale": [
+                0.9999997615814209,
                 1,
-                1,
-                1
+                0.9999997615814209
             ],
             "PrefabObjects": [
                 {
@@ -6760,8 +6873,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 29924811,
-                    "ParentUID": 451668792,
+                    "UID": 428544300,
+                    "ParentUID": 724933414,
                     "PrefabID": 0,
                     "PrefabReference": 841497335,
                     "DontDestroy": false,
@@ -6782,24 +6895,136 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "RecastDetection",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 692402529,
+                    "ParentUID": 724933414,
+                    "PrefabID": 0,
+                    "PrefabReference": 2075004042,
+                    "DontDestroy": false,
+                    "Static": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.28591179847717285,
+                        0.85974591970443726,
+                        0.27513054013252258
+                    ]
+                },
+                {
+                    "name": "Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1191047300,
+                    "ParentUID": 724933414,
+                    "PrefabID": 0,
+                    "PrefabReference": 851837632,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.72875523567199707,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Barrel Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1118011689,
+                    "ParentUID": 1191047300,
+                    "PrefabID": 0,
+                    "PrefabReference": 879381920,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.066840648651123047,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1547014354,
+                    "ParentUID": 1191047300,
+                    "PrefabID": 0,
+                    "PrefabReference": 837359997,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.25276088714599609,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
         {
             "name": "Barrel",
-            "tag": "Untagged",
+            "tag": "ExplosiveBarrel",
             "layer": "Default",
             "Active": true,
-            "UID": 336129041,
+            "UID": 1581567436,
             "ParentUID": 2143770936,
             "PrefabReference": 1482655204,
             "PrefabID": 384586228,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                19.422552108764648,
-                0,
-                22.159120559692383
+                21.753213882446289,
+                -0.012237608432769775,
+                17.358377456665039
             ],
             "Rotation": [
                 0,
@@ -6808,9 +7033,9 @@
                 1
             ],
             "Scale": [
+                0.9999997615814209,
                 1,
-                1,
-                1
+                0.9999997615814209
             ],
             "PrefabObjects": [
                 {
@@ -6818,8 +7043,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 510662102,
-                    "ParentUID": 336129041,
+                    "UID": 229945478,
+                    "ParentUID": 1581567436,
                     "PrefabID": 0,
                     "PrefabReference": 841497335,
                     "DontDestroy": false,
@@ -6840,24 +7065,136 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "RecastDetection",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1691019100,
+                    "ParentUID": 1581567436,
+                    "PrefabID": 0,
+                    "PrefabReference": 2075004042,
+                    "DontDestroy": false,
+                    "Static": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.28591179847717285,
+                        0.85974591970443726,
+                        0.27513054013252258
+                    ]
+                },
+                {
+                    "name": "Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1092265266,
+                    "ParentUID": 1581567436,
+                    "PrefabID": 0,
+                    "PrefabReference": 851837632,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.72875523567199707,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Barrel Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 56660269,
+                    "ParentUID": 1092265266,
+                    "PrefabID": 0,
+                    "PrefabReference": 879381920,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.066840648651123047,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1964612157,
+                    "ParentUID": 1092265266,
+                    "PrefabID": 0,
+                    "PrefabReference": 837359997,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.25276088714599609,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
         {
             "name": "Barrel",
-            "tag": "Untagged",
+            "tag": "ExplosiveBarrel",
             "layer": "Default",
             "Active": true,
-            "UID": 1214427257,
+            "UID": 1226208022,
             "ParentUID": 2143770936,
             "PrefabReference": 1482655204,
             "PrefabID": 384586228,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                21.759464263916016,
-                1.9073486328125e-06,
-                17.352348327636719
+                19.419706344604492,
+                -3.814697265625e-06,
+                22.154750823974609
             ],
             "Rotation": [
                 0,
@@ -6866,9 +7203,9 @@
                 1
             ],
             "Scale": [
+                0.9999997615814209,
                 1,
-                1,
-                1
+                0.9999997615814209
             ],
             "PrefabObjects": [
                 {
@@ -6876,8 +7213,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1061393560,
-                    "ParentUID": 1214427257,
+                    "UID": 911280471,
+                    "ParentUID": 1226208022,
                     "PrefabID": 0,
                     "PrefabReference": 841497335,
                     "DontDestroy": false,
@@ -6885,6 +7222,118 @@
                     "Position": [
                         0,
                         0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "RecastDetection",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1148288170,
+                    "ParentUID": 1226208022,
+                    "PrefabID": 0,
+                    "PrefabReference": 2075004042,
+                    "DontDestroy": false,
+                    "Static": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.28591179847717285,
+                        0.85974591970443726,
+                        0.27513054013252258
+                    ]
+                },
+                {
+                    "name": "Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 596956701,
+                    "ParentUID": 1226208022,
+                    "PrefabID": 0,
+                    "PrefabReference": 851837632,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.72875523567199707,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Barrel Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 471459930,
+                    "ParentUID": 596956701,
+                    "PrefabID": 0,
+                    "PrefabReference": 879381920,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.066840648651123047,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1371725782,
+                    "ParentUID": 596956701,
+                    "PrefabID": 0,
+                    "PrefabReference": 837359997,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.25276088714599609,
                         0
                     ],
                     "Rotation": [
@@ -9060,7 +9509,7 @@
                 1
             ],
             "Scale": [
-                7.2635879516601563,
+                7.2635879516601562,
                 10,
                 6.2019815444946289
             ],
@@ -10308,7 +10757,7 @@
             "Scale": [
                 13.416073799133301,
                 10,
-                16.201004028320313
+                16.201004028320312
             ],
             "Components": [
                 {
@@ -12289,7 +12738,7 @@
                         0,
                         0,
                         -0.0073059904389083385,
-                        0.99997329711914063
+                        0.99997329711914062
                     ],
                     "Scale": [
                         1,
@@ -13205,7 +13654,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.49832534790039063,
+                        0.49832534790039062,
                         2.0816681711721685e-17,
                         1.3898392876873153e-17
                     ],
@@ -13569,7 +14018,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -13597,7 +14046,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -13625,7 +14074,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851563,
+                        0.76593399047851562,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -13682,7 +14131,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757813,
+                        -0.0062532424926757812,
                         -0.058134078979492188
                     ],
                     "Rotation": [
