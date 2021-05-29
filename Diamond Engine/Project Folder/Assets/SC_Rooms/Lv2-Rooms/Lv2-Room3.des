@@ -1,19 +1,19 @@
 {
     "NavMesh": 789920900,
     "EditorCameraPosition": [
-        11.898650169372559,
-        15.684635162353516,
-        -12.504023551940918
+        5.4744133949279785,
+        21.225479125976562,
+        -35.590366363525391
     ],
     "EditorCameraZ": [
-        -0.34904360771179199,
-        -0.860038161277771,
-        0.37215983867645264
+        -0.045204088091850281,
+        -0.86446923017501831,
+        0.500649094581604
     ],
     "EditorCameraY": [
-        -0.58822619915008545,
-        0.51022970676422119,
-        0.62741982936859131
+        -0.077641457319259644,
+        0.5026857852935791,
+        0.86097556352615356
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -109,8 +109,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 17.549999237060547,
-                    "hFOV": 31.649999618530273,
+                    "vFOV": 16.774999618530273,
+                    "hFOV": 27.399999618530273,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -237,7 +237,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                9.3617935180664063,
+                9.3617935180664062,
                 0,
                 -13.893880844116211
             ],
@@ -409,7 +409,7 @@
             "Position": [
                 10.029287338256836,
                 2.0900788307189941,
-                -36.223587036132813
+                -36.223587036132812
             ],
             "Rotation": [
                 0,
@@ -525,7 +525,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                9.6879043579101563,
+                9.6879043579101562,
                 -1.6599999666213989,
                 18.028196334838867
             ],
@@ -1078,7 +1078,7 @@
                         0,
                         0,
                         -0.0073059904389083385,
-                        0.99997329711914063
+                        0.99997329711914062
                     ],
                     "Scale": [
                         1,
@@ -1994,7 +1994,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.49832534790039063,
+                        0.49832534790039062,
                         2.0816681711721685e-17,
                         1.3898392876873153e-17
                     ],
@@ -2358,7 +2358,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -2386,7 +2386,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -2414,7 +2414,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851563,
+                        0.76593399047851562,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -2471,7 +2471,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757813,
+                        -0.0062532424926757812,
                         -0.058134078979492188
                     ],
                     "Rotation": [
@@ -8877,9 +8877,9 @@
             "DontDestroy": false,
             "Static": true,
             "Position": [
-                0.048990249633789063,
+                0.048990249633789062,
                 0.3636305034160614,
-                0.0049104690551757813
+                0.0049104690551757812
             ],
             "Rotation": [
                 -0.4999135434627533,
@@ -9892,7 +9892,7 @@
             "Static": false,
             "Position": [
                 15.542279243469238,
-                1.6975173950195313,
+                1.6975173950195312,
                 -14.076211929321289
             ],
             "Rotation": [
@@ -10249,7 +10249,7 @@
             "Position": [
                 -0.52792167663574219,
                 1.5246860980987549,
-                15.189773559570313
+                15.189773559570312
             ],
             "Rotation": [
                 0,
@@ -11939,7 +11939,7 @@
             "Position": [
                 -13.427402496337891,
                 0.46074527502059937,
-                9.9174880981445313
+                9.9174880981445312
             ],
             "Rotation": [
                 1.7763568394002505e-15,
@@ -12829,7 +12829,7 @@
             "Position": [
                 8.0614128112792969,
                 0.46074527502059937,
-                -10.066970825195313
+                -10.066970825195312
             ],
             "Rotation": [
                 5.3290705182007514e-15,
@@ -13007,7 +13007,7 @@
             "Position": [
                 -0.37763595581054688,
                 0.46074524521827698,
-                -11.018203735351563
+                -11.018203735351562
             ],
             "Rotation": [
                 3.5527136788005009e-15,
@@ -13277,7 +13277,7 @@
                 -2.58724045753479
             ],
             "Rotation": [
-                -0.27038955688476563,
+                -0.27038955688476562,
                 0.65336740016937256,
                 0.65329068899154663,
                 0.27057680487632751
@@ -14963,7 +14963,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -13.789627075195313,
+                -13.789627075195312,
                 0.14449608325958252,
                 3.0782217979431152
             ],
@@ -16811,7 +16811,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -2.9802322387695313e-08,
+                -2.9802322387695312e-08,
                 0.080157384276390076,
                 2.384185791015625e-07
             ],
@@ -16845,7 +16845,7 @@
             "DontDestroy": false,
             "Static": true,
             "Position": [
-                -0.74341201782226563,
+                -0.74341201782226562,
                 2.4082808494567871,
                 -0.1184391975402832
             ],
@@ -17384,7 +17384,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -4.0520095825195313,
+                -4.0520095825195312,
                 2.3051650524139404,
                 -2.61081862449646
             ],
@@ -20426,7 +20426,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -21.800674438476563,
+                -21.800674438476562,
                 0.22844257950782776,
                 -4.0070548057556152
             ],
@@ -21909,92 +21909,6 @@
             ]
         },
         {
-            "name": "Geyser",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 876368105,
-            "ParentUID": 2084829014,
-            "PrefabReference": 1295758088,
-            "PrefabID": 1475693973,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                6.7588162422180176,
-                0.17253977060317993,
-                -6.1721563339233398
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "Particle System",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1465943288,
-                    "ParentUID": 876368105,
-                    "PrefabID": 0,
-                    "PrefabReference": 480801472,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Geiser",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1277330173,
-                    "ParentUID": 876368105,
-                    "PrefabID": 0,
-                    "PrefabReference": 877017392,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Positions",
             "tag": "Untagged",
             "layer": "Default",
@@ -22040,7 +21954,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.24484634399414063,
+                0.24484634399414062,
                 4.0776524543762207,
                 0.76985359191894531
             ],
@@ -22162,6 +22076,290 @@
                         2,
                         1,
                         2
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Geyser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 743113321,
+            "ParentUID": 568224617,
+            "PrefabReference": 1295758088,
+            "PrefabID": 1475693973,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                6.9800815582275391,
+                0.12910756468772888,
+                -6.3542680740356445
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Geiser",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1263981464,
+                    "ParentUID": 743113321,
+                    "PrefabID": 0,
+                    "PrefabReference": 877017392,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 68618378,
+                    "ParentUID": 743113321,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1276463810,
+                    "ParentUID": 68618378,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1518635856,
+                    "ParentUID": 68618378,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Geyser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1550930827,
+            "ParentUID": 568224617,
+            "PrefabReference": 1295758088,
+            "PrefabID": 1475693973,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                6.8289861679077148,
+                0.1289999932050705,
+                -24.905109405517578
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Geiser",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1877335407,
+                    "ParentUID": 1550930827,
+                    "PrefabID": 0,
+                    "PrefabReference": 877017392,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1818647033,
+                    "ParentUID": 1550930827,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 389257373,
+                    "ParentUID": 1818647033,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1391424140,
+                    "ParentUID": 1818647033,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]

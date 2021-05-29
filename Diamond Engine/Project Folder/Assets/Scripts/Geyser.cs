@@ -3,55 +3,117 @@ using DiamondEngine;
 
 public class Geyser : DiamondComponent
 {
-    float timer = 0.0f;
-    public float timeBetweenEruptions = 10.0f;
-
     public int damage = 5;
     private bool playerInRange = false;
     private bool canHurtPlayer = false;
 
-    public GameObject particleSystemObject = null;
+    //timers
+    private float eruptionTimer = 0.0f;
+    private float betweenEruptionsTimer = 0.0f;
+    private float regressionTimer = 0.0f;
+
+    //times
+    public float eruptionTime = 2.47f;
+    public float timeBetweenEruptions = 10.0f;
+    public float regressionTime = 2.0f;
+
+    //Particles
+    public GameObject idleParticlesObject = null;
+    private ParticleSystem idleParticles = null;
+
+    public GameObject eruptionParticlesObject = null;
     private ParticleSystem eruptionParticles = null;
-    private bool particlesWerePlaying = false;
 
     public void Awake()
     {
-        timer = timeBetweenEruptions;
+        betweenEruptionsTimer = timeBetweenEruptions;
 
-        if (particleSystemObject != null)
+        if(idleParticlesObject != null)
         {
-            eruptionParticles = particleSystemObject.GetComponent<ParticleSystem>();
+            idleParticles = idleParticlesObject.GetComponent<ParticleSystem>();
+
+            if(idleParticles != null)
+            {
+                idleParticles.Play();
+            }
+        }
+
+        if (eruptionParticlesObject != null) 
+        {
+            eruptionParticles = eruptionParticlesObject.GetComponent<ParticleSystem>();
         }
     }
 
     public void Update()
     {
-        if (eruptionParticles != null)
         {
-            if (particlesWerePlaying)
+            //if (eruptionParticles != null)
+            //{
+            //    if (particlesWerePlaying)
+            //    {
+            //        if (eruptionParticles.playing)
+            //        {
+            //            if (canHurtPlayer && playerInRange && Core.instance != null)
+            //            {
+            //                HurtPlayer();
+            //            }
+            //        }
+            //        else
+            //        {
+            //            timer = timeBetweenEruptions;
+            //            particlesWerePlaying = false;
+            //        }
+            //    }
+            //}
+
+            //if (timer > 0.0f)
+            //{
+            //    timer -= Time.deltaTime;
+
+            //    if (timer <= 0.0f)
+            //    {
+            //        Erupt();
+            //    }
+            //}
+        }
+
+        if(betweenEruptionsTimer > 0.0f)
+        {
+            betweenEruptionsTimer -= Time.deltaTime;
+
+            if(betweenEruptionsTimer <= 0.0f)
             {
-                if (eruptionParticles.playing)
-                {
-                    if (canHurtPlayer && playerInRange && Core.instance != null)
-                    {
-                        HurtPlayer();
-                    }
-                }
-                else
-                {
-                    timer = timeBetweenEruptions;
-                    particlesWerePlaying = false;
-                }
+                //leave some time between idle and eruption so eruption is anticipated and more spectacular
+                regressionTimer = regressionTime;
             }
         }
 
-        if (timer > 0.0f)
+        if(regressionTimer > 0.0f)
         {
-            timer -= Time.deltaTime;
+            regressionTimer -= Time.deltaTime;
 
-            if (timer <= 0.0f)
+            if (regressionTimer <= 0.0f)
             {
                 Erupt();
+            }
+        }
+
+        if (eruptionTimer > 0.0f)
+        {
+            eruptionTimer -= Time.deltaTime;
+
+            if(eruptionTimer > eruptionTime * 0.5f && playerInRange && canHurtPlayer)
+            {
+                HurtPlayer();
+            }
+
+            if (eruptionTimer <= 0.0f)
+            {
+                if(idleParticles != null)
+                {
+                    idleParticles.Play();
+                    betweenEruptionsTimer = timeBetweenEruptions;
+                }
             }
         }
     }
@@ -61,11 +123,10 @@ public class Geyser : DiamondComponent
         if (eruptionParticles != null)
         {
             eruptionParticles.Play();
-            particlesWerePlaying = true;
-            canHurtPlayer = true;
         }
 
-        timer = timeBetweenEruptions;
+        eruptionTimer = eruptionTime;
+        canHurtPlayer = true;
     }
 
     private void HurtPlayer()
@@ -82,6 +143,7 @@ public class Geyser : DiamondComponent
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
+        //Debug.Log("Player In Range");
         if (triggeredGameObject.CompareTag("Player"))
         {
             playerInRange = true;
@@ -90,6 +152,7 @@ public class Geyser : DiamondComponent
 
     public void OnTriggerExit(GameObject triggeredGameObject)
     {
+        //Debug.Log("Player Out of Range");
         if (triggeredGameObject.CompareTag("Player"))
         {
             playerInRange = false;
