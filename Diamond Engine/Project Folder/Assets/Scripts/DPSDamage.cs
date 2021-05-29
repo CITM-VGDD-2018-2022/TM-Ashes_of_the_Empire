@@ -3,47 +3,36 @@ using DiamondEngine;
 
 public class DPSDamage : DiamondComponent
 {
-    public bool onTriggerStay = false;
-    public int base_damage = 4;
+    public int baseDamage = 4;
     public int damage = 0;
-    public float ticksPerSecond = 1f;
 
-    public float damageTimer = 1.0f;
+    public float damageTime = 1.0f;
+    public float damageTimer = 0.0f;
 
-
-
-    //public Func<int,bool,int> onDealDamage;
-
+    PlayerHealth playerHealth = null;
 
     public void Awake()
     {
-        damage = base_damage;
-        damageTimer = ticksPerSecond;
-        //if (Core.instance != null)
-        //{
-        //    onDealDamage = Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage;
-        //}
+        damage = baseDamage;
+        damageTimer = 0.0f;
     }
 
     public void Update()
     {
-        if (!onTriggerStay)
+        if (damageTimer > 0.0f)
         {
+            damageTimer -= Time.deltaTime;
 
-            return;
-        }
-
-        if (damageTimer < ticksPerSecond)
-        {
-            damageTimer += Time.deltaTime;
-        }
-        else
-        {
-            damageTimer = 0.0f;
-            //onDealDamage?.Invoke(damage,false);
-            Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage, true);
-            IncrementDamage();
-            Debug.Log("Water Damage");
+            if(damageTimer < 0.0f)
+            {
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage, true);
+                    IncrementDamage();
+                    damageTimer = damageTime;
+                    //Debug.Log("Water Damage");
+                }
+            }
         }
     }
 
@@ -52,7 +41,12 @@ public class DPSDamage : DiamondComponent
     {
         if (other.CompareTag("Player"))
         {
-            onTriggerStay = true;
+            if(playerHealth == null)
+            {
+                playerHealth = other.GetComponent<PlayerHealth>();
+            }
+
+            damageTimer = damageTime;
         }
     }
 
@@ -60,9 +54,8 @@ public class DPSDamage : DiamondComponent
     {
         if (other.CompareTag("Player"))
         {
-            onTriggerStay = false;
-            damageTimer = 1;
-            damage = base_damage;
+            damageTimer = 0.0f;
+            damage = baseDamage;
         }
     }
 
