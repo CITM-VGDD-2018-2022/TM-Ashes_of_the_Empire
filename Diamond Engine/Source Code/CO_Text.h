@@ -22,6 +22,9 @@ public:
 	void SetColorText(int index, float value);
 	void SetText(const char* new_text);
 
+	//returns both the number of characters in this word and the word length
+	int DetectWordLength(int textStartingIndex,int& nCharacters); 
+
 #ifndef STANDALONE
 	bool OnEditor() override;
 #endif // !STANDALONE
