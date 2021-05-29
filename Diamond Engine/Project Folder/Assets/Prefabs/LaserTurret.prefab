@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -19.368461608886719,
-                5.1287145614624023,
-                -9.05029296875
+                0,
+                0.21558773517608643,
+                0
             ],
             "Rotation": [
                 0,
@@ -52,7 +52,7 @@
                     "laserRange": 20,
                     "shotTotalAngle": 90,
                     "lasersNumber": 4,
-                    "laserOffset": 0,
+                    "laserOffset": 1,
                     "hit": 1126881442,
                     "sniperHitObj": 1622092012,
                     "grenadeHitObj": 1337086120
@@ -214,7 +214,7 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1594799615,
+                    "UID": 126023845,
                     "ParentUID": 957246446,
                     "PrefabID": 0,
                     "PrefabReference": 1594799615,
@@ -242,8 +242,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 196995074,
-                    "ParentUID": 1594799615,
+                    "UID": 1435414750,
+                    "ParentUID": 957246446,
                     "PrefabID": 0,
                     "PrefabReference": 196995074,
                     "DontDestroy": false,

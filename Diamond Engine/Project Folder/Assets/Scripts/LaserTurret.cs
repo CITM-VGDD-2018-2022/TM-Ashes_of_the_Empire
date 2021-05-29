@@ -323,7 +323,6 @@ public class LaserTurret : Enemy
 
     private void CalculateLaserRotation()
     {
-
         float angleIncrement = 360 / lasersNumber;
         for (int i = 0; i < lasersNumber; i++)
         {
@@ -342,18 +341,16 @@ public class LaserTurret : Enemy
             GameObject hit = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * laserOffset), laserDirections[i], laserRange, ref hitDistance);
             if (hit != null)
             {
-                PlayerHealth health = hit.GetComponent<PlayerHealth>();
-                if (health != null && hit.CompareTag("Player") && damageCurrentTimer >= damageMaxTimer)
+                if (hit.CompareTag("Player") && damageCurrentTimer >= damageMaxTimer)
                 {
-                    //Debug.Log("Hit player");
-                    health.TakeDamage((int)this.damage);
+                    PlayerHealth health = hit.GetComponent<PlayerHealth>();
+                    health.TakeDamage((int)damage);
                     damageCurrentTimer = 0.0f;
                 }
             }
 
             InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up, gameObject.transform.globalPosition + Vector3.up + (laserDirections[i] * (hitDistance != 0 ? (hitDistance + laserOffset) : laserRange)),
                                     new Vector3(1.0f, 0.0f, 0.0f), laserWidth);
-            //Debug.Log(laserPoints[i].ToString());
         }
     }
     #endregion
@@ -570,7 +567,7 @@ public class LaserTurret : Enemy
             }
         }
 
-        if(hitParticle != null)
+        if (hitParticle != null)
         {
             hitParticle.Play();
         }
