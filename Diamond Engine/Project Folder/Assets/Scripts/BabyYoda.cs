@@ -231,7 +231,7 @@ public class BabyYoda : DiamondComponent
 
             if (_hit != null && !_hit.CompareTag("Player"))
             {
-                Debug.Log("Should avoid");
+                //Debug.Log("Should avoid");
 
                 Vector3 avoidVector = (rayDirection.normalized * hitDistance) * -1;
                 avoidVector.y = 0.0f;
