@@ -48,7 +48,7 @@ public class SkyTrooperShot : DiamondComponent
 			if(deleteTimer <= 0.0f)
             {
 				InternalCalls.Destroy(gameObject);
-				Debug.Log("Destroyed Bullet");
+				//Debug.Log("Destroyed Bullet");
 			}
         }
 

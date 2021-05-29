@@ -55,8 +55,6 @@ public class Skytrooper : Enemy
     //Speeds
     public float wanderSpeed = 3.5f;
     public float dashSpeed = 7.5f;
-    //public float bulletSpeed = 10.0f;
-    //private bool skill_slowDownActive = false;
 
     //Ranges
     public float wanderRange = 7.5f;
@@ -66,11 +64,9 @@ public class Skytrooper : Enemy
     private float idleTimer = 0.0f;
     private float wanderTimer = 0.0f;
     public float dashTimer = 0.0f;
-    //private float shotTimer = 0.0f;
     private float dieTimer = 0.0f;
     private float shootTimer = 0.0f;
     private float pushTimer = 0.0f;
-    private float skill_slowDownTimer = 0.0f;
     private float currAnimationPlaySpd = 1f;
 
     //Action variables
@@ -83,7 +79,6 @@ public class Skytrooper : Enemy
     public float PushStun = 2;
 
     //Shoot
-    private float shootTime = 0f;
     private float shootAnimTimer = 0f;
 
     //hit particles
@@ -122,7 +117,6 @@ public class Skytrooper : Enemy
         //else
         //Debug.Log("Hit particles gameobject not found!");
 
-        shootTime = Animator.GetAnimationDuration(gameObject, "SK_Shoot") * 0.5f;
         shootAnimationTime = Animator.GetAnimationDuration(gameObject, "SK_Shoot");
     }
 
@@ -130,9 +124,6 @@ public class Skytrooper : Enemy
     {
         myDeltaTime = Time.deltaTime * speedMult;
         UpdateStatuses();
-
-        if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
-            inputsList.Add(INPUT.IN_DIE);
 
         #region STATE MACHINE
 
@@ -176,16 +167,6 @@ public class Skytrooper : Enemy
                 inputsList.Add(INPUT.IN_DASH_END);
             }
         }
-
-        /*if (skill_slowDownActive)
-        {
-            skill_slowDownTimer += myDeltaTime;
-            if (skill_slowDownTimer >= Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownDuration)
-            {
-                skill_slowDownTimer = 0.0f;
-                skill_slowDownActive = false;
-            }
-        }*/
     }
 
     //All events from outside the stormtrooper
@@ -449,7 +430,10 @@ public class Skytrooper : Enemy
         targetPosition = CalculateRandomInRangePosition();
 
         if (targetPosition == null)
+        {
             inputsList.Add(INPUT.IN_WANDER);
+            Debug.Log("Emergency wander");
+        }
         //Debug.Log(targetPosition.ToString());
 
         UpdateAnimationSpd(speedMult);
@@ -458,9 +442,6 @@ public class Skytrooper : Enemy
     {
         LookAt(targetPosition);
 
-        //if (skill_slowDownActive)
-        //    MoveToPosition(targetPosition, dashSpeed * (1 - Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownAmount));
-        //else 
         MoveToPosition(targetPosition, dashSpeed * speedMult);
 
         UpdateAnimationSpd(speedMult);
@@ -885,7 +866,7 @@ public class Skytrooper : Enemy
             return GoForward();
         }
 
-        return null;
+        return gameObject.transform.globalPosition;
     }
 
     private void UpdateAnimationSpd(float newSpd)
@@ -907,11 +888,16 @@ public class Skytrooper : Enemy
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
 
-        Vector3 randomPosition = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
+        Vector3 randomDirection = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
                                              0.0f,
                                              (float)(Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.z));
+        float hitDistance = 0.0f;
+        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition, randomDirection, dashRange, ref hitDistance);
 
-        return gameObject.transform.localPosition + randomPosition * dashRange;
+        if (hitObject == null)
+            return gameObject.transform.localPosition + randomDirection * dashRange;
+        else
+            return gameObject.transform.localPosition;
     }
 
     private Vector3 GoBackwards()
@@ -924,11 +910,17 @@ public class Skytrooper : Enemy
 
         Vector3 direction = gameObject.transform.globalPosition - Core.instance.gameObject.transform.globalPosition;
 
-        Vector3 randomPosition = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
+        Vector3 randomDirection = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
                                              0.0f,
                                              (float)(Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.z));
 
-        return gameObject.transform.localPosition + randomPosition * dashRange;
+        float hitDistance = 0.0f;
+        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition, randomDirection, dashRange, ref hitDistance);
+
+        if (hitObject == null)
+            return gameObject.transform.localPosition + randomDirection * dashRange;
+        else
+            return gameObject.transform.localPosition;
     }
 
     public override void PlayGrenadeHitParticles()
