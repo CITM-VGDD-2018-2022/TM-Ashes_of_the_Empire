@@ -163,11 +163,20 @@ public class HUD : DiamondComponent
     {
         if (start)
         {
-            comboColor = Vector3.one;
+            comboColor = new Vector3(1.0f, 1.0f, 1.0f);
             UpdateHP(PlayerHealth.currHealth, PlayerHealth.currMaxHealth);
             ResetCombo();
-            UpdateForce(BabyYoda.instance.GetCurrentForce(), BabyYoda.GetMaxForce());
-            max_hp_number.GetComponent<Text>().text = PlayerHealth.currMaxHealth.ToString();
+
+            if(BabyYoda.instance != null)
+            {
+                UpdateForce(BabyYoda.instance.GetCurrentForce(), BabyYoda.GetMaxForce());
+            }
+            if(max_hp_number != null)
+            {
+                Text text = max_hp_number.GetComponent<Text>();
+                if(text != null)
+                    text.text = PlayerHealth.currMaxHealth.ToString();
+            }
             last_hp = Mathf.Lerp(last_hp, PlayerHealth.currHealth - 0.5f, 2.5f * Time.deltaTime);
 
             primaryWeaponHeat = 0f;
@@ -175,8 +184,11 @@ public class HUD : DiamondComponent
             primaryWeaponColorStart = new Vector3(1f, 1.2f, 0f);
             primaryWeaponColorEnd = new Vector3(1f, 0f, 0f);
 
-            weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModStart", primaryWeaponColorStart);
-            weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModEnd", primaryWeaponColorEnd);
+            if(weapon_bar != null)
+            {
+                weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModStart", primaryWeaponColorStart);
+                weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModEnd", primaryWeaponColorEnd);
+            }
             if (weapon_gauge != null)
                 weapon_gauge.GetComponent<Material>().SetFloatUniform("heat", 1f);
             if (life_gauge != null)
