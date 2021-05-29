@@ -184,6 +184,9 @@ void C_Image2D::SetTexture(int UID, Resource::Type _type)
 
 void C_Image2D::SetBlendTexture(ResourceTexture* bTexture)
 {
+	if (bTexture == nullptr)
+		return;
+
 	EngineExternal->moduleResources->RequestResource(bTexture->GetUID(), bTexture->GetLibraryPath());
 
 	if (blendTexture != nullptr)
