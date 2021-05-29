@@ -710,6 +710,12 @@ public class Bosseslv2 : Entity
                 Audio.PlayAudio(gameObject, "Play_Victory_Music");
             }
         }
+
+        if (jumpPositionIndicator != null && jumpPositionIndicator.IsEnabled())
+        {
+            jumpPositionIndicator.Enable(false);
+        }
+
         Debug.Log("Dying");
     }
     public void UpdateDie()

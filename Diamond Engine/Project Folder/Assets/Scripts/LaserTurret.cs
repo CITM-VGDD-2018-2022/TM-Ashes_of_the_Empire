@@ -95,10 +95,7 @@ public class LaserTurret : Enemy
             // Debug.Log("PLAY SPAWN!!!");
             spawnparticles.Play();
         }
-        else
-        {
-            //Debug.Log("CAN'T PLAY SPAWN!!!"); 
-        }
+
         if (hit != null)
         {
             hitParticle = hit.GetComponent<ParticleSystem>();
@@ -420,7 +417,6 @@ public class LaserTurret : Enemy
             BH_Bullet bullet = collidedGameObject.GetComponent<BH_Bullet>();
             if (bullet != null)
             {
-
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
                 // healthPoints -= collidedGameObject.GetComponent<BH_Bullet>().damage;
             }
@@ -536,7 +532,6 @@ public class LaserTurret : Enemy
                 inputsList.Add(INPUT.IN_DIE);
             }
         }
-
     }
 
     public override void TakeDamage(float damage)
@@ -574,7 +569,12 @@ public class LaserTurret : Enemy
                 Core.instance.skill_SoloHeal = 0;
             }
         }
-        hitParticle.Play();
+
+        if(hitParticle != null)
+        {
+            hitParticle.Play();
+        }
+
         if (currentState != STATE.DIE)
         {
             if (healthPoints <= 0.0f)
@@ -582,7 +582,7 @@ public class LaserTurret : Enemy
                 inputsList.Add(INPUT.IN_DIE);
                 if (Core.instance != null)
                 {
-                    if (Core.instance.HasStatus(STATUS_TYPE.WINDU_FORCE))
+                    if (Core.instance.HasStatus(STATUS_TYPE.WINDU_FORCE) && BabyYoda.instance != null)
                         BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + (int)(Core.instance.GetStatusData(STATUS_TYPE.WINDU_FORCE).severity));
                 }
             }
@@ -593,6 +593,8 @@ public class LaserTurret : Enemy
     public override void PlayGrenadeHitParticles()
     {
         if (grenadeHit != null)
+        {
             grenadeHit.Play();
+        }
     }
 }
