@@ -4,12 +4,20 @@ using DiamondEngine;
 public class EndLevelRewardSpawn : DiamondComponent
 {
     public bool trigger = false;
-    public float verticalMovementAmount = 1.0f;
     public float rotSpeedDegSec = 1.0f;
     float rotationAngle = 0.0f;
     public float verticalSpeedMultiplier = 0.5f;
     bool goingUp = true;
     float animTime = 0.0f;
+    public float movementSpeed = 1.0f;
+
+    private float timer = 0.0f;
+    public float timeToStarMovingToPlayer = 5.0f;
+
+    public void Awake()
+    {
+        timer = timeToStarMovingToPlayer;
+    }
 
     public void OnTriggerEnter(GameObject collidedGameObject)
     {
@@ -44,10 +52,25 @@ public class EndLevelRewardSpawn : DiamondComponent
         }
         float yPos = ParametricBlend(animTime);
 
+        Vector3 newPos = new Vector3(gameObject.transform.localPosition.x, initialPos.y, gameObject.transform.localPosition.z);
+        newPos.y += yPos * movementSpeed;
 
+        if (timer > 0.0f)
+        {
+            timer -= Time.deltaTime;
 
-        Vector3 newPos = new Vector3(initialPos.x, initialPos.y, initialPos.z);
-        newPos.y += yPos * verticalMovementAmount;
+            Debug.Log("Boon timer: " + timer.ToString());
+        }
+        else
+        {
+            if (Core.instance != null)
+            {
+                Vector3 movementVector = (Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition).normalized * movementSpeed * Time.deltaTime;
+                newPos.x += movementVector.x;
+                newPos.z += movementVector.z;
+            }
+        }
+
         gameObject.transform.localPosition = newPos;
     }
 

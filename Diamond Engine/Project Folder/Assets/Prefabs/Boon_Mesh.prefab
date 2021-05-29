@@ -101,9 +101,10 @@
                     "Active": true,
                     "ScriptName": "EndLevelRewardSpawn",
                     "trigger": false,
-                    "verticalMovementAmount": 1,
                     "rotSpeedDegSec": 1,
-                    "verticalSpeedMultiplier": 0.5
+                    "verticalSpeedMultiplier": 0.5,
+                    "movementSpeed": 1,
+                    "timeToStarMovingToPlayer": 5
                 },
                 {
                     "Type": 26,
