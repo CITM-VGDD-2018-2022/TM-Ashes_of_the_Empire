@@ -166,6 +166,9 @@
     <Filter Include="Sources\Helpers\PostProcessing">
       <UniqueIdentifier>{e337fadb-d6f6-479e-8655-c771380004dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Components\Derived\Water">
+      <UniqueIdentifier>{5cd5c89a-8f25-4fd7-991e-9cd729de4732}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source Code\Globals.h">
@@ -1070,6 +1073,9 @@
     <ClInclude Include="Source Code\CS_AreaLight_Bindings.h">
       <Filter>Sources\Tools\Bindings</Filter>
     </ClInclude>
+    <ClInclude Include="Source Code\CO_ProceduralMesh.h">
+      <Filter>Sources\Components\Derived\Water</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Code\Main.cpp">
@@ -1666,6 +1672,9 @@
     </ClCompile>
     <ClCompile Include="Source Code\WI_EnvLightConfig.cpp">
       <Filter>Sources\Editor\Windows\Derived</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Code\CO_ProceduralMesh.cpp">
+      <Filter>Sources\Components\Derived\Water</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

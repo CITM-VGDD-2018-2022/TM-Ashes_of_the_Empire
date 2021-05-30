@@ -283,6 +283,12 @@ void W_Inspector::Draw()
 							selectedGO->AddComponent(Component::TYPE::NAVMESHAGENT);
 					}
 
+					if (ImGui::Selectable("Procedural mesh"))
+					{
+						if (selectedGO->GetComponent(Component::TYPE::PROCEDURAL_MESH) == nullptr)
+							selectedGO->AddComponent(Component::TYPE::PROCEDURAL_MESH);
+					}
+
 					if (ImGui::BeginMenu("Scripts"))
 					{
 						std::vector<std::string> scripts;

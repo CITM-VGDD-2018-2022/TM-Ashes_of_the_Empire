@@ -28,6 +28,7 @@
 #include "CO_NavMeshAgent.h"
 #include "CO_StencilMaterial.h"
 #include "CO_AreaLight.h"
+#include "CO_ProceduralMesh.h"
 
 #include"MO_Scene.h"
 
@@ -220,6 +221,10 @@ Component* GameObject::AddComponent(Component::TYPE _type, const char* params)
 
 	case Component::TYPE::AREA_LIGHT:
 		ret = new C_AreaLight(this);
+		break;
+
+	case Component::TYPE::PROCEDURAL_MESH:
+		ret = new C_ProceduralMesh(this);
 		break;
 	}
 
