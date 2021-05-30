@@ -36,14 +36,13 @@ public class SpawnManager : DiamondComponent
 
         enemiesToSpawn = maxEnemiesPerWave;
 
-        if (waveTimer <= 0.0f)
-            waveTimer = 0.01f;
-
         EnemyManager.ClearList();
 
         maxDelayTimeSec = (int)maxDelayTime;
         maxDelayTimePoint = maxDelayTime - (float)maxDelayTimeSec;
         endWave = false;
+
+        waveTimer = delayInWaveSpawn;
     }
 
     public void Update()
@@ -53,11 +52,11 @@ public class SpawnManager : DiamondComponent
 
         waveTimer -= Time.deltaTime;
 
-        if (((waveTimer <= 0.0f && (EnemyManager.EnemiesLeft() <= enemiesLeftToNextWave || enemiesLeftInWave > 0)) || EnemyManager.EnemiesLeft() == 0)
-            && EnemyManager.awaitingForEnemiesToSpawn == 0)
+        if (((waveTimer <= 0.0f && (EnemyManager.EnemiesLeft() <= enemiesLeftToNextWave || enemiesLeftInWave > 0)) 
+            || EnemyManager.EnemiesLeft() == 0) && EnemyManager.awaitingForEnemiesToSpawn == 0)
         {
             SpawnWave();
-            waveTimer = 0f;
+            waveTimer = 0.0f;
 
             if (enemiesToSpawn > 0)
             {
@@ -74,7 +73,9 @@ public class SpawnManager : DiamondComponent
                     enemiesToSpawn = maxEnemiesPerWave;
                 }
                 else
+                {
                     endWave = true;
+                }
             }
         }
 
