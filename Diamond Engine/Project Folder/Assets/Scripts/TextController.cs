@@ -63,6 +63,8 @@ public class TextController : DiamondComponent
     {
 		if (gui == null)
 			gui = InternalCalls.FindObjectWithName("HUD");
+
+		timer = Time.deltaTime;
     }
 
 	public void OnExecuteButton()
@@ -146,12 +148,6 @@ public class TextController : DiamondComponent
 		if (gui == null)
 			gui = Core.instance.hud;
 
-		if(timer > 0.0f)
-        {
-			timer -= Time.deltaTime;
-			return;
-        }
-
 		if (startMenu == true && dialog != null && list_of_dialogs != null && dialog_index >= 0)
 		{
 			//Debug.Log(dialog_index.ToString());
@@ -170,7 +166,7 @@ public class TextController : DiamondComponent
 		}
 		else if (finished == true)
 		{
-			Debug.Log(finished.ToString());
+			//Debug.Log(finished.ToString());
 
 			startMenu = true;
 			finished = false;
@@ -179,7 +175,7 @@ public class TextController : DiamondComponent
 
 	private void TurnOffImage(DialogImages lastImg)
 	{
-		Debug.Log(lastImg.ToString());
+		//Debug.Log(lastImg.ToString());
 		switch (lastImg)
 		{
 			case DialogImages.IMG_MANDO_SERIOUS:
@@ -276,7 +272,7 @@ public class TextController : DiamondComponent
 
 	private void TurnOnImage(DialogImages newImg)
 	{
-		Debug.Log(newImg.ToString());
+		//Debug.Log(newImg.ToString());
 		switch (newImg)
 		{
 			case DialogImages.IMG_MANDO_SERIOUS:

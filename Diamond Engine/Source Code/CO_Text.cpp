@@ -45,51 +45,94 @@ void C_Text::RenderText(C_Transform2D* transform, ResourceMaterial* material, un
 	float x = 0;
 	float y = 0;
 
-	for (int i = 0; i < text.size(); ++i)
+	int textIndex = 0;
+	std::map<char, Character>::iterator it;
+
+	while (textIndex<text.size())
 	{
-		std::map<char, Character>::iterator it = font->characters.find(text[i]);
-
-		if (it != font->characters.end())
+		if (text[textIndex] == ' ')//In case we enconter a Space
 		{
-			const Character& character = it->second;
-
-			glBindTexture(GL_TEXTURE_2D, font->atlasTexture);
-			GLint modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "model_matrix");
-			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, transform->GetGlobal2DTransform().ptr());
-
-			modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "altColor");
-			glUniform3f(modelLoc, textColor[0], textColor[1], textColor[2]);
-
-			float posX = (x + character.bearing[0]) / 100.f;
-			float posY = (y - (character.size[1] - character.bearing[1])) / 100.f;
-
-			float width = character.size[0] / 100.f;
-			float height = character.size[1] / 100.f;
-
-			float vertices[6][4] = {
-				{ posX,			posY + height,  character.textureOffset, 0.0f },
-				{ posX,			posY,			character.textureOffset, character.size[1] / (float)font->atlasHeight },
-				{ posX + width, posY,			character.textureOffset + character.size[0] / (float)font->atlasWidth, character.size[1] / (float)font->atlasHeight},
-
-				{ posX,			posY + height,  character.textureOffset, 0.0f },
-				{ posX + width, posY,			character.textureOffset + character.size[0] / (float)font->atlasWidth, character.size[1] / (float)font->atlasHeight },
-				{ posX + width, posY + height,  character.textureOffset + character.size[0] / (float)font->atlasWidth, 0.0f }
-			};
-
-			glBindBuffer(GL_ARRAY_BUFFER, VBO);
-			glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
-
-			// render quad
-			glDrawArrays(GL_TRIANGLES, 0, 6);
-
-			x += (character.advance[0] >> 6);	//Bitshift by 6 to get size in pixels
-
-			if (x >= maxTextLenght && maxTextLenght != 0)
+			it = font->characters.find(text[textIndex]);
+			if (it != font->characters.end()) //If it exists in the font
 			{
-				y -= (character.advance[1] >> 6);
-				x = 0.f;
+				const Character& character = it->second;
+
+				if (x+(character.advance[0] >> 6) >= maxTextLenght && maxTextLenght != 0) //if the space is in the end of the line go to next line
+				{
+					y -= (character.advance[1] >> 6);
+					x = 0.f;
+				}
+				else
+				{
+					x += (character.advance[0] >> 6);	//Bitshift by 6 to get size in pixels
+				}
 			}
+
+			++textIndex;
 		}
+		else //Then it is a word
+		{
+			int wordLengthInChars = 0;
+			int wordLength = DetectWordLength(textIndex, wordLengthInChars);
+
+			if(x+wordLength >= maxTextLenght && maxTextLenght != 0) //if the word exceeds line width go to next line
+			{
+				it = font->characters.find(text[textIndex]);
+				if (it != font->characters.end()) //If it exists in the font
+				{
+					const Character& character = it->second;
+					y -= (character.advance[1] >> 6);
+					x = 0.f;
+				}
+			}
+
+
+			for (int i = textIndex; i < textIndex+ wordLengthInChars; i++)
+			{
+				it = font->characters.find(text[i]);
+
+				if (it != font->characters.end())
+				{
+					const Character& character = it->second;
+
+					glBindTexture(GL_TEXTURE_2D, font->atlasTexture);
+					GLint modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "model_matrix");
+					glUniformMatrix4fv(modelLoc, 1, GL_FALSE, transform->GetGlobal2DTransform().ptr());
+
+					modelLoc = glGetUniformLocation(material->shader->shaderProgramID, "altColor");
+					glUniform3f(modelLoc, textColor[0], textColor[1], textColor[2]);
+
+					float posX = (x + character.bearing[0]) / 100.f;
+					float posY = (y - (character.size[1] - character.bearing[1])) / 100.f;
+
+					float width = character.size[0] / 100.f;
+					float height = character.size[1] / 100.f;
+
+					float vertices[6][4] = {
+						{ posX,			posY + height,  character.textureOffset, 0.0f },
+						{ posX,			posY,			character.textureOffset, character.size[1] / (float)font->atlasHeight },
+						{ posX + width, posY,			character.textureOffset + character.size[0] / (float)font->atlasWidth, character.size[1] / (float)font->atlasHeight},
+
+						{ posX,			posY + height,  character.textureOffset, 0.0f },
+						{ posX + width, posY,			character.textureOffset + character.size[0] / (float)font->atlasWidth, character.size[1] / (float)font->atlasHeight },
+						{ posX + width, posY + height,  character.textureOffset + character.size[0] / (float)font->atlasWidth, 0.0f }
+					};
+
+					glBindBuffer(GL_ARRAY_BUFFER, VBO);
+					glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertices), vertices);
+
+					// render quad
+					glDrawArrays(GL_TRIANGLES, 0, 6);
+
+					x += (character.advance[0] >> 6);	//Bitshift by 6 to get size in pixels
+				}
+			}
+
+			textIndex += wordLengthInChars;
+		}
+		
+
+
 	}
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -98,6 +141,36 @@ void C_Text::RenderText(C_Transform2D* transform, ResourceMaterial* material, un
 
 	if (material->shader)
 		material->shader->Unbind();
+}
+
+int C_Text::DetectWordLength(int textStartingIndex, int& nCharacters)
+{
+	int wordLenght = 0;
+	nCharacters = 0;
+
+	bool encounteredSpace = false;
+	std::map<char, Character>::iterator it;
+
+	while (textStartingIndex+ nCharacters <text.size()&& encounteredSpace==false)
+	{
+		if (text[textStartingIndex + nCharacters] == ' ')
+		{
+			encounteredSpace = true; //TODO maybe a break wold be more efficient?
+		}
+		else
+		{
+			it = font->characters.find(text[textStartingIndex + nCharacters]);
+			if (it != font->characters.end()) //If it exists in the font
+			{
+				const Character& character = it->second;
+				wordLenght += (character.advance[0] >> 6);
+			}
+
+			++nCharacters;
+		}
+	}
+
+	return wordLenght;
 }
 
 const char* C_Text::GetText()
@@ -123,6 +196,7 @@ void C_Text::SetText(const char* new_text)
 {
 	text = new_text;
 }
+
 
 
 #ifndef STANDALONE
