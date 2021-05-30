@@ -14,7 +14,7 @@ public class MoffGideon : Entity
     enum STATE : int
     {
         NONE = -1,
-
+        START, // 1st frame init
         PRESENTATION,
 
         // Neutral
@@ -113,6 +113,8 @@ public class MoffGideon : Entity
         IN_CHARGE_THROW_END,
         IN_RETRIEVE_SABER,
         IN_RETRIEVE_SABER_END,
+        IN_POST_SABER_TIRED,
+        IN_POST_SABER_TIRED_END,
 
         // Prob to delete
         IN_DASH_FORWARD,
@@ -126,9 +128,9 @@ public class MoffGideon : Entity
         IN_DEAD
     }
 
-    public class AttackMoff
+    public class MoffAttack
     {
-        public AttackMoff(string animation, GameObject go)
+        public MoffAttack(string animation, GameObject go)
         {
             this.animation = animation;
             this.duration = Animator.GetAnimationDuration(go, animation) - 0.016f;
@@ -140,12 +142,13 @@ public class MoffGideon : Entity
     private NavMeshAgent agent = null;
     private GameObject saber = null;
     public GameObject camera = null;
-    private CameraController cam_comp = null;
+    private CameraController cameraComp = null;
 
     //State
-    private STATE currentState = STATE.PRESENTATION;
+    private STATE currentState = STATE.NONE;
     private List<INPUT> inputsList = new List<INPUT>();
     private PHASE currentPhase = PHASE.PHASE1;
+    private bool start = false;
 
     Random randomNum = new Random();
 
@@ -168,7 +171,8 @@ public class MoffGideon : Entity
     public float probWanderP2 = 40f;
     public float probWander = 60f;
     public float radiusWander = 5f;
-    public float distanceProjectile = 17f;
+    public float minProjectileDistance = 17f;
+    public float minMeleeDistance = 5f;
     public float dashSpeed = 10f;
     public float dashBackWardDistance = 3f;
     public float dashForwardDistance = 10f;
@@ -189,23 +193,18 @@ public class MoffGideon : Entity
     public int numAtacksPh1 = 2;
     public int numAtacksPh2 = 1;
 
-    private List<GameObject> deathtroopers = null;
-
     //Private Variables
     private float currAnimationPlaySpd = 1f;
-    private bool soloDash = false;
     private bool invencible = false;
-    private bool wander = false;
-    private bool ready2Spawn = false;
+    private bool ableToSpawnEnemies = false;
     private Vector3 beginDash = null;
     private Vector3 targetDash = null;
-    private bool deathTrooperSpawned = false;
     private GameObject visualFeedback = null;
     private bool justDashing = false;
     private int maxProjectiles = 7;
     private int projectiles = 0;
     private bool aiming = false;
-    private List<AttackMoff> atacks = new List<AttackMoff>();
+    private List<MoffAttack> meleeComboAttacks = new List<MoffAttack>();
     private int nAtacks = 0;
     private int nSequences = 3;
     private bool retrieveAnim = true;
@@ -215,10 +214,12 @@ public class MoffGideon : Entity
     //Timers
     private float dieTimer = 0f;
     public float dieTime = 0.1f;
-    private float neutralTimer = 0f;
-    public float neutralTime = 5f;
-    private float enemiesTimer = 0f;
-    public float enemiesTime = 1f;
+    private float actionSelectTimer = 0f;
+    public float movementSelectTime = 5f;
+    private float updateMovInputTimer = 0f;
+    public float updateMovInputTime = 5f;
+    private float enemySkillTimer = 0f;
+    public float enemySkillTime = 1f;
     private float comboTime = 0f;
     private float comboTimer = 0f;
     private float presentationTime = 0f;
@@ -229,6 +230,8 @@ public class MoffGideon : Entity
     private float chargeThrowTimer = 0f;
     public float cadencyTime = 0.2f;
     public float cadencyTimer = 0f;
+    public float spawnEnemyTime = 0f;
+    private float spawnEnemyTimer = 0f;
     private float privateTimer = 0f;
 
     //Boss bar updating
@@ -237,7 +240,7 @@ public class MoffGideon : Entity
     private float damaged = 0.0f;
     private float limbo_health = 0.0f;
     Material bossBarMat = null;
-    
+
     public void Awake()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
@@ -261,30 +264,34 @@ public class MoffGideon : Entity
         dieTime = Animator.GetAnimationDuration(gameObject, "MG_Death") - 0.016f;
         chargeThrowTime = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow") - 0.016f;
 
-        atacks.Add(new AttackMoff("MG_MeleeCombo1", gameObject));
-        atacks.Add(new AttackMoff("MG_MeleeCombo2", gameObject));
-        atacks.Add(new AttackMoff("MG_MeleeCombo3", gameObject));
-        atacks.Add(new AttackMoff("MG_MeleeCombo4", gameObject));
-        atacks.Add(new AttackMoff("MG_MeleeCombo5", gameObject));
-        atacks.Add(new AttackMoff("MG_MeleeCombo6", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo1", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo2", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo3", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo4", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo5", gameObject));
+        meleeComboAttacks.Add(new MoffAttack("MG_MeleeCombo6", gameObject));
 
-        enemiesTimer = enemiesTime;
+        enemySkillTimer = enemySkillTime;
 
-        deathtroopers = new List<GameObject>();
-
-        if(camera!=null)
-            cam_comp = camera.GetComponent<CameraController>();
+        if (camera != null)
+            cameraComp = camera.GetComponent<CameraController>();
 
         bossBarMat = boss_bar.GetComponent<Material>();
 
         Audio.SetState("Player_State", "Alive");
         Audio.SetState("Game_State", "Moff_Guideon_Room");
 
-        StartPresentation();
+        currentState = STATE.START;
     }
 
     public void Update()
     {
+        if (start == false)
+        {
+            inputsList.Add(INPUT.IN_PRESENTATION);
+            start = true;
+        }
+
         myDeltaTime = Time.deltaTime * speedMult;
         sword.transform.localPosition = new Vector3(0, 0, 0);
 
@@ -297,27 +304,46 @@ public class MoffGideon : Entity
         UpdateState();
     }
 
-    //Timers go here
+    #region STATE_MACHINE
     private void ProcessInternalInput()
     {
-        if (neutralTimer > 0)
+        // Action Select Timer
+        if (actionSelectTimer > 0)
         {
-            neutralTimer -= myDeltaTime;
+            actionSelectTimer -= myDeltaTime;
 
-            if (neutralTimer <= 0)
+            if (actionSelectTimer <= 0)
                 inputsList.Add(INPUT.IN_SEARCH);
-
         }
 
-        if (enemiesTimer > 0)
+        // Check change mov beheaviour
+        if (updateMovInputTimer > 0)
         {
-            enemiesTimer -= myDeltaTime;
+            updateMovInputTimer -= myDeltaTime;
 
-            if (enemiesTimer <= 0)
-                if(deathtroopers.Count>0)
-                    ready2Spawn = true;
-
+            if (updateMovInputTimer <= 0)
+                UpdateMovInput();
         }
+
+        //Enemies
+        if (enemySkillTimer > 0 && EnemyManager.EnemiesLeft() > 1)
+        {
+            enemySkillTimer -= myDeltaTime;
+
+            if (enemySkillTimer <= 0)
+                ableToSpawnEnemies = true;
+        }
+
+        if (spawnEnemyTimer > 0)
+        {
+            spawnEnemyTimer -= myDeltaTime;
+
+            if (spawnEnemyTimer <= 0)
+            {
+                SpawnEnemies();
+            }
+        }
+
 
         if (comboTimer > 0)
         {
@@ -329,8 +355,8 @@ public class MoffGideon : Entity
                 if (nAtacks > 0)
                 {
                     int rand = randomNum.Next(1, 6);
-                    comboTimer = atacks[rand].duration;
-                    Animator.Play(gameObject, atacks[rand].animation);
+                    comboTimer = meleeComboAttacks[rand].duration;
+                    Animator.Play(gameObject, meleeComboAttacks[rand].animation);
                     Input.PlayHaptic(0.5f, 500);
                     UpdateAnimationSpd(speedMult);
                     nAtacks--;
@@ -393,15 +419,6 @@ public class MoffGideon : Entity
 
     private void ProcessExternalInput()
     {
-        if (currentState == STATE.SPAWN_ENEMIES && deathtroopers.Count == 0 && deathTrooperSpawned)
-            inputsList.Add(INPUT.IN_NEUTRAL);
-
-        if (currentState == STATE.CHASE && Mathf.Distance(gameObject.transform.globalPosition, agent.GetDestination()) <= agent.stoppingDistance && wander)
-            agent.CalculateRandomPath(gameObject.transform.globalPosition, radiusWander);
-
-        if (currentState == STATE.CHASE && Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= 1.0f && !wander)
-            wander = true;
-
         if (currentState == STATE.DASH_FORWARD_LONG && Mathf.Distance(gameObject.transform.globalPosition, targetDash) <= 1f && !justDashing)
             inputsList.Add(INPUT.IN_DASH_FORWARD_END);
 
@@ -414,7 +431,6 @@ public class MoffGideon : Entity
         {
             inputsList.Add(INPUT.IN_NEUTRAL);
             justDashing = false;
-            soloDash = true;
         }
 
         if (currentState == STATE.PROJECTILE && projectiles == maxProjectiles)
@@ -423,12 +439,12 @@ public class MoffGideon : Entity
             inputsList.Add(INPUT.IN_NEUTRAL);
         }
 
-        if(currentState==STATE.RETRIEVE_SABER && Mathf.Distance(gameObject.transform.globalPosition, saber.transform.globalPosition) <= 1f)
+        if (currentState == STATE.RETRIEVE_SABER && Mathf.Distance(gameObject.transform.globalPosition, saber.transform.globalPosition) <= 1f)
         {
             inputsList.Add(INPUT.IN_RETRIEVE_SABER_END);
 
         }
-        if(currentState==STATE.RETRIEVE_SABER && Mathf.Distance(gameObject.transform.globalPosition, saber.transform.globalPosition) <= 3.5f && !retrieveAnim)
+        if (currentState == STATE.RETRIEVE_SABER && Mathf.Distance(gameObject.transform.globalPosition, saber.transform.globalPosition) <= 3.5f && !retrieveAnim)
         {
             Animator.Play(gameObject, "MG_Recovery");
             UpdateAnimationSpd(speedMult);
@@ -450,13 +466,22 @@ public class MoffGideon : Entity
                     case STATE.NONE:
                         Debug.Log("MOFF ERROR STATE");
                         break;
+                    case STATE.START:
+                        switch (input)
+                        {
+                            case INPUT.IN_PRESENTATION:
+                                currentState = STATE.PRESENTATION;
+                                StartPresentation();
+                                break;
+                        }
+                        break;
                     case STATE.PRESENTATION:
                         switch (input)
                         {
                             case INPUT.IN_PRESENTATION_END:
                                 currentState = STATE.CHASE;
                                 EndPresentation();
-                                StartNeutral();
+                                StartIdle();
                                 break;
                         }
                         break;
@@ -465,17 +490,19 @@ public class MoffGideon : Entity
                         {
                             case INPUT.IN_WANDER:
                                 currentState = STATE.WANDER;
-                                //EndNeutral();
+                                EndIdle();
+                                StartWander();
                                 break;
 
                             case INPUT.IN_CHASE:
                                 currentState = STATE.CHASE;
-                                //EndNeutral();
+                                EndIdle();
+                                StartChase();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                                EndNeutral();
+                                EndIdle();
                                 StartPhaseChange();
                                 break;
                         }
@@ -485,17 +512,19 @@ public class MoffGideon : Entity
                         {
                             case INPUT.IN_WANDER:
                                 currentState = STATE.WANDER;
-                                //EndNeutral();
+                                EndChase();
+                                StartWander();
                                 break;
 
                             case INPUT.IN_SEARCH:
                                 currentState = STATE.ACTION_SELECT;
-                                //EndNeutral();
+                                EndChase();
+                                StartActionSelect();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
+                                EndChase();
                                 StartPhaseChange();
                                 break;
                         }
@@ -505,17 +534,19 @@ public class MoffGideon : Entity
                         {
                             case INPUT.IN_CHASE:
                                 currentState = STATE.CHASE;
-                                //EndNeutral();
+                                EndWander();
+                                StartChase();
                                 break;
 
                             case INPUT.IN_SEARCH:
                                 currentState = STATE.ACTION_SELECT;
-                                //EndNeutral();
+                                EndWander();
+                                StartActionSelect();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
+                                EndWander();
                                 StartPhaseChange();
                                 break;
                         }
@@ -525,25 +556,25 @@ public class MoffGideon : Entity
                         {
                             case INPUT.IN_SPAWN_ENEMIES:
                                 currentState = STATE.SPAWN_ENEMIES;
-                                EndNeutral();
-                                //StartSpawnEnemies();
+                                EndActionSelect();
+                                StartSpawnEnemies();
                                 break;
 
                             case INPUT.IN_PRE_PROJECTILE_DASH:
                                 currentState = STATE.PRE_PROJECTILE_DASH;
-                                EndNeutral();
+                                EndActionSelect();
                                 //StartProjectile();
                                 break;
 
                             case INPUT.IN_MELEE_COMBO_1_CHARGE:
                                 currentState = STATE.MELEE_COMBO_1_CHARGE;
-                                EndNeutral();
+                                EndActionSelect();
                                 //StartDashForward();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                                EndNeutral();
+                                EndActionSelect();
                                 //StartPhaseChange();
                                 break;
                         }
@@ -553,19 +584,19 @@ public class MoffGideon : Entity
                         {
                             case INPUT.IN_SPAWN_ENEMIES_END:
                                 currentState = STATE.ACTION_SELECT;
-                                //EndSpawnEnemies();
+                                EndSpawnEnemies();
                                 break;
 
                             case INPUT.IN_NEUTRAL:
                                 currentState = STATE.IDLE;
-                                //EndSpawnEnemies();
-                                //StartNeutral();
+                                EndSpawnEnemies();
+                                StartIdle();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                                EndNeutral();
-                                //StartPhaseChange();
+                                EndSpawnEnemies();
+                                StartPhaseChange();
                                 break;
                         }
                         break;
@@ -706,163 +737,9 @@ public class MoffGideon : Entity
                         switch (input)
                         {
 
-                            case INPUT.IN_MELEE_COMBO_4_CHARGE:
-                                currentState = STATE.MELEE_COMBO_4_CHARGE;
-                                break;
-
                             case INPUT.IN_MELEE_COMBO_END:
                                 currentState = STATE.IDLE;
                                 break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_4_CHARGE:
-                        switch (input)
-                        {
-
-                            case INPUT.IN_MELEE_COMBO_4_DASH:
-                                currentState = STATE.MELEE_COMBO_4_DASH;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_4_DASH:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_4:
-                                currentState = STATE.MELEE_COMBO_4;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_4:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_5_CHARGE:
-                                currentState = STATE.MELEE_COMBO_5_CHARGE;
-                                break;
-
-                            case INPUT.IN_MELEE_COMBO_END:
-                                currentState = STATE.IDLE;
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_5_CHARGE:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_5_DASH:
-                                currentState = STATE.MELEE_COMBO_5_DASH;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_5_DASH:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_5:
-                                currentState = STATE.MELEE_COMBO_5;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_5:
-                        switch (input)
-                        {
-
-                            case INPUT.IN_MELEE_COMBO_6_CHARGE:
-                                currentState = STATE.MELEE_COMBO_6_CHARGE;
-                                break;
-
-                            case INPUT.IN_MELEE_COMBO_END:
-                                currentState = STATE.IDLE;
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_6_CHARGE:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_6_DASH:
-                                currentState = STATE.MELEE_COMBO_6_DASH;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_6_DASH:
-                        switch (input)
-                        {
-                            case INPUT.IN_MELEE_COMBO_6:
-                                currentState = STATE.MELEE_COMBO_6;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-
-                            case INPUT.IN_CHANGE_PHASE:
-                                currentState = STATE.CHANGE_PHASE;
-                                //EndNeutral();
-                                //StartPhaseChange();
-                                break;
-                        }
-                        break;
-                    case STATE.MELEE_COMBO_6:
-                        switch (input)
-                        {
-
-                            case INPUT.IN_MELEE_COMBO_END:
-                                currentState = STATE.IDLE;
-                                break;
-
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
@@ -932,7 +809,7 @@ public class MoffGideon : Entity
 
                             case INPUT.IN_CHANGE_PHASE:
                                 currentState = STATE.CHANGE_PHASE;
-                               //EndNeutral();
+                                //EndNeutral();
                                 //StartPhaseChange();
                                 break;
                         }
@@ -956,201 +833,577 @@ public class MoffGideon : Entity
                         break;
                 }
             }
-            //else if (currentPhase == PHASE.PHASE2)
-            //{
-            //    switch (currentState)
-            //    {
-            //        case STATE.NONE:
-            //            Debug.Log("CORE ERROR STATE");
-            //            break;
+            else if (currentPhase == PHASE.PHASE2)
+            {
+                switch (currentState)
+                {
+                    case STATE.NONE:
+                        Debug.Log("MOFF ERROR STATE");
+                        break;
+                    case STATE.IDLE:
+                        switch (input)
+                        {
+                            case INPUT.IN_WANDER:
+                                currentState = STATE.WANDER;
+                                //EndNeutral();
+                                break;
 
-            //        case STATE.CHASE:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_SEARCH:
-            //                    currentState = STATE.ACTION_SELECT;
-            //                    EndNeutral();
-            //                    break;
+                            case INPUT.IN_CHASE:
+                                currentState = STATE.CHASE;
+                                //EndNeutral();
+                                break;
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndNeutral();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.CHASE:
+                        switch (input)
+                        {
+                            case INPUT.IN_WANDER:
+                                currentState = STATE.WANDER;
+                                //EndNeutral();
+                                break;
+
+                            case INPUT.IN_SEARCH:
+                                currentState = STATE.ACTION_SELECT;
+                                //EndNeutral();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.WANDER:
+                        switch (input)
+                        {
+                            case INPUT.IN_CHASE:
+                                currentState = STATE.CHASE;
+                                //EndNeutral();
+                                break;
+
+                            case INPUT.IN_SEARCH:
+                                currentState = STATE.ACTION_SELECT;
+                                //EndNeutral();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.ACTION_SELECT:
+                        switch (input)
+                        {
+                            case INPUT.IN_SPAWN_ENEMIES:
+                                currentState = STATE.SPAWN_ENEMIES;
+                                EndIdle();
+                                //StartSpawnEnemies();
+                                break;
+
+                            case INPUT.IN_PRE_PROJECTILE_DASH:
+                                currentState = STATE.PRE_PROJECTILE_DASH;
+                                EndIdle();
+                                //StartProjectile();
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_1_CHARGE:
+                                currentState = STATE.MELEE_COMBO_1_CHARGE;
+                                EndIdle();
+                                //StartDashForward();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.SPAWN_ENEMIES:
+                        switch (input)
+                        {
+                            case INPUT.IN_SPAWN_ENEMIES_END:
+                                currentState = STATE.ACTION_SELECT;
+                                //EndSpawnEnemies();
+                                break;
+
+                            case INPUT.IN_NEUTRAL:
+                                currentState = STATE.IDLE;
+                                //EndSpawnEnemies();
+                                //StartNeutral();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_1_CHARGE:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_1_DASH:
+                                currentState = STATE.MELEE_COMBO_1_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_1_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_1:
+                                currentState = STATE.MELEE_COMBO_1;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_1:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_2_CHARGE:
+                                currentState = STATE.MELEE_COMBO_2_CHARGE;
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_2_CHARGE:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_2_DASH:
+                                currentState = STATE.MELEE_COMBO_2_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_2_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_2:
+                                currentState = STATE.MELEE_COMBO_2;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_2:
+                        switch (input)
+                        {
+
+                            case INPUT.IN_MELEE_COMBO_3_CHARGE:
+                                currentState = STATE.MELEE_COMBO_3_CHARGE;
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_3_CHARGE:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_3_DASH:
+                                currentState = STATE.MELEE_COMBO_3_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_3_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_3:
+                                currentState = STATE.MELEE_COMBO_3;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_3:
+                        switch (input)
+                        {
+
+                            case INPUT.IN_MELEE_COMBO_4_CHARGE:
+                                currentState = STATE.MELEE_COMBO_4_CHARGE;
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_4_CHARGE:
+                        switch (input)
+                        {
+
+                            case INPUT.IN_MELEE_COMBO_4_DASH:
+                                currentState = STATE.MELEE_COMBO_4_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_4_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_4:
+                                currentState = STATE.MELEE_COMBO_4;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_4:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_5_CHARGE:
+                                currentState = STATE.MELEE_COMBO_5_CHARGE;
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_5_CHARGE:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_5_DASH:
+                                currentState = STATE.MELEE_COMBO_5_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_5_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_5:
+                                currentState = STATE.MELEE_COMBO_5;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_5:
+                        switch (input)
+                        {
+
+                            case INPUT.IN_MELEE_COMBO_6_CHARGE:
+                                currentState = STATE.MELEE_COMBO_6_CHARGE;
+                                break;
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_6_CHARGE:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_6_DASH:
+                                currentState = STATE.MELEE_COMBO_6_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_6_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_MELEE_COMBO_6:
+                                currentState = STATE.MELEE_COMBO_6;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.MELEE_COMBO_6:
+                        switch (input)
+                        {
+
+                            case INPUT.IN_MELEE_COMBO_END:
+                                currentState = STATE.IDLE;
+                                break;
 
 
-            //        case STATE.ACTION_SELECT:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_SPAWN_ENEMIES:
-            //                    currentState = STATE.SPAWN_ENEMIES;
-            //                    EndNeutral();
-            //                    StartSpawnEnemies();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.DASH_BACKWARDS: //TODO: Prob. delete ?
+                        switch (input)
+                        {
+                            case INPUT.IN_DASH_BACKWARDS_END:
+                                currentState = STATE.IDLE;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
 
-            //                case INPUT.IN_PRE_PROJECTILE_DASH:
-            //                    currentState = STATE.PROJECTILE;
-            //                    EndNeutral();
-            //                    StartProjectile();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.PRE_PROJECTILE_DASH_CHARGE:
+                        switch (input)
+                        {
 
-            //                case INPUT.IN_DASH_FORWARD:
-            //                    currentState = STATE.DASH_FORWARD_LONG;
-            //                    EndNeutral();
-            //                    StartDashForward();
-            //                    break;
+                            case INPUT.IN_PRE_PROJECTILE_DASH_CHARGE_END:
+                                currentState = STATE.PRE_PROJECTILE_DASH;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
 
-            //                case INPUT.IN_CHARGE_THROW:
-            //                    currentState = STATE.LOAD_THROW;
-            //                    EndNeutral();
-            //                    StartChargeThrow();
-            //                    break;
-            //            }
-            //            break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.PRE_PROJECTILE_DASH:
+                        switch (input)
+                        {
+                            case INPUT.IN_PRE_PROJECTILE_DASH_END:
+                                currentState = STATE.PROJECTILE;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
 
-            //        case STATE.SPAWN_ENEMIES:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_SPAWN_ENEMIES_END:
-            //                    currentState = STATE.ACTION_SELECT;
-            //                    EndSpawnEnemies();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.PROJECTILE:
+                        switch (input)
+                        {
 
-            //                case INPUT.IN_NEUTRAL:
-            //                    currentState = STATE.CHASE;
-            //                    EndSpawnEnemies();
-            //                    StartNeutral();
-            //                    break;
+                            case INPUT.IN_PROJECTILE_END:
+                                currentState = STATE.LOAD_THROW;
+                                //EndNeutral();
+                                //StartPhaseChange();
+                                break;
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndSpawnEnemies();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.LOAD_THROW:
+                        switch (input)
+                        {
+                            case INPUT.IN_CHARGE_THROW_END:
+                                currentState = STATE.THROW_SABER;
+                                EndChargeThrow();
+                                StartThrowSaber();
+                                break;
 
-            //        case STATE.LOAD_THROW:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_CHARGE_THROW_END:
-            //                    currentState = STATE.THROW_SABER;
-            //                    EndChargeThrow();
-            //                    StartThrowSaber();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndProjectile();
+                                StartDie();
+                                break;
+                        }
+                        break;
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndProjectile();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
+                    case STATE.THROW_SABER:
+                        switch (input)
+                        {
+                            case INPUT.IN_THROW_SABER_END:
+                                currentState = STATE.RETRIEVE_SABER;
+                                EndThrowSaber();
+                                StartRetrieveSaber();
+                                break;
 
-            //        case STATE.THROW_SABER:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_THROW_SABER_END:
-            //                    currentState = STATE.RETRIEVE_SABER;
-            //                    EndThrowSaber();
-            //                    StartRetrieveSaber();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                EndThrowSaber();
+                                StartDie();
+                                break;
+                        }
+                        break;
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndThrowSaber();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
+                    case STATE.RETRIEVE_SABER:
+                        switch (input)
+                        {
+                            case INPUT.IN_RETRIEVE_SABER_END:
+                                currentState = STATE.POST_SABER_TIRED;
+                                EndRetrieveSaber();
+                                //StartNeutral();
+                                break;
 
-            //        case STATE.RETRIEVE_SABER:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_RETRIEVE_SABER_END:
-            //                    currentState = STATE.CHASE;
-            //                    EndRetrieveSaber();
-            //                    StartNeutral();
-            //                    break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                EndRetrieveSaber();
+                                StartDie();
+                                break;
+                        }
+                        break;
+                    case STATE.POST_SABER_TIRED:
+                        switch (input)
+                        {
+                            case INPUT.IN_POST_SABER_TIRED_END:
+                                currentState = STATE.IDLE;
+                                //EndRetrieveSaber();
+                                //StartNeutral();
+                                break;
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndRetrieveSaber();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
+                            case INPUT.IN_DEAD:
+                                currentState = STATE.DEAD;
+                                //EndRetrieveSaber();
+                                StartDie();
+                                break;
+                        }
+                        break;
 
-            //        case STATE.DASH_FORWARD_LONG:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_DASH_FORWARD_END:
-            //                    currentState = STATE.MELEE_COMBO_1;
-            //                    EndDashForward();
-            //                    StartMeleeCombo();
-            //                    break;
 
-            //                case INPUT.IN_NEUTRAL:
-            //                    currentState = STATE.CHASE;
-            //                    EndDashForward();
-            //                    StartNeutral();
-            //                    break;
+                    case STATE.CHANGE_PHASE:
+                        switch (input)
+                        {
+                            case INPUT.IN_CHANGE_STATE_END:
+                                currentState = STATE.IDLE;
+                                EndFirstStage();
+                                //StartNeutral();
+                                break;
+                        }
+                        break;
+                    case STATE.DEAD:
+                        { }
+                        break;
+                    default:
+                        Debug.Log("NEED TO ADD STATE TO MOFF GIDEON");
+                        break;
+                }
 
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndProjectile();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
-
-            //        case STATE.MELEE_COMBO_1:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_MELEE_COMBO_END:
-            //                    currentState = STATE.DASH_BACKWARDS;
-            //                    EndMeleeCombo();
-            //                    StartDashBackward();
-            //                    break;
-
-            //                case INPUT.IN_DASH_FORWARD:
-            //                    currentState = STATE.DASH_FORWARD_LONG;
-            //                    EndMeleeCombo();
-            //                    StartDashForward();
-            //                    break;
-
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndProjectile();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
-
-            //        case STATE.DASH_BACKWARDS:
-            //            switch (input)
-            //            {
-            //                case INPUT.IN_DASH_BACKWARDS_END:
-            //                    currentState = STATE.CHASE;
-            //                    EndDashBackward();
-            //                    StartNeutral();
-            //                    break;
-
-            //                case INPUT.IN_DEAD:
-            //                    currentState = STATE.DEAD;
-            //                    EndProjectile();
-            //                    StartDie();
-            //                    break;
-            //            }
-            //            break;
-
-            //        default:
-            //            Debug.Log("NEED TO ADD STATE TO MOFF GIDEON");
-            //            break;
-            //    }
-            //}
+            }
             inputsList.RemoveAt(0);
         }
     }
@@ -1163,36 +1416,76 @@ public class MoffGideon : Entity
                 Debug.Log("GIDEON ERROR STATE");
                 break;
 
+            case STATE.START:
+                break;
+
+            case STATE.PRESENTATION:
+                UpdatePresentation();
+                break;
+
+            case STATE.IDLE:
+                UpdateIdle();
+                break;
+
             case STATE.CHASE:
-                UpdateNeutral();
+                UpdateChase();
+                break;
+
+            case STATE.WANDER:
+                UpdateWander();
                 break;
 
             case STATE.ACTION_SELECT:
-                SelectAction();
+                UpdateActionSelect();
+                break;
+
+            case STATE.MELEE_COMBO_1_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_1_DASH:
+                break;
+            case STATE.MELEE_COMBO_1:
+                break;
+            case STATE.MELEE_COMBO_2_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_2_DASH:
+                break;
+            case STATE.MELEE_COMBO_2:
+                break;
+            case STATE.MELEE_COMBO_3_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_3_DASH:
+                break;
+            case STATE.MELEE_COMBO_3:
+                break;
+            case STATE.MELEE_COMBO_4_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_4_DASH:
+                break;
+            case STATE.MELEE_COMBO_4:
+                break;
+            case STATE.MELEE_COMBO_5_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_5_DASH:
+                break;
+            case STATE.MELEE_COMBO_5:
+                break;
+            case STATE.MELEE_COMBO_6_CHARGE:
+                break;
+            case STATE.MELEE_COMBO_6_DASH:
+                break;
+            case STATE.MELEE_COMBO_6:
                 break;
 
             case STATE.SPAWN_ENEMIES:
                 UpdateSpawnEnemies();
                 break;
-
-            case STATE.MELEE_COMBO_1:
-                UpdateMeleeCombo();
+            case STATE.PRE_PROJECTILE_DASH_CHARGE:
                 break;
-
-            case STATE.DASH_BACKWARDS:
-                UpdateDashBackward();
+            case STATE.PRE_PROJECTILE_DASH:
                 break;
-
-            //case STATE.DASH_FORWARD_LONG:
-            //    UpdateDashForward();
-            //    break;
 
             case STATE.PROJECTILE:
                 UpdateProjectile();
-                break;
-
-            case STATE.DEAD:
-                UpdateDie();
                 break;
 
             case STATE.LOAD_THROW:
@@ -1207,72 +1500,94 @@ public class MoffGideon : Entity
                 UpdateRetrieveSaber();
                 break;
 
-            case STATE.PRESENTATION:
-                UpdatePresentation();
+            case STATE.POST_SABER_TIRED:
+                break;
+            case STATE.DASH_BACKWARDS:
+                break;
+            case STATE.DASH_FORWARD:
+                break;
+            case STATE.DASH_FORWARD_LONG:
                 break;
 
             case STATE.CHANGE_PHASE:
                 UpdateChangeState();
                 break;
-        }
-        limbo_health = Mathf.Lerp(limbo_health, healthPoints, 0.01f);
-        if (boss_bar != null)
-        {
 
-            if (bossBarMat != null)
-            {
-                if (currentPhase == PHASE.PHASE1)
-                {
-                    bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints_fase1);
-                    bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints_fase1);
-                }
-                else if (currentPhase == PHASE.PHASE2)
-                {
-                    bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints_fase2);
-                    bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints_fase2);
-                }
-            }
-            else
-                Debug.Log("Boss Bar component was null!!");
+            case STATE.DEAD:
+                UpdateDie();
+                break;
+            default:
+                break;
+        }
 
-        }
-        if (damaged > 0.01f)
-        {
-            damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
-        }
-        else
-        {
-            damaged = 0.0f;
-        }
-        if (moff_mesh != null)
-        {
-            Material moffMeshMat = moff_mesh.GetComponent<Material>();
+        UpdateDamaged();
 
-            if (moffMeshMat != null)
-            {
-                moffMeshMat.SetFloatUniform("damaged", damaged);
-            }
-            else
-                Debug.Log("Moff Mesh Material was null!!");
-        }
     }
 
-    private void SelectAction()
+    #endregion
+
+    #region SELECT_ACTION
+
+    private void StartActionSelect()
+    {
+
+    }
+
+    private void UpdateActionSelect()
     {
         if (currentPhase == PHASE.PHASE1)
         {
-            if (ready2Spawn)
+            Random seed = new Random();
+
+            if (seed.NextDouble() > 0.5f && ableToSpawnEnemies == true)
+            {
                 inputsList.Add(INPUT.IN_SPAWN_ENEMIES);
+                return;
+            }
+            else if (Core.instance != null)
+            {
+                float distanceToPlayer = Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
+                float projectileProb = 0f;
+                float meleeComboProb = 0f;
 
-            else if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= distanceProjectile)
-                inputsList.Add(INPUT.IN_DASH_FORWARD);
+                if (distanceToPlayer > minProjectileDistance)
+                {
+                    projectileProb = 0.75f;
+                    meleeComboProb = 0.25f;
 
-            else
-                inputsList.Add(INPUT.IN_PRE_PROJECTILE_DASH);
+                }
+                else if (distanceToPlayer <= minProjectileDistance && distanceToPlayer > minMeleeDistance)
+                {
+                    projectileProb = Mathf.InvLerp(0, minProjectileDistance, distanceToPlayer);
+                    projectileProb *= projectileProb;
+                    meleeComboProb = 1f - projectileProb;
+                }
+                else
+                {
+                    projectileProb = 0.2f;
+                    meleeComboProb = 0.8f;
+                }
+
+                if (seed.NextDouble() > Math.Min(projectileProb, meleeComboProb))
+                {
+                    if (Math.Max(projectileProb, meleeComboProb) == meleeComboProb)
+                        inputsList.Add(INPUT.IN_DASH_FORWARD);
+                    else
+                        inputsList.Add(INPUT.IN_PRE_PROJECTILE_DASH);
+                }
+                else
+                {
+                    if (Math.Min(projectileProb, meleeComboProb) == meleeComboProb)
+                        inputsList.Add(INPUT.IN_DASH_FORWARD);
+                    else
+                        inputsList.Add(INPUT.IN_PRE_PROJECTILE_DASH);
+                }
+            }
+
         }
         else
         {
-            if (ready2Spawn)
+            if (ableToSpawnEnemies == true)
             {
                 inputsList.Add(INPUT.IN_SPAWN_ENEMIES);
                 return;
@@ -1280,20 +1595,23 @@ public class MoffGideon : Entity
 
             if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= closerDistance)
                 inputsList.Add(INPUT.IN_DASH_FORWARD);
-
             else if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= farDistance)
                 inputsList.Add(INPUT.IN_CHARGE_THROW);
-
             else
             {
                 inputsList.Add(INPUT.IN_DASH_FORWARD);
                 justDashing = true;
-
             }
 
         }
-        Debug.Log("Selecting Action");
     }
+
+    private void EndActionSelect()
+    {
+
+    }
+
+    #endregion
 
     #region PRESENTATION
 
@@ -1306,10 +1624,10 @@ public class MoffGideon : Entity
 
         presentationTimer = presentationTime;
 
-        if (cam_comp != null)
+        if (cameraComp != null)
         {
-            cam_comp.Zoom(baseZoom, zoomTimeEasing);
-            cam_comp.target = this.gameObject;
+            cameraComp.Zoom(baseZoom, zoomTimeEasing);
+            cameraComp.target = this.gameObject;
         }
         invencible = true;
 
@@ -1326,8 +1644,8 @@ public class MoffGideon : Entity
 
     private void EndPresentation()
     {
-        if(cam_comp!=null)
-            cam_comp.target = Core.instance.gameObject;
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
         invencible = false;
     }
 
@@ -1346,12 +1664,12 @@ public class MoffGideon : Entity
 
         healthPoints = maxHealthPoints_fase2;
 
-        
 
 
-        if (cam_comp != null)
+
+        if (cameraComp != null)
         {
-            cam_comp.target = this.gameObject;
+            cameraComp.target = this.gameObject;
         }
 
         Input.PlayHaptic(0.7f, 1000);
@@ -1364,7 +1682,7 @@ public class MoffGideon : Entity
     {
 
         Debug.Log("Changing State");
-       
+
         if (changingStateTimer <= 2.5f && !showingSaber)
         {
             showingSaber = true;
@@ -1387,18 +1705,18 @@ public class MoffGideon : Entity
     private void EndFirstStage()
     {
         currentPhase = PHASE.PHASE2;
-        enemiesTimer = enemiesTime;
+        enemySkillTimer = enemySkillTime;
         probWander = probWanderP2;
         followSpeed = 6.8f;
         distance2Melee = 8f;
-        distanceProjectile = 10f;
+        minProjectileDistance = 10f;
         dashSpeed = 16f;
         dashBackWardDistance = 4f;
         dashForwardDistance = 8f;
         closerDistance = 6f;
         touchDamage = 20f;
-        if (cam_comp != null)
-            cam_comp.target = Core.instance.gameObject;
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
         invencible = false;
         showingSaber = false;
 
@@ -1406,45 +1724,114 @@ public class MoffGideon : Entity
 
     #endregion
 
-    #region NEUTRAL
+    #region CHASE
 
-    private void StartNeutral()
+    private void StartChase()
     {
-        if(currentPhase == PHASE.PHASE1) Animator.Play(gameObject, "MG_RunPh1", speedMult);
-        else if(currentPhase == PHASE.PHASE2) Animator.Play(gameObject, "MG_RunPh2", speedMult);
-        UpdateAnimationSpd(speedMult);
-        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Footsteps");
-        neutralTimer = neutralTime;
-        wander = false;
-
-        if (randomNum.Next(1, 100) <= probWander && !soloDash)
+        if (currentPhase == PHASE.PHASE1 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh1")
         {
-            wander = true;
-            agent.CalculateRandomPath(gameObject.transform.globalPosition, radiusWander);
+            Animator.Play(gameObject, "MG_RunPh1", speedMult);
+        }
+        else if (currentPhase == PHASE.PHASE2 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh2")
+        {
+            Animator.Play(gameObject, "MG_RunPh2", speedMult);
         }
 
+        UpdateAnimationSpd(speedMult);
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+
+        updateMovInputTimer = updateMovInputTime;
     }
 
-
-    private void UpdateNeutral()
+    private void UpdateChase()
     {
-        if (agent != null && !wander)
+        if (agent != null && Core.instance != null)
         {
             agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
         }
 
-        //Move character
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(followSpeed * speedMult);
+    }
 
-        Debug.Log("Neutral");
+    private void EndChase()
+    {
+        Audio.StopOneAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+    }
+
+    #endregion
+
+    #region WANDER
+
+    private void StartWander()
+    {
+        if (currentPhase == PHASE.PHASE1 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh1")
+        {
+            Animator.Play(gameObject, "MG_RunPh1", speedMult);
+        }
+        else if (currentPhase == PHASE.PHASE2 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh2")
+        {
+            Animator.Play(gameObject, "MG_RunPh2", speedMult);
+        }
+
+        UpdateAnimationSpd(speedMult);
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+
+        updateMovInputTimer = updateMovInputTime;
+
+        if (agent != null)
+            agent.CalculateRandomPath(gameObject.transform.globalPosition, radiusWander);
+    }
+
+    private void UpdateWander()
+    {
+        if (Mathf.Distance(gameObject.transform.globalPosition, agent.GetDestination()) <= agent.stoppingDistance)
+        {
+            agent.CalculateRandomPath(gameObject.transform.globalPosition, radiusWander);
+        }
+
+        LookAt(agent.GetDestination());
+        agent.MoveToCalculatedPos(followSpeed * speedMult);
+    }
+
+    private void EndWander()
+    {
+        Audio.StopOneAudio(gameObject, "Play_Moff_Gideon_Footsteps");
     }
 
 
-    private void EndNeutral()
+    #endregion
+
+    #region IDLE
+
+    private void StartIdle()
     {
-        soloDash = false;
-        Audio.StopOneAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+        actionSelectTimer = movementSelectTime;
+    }
+
+
+    private void UpdateIdle()
+    {
+        UpdateMovInput();
+    }
+
+    private void EndIdle()
+    {
+
+    }
+
+    private void UpdateMovInput()
+    {
+        if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= 1.0f)
+        {
+            inputsList.Add(INPUT.IN_CHASE);
+        }
+        else
+        {
+            inputsList.Add(INPUT.IN_WANDER);
+        }
+
+        updateMovInputTimer = updateMovInputTime;
     }
 
     #endregion
@@ -1487,9 +1874,9 @@ public class MoffGideon : Entity
         }
         int rand = randomNum.Next(1, 6);
         sword.EnableCollider();
-        Animator.Play(gameObject, atacks[rand].animation, speedMult);
+        Animator.Play(gameObject, meleeComboAttacks[rand].animation, speedMult);
         UpdateAnimationSpd(speedMult);
-        comboTimer = atacks[rand].duration;
+        comboTimer = meleeComboAttacks[rand].duration;
         Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Lightsaber_Whoosh");
         nAtacks--;
         Input.PlayHaptic(0.5f, 500);
@@ -1540,7 +1927,7 @@ public class MoffGideon : Entity
         cadencyTimer = cadencyTime;
         aiming = true;
         privateTimer = 1f;
-        cam_comp.Zoom(zoomInValue, zoomTimeEasing);
+        cameraComp.Zoom(zoomInValue, zoomTimeEasing);
     }
 
     private void UpdateProjectile()
@@ -1582,63 +1969,71 @@ public class MoffGideon : Entity
 
     private void EndProjectile()
     {
-        cam_comp.Zoom(baseZoom, zoomTimeEasing);
+        cameraComp.Zoom(baseZoom, zoomTimeEasing);
     }
-
-
 
     #endregion
 
     #region SPAWN_ENEMIES
-
     private void StartSpawnEnemies()
     {
+        invencible = true;
+
         if (currentPhase == PHASE.PHASE1)
         {
-            invencible = true;
             Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult);
         }
-        else if (currentPhase == PHASE.PHASE2) Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
+        else if (currentPhase == PHASE.PHASE2)
+        {
+            Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
+        }
+
         UpdateAnimationSpd(speedMult);
         Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
-        if (cam_comp != null)
-            cam_comp.target = this.gameObject;
-        privateTimer = 0.5f;
+        if (cameraComp != null)
+            cameraComp.target = this.gameObject;
+
+        spawnEnemyTimer = spawnEnemyTime;
 
         Input.PlayHaptic(0.8f, 600);
     }
 
     private void UpdateSpawnEnemies()
     {
-        Debug.Log("Spawning Enemies");
-        if (privateTimer > 0)
-        {
-            privateTimer -= myDeltaTime;
-
-            if (privateTimer <= 0)
-                if(ready2Spawn)
-                {
-                    SpawnEnemies();
-                    privateTimer = 1.5f;
-                    ready2Spawn = false;
-                    deathTrooperSpawned = true;
-                }
-                else
-                {
-                    if (cam_comp != null)
-                        cam_comp.target = Core.instance.gameObject;
-
-                    if (currentPhase == PHASE.PHASE2) inputsList.Add(INPUT.IN_NEUTRAL);
-                }
-
-        }
+        //Debug.Log("Spawning Enemies");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndSpawnEnemies()
     {
-        enemiesTimer = enemiesTime;
+        enemySkillTimer = enemySkillTime;
         invencible = false;
-        deathTrooperSpawned = false;
+    }
+
+    private void SpawnEnemies()
+    {
+        SpawnDeathrooper(spawner1);
+        SpawnDeathrooper(spawner2);
+        SpawnDeathrooper(spawner3);
+        SpawnDeathrooper(spawner4);
+
+        ableToSpawnEnemies = false;
+        inputsList.Add(INPUT.IN_SPAWN_ENEMIES_END);
+    }
+
+    private void SpawnDeathrooper(GameObject spawnPoint)
+    {
+        if (spawnPoint == null)
+            return;
+
+        //Spawn Enemy
+        GameObject deathtrooper = InternalCalls.CreatePrefab("Library/Prefabs/1439379622.prefab", spawnPoint.transform.globalPosition, gameObject.transform.localRotation, new Vector3(1.0f, 1.0f, 1.0f));
+
+        //Play Particles
+        ParticleSystem particleSystem = spawnPoint.GetComponent<ParticleSystem>();
+
+        if (particleSystem != null)
+            particleSystem.Play();
     }
 
     #endregion
@@ -1648,7 +2043,7 @@ public class MoffGideon : Entity
     private void StartChargeThrow()
     {
         chargeThrowTimer = chargeThrowTime;
-        cam_comp.Zoom(zoomInValue, zoomTimeEasing);
+        cameraComp.Zoom(zoomInValue, zoomTimeEasing);
         visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/1137197426.prefab", gameObject.transform.globalPosition, gameObject.transform.globalRotation, new Vector3(0.3f, 1f, 0.01f));
         Animator.Play(gameObject, "MG_SaberThrow");
         UpdateAnimationSpd(speedMult);
@@ -1675,13 +2070,13 @@ public class MoffGideon : Entity
 
     private void StartThrowSaber()
     {
-        saber = InternalCalls.CreatePrefab("Library/Prefabs/1894242407.prefab", shootPoint.transform.globalPosition, new Quaternion(0,0,0), new Vector3(1.0f, 1.0f, 1.0f));
+        saber = InternalCalls.CreatePrefab("Library/Prefabs/1894242407.prefab", shootPoint.transform.globalPosition, new Quaternion(0, 0, 0), new Vector3(1.0f, 1.0f, 1.0f));
 
         if (saber != null)
         {
             MoffGideonSword moffGideonSword = saber.GetComponent<MoffGideonSword>();
 
-            if(moffGideonSword != null)
+            if (moffGideonSword != null)
             {
                 moffGideonSword.ThrowSword((Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition).normalized, swordRange);
                 saber.Enable(true);
@@ -1737,13 +2132,124 @@ public class MoffGideon : Entity
         InternalCalls.Destroy(saber);
         saber = null;
         sword.transform.localScale = new Vector3(1, 1, 1);
-        cam_comp.Zoom(baseZoom, zoomTimeEasing);
+        cameraComp.Zoom(baseZoom, zoomTimeEasing);
         retrieveAnim = true;
     }
 
     #endregion
 
-    #region DIE
+    #region DIE AND DAMAGE
+
+    private void UpdateDamaged()
+    {
+        limbo_health = Mathf.Lerp(limbo_health, healthPoints, 0.01f);
+        if (boss_bar != null)
+        {
+
+            if (bossBarMat != null)
+            {
+                if (currentPhase == PHASE.PHASE1)
+                {
+                    bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints_fase1);
+                    bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints_fase1);
+                }
+                else if (currentPhase == PHASE.PHASE2)
+                {
+                    bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints_fase2);
+                    bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints_fase2);
+                }
+            }
+            else
+                Debug.Log("Boss Bar component was null!!");
+
+        }
+
+        if (damaged > 0.01f)
+        {
+            damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
+        }
+        else
+        {
+            damaged = 0.0f;
+        }
+
+        if (moff_mesh != null)
+        {
+            Material moffMeshMat = moff_mesh.GetComponent<Material>();
+
+            if (moffMeshMat != null)
+            {
+                moffMeshMat.SetFloatUniform("damaged", damaged);
+            }
+            else
+                Debug.Log("Moff Mesh Material was null!!");
+        }
+    }
+
+
+    public void TakeDamage(float damage)
+    {
+        if (invencible) return;
+
+        if (!DebugOptionsHolder.bossDmg)
+        {
+            float mod = 1;
+            if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
+            {
+                if (HasNegativeStatus())
+                {
+                    mod = 1 + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
+                }
+            }
+            healthPoints -= damage * mod;
+            if (currentPhase == PHASE.PHASE1)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
+            }
+            else if (currentPhase == PHASE.PHASE2)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
+            }
+            Debug.Log("Moff damage" + damage.ToString());
+            if (currentState != STATE.DEAD)
+            {
+                healthPoints -= damage * Core.instance.DamageToBosses;
+                if (Core.instance != null)
+                {
+                    if (Core.instance.HasStatus(STATUS_TYPE.WRECK_HEAVY_SHOT) && HasStatus(STATUS_TYPE.SLOWED))
+                        AddStatus(STATUS_TYPE.ENEMY_SLOWED, STATUS_APPLY_TYPE.SUBSTITUTE, Core.instance.GetStatusData(STATUS_TYPE.WRECK_HEAVY_SHOT).severity / 100, 3f);
+
+                    if (Core.instance.HasStatus(STATUS_TYPE.LIFESTEAL))
+                    {
+                        Random rand = new Random();
+                        float result = rand.Next(1, 101);
+                        if (result <= 10)
+                            if (Core.instance.gameObject != null && Core.instance.gameObject.GetComponent<PlayerHealth>() != null)
+                            {
+                                float healing = Core.instance.GetStatusData(STATUS_TYPE.LIFESTEAL).severity * damage / 100;
+                                if (healing < 1) healing = 1;
+                                Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)(healing));
+                            }
+                    }
+                    if (Core.instance.HasStatus(STATUS_TYPE.SOLO_HEAL))
+                    {
+                        Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)Core.instance.skill_SoloHeal);
+                        Core.instance.skill_SoloHeal = 0;
+                    }
+                }
+                if (healthPoints <= 0.0f)
+                {
+                    if (currentPhase == PHASE.PHASE1)
+                    {
+                        inputsList.Add(INPUT.IN_CHANGE_PHASE);
+                    }
+                    else
+                        inputsList.Add(INPUT.IN_DEAD);
+                }
+            }
+        }
+    }
+
     private void StartDie()
     {
         dieTimer = dieTime;
@@ -1755,17 +2261,17 @@ public class MoffGideon : Entity
 
         Input.PlayHaptic(1f, 1000);
 
-        if (cam_comp != null)
-            cam_comp.target = this.gameObject;
+        if (cameraComp != null)
+            cameraComp.target = this.gameObject;
         if (visualFeedback != null)
             InternalCalls.Destroy(visualFeedback);
 
-        for(int i = 0; i < deathtroopers.Count; ++i)
-        {
-            if (deathtroopers[i] != null)
-                InternalCalls.Destroy(deathtroopers[i]);
-        }
-        deathtroopers.Clear();
+        //for (int i = 0; i < deathtroopers.Count; ++i)
+        //{
+        //    if (deathtroopers[i] != null)
+        //        InternalCalls.Destroy(deathtroopers[i]);
+        //}
+        //deathtroopers.Clear();
     }
 
     private void UpdateDie()
@@ -1791,30 +2297,13 @@ public class MoffGideon : Entity
         Audio.StopAudio(gameObject);
         Input.PlayHaptic(0.3f, 3);
         InternalCalls.Destroy(gameObject);
-        if (cam_comp != null)
-            cam_comp.target = Core.instance.gameObject;
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
     }
+
     #endregion
 
-    public void LookAt(Vector3 pointToLook)
-    {
-        Vector3 direction = pointToLook - gameObject.transform.globalPosition;
-        direction = direction.normalized;
-        float angle = (float)Math.Atan2(direction.x, direction.z);
-
-        if (Math.Abs(angle * Mathf.Rad2Deg) < 1.0f)
-            return;
-
-        Quaternion dir = Quaternion.RotateAroundAxis(Vector3.up, angle);
-
-        float rotationSpeed = myDeltaTime * slerpSpeed;
-
-        Quaternion desiredRotation = Quaternion.Slerp(gameObject.transform.localRotation, dir, rotationSpeed);
-
-        gameObject.transform.localRotation = desiredRotation;
-
-    }
-
+    #region COLLISION_EVENTS
     public void OnCollisionEnter(GameObject collidedGameObject)
     {
         if (collidedGameObject.CompareTag("Bullet"))
@@ -1854,7 +2343,7 @@ public class MoffGideon : Entity
                 Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Intimidation_Phase_2");
             }
 
-            if (Core.instance.hud != null  && currentState != STATE.DEAD)
+            if (Core.instance.hud != null && currentState != STATE.DEAD)
             {
                 HUD hudComponent = Core.instance.hud.GetComponent<HUD>();
 
@@ -1982,94 +2471,8 @@ public class MoffGideon : Entity
         }
     }
 
-    public void TakeDamage(float damage)
-    {
-        if (invencible) return;
 
-        if (!DebugOptionsHolder.bossDmg)
-        {
-            float mod = 1;
-            if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
-            {
-                if (HasNegativeStatus())
-                {
-                    mod = 1 + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
-                }
-            }
-            healthPoints -= damage * mod; 
-            if (currentPhase == PHASE.PHASE1)
-            {
-                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
-            }
-            else if (currentPhase == PHASE.PHASE2)
-            {
-                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
-            }
-            Debug.Log("Moff damage" + damage.ToString());
-            if (currentState != STATE.DEAD)
-            {
-                healthPoints -= damage * Core.instance.DamageToBosses;
-                if (Core.instance != null)
-                {
-                    if (Core.instance.HasStatus(STATUS_TYPE.WRECK_HEAVY_SHOT) && HasStatus(STATUS_TYPE.SLOWED))
-                        AddStatus(STATUS_TYPE.ENEMY_SLOWED, STATUS_APPLY_TYPE.SUBSTITUTE, Core.instance.GetStatusData(STATUS_TYPE.WRECK_HEAVY_SHOT).severity / 100, 3f);
-
-                    if (Core.instance.HasStatus(STATUS_TYPE.LIFESTEAL))
-                    {
-                        Random rand = new Random();
-                        float result = rand.Next(1, 101);
-                        if (result <= 10)
-                            if (Core.instance.gameObject != null && Core.instance.gameObject.GetComponent<PlayerHealth>() != null)
-                            {
-                                float healing = Core.instance.GetStatusData(STATUS_TYPE.LIFESTEAL).severity * damage / 100;
-                                if (healing < 1) healing = 1;
-                                Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)(healing));
-                            }
-                    }
-                    if (Core.instance.HasStatus(STATUS_TYPE.SOLO_HEAL))
-                    {
-                        Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)Core.instance.skill_SoloHeal);
-                        Core.instance.skill_SoloHeal = 0;
-                    }
-                }
-                if (healthPoints <= 0.0f)
-                {
-                    if (currentPhase == PHASE.PHASE1)
-                    {
-                        inputsList.Add(INPUT.IN_CHANGE_PHASE);
-                    }
-                    else
-                        inputsList.Add(INPUT.IN_DEAD);
-                }
-            }
-        }
-    }
-
-    protected override void OnUpdateStatus(StatusData statusToUpdate)
-    {
-        switch (statusToUpdate.statusType)
-        {
-            case STATUS_TYPE.ENEMY_BLEED:
-                {
-                    float damageToTake = statusToUpdate.severity * Time.deltaTime;
-
-                    TakeDamage(damageToTake);
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
-
-    private void UpdateAnimationSpd(float newSpd)
-    {
-        if (currAnimationPlaySpd != newSpd)
-        {
-            Animator.SetSpeed(gameObject, newSpd);
-            currAnimationPlaySpd = newSpd;
-        }
-    }
+    #endregion
 
     #region STATUS_SYSTEM
 
@@ -2135,6 +2538,24 @@ public class MoffGideon : Entity
         }
     }
 
+    protected override void OnUpdateStatus(StatusData statusToUpdate)
+    {
+        switch (statusToUpdate.statusType)
+        {
+            case STATUS_TYPE.ENEMY_BLEED:
+                {
+                    float damageToTake = statusToUpdate.severity * Time.deltaTime;
+
+                    TakeDamage(damageToTake);
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
     protected override void OnDeleteStatus(StatusData statusToDelete)
     {
         switch (statusToDelete.statusType)
@@ -2179,54 +2600,36 @@ public class MoffGideon : Entity
 
     #endregion
 
-    private void SpawnEnemies()
-    {
-        SpawnDeathrooper(spawner1);
-        SpawnDeathrooper(spawner2);
-        SpawnDeathrooper(spawner3);
-        SpawnDeathrooper(spawner4);
-    }
+    #region HELPERS
 
-    private void SpawnDeathrooper(GameObject spawnPoint)
+    public void LookAt(Vector3 pointToLook)
     {
-        if (spawnPoint == null)
+        Vector3 direction = pointToLook - gameObject.transform.globalPosition;
+        direction = direction.normalized;
+        float angle = (float)Math.Atan2(direction.x, direction.z);
+
+        if (Math.Abs(angle * Mathf.Rad2Deg) < 1.0f)
             return;
 
-        //Spawn Enemy
-        GameObject deathtrooper = InternalCalls.CreatePrefab("Library/Prefabs/1439379622.prefab", spawnPoint.transform.globalPosition, gameObject.transform.localRotation, new Vector3(1.0f, 1.0f, 1.0f));
+        Quaternion dir = Quaternion.RotateAroundAxis(Vector3.up, angle);
 
-        if (deathtrooper != null)
-        {
-            deathtroopers.Add(deathtrooper);
+        float rotationSpeed = myDeltaTime * slerpSpeed;
 
-            Deathtrooper deathtrooperScript = deathtrooper.GetComponent<Deathtrooper>();
+        Quaternion desiredRotation = Quaternion.Slerp(gameObject.transform.localRotation, dir, rotationSpeed);
 
-            if (deathtrooperScript != null)
-                deathtrooperScript.moffGideon = this;
-        }
+        gameObject.transform.localRotation = desiredRotation;
 
-        //Play Particles
-        ParticleSystem particleSystem = spawnPoint.GetComponent<ParticleSystem>();
-
-        if (particleSystem != null)
-            particleSystem.Play();
     }
 
-    public void RemoveDeathrooperFromList(GameObject deathtrooper)
+
+    private void UpdateAnimationSpd(float newSpd)
     {
-        if (deathtrooper == null)
-            return;
-
-        for (int i = 0; i < deathtroopers.Count; ++i)
+        if (currAnimationPlaySpd != newSpd)
         {
-            if (deathtroopers[i].GetUid() == deathtrooper.GetUid())
-            {
-                deathtroopers.RemoveAt(i);
-                return;
-            }
+            Animator.SetSpeed(gameObject, newSpd);
+            currAnimationPlaySpd = newSpd;
         }
     }
-
     public override bool IsDying()
     {
         return currentState == STATE.DEAD;
@@ -2238,5 +2641,7 @@ public class MoffGideon : Entity
 
         gameObject.transform.localPosition += direction.normalized * speed * myDeltaTime;
     }
+
+    #endregion
 
 }

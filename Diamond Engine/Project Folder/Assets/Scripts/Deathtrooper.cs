@@ -43,8 +43,6 @@ public class Deathtrooper : Enemy
     public GameObject shootPoint = null;
     public GameObject shotgun = null;
 
-    public MoffGideon moffGideon = null;
-
     //Timers
     private float idleTimer = 0.0f;
     private float dieTimer = 0.0f;
@@ -586,9 +584,6 @@ public class Deathtrooper : Enemy
 
         Counter.SumToCounterType(Counter.CounterTypes.ENEMY_DEATHTROOPER);
         DropCoins();
-
-        if (moffGideon != null)
-            moffGideon.RemoveDeathrooperFromList(gameObject);
 
         InternalCalls.Destroy(gameObject);
     }
