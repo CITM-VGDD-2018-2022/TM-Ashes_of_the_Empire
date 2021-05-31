@@ -1426,7 +1426,7 @@ public class MoffGideon : Entity
                         }
                         break;
                     case STATE.DEAD:
-                        { }
+                        {}
                         break;
                     default:
                         Debug.Log("NEED TO ADD STATE TO MOFF GIDEON");
@@ -1509,6 +1509,7 @@ public class MoffGideon : Entity
             case STATE.SPAWN_ENEMIES:
                 UpdateSpawnEnemies();
                 break;
+
             case STATE.PRE_PROJECTILE_DASH_CHARGE:
                 break;
             case STATE.PRE_PROJECTILE_DASH:
@@ -2060,6 +2061,7 @@ public class MoffGideon : Entity
         Input.PlayHaptic(0.8f, 600);
 
         SpawnEnemies();
+
     }
 
     private void UpdateSpawnEnemies()
@@ -2109,8 +2111,6 @@ public class MoffGideon : Entity
             Random seed = new Random();
 
             float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
-
-            spawnEnemyTimer = Math.Max(spawnEnemyTime + delay, spawnEnemyTimer);
 
             mySpawnPoint.QueueSpawnEnemy(delay);
         }
