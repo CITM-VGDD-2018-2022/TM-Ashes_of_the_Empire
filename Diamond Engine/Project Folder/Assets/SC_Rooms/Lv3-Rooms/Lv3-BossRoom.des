@@ -1,9 +1,9 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        -32.199119567871094,
-        38.177097320556641,
-        -51.763191223144531
+        -11.083470344543457,
+        12.263211250305176,
+        -26.499225616455078
     ],
     "EditorCameraZ": [
         0.46466124057769775,
@@ -29,7 +29,8 @@
     ],
     "tags": [
         "Wall",
-        "WorldLimit"
+        "WorldLimit",
+        "MetalFloor"
     ],
     "layers": [],
     "Game Objects": [
@@ -105,8 +106,8 @@
                     "fSize": 45,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 14.488888740539551,
-                    "hFOV": 24.266666412353516,
+                    "vFOV": 14.933333396911621,
+                    "hFOV": 27.644443511962891,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true
@@ -786,7 +787,7 @@
                     "Position": [
                         -1.6600983142852783,
                         -1.5799999237060547,
-                        4.1479568481445313
+                        4.1479568481445312
                     ],
                     "Rotation": [
                         -6.1578575127896329e-08,
@@ -4092,7 +4093,7 @@
         },
         {
             "name": "GroundCollider1",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1003964414,
@@ -4189,7 +4190,7 @@
         },
         {
             "name": "GroundCollider2",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 708724538,
@@ -4278,7 +4279,7 @@
         },
         {
             "name": "GroundCollider3",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1526786626,
@@ -4375,7 +4376,7 @@
         },
         {
             "name": "GroundCollider4",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 266129540,
@@ -4464,7 +4465,7 @@
         },
         {
             "name": "GroundCollider5",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1863281671,
@@ -4553,7 +4554,7 @@
         },
         {
             "name": "GroundCollider6",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 488552362,
@@ -4650,7 +4651,7 @@
         },
         {
             "name": "GroundCollider7",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1657993616,
@@ -4660,7 +4661,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.0020799636840820313,
+                -0.0020799636840820312,
                 -0.0038083791732788086,
                 0.0011339184129610658
             ],
@@ -11020,7 +11021,7 @@
             "Static": false,
             "Position": [
                 12.624422073364258,
-                -37.304397583007813,
+                -37.304397583007812,
                 -11.015588760375977
             ],
             "Rotation": [
@@ -11126,7 +11127,7 @@
             "Static": false,
             "Position": [
                 12.624422073364258,
-                -37.304397583007813,
+                -37.304397583007812,
                 36.961433410644531
             ],
             "Rotation": [
@@ -11466,7 +11467,7 @@
                         0,
                         0,
                         -0.0073059904389083385,
-                        0.99997329711914063
+                        0.99997329711914062
                     ],
                     "Scale": [
                         1,
@@ -12382,7 +12383,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.49832534790039063,
+                        0.49832534790039062,
                         2.0816681711721685e-17,
                         1.3898392876873153e-17
                     ],
@@ -12746,7 +12747,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -12774,7 +12775,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -12802,7 +12803,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851563,
+                        0.76593399047851562,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -12859,7 +12860,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757813,
+                        -0.0062532424926757812,
                         -0.058134078979492188
                     ],
                     "Rotation": [
