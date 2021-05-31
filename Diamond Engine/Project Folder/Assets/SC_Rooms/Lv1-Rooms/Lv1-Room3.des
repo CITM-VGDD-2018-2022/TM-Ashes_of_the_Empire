@@ -1,19 +1,19 @@
 {
     "NavMesh": 1917905990,
     "EditorCameraPosition": [
-        -18.815990447998047,
-        32.739994049072266,
-        10.854666709899902
+        -12.217907905578613,
+        29.198835372924805,
+        -22.350822448730469
     ],
     "EditorCameraZ": [
-        0.67337793111801147,
-        -0.67031401395797729,
-        0.31183561682701111
+        0.18270012736320496,
+        -0.8099522590637207,
+        0.55731314420700073
     ],
     "EditorCameraY": [
-        0.60825800895690918,
-        0.74207770824432373,
-        0.28167912364006042
+        0.25230938196182251,
+        0.58649575710296631,
+        0.76965099573135376
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -31,7 +31,8 @@
         "Enemy",
         "Player",
         "Bullet",
-        "Gap"
+        "Gap",
+        "SandFloor"
     ],
     "layers": [],
     "Game Objects": [
@@ -1341,7 +1342,7 @@
             "Position": [
                 32.302097320556641,
                 7.3626213073730469,
-                -20.890710830688476
+                -20.890710830688477
             ],
             "Rotation": [
                 -0.56900990009307861,
@@ -1630,7 +1631,7 @@
         },
         {
             "name": "Collider24",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 934394776,
@@ -1719,7 +1720,7 @@
         },
         {
             "name": "Collider13",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1385435598,
@@ -1808,7 +1809,7 @@
         },
         {
             "name": "Collider14",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1183763353,
@@ -1897,7 +1898,7 @@
         },
         {
             "name": "Collider16",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 687300464,
@@ -1986,7 +1987,7 @@
         },
         {
             "name": "Collider17",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 314981690,
@@ -1998,7 +1999,7 @@
             "Position": [
                 9.4756145477294922,
                 6.4000000953674316,
-                -12.790063858032226
+                -12.790063858032227
             ],
             "Rotation": [
                 -0.68155515193939209,
@@ -2075,7 +2076,7 @@
         },
         {
             "name": "Collider19",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 753359109,
@@ -2085,7 +2086,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                12.998437881469726,
+                12.998437881469727,
                 6.4000000953674316,
                 10.993405342102051
             ],
@@ -2164,7 +2165,7 @@
         },
         {
             "name": "Collider20",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1621417008,
@@ -2253,7 +2254,7 @@
         },
         {
             "name": "Collider23",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 797735690,
@@ -2342,7 +2343,7 @@
         },
         {
             "name": "Collider3",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 2035389671,
@@ -2431,7 +2432,7 @@
         },
         {
             "name": "Collider4",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 2008353749,
@@ -2520,7 +2521,7 @@
         },
         {
             "name": "Collider5",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 936102959,
@@ -2609,7 +2610,7 @@
         },
         {
             "name": "Collider7",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 662230263,
@@ -2698,7 +2699,7 @@
         },
         {
             "name": "Collider10",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 721901702,
@@ -2787,7 +2788,7 @@
         },
         {
             "name": "Collider9",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1713808489,
@@ -2876,7 +2877,7 @@
         },
         {
             "name": "Collider12",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1213944262,
@@ -2965,7 +2966,7 @@
         },
         {
             "name": "Collider11",
-            "tag": "Untagged",
+            "tag": "SandFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1958604201,
@@ -4731,8 +4732,8 @@
                     "fSize": 30,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 19.899999618530273,
-                    "hFOV": 35.266666412353516,
+                    "vFOV": 29.433332443237305,
+                    "hFOV": 47.900001525878906,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -20966,7 +20967,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -21355,7 +21356,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -21744,7 +21745,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -22133,7 +22134,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -22522,7 +22523,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -22911,7 +22912,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -23300,7 +23301,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
