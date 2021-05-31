@@ -22,7 +22,7 @@ public:
 
 private:
 	void RecalculateMesh();
-
+	void StoreGridScuare(int col, int row, std::vector<float>& buffer);
 private:
 
 	//VBO and draw shit
