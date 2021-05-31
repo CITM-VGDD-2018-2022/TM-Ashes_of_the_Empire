@@ -67,6 +67,7 @@ public class Skel : Bosseslv2
         else
             Debug.Log("Agent is located");
 
+        companion = InternalCalls.FindObjectWithName("WampBoss");
     }
 
     public void Update()
@@ -519,7 +520,8 @@ public class Skel : Bosseslv2
     {
         if (!DebugOptionsHolder.bossDmg)
         {
-
+            int mult = 1;
+            if (companion == null) mult = 2;
 
             if (currentState != STATE.DEAD)
             {
@@ -532,7 +534,7 @@ public class Skel : Bosseslv2
                         mod = 1 + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
                     }
                 }
-                healthPoints -= damage * mod;
+                healthPoints -= damage * mod * mult;
                 if (Core.instance != null)
                 {
                     if (Core.instance.HasStatus(STATUS_TYPE.WRECK_HEAVY_SHOT) && HasStatus(STATUS_TYPE.SLOWED))

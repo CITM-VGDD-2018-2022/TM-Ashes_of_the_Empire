@@ -22,6 +22,7 @@ public class Bosseslv2 : Entity
     public float wanderRange = 7.5f;
     public GameObject colliderJumpSlam = null;
     public GameObject colliderBounceRush = null;
+    public GameObject colliderRush = null;
     public GameObject jumpPositionIndicator = null;
     public GameObject bossHealth = null;
     public float limboHealth = 0.0f;
@@ -135,8 +136,10 @@ public class Bosseslv2 : Entity
         else if (gameObject.CompareTag("Wampa"))
         {
             presentationTime = Animator.GetAnimationDuration(gameObject, "WP_Roar") - 0.016f;
+            colliderRush = gameObject.GetChild("Rush");
         }
         rushOnce = true;
+
     }
 
     #region PROJECTILE
@@ -249,24 +252,19 @@ public class Bosseslv2 : Entity
         Debug.Log("Fast Rush");
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
-        if (gameObject.CompareTag("Wampa"))
-        {
-            //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
-            Animator.Play(gameObject, "WP_Roar", speedMult*2);
-            UpdateAnimationSpd(speedMult);
-            Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
-        }
-        else if (gameObject.CompareTag("Skel"))
-            Audio.PlayAudio(gameObject, "Play_Skel_Preparation");
 
-        if (colliderBounceRush == null)
-        {
-            colliderBounceRush = gameObject.GetChild("Bounce Rush");    // ... You would assume assigning a GameObject to the GameObject would put that GameObject in the GameObject... It doesn't. So I did this. I'm as confused as you are
-        }
+        //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
+        Animator.Play(gameObject, "WP_Roar", speedMult*2);
+        UpdateAnimationSpd(speedMult);
+        Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
 
-        if (colliderBounceRush != null)
+        if (colliderRush != null)
         {
-            colliderBounceRush.GetComponent<AtackBosslv2>().active = true;
+            colliderRush.GetComponent<BoxCollider>().active = true;
+        }
+        else
+        {
+            Debug.Log("iobjsdfghiosdfhgo");
         }
     }
     public void UpdateFastRush()
@@ -302,6 +300,7 @@ public class Bosseslv2 : Entity
             Audio.PlayAudio(gameObject, "Play_Skel_Rush_Recovery");
         }
         rushOnce = true;
+        colliderBounceRush.GetComponent<BoxCollider>().active = false;
     }
 
     public void StartSlowRush()
@@ -334,10 +333,12 @@ public class Bosseslv2 : Entity
     {
         resting = true;
         restingTimer = restingTime;
-        if (colliderBounceRush != null)
+
+        if (colliderRush != null)
         {
-            colliderBounceRush.GetComponent<AtackBosslv2>().active = false;
+            colliderRush.GetComponent<BoxCollider>().active = false;
         }
+        
         if (gameObject.CompareTag("Wampa"))
             Audio.StopOneAudio(gameObject, "Play_Wampa_Rush");
         else if (gameObject.CompareTag("Skel"))

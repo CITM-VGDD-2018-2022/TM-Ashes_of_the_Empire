@@ -9,7 +9,7 @@ public class AtackBosslv2 : DiamondComponent
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        if (triggeredGameObject.CompareTag("Player") && active)
+        if (triggeredGameObject.CompareTag("Player"))
         {
             PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
@@ -36,6 +36,14 @@ public class AtackBosslv2 : DiamondComponent
                         shake.StartShaking(0.8f, 0.1f);
                         Input.PlayHaptic(0.5f, 400);
                     }
+                }
+            }
+            if (gameObject.CompareTag("Rush"))
+            {
+                Wampa wampa = boss.GetComponent<Wampa>();
+                if (wampa != null)
+                {
+                    wampa.rushCrash = true;
                 }
             }
         }
