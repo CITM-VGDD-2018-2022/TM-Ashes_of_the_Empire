@@ -1,0 +1,53 @@
+{
+    "name": "Spaceship",
+    "EffectData": [
+        {
+            "Type": 0,
+            "Active": true,
+            "Name": "Screen Space Ambient Oclussion",
+            "RadiusAO": 1.0249999761581421,
+            "GlowSpread": 0,
+            "UseBlur": false,
+            "Bias": 0,
+            "DownscaleFactor": 1
+        },
+        {
+            "Type": 1,
+            "Active": true,
+            "Name": "Bloom",
+            "BrightThreshold": 0.44800001382827759,
+            "BrightnessIntensity": 0.12999999523162842,
+            "GlowBlurSpread": 0,
+            "SmoothGlow": true,
+            "BlurIterations": 2,
+            "StartingDownscaleFactor": 2,
+            "DownscaleFactorMultiplier": 2,
+            "NormalizeAspectRatio": true
+        },
+        {
+            "Type": 2,
+            "Active": false,
+            "Name": "Tone Mapping",
+            "Exposure": 1,
+            "Gamma": 2.2000000476837158
+        },
+        {
+            "Type": 3,
+            "Active": true,
+            "Name": "Vignette",
+            "Mode": 0,
+            "Tint": [
+                1,
+                0.99998998641967773,
+                0.99998998641967773,
+                0
+            ],
+            "Intensity": 15,
+            "Extend": 0.25,
+            "MinMaxRadius": [
+                0.40000000596046448,
+                0.69999998807907104
+            ]
+        }
+    ]
+}

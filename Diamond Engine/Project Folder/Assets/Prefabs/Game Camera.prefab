@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -6.5166568756103516,
-                16.232666015625,
-                -6.619816780090332
+                -14.49888801574707,
+                18.302255630493164,
+                -19.134542465209961
             ],
             "Rotation": [
                 0.24263942241668701,
@@ -40,11 +40,12 @@
                     "fSize": 50,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 11.659999847412109,
-                    "hFOV": 17.239999771118164,
-                    "culling": false,
+                    "vFOV": 13,
+                    "hFOV": 20.200000762939453,
+                    "culling": true,
                     "HDR": true,
-                    "drawSkybox": true
+                    "drawSkybox": true,
+                    "ProfileUID": 729935961
                 },
                 {
                     "Type": 12,

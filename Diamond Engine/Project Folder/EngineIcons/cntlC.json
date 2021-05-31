@@ -1,31 +1,31 @@
 {
     "Game Objects": [
         {
-            "name": "Tie_Fighter",
+            "name": "AreaLight",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 847555451,
-            "ParentUID": 529855152,
+            "UID": 1518914994,
+            "ParentUID": 1823420575,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -32.597232818603516,
-                2.109860897064209,
-                -9.6048564910888672
+                7.3857278823852539,
+                12.982662200927734,
+                -7.090578556060791
             ],
             "Rotation": [
-                1.0672351891116705e-11,
-                -0.70722883939743042,
-                1.0672351891116705e-11,
-                0.70698469877243042
+                0.7071068286895752,
+                0,
+                0,
+                0.70710670948028564
             ],
             "Scale": [
-                1,
-                1,
-                1
+                6.8633584976196289,
+                2.5408852100372314,
+                14.451510429382324
             ],
             "Components": [
                 {
@@ -33,37 +33,23 @@
                     "Active": true
                 },
                 {
-                    "Type": 2,
+                    "Type": 27,
                     "Active": true,
-                    "Path": "Library\/Meshes\/360405882.mmh",
-                    "UID": 360405882,
-                    "bumpDepth": 0,
-                    "alternColor": [
+                    "lightColor": [
                         1,
-                        1,
-                        1
+                        0.99998998641967773,
+                        0.99998998641967773
                     ],
-                    "alternColorStencil": [
+                    "ambientLightColor": [
                         1,
-                        1,
-                        1
+                        0.6734006404876709,
+                        0.6734006404876709
                     ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "FloatingVehicles"
+                    "lightIntensity": 3,
+                    "specularValue": 1,
+                    "fadeDistance": 10,
+                    "maxDistance": 300,
+                    "calculateShadows": true
                 }
             ]
         }
