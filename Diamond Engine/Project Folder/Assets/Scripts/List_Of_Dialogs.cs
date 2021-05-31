@@ -2416,6 +2416,7 @@ public class List_Of_Dialogs : DiamondComponent
         false,
         true,
         false,
+        false,
         true,
         false,
     };
