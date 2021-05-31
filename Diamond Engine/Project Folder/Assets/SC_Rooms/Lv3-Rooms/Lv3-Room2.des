@@ -1,19 +1,19 @@
 {
     "NavMesh": 759541763,
     "EditorCameraPosition": [
-        -26.603330612182617,
-        41.586650848388672,
-        -26.275054931640625
+        -29.355766296386719,
+        12.891998291015625,
+        -1.3960633277893066
     ],
     "EditorCameraZ": [
-        0.41592606902122498,
-        -0.75288784503936768,
-        0.51006412506103516
+        0.84810680150985718,
+        -0.52755492925643921,
+        0.048996929079294205
     ],
     "EditorCameraY": [
-        0.4757976233959198,
-        0.65814876556396484,
-        0.58348661661148071
+        0.5266767144203186,
+        0.84952092170715332,
+        0.030427234247326851
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl3ft.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl3bk.png",
@@ -29,7 +29,8 @@
     ],
     "tags": [
         "WorldLimit",
-        "ExplosiveBarrel"
+        "ExplosiveBarrel",
+        "MetalFloor"
     ],
     "layers": [],
     "Game Objects": [
@@ -6210,7 +6211,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                17.383255004882813,
+                17.383255004882812,
                 0.050000045448541641,
                 -14.904062271118164
             ],
@@ -7346,7 +7347,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -14.732192993164063,
+                -14.732192993164062,
                 0.050000142306089401,
                 7.9611268043518066
             ],
@@ -9972,7 +9973,7 @@
         },
         {
             "name": "pCube1",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1187315139,
@@ -10061,7 +10062,7 @@
         },
         {
             "name": "pCube2",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1126751995,
@@ -10150,7 +10151,7 @@
         },
         {
             "name": "pCube3",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 170502632,
@@ -10239,7 +10240,7 @@
         },
         {
             "name": "pCube4",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1421625503,
@@ -10328,7 +10329,7 @@
         },
         {
             "name": "pCube5",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1762821427,
@@ -10349,7 +10350,7 @@
                 1
             ],
             "Scale": [
-                7.2635879516601563,
+                7.2635879516601562,
                 10,
                 6.2019815444946289
             ],
@@ -10417,7 +10418,7 @@
         },
         {
             "name": "pCube7",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1080129051,
@@ -10506,7 +10507,7 @@
         },
         {
             "name": "pCube8",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1229792672,
@@ -10595,7 +10596,7 @@
         },
         {
             "name": "pCube9",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1370095069,
@@ -10611,9 +10612,9 @@
             ],
             "Rotation": [
                 0,
-                0.37281200289726257,
+                0.37281203269958496,
                 0,
-                0.92790687084197998
+                0.92790699005126953
             ],
             "Scale": [
                 1.9426765441894531,
@@ -10684,7 +10685,7 @@
         },
         {
             "name": "pCube10",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 460166403,
@@ -10773,7 +10774,7 @@
         },
         {
             "name": "pCube11",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1084097317,
@@ -10862,7 +10863,7 @@
         },
         {
             "name": "pCube12",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 479049395,
@@ -10951,7 +10952,7 @@
         },
         {
             "name": "pCube13",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1476891385,
@@ -11040,7 +11041,7 @@
         },
         {
             "name": "pCube14",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1138096725,
@@ -11129,7 +11130,7 @@
         },
         {
             "name": "pCube24",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1432015746,
@@ -11218,7 +11219,7 @@
         },
         {
             "name": "pCube25",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1439940291,
@@ -11307,7 +11308,7 @@
         },
         {
             "name": "pCube26",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1251390457,
@@ -11396,7 +11397,7 @@
         },
         {
             "name": "pCube28",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1404654667,
@@ -11485,7 +11486,7 @@
         },
         {
             "name": "pCube30",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1748557308,
@@ -11574,7 +11575,7 @@
         },
         {
             "name": "pCube31",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1902842779,
@@ -11597,7 +11598,7 @@
             "Scale": [
                 13.416073799133301,
                 10,
-                16.201004028320313
+                16.201004028320312
             ],
             "Components": [
                 {
@@ -11663,7 +11664,7 @@
         },
         {
             "name": "pCube32",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1698416976,
@@ -11752,7 +11753,7 @@
         },
         {
             "name": "pCube36",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 202549005,
@@ -11841,7 +11842,7 @@
         },
         {
             "name": "pCube37",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1286650903,
@@ -11930,7 +11931,7 @@
         },
         {
             "name": "pCube38",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 2084634099,
@@ -12019,7 +12020,7 @@
         },
         {
             "name": "pCube40",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 923291278,
@@ -12108,7 +12109,7 @@
         },
         {
             "name": "pCube41",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1981543634,
@@ -12197,7 +12198,7 @@
         },
         {
             "name": "pCube42",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 552375787,
@@ -12286,7 +12287,7 @@
         },
         {
             "name": "pCube43",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 1964999898,
@@ -12375,7 +12376,7 @@
         },
         {
             "name": "pCube6",
-            "tag": "Untagged",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
             "UID": 700143117,
@@ -12391,14 +12392,14 @@
             ],
             "Rotation": [
                 0,
-                0.37818142771720886,
+                0.37818148732185364,
                 0,
                 0.92573148012161255
             ],
             "Scale": [
-                3.5108983516693115,
+                3.5108985900878906,
                 10,
-                3.2043807506561279
+                3.2043805122375488
             ],
             "Components": [
                 {
@@ -12509,7 +12510,7 @@
             "Static": false,
             "Position": [
                 -0.50585007667541504,
-                -8.8445631263311952e-08,
+                -8.8445624157884595e-08,
                 -0.0001744551700539887
             ],
             "Rotation": [
@@ -12519,9 +12520,9 @@
                 0.70710670948028564
             ],
             "Scale": [
-                1.1000000238418579,
+                1.0999999046325684,
                 1.0999867916107178,
-                1.799986720085144
+                1.7999866008758545
             ],
             "Components": [
                 {
@@ -12691,10 +12692,10 @@
                 15.79642391204834
             ],
             "Rotation": [
-                -0.6561281681060791,
-                -0.26363468170166016,
-                -0.26363155245780945,
-                0.65611809492111206
+                -0.65612822771072388,
+                -0.26363471150398254,
+                -0.26363158226013184,
+                0.65611815452575684
             ],
             "Scale": [
                 1.3999999761581421,
@@ -13578,7 +13579,7 @@
                         0,
                         0,
                         -0.0073059904389083385,
-                        0.99997329711914063
+                        0.99997329711914062
                     ],
                     "Scale": [
                         1,
@@ -14494,7 +14495,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.49832534790039063,
+                        0.49832534790039062,
                         2.0816681711721685e-17,
                         1.3898392876873153e-17
                     ],
@@ -14858,7 +14859,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -14886,7 +14887,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539063,
+                        -1.8636245727539062,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -14914,7 +14915,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851563,
+                        0.76593399047851562,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -14971,7 +14972,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757813,
+                        -0.0062532424926757812,
                         -0.058134078979492188
                     ],
                     "Rotation": [
