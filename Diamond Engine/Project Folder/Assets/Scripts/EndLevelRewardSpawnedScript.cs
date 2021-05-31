@@ -59,7 +59,7 @@ public class EndLevelRewardSpawn : DiamondComponent
         {
             timer -= Time.deltaTime;
 
-            Debug.Log("Boon timer: " + timer.ToString());
+            //Debug.Log("Boon timer: " + timer.ToString());
         }
         else
         {

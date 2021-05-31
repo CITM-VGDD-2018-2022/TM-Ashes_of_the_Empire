@@ -189,9 +189,9 @@ public class Bosseslv2 : Entity
                     firstThrow = false;
                     projectiles.Clear();
                     Vector3 targetPos = (Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition);
-                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/788871013.prefab", pos, new Quaternion(90, 0, 0), null).GetComponent<WampaProjectile>());
-                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/788871013.prefab", pos, new Quaternion(90, 0, 0), null).GetComponent<WampaProjectile>());
-                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/788871013.prefab", pos, new Quaternion(90, 0, 0), null).GetComponent<WampaProjectile>());
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1930350747.prefab", pos, new Quaternion(0, 0, 0), null).GetComponent<WampaProjectile>());
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1930350747.prefab", pos, new Quaternion(0, 0, 0), null).GetComponent<WampaProjectile>());
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1930350747.prefab", pos, new Quaternion(0, 0, 0), null).GetComponent<WampaProjectile>());
 
                     if (projectiles.Count!=0)
                     {

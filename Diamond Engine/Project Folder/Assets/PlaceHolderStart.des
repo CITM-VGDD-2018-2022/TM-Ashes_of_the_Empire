@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -16.357814788818359,
-        3.3905975818634033,
-        -5.9804773330688477
+        -0.27151936292648315,
+        0.5643080472946167,
+        -2.9339108467102051
     ],
     "EditorCameraZ": [
-        0.090506449341773987,
-        -0.18810267746448517,
-        0.97797030210494995
+        0.090506464242935181,
+        -0.18810270726680756,
+        0.9779704213142395
     ],
     "EditorCameraY": [
-        0.017333928495645523,
-        0.98214942216873169,
-        0.18730230629444122
+        0.017333930358290672,
+        0.98214954137802124,
+        0.18730233609676361
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -105,35 +105,6 @@
                     "isDefaultListener": false
                 }
             ]
-        },
-        {
-            "name": "BlackFade",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 356190789,
-            "ParentUID": 456622386,
-            "PrefabReference": 1852207575,
-            "PrefabID": 1368828559,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": []
         },
         {
             "name": "MainMenu",
@@ -2874,9 +2845,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -3384,9 +3352,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -3889,9 +3854,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -4395,9 +4357,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -7789,6 +7748,35 @@
             ]
         },
         {
+            "name": "BlackFade",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 356190789,
+            "ParentUID": 456622386,
+            "PrefabReference": 1852207575,
+            "PrefabID": 1368828559,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": []
+        },
+        {
             "name": "MusicSource",
             "tag": "Untagged",
             "layer": "Default",
@@ -7908,7 +7896,64 @@
                 1,
                 1
             ],
-            "PrefabObjects": []
+            "PrefabObjects": [
+                {
+                    "name": "Boon particles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 309117794,
+                    "ParentUID": 670475994,
+                    "PrefabID": 0,
+                    "PrefabReference": 309117794,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.00024628639221191406,
+                        0.0001201629638671875,
+                        -6.9141387939453125e-05
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Boon Spawn Particle",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 835736709,
+                    "ParentUID": 309117794,
+                    "PrefabID": 2009857862,
+                    "PrefabReference": 835736709,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -2.8410000801086426,
+                        6.1248927116394043,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
         },
         {
             "name": "DirectionalLight",
@@ -8004,7 +8049,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 0.3228859007358551,
-                    "hFOV": 0.55066519975662231,
+                    "hFOV": 0.60706937313079834,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": false
