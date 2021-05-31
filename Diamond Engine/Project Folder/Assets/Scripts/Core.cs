@@ -72,6 +72,7 @@ public class Core : Entity
     enum FLOOR_TYPE : int
     {
         NONE = -1,
+        SAND,
         SNOW,
         METAL,
         WATER,
@@ -2065,58 +2066,32 @@ public class Core : Entity
     private void PlayFootstepsAudio()
     {
         Audio.StopOneAudio(this.gameObject, lastFootsteps);
-        if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.ONE)
+        if (floorType == FLOOR_TYPE.STONE)
         {
-            if (floorType == FLOOR_TYPE.STONE)
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Stone_Mando");
-                lastFootsteps = "Play_Footsteps_Stone_Mando";
-            }
-            else
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Sand_Mando");
-                lastFootsteps = "Play_Footsteps_Sand_Mando";
-            }
+            Audio.PlayAudio(this.gameObject, "Play_Footsteps_Stone_Mando");
+            lastFootsteps = "Play_Footsteps_Stone_Mando";
         }
-        else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.TWO)
+        else if (floorType == FLOOR_TYPE.SAND)
         {
-            if (floorType == FLOOR_TYPE.METAL)
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Metal_Platform_Mando");
-                lastFootsteps = "Play_Footsteps_Metal_Platform_Mando";
-            }
-            else if (floorType == FLOOR_TYPE.SNOW)
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Snow_Mando");
-                lastFootsteps = "Play_Footsteps_Snow_Mando";
-            }
-            else if (floorType == FLOOR_TYPE.WATER)
-            {
-                //Audio.StopOneAudio(this.gameObject, "Play_Mando_Damaging_Water");
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Water_Mando");
-                //Audio.PlayAudio(this.gameObject, "Play_Mando_Damaging_Water");
-                lastFootsteps = "Play_Footsteps_Water_Mando";
-            }
+            Audio.PlayAudio(this.gameObject, "Play_Footsteps_Sand_Mando");
+            lastFootsteps = "Play_Footsteps_Sand_Mando";
         }
-        else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.THREE)
+        else if (floorType == FLOOR_TYPE.METAL)
         {
-            if (floorType == FLOOR_TYPE.SNOW)
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Snow_Mando");
-                lastFootsteps = "Play_Footsteps_Snow_Mando";
-            }
-            else if (floorType == FLOOR_TYPE.WATER)
-            {
-                //Audio.StopOneAudio(this.gameObject, "Play_Mando_Damaging_Water");
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Water_Mando");
-                //Audio.PlayAudio(this.gameObject, "Play_Mando_Damaging_Water");
-                lastFootsteps = "Play_Footsteps_Water_Mando";
-            }
-            else
-            {
-                Audio.PlayAudio(this.gameObject, "Play_Footsteps_Metal_Platform_Mando");
-                lastFootsteps = "Play_Footsteps_Metal_Platform_Mando";
-            }
+            Audio.PlayAudio(this.gameObject, "Play_Footsteps_Metal_Platform_Mando");
+            lastFootsteps = "Play_Footsteps_Metal_Platform_Mando";
+        }
+        else if (floorType == FLOOR_TYPE.SNOW)
+        {
+            Audio.PlayAudio(this.gameObject, "Play_Footsteps_Snow_Mando");
+            lastFootsteps = "Play_Footsteps_Snow_Mando";
+        }
+        else if (floorType == FLOOR_TYPE.WATER)
+        {
+            //Audio.StopOneAudio(this.gameObject, "Play_Mando_Damaging_Water");
+            Audio.PlayAudio(this.gameObject, "Play_Footsteps_Water_Mando");
+            //Audio.PlayAudio(this.gameObject, "Play_Mando_Damaging_Water");                //// TODO change damaging water audio play ubication
+            lastFootsteps = "Play_Footsteps_Water_Mando";
         }
 
     }
@@ -2393,6 +2368,10 @@ public class Core : Entity
             else if (collidedGameObject.CompareTag("StoneFloor"))
             {
                 floorType = FLOOR_TYPE.STONE;
+            }
+            else if (collidedGameObject.CompareTag("SandFloor"))
+            {
+                floorType = FLOOR_TYPE.SAND;
             }
         }
     }
