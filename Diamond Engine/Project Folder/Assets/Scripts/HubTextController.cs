@@ -97,7 +97,7 @@ public class HubTextController : DiamondComponent
     }
     public void Update()
     {
-        if (mando == null || Input.GetGamepadButton(DEControllerButton.A) != KeyState.KEY_DOWN || textController == null || dialog == null || textController.IsEnabled() == false || !insideColliderTextActive)
+        if (mando == null || Input.GetGamepadButton(DEControllerButton.A) != KeyState.KEY_DOWN || textController == null || dialog == null || textController.IsEnabled() == false || insideColliderTextActive)
         {
             return;
         }
@@ -228,7 +228,7 @@ public class HubTextController : DiamondComponent
                     greefHasInteracted = true;
                     IncreaseStage(Interaction.GREEF);
                 }
-                
+
 
                 if (npcInteraction != null)
                 {
@@ -438,10 +438,10 @@ public class HubTextController : DiamondComponent
     }
     public bool AshokaCanUpgrade()
     {
-        if(ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        if (ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
         {
             ashokaHasInteracted = false;
-        return true;
+            return true;
         }
         else
         {
@@ -450,7 +450,7 @@ public class HubTextController : DiamondComponent
     }
     public bool GroguCanUpgrade()
     {
-        if(groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        if (groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
         {
             groguHasInteracted = false;
             return true;
@@ -474,7 +474,7 @@ public class HubTextController : DiamondComponent
     }
     public bool CaraDuneCanUpgrade()
     {
-        if(caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
+        if (caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0)
         {
             caraHasInteracted = false;
             return true;
