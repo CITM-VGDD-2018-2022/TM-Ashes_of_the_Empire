@@ -1,31 +1,31 @@
 {
     "Game Objects": [
         {
-            "name": "AreaLight",
+            "name": "PitAreaLight2",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1518914994,
-            "ParentUID": 1823420575,
+            "UID": 1336852597,
+            "ParentUID": 1788828234,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                7.3857278823852539,
-                12.982662200927734,
-                -7.090578556060791
+                12.624422073364258,
+                1.6095180511474609,
+                -0.5632014274597168
             ],
             "Rotation": [
+                6.7501566673473096e-14,
                 0.7071068286895752,
-                0,
-                0,
-                0.70710670948028564
+                -0.7071068286895752,
+                -6.1817310381684365e-08
             ],
             "Scale": [
-                6.8633584976196289,
-                2.5408852100372314,
-                14.451510429382324
+                1.0000684261322021,
+                0.99982213973999023,
+                0.99982213973999023
             ],
             "Components": [
                 {
@@ -37,18 +37,18 @@
                     "Active": true,
                     "lightColor": [
                         1,
-                        0.99998998641967773,
-                        0.99998998641967773
+                        0,
+                        0
                     ],
                     "ambientLightColor": [
                         1,
-                        0.6734006404876709,
-                        0.6734006404876709
+                        0,
+                        0
                     ],
-                    "lightIntensity": 3,
+                    "lightIntensity": 10,
                     "specularValue": 1,
-                    "fadeDistance": 10,
-                    "maxDistance": 300,
+                    "fadeDistance": 50,
+                    "maxDistance": 2500,
                     "calculateShadows": true
                 }
             ]
