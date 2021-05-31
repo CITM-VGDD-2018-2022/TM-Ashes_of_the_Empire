@@ -53,7 +53,8 @@
                     "volume": 50,
                     "pitch": 40.078998565673828,
                     "playOnAwake": false,
-                    "isMuted": false
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },

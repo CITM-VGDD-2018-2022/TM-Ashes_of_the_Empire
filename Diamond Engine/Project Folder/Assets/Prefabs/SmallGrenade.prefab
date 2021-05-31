@@ -115,7 +115,8 @@
                     "volume": 50,
                     "pitch": 50,
                     "playOnAwake": false,
-                    "isMuted": false
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         }

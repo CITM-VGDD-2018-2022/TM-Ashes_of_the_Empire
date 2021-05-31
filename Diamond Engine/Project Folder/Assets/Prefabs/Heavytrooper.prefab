@@ -81,7 +81,8 @@
                     "volume": 0,
                     "pitch": 50,
                     "playOnAwake": false,
-                    "isMuted": false
+                    "isMuted": false,
+                    "isMusic": false
                 },
                 {
                     "Type": 24,
