@@ -72,6 +72,7 @@ public class Wampa : Bosseslv2
         Audio.SetState("Game_State", "Wampa_Skel_Room");
 
         companion = InternalCalls.FindObjectWithName("Skel");
+        limboHealth = 0f;
 
     }
 
@@ -146,7 +147,7 @@ public class Wampa : Bosseslv2
             {
                 presentationTimer -= myDeltaTime;
                 healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPoints * 0.25f);
-
+                
                 if (presentationTimer <= 0.0f)
                 {
                     inputsList.Add(INPUT.IN_PRESENTATION_END);

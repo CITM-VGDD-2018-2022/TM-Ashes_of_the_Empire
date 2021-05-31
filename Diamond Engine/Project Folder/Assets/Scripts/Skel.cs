@@ -68,6 +68,7 @@ public class Skel : Bosseslv2
             Debug.Log("Agent is located");
 
         companion = InternalCalls.FindObjectWithName("WampBoss");
+        limboHealth = 0f;
     }
 
     public void Update()
