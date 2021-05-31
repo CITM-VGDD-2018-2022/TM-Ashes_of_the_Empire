@@ -20,12 +20,15 @@ public class PlayerHealth : DiamondComponent
     {
         if (currHealth <= 0 && currMaxHealth <= 0)
             ResetMaxAndCurrentHPToDefault();
-
-
     }
 
     public void Update()
     {
+        if(Input.GetKey(DEKeyCode.P) == KeyState.KEY_DOWN)
+        {
+            ResetMaxAndCurrentHPToDefault();
+        }
+
         if (die && !DebugOptionsHolder.godModeActive)
         {
             if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.REVIVE) && Core.instance.GetStatusData(STATUS_TYPE.REVIVE).severity == 1)
@@ -36,12 +39,10 @@ public class PlayerHealth : DiamondComponent
             }
             else
             {
-
                 Core.instance.GetStatusData(STATUS_TYPE.REVIVE).severity = 1;
 
                 die = false;
                 //Die();
-
             }
 
         }

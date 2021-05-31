@@ -97,6 +97,8 @@ public class Skel : Bosseslv2
         {
             firstSorrowRoar = false;
             Audio.PlayAudio(gameObject, "Play_Skel_When_Wampa_Dies");
+			//Skel second phase
+            restingTime = 0.5f;
         }
     }
 

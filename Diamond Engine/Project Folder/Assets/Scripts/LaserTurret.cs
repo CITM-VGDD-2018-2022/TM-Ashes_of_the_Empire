@@ -75,7 +75,6 @@ public class LaserTurret : Enemy
 
         laserDirections = new Vector3[lasersNumber];
 
-        agent = gameObject.GetComponent<NavMeshAgent>();
         targetPosition = null;
 
         currentState = STATE.IDLE;
@@ -152,14 +151,6 @@ public class LaserTurret : Enemy
             }
         }
 
-        //if (currentState == STATE.SHOOT)
-        //{
-        //    if (Mathf.Distance(gameObject.transform.globalPosition, agent.GetDestination()) <= agent.stoppingDistance) //USE THIS IF WE WANT TO TAKE INTO ACCOUNT THE FINAL ANGLE LIKE STOPPPING DISTANCE
-        //    {
-        //        inputsList.Add(INPUT.IN_IDLE);
-        //    }
-        //}
-
         if (damageCurrentTimer < damageMaxTimer)
             damageCurrentTimer += myDeltaTime;
 
@@ -174,7 +165,6 @@ public class LaserTurret : Enemy
         }
     }
 
-    //All events from outside the stormtrooper
     private void ProcessExternalInput()
     {
 
@@ -417,7 +407,6 @@ public class LaserTurret : Enemy
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
                 // healthPoints -= collidedGameObject.GetComponent<BH_Bullet>().damage;
             }
-            Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
 
             if (Core.instance.hud != null && currentState != STATE.DIE)
             {
@@ -436,9 +425,6 @@ public class LaserTurret : Enemy
 
             if (bullet != null && currentState != STATE.DIE)
             {
-
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
-
                 if (sniperHitParticle != null)
                     sniperHitParticle.Play();
 
