@@ -1,7 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	1240818490	Play_Force_Push			\Default Work Unit\Grogu\Play_Force_Push	
-	1559593303	Play_Force_Pull			\Default Work Unit\Grogu\Play_Force_Pull	
 	1796781893	Play_Grogu_Cry			\Default Work Unit\Grogu\Play_Grogu_Cry	
 	1808638179	Play_Grogu_Wall			\Default Work Unit\Grogu\Play_Grogu_Wall	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
@@ -17,7 +16,6 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	69887237	Grogu cheering 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu cheering 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cheering\Grogu cheering 3		169440
-	220532221	Force pull	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Force pull_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Force pull		138164
 	273699381	Grogu crying 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu crying 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cry\Grogu crying 1		328012
 	424537616	Grogu cheering 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu cheering 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cheering\Grogu cheering 2		162696
 	532606562	Grogu wall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu wall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu wall		194320

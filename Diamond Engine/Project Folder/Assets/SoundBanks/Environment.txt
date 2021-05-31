@@ -2,10 +2,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	519053172	Play_Post_Boss_Room_2_Ambience			\Default Work Unit\Environment\Play_Post_Boss_Room_2_Ambience	
 	523516158	Play_Barrel_Explosion			\Default Work Unit\Environment\Play_Barrel_Explosion	
+	709214534	Play_Rancor_Ambience			\Default Work Unit\Environment\Play_Rancor_Ambience	
+	1005163266	Play_Level_2_Ambience			\Default Work Unit\Environment\Play_Level_2_Ambience	
 	1195492712	Play_Spaceship_Interior_Ambience			\Default Work Unit\Environment\Play_Spaceship_Interior_Ambience	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
 	2564781438	Play_Spike_Trap			\Default Work Unit\Environment\Play_Spike_Trap	
+	2970027071	Play_Wampa_Skel_Ambience			\Default Work Unit\Environment\Play_Wampa_Skel_Ambience	
 	3173567947	Play_Geyser			\Default Work Unit\Environment\Play_Geyser	
+	3228446999	Play_Level_1_Ambience			\Default Work Unit\Environment\Play_Level_1_Ambience	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 	3825394181	Play_Post_Boss_Room_1_Ambience			\Default Work Unit\Environment\Play_Post_Boss_Room_1_Ambience	
 
@@ -22,10 +26,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	368617914	post boss room 2 ambience	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\post boss room 2 ambience_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\post boss room 2 ambience		3181296
 	377178820	computer beep 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\computer beep 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Computer beeps\computer beep 3		48812
 	421892896	geyser	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\geyser_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\geyser		561420
+	455819116	Wind Cave Rancor	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Wind Cave Rancor_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Wind Cave Rancor		2464932
+	627317939	Wind Exterior level 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Wind Exterior level 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Wind Exterior level 2		3719368
+	644310614	Wind Exterior level 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Wind Exterior level 1_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Wind Exterior level 1		5574428
 	685609859	spaceship interior loop	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\spaceship interior loop_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\spaceship interior loop		93656
 	719101735	computer beep 5	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\computer beep 5_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Computer beeps\computer beep 5		43076
 	728629294	Barrel explosion	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Barrel explosion_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Barrel explosion		172256
 	831264112	computer beep 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\computer beep 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Computer beeps\computer beep 2		53400
 	901623721	spike trap	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\spike trap_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\spike trap		102812
 	961002533	post boss room 1 ambience	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\post boss room 1 ambience_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\post boss room 1 ambience		5574428
+	1056733374	Wind Cave Wampa Skel	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Wind Cave Wampa Skel_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Wind Cave Wampa Skel		3715980
 

@@ -3,10 +3,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	260317159	Play_Enemy_Respawn			\Default Work Unit\UI\Play_Enemy_Respawn	
 	310530060	Play_UI_Button_Hover			\Default Work Unit\UI\Play_UI_Button_Hover	
 	945868158	Play_UI_Button_Select			\Default Work Unit\UI\Play_UI_Button_Select	
+	1513174637	Play_UI_Skill_Tree_Lock			\Default Work Unit\UI\Play_UI_Skill_Tree_Lock	
 	1624273028	Play_UI_Button_Play			\Default Work Unit\UI\Play_UI_Button_Play	
+	1743179548	Play_UI_Skill_Tree_Close			\Default Work Unit\UI\Play_UI_Skill_Tree_Close	
 	1792993798	Play_UI_Resume			\Default Work Unit\UI\Play_UI_Resume	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
 	2141970788	Play_Victory_Music			\Default Work Unit\UI\Play_Victory_Music	
+	2720966806	Play_UI_Shop_Open			\Default Work Unit\UI\Play_UI_Shop_Open	
 	2780742664	Play_UI_Skill_Tree_Open			\Default Work Unit\UI\Play_UI_Skill_Tree_Open	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 	3548595190	Play_UI_Combo_Increase			\Default Work Unit\UI\Play_UI_Combo_Increase	
@@ -30,15 +33,18 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1581692	UI boon pickup	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI boon pickup_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\UI boon pickup		274784
+	1581692	UI boon pickup	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI boon pickup_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI boon pickup		274784
 	26559065	Victory music	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Victory music_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Victory music		1011620
 	64859236	UI Resume	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Resume_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Resume		118136
 	178388527	UI combo increase	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI combo increase_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI combo increase		117240
-	259657947	UI Skill tree open	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Skill tree open_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Skill tree open		102308
+	226369131	UI shop opened	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI shop opened_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI shop opened		140768
+	259657947	UI Skill tree open	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Skill tree open_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Skill tree open		98968
 	283926928	UI Credit_Pickup	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Credit_Pickup_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Credit_Pickup		113948
 	419693254	Spawn Enemies	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Spawn Enemies_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Spawn Enemies		283948
 	504086665	UI Button Hover	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Button Hover_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\UI Button Hover		16912
 	694268143	UI Pause	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Pause_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Pause		111892
+	734513644	UI skill tree cancel	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI skill tree cancel_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI skill tree cancel		31464
+	786398189	UI Skill tree close	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Skill tree close_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Skill tree close		94484
 	913807497	UI Button select	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Button select_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\UI Button select		52676
 	1056819870	UI Button click	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Button click_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\UI Button click		113968
 
