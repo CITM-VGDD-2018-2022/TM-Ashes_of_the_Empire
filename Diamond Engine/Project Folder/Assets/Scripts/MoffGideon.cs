@@ -165,9 +165,9 @@ public class MoffGideon : Entity
     public float maxHealthPoints_fase2 = 4000.0f;
 
     //Public Variables
+    public float chasingDistance = 5f;
     public float followSpeed = 3f;
     public float touchDamage = 10f;
-    public float distance2Melee = 10f;
     public float probWanderP2 = 40f;
     public float probWander = 60f;
     public float radiusWander = 5f;
@@ -187,6 +187,9 @@ public class MoffGideon : Entity
     public GameObject spawner2 = null;
     public GameObject spawner3 = null;
     public GameObject spawner4 = null;
+    public GameObject spawner5 = null;
+    public GameObject spawner6 = null;
+    private SortedDictionary<float, GameObject> spawnPoints = null;
     public GameObject sword = null;
     public GameObject shootPoint = null;
     public int numSequencesPh2 = 3;
@@ -215,7 +218,7 @@ public class MoffGideon : Entity
     private float dieTimer = 0f;
     public float dieTime = 0.1f;
     private float actionSelectTimer = 0f;
-    public float movementSelectTime = 5f;
+    public float actionSelectTime = 5f;
     private float updateMovInputTimer = 0f;
     public float updateMovInputTime = 5f;
     private float enemySkillTimer = 0f;
@@ -233,6 +236,8 @@ public class MoffGideon : Entity
     public float spawnEnemyTime = 0f;
     private float spawnEnemyTimer = 0f;
     private float privateTimer = 0f;
+    public float baseEnemySpawnDelay = 0f;
+    public float maxEnemySpawnDelay = 0f;
 
     //Boss bar updating
     public GameObject boss_bar = null;
@@ -281,6 +286,16 @@ public class MoffGideon : Entity
         Audio.SetState("Player_State", "Alive");
         Audio.SetState("Game_State", "Moff_Guideon_Room");
 
+        spawner1 = InternalCalls.FindObjectWithName("DefaultSpawnPoint1");
+        spawner2 = InternalCalls.FindObjectWithName("DefaultSpawnPoint2");
+        spawner3 = InternalCalls.FindObjectWithName("DefaultSpawnPoint3");
+        spawner4 = InternalCalls.FindObjectWithName("DefaultSpawnPoint4");
+        spawner5 = InternalCalls.FindObjectWithName("DefaultSpawnPoint5");
+        spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
+
+
+        CalculateSpawnersScore();
+
         currentState = STATE.START;
     }
 
@@ -326,12 +341,15 @@ public class MoffGideon : Entity
         }
 
         //Enemies
-        if (enemySkillTimer > 0 && EnemyManager.EnemiesLeft() > 1)
+        if (enemySkillTimer > 0 && EnemyManager.EnemiesLeft() <= 1)
         {
             enemySkillTimer -= myDeltaTime;
 
             if (enemySkillTimer <= 0)
+            {
+                Debug.Log("Able to spawn enemies again!");
                 ableToSpawnEnemies = true;
+            }
         }
 
         if (spawnEnemyTimer > 0)
@@ -340,7 +358,7 @@ public class MoffGideon : Entity
 
             if (spawnEnemyTimer <= 0)
             {
-                SpawnEnemies();
+                inputsList.Add(INPUT.IN_SPAWN_ENEMIES_END);
             }
         }
 
@@ -383,7 +401,6 @@ public class MoffGideon : Entity
         {
             presentationTimer -= myDeltaTime;
             healthPoints = (1 - (presentationTimer / presentationTime)) * maxHealthPoints_fase1;
-            Debug.Log(presentationTimer.ToString());
             if (presentationTimer <= 0)
             {
                 inputsList.Add(INPUT.IN_PRESENTATION_END);
@@ -479,7 +496,7 @@ public class MoffGideon : Entity
                         switch (input)
                         {
                             case INPUT.IN_PRESENTATION_END:
-                                currentState = STATE.CHASE;
+                                currentState = STATE.IDLE;
                                 EndPresentation();
                                 StartIdle();
                                 break;
@@ -498,6 +515,12 @@ public class MoffGideon : Entity
                                 currentState = STATE.CHASE;
                                 EndIdle();
                                 StartChase();
+                                break;
+
+                            case INPUT.IN_SEARCH:
+                                currentState = STATE.ACTION_SELECT;
+                                EndIdle();
+                                StartActionSelect();
                                 break;
 
                             case INPUT.IN_CHANGE_PHASE:
@@ -576,6 +599,12 @@ public class MoffGideon : Entity
                                 currentState = STATE.CHANGE_PHASE;
                                 EndActionSelect();
                                 //StartPhaseChange();
+                                break;
+
+                            case INPUT.IN_NEUTRAL:
+                                currentState = STATE.IDLE;
+                                EndActionSelect();
+                                StartIdle();
                                 break;
                         }
                         break;
@@ -886,6 +915,7 @@ public class MoffGideon : Entity
                             case INPUT.IN_CHASE:
                                 currentState = STATE.CHASE;
                                 //EndNeutral();
+
                                 break;
 
                             case INPUT.IN_SEARCH:
@@ -906,7 +936,7 @@ public class MoffGideon : Entity
                             case INPUT.IN_SPAWN_ENEMIES:
                                 currentState = STATE.SPAWN_ENEMIES;
                                 EndIdle();
-                                //StartSpawnEnemies();
+                                StartSpawnEnemies();
                                 break;
 
                             case INPUT.IN_PRE_PROJECTILE_DASH:
@@ -1539,7 +1569,7 @@ public class MoffGideon : Entity
         {
             Random seed = new Random();
 
-            if (seed.NextDouble() > 0.5f && ableToSpawnEnemies == true)
+            if (seed.NextDouble() > 0.65f && ableToSpawnEnemies == true)
             {
                 inputsList.Add(INPUT.IN_SPAWN_ENEMIES);
                 return;
@@ -1631,6 +1661,22 @@ public class MoffGideon : Entity
         }
         invencible = true;
 
+        Debug.Log("Vspawn spoint awaliable:" + spawnPoints.Count.ToString());
+
+        var mapValues = spawnPoints.Values;
+        foreach (GameObject spawner in mapValues)
+        {
+            if (spawner != null)
+            {
+                SpawnPoint mySpawnPoint = spawner.GetComponent<SpawnPoint>();
+
+                if (mySpawnPoint != null)
+                {
+                    mySpawnPoint.SetSpawnTypes(true, false, false, false, false, false);
+                }
+            }
+        }
+
         Input.PlayHaptic(0.9f, 2200);
     }
 
@@ -1638,7 +1684,6 @@ public class MoffGideon : Entity
     private void UpdatePresentation()
     {
         healthPoints += 100;
-        Debug.Log("Presentation");
     }
 
 
@@ -1664,8 +1709,19 @@ public class MoffGideon : Entity
 
         healthPoints = maxHealthPoints_fase2;
 
+        var mapValues = spawnPoints.Values;
+        foreach (GameObject spawner in mapValues)
+        {
+            if (spawnPoints != null)
+            {
+                SpawnPoint mySpawnPoint = spawner.GetComponent<SpawnPoint>();
 
-
+                if (mySpawnPoint != null)
+                {
+                    mySpawnPoint.SetSpawnTypes(false, false, false, false, true, false);
+                }
+            }
+        }
 
         if (cameraComp != null)
         {
@@ -1708,7 +1764,7 @@ public class MoffGideon : Entity
         enemySkillTimer = enemySkillTime;
         probWander = probWanderP2;
         followSpeed = 6.8f;
-        distance2Melee = 8f;
+        chasingDistance = 8f;
         minProjectileDistance = 10f;
         dashSpeed = 16f;
         dashBackWardDistance = 4f;
@@ -1728,8 +1784,11 @@ public class MoffGideon : Entity
 
     private void StartChase()
     {
+        Debug.Log("StartChase start animation is: " + Animator.GetCurrentAnimation(gameObject));
+
         if (currentPhase == PHASE.PHASE1 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh1")
         {
+            Debug.Log("Start run animation!");
             Animator.Play(gameObject, "MG_RunPh1", speedMult);
         }
         else if (currentPhase == PHASE.PHASE2 && Animator.GetCurrentAnimation(gameObject) != "MG_RunPh2")
@@ -1752,6 +1811,7 @@ public class MoffGideon : Entity
 
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(followSpeed * speedMult);
+
     }
 
     private void EndChase()
@@ -1806,7 +1866,7 @@ public class MoffGideon : Entity
 
     private void StartIdle()
     {
-        actionSelectTimer = movementSelectTime;
+        actionSelectTimer = actionSelectTime;
     }
 
 
@@ -1822,13 +1882,15 @@ public class MoffGideon : Entity
 
     private void UpdateMovInput()
     {
-        if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) <= 1.0f)
+        Random seed = new Random();
+
+        if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) > chasingDistance && seed.NextDouble() > (1f - probWanderP2))
         {
-            inputsList.Add(INPUT.IN_CHASE);
+            inputsList.Add(INPUT.IN_WANDER);
         }
         else
         {
-            inputsList.Add(INPUT.IN_WANDER);
+            inputsList.Add(INPUT.IN_CHASE);
         }
 
         updateMovInputTimer = updateMovInputTime;
@@ -1979,6 +2041,8 @@ public class MoffGideon : Entity
     {
         invencible = true;
 
+        CalculateSpawnersScore();
+
         if (currentPhase == PHASE.PHASE1)
         {
             Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult);
@@ -1993,9 +2057,9 @@ public class MoffGideon : Entity
         if (cameraComp != null)
             cameraComp.target = this.gameObject;
 
-        spawnEnemyTimer = spawnEnemyTime;
-
         Input.PlayHaptic(0.8f, 600);
+
+        SpawnEnemies();
     }
 
     private void UpdateSpawnEnemies()
@@ -2008,32 +2072,81 @@ public class MoffGideon : Entity
     {
         enemySkillTimer = enemySkillTime;
         invencible = false;
+
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
     }
 
     private void SpawnEnemies()
     {
-        SpawnDeathrooper(spawner1);
-        SpawnDeathrooper(spawner2);
-        SpawnDeathrooper(spawner3);
-        SpawnDeathrooper(spawner4);
+        spawnEnemyTimer = spawnEnemyTime;
+
+        // The 2 closests spawns are selected
+        var e = spawnPoints.GetEnumerator();
+        e.MoveNext();
+
+        SpawnEnemy(e.Current.Value);
+        e.MoveNext();
+        SpawnEnemy(e.Current.Value);
 
         ableToSpawnEnemies = false;
-        inputsList.Add(INPUT.IN_SPAWN_ENEMIES_END);
     }
 
-    private void SpawnDeathrooper(GameObject spawnPoint)
+    private void SpawnEnemy(GameObject spawnPoint)
     {
+        Debug.Log("Spawning enemy... ");
+
         if (spawnPoint == null)
+        {
+            Debug.Log("Spawning point was null!!! ");
             return;
+        }
 
-        //Spawn Enemy
-        GameObject deathtrooper = InternalCalls.CreatePrefab("Library/Prefabs/1439379622.prefab", spawnPoint.transform.globalPosition, gameObject.transform.localRotation, new Vector3(1.0f, 1.0f, 1.0f));
+        SpawnPoint mySpawnPoint = spawnPoint.GetComponent<SpawnPoint>();
 
-        //Play Particles
-        ParticleSystem particleSystem = spawnPoint.GetComponent<ParticleSystem>();
+        if (mySpawnPoint != null)
+        {
+            Random seed = new Random();
 
-        if (particleSystem != null)
-            particleSystem.Play();
+            float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
+
+            spawnEnemyTimer = Math.Max(spawnEnemyTime + delay, spawnEnemyTimer);
+
+            mySpawnPoint.QueueSpawnEnemy(delay);
+        }
+    }
+    private void CalculateSpawnersScore()
+    {
+        if (spawnPoints != null)
+            spawnPoints.Clear();
+        else
+            spawnPoints = new SortedDictionary<float, GameObject>();
+
+        if (spawner1 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition), spawner1);
+        }
+        if (spawner2 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition), spawner2);
+        }
+        if (spawner3 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition), spawner3);
+        }
+        if (spawner4 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition), spawner4);
+        }
+        if (spawner5 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition), spawner5);
+        }
+        if (spawner6 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition), spawner6);
+        }
+
     }
 
     #endregion
@@ -2159,8 +2272,6 @@ public class MoffGideon : Entity
                     bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints_fase2);
                 }
             }
-            else
-                Debug.Log("Boss Bar component was null!!");
 
         }
 
@@ -2181,8 +2292,7 @@ public class MoffGideon : Entity
             {
                 moffMeshMat.SetFloatUniform("damaged", damaged);
             }
-            else
-                Debug.Log("Moff Mesh Material was null!!");
+
         }
     }
 

@@ -45,14 +45,7 @@ public class SpawnPoint : DiamondComponent
             //Debug.Log("Spawn Point added");
         }
 
-        possibleEnemies = new List<string>();
-
-        if (spawnStormtrooper) possibleEnemies.Add(stormtrooperPath);
-        if (spawnBantha) possibleEnemies.Add(banthaPath);
-        if (spawnSkytrooper) possibleEnemies.Add(skytrooperPath);
-        if (spawnLaserTurret) possibleEnemies.Add(laserTurretPath);
-        if (spawnDeathrooper) possibleEnemies.Add(deathrooperPath);
-        if (spawnHeavyTrooper) possibleEnemies.Add(heavytrooperPath);
+        GeneratePossibleList();
 
         enemiesToSpawn = new List<float>();
         spawningEnemies = new List<float>();
@@ -97,6 +90,21 @@ public class SpawnPoint : DiamondComponent
 
     }
 
+    private void GeneratePossibleList()
+    {
+        if (possibleEnemies != null)
+            possibleEnemies.Clear();
+        else
+            possibleEnemies = new List<string>();
+
+        if (spawnStormtrooper) possibleEnemies.Add(stormtrooperPath);
+        if (spawnBantha) possibleEnemies.Add(banthaPath);
+        if (spawnSkytrooper) possibleEnemies.Add(skytrooperPath);
+        if (spawnLaserTurret) possibleEnemies.Add(laserTurretPath);
+        if (spawnDeathrooper) possibleEnemies.Add(deathrooperPath);
+        if (spawnHeavyTrooper) possibleEnemies.Add(heavytrooperPath);
+    }
+
     public bool QueueSpawnEnemy(float delayTime = 0f)
     {
         if (possibleEnemies.Count <= 0)
@@ -125,5 +133,17 @@ public class SpawnPoint : DiamondComponent
         return enemy;
     }
 
+
+    public void SetSpawnTypes(bool _spawnStormtrooper, bool _spawnBantha, bool _spawnSkytrooper, bool _spawnLaserTurret, bool _spawnDeathrooper, bool _spawnHeavyTrooper)
+    {
+        spawnStormtrooper = _spawnStormtrooper;
+        spawnBantha = _spawnBantha;
+        spawnSkytrooper = _spawnSkytrooper;
+        spawnLaserTurret = _spawnLaserTurret;
+        spawnDeathrooper = _spawnDeathrooper;
+        spawnHeavyTrooper = _spawnHeavyTrooper;
+
+        GeneratePossibleList();
+    }
 
 }
