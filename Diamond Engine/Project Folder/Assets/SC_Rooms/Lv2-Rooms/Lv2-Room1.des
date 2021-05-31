@@ -1,26 +1,26 @@
 {
     "NavMesh": 1404428461,
     "EditorCameraPosition": [
-        -23.921663284301758,
-        9.1432962417602539,
-        -17.740377426147461
+        -67.946998596191406,
+        69.149581909179688,
+        -80.002090454101563
     ],
     "EditorCameraZ": [
-        0.79796022176742554,
-        -0.37971970438957214,
-        0.46805179119110107
+        0.48847988247871399,
+        -0.5271751880645752,
+        0.69532275199890137
     ],
     "EditorCameraY": [
-        0.32766640186309814,
-        0.92510157823562622,
-        0.19189015030860901
+        0.30304497480392456,
+        0.84975659847259521,
+        0.43136692047119141
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl2rt.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl2lf.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl2up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl2dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl2ft.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl2bk.png",
     "skyboxColor": [
         1,
         1,
@@ -107,8 +107,8 @@
                     "fSize": 35,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 19.314285278320313,
-                    "hFOV": 33.828571319580078,
+                    "vFOV": 18.628570556640625,
+                    "hFOV": 31.200000762939453,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true
