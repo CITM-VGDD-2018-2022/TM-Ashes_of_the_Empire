@@ -95,124 +95,128 @@ public class SlowGrenade : DiamondComponent
                 Entity myEntComp = enemies[i];
                 Enemy eneScript = null;
 
-                switch (myEntComp.GetEntityType())
+                if(myEntComp.gameObject != null)
                 {
-                    case ENTITY_TYPE.STROMTROOPER:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<StormTrooper>();
-                            if (eneScript == null)
+                    switch (myEntComp.GetEntityType())
+                    {
+                        case ENTITY_TYPE.STROMTROOPER:
                             {
-                                eneScript = myEntComp.gameObject.GetComponent<DummyStormtrooper>();
+                                Debug.Log("Stormtrooper");
+                                eneScript = myEntComp.gameObject.GetComponent<StormTrooper>();
+                                if (eneScript == null)
+                                {
+                                    eneScript = myEntComp.gameObject.GetComponent<DummyStormtrooper>();
+                                }
                             }
-                        }
-                        break;
-                    case ENTITY_TYPE.BANTHA:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<Bantha>();
-                        }
-                        break;
-                    case ENTITY_TYPE.SKYTROOPER:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<Skytrooper>();
-                        }
-                        break;
-                    case ENTITY_TYPE.TURRET:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<LaserTurret>();
-                        }
-                        break;
-                    case ENTITY_TYPE.DEATHTROOPER:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<Deathtrooper>();
-                        }
-                        break;
-                    case ENTITY_TYPE.HEAVYTROOPER:
-                        {
-                            eneScript = myEntComp.gameObject.GetComponent<HeavyTrooper>();
-                        }
-                        break;
-                    case ENTITY_TYPE.RANCOR:
-                        {
-                            Rancor bossScript = myEntComp.gameObject.GetComponent<Rancor>();
+                            break;
+                        case ENTITY_TYPE.BANTHA:
+                            {
+                                eneScript = myEntComp.gameObject.GetComponent<Bantha>();
+                            }
+                            break;
+                        case ENTITY_TYPE.SKYTROOPER:
+                            {
+                                eneScript = myEntComp.gameObject.GetComponent<Skytrooper>();
+                            }
+                            break;
+                        case ENTITY_TYPE.TURRET:
+                            {
+                                eneScript = myEntComp.gameObject.GetComponent<LaserTurret>();
+                            }
+                            break;
+                        case ENTITY_TYPE.DEATHTROOPER:
+                            {
+                                eneScript = myEntComp.gameObject.GetComponent<Deathtrooper>();
+                            }
+                            break;
+                        case ENTITY_TYPE.HEAVYTROOPER:
+                            {
+                                eneScript = myEntComp.gameObject.GetComponent<HeavyTrooper>();
+                            }
+                            break;
+                        case ENTITY_TYPE.RANCOR:
+                            {
+                                Rancor bossScript = myEntComp.gameObject.GetComponent<Rancor>();
 
-                            if (bossScript != null)
-                            {
-                                if (bossScript.healthPoints <= 0)
+                                if (bossScript != null)
                                 {
-                                    enemies.Remove(enemies[i]);
-                                    i--;
-                                }
-                                else if (procActivation == true)
-                                {
-                                    Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
-                                    bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                    bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow *0.75f, 0.175f);
+                                    if (bossScript.healthPoints <= 0)
+                                    {
+                                        enemies.Remove(enemies[i]);
+                                        i--;
+                                    }
+                                    else if (procActivation == true)
+                                    {
+                                        Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
+                                        bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    }
                                 }
                             }
-                        }
-                        break;
-                    case ENTITY_TYPE.WAMPA:
-                        {
-                            Wampa bossScript = myEntComp.gameObject.GetComponent<Wampa>();
+                            break;
+                        case ENTITY_TYPE.WAMPA:
+                            {
+                                Wampa bossScript = myEntComp.gameObject.GetComponent<Wampa>();
 
-                            if (bossScript != null)
-                            {
-                                if (bossScript.healthPoints <= 0)
+                                if (bossScript != null)
                                 {
-                                    enemies.Remove(enemies[i]);
-                                    i--;
-                                }
-                                else if (procActivation == true)
-                                {
-                                    Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
-                                    bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                    bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    if (bossScript.healthPoints <= 0)
+                                    {
+                                        enemies.Remove(enemies[i]);
+                                        i--;
+                                    }
+                                    else if (procActivation == true)
+                                    {
+                                        Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
+                                        bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    }
                                 }
                             }
-                        }
-                        break;
-                    case ENTITY_TYPE.SKEL:
-                        {
-                            Skel bossScript = myEntComp.gameObject.GetComponent<Skel>();
+                            break;
+                        case ENTITY_TYPE.SKEL:
+                            {
+                                Skel bossScript = myEntComp.gameObject.GetComponent<Skel>();
 
-                            if (bossScript != null)
-                            {
-                                if (bossScript.healthPoints <= 0)
+                                if (bossScript != null)
                                 {
-                                    enemies.Remove(enemies[i]);
-                                    i--;
-                                }
-                                else if (procActivation == true)
-                                {
-                                    Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
-                                    bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                    bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    if (bossScript.healthPoints <= 0)
+                                    {
+                                        enemies.Remove(enemies[i]);
+                                        i--;
+                                    }
+                                    else if (procActivation == true)
+                                    {
+                                        Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
+                                        bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    }
                                 }
                             }
-                        }
-                        break;
-                    case ENTITY_TYPE.MOFF:
-                        {
-                            MoffGideon bossScript = myEntComp.gameObject.GetComponent<MoffGideon>();
+                            break;
+                        case ENTITY_TYPE.MOFF:
+                            {
+                                MoffGideon bossScript = myEntComp.gameObject.GetComponent<MoffGideon>();
 
-                            if (bossScript != null)
-                            {
-                                if (bossScript.healthPoints <= 0)
+                                if (bossScript != null)
                                 {
-                                    enemies.Remove(enemies[i]);
-                                    i--;
-                                }
-                                else if (procActivation == true)
-                                {
-                                    Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
-                                    bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                    bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    if (bossScript.healthPoints <= 0)
+                                    {
+                                        enemies.Remove(enemies[i]);
+                                        i--;
+                                    }
+                                    else if (procActivation == true)
+                                    {
+                                        Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
+                                        bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                    }
                                 }
                             }
-                        }
-                        break;
-                    default:
-                        break;
+                            break;
+                        default:
+                            break;
+                    }
                 }
 
                 if (eneScript != null)

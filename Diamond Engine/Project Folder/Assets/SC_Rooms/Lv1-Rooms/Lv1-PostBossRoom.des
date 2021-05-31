@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -15.204455375671387,
-        14.287446022033691,
-        1.1320840120315552
+        -11.08211612701416,
+        35.625179290771484,
+        3.0718510150909424
     ],
     "EditorCameraZ": [
-        0.77093249559402466,
-        -0.61438101530075073,
-        -0.16792522370815277
+        0.64386647939682007,
+        -0.76500189304351807,
+        -0.01442718505859375
     ],
     "EditorCameraY": [
-        0.60030502080917358,
-        0.78900939226150513,
-        -0.13075898587703705
+        0.76480960845947266,
+        0.64402806758880615,
+        -0.017150133848190308
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -1276,7 +1276,7 @@
             "Scale": [
                 100,
                 99.945083618164063,
-                0.99957096576690674
+                5
             ],
             "Components": [
                 {
@@ -1440,8 +1440,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 13.239999771118164,
-                    "hFOV": 19.959999084472656,
+                    "vFOV": 14.039999961853027,
+                    "hFOV": 22.399999618530273,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -3273,10 +3273,10 @@
                         -0.19471836090087891
                     ],
                     "Rotation": [
-                        0.1939222663640976,
-                        -2.7353402876073574e-10,
-                        1.3877787807814457e-17,
-                        0.98101687431335449
+                        0.19392229616641998,
+                        -2.7353405651631135e-10,
+                        1.3877789462175682e-17,
+                        0.98101699352264404
                     ],
                     "Scale": [
                         1,
@@ -4280,7 +4280,64 @@
                 1,
                 1
             ],
-            "PrefabObjects": []
+            "PrefabObjects": [
+                {
+                    "name": "Boon particles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 309117794,
+                    "ParentUID": 940549158,
+                    "PrefabID": 0,
+                    "PrefabReference": 309117794,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.00024628639221191406,
+                        0.0001201629638671875,
+                        -6.9141387939453125e-05
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Boon Spawn Particle",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 835736709,
+                    "ParentUID": 309117794,
+                    "PrefabID": 2009857862,
+                    "PrefabReference": 835736709,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -2.8410000801086426,
+                        6.1248927116394043,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
         },
         {
             "name": "Boon_Mesh",
@@ -4309,7 +4366,64 @@
                 1,
                 1
             ],
-            "PrefabObjects": []
+            "PrefabObjects": [
+                {
+                    "name": "Boon particles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 309117794,
+                    "ParentUID": 1138202330,
+                    "PrefabID": 0,
+                    "PrefabReference": 309117794,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.00024628639221191406,
+                        0.0001201629638671875,
+                        -6.9141387939453125e-05
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Boon Spawn Particle",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 835736709,
+                    "ParentUID": 309117794,
+                    "PrefabID": 2009857862,
+                    "PrefabReference": 835736709,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -2.8410000801086426,
+                        6.1248927116394043,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
         },
         {
             "name": "Bo-Katan",
@@ -23555,7 +23669,7 @@
                     "rotateSpeed": 2,
                     "reset": false,
                     "start_Idle": false,
-                    "is_atat": true,
+                    "is_atat": false,
                     "waitSeconds": 2,
                     "STATUS": 0
                 }
@@ -23856,8 +23970,8 @@
                     ],
                     "Scale": [
                         0.5,
-                        0.5,
-                        0.5
+                        1.5,
+                        1.2999999523162842
                     ]
                 }
             ]
@@ -23925,8 +24039,8 @@
                     ],
                     "Scale": [
                         0.5,
-                        0.5,
-                        0.5
+                        1.5,
+                        1.2999999523162842
                     ]
                 }
             ]
@@ -24021,7 +24135,7 @@
                     "rotateSpeed": 0.20000000298023224,
                     "reset": false,
                     "start_Idle": true,
-                    "is_atat": true,
+                    "is_atat": false,
                     "waitSeconds": 4,
                     "STATUS": 0
                 }

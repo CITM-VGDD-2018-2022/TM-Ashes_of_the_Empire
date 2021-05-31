@@ -13,15 +13,15 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -8.8700284957885742,
-                9.8249998092651367,
-                -4.4323248863220215
+                -9.1201086044311523,
+                10,
+                -13.006889343261719
             ],
             "Rotation": [
-                5.5663623044210908e-08,
-                -0.94427376985549927,
-                5.5663623044210908e-08,
-                -0.32916143536567688
+                0,
+                0,
+                0,
+                1
             ],
             "Scale": [
                 1,
@@ -147,15 +147,16 @@
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
+                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
+                    "MaterialUID": 571353722
                 },
                 {
                     "Type": 26,
@@ -216,15 +217,16 @@
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
+                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
+                    "MaterialUID": 571353722
                 },
                 {
                     "Type": 26,
@@ -285,15 +287,16 @@
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
+                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
+                    "MaterialUID": 571353722
                 },
                 {
                     "Type": 26,

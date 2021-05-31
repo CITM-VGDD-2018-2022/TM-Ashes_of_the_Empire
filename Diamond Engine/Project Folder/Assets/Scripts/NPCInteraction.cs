@@ -98,21 +98,15 @@ public class NPCInteraction : DiamondComponent
             if (canInteract || canUpgrade)
             {
                 interactionImage.Enable(true);
-                if (hubTextController != null)
-                    hubTextController.GetComponent<HubTextController>().insideColliderTextActive = true;
             }
             else
             {
                 interactionImage.Enable(false);
-                if (hubTextController != null)
-                    hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
             }
         }
         else if (!IsInside() && interactionImage.IsEnabled())
         {
             interactionImage.Enable(false);
-            if (hubTextController != null)
-                hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
         }
     }
     private void NotificationImage()
@@ -132,7 +126,7 @@ public class NPCInteraction : DiamondComponent
 
     public bool IsInside()
     {
-        if (Core.instance == null)
+        if (Core.instance == null || (hubTextController != null && hubTextController.GetComponent<HubTextController>().insideColliderTextActive))
             return false;
         Vector3 playerPos = Core.instance.gameObject.transform.globalPosition;
         Vector3 colliderPos = gameObject.transform.globalPosition;

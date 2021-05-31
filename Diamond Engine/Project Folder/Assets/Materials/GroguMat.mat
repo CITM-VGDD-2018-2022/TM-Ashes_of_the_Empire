@@ -1,0 +1,10 @@
+{
+    "name": "GroguMat",
+    "ShaderUID": 1281432376,
+    "Uniforms": [
+        {
+            "name": "jointTransforms[0]",
+            "type": 35676
+        }
+    ]
+}

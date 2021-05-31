@@ -51,6 +51,7 @@ public class Wampa : Bosseslv2
     private bool firstFrame = true;
     public bool angry = false;
     float healthPointsAux = 0.0f;
+    public bool rushCrash = false;
 
     public override void Awake()
     {
@@ -69,6 +70,9 @@ public class Wampa : Bosseslv2
 
         //Animator.Play(gameObject, "");
         Audio.SetState("Game_State", "Wampa_Skel_Room");
+
+        companion = InternalCalls.FindObjectWithName("Skel");
+        limboHealth = 0f;
 
     }
 
@@ -143,7 +147,7 @@ public class Wampa : Bosseslv2
             {
                 presentationTimer -= myDeltaTime;
                 healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPoints * 0.25f);
-
+                
                 if (presentationTimer <= 0.0f)
                 {
                     inputsList.Add(INPUT.IN_PRESENTATION_END);
@@ -199,6 +203,15 @@ public class Wampa : Bosseslv2
             WampaAngry();
             angry = true;
             firstSorrowRoar = true;
+        }
+        if (rushCrash)
+        {
+            if (currentState == STATE.FAST_RUSH || currentState == STATE.SLOW_RUSH)
+            {
+                inputsList.Add(INPUT.IN_SLOW_RUSH_END);
+                Input.PlayHaptic(0.5f, 400);
+            }
+            rushCrash = false;
         }
     }
 
@@ -526,12 +539,7 @@ public class Wampa : Bosseslv2
         }
         else if (collidedGameObject.CompareTag("Player"))
         {
-            if (currentState == STATE.FAST_RUSH || currentState == STATE.SLOW_RUSH)
-            {
-                inputsList.Add(INPUT.IN_SLOW_RUSH_END);
-                Input.PlayHaptic(0.5f, 400);
 
-            }
         }
     }
 

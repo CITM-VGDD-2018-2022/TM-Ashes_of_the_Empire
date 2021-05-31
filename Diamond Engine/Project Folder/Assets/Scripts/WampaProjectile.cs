@@ -21,7 +21,8 @@ public class WampaProjectile : DiamondComponent
 
 			gameObject.transform.localPosition += targetDirection.normalized * speed * Time.deltaTime;
 
-			LookAt(targetDirection);
+			LookAt(targetDirection * gameObject.transform.GetForward() * 100);
+
 		}
         if (lifeTime > 0)
         {
@@ -69,7 +70,7 @@ public class WampaProjectile : DiamondComponent
 
 		Quaternion dir = Quaternion.RotateAroundAxis(Vector3.up, angle);
 
-		float rotationSpeed = Time.deltaTime * 100f;
+		float rotationSpeed = Time.deltaTime * 5f;
 
 		Quaternion desiredRotation = Quaternion.Slerp(gameObject.transform.localRotation, dir, rotationSpeed);
 

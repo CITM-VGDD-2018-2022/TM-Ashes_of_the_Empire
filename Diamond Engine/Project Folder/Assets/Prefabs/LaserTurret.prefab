@@ -100,7 +100,7 @@
                     "pitch": 50,
                     "playOnAwake": false,
                     "isMuted": false,
-                    "isMusic": true
+                    "isMusic": false
                 },
                 {
                     "Type": 24,
