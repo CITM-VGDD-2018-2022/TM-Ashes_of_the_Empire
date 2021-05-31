@@ -1,19 +1,19 @@
 {
     "NavMesh": 759541763,
     "EditorCameraPosition": [
-        -10.811290740966797,
-        8.653498649597168,
-        -15.890095710754395
+        -17.011064529418945,
+        11.845534324645996,
+        -25.857749938964844
     ],
     "EditorCameraZ": [
-        0.59075313806533813,
-        -0.50514602661132813,
-        0.62915682792663574
+        0.51447784900665283,
+        -0.59259301424026489,
+        0.61979532241821289
     ],
     "EditorCameraY": [
-        0.34578776359558105,
-        0.86303389072418213,
-        0.36824357509613037
+        0.3785129189491272,
+        0.80550205707550049,
+        0.45595440268516541
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -108,7 +108,7 @@
             "Static": false,
             "Position": [
                 0,
-                -27,
+                -36.804363250732422,
                 3.3269875530095305e-06
             ],
             "Rotation": [
@@ -118,9 +118,9 @@
                 0.70710670948028564
             ],
             "Scale": [
-                50,
-                49.999252319335938,
-                19.999626159667969
+                100,
+                99.999168395996094,
+                29.999792098999023
             ],
             "Components": [
                 {
@@ -6111,6 +6111,90 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1939403477,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -6157,6 +6241,90 @@
                         1.8489090204238892,
                         -0.072218582034111023,
                         -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1105339994,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
                     ],
                     "Rotation": [
                         0,
@@ -6227,6 +6395,90 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 304149332,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -6273,6 +6525,90 @@
                         1.8489090204238892,
                         -0.072218582034111023,
                         -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1454545060,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
                     ],
                     "Rotation": [
                         0,
@@ -6343,6 +6679,90 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 840961372,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -6389,6 +6809,90 @@
                         1.8489090204238892,
                         -0.072218582034111023,
                         -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1174603643,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
                     ],
                     "Rotation": [
                         0,
@@ -6459,6 +6963,90 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1100576572,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -6505,6 +7093,90 @@
                         1.8489090204238892,
                         -0.072218582034111023,
                         -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 243228682,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
                     ],
                     "Rotation": [
                         0,
@@ -6575,6 +7247,90 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1610847707,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -6621,6 +7377,90 @@
                         1.8489090204238892,
                         -0.072218582034111023,
                         -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 65675239,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
                     ],
                     "Rotation": [
                         0,
@@ -9771,9 +10611,9 @@
             ],
             "Rotation": [
                 0,
-                0.37281200289726257,
+                0.37281203269958496,
                 0,
-                0.92790687084197998
+                0.92790699005126953
             ],
             "Scale": [
                 1.9426765441894531,
@@ -11851,10 +12691,10 @@
                 15.79642391204834
             ],
             "Rotation": [
-                -0.6561281681060791,
-                -0.26363468170166016,
-                -0.26363155245780945,
-                0.65611809492111206
+                -0.65612822771072388,
+                -0.26363471150398254,
+                -0.26363158226013184,
+                0.65611815452575684
             ],
             "Scale": [
                 1.3999999761581421,

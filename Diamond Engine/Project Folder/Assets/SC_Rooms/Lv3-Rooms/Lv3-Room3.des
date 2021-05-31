@@ -1,19 +1,19 @@
 {
     "NavMesh": 1440000066,
     "EditorCameraPosition": [
-        -16.650005340576172,
-        5.5812549591064453,
-        16.770713806152344
+        -4.9751362800598145,
+        14.400485992431641,
+        -29.084098815917969
     ],
     "EditorCameraZ": [
-        0.63553756475448608,
-        -0.5247795581817627,
-        -0.56630241870880127
+        0.55523741245269775,
+        -0.75075054168701172,
+        0.35788977146148682
     ],
     "EditorCameraY": [
-        0.39180153608322144,
-        0.8512381911277771,
-        -0.34912049770355225
+        0.63106817007064819,
+        0.66058576107025146,
+        0.40666863322257996
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -28408,504 +28408,6 @@
             ]
         },
         {
-            "name": "GasRacks",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 931763389,
-            "ParentUID": 656029458,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                -6.1817239327410789e-08,
-                -0.70722883939743042,
-                -6.1817239327410789e-08,
-                -0.70698469877243042
-            ],
-            "Scale": [
-                0.99999988079071045,
-                1,
-                0.99999988079071045
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 891999559,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                8.0642776489257813,
-                -4.2954134941101074,
-                -24.843585968017578
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 969193193,
-                    "ParentUID": 891999559,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 702902095,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                15.280502319335938,
-                -4.2950029373168945,
-                -8.91015625
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2036891806,
-                    "ParentUID": 702902095,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 115617466,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                16.655818939208984,
-                -4.2950038909912109,
-                -1.1554218530654907
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 634891430,
-                    "ParentUID": 115617466,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 120341829,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -0.64389306306838989,
-                -4.2950000762939453,
-                -21.343276977539063
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 984769862,
-                    "ParentUID": 120341829,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 99648180,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -11.868785858154297,
-                -4.2949981689453125,
-                -24.199687957763672
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1233759970,
-                    "ParentUID": 99648180,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 551958664,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -11.228655815124512,
-                -4.2950000762939453,
-                12.519498825073242
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 841766926,
-                    "ParentUID": 551958664,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 101878051,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -0.46346047520637512,
-                -4.2949991226196289,
-                21.645290374755859
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1860786277,
-                    "ParentUID": 101878051,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1973912063,
-            "ParentUID": 931763389,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                4.1363310813903809,
-                -4.2950005531311035,
-                21.784603118896484
-            ],
-            "Rotation": [
-                5.2111093218343285e-15,
-                -0.00017255546117667109,
-                -8.7422783678903215e-08,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1810715652,
-                    "ParentUID": 1973912063,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Colliders1",
             "tag": "Untagged",
             "layer": "Default",
@@ -31195,9 +30697,9 @@
             ],
             "Rotation": [
                 0,
-                0.37947213649749756,
+                0.37947219610214233,
                 0,
-                0.92520314455032349
+                0.92520326375961304
             ],
             "Scale": [
                 1.6000006198883057,
@@ -31993,6 +31495,1176 @@
                     "Type": 18,
                     "Active": true,
                     "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRacks",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 931763389,
+            "ParentUID": 1642091057,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                6.1817239327410789e-08,
+                -0.70722883939743042,
+                6.1817239327410789e-08,
+                -0.70698469877243042
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 891999559,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                8.0642776489257813,
+                -4.2954134941101074,
+                -24.843585968017578
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255547572858632,
+                -8.7422790784330573e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 969193193,
+                    "ParentUID": 891999559,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 602641252,
+                    "ParentUID": 891999559,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1098594053,
+                    "ParentUID": 602641252,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 438992361,
+                    "ParentUID": 602641252,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 702902095,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                15.280502319335938,
+                -4.2950029373168945,
+                -8.91015625
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 2036891806,
+                    "ParentUID": 702902095,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 702902095,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 115617466,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                16.655818939208984,
+                -4.2950038909912109,
+                -1.1554218530654907
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 634891430,
+                    "ParentUID": 115617466,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 115617466,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 120341829,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.64389306306838989,
+                -4.2950000762939453,
+                -21.343276977539063
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 984769862,
+                    "ParentUID": 120341829,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 120341829,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 99648180,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -11.868785858154297,
+                -4.2949981689453125,
+                -24.199687957763672
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1233759970,
+                    "ParentUID": 99648180,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 99648180,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 551958664,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -11.228655815124512,
+                -4.2950000762939453,
+                12.519498825073242
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 841766926,
+                    "ParentUID": 551958664,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 551958664,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 101878051,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.46346047520637512,
+                -4.2949991226196289,
+                21.645290374755859
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1860786277,
+                    "ParentUID": 101878051,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 101878051,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1973912063,
+            "ParentUID": 931763389,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                4.1363310813903809,
+                -4.2950005531311035,
+                21.784603118896484
+            ],
+            "Rotation": [
+                5.2111093218343285e-15,
+                -0.00017255546117667109,
+                -8.7422783678903215e-08,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1810715652,
+                    "ParentUID": 1973912063,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 151623022,
+                    "ParentUID": 1973912063,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "IdleParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1025933234,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 1025933234,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "EruptionParticles",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 480801472,
+                    "ParentUID": 151623022,
+                    "PrefabID": 0,
+                    "PrefabReference": 480801472,
+                    "DontDestroy": false,
+                    "Static": false,
                     "Position": [
                         0,
                         0,
