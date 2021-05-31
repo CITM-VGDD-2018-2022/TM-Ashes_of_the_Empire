@@ -39,8 +39,6 @@ public class NPCInteraction : DiamondComponent
         {
             return;
         }
-        hubScript.onUpgrade += UpdateUpgrade;
-        Debug.Log("NNPC ENUM: " + npc.ToString());
 
         switch (npc)
         {
@@ -64,15 +62,6 @@ public class NPCInteraction : DiamondComponent
                 canInteract = hubScript.GroguHasInteractions();
                 canUpgrade = hubScript.GroguCanUpgrade();
                 break;
-        }
-        if (canInteract)
-        {
-            Debug.Log(npc.ToString() + " Can interact");
-        }
-        else
-        {
-            Debug.Log(npc.ToString() + " Can't interact");
-
         }
     }
 

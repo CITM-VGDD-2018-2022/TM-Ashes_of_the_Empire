@@ -1,19 +1,19 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        -11.083470344543457,
-        12.263211250305176,
-        -26.499225616455078
+        -24.222606658935547,
+        17.910171508789063,
+        -17.243051528930664
     ],
     "EditorCameraZ": [
-        0.46466124057769775,
-        -0.38859853148460388,
-        0.79566407203674316
+        0.78359335660934448,
+        -0.1368822455406189,
+        0.60600721836090088
     ],
     "EditorCameraY": [
-        0.19597089290618896,
-        0.92140716314315796,
-        0.33556553721427917
+        0.10828730463981628,
+        0.99058735370635986,
+        0.083729371428489685
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl3ft.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl3bk.png",
@@ -106,11 +106,12 @@
                     "fSize": 45,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 14.933333396911621,
-                    "hFOV": 27.644443511962891,
-                    "culling": false,
+                    "vFOV": 14.44444465637207,
+                    "hFOV": 22.44444465637207,
+                    "culling": true,
                     "HDR": true,
-                    "drawSkybox": true
+                    "drawSkybox": true,
+                    "ProfileUID": 729935961
                 },
                 {
                     "Type": 12,
@@ -787,7 +788,7 @@
                     "Position": [
                         -1.6600983142852783,
                         -1.5799999237060547,
-                        4.1479568481445312
+                        4.1479568481445313
                     ],
                     "Rotation": [
                         -6.1578575127896329e-08,
@@ -2305,7 +2306,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2367,7 +2368,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2497,7 +2498,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2559,7 +2560,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2621,7 +2622,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2683,7 +2684,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2779,7 +2780,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2841,7 +2842,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2903,7 +2904,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2965,7 +2966,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3027,7 +3028,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3089,7 +3090,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3185,7 +3186,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3247,7 +3248,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3309,7 +3310,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3371,7 +3372,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3467,7 +3468,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3583,7 +3584,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3645,7 +3646,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3707,7 +3708,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3769,9 +3770,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/1540644281.mat",
-                    "MaterialUID": 1540644281
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
                 }
             ]
         },
@@ -3831,7 +3832,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3927,7 +3928,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3989,7 +3990,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4051,7 +4052,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4147,7 +4148,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -4333,7 +4334,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -4608,7 +4609,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -4661,7 +4662,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.0020799636840820312,
+                -0.0020799636840820313,
                 -0.0038083791732788086,
                 0.0011339184129610658
             ],
@@ -4705,7 +4706,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -4870,7 +4871,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4932,7 +4933,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4994,7 +4995,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5090,7 +5091,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5152,7 +5153,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5214,7 +5215,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5276,7 +5277,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5338,7 +5339,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5434,7 +5435,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5496,7 +5497,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5558,7 +5559,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5654,7 +5655,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5716,7 +5717,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5778,7 +5779,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5840,7 +5841,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5902,7 +5903,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5998,7 +5999,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6060,7 +6061,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6122,7 +6123,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6218,7 +6219,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6280,7 +6281,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6342,7 +6343,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6404,7 +6405,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6466,7 +6467,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6562,7 +6563,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6624,7 +6625,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6686,7 +6687,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6782,7 +6783,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6844,7 +6845,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6906,7 +6907,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -6968,7 +6969,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7030,7 +7031,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7126,7 +7127,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7188,7 +7189,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7304,7 +7305,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7366,7 +7367,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7428,7 +7429,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7490,7 +7491,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7586,7 +7587,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7648,7 +7649,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7710,7 +7711,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7806,7 +7807,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7868,7 +7869,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7930,7 +7931,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -11021,7 +11022,7 @@
             "Static": false,
             "Position": [
                 12.624422073364258,
-                -37.304397583007812,
+                -37.304397583007813,
                 -11.015588760375977
             ],
             "Rotation": [
@@ -11074,7 +11075,7 @@
             "Static": false,
             "Position": [
                 0,
-                48.538093566894531,
+                23.287086486816406,
                 -3.322169303894043
             ],
             "Rotation": [
@@ -11085,8 +11086,8 @@
             ],
             "Scale": [
                 1,
-                0.99993407726287842,
-                0.99993407726287842
+                0.99993091821670532,
+                0.99993091821670532
             ],
             "Components": [
                 {
@@ -11103,13 +11104,13 @@
                     ],
                     "ambientLightColor": [
                         1,
-                        0.99998998641967773,
-                        0.99998998641967773
+                        0.5319865345954895,
+                        0.5319865345954895
                     ],
-                    "lightIntensity": 0.5,
-                    "specularValue": 1,
-                    "fadeDistance": 50,
-                    "maxDistance": 10000,
+                    "lightIntensity": 2,
+                    "specularValue": 3,
+                    "fadeDistance": 20,
+                    "maxDistance": 2000,
                     "calculateShadows": true
                 }
             ]
@@ -11127,7 +11128,7 @@
             "Static": false,
             "Position": [
                 12.624422073364258,
-                -37.304397583007812,
+                -37.304397583007813,
                 36.961433410644531
             ],
             "Rotation": [
@@ -11467,7 +11468,7 @@
                         0,
                         0,
                         -0.0073059904389083385,
-                        0.99997329711914062
+                        0.99997329711914063
                     ],
                     "Scale": [
                         1,
@@ -12383,7 +12384,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.49832534790039062,
+                        0.49832534790039063,
                         2.0816681711721685e-17,
                         1.3898392876873153e-17
                     ],
@@ -12747,7 +12748,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -12775,7 +12776,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -12803,7 +12804,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851562,
+                        0.76593399047851563,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -12860,7 +12861,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757812,
+                        -0.0062532424926757813,
                         -0.058134078979492188
                     ],
                     "Rotation": [
@@ -19360,7 +19361,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }

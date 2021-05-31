@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        0.88993746042251587,
-        1.5377622842788696,
-        -2.4172916412353516
+        71.475059509277344,
+        54.929821014404297,
+        -8.440821647644043
     ],
     "EditorCameraZ": [
-        -0.29664582014083862,
-        -0.51258742809295654,
-        0.80576390027999878
+        -0.74487435817718506,
+        -0.66702055931091309,
+        -0.015680670738220215
     ],
     "EditorCameraY": [
-        -0.17709143459796906,
-        0.85863512754440308,
-        0.48102444410324097
+        -0.66687178611755371,
+        0.74503934383392334,
+        -0.014085650444030762
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -8028,9 +8028,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -2.2530512809753418,
-                5.3584761619567871,
-                -0.0092291831970214844
+                32.702735900878906,
+                52.540569305419922,
+                -23.28388786315918
             ],
             "Rotation": [
                 0,
@@ -8057,15 +8057,15 @@
                     ],
                     "lightColor": [
                         1,
-                        1,
-                        1
+                        0.85974884033203125,
+                        0.70707070827484131
                     ],
                     "ambientLightColor": [
                         1,
-                        1,
-                        1
+                        0.57425183057785034,
+                        0.020202040672302246
                     ],
-                    "lightIntensity": 1,
+                    "lightIntensity": 1.5,
                     "specularValue": 64,
                     "calculateShadows": true
                 }
@@ -8110,12 +8110,11 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 23.161764144897461,
-                    "hFOV": 43.823528289794922,
+                    "vFOV": 23.897058486938477,
+                    "hFOV": 37.132350921630859,
                     "culling": false,
                     "HDR": true,
-                    "drawSkybox": false,
-                    "ProfileUID": 1969686679
+                    "drawSkybox": false
                 },
                 {
                     "Type": 12,
@@ -11108,9 +11107,9 @@
                     "Path": "Library\/Meshes\/2095971721.mmh",
                     "UID": 2095971721,
                     "NormalMapAssetPath": "Empty",
-                    "NormalMapLibraryPath": "Library\/Textures\/752568487.dds",
-                    "NormalMapUID": 752568487,
-                    "bumpDepth": 0.92100000381469727,
+                    "NormalMapLibraryPath": "Library\/Textures\/888398589.dds",
+                    "NormalMapUID": 888398589,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         1,
