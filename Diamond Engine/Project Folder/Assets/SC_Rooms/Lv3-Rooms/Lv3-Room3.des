@@ -1,26 +1,26 @@
 {
     "NavMesh": 1440000066,
     "EditorCameraPosition": [
-        -4.9751362800598145,
-        14.400485992431641,
-        -29.084098815917969
+        -38.579677581787109,
+        50.030906677246094,
+        -40.935447692871094
     ],
     "EditorCameraZ": [
-        0.55523741245269775,
-        -0.75075054168701172,
-        0.35788977146148682
+        0.595325767993927,
+        -0.65150845050811768,
+        0.47023823857307434
     ],
     "EditorCameraY": [
-        0.63106817007064819,
-        0.66058576107025146,
-        0.40666863322257996
+        0.51125574111938477,
+        0.75864136219024658,
+        0.40383264422416687
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl3ft.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl3bk.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl3up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl3dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl3rt.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl3lf.png",
     "skyboxColor": [
         1,
         1,
@@ -30697,9 +30697,9 @@
             ],
             "Rotation": [
                 0,
-                0.37947219610214233,
+                0.37947213649749756,
                 0,
-                0.92520326375961304
+                0.92520314455032349
             ],
             "Scale": [
                 1.6000006198883057,
