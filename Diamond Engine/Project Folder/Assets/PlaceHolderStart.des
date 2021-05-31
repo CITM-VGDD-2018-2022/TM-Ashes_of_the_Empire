@@ -3,17 +3,17 @@
     "EditorCameraPosition": [
         0.88993746042251587,
         1.5377622842788696,
-        -2.4172914028167725
+        -2.4172916412353516
     ],
     "EditorCameraZ": [
         -0.29664582014083862,
         -0.51258742809295654,
-        0.805763840675354
+        0.80576390027999878
     ],
     "EditorCameraY": [
         -0.17709143459796906,
-        0.85863500833511353,
-        0.48102441430091858
+        0.85863512754440308,
+        0.48102444410324097
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -8110,8 +8110,8 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 22.536764144897461,
-                    "hFOV": 41.544116973876953,
+                    "vFOV": 23.161764144897461,
+                    "hFOV": 43.823528289794922,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": false,
@@ -23129,6 +23129,13 @@
                     "playOnAwake": false,
                     "isMuted": false,
                     "isMusic": false
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Menu_Grogu",
+                    "verticalSpeed": 0.5,
+                    "verticalAmplitude": 0.0035000001080334187
                 }
             ]
         },
