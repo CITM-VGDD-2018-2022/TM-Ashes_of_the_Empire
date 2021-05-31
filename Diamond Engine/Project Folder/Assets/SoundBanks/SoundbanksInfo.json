@@ -18,7 +18,7 @@
    {
     "Id": "225682233",
     "Language": "SFX",
-    "Hash": "4055049369",
+    "Hash": "767238285",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Skytrooper",
     "ShortName": "Skytrooper",
     "Path": "Skytrooper.bnk",
@@ -182,7 +182,7 @@
    {
     "Id": "833070093",
     "Language": "SFX",
-    "Hash": "3375086755",
+    "Hash": "2535085162",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Stormtrooper",
     "ShortName": "Stormtrooper",
     "Path": "Stormtrooper.bnk",
@@ -835,7 +835,7 @@
    {
     "Id": "1019160887",
     "Language": "SFX",
-    "Hash": "106327431",
+    "Hash": "2803302439",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Heavytrooper",
     "ShortName": "Heavytrooper",
     "Path": "Heavytrooper.bnk",
@@ -1419,7 +1419,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "2421815872",
+    "Hash": "3954228696",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1642,7 +1642,9 @@
       "Id": "1398027825",
       "Name": "Play_Footsteps_Water_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Footsteps_Water_Mando",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "0.165941",
+      "DurationMax": "0.268458",
       "IncludedMemoryFiles": [
        {
         "Id": "151403726",
@@ -1722,9 +1724,7 @@
       "Id": "1184164898",
       "Name": "Play_Mando_Damaging_Water",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Mando_Damaging_Water",
-      "DurationType": "OneShot",
-      "DurationMin": "0.354399",
-      "DurationMax": "0.880000",
+      "DurationType": "Infinite",
       "IncludedMemoryFiles": [
        {
         "Id": "218041158",
@@ -1901,22 +1901,6 @@
         "Language": "SFX",
         "ShortName": "Mando voice 1.wav",
         "Path": "SFX\\Mando voice 1_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
-      "Id": "3091473523",
-      "Name": "Play_Mando_Pull_Command",
-      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Mando_Pull_Command",
-      "DurationType": "OneShot",
-      "DurationMin": "0.364172",
-      "DurationMax": "0.364172",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "326072626",
-        "Language": "SFX",
-        "ShortName": "Mando pull command.wav",
-        "Path": "SFX\\Mando pull command_FC2D3A10.wem"
        }
       ]
      },
@@ -2105,7 +2089,7 @@
    {
     "Id": "1229948536",
     "Language": "SFX",
-    "Hash": "697723272",
+    "Hash": "1892198201",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Environment",
     "ShortName": "Environment",
     "Path": "Environment.bnk",
@@ -2151,6 +2135,36 @@
       ]
      },
      {
+      "Id": "3228446999",
+      "Name": "Play_Level_1_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Level_1_Ambience",
+      "DurationType": "Infinite",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "644310614",
+        "Language": "SFX",
+        "ShortName": "Wind Exterior level 1.wav",
+        "Path": "SFX\\Wind Exterior level 1_B182BB5A.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1005163266",
+      "Name": "Play_Level_2_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Level_2_Ambience",
+      "DurationType": "OneShot",
+      "DurationMin": "21.084490",
+      "DurationMax": "21.084490",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "627317939",
+        "Language": "SFX",
+        "ShortName": "Wind Exterior level 2.wav",
+        "Path": "SFX\\Wind Exterior level 2_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "3825394181",
       "Name": "Play_Post_Boss_Room_1_Ambience",
       "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Post_Boss_Room_1_Ambience",
@@ -2175,6 +2189,22 @@
         "Language": "SFX",
         "ShortName": "post boss room 2 ambience.wav",
         "Path": "SFX\\post boss room 2 ambience_B182BB5A.wem"
+       }
+      ]
+     },
+     {
+      "Id": "709214534",
+      "Name": "Play_Rancor_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Rancor_Ambience",
+      "DurationType": "OneShot",
+      "DurationMin": "13.973175",
+      "DurationMax": "13.973175",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "455819116",
+        "Language": "SFX",
+        "ShortName": "Wind Cave Rancor.wav",
+        "Path": "SFX\\Wind Cave Rancor_FC2D3A10.wem"
        }
       ]
      },
@@ -2239,6 +2269,22 @@
       ]
      },
      {
+      "Id": "2970027071",
+      "Name": "Play_Wampa_Skel_Ambience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Wampa_Skel_Ambience",
+      "DurationType": "OneShot",
+      "DurationMin": "21.065283",
+      "DurationMax": "21.065283",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "1056733374",
+        "Language": "SFX",
+        "ShortName": "Wind Cave Wampa Skel.wav",
+        "Path": "SFX\\Wind Cave Wampa Skel_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1931338186",
       "Name": "Resume_Object",
       "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
@@ -2286,7 +2332,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "1536071560",
+    "Hash": "1209524989",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2444,12 +2490,60 @@
       ]
      },
      {
+      "Id": "2720966806",
+      "Name": "Play_UI_Shop_Open",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Shop_Open",
+      "DurationType": "OneShot",
+      "DurationMin": "0.797642",
+      "DurationMax": "0.797642",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "226369131",
+        "Language": "SFX",
+        "ShortName": "UI shop opened.wav",
+        "Path": "SFX\\UI shop opened_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1743179548",
+      "Name": "Play_UI_Skill_Tree_Close",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Skill_Tree_Close",
+      "DurationType": "OneShot",
+      "DurationMin": "0.535261",
+      "DurationMax": "0.535261",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "786398189",
+        "Language": "SFX",
+        "ShortName": "UI Skill tree close.wav",
+        "Path": "SFX\\UI Skill tree close_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1513174637",
+      "Name": "Play_UI_Skill_Tree_Lock",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Skill_Tree_Lock",
+      "DurationType": "OneShot",
+      "DurationMin": "0.178005",
+      "DurationMax": "0.178005",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "734513644",
+        "Language": "SFX",
+        "ShortName": "UI skill tree cancel.wav",
+        "Path": "SFX\\UI skill tree cancel_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "2780742664",
       "Name": "Play_UI_Skill_Tree_Open",
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Skill_Tree_Open",
       "DurationType": "OneShot",
-      "DurationMin": "0.579615",
-      "DurationMax": "0.579615",
+      "DurationMin": "0.560680",
+      "DurationMax": "0.560680",
       "IncludedMemoryFiles": [
        {
         "Id": "259657947",
@@ -2532,7 +2626,7 @@
    {
     "Id": "2674766611",
     "Language": "SFX",
-    "Hash": "969849853",
+    "Hash": "4176771051",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Turret",
     "ShortName": "Turret",
     "Path": "Turret.bnk",
@@ -2572,6 +2666,28 @@
         "Language": "SFX",
         "ShortName": "turret destruction.wav",
         "Path": "SFX\\turret destruction_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "2750658822",
+      "Name": "Play_Turret_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Turret\\Play_Turret_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.222869",
+      "DurationMax": "0.285310",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "275607941",
+        "Language": "SFX",
+        "ShortName": "Turret hit 2.wav",
+        "Path": "SFX\\Turret hit 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "941832839",
+        "Language": "SFX",
+        "ShortName": "Turret hit 1.wav",
+        "Path": "SFX\\Turret hit 1_FC2D3A10.wem"
        }
       ]
      },
@@ -3200,7 +3316,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "2343628415",
+    "Hash": "4118761397",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -3501,7 +3617,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "2931194690",
+    "Hash": "3534478735",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -4223,7 +4339,7 @@
    {
     "Id": "4179269225",
     "Language": "SFX",
-    "Hash": "3975830651",
+    "Hash": "2859984811",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Grogu",
     "ShortName": "Grogu",
     "Path": "Grogu.bnk",
@@ -4235,22 +4351,6 @@
       "DurationType": "OneShot",
       "DurationMin": "0.000000",
       "DurationMax": "0.000000"
-     },
-     {
-      "Id": "1559593303",
-      "Name": "Play_Force_Pull",
-      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Force_Pull",
-      "DurationType": "OneShot",
-      "DurationMin": "0.782880",
-      "DurationMax": "0.782880",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "220532221",
-        "Language": "SFX",
-        "ShortName": "Force pull.wav",
-        "Path": "SFX\\Force pull_FC2D3A10.wem"
-       }
-      ]
      },
      {
       "Id": "1240818490",
