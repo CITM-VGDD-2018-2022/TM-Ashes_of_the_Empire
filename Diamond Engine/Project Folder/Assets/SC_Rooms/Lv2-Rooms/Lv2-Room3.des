@@ -1,19 +1,19 @@
 {
     "NavMesh": 789920900,
     "EditorCameraPosition": [
-        -56.668880462646484,
-        27.832386016845703,
-        -50.271492004394531
+        -12.73039722442627,
+        18.275810241699219,
+        -42.357780456542969
     ],
     "EditorCameraZ": [
-        0.67873716354370117,
-        -0.50486654043197632,
-        0.53331613540649414
+        0.46384036540985107,
+        -0.70491296052932739,
+        0.53660964965820313
     ],
     "EditorCameraY": [
-        0.39702072739601135,
-        0.8631974458694458,
-        0.31187301874160767
+        0.46104001998901367,
+        0.70929384231567383,
+        0.53323954343795776
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -109,7 +109,7 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 17.549999237060547,
+                    "vFOV": 15.899999618530273,
                     "hFOV": 28,
                     "culling": true,
                     "HDR": true,
@@ -8882,10 +8882,10 @@
                 0.0049104690551757813
             ],
             "Rotation": [
-                -0.4999135434627533,
-                0.50010108947753906,
-                0.500072181224823,
-                0.49991333484649658
+                -0.49991348385810852,
+                0.50010102987289429,
+                0.50007212162017822,
+                0.49991327524185181
             ],
             "Scale": [
                 1.1896101236343384,
@@ -9535,14 +9535,14 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                8.0456018447875977,
-                1.5246859788894653,
+                8.0456008911132813,
+                1.5246860980987549,
                 -6.6678390502929688
             ],
             "Rotation": [
                 7.1054273576010019e-15,
-                -3.637978807091713e-11,
-                2.9103830456733704e-11,
+                -5.0931703299283981e-11,
+                3.637978807091713e-11,
                 1
             ],
             "Scale": [
@@ -10430,10 +10430,10 @@
                 1.9161882400512695
             ],
             "Rotation": [
-                -0.26933732628822327,
-                0.65380209684371948,
-                0.65372389554977417,
-                0.26952779293060303
+                -0.26933735609054565,
+                0.65380215644836426,
+                0.65372395515441895,
+                0.26952782273292542
             ],
             "Scale": [
                 2.835273265838623,
@@ -17178,104 +17178,6 @@
             ]
         },
         {
-            "name": "WaterCollider",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1242625840,
-            "ParentUID": 1792431665,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -0.0017528533935546875,
-                1.4063946008682251,
-                1.1863234043121338
-            ],
-            "Rotation": [
-                -2.5623236171723462e-12,
-                -2.9089378017488343e-08,
-                2.4355944816534247e-08,
-                1
-            ],
-            "Scale": [
-                17.600944519042969,
-                1,
-                16.768133163452148
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": false,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "DPSDamage",
-                    "baseDamage": 0,
-                    "damage": 0,
-                    "damageTime": 0,
-                    "damageTimer": 1
-                }
-            ]
-        },
-        {
             "name": "Lake",
             "tag": "Untagged",
             "layer": "Default",
@@ -19333,6 +19235,104 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "WaterCollider",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1242625840,
+            "ParentUID": 2131139260,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.020267486572265625,
+                -0.54869741201400757,
+                1.6649632453918457
+            ],
+            "Rotation": [
+                -2.5692664142040744e-12,
+                -2.909599139400143e-08,
+                2.4369835927018357e-08,
+                1
+            ],
+            "Scale": [
+                17.600944519042969,
+                1,
+                16.768133163452148
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
                 }
             ]
         },

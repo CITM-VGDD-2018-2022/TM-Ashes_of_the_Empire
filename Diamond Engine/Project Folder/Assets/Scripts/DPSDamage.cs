@@ -4,10 +4,12 @@ using DiamondEngine;
 public class DPSDamage : DiamondComponent
 {
     public int baseDamage = 4;
-    public int damage = 0;
+    public int maxDamage = 10;
+    public int damageIncrease = 2;
+    private int damage = 0;
 
     public float damageTime = 1.0f;
-    public float damageTimer = 0.0f;
+    private float damageTimer = 0.0f;
 
     PlayerHealth playerHealth = null;
 
@@ -23,14 +25,14 @@ public class DPSDamage : DiamondComponent
         {
             damageTimer -= Time.deltaTime;
 
-            if(damageTimer < 0.0f)
+            if (damageTimer < 0.0f)
             {
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(damage, true);
                     IncrementDamage();
                     damageTimer = damageTime;
-                    //Debug.Log("Water Damage");
+                    Debug.Log("Water Damage");
                 }
             }
         }
@@ -41,11 +43,8 @@ public class DPSDamage : DiamondComponent
     {
         if (other.CompareTag("Player"))
         {
-            if(playerHealth == null)
-            {
-                playerHealth = other.GetComponent<PlayerHealth>();
-            }
-
+            Debug.Log("Water enter");
+            playerHealth = other.GetComponent<PlayerHealth>();
             damageTimer = damageTime;
         }
     }
@@ -61,12 +60,12 @@ public class DPSDamage : DiamondComponent
 
     private void IncrementDamage()
     {
-        if (damage < 10)
+        if (damage < maxDamage)
         {
-            damage += 2;
-            if (damage > 10)
+            damage += damageIncrease;
+            if (damage > maxDamage)
             {
-                damage = 10;
+                damage = maxDamage;
             }
         }
     }

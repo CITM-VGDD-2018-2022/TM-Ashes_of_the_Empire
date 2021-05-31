@@ -1,19 +1,19 @@
 {
     "NavMesh": 1404428461,
     "EditorCameraPosition": [
-        -47.332851409912109,
-        22.792444229125977,
-        -43.189987182617188
+        -7.7592973709106445,
+        6.5661783218383789,
+        -8.5496339797973633
     ],
     "EditorCameraZ": [
-        0.63404178619384766,
-        -0.5636860728263855,
-        0.52938556671142578
+        0.59057819843292236,
+        -0.47428956627845764,
+        0.65289115905761719
     ],
     "EditorCameraY": [
-        0.43271118402481079,
-        0.82598912715911865,
-        0.36125203967094421
+        0.31825131177902222,
+        0.88036888837814331,
+        0.35166278481483459
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -107,8 +107,8 @@
                     "fSize": 35,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 20.05714225769043,
-                    "hFOV": 32,
+                    "vFOV": 18.171428680419922,
+                    "hFOV": 31.600000381469727,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true
@@ -1570,8 +1570,8 @@
             ],
             "Scale": [
                 3.2295598983764648,
-                15.584916114807129,
-                3.1834831237792969
+                15.584915161132813,
+                3.1834828853607178
             ],
             "Components": [
                 {
@@ -1748,8 +1748,8 @@
             ],
             "Scale": [
                 3.2295598983764648,
-                15.585663795471191,
-                3.1836700439453125
+                15.585662841796875,
+                3.1836698055267334
             ],
             "Components": [
                 {
@@ -1826,7 +1826,7 @@
             "Static": false,
             "Position": [
                 -9.4544563293457031,
-                -3.417705774307251,
+                -3.5499999523162842,
                 -1.7140274047851563
             ],
             "Rotation": [
@@ -1837,8 +1837,8 @@
             ],
             "Scale": [
                 10.839798927307129,
-                18.773298263549805,
-                3.1840438842773438
+                18.773277282714844,
+                3.1840412616729736
             ],
             "Components": [
                 {
@@ -6533,9 +6533,9 @@
                     "Active": true,
                     "ScriptName": "DPSDamage",
                     "baseDamage": 0,
-                    "damage": 0,
-                    "damageTime": 0,
-                    "damageTimer": 1
+                    "maxDamage": 0,
+                    "damageIncrease": 0,
+                    "damageTime": 0
                 }
             ]
         },
@@ -21913,7 +21913,7 @@
             "Static": false,
             "Position": [
                 0,
-                -0.49202752113342285,
+                -0.18179559707641602,
                 0
             ],
             "Rotation": [
@@ -22083,6 +22083,104 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "WaterCollider",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 800088920,
+            "ParentUID": 211111108,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                6.1644385596082429e-07,
+                -1.7599999904632568,
+                3.754098653793335
+            ],
+            "Rotation": [
+                -0.5,
+                0.5,
+                0.50000005960464478,
+                0.49999997019767761
+            ],
+            "Scale": [
+                13.06794261932373,
+                24.128461837768555,
+                1.5
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 1,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": true,
+                    "LockLinearY": true,
+                    "LockLinearZ": true,
+                    "LockAngularX": true,
+                    "LockAngularY": true,
+                    "LockAngularZ": true,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
                 }
             ]
         },

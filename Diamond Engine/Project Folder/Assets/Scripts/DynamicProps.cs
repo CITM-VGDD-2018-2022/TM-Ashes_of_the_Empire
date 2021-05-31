@@ -213,7 +213,7 @@ public class DynamicProps : DiamondComponent
 
     public void TriggerAction(string tag)
     {
-        Debug.Log(tag);
+        //Debug.Log(tag);
         switch (tag)
         {
             case "Rotate90":
@@ -279,7 +279,7 @@ public class DynamicProps : DiamondComponent
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        Debug.Log("TRIGGER ENTER");
+        //Debug.Log("TRIGGER ENTER");
 
         TriggerAction(triggeredGameObject.tag);
     }
@@ -302,14 +302,14 @@ public class DynamicProps : DiamondComponent
 
     public void UpdateIdle()
     {
-        Debug.Log("Idle timer: " + idleTimer.ToString());
+        //Debug.Log("Idle timer: " + idleTimer.ToString());
         if (idleTimer > 0.0f)
         {
             idleTimer -= Time.deltaTime;
 
             if (idleTimer <= 0.0f)
             {
-                Debug.Log("Scream!");
+                //Debug.Log("Scream!");
                 SwitchState(STATE.SCREAM);
 
                 if (reset)
