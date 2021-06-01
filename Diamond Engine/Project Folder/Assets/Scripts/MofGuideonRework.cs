@@ -20,7 +20,6 @@ public class MofGuideonRework : Entity
         PRESENTATION,
 
         // Neutral
-        IDLE,
         CHASE,
         ACTION_SELECT,
 
@@ -62,6 +61,7 @@ public class MofGuideonRework : Entity
         IN_PRESENTATION_END,
 
         IN_CHASE,
+        IN_CHASE_END,
         IN_ACTION_SELECT,
 
         // Melee combo
@@ -323,6 +323,7 @@ public class MofGuideonRework : Entity
         UpdateDamaged();
     }
 
+    #region STATE_MACHINE
     //Timers go here
     private void ProcessInternalInput()
     {
@@ -343,7 +344,7 @@ public class MofGuideonRework : Entity
             chaseTimer -= myDeltaTime;
 
             if (chaseTimer <= 0)
-                inputsList.Add(INPUT.IN_ACTION_SELECT);
+                inputsList.Add(INPUT.IN_CHASE_END);
         }
 
         // Melee combo
@@ -368,7 +369,7 @@ public class MofGuideonRework : Entity
             comboChargeTimer -= myDeltaTime;
 
             if (comboChargeTimer <= 0)
-                inputsList.Add(INPUT.IN_MELEE_HIT_END);
+                inputsList.Add(INPUT.IN_MELEE_CHARGE_END);
         }
 
         //Spawn Enemies
@@ -457,8 +458,337 @@ public class MofGuideonRework : Entity
 
     private void ProcessState()
     {
+        while (inputsList.Count > 0)
+        {
+            INPUT input = inputsList[0];
+
+            switch (currentState)
+            {
+                case STATE.NONE:
+                    Debug.Log("Moff gideon ERROR STATE");
+                    break;
+
+                case STATE.START:
+                    break;
+
+                case STATE.PRESENTATION:
+                    break;
+
+                case STATE.CHASE:
+                    switch (input)
+                    {
+                        case INPUT.IN_CHASE_END:
+                            EndChase_P1();
+
+                            currentState = STATE.ACTION_SELECT;
+                            break;
+                    }
+                    break;
+
+                case STATE.ACTION_SELECT:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_COMBO_1_CHARGE:
+                            currentState = STATE.MELEE_COMBO_1_CHARGE;
+                            break;
+
+                    }
+                    break;
+                case STATE.MELEE_COMBO_1_CHARGE:
+                    break;
+                case STATE.MELEE_COMBO_1_DASH:
+                    break;
+                case STATE.MELEE_COMBO_1:
+                    break;
+                case STATE.MELEE_COMBO_2_DASH:
+                    break;
+                case STATE.MELEE_COMBO_2:
+                    break;
+                case STATE.MELEE_COMBO_3_DASH:
+                    break;
+                case STATE.MELEE_COMBO_3:
+                    break;
+                case STATE.MELEE_COMBO_4_CHARGE:
+                    break;
+                case STATE.MELEE_COMBO_4_DASH:
+                    break;
+                case STATE.MELEE_COMBO_4:
+                    break;
+                case STATE.MELEE_COMBO_5_DASH:
+                    break;
+                case STATE.MELEE_COMBO_5:
+                    break;
+                case STATE.MELEE_COMBO_6_DASH:
+                    break;
+                case STATE.MELEE_COMBO_6:
+                    break;
+                case STATE.SPAWN_ENEMIES:
+                    break;
+                case STATE.PRE_BURST_CHARGE:
+                    break;
+                case STATE.PRE_BURST_DASH:
+                    break;
+                case STATE.BURST_1:
+                    break;
+                case STATE.BURST_2:
+                    break;
+                case STATE.THROW_SABER:
+                    break;
+                case STATE.RETRIEVE_SABER:
+                    break;
+                case STATE.CHANGE_PHASE:
+                    break;
+                case STATE.DEAD:
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    #endregion
+  
+    #region ACTION_SELECT
+    private void UpdateActionSelect()   //Jose: this bad boy is mine
+    {
 
     }
+    #endregion
+
+    #region CHASE
+    private void StartChase_P1()
+    {
+        Debug.Log("Start chase");
+    }
+
+    private void UpdateChase_P1()
+    {
+        Debug.Log("Update chase");
+    }
+
+    private void EndChase_P1()
+    {
+        Debug.Log("End chase");
+    }
+
+    #endregion
+
+    #region MELEE_COMBO
+    #region MELEE_COMBO_CHARGE
+    private void StartMeleeCombo1Charge()
+    {
+        Debug.Log("Start melee combo 1 charge");
+    }
+
+    private void UpdateMeleeCombo1Charge()
+    {
+        Debug.Log("Update melee combo 1 charge");
+    }
+
+    private void EndMeleeCombo1Charge()
+    {
+        Debug.Log("End melee combo 1 charge");
+    }
+    #endregion
+
+    #region MELEE_COMBO_DASH
+
+    //Long dash 1
+    private void StartMeleeComboDash1()
+    {
+        Debug.Log("Start melee combo dash 1");
+    }
+
+    private void UpdateMeleeComboDash1()
+    {
+        Debug.Log("Update melee combo dash 1");
+    }
+
+    private void EndMeleeComboDash1()
+    {
+        Debug.Log("End melee combo dash 1");
+    }
+
+    //Short dash 2
+    private void StartMeleeComboDash2()
+    {
+        Debug.Log("Start melee combo dash 2");
+    }
+
+    private void UpdateMeleeComboDash2()
+    {
+        Debug.Log("Update melee combo dash 2");
+    }
+
+    private void EndMeleeComboDash2()
+    {
+        Debug.Log("End melee combo dash 2");
+    }
+
+    //Short dash 3
+    private void StartMeleeComboDash3()
+    {
+        Debug.Log("Start melee combo dash 3");
+    }
+
+    private void UpdateMeleeComboDash3()
+    {
+        Debug.Log("Update melee combo dash 3");
+    }
+
+    private void EndMeleeComboDash3()
+    {
+        Debug.Log("End melee combo dash 3");
+    }
+
+    //Long dash 4
+    private void StartMeleeComboDash4()
+    {
+        Debug.Log("Start melee combo dash 4");
+    }
+
+    private void UpdateMeleeComboDash4()
+    {
+        Debug.Log("Update melee combo dash 4");
+    }
+
+    private void EndMeleeComboDash4()
+    {
+        Debug.Log("End melee combo dash 4");
+    }
+
+    //Short dash 5
+    private void StartMeleeComboDash5()
+    {
+        Debug.Log("Start melee combo dash 5");
+    }
+
+    private void UpdateMeleeComboDash5()
+    {
+        Debug.Log("Update melee combo dash 5");
+    }
+
+    private void EndMeleeComboDash5()
+    {
+        Debug.Log("End melee combo dash 5");
+    }
+
+    //Short dash 6
+    private void StartMeleeComboDash6()
+    {
+        Debug.Log("Start melee combo dash 6");
+    }
+
+    private void UpdateMeleeComboDash6()
+    {
+        Debug.Log("Update melee combo dash 6");
+    }
+
+    private void EndMeleeComboDash6()
+    {
+        Debug.Log("End melee combo dash 6");
+    }
+    #endregion
+
+    #region MELEE_COMBO_HIT
+    //Hit 1
+    private void StartMeleeComboHit1()
+    {
+        Debug.Log("Start melee combo hit 1");
+    }
+
+    private void UpdateMeleeComboHit1()
+    {
+        Debug.Log("Update melee combo hit 1");
+    }
+
+    private void EndMeleeComboHit1()
+    {
+        Debug.Log("End melee combo hit 1");
+    }
+
+    //Hit 2
+    private void StartMeleeComboHit2()
+    {
+        Debug.Log("Start melee combo hit 2");
+    }
+
+    private void UpdateMeleeComboHit2()
+    {
+        Debug.Log("Update melee combo hit 2");
+    }
+
+    private void EndMeleeComboHit2()
+    {
+        Debug.Log("End melee combo hit 2");
+    }
+
+    //Hit3
+    private void StartMeleeComboHit3()
+    {
+        Debug.Log("Start melee combo hit 3");
+    }
+
+    private void UpdateMeleeComboHit3()
+    {
+        Debug.Log("Update melee combo hit 3");
+    }
+
+    private void EndMeleeComboHit3()
+    {
+        Debug.Log("End melee combo hit 3");
+    }
+
+    //Hit4
+    private void StartMeleeComboHit4()
+    {
+        Debug.Log("Start melee combo hit 4");
+    }
+
+    private void UpdateMeleeComboHit4()
+    {
+        Debug.Log("Update melee combo hit 4");
+    }
+
+    private void EndMeleeComboHit4()
+    {
+        Debug.Log("End melee combo hit 4");
+    }
+
+    //Hit5
+    private void StartMeleeComboHit5()
+    {
+        Debug.Log("Start melee combo hit 5");
+    }
+
+    private void UpdateMeleeComboHit5()
+    {
+        Debug.Log("Update melee combo hit 5");
+    }
+
+    private void EndMeleeComboHit5()
+    {
+        Debug.Log("End melee combo hit 5");
+    }
+
+    //Hit6
+    private void StartMeleeComboHit6()
+    {
+        Debug.Log("Start melee combo hit 6");
+    }
+
+    private void UpdateMeleeComboHit6()
+    {
+        Debug.Log("Update melee combo hit 6");
+    }
+
+    private void EndMeleeComboHit6()
+    {
+        Debug.Log("End melee combo hit 6");
+    }
+    #endregion
+
+    #endregion
 
     #region PRESENTATION
     private void StartPresentation()
