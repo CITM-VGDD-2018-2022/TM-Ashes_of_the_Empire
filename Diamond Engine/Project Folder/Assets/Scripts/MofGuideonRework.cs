@@ -44,7 +44,6 @@ public class MofGuideonRework : Entity
         PRE_BURST_DASH,
         BURST_1,
         BURST_2,
-        PREPARE_THROW_SABER,
         THROW_SABER,
         RETRIEVE_SABER,
 
@@ -64,24 +63,19 @@ public class MofGuideonRework : Entity
         IN_SEARCH,
 
         // Melee combo
-        IN_MELEE_COMBO_1_CHARGE,
         IN_MELEE_COMBO_1_DASH,
         IN_MELEE_COMBO_1,
-        IN_MELEE_COMBO_2_CHARGE,
         IN_MELEE_COMBO_2_DASH,
         IN_MELEE_COMBO_2,
-        IN_MELEE_COMBO_3_CHARGE,
         IN_MELEE_COMBO_3_DASH,
         IN_MELEE_COMBO_3,
-        IN_MELEE_COMBO_4_CHARGE,
         IN_MELEE_COMBO_4_DASH,
         IN_MELEE_COMBO_4,
-        IN_MELEE_COMBO_5_CHARGE,
         IN_MELEE_COMBO_5_DASH,
         IN_MELEE_COMBO_5,
-        IN_MELEE_COMBO_6_CHARGE,
         IN_MELEE_COMBO_6_DASH,
         IN_MELEE_COMBO_6,
+        IN_MELEE_HIT_END,
         IN_MELEE_COMBO_END,
 
         IN_SPAWN_ENEMIES,
@@ -172,7 +166,23 @@ public class MofGuideonRework : Entity
 
     private float comboDashTimer = 0.0f;
 
-    //TODO add hit vars
+    private float meleeHit1Duration = 0.0f;
+    private float meleeHit2Duration = 0.0f;
+    private float meleeHit3Duration = 0.0f;
+    private float meleeHit4Duration = 0.0f;
+    private float meleeHit5Duration = 0.0f;
+    private float meleeHit6Duration = 0.0f;
+
+    private float meleeHitTimer = 0.0f;
+
+    public float meleeHit1Damage = 2.0f;
+    public float meleeHit2Damage = 2.0f;
+    public float meleeHit3Damage = 2.0f;
+
+    public float meleeHit4Damage = 2.0f;
+    public float meleeHit5Damage = 2.0f;
+    public float meleeHit6Damage = 2.0f;
+
 
     //Enemy spawn
     public float enemySpawnCooldown = 15.0f;
@@ -194,6 +204,12 @@ public class MofGuideonRework : Entity
     private float enemySkillTimer = 0f;
     private bool ableToSpawnEnemies = true;
 
+    //Pre burst dash
+    public float preBurstDashSpeed = 10.0f;
+    public float preBurstDashDistance = 7.0f;
+
+    private float preBurstDashTimer = 0.0f;
+
     //Burst 1
     public int shotNumber = 3;
     private int shotTimes = 0;
@@ -208,12 +224,13 @@ public class MofGuideonRework : Entity
     //Burst 2
     //TODO
 
-    //Prepare throw saber
-    public float prepSaberThrowDuration = 3.0f;
-    private float prepSaberThrowTimer = 0.0f;
 
     //Throw saber
     public float saberThrowDuration = 2.0f;
+    private float saberThrowTimer = 0.0f;
+
+    private float saberThrowAnimDuration = 0.0f;
+    private float saberThrowAnimTimer = 0.0f;
 
     public void Awake()
     {
@@ -234,6 +251,16 @@ public class MofGuideonRework : Entity
         spawner5 = InternalCalls.FindObjectWithName("DefaultSpawnPoint5");
         spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
         CalculateSpawnersScore();
+
+        //Get anim durations
+        saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
+
+        meleeHit1Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo1");
+        meleeHit2Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo2");
+        meleeHit3Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo3");
+        meleeHit4Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo4");
+        meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5");
+        meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6");
     }
 
     protected override void InitEntity(ENTITY_TYPE myType)
