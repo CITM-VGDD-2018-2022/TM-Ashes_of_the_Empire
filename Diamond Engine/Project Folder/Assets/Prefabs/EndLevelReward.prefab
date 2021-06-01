@@ -166,8 +166,8 @@
                     "Script_Name": "EndLevelRewardsButtons",
                     "ButtonState": 1,
                     "Is Selected": true,
-                    "HoverSFX": "Empty",
-                    "PressedSFX": "Empty"
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Boon_Pickup"
                 },
                 {
                     "Type": 11,
@@ -411,10 +411,10 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1937759977.dds",
                     "Unhovered_UID": 1937759977,
                     "Script_Name": "EndLevelRewardsButtons",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
-                    "HoverSFX": "Empty",
-                    "PressedSFX": "Empty"
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Boon_Pickup"
                 },
                 {
                     "Type": 11,
@@ -658,10 +658,10 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1937759977.dds",
                     "Unhovered_UID": 1937759977,
                     "Script_Name": "EndLevelRewardsButtons",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
-                    "HoverSFX": "Empty",
-                    "PressedSFX": "Empty"
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Boon_Pickup"
                 },
                 {
                     "Type": 11,
