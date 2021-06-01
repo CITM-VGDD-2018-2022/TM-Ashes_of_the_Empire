@@ -49,6 +49,12 @@ namespace DiamondEngine
         public static float EaseInSine(float x)
         {
             return Convert.ToSingle(1 - Math.Cos((x * Math.PI) / 2.0f));
+        }        
+
+        //X Must be between 1 and 0 and will return values between 1 and 0
+        public static float EaseInOutCirc(float x)
+        {
+            return x < 0.5  ? (float)(1 - Math.Sqrt(1 - Math.Pow(2 * x, 2))) * 0.5f  : (float)(Math.Sqrt(1 - Math.Pow(-2 * x + 2, 2)) + 1) * 0.5f;
         }
 
         //X Must be between 1 and 0 and will return values between 1 and 0
