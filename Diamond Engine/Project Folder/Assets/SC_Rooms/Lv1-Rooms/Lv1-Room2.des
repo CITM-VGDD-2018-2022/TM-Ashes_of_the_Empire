@@ -302,8 +302,8 @@
                     "fSize": 30.239999771118164,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 21.560846328735352,
-                    "hFOV": 34.358467102050781,
+                    "vFOV": 18.4193115234375,
+                    "hFOV": 27.380952835083008,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -11113,62 +11113,6 @@
             ],
             "PrefabObjects": [
                 {
-                    "name": "Empty",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1915160442,
-                    "ParentUID": 23789999,
-                    "PrefabID": 0,
-                    "PrefabReference": 1915160442,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "DamageScreen",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": false,
-                    "UID": 1273008492,
-                    "ParentUID": 1915160442,
-                    "PrefabID": 0,
-                    "PrefabReference": 1273008492,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
                     "name": "WeaponHolders",
                     "tag": "Untagged",
                     "layer": "Default",
@@ -11877,6 +11821,62 @@
                     "ParentUID": 23789999,
                     "PrefabID": 0,
                     "PrefabReference": 1367657917,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Empty",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1915160442,
+                    "ParentUID": 23789999,
+                    "PrefabID": 0,
+                    "PrefabReference": 1915160442,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "DamageScreen",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1273008492,
+                    "ParentUID": 1915160442,
+                    "PrefabID": 0,
+                    "PrefabReference": 1273008492,
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
