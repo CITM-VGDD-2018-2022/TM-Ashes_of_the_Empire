@@ -42,6 +42,7 @@ public class MofGuideonRework : Entity
 
         SPAWN_ENEMIES,
 
+        PRE_BURST_CHARGE,
         PRE_BURST_DASH,
         BURST_1,
         BURST_2,
@@ -81,6 +82,7 @@ public class MofGuideonRework : Entity
         IN_SPAWN_ENEMIES,
         IN_SPAWN_ENEMIES_END,
 
+        IN_PRE_BURST_CHARGE,
         IN_PRE_BURST_DASH,
         IN_PRE_BURST_DASH_END,
         IN_BURST1,
@@ -91,7 +93,6 @@ public class MofGuideonRework : Entity
         IN_THROW_SABER,
         IN_THROW_SABER_END,
         IN_CHARGE_THROW,
-        IN_CHARGE_THROW_END,
         IN_RETRIEVE_SABER,
         IN_RETRIEVE_SABER_END,
 
@@ -202,13 +203,17 @@ public class MofGuideonRework : Entity
     private float enemySkillTimer = 0f;
     private bool ableToSpawnEnemies = true;
 
+    //Pre burst charge
+    private float preBurstChargeDuration = 0.0f; //TODO: NEED TO ADD ANIM
+    private float preBurstChargeTimer = 0.0f;
+
     //Pre burst dash
     public float preBurstDashSpeed = 10.0f;
     public float preBurstDashDistance = 7.0f;
 
     private float preBurstDashTimer = 0.0f;
 
-    //Burst 1
+    //Burst 1   NEED TO ADD TO INTERNAL INPUT
     public int shotNumber = 3;
     private int shotTimes = 0;
 
@@ -230,7 +235,7 @@ public class MofGuideonRework : Entity
 
     //Throw saber
     public float saberThrowDuration = 2.0f;
-    private float saberThrowTimer = 0.0f;
+    private float saberThrowTimer = 0.0f;   //Need to add
 
     private float saberThrowAnimDuration = 0.0f;
     private float saberThrowAnimTimer = 0.0f;
@@ -285,6 +290,9 @@ public class MofGuideonRework : Entity
         meleeHit4Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo4");
         meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5");
         meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6");
+
+        saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
+        //preBurstChargeDuration GetAnimationDuration
     }
 
     protected override void InitEntity(ENTITY_TYPE myType)
@@ -384,6 +392,40 @@ public class MofGuideonRework : Entity
             }
         }
 
+        //Burst
+        if (preBurstChargeTimer > 0)
+        {
+            preBurstChargeTimer -= myDeltaTime;
+
+            if (preBurstChargeTimer <= 0)
+                inputsList.Add(INPUT.IN_PRE_BURST_DASH);
+        }
+
+        if (preBurstDashTimer > 0)
+        {
+            preBurstDashTimer -= myDeltaTime;
+
+            if (preBurstDashTimer <= 0)
+                inputsList.Add(INPUT.IN_BURST1);
+        }
+
+        //Throw 
+        if (prepSaberThrowTimer > 0.0f)
+        {
+            prepSaberThrowTimer -= myDeltaTime;
+
+            if (prepSaberThrowTimer <= 0.0f)
+                inputsList.Add(INPUT.IN_THROW_SABER);
+        }
+
+        if (saberThrowAnimTimer > 0.0f)
+        {
+            saberThrowAnimTimer -= myDeltaTime;
+
+            if (saberThrowAnimTimer <= 0.0f)
+                inputsList.Add(INPUT.IN_RETRIEVE_SABER);
+        }
+
         //Change phase
         if (changingPhaseTimer > 0.0f)
         {
@@ -394,17 +436,6 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_PHASE_CHANGE_END);
             }
         }
-
-        //Burst
-        if (preBurstDashTimer > 0)
-        {
-            preBurstDashTimer -= myDeltaTime;
-
-            if (preBurstDashTimer <= 0)
-                inputsList.Add(INPUT.IN_PRE_BURST_DASH);
-        }
-
-
 
 
         //Dead
@@ -417,8 +448,6 @@ public class MofGuideonRework : Entity
                 Die();
             }
         }
-
-
     }
 
     private void ProcessExternalInput()
