@@ -125,7 +125,6 @@ public class HUD : DiamondComponent
     };
     public void Awake()
     {
-        damageScreen1 = InternalCalls.FindObjectWithName("DamageScreen1");
         if (damageScreen1 != null)
         {
             damageScreen1.GetComponent<Material>().SetFloatUniform("alpha", 1.0f);
