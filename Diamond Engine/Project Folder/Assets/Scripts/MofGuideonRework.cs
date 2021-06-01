@@ -22,16 +22,17 @@ public class MofGuideonRework : Entity
         // Neutral
         IDLE,
         CHASE,
-        RANDOM_DASH,
         ACTION_SELECT,
 
         // Melee Combo
+        MELEE_COMBO_1_CHARGE,
         MELEE_COMBO_1_DASH,
         MELEE_COMBO_1,
         MELEE_COMBO_2_DASH,
         MELEE_COMBO_2,
         MELEE_COMBO_3_DASH,
         MELEE_COMBO_3,
+        MELEE_COMBO_4_CHARGE,
         MELEE_COMBO_4_DASH,
         MELEE_COMBO_4,
         MELEE_COMBO_5_DASH,
@@ -39,11 +40,12 @@ public class MofGuideonRework : Entity
         MELEE_COMBO_6_DASH,
         MELEE_COMBO_6,
 
-        //Other Actions
         SPAWN_ENEMIES,
+
         PRE_BURST_DASH,
         BURST_1,
         BURST_2,
+
         THROW_SABER,
         RETRIEVE_SABER,
 
@@ -58,25 +60,23 @@ public class MofGuideonRework : Entity
         IN_PRESENTATION,
         IN_PRESENTATION_END,
 
-        IN_RANDOM_DASH,
         IN_CHASE,
-        IN_SEARCH,
+        IN_ACTION_SELECT,
 
         // Melee combo
+        IN_MELEE_COMBO_1_CHARGE,
         IN_MELEE_COMBO_1_DASH,
         IN_MELEE_COMBO_1,
-        IN_MELEE_COMBO_2_DASH,
         IN_MELEE_COMBO_2,
-        IN_MELEE_COMBO_3_DASH,
         IN_MELEE_COMBO_3,
+        IN_MELEE_COMBO_4_CHARGE,
         IN_MELEE_COMBO_4_DASH,
         IN_MELEE_COMBO_4,
-        IN_MELEE_COMBO_5_DASH,
         IN_MELEE_COMBO_5,
-        IN_MELEE_COMBO_6_DASH,
         IN_MELEE_COMBO_6,
+        IN_MELEE_CHARGE_END,
         IN_MELEE_HIT_END,
-        IN_MELEE_COMBO_END,
+        IN_MELEE_DASH_END,
 
         IN_SPAWN_ENEMIES,
         IN_SPAWN_ENEMIES_END,
@@ -131,11 +131,9 @@ public class MofGuideonRework : Entity
     private float currAnimationPlaySpd = 1f;
 
     //Decision making
-    public float probRandomDash_P1 = 20.0f;
     public float probMeleeCombo_P1 = 20.0f;
     public float probBurst_P1 = 60.0f;
 
-    public float probRandomDash_P2 = 20.0f;
     public float probMeleeCombo_P2 = 20.0f;
     public float probBurst_P2 = 40.0f;
     public float probLightDash = 20.0f; //Onlly phase 2
@@ -150,14 +148,10 @@ public class MofGuideonRework : Entity
 
     public float chaseSpeed = 3.0f;
 
-    //Random dash
-    public float dashSpeed = 10.0f;
-    public float dashDistance = 7.0f;
-
-    private float dashTimer = 0.0f;
-
-
     //Melee combo
+    public float comboChargeDuration = 0.5f;
+    private float comboChargeTimer = 0.0f;
+
     public float comboLongDashDistance = 10.0f;
     public float comboLongDashSpeed = 5.0f;
 
@@ -283,8 +277,60 @@ public class MofGuideonRework : Entity
         myDeltaTime = Time.deltaTime * speedMult;
 
         UpdateStatuses();
+
+        ProcessInternalInput();
+        ProcessExternalInput();
+        ProcessState();
     }
 
+    //Timers go here
+    private void ProcessInternalInput()
+    {
+        if (chaseTimer > 0)
+        {
+            chaseTimer -= myDeltaTime;
+
+            if (chaseTimer <= 0)
+                inputsList.Add(INPUT.IN_ACTION_SELECT);
+        }
+
+
+        if (comboDashTimer > 0)
+        {
+            comboDashTimer -= myDeltaTime;
+
+            if (comboDashTimer <= 0)
+                inputsList.Add(INPUT.IN_MELEE_DASH_END);
+        }
+
+
+        if (meleeHitTimer > 0)
+        {
+            meleeHitTimer -= myDeltaTime;
+
+            if (meleeHitTimer <= 0)
+                inputsList.Add(INPUT.IN_MELEE_HIT_END);
+        }
+
+        if (comboChargeTimer > 0)
+        {
+            comboChargeTimer -= myDeltaTime;
+
+            if (comboChargeTimer <= 0)
+                inputsList.Add(INPUT.IN_MELEE_HIT_END);
+        }
+
+    }
+
+    private void ProcessExternalInput()
+    {
+
+    }
+
+    private void ProcessState()
+    {
+
+    }
 
     #region SPAWN_ENEMIES
     private void StartSpawnEnemies()
