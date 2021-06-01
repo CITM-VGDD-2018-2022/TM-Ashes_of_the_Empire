@@ -124,6 +124,7 @@ public class MofGuideonRework : Entity
     public float maxHealthPoints1 = 4500.0f;
     public float maxHealthPoints2 = 4500.0f;
     private float currentHealthPoints = 0.0f; //Set in start
+    private float limboHealth = 0.0f;
     private float damageMult = 1.0f;
     public float damageRecieveMult = 1f;
 
@@ -141,6 +142,9 @@ public class MofGuideonRework : Entity
     public float minProjectileDistance = 17.0f;
     public float maxMeleeDistance = 5.0f;
 
+    // Presentation
+    private float presentationTime = 0f;
+    private float presentationTimer = 0f;
 
     //Chase
     public float chaseDuration = 2.0f;
@@ -219,12 +223,27 @@ public class MofGuideonRework : Entity
     //TODO
 
 
+    //Prepare throw saber
+    public float prepSaberThrowDuration = 3.0f;
+    private float prepSaberThrowTimer = 0.0f;
+    private GameObject chargeVisualFeedback = null;
+
     //Throw saber
     public float saberThrowDuration = 2.0f;
     private float saberThrowTimer = 0.0f;
 
     private float saberThrowAnimDuration = 0.0f;
     private float saberThrowAnimTimer = 0.0f;
+
+    //Die
+    public float dieTime = 0f;
+    private float dieTimer = 0f;
+
+    // Boss Bar
+    public GameObject bossBar = null;
+    public GameObject moffMesh = null;
+    private float damaged = 0.0f;
+    private Material bossBarMat = null;
 
     public void Awake()
     {
@@ -238,15 +257,22 @@ public class MofGuideonRework : Entity
         Audio.SetState("Player_State", "Alive");
         Audio.SetState("Game_State", "Moff_Guideon_Room");
 
+        //Boss Bar
+        if (bossBar != null)
+            bossBarMat = bossBar.GetComponent<Material>();
+
+
+        //Spawners
         spawner1 = InternalCalls.FindObjectWithName("DefaultSpawnPoint1");
         spawner2 = InternalCalls.FindObjectWithName("DefaultSpawnPoint2");
         spawner3 = InternalCalls.FindObjectWithName("DefaultSpawnPoint3");
         spawner4 = InternalCalls.FindObjectWithName("DefaultSpawnPoint4");
         spawner5 = InternalCalls.FindObjectWithName("DefaultSpawnPoint5");
         spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
-        CalculateSpawnersScore();
 
         //Get anim durations
+        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose");
+
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
 
         meleeHit1Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo1");
@@ -281,11 +307,23 @@ public class MofGuideonRework : Entity
         ProcessInternalInput();
         ProcessExternalInput();
         ProcessState();
+
+        UpdateDamaged();
     }
 
     //Timers go here
     private void ProcessInternalInput()
     {
+        if (presentationTimer > 0)
+        {
+            presentationTimer -= myDeltaTime;
+            if (presentationTimer <= 0)
+            {
+                inputsList.Add(INPUT.IN_PRESENTATION_END);
+            }
+
+        }
+
         if (chaseTimer > 0)
         {
             chaseTimer -= myDeltaTime;
@@ -320,6 +358,16 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_MELEE_HIT_END);
         }
 
+        if (dieTimer > 0.0f)
+        {
+            dieTimer -= myDeltaTime;
+
+            if (dieTimer <= 0.0f)
+            {
+                Die();
+            }
+        }
+
     }
 
     private void ProcessExternalInput()
@@ -331,6 +379,354 @@ public class MofGuideonRework : Entity
     {
 
     }
+
+    #region PRESENTATION
+    private void StartPresentation()
+    {
+        Animator.Play(gameObject, "MG_PowerPose", speedMult);
+        UpdateAnimationSpd(speedMult);
+
+        presentationTimer = presentationTime;
+
+        if (cameraComp != null)
+        {
+            //TODO: Start cinematic
+            //cameraComp.Zoom(baseZoom, zoomTimeEasing);
+            //cameraComp.target = this.gameObject;
+        }
+
+        CalculateSpawnersScore();
+        var mapValues = spawnPoints.Values;
+        foreach (GameObject spawner in mapValues)
+        {
+            if (spawner != null)
+            {
+                SpawnPoint mySpawnPoint = spawner.GetComponent<SpawnPoint>();
+
+                if (mySpawnPoint != null)
+                {
+                    mySpawnPoint.SetSpawnTypes(true, false, false, false, false, false);
+                }
+            }
+        }
+
+        Input.PlayHaptic(0.9f, 2200);
+    }
+
+    private void UpdatePresentation()
+    {
+        currentHealthPoints = Mathf.Lerp(currentHealthPoints, maxHealthPoints1, 1f - (presentationTimer / presentationTime));
+    }
+
+
+    private void EndPresentation()
+    {
+        //if (cameraComp != null)
+        //    cameraComp.target = Core.instance.gameObject;
+
+        currentHealthPoints = limboHealth = maxHealthPoints1;
+    }
+
+    #endregion
+
+    #region DIE_ACTION
+    private void StartDie()
+    {
+        dieTimer = dieTime;
+        Animator.Play(gameObject, "MG_Death", speedMult);
+        UpdateAnimationSpd(speedMult);
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Lightsaber_Turn_Off");
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Death");
+        Audio.PlayAudio(gameObject, "Play_Victory_Music");
+
+        Input.PlayHaptic(1f, 1000);
+
+        if (cameraComp != null)
+            cameraComp.target = this.gameObject;
+        if (chargeVisualFeedback != null)
+            InternalCalls.Destroy(chargeVisualFeedback);
+
+        //TODO: Delete Deathtroopers!
+    }
+
+    private void UpdateDie()
+    { }
+
+    public void Die()
+    {
+        Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
+        EnemyManager.RemoveEnemy(gameObject);
+
+        Animator.Pause(gameObject);
+        Audio.StopAudio(gameObject);
+        Input.PlayHaptic(0.3f, 3);
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
+
+        InternalCalls.Destroy(gameObject);
+    }
+
+    #endregion
+
+    #region HIT_EVENTS
+
+    public void TakeDamage(float damage)
+    {
+        if (!DebugOptionsHolder.bossDmg)
+        {
+            float mod = 1;
+            if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
+            {
+                if (HasNegativeStatus())
+                {
+                    mod = 1 + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
+                }
+            }
+            currentHealthPoints -= damage * mod;
+            if (currentPhase == PHASE.PHASE1)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
+            }
+            else if (currentPhase == PHASE.PHASE2)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
+            }
+            Debug.Log("Moff damage" + damage.ToString());
+            if (currentState != STATE.DEAD)
+            {
+                currentHealthPoints -= damage * Core.instance.DamageToBosses;
+                if (Core.instance != null)
+                {
+                    if (Core.instance.HasStatus(STATUS_TYPE.WRECK_HEAVY_SHOT) && HasStatus(STATUS_TYPE.SLOWED))
+                        AddStatus(STATUS_TYPE.ENEMY_SLOWED, STATUS_APPLY_TYPE.SUBSTITUTE, Core.instance.GetStatusData(STATUS_TYPE.WRECK_HEAVY_SHOT).severity / 100, 3f);
+
+                    if (Core.instance.HasStatus(STATUS_TYPE.LIFESTEAL))
+                    {
+                        Random rand = new Random();
+                        float result = rand.Next(1, 101);
+                        if (result <= 10)
+                            if (Core.instance.gameObject != null && Core.instance.gameObject.GetComponent<PlayerHealth>() != null)
+                            {
+                                float healing = Core.instance.GetStatusData(STATUS_TYPE.LIFESTEAL).severity * damage / 100;
+                                if (healing < 1) healing = 1;
+                                Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)(healing));
+                            }
+                    }
+                    if (Core.instance.HasStatus(STATUS_TYPE.SOLO_HEAL))
+                    {
+                        Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + (int)Core.instance.skill_SoloHeal);
+                        Core.instance.skill_SoloHeal = 0;
+                    }
+                }
+                if (currentHealthPoints <= 0.0f)
+                {
+                    if (currentPhase == PHASE.PHASE1)
+                    {
+                        inputsList.Add(INPUT.IN_CHANGE_PHASE);
+                    }
+                    else
+                        inputsList.Add(INPUT.IN_DEAD);
+                }
+            }
+        }
+    }
+
+    private void UpdateDamaged()
+    {
+        limboHealth = Mathf.Lerp(limboHealth, currentHealthPoints, 0.01f);
+
+        if (bossBarMat != null)
+        {
+            if (currentPhase == PHASE.PHASE1)
+            {
+                bossBarMat.SetFloatUniform("length_used", currentHealthPoints / maxHealthPoints1);
+                bossBarMat.SetFloatUniform("limbo", limboHealth / maxHealthPoints1);
+            }
+            else if (currentPhase == PHASE.PHASE2)
+            {
+                bossBarMat.SetFloatUniform("length_used", currentHealthPoints / maxHealthPoints2);
+                bossBarMat.SetFloatUniform("limbo", limboHealth / maxHealthPoints2);
+            }
+        }
+
+        //TODO: Make moff shine red
+        //if (damaged > 0.01f)
+        //{
+        //    damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
+        //}
+        //else
+        //{
+        //    damaged = 0.0f;
+        //}
+
+        //if (moff_mesh != null)
+        //{
+        //    Material moffMeshMat = moff_mesh.GetComponent<Material>();
+
+        //    if (moffMeshMat != null)
+        //    {
+        //        moffMeshMat.SetFloatUniform("damaged", damaged);
+        //    }
+
+        //}
+    }
+
+    #endregion
+
+    #region COLLISION EVENTS
+    public void OnCollisionEnter(GameObject collidedGameObject)
+    {
+        if (collidedGameObject.CompareTag("Bullet"))
+        {
+            if (Core.instance != null)
+            {
+                if (Core.instance.HasStatus(STATUS_TYPE.MANDO_QUICK_DRAW))
+                    AddStatus(STATUS_TYPE.BLASTER_VULN, STATUS_APPLY_TYPE.ADDITIVE, Core.instance.GetStatusData(STATUS_TYPE.MANDO_QUICK_DRAW).severity / 100, 5);
+                if (Core.instance.HasStatus(STATUS_TYPE.PRIM_MOV_SPEED))
+                    Core.instance.AddStatus(STATUS_TYPE.ACCELERATED, STATUS_APPLY_TYPE.BIGGER_PERCENTAGE, Core.instance.GetStatusData(STATUS_TYPE.PRIM_MOV_SPEED).severity / 100, 5, false);
+            }
+
+            float damageToBoss = 0f;
+
+            BH_Bullet bulletScript = collidedGameObject.GetComponent<BH_Bullet>();
+
+            if (bulletScript != null)
+            {
+                damageToBoss += bulletScript.damage;
+            }
+            else
+            {
+                Debug.Log("The collider with tag Bullet didn't have a bullet Script!!");
+            }
+
+            TakeDamage(damageToBoss * damageRecieveMult * BlasterVulnerability);
+            Debug.Log("GIDEON HP: " + currentHealthPoints.ToString());
+
+            PlayHitAudio();
+
+            if (Core.instance.hud != null && currentState != STATE.DEAD)
+            {
+                HUD hudComponent = Core.instance.hud.GetComponent<HUD>();
+
+                if (hudComponent != null)
+                {
+                    hudComponent.AddToCombo(25, 0.95f);
+                }
+            }
+
+            if (currentState != STATE.DEAD && currentHealthPoints <= 0.0f)
+            {
+                inputsList.Add(INPUT.IN_DEAD);
+            }
+        }
+        else if (collidedGameObject.CompareTag("ChargeBullet"))
+        {
+            float damageToBoss = 0f;
+
+            ChargedBullet bulletScript = collidedGameObject.GetComponent<ChargedBullet>();
+
+            if (bulletScript != null)
+            {
+                float vulerableSev = 0.2f;
+                float vulerableTime = 4.5f;
+                STATUS_APPLY_TYPE applyType = STATUS_APPLY_TYPE.BIGGER_PERCENTAGE;
+                float damageMult = 1f;
+
+                if (Core.instance != null)
+                {
+                    if (Core.instance.HasStatus(STATUS_TYPE.SNIPER_STACK_DMG_UP))
+                    {
+                        vulerableSev += Core.instance.GetStatusData(STATUS_TYPE.SNIPER_STACK_DMG_UP).severity;
+                    }
+                    if (Core.instance.HasStatus(STATUS_TYPE.SNIPER_STACK_ENABLE))
+                    {
+                        vulerableTime += Core.instance.GetStatusData(STATUS_TYPE.SNIPER_STACK_ENABLE).severity;
+                        applyType = STATUS_APPLY_TYPE.ADD_SEV;
+                    }
+                    if (Core.instance.HasStatus(STATUS_TYPE.SNIPER_STACK_WORK_SNIPER))
+                    {
+                        vulerableSev += Core.instance.GetStatusData(STATUS_TYPE.SNIPER_STACK_WORK_SNIPER).severity;
+                        damageMult = damageRecieveMult;
+                    }
+                    if (Core.instance.HasStatus(STATUS_TYPE.SNIPER_STACK_BLEED))
+                    {
+                        StatusData bleedData = Core.instance.GetStatusData(STATUS_TYPE.SNIPER_STACK_BLEED);
+                        float chargedBulletMaxDamage = Core.instance.GetSniperMaxDamage();
+
+                        damageMult *= bleedData.remainingTime;
+                        this.AddStatus(STATUS_TYPE.ENEMY_BLEED, STATUS_APPLY_TYPE.ADD_SEV, (chargedBulletMaxDamage * bleedData.severity) / vulerableTime, vulerableTime);
+                    }
+                }
+
+                this.AddStatus(STATUS_TYPE.ENEMY_VULNERABLE, applyType, vulerableSev, vulerableTime);
+
+                damageToBoss += bulletScript.damage * damageMult;
+            }
+            else
+            {
+                Debug.Log("The collider with tag Bullet didn't have a bullet Script!!");
+            }
+
+            if (Core.instance.HasStatus(STATUS_TYPE.CROSS_HAIR_LUCKY_SHOT))
+            {
+                float mod = Core.instance.GetStatusData(STATUS_TYPE.CROSS_HAIR_LUCKY_SHOT).severity;
+                Random rand = new Random();
+                float result = rand.Next(1, 101);
+                if (result <= mod)
+                    Core.instance.RefillSniper();
+
+                Core.instance.luckyMod = 1 + mod / 100;
+            }
+
+            TakeDamage(damageToBoss);
+            Debug.Log("Rancor HP: " + currentHealthPoints.ToString());
+
+            PlayHitAudio();
+
+            if (Core.instance.hud != null && currentState != STATE.DEAD)
+            {
+                HUD hudComponent = Core.instance.hud.GetComponent<HUD>();
+
+                if (hudComponent != null)
+                {
+                    hudComponent.AddToCombo(55, 0.25f);
+                }
+            }
+        }
+        else if (collidedGameObject.CompareTag("Player"))
+        {
+            //TODO: Make him do the Melee Combo! / Deal Damage when dashing through
+
+        }
+        else if (collidedGameObject.CompareTag("Wall"))
+        {
+            //TODO: Stop any kind of dash!
+        }
+        else if (collidedGameObject.CompareTag("WorldLimit"))
+        {
+            if (currentState != STATE.DEAD)
+            {
+                inputsList.Add(INPUT.IN_DEAD);
+            }
+        }
+    }
+
+    private void PlayHitAudio()
+    {
+        if (currentPhase == PHASE.PHASE1)
+        {
+            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
+            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Intimidation_Phase_1");
+        }
+        else if (currentPhase == PHASE.PHASE2)
+        {
+            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
+            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Intimidation_Phase_2");
+        }
+    }
+
+    #endregion
 
     #region SPAWN_ENEMIES
     private void StartSpawnEnemies()
