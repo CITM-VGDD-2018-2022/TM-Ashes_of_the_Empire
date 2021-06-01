@@ -178,7 +178,6 @@ public class HubTextController : DiamondComponent
         }
 
 
-
         switch (interaction)
         {
             case Interaction.BO_KATAN:
@@ -198,8 +197,11 @@ public class HubTextController : DiamondComponent
                 {
                     IncreaseStage(Interaction.BO_KATAN);
                 }
+                else
+                    return;
 
                 boKatanHasInteracted = true;
+
 
                 if (npcInteraction != null)
                 {
@@ -215,7 +217,6 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(greef_portrait_size_x, greef_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages) + greefInteractionNum;
-                greefHasInteracted = true;
                 if (greefInteractionNum % 4 != 0)
                 {
                     greefInteractionNum++;
@@ -225,8 +226,11 @@ public class HubTextController : DiamondComponent
                 {
                     IncreaseStage(Interaction.GREEF);
                 }
+                else
+                    return;
 
                 greefHasInteracted = true;
+
 
                 if (npcInteraction != null)
                 {
@@ -251,8 +255,11 @@ public class HubTextController : DiamondComponent
                 {
                     IncreaseStage(Interaction.ASHOKA);
                 }
+                else
+                    return;
 
                 ashokaHasInteracted = true;
+
 
                 if (npcInteraction != null)
                 {
@@ -268,6 +275,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(ashoka_portrait_size_x, ashoka_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 3) + caraInteractionNum;
+
                 if (caraInteractionNum % 4 != 0)
                 {
                     caraInteractionNum++;
@@ -277,6 +285,8 @@ public class HubTextController : DiamondComponent
                 {
                     IncreaseStage(Interaction.CARA_DUNE);
                 }
+                else
+                    return;
 
                 caraHasInteracted = true;
 
@@ -302,7 +312,12 @@ public class HubTextController : DiamondComponent
                 {
                     IncreaseStage(Interaction.GROGU);
                 }
+                else
+                    return;
+
                 groguHasInteracted = true;
+
+
                 if (npcInteraction != null)
                 {
                     npcInteraction.canInteract = GroguHasInteractions();
@@ -366,8 +381,30 @@ public class HubTextController : DiamondComponent
                 }
                 break;
         }
-
-        npcInteraction.UpdateUpgrade();
+        NPCInteraction interactionOriginal = npcInteraction;
+        for (int i = 0; i < 5; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    npcInteraction = grogu.GetComponent<NPCInteraction>();
+                    break;
+                case 1:
+                    npcInteraction = bo_katan.GetComponent<NPCInteraction>();
+                    break;
+                case 2:
+                    npcInteraction = greef.GetComponent<NPCInteraction>();
+                    break;
+                case 3:
+                    npcInteraction = cara_dune.GetComponent<NPCInteraction>();
+                    break;
+                case 4:
+                    npcInteraction = ashoka.GetComponent<NPCInteraction>();
+                    break;
+            }
+            npcInteraction.UpdateUpgrade();
+        }
+        npcInteraction = interactionOriginal;
 
     }
 
