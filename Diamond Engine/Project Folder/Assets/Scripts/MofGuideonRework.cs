@@ -97,7 +97,7 @@ public class MofGuideonRework : Entity
 
         // Finishers
         IN_CHANGE_PHASE,
-        IN_CHANGE_STATE_END,
+        IN_PHASE_CHANGE_END,
         IN_DEAD
     }
 
@@ -235,6 +235,10 @@ public class MofGuideonRework : Entity
     private float saberThrowAnimDuration = 0.0f;
     private float saberThrowAnimTimer = 0.0f;
 
+    // Change Phase
+    public float changingPhaseTime = 0f;
+    private float changingPhaseTimer = 0f;
+
     //Die
     public float dieTime = 0f;
     private float dieTimer = 0f;
@@ -314,6 +318,7 @@ public class MofGuideonRework : Entity
     //Timers go here
     private void ProcessInternalInput()
     {
+        //Presentation
         if (presentationTimer > 0)
         {
             presentationTimer -= myDeltaTime;
@@ -324,6 +329,7 @@ public class MofGuideonRework : Entity
 
         }
 
+        // Chase 
         if (chaseTimer > 0)
         {
             chaseTimer -= myDeltaTime;
@@ -332,8 +338,7 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_ACTION_SELECT);
         }
 
-
-        //Melee combo
+        // Melee combo
         if (comboDashTimer > 0)
         {
             comboDashTimer -= myDeltaTime;
@@ -358,6 +363,37 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_MELEE_HIT_END);
         }
 
+        //Spawn Enemies
+        if (enemySkillTimer > 0 && EnemyManager.EnemiesLeft() <= 1)
+        {
+            enemySkillTimer -= myDeltaTime;
+
+            if (enemySkillTimer <= 0)
+            {
+                ableToSpawnEnemies = true;
+            }
+        }
+
+        if (spawnEnemyTimer > 0)
+        {
+            spawnEnemyTimer -= myDeltaTime;
+
+            if (spawnEnemyTimer <= 0)
+            {
+                inputsList.Add(INPUT.IN_SPAWN_ENEMIES_END);
+            }
+        }
+
+        //Change phase
+        if (changingPhaseTimer > 0.0f)
+        {
+            changingPhaseTimer -= myDeltaTime;
+
+            if (changingPhaseTimer <= 0.0f)
+            {
+                inputsList.Add(INPUT.IN_PHASE_CHANGE_END);
+            }
+        }
 
         //Burst
         if (preBurstDashTimer > 0)
@@ -444,6 +480,65 @@ public class MofGuideonRework : Entity
 
     #endregion
 
+    #region CHANGE_PHASE
+    private void StartPhaseChange()
+    {
+        Animator.Play(gameObject, "MG_Rising", speedMult);
+        UpdateAnimationSpd(speedMult);
+
+        changingPhaseTimer = changingPhaseTime;
+
+        var mapValues = spawnPoints.Values;
+        foreach (GameObject spawner in mapValues)
+        {
+            if (spawnPoints != null)
+            {
+                SpawnPoint mySpawnPoint = spawner.GetComponent<SpawnPoint>();
+
+                if (mySpawnPoint != null)
+                {
+                    mySpawnPoint.SetSpawnTypes(false, false, false, false, true, false);
+                }
+            }
+        }
+
+        Input.PlayHaptic(0.7f, 1000);
+
+    }
+
+
+    private void UpdatePhaseChange()
+    {
+        //if (changingStateTimer <= 2.5f && !showingSaber)
+        //{
+        //    showingSaber = true;
+        //    Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Lightsaber_Turn_On");
+        //    Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
+        //    sword.Enable(true);
+        //    if (camera != null)
+        //    {
+        //        Shake3D shake = camera.GetComponent<Shake3D>();
+        //        if (shake != null)
+        //        {
+        //            shake.StartShaking(2f, 0.12f);
+        //            Input.PlayHaptic(2f, 400);
+        //        }
+        //    }
+        //}
+
+        currentHealthPoints = Mathf.Lerp(currentHealthPoints, maxHealthPoints2, 1f - (changingPhaseTimer / changingPhaseTime));
+    }
+
+
+    private void EndPhaseChange()
+    {
+        currentPhase = PHASE.PHASE2;
+        enemySkillTimer = enemySkillTime;
+        currentHealthPoints = maxHealthPoints2;
+    }
+
+#endregion
+
     #region DIE_ACTION
     private void StartDie()
     {
@@ -499,14 +594,6 @@ public class MofGuideonRework : Entity
                 }
             }
             currentHealthPoints -= damage * mod;
-            if (currentPhase == PHASE.PHASE1)
-            {
-                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
-            }
-            else if (currentPhase == PHASE.PHASE2)
-            {
-                Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
-            }
             Debug.Log("Moff damage" + damage.ToString());
             if (currentState != STATE.DEAD)
             {
@@ -928,8 +1015,7 @@ public class MofGuideonRework : Entity
                 {
                     float damageToTake = statusToUpdate.severity * Time.deltaTime;
 
-                    //TODO: Add take damage
-                    //TakeDamage(damageToTake);
+                    TakeDamage(damageToTake);
                 }
                 break;
 
