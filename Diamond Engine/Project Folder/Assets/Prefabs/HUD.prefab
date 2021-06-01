@@ -79,6 +79,100 @@
             ]
         },
         {
+            "name": "Empty",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1915160442,
+            "ParentUID": 1115908282,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "DamageScreen",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": false,
+            "UID": 1273008492,
+            "ParentUID": 1915160442,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        100,
+                        100
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Empty",
+                    "LibraryPath": "Library\/Textures\/227978135.dds",
+                    "UID": 227978135,
+                    "fadeValue": 1
+                }
+            ]
+        },
+        {
             "name": "WeaponHolders",
             "tag": "Untagged",
             "layer": "Default",
@@ -640,7 +734,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        64.800003051757812,
+                        64.800003051757813,
                         88.599998474121094
                     ],
                     "Rotation": 0,
@@ -703,7 +797,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        77.300003051757812,
+                        77.300003051757813,
                         69.599998474121094
                     ],
                     "Rotation": 0,
@@ -1254,7 +1348,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -89.300003051757812,
+                        -89.300003051757813,
                         71.099998474121094
                     ],
                     "Rotation": 0,
@@ -1317,7 +1411,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -89.300003051757812,
+                        -89.300003051757813,
                         65.5
                     ],
                     "Rotation": 0,
@@ -1381,7 +1475,7 @@
                     "Active": true,
                     "Position": [
                         -77.900001525878906,
-                        69.300003051757812
+                        69.300003051757813
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -1572,108 +1666,6 @@
             ]
         },
         {
-            "name": "DamageScreen1",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 296062438,
-            "ParentUID": 671973388,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "DamageScreen2",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 614952092,
-            "ParentUID": 671973388,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "DamageScreen3",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 74785433,
-            "ParentUID": 671973388,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
             "name": "Tris",
             "tag": "Untagged",
             "layer": "Default",
@@ -1737,103 +1729,6 @@
                         1,
                         1
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Empty",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1915160442,
-            "ParentUID": 1115908282,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "DamageScreen",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1273008492,
-            "ParentUID": 1915160442,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        100,
-                        100
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/lowHealthReworked.mat",
-                    "MaterialLibraryPath": "Library\/Materials\/1672354951.mat",
-                    "MaterialUID": 1672354951
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Empty",
-                    "LibraryPath": "Library\/Textures\/227978135.dds",
-                    "UID": 227978135,
-                    "fadeValue": 1
                 }
             ]
         }
