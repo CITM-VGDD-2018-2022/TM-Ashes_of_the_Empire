@@ -6,8 +6,8 @@ public class Spawn : DiamondComponent
 {
     private string stormtrooperPath = "Library/Prefabs/489054570.prefab";
     private string banthaPath       = "Library/Prefabs/978476012.prefab";
-    private string skytrooperPath   = "Library/Prefabs/903888240.prefab";
-    private string laserTurretPath  = "Library/Prefabs/1367242345.prefab";
+    private string skytrooperPath   = "Library/Prefabs/355603284.prefab";
+    private string laserTurretPath  = "Library/Prefabs/1243866490.prefab";
 
     public bool spawnStormtrooper  = false;
     public bool spawnBantha        = false;

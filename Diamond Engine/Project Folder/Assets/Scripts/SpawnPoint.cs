@@ -24,10 +24,10 @@ public class SpawnPoint : DiamondComponent
 
     private string stormtrooperPath = "Library/Prefabs/489054570.prefab";
     private string banthaPath       = "Library/Prefabs/978476012.prefab";
-    private string skytrooperPath   = "Library/Prefabs/903888240.prefab";
-    private string laserTurretPath  = "Library/Prefabs/1367242345.prefab";
-    private string deathrooperPath  = "Library/Prefabs/1029419101.prefab";
-    private string heavytrooperPath = "Library/Prefabs/1575784847.prefab";
+    private string skytrooperPath   = "Library/Prefabs/355603284.prefab";
+    private string laserTurretPath  = "Library/Prefabs/1243866490.prefab";
+    private string deathrooperPath  = "Library/Prefabs/1439379622.prefab";
+    private string heavytrooperPath = "Library/Prefabs/21832274.prefab";
 
     public float spawnEnemyAt = 0f;
 
