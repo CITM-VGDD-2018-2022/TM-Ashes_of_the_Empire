@@ -1,27 +1,27 @@
 {
-    "assets_path": "Assets\/Prefabs\/Wampa_Spike_v2.prefab",
+    "assets_path": "Assets\/Prefabs\/Wampa_Spike_v3.prefab",
     "Game Objects": [
         {
-            "name": "Wampa_Spike_v2",
+            "name": "Wampa_Spike_v3",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1449889155,
+            "UID": 1120599376,
             "ParentUID": 0,
             "PrefabReference": 0,
-            "PrefabID": 0,
+            "PrefabID": 394647661,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -2.6192574501037598,
-                6.3605151176452637,
+                0,
+                4.6471071243286133,
                 0
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                0.5,
+                0.5,
+                -0.5,
+                0.5
             ],
             "Scale": [
                 0.10000000149011612,
@@ -36,8 +36,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1363363465.mmh",
-                    "UID": 1363363465,
+                    "Path": "Library\/Meshes\/1768109.mmh",
+                    "UID": 1768109,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -57,31 +57,15 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
-                },
-                {
-                    "Type": 13,
-                    "Active": true,
-                    "evName": "Empty",
-                    "audBankReference": "Wampa_Skell",
-                    "pitch": 50,
-                    "playOnAwake": false,
-                    "isMuted": false,
-                    "isMusic": false
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "WampaProjectile",
-                    "damage": 10
                 },
                 {
                     "Type": 14,
                     "Active": true,
                     "kinematic": false,
-                    "Gravity": false,
+                    "Gravity": true,
                     "LockLinearX": true,
                     "LockLinearY": true,
                     "LockLinearZ": true,
@@ -108,9 +92,25 @@
                     ],
                     "Scale": [
                         1,
-                        2,
-                        1.5
+                        1,
+                        1
                     ]
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "Wampa_Skell",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "WampaProjectile",
+                    "damage": 10
                 }
             ]
         }
