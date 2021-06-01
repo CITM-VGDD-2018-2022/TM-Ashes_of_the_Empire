@@ -109,7 +109,7 @@ public class MofGuideonRework : Entity
 
     private NavMeshAgent agent = null;
     private GameObject saber = null;
-   
+
     public GameObject camera = null;
     private CameraController cameraComp = null;
 
@@ -130,6 +130,11 @@ public class MofGuideonRework : Entity
     public float maxHealthPoints1 = 4500.0f;
     public float maxHealthPoints2 = 4500.0f;
     private float currentHealthPoints = 0.0f; //Set in start
+    private float damageMult = 1.0f;
+    public float damageRecieveMult = 1f;
+
+    // Animations
+    private float currAnimationPlaySpd = 1f;
 
     //Decision making
     public float probRandomDash_P1 = 20.0f;
@@ -167,7 +172,7 @@ public class MofGuideonRework : Entity
 
     private float comboDashTimer = 0.0f;
 
-        //TODO add hit vars
+    //TODO add hit vars
 
     //Enemy spawn
     public float enemySpawnCooldown = 15.0f;
@@ -181,7 +186,13 @@ public class MofGuideonRework : Entity
     public GameObject spawner6 = null;
     private SortedDictionary<float, GameObject> spawnPoints = null;
 
-
+    public float baseEnemySpawnDelay = 0f;
+    public float maxEnemySpawnDelay = 0f;
+    public float spawnEnemyTime = 0f;
+    private float spawnEnemyTimer = 0f;
+    public float enemySkillTime = 0f;
+    private float enemySkillTimer = 0f;
+    private bool ableToSpawnEnemies = true;
 
     //Burst 1
     public int shotNumber = 3;
@@ -204,9 +215,301 @@ public class MofGuideonRework : Entity
     //Throw saber
     public float saberThrowDuration = 2.0f;
 
+    public void Awake()
+    {
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        InitEntity(ENTITY_TYPE.MOFF);
+
+        if (EnemyManager.EnemiesLeft() > 0)
+            EnemyManager.ClearList();
+        EnemyManager.AddEnemy(gameObject);
+
+        Audio.SetState("Player_State", "Alive");
+        Audio.SetState("Game_State", "Moff_Guideon_Room");
+
+        spawner1 = InternalCalls.FindObjectWithName("DefaultSpawnPoint1");
+        spawner2 = InternalCalls.FindObjectWithName("DefaultSpawnPoint2");
+        spawner3 = InternalCalls.FindObjectWithName("DefaultSpawnPoint3");
+        spawner4 = InternalCalls.FindObjectWithName("DefaultSpawnPoint4");
+        spawner5 = InternalCalls.FindObjectWithName("DefaultSpawnPoint5");
+        spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
+        CalculateSpawnersScore();
+    }
+
+    protected override void InitEntity(ENTITY_TYPE myType)
+    {
+        eType = myType;
+        speedMult = 1f;
+        BlasterVulnerability = 1f;
+
+        damageMult = 1f;
+        damageRecieveMult = 1f;
+    }
+
     public void Update()
-	{
+    {
+        if (start == false)
+        {
+            start = true;
+        }
 
-	}
+        myDeltaTime = Time.deltaTime * speedMult;
 
+        UpdateStatuses();
+    }
+
+
+    #region SPAWN_ENEMIES
+    private void StartSpawnEnemies()
+    {
+        CalculateSpawnersScore();
+
+        if (currentPhase == PHASE.PHASE1)
+        {
+            Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult);
+        }
+        else if (currentPhase == PHASE.PHASE2)
+        {
+            Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
+        }
+
+        UpdateAnimationSpd(speedMult);
+        Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
+        if (cameraComp != null)
+            cameraComp.target = this.gameObject;
+
+        Input.PlayHaptic(0.8f, 600);
+
+        SpawnEnemies();
+    }
+
+    private void UpdateSpawnEnemies()
+    {
+        //Debug.Log("Spawning Enemies");
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void EndSpawnEnemies()
+    {
+        enemySkillTimer = enemySkillTime;
+
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
+    }
+
+    private void SpawnEnemies()
+    {
+        spawnEnemyTimer = spawnEnemyTime;
+
+        // The 2 closests spawns are selected
+        var spawnPointEnum = spawnPoints.GetEnumerator();
+
+        spawnPointEnum.MoveNext();
+        SpawnEnemy(spawnPointEnum.Current.Value);
+
+        spawnPointEnum.MoveNext();
+        SpawnEnemy(spawnPointEnum.Current.Value);
+
+        ableToSpawnEnemies = false;
+    }
+
+    private void SpawnEnemy(GameObject spawnPoint)
+    {
+        Debug.Log("Spawning enemy... ");
+
+        if (spawnPoint == null)
+        {
+            Debug.Log("Spawning point was null!!! ");
+            return;
+        }
+
+        SpawnPoint mySpawnPoint = spawnPoint.GetComponent<SpawnPoint>();
+
+        if (mySpawnPoint != null)
+        {
+            Random seed = new Random();
+
+            float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
+
+            mySpawnPoint.QueueSpawnEnemy(delay);
+        }
+    }
+
+    private void CalculateSpawnersScore()
+    {
+        if (spawnPoints != null)
+            spawnPoints.Clear();
+        else
+            spawnPoints = new SortedDictionary<float, GameObject>();
+
+        if (spawner1 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition), spawner1);
+        }
+        if (spawner2 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition), spawner2);
+        }
+        if (spawner3 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition), spawner3);
+        }
+        if (spawner4 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition), spawner4);
+        }
+        if (spawner5 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition), spawner5);
+        }
+        if (spawner6 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition), spawner6);
+        }
+
+    }
+
+
+    #endregion
+
+    #region STATUS
+
+    protected override void OnInitStatus(ref StatusData statusToInit)
+    {
+        switch (statusToInit.statusType)
+        {
+            case STATUS_TYPE.SLOWED:
+                {
+                    if (this.speedMult <= 0.1f)
+                        statusToInit.severity = 0f;
+
+                    this.speedMult -= statusToInit.severity;
+
+                    if (speedMult < 0.1f)
+                    {
+                        statusToInit.severity = statusToInit.severity - (Math.Abs(this.speedMult) + 0.1f);
+
+                        speedMult = 0.1f;
+                    }
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+
+                }
+                break;
+            case STATUS_TYPE.ENEMY_SLOWED:
+                {
+                    if (this.speedMult <= 0.1f)
+                        statusToInit.severity = 0f;
+
+                    this.speedMult -= statusToInit.severity;
+
+                    if (speedMult < 0.1f)
+                    {
+                        statusToInit.severity = statusToInit.severity - (Math.Abs(this.speedMult) + 0.1f);
+
+                        speedMult = 0.1f;
+                    }
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+
+                }
+                break;
+            case STATUS_TYPE.ACCELERATED:
+                {
+                    this.speedMult += statusToInit.severity;
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+                }
+                break;
+            case STATUS_TYPE.ENEMY_DAMAGE_DOWN:
+                {
+                    this.damageMult -= statusToInit.severity;
+                }
+                break;
+            case STATUS_TYPE.ENEMY_VULNERABLE:
+                {
+                    this.damageRecieveMult += statusToInit.severity;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    protected override void OnUpdateStatus(StatusData statusToUpdate)
+    {
+        switch (statusToUpdate.statusType)
+        {
+            case STATUS_TYPE.ENEMY_BLEED:
+                {
+                    float damageToTake = statusToUpdate.severity * Time.deltaTime;
+
+                    //TODO: Add take damage
+                    //TakeDamage(damageToTake);
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+
+
+    protected override void OnDeleteStatus(StatusData statusToDelete)
+    {
+        switch (statusToDelete.statusType)
+        {
+            case STATUS_TYPE.SLOWED:
+                {
+                    this.speedMult += statusToDelete.severity;
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+                }
+                break;
+            case STATUS_TYPE.ENEMY_SLOWED:
+                {
+                    this.speedMult += statusToDelete.severity;
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+                }
+                break;
+            case STATUS_TYPE.ACCELERATED:
+                {
+                    this.speedMult -= statusToDelete.severity;
+
+                    this.myDeltaTime = Time.deltaTime * speedMult;
+                }
+                break;
+            case STATUS_TYPE.ENEMY_DAMAGE_DOWN:
+                {
+                    this.damageMult += statusToDelete.severity;
+                }
+                break;
+            case STATUS_TYPE.ENEMY_VULNERABLE:
+                {
+                    this.damageRecieveMult -= statusToDelete.severity;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    #endregion
+
+    #region HELPERS
+    private void UpdateAnimationSpd(float newSpd)
+    {
+        if (currAnimationPlaySpd != newSpd)
+        {
+            Animator.SetSpeed(gameObject, newSpd);
+            currAnimationPlaySpd = newSpd;
+        }
+    }
+    public override bool IsDying()
+    {
+        return currentState == STATE.DEAD;
+    }
+
+    #endregion
 }
