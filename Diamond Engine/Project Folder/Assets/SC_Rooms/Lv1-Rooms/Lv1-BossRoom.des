@@ -15,12 +15,12 @@
         0.95092862844467163,
         0.27637806534767151
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
     "skyboxColor": [
         1,
         1,
@@ -109,8 +109,8 @@
                     "fSize": 39,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 17.30769157409668,
-                    "hFOV": 29.410257339477539,
+                    "vFOV": 16.717948913574219,
+                    "hFOV": 26.641025543212891,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -131,6 +131,8 @@
                     "smoothSpeed": 0.10000000149011612,
                     "timer_easing_sec": 0,
                     "timer": 0,
+                    "waitPlayerZoom": true,
+                    "wait_Time": 0,
                     "cornerTopLeftX": -100,
                     "cornerTopLeftY": -100,
                     "cornerBotRightX": 100,
@@ -345,10 +347,10 @@
                 -1.1299999952316284
             ],
             "Rotation": [
-                -1.812629477626615e-07,
-                -0.99776554107666016,
-                -1.812629477626615e-07,
-                0.066814042627811432
+                -1.8126291934095207e-07,
+                -0.99776542186737061,
+                -1.8126291934095207e-07,
+                0.066814035177230835
             ],
             "Scale": [
                 1.0000159740447998,
@@ -12209,10 +12211,10 @@
                 -17.078739166259766
             ],
             "Rotation": [
-                -0.49484479427337646,
-                0.50511032342910767,
-                0.50510203838348389,
-                0.49483767151832581
+                -0.49484473466873169,
+                0.50511026382446289,
+                0.50510197877883911,
+                0.49483761191368103
             ],
             "Scale": [
                 2.6428577899932861,

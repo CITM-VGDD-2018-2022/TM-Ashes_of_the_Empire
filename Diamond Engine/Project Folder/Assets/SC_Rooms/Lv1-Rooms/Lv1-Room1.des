@@ -15,12 +15,12 @@
         0.96324312686920166,
         0.1213773712515831
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
     "skyboxColor": [
         1,
         1,
@@ -331,8 +331,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 16.875,
-                    "hFOV": 28.674999237060547,
+                    "vFOV": 16.299999237060547,
+                    "hFOV": 25.975000381469727,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -354,6 +354,8 @@
                     "smoothSpeed": 0.10000000149011612,
                     "timer_easing_sec": 0,
                     "timer": 0,
+                    "waitPlayerZoom": true,
+                    "wait_Time": 0,
                     "cornerTopLeftX": -100,
                     "cornerTopLeftY": -100,
                     "cornerBotRightX": 100,
@@ -1393,10 +1395,10 @@
                 -21.285999298095703
             ],
             "Rotation": [
-                -0.50261986255645752,
-                0.50261116027832031,
-                0.4973752498626709,
-                0.49736642837524414
+                -0.50261980295181274,
+                0.50261110067367554,
+                0.49737519025802612,
+                0.49736636877059937
             ],
             "Scale": [
                 1.4969998598098755,
@@ -2016,10 +2018,10 @@
                 -14.760412216186523
             ],
             "Rotation": [
-                -0.50261980295181274,
-                0.50261110067367554,
-                0.49737519025802612,
-                0.49736636877059937
+                -0.50261986255645752,
+                0.50261116027832031,
+                0.4973752498626709,
+                0.49736642837524414
             ],
             "Scale": [
                 1.4969998598098755,

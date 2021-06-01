@@ -1,26 +1,26 @@
 {
     "NavMesh": 1917905990,
     "EditorCameraPosition": [
-        -12.217907905578613,
-        29.198835372924805,
-        -22.350822448730469
+        -46.198894500732422,
+        51.346176147460938,
+        -41.892608642578125
     ],
     "EditorCameraZ": [
-        0.18270012736320496,
-        -0.8099522590637207,
-        0.55731314420700073
+        0.75448387861251831,
+        -0.43980082869529724,
+        0.48716461658477783
     ],
     "EditorCameraY": [
-        0.25230938196182251,
-        0.58649575710296631,
-        0.76965099573135376
+        0.36947369575500488,
+        0.89809536933898926,
+        0.23856642842292786
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
     "skyboxColor": [
         1,
         1,
@@ -1646,10 +1646,10 @@
                 11.487642288208008
             ],
             "Rotation": [
-                -0.49781486392021179,
-                0.5021786093711853,
-                0.50217598676681519,
-                0.49781146645545959
+                -0.49781492352485657,
+                0.50217866897583008,
+                0.50217604637145996,
+                0.49781152606010437
             ],
             "Scale": [
                 2.6026985645294189,
@@ -4732,8 +4732,8 @@
                     "fSize": 30,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 22.5,
-                    "hFOV": 38.233333587646484,
+                    "vFOV": 21.733333587646484,
+                    "hFOV": 34.633335113525391,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -4750,6 +4750,8 @@
                     "smoothSpeed": 0.10000000149011612,
                     "timer_easing_sec": 0,
                     "timer": 0,
+                    "waitPlayerZoom": true,
+                    "wait_Time": 0,
                     "cornerTopLeftX": -100,
                     "cornerTopLeftY": -100,
                     "cornerBotRightX": 100,

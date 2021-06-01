@@ -1,26 +1,26 @@
 {
     "NavMesh": 1522584861,
     "EditorCameraPosition": [
-        -20.038661956787109,
-        42.015506744384766,
-        31.916183471679688
+        -18.801340103149414,
+        49.526676177978516,
+        -24.97511100769043
     ],
     "EditorCameraZ": [
-        0.24976466596126556,
-        -0.54118931293487549,
-        -0.8029518723487854
+        0.50524336099624634,
+        -0.76900500059127808,
+        0.39161252975463867
     ],
     "EditorCameraY": [
-        0.16074424982070923,
-        0.84090077877044678,
-        -0.51676607131958008
+        0.60780459642410278,
+        0.63924270868301392,
+        0.47110742330551147
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
+    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
+    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
+    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
+    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
+    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
     "skyboxColor": [
         1,
         1,
@@ -302,8 +302,8 @@
                     "fSize": 30.239999771118164,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 22.321428298950195,
-                    "hFOV": 37.929893493652344,
+                    "vFOV": 21.560846328735352,
+                    "hFOV": 34.358467102050781,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -325,6 +325,8 @@
                     "smoothSpeed": 0.10000000149011612,
                     "timer_easing_sec": 0,
                     "timer": 0,
+                    "waitPlayerZoom": true,
+                    "wait_Time": 0,
                     "cornerTopLeftX": -100,
                     "cornerTopLeftY": -100,
                     "cornerBotRightX": 100,
