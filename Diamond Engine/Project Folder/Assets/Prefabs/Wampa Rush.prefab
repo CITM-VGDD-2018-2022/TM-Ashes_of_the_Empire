@@ -101,7 +101,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 100,
+                            "paPerSec": 50,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -152,7 +152,7 @@
                                 },
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.5,
+                                    "paSizeOLTStartSize": 0.25,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
@@ -191,7 +191,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 100,
+                            "paPerSec": 50,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -242,7 +242,7 @@
                                 },
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.40000000596046448,
+                                    "paSizeOLTStartSize": 0.25,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
