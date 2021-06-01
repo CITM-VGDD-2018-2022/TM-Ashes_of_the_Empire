@@ -1,0 +1,110 @@
+{
+    "assets_path": "Assets\/Empty.prefab",
+    "Game Objects": [
+        {
+            "name": "Empty",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1216360959,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 915617093,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Particle System",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 396190741,
+            "ParentUID": 1216360959,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/715565838.mat",
+                    "MaterialUID": 715565838
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": false,
+                    "maxDuration": 1.7130000591278076,
+                    "ParticleEmitters": [
+                        {
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0,
+                                0
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 34,
+                            "paRelative": true,
+                            "ParticleEffects": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

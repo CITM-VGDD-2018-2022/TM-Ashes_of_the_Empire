@@ -1,0 +1,130 @@
+{
+    "assets_path": "Assets\/Prefabs\/Skel Trail.prefab",
+    "Game Objects": [
+        {
+            "name": "Skel Trail",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 904775714,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                2.0859901905059814,
+                3.2000000476837158,
+                -3.7762877941131592
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": false,
+                    "maxDuration": 0.035000000149011612,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/170375526.dds",
+                            "texUID": 170375526,
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0.20000000298023224,
+                                0.30000001192092896
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 400,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0.56078433990478516,
+                                                1,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.35573124885559082,
+                                                0.71734738349914551,
+                                                1,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0.083782613277435303
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.10000000149011612,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 1,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeCircumferenceinnerRadius": 0.05000000074505806,
+                                    "PaShapeCircumferenceoutterRadius": 0.10000000149011612,
+                                    "PaShapeCircumferenceDirection": false,
+                                    "PaShapeCircumferenceAngle": 0,
+                                    "paShapeType": 3,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
+                }
+            ]
+        }
+    ]
+}
