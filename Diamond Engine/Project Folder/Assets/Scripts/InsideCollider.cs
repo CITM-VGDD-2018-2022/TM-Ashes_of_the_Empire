@@ -6,6 +6,7 @@ public class InsideCollider : DiamondComponent
     public float maxDistance = 5;
     public GameObject colliderPosition = null;
     public GameObject displayText = null;
+    public GameObject displaySecondaryText = null;
     public GameObject selectButton = null;
     public GameObject hubTextController = null;
 
@@ -14,7 +15,7 @@ public class InsideCollider : DiamondComponent
         if (displayText == null)
             return;
 
-        if (IsInside() && displayText.IsEnabled() == false)
+        if (IsInside() && displayText.IsEnabled() == false && (displaySecondaryText == null || displaySecondaryText.IsEnabled() == false)) 
         {
             displayText.Enable(true);
 
@@ -35,6 +36,13 @@ public class InsideCollider : DiamondComponent
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
         }
+        else if (!IsInside() && displaySecondaryText!=null && displaySecondaryText.IsEnabled())
+        {
+            displaySecondaryText.Enable(false);
+            if (hubTextController != null)
+                hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
+        }
+       
     }
 
     public bool IsInside()
