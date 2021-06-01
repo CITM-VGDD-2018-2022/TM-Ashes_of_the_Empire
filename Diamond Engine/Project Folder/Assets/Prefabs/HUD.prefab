@@ -43,7 +43,7 @@
                     "max_force": 50,
                     "ExtraForceRegen": 0,
                     "primaryWeaponHeat": 0,
-                    "primaryWeaponMaxHeat": 0,
+                    "primaryWeaponMaxHeat": 100,
                     "bullets_secondary_weapon": 10,
                     "max_bullets_secondary_weapon": 10,
                     "main_weapon": true,
@@ -64,14 +64,14 @@
                     "trisText": 1367657917,
                     "damageScreen1": 1273008492,
                     "comboNumber": 0,
-                    "last_hp": 0,
+                    "last_hp": 61.712429046630859,
                     "shooting_blink": 1864514105
                 },
                 {
                     "Type": 13,
                     "Active": true,
-                    "evName": "Empty",
-                    "pitch": 50,
+                    "evName": "Play_UI_Combro_Increase",
+                    "pitch": 0,
                     "playOnAwake": false,
                     "isMuted": false,
                     "isMusic": false
@@ -116,7 +116,7 @@
             "name": "DamageScreen",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": false,
+            "Active": true,
             "UID": 1273008492,
             "ParentUID": 1915160442,
             "PrefabReference": 0,
@@ -160,7 +160,10 @@
                 {
                     "Type": 3,
                     "Active": true,
-                    "IsEmpty": true
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1672354951.mat",
+                    "MaterialUID": 1672354951
                 },
                 {
                     "Type": 11,
@@ -734,7 +737,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        64.800003051757813,
+                        64.800003051757812,
                         88.599998474121094
                     ],
                     "Rotation": 0,
@@ -797,7 +800,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        77.300003051757813,
+                        77.300003051757812,
                         69.599998474121094
                     ],
                     "Rotation": 0,
@@ -821,8 +824,8 @@
                     "maxTextLenght": 0,
                     "fontName": "Library\/Fonts\/teko-semibold.ttf",
                     "textColor": [
-                        1,
-                        1,
+                        0,
+                        0.80000001192092896,
                         1
                     ]
                 }
@@ -947,7 +950,7 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "text": "500",
+                    "text": "60",
                     "maxTextLenght": 0,
                     "fontName": "Library\/Fonts\/renner-medium.ttf",
                     "textColor": [
@@ -1014,7 +1017,7 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "text": "500",
+                    "text": "100",
                     "maxTextLenght": 0,
                     "fontName": "Library\/Fonts\/renner-medium.ttf",
                     "textColor": [
@@ -1348,7 +1351,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -89.300003051757813,
+                        -89.300003051757812,
                         71.099998474121094
                     ],
                     "Rotation": 0,
@@ -1411,7 +1414,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -89.300003051757813,
+                        -89.300003051757812,
                         65.5
                     ],
                     "Rotation": 0,
@@ -1475,7 +1478,7 @@
                     "Active": true,
                     "Position": [
                         -77.900001525878906,
-                        69.300003051757813
+                        69.300003051757812
                     ],
                     "Rotation": 0,
                     "Size": [

@@ -127,14 +127,16 @@ public class HUD : DiamondComponent
     {
         if (damageScreen1 != null)
         {
-            damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", 1.0f);
-            damageScreen1.GetComponent<Material>().SetVectorUniform("damageColor", new Vector3(1.0f, 0.0f, 0.0f));
+            if (damageScreen1.GetComponent<Material>() != null)
+            {
+                damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", 1.0f);
+                damageScreen1.GetComponent<Material>().SetVectorUniform("damageColor", new Vector3(1.0f, 0.0f, 0.0f));
+            }
         }
         else
         {
             Debug.Log("Damage Screen 1 not found");
         }
-
     }
 
     public void Update()
@@ -176,7 +178,6 @@ public class HUD : DiamondComponent
 
             UpdateCombo();
             UpdateCurrency(PlayerResources.GetRunCoins());
-
             start = false;
         }
         /*if (Input.GetKey(DEKeyCode.C) == KeyState.KEY_DOWN)
