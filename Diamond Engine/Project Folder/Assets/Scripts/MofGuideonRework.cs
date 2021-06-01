@@ -333,6 +333,7 @@ public class MofGuideonRework : Entity
         }
 
 
+        //Melee combo
         if (comboDashTimer > 0)
         {
             comboDashTimer -= myDeltaTime;
@@ -340,7 +341,6 @@ public class MofGuideonRework : Entity
             if (comboDashTimer <= 0)
                 inputsList.Add(INPUT.IN_MELEE_DASH_END);
         }
-
 
         if (meleeHitTimer > 0)
         {
@@ -358,6 +358,20 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_MELEE_HIT_END);
         }
 
+
+        //Burst
+        if (preBurstDashTimer > 0)
+        {
+            preBurstDashTimer -= myDeltaTime;
+
+            if (preBurstDashTimer <= 0)
+                inputsList.Add(INPUT.IN_PRE_BURST_DASH);
+        }
+
+
+
+
+        //Dead
         if (dieTimer > 0.0f)
         {
             dieTimer -= myDeltaTime;
@@ -367,6 +381,7 @@ public class MofGuideonRework : Entity
                 Die();
             }
         }
+
 
     }
 
