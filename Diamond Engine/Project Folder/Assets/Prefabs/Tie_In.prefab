@@ -1,0 +1,146 @@
+{
+    "assets_path": "Assets\/Prefabs\/Tie_In.prefab",
+    "Game Objects": [
+        {
+            "name": "Tie_In",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 810282206,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 16,
+                    "Active": true,
+                    "RootBone UID": 505434124,
+                    "MeshRendererUID": 409540883,
+                    "Animations": [
+                        2092584294,
+                        912203537,
+                        459389426
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tie_In",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 409540883,
+            "ParentUID": 810282206,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/990122710.mmh",
+                    "UID": 990122710,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
+                    "MaterialUID": 1948688504
+                }
+            ]
+        },
+        {
+            "name": "HipsTie",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 505434124,
+            "ParentUID": 810282206,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        }
+    ]
+}
