@@ -127,14 +127,14 @@ public class HUD : DiamondComponent
     {
         if (damageScreen1 != null)
         {
-            damageScreen1.GetComponent<Material>().SetFloatUniform("alpha", 1.0f);
-            damageScreen1.Enable(false);
+            damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", 1.0f);
+            damageScreen1.GetComponent<Material>().SetVectorUniform("damageColor", new Vector3(1.0f, 0.0f, 0.0f));
         }
         else
         {
             Debug.Log("Damage Screen 1 not found");
         }
-      
+
     }
 
     public void Update()
@@ -145,14 +145,14 @@ public class HUD : DiamondComponent
             UpdateHP(PlayerHealth.currHealth, PlayerHealth.currMaxHealth);
             ResetCombo();
 
-            if(BabyYoda.instance != null)
+            if (BabyYoda.instance != null)
             {
                 UpdateForce(BabyYoda.instance.GetCurrentForce(), BabyYoda.GetMaxForce());
             }
-            if(max_hp_number != null)
+            if (max_hp_number != null)
             {
                 Text text = max_hp_number.GetComponent<Text>();
-                if(text != null)
+                if (text != null)
                     text.text = PlayerHealth.currMaxHealth.ToString();
             }
             last_hp = Mathf.Lerp(last_hp, PlayerHealth.currHealth - 0.5f, 2.5f * Time.deltaTime);
@@ -162,7 +162,7 @@ public class HUD : DiamondComponent
             primaryWeaponColorStart = new Vector3(1f, 1.2f, 0f);
             primaryWeaponColorEnd = new Vector3(1f, 0f, 0f);
 
-            if(weapon_bar != null)
+            if (weapon_bar != null)
             {
                 weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModStart", primaryWeaponColorStart);
                 weapon_bar.GetComponent<Material>().SetVectorUniform("textureColorModEnd", primaryWeaponColorEnd);
@@ -331,6 +331,12 @@ public class HUD : DiamondComponent
             }
             else if (trisText.IsEnabled()) trisText.Enable(false);
         }
+        if (damageScreen1 != null)
+        {
+            damageScreen1.GetComponent<Material>().SetFloatUniform("timeSinceStart", Time.totalTime);
+        }
+
+
     }
 
     public void AddToCombo(float comboUnitsToAdd, float weaponDecreaseTimeMultiplier)
@@ -590,7 +596,7 @@ public class HUD : DiamondComponent
         currComboTime = 0.0f;
         OnLvlUpComboChange();
 
-        if(Core.instance != null)
+        if (Core.instance != null)
         {
             Core.instance.RemoveStatus(STATUS_TYPE.COMBO_UP_ACCEL, true);
         }
@@ -622,7 +628,7 @@ public class HUD : DiamondComponent
                 UpdateForce((int)(BabyYoda.instance.GetCurrentForce() + (BabyYoda.GetMaxForce() * lvlUpComboData.forceBarPercentageRecovery)), BabyYoda.GetMaxForce()); //TODO check this works fine (at the time of creating this line force doesn't work and this part of the method cannot be tested)
         }
 
-        if(Core.instance != null)
+        if (Core.instance != null)
         {
             float comboAccel = 1f - (1f / (1f + 0.0325f * comboNumber));
             Core.instance.AddStatus(STATUS_TYPE.COMBO_UP_ACCEL, STATUS_APPLY_TYPE.SUBSTITUTE, comboAccel, 1f, true);
@@ -657,15 +663,12 @@ public class HUD : DiamondComponent
         hp_bar.GetComponent<Material>().SetFloatUniform("length_used", hp_float);
         hp_bar.GetComponent<Material>().SetFloatUniform("last_hp", last_hp / max_hp);
         max_hp_number.GetComponent<Text>().text = PlayerHealth.currMaxHealth.ToString();
-        if (damageScreen1 != null )
+
+        if (damageScreen1 != null)
         {
-            damageScreen1.Enable(false);
-            
-            if (hp_float < 0.3f)
-            {
-                damageScreen1.Enable(true);
-                damageScreen1.GetComponent<Material>().SetFloatUniform("alpha", PlayerHealth.currHealth / (PlayerHealth.currMaxHealth / 3));
-            }
+            float lowHPPulsation = (1.0f - PlayerHealth.currHealth / PlayerHealth.currMaxHealth);
+            lowHPPulsation *= lowHPPulsation;
+            damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", lowHPPulsation*2.0f);
         }
     }
 
