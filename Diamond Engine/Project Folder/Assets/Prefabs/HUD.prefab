@@ -511,7 +511,7 @@
             "name": "Combo Holder",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 853446538,
             "ParentUID": 1115908282,
             "PrefabReference": 0,
@@ -1411,7 +1411,7 @@
             "name": "FPS",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 583476287,
             "ParentUID": 1115908282,
             "PrefabReference": 0,
@@ -1512,7 +1512,7 @@
             "name": "ForceFeedback",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 1467405751,
             "ParentUID": 671973388,
             "PrefabReference": 0,
@@ -1572,10 +1572,112 @@
             ]
         },
         {
+            "name": "DamageScreen1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": false,
+            "UID": 296062438,
+            "ParentUID": 671973388,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "DamageScreen2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": false,
+            "UID": 614952092,
+            "ParentUID": 671973388,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "DamageScreen3",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": false,
+            "UID": 74785433,
+            "ParentUID": 671973388,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
             "name": "Tris",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 1367657917,
             "ParentUID": 1115908282,
             "PrefabReference": 0,
