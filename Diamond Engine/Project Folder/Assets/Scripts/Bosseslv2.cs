@@ -147,7 +147,7 @@ public class Bosseslv2 : Entity
         rushOnce = true;
         angle = angleDispersion;
 
-        if(trailParticlesObj != null)
+        if (trailParticlesObj != null)
         {
             trailParticles = trailParticlesObj.GetComponent<ParticleSystem>();
         }
@@ -658,6 +658,10 @@ public class Bosseslv2 : Entity
 
             if(trailTimer <= 0.0f)
             {
+                if(trailParticles != null)
+                {
+                    trailParticles.Play();
+                }
                 trailTimer = trailTime;
             }
         }
@@ -694,9 +698,25 @@ public class Bosseslv2 : Entity
             UpdateAnimationSpd(speedMult);
             Audio.PlayAudio(gameObject, "Play_Wampa_Footsteps");
         }
+
+        trailTimer = trailTime;
     }
     public void UpdateWander()
     {
+        if (trailTimer > 0.0f)
+        {
+            trailTimer -= Time.deltaTime;
+
+            if (trailTimer <= 0.0f)
+            {
+                if (trailParticles != null)
+                {
+                    trailParticles.Play();
+                }
+                trailTimer = trailTime;
+            }
+        }
+
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(speed * speedMult);
         //Debug.Log("Following player");
