@@ -3,10 +3,16 @@ using DiamondEngine;
 
 public class CinematicManager : DiamondComponent
 {
-    public GameObject[] points = new GameObject[2];
+    private GameObject gameCamera;
+    public GameObject cameraPos1;
 
     public void Awake()
     {
+        gameCamera = InternalCalls.FindObjectWithName("Game Camera");
 
+        if (cameraPos1 != null)
+        {
+            gameCamera.transform = cameraPos1.transform;
+        }
     }
 }

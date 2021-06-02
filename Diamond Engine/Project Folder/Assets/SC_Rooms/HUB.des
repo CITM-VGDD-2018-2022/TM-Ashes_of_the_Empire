@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -6.1855316162109375,
-        -90.702110290527344,
-        14.99909496307373
+        -110.05947113037109,
+        12.695703506469727,
+        -33.328285217285156
     ],
     "EditorCameraZ": [
-        0.83105498552322388,
-        -0.43672913312911987,
-        -0.34440582990646362
+        0.78758567571640015,
+        -0.60036134719848633,
+        0.13883447647094727
     ],
     "EditorCameraY": [
-        0.40339341759681702,
-        0.8995930552482605,
-        -0.16735027730464935
+        0.59127926826477051,
+        0.79972881078720093,
+        0.10403183102607727
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -105,8 +105,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 12.100000381469727,
-                    "hFOV": 23,
+                    "vFOV": 10.800000190734863,
+                    "hFOV": 11.800000190734863,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -115,7 +115,7 @@
                 {
                     "Type": 12,
                     "Active": true,
-                    "isDefaultListener": true
+                    "isDefaultListener": false
                 },
                 {
                     "Type": 5,
@@ -33227,10 +33227,10 @@
                 7.9888238246894616e-09
             ],
             "Rotation": [
-                0.04504496231675148,
-                0.0032072518952190876,
-                -0.012809193693101406,
-                0.99889767169952393
+                0.045044966042041779,
+                0.0032072523608803749,
+                -0.012809195555746555,
+                0.99889779090881348
             ],
             "Scale": [
                 0.99999982118606567,
@@ -33261,10 +33261,10 @@
                 2.3940856408444233e-08
             ],
             "Rotation": [
-                0.044985927641391754,
-                0.0031942867208272219,
-                -0.012903057038784027,
-                0.99889916181564331
+                0.044985931366682053,
+                0.0031942871864885092,
+                -0.012903058901429176,
+                0.99889928102493286
             ],
             "Scale": [
                 1,
@@ -33703,10 +33703,10 @@
                 2.1506608050003706e-08
             ],
             "Rotation": [
-                -0.80621880292892456,
-                0.041009202599525452,
-                -0.047588322311639786,
-                0.58827269077301025
+                -0.80621892213821411,
+                0.04100920632481575,
+                -0.047588329762220383,
+                0.58827275037765503
             ],
             "Scale": [
                 0.9999995231628418,
@@ -33771,10 +33771,10 @@
                 2.0240104703361794e-08
             ],
             "Rotation": [
-                0.33847442269325256,
-                0.0081740841269493103,
-                0.00042836950160562992,
-                0.94093996286392212
+                0.33847445249557495,
+                0.0081740850582718849,
+                0.00042836955981329083,
+                0.94094008207321167
             ],
             "Scale": [
                 1.0000002384185791,
@@ -33941,10 +33941,10 @@
                 5.1593831429386228e-09
             ],
             "Rotation": [
-                0.36184769868850708,
-                -0.011958763934671879,
-                -0.00081397243775427341,
-                0.9321601390838623
+                0.36184772849082947,
+                -0.011958765797317028,
+                -0.00081397255416959524,
+                0.93216025829315186
             ],
             "Scale": [
                 1,
@@ -39981,7 +39981,75 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "CinematicManager",
-                    "points": 0
+                    "cameraPos1": 782994521
+                }
+            ]
+        },
+        {
+            "name": "CameraPositions",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1526343368,
+            "ParentUID": 27864027,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "CameraPos1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 782994521,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                7.5487761497497559,
+                -98.588027954101563,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
                 }
             ]
         },
@@ -40020,6 +40088,68 @@
             ]
         },
         {
+            "name": "Background",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 652230296,
+            "ParentUID": 366138325,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                15.019515991210938,
+                -100.72686767578125,
+                57.907951354980469
+            ],
+            "Rotation": [
+                -6.1817246432838147e-08,
+                -0.7071068286895752,
+                6.1817246432838147e-08,
+                0.7071068286895752
+            ],
+            "Scale": [
+                1.0000007152557373,
+                1,
+                1.0000003576278687
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/875198052.mmh",
+                    "UID": 875198052,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/138898439.mat",
+                    "MaterialUID": 138898439
+                }
+            ]
+        },
+        {
             "name": "Planet",
             "tag": "Untagged",
             "layer": "Default",
@@ -40036,9 +40166,9 @@
                 16.601894378662109
             ],
             "Rotation": [
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 -0.70722883939743042,
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 0.70698469877243042
             ],
             "Scale": [
@@ -40186,9 +40316,9 @@
                 -1.7499237060546875
             ],
             "Rotation": [
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 -0.70722883939743042,
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 0.70698469877243042
             ],
             "Scale": [
@@ -40296,6 +40426,247 @@
                 {
                     "Type": 1,
                     "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Razxorcrest_Idle_30FPS_blender",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2010741392,
+            "ParentUID": 366138325,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                11.515457153320313,
+                -100.203857421875,
+                -3.1657147407531738
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 16,
+                    "Active": true,
+                    "RootBone UID": 0,
+                    "MeshRendererUID": 1316811469,
+                    "Animations": [
+                        289574508
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Armature",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1809955443,
+            "ParentUID": 2010741392,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Hips",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 862458437,
+            "ParentUID": 1809955443,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                3.183236785275767e-09,
+                0.7858930230140686,
+                -0.47641211748123169
+            ],
+            "Rotation": [
+                0.04687238484621048,
+                0.66383099555969238,
+                0.041751936078071594,
+                0.74524372816085815
+            ],
+            "Scale": [
+                0.99999994039535522,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Left_Right_Engines",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1576072257,
+            "ParentUID": 862458437,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -2.8751955483130587e-08,
+                0.53122228384017944,
+                1.6088410603742886e-09
+            ],
+            "Rotation": [
+                -0.043656624853610992,
+                -0.66400498151779175,
+                -0.038887429982423782,
+                0.74543899297714233
+            ],
+            "Scale": [
+                1,
+                0.99999994039535522,
+                0.99999994039535522
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Left_Right_Engines_end",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2049661132,
+            "ParentUID": 1576072257,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0.53122222423553467,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "EngineWeapons",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1316811469,
+            "ParentUID": 2010741392,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.5607448216898926e-15,
+                1,
+                -8.1460342471473268e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/227735329.mmh",
+                    "UID": 227735329,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
+                    "MaterialUID": 1948688504
                 }
             ]
         }
