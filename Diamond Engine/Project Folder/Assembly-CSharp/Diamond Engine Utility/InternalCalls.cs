@@ -187,6 +187,9 @@ namespace DiamondEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern void SetVerticalFOV(object go, float verticalFOV);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void SetAsGameCamera(object go);
     }
 
     public partial class Debug

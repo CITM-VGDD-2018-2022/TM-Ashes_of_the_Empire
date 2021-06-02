@@ -83,3 +83,18 @@ void CS_SetCameraVerticalFOV(MonoObject* go, float verticalFOV)
 		cam->SetVerticalFOV(verticalFOV);
 	}
 }
+
+void SetAsGameCamera(MonoObject* go)
+{
+	if (go == nullptr)
+		return;
+
+	GameObject* GO = EngineExternal->moduleMono->GameObject_From_CSGO(go);
+
+	C_Camera* cam = dynamic_cast<C_Camera*>(GO->GetComponent(Component::TYPE::CAMERA));
+
+	if (cam != nullptr)
+	{
+		cam->SetAsGameCamera();
+	}
+}
