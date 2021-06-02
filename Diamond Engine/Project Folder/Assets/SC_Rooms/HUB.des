@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -110.05947113037109,
-        12.695703506469727,
-        -33.328285217285156
+        -6.134101390838623,
+        -31.124710083007813,
+        -50.897815704345703
     ],
     "EditorCameraZ": [
-        0.78758567571640015,
-        -0.60036134719848633,
-        0.13883447647094727
+        0.12795446813106537,
+        -0.71197676658630371,
+        0.69044685363769531
     ],
     "EditorCameraY": [
-        0.59127926826477051,
-        0.79972881078720093,
-        0.10403183102607727
+        0.12996071577072144,
+        0.70220303535461426,
+        0.70001506805419922
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -106,7 +106,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 10.800000190734863,
-                    "hFOV": 11.800000190734863,
+                    "hFOV": -2.3208932876586914,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -39949,7 +39949,7 @@
             "name": "NewCinematic",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": false,
+            "Active": true,
             "UID": 27864027,
             "ParentUID": 1481651339,
             "PrefabReference": 0,
@@ -40434,16 +40434,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 2010741392,
+            "UID": 1456811832,
             "ParentUID": 366138325,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                11.515457153320313,
-                -100.203857421875,
-                -3.1657147407531738
+                12.792424201965332,
+                -102.54862213134766,
+                -0.22931528091430664
             ],
             "Rotation": [
                 0,
@@ -40464,8 +40464,8 @@
                 {
                     "Type": 16,
                     "Active": true,
-                    "RootBone UID": 0,
-                    "MeshRendererUID": 1316811469,
+                    "RootBone UID": 1191391509,
+                    "MeshRendererUID": 1633005126,
                     "Animations": [
                         289574508
                     ]
@@ -40477,8 +40477,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1809955443,
-            "ParentUID": 2010741392,
+            "UID": 1191391509,
+            "ParentUID": 1456811832,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -40511,8 +40511,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 862458437,
-            "ParentUID": 1809955443,
+            "UID": 1459866361,
+            "ParentUID": 1191391509,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -40545,8 +40545,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1576072257,
-            "ParentUID": 862458437,
+            "UID": 1249873965,
+            "ParentUID": 1459866361,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -40579,8 +40579,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 2049661132,
-            "ParentUID": 1576072257,
+            "UID": 1437940825,
+            "ParentUID": 1249873965,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -40613,8 +40613,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1316811469,
-            "ParentUID": 2010741392,
+            "UID": 1633005126,
+            "ParentUID": 1456811832,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -40667,6 +40667,58 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
                     "MaterialUID": 1948688504
+                }
+            ]
+        },
+        {
+            "name": "Game Camera",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2026523019,
+            "ParentUID": 27864027,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                2.3791122436523438,
+                -95.724586486816406,
+                -2.2406978607177734
+            ],
+            "Rotation": [
+                0.19560408592224121,
+                0.65415400266647339,
+                -0.18005712330341339,
+                0.70809674263000488
+            ],
+            "Scale": [
+                1.0000007152557373,
+                0.99999964237213135,
+                1.0000001192092896
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 4,
+                    "Active": true,
+                    "fType": 2,
+                    "nearPlaneDist": 1,
+                    "farPlaneDist": 100,
+                    "vFOV": 1.0471975803375244,
+                    "hFOV": 1.1914126873016357,
+                    "culling": false,
+                    "HDR": true,
+                    "drawSkybox": true,
+                    "ProfileUID": 1969686679
+                },
+                {
+                    "Type": 12,
+                    "Active": true,
+                    "isDefaultListener": true
                 }
             ]
         }
