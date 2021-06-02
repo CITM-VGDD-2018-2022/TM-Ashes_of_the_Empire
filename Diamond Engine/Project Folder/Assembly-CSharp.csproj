@@ -228,6 +228,7 @@
 		<Compile Include="Assets\Scripts\Geyser.cs" />
 		<Compile Include="Assets\Scripts\MofGuideonRework.cs" />
 		<Compile Include="Assets\Scripts\Menu_Grogu.cs" />
+		<Compile Include="Assets\Scripts\RespawnNoDamage.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
