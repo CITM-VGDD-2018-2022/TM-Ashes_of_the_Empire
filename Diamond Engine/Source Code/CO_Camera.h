@@ -27,6 +27,8 @@ public:
 
 	void SetAspectRatio(float aspectRatio);
 
+	void SetAsGameCamera();
+
 	void StartDraw();
 	void EndDraw();
 
