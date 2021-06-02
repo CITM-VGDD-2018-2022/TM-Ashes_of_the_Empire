@@ -149,6 +149,11 @@ public class Deathtrooper : Enemy
     //Timers go here
     private void ProcessInternalInput()
     {
+        if (currentState != STATE.DIE && gameObject.transform.globalPosition.y <= -120.0f)
+        {
+            inputsList.Add(INPUT.IN_DIE);
+        }
+
         if (idleTimer > 0.0f)
         {
             idleTimer -= myDeltaTime;

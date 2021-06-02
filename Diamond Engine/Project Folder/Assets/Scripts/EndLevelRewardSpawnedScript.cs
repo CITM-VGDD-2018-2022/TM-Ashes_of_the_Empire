@@ -53,11 +53,11 @@ public class EndLevelRewardSpawn : DiamondComponent
         float yPos = ParametricBlend(animTime);
 
         Vector3 newPos = new Vector3(gameObject.transform.localPosition.x, initialPos.y, gameObject.transform.localPosition.z);
-        newPos.y += yPos * movementSpeed;
 
         if (timer > 0.0f)
         {
             timer -= Time.deltaTime;
+            newPos.y += yPos * movementSpeed;
 
             //Debug.Log("Boon timer: " + timer.ToString());
         }
@@ -67,6 +67,7 @@ public class EndLevelRewardSpawn : DiamondComponent
             {
                 Vector3 movementVector = (Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition).normalized * movementSpeed * Time.deltaTime;
                 newPos.x += movementVector.x;
+                newPos.y += movementVector.y;
                 newPos.z += movementVector.z;
             }
         }
