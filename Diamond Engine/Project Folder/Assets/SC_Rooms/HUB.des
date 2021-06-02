@@ -105,8 +105,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 12.239999771118164,
-                    "hFOV": 23.540000915527344,
+                    "vFOV": 13.300000190734863,
+                    "hFOV": 24.819999694824219,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -128,6 +128,8 @@
                     "smoothSpeed": 0.10000000149011612,
                     "timer_easing_sec": 0,
                     "timer": 0,
+                    "waitPlayerZoom": true,
+                    "wait_Time": 0,
                     "cornerTopLeftX": -100,
                     "cornerTopLeftY": -100,
                     "cornerBotRightX": 100,
@@ -28327,230 +28329,6 @@
             ]
         },
         {
-            "name": "Colliders",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 284034971,
-            "ParentUID": 1070040184,
-            "PrefabReference": 1190528649,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Bounce Rush",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 769294415,
-            "ParentUID": 284034971,
-            "PrefabReference": 766079951,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                2.0998947620391846,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                0.89999997615814209,
-                0.89999997615814209,
-                0.89999997615814209
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": false,
-                    "Gravity": false,
-                    "LockLinearX": true,
-                    "LockLinearY": true,
-                    "LockLinearZ": true,
-                    "LockAngularX": true,
-                    "LockAngularY": true,
-                    "LockAngularZ": true,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "AtackBosslv2",
-                    "damage": 15
-                }
-            ]
-        },
-        {
-            "name": "Jump Slam",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 804310535,
-            "ParentUID": 284034971,
-            "PrefabReference": 524252192,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0.48108792304992676,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                0.22837036848068237,
-                1.3414874076843262
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": false,
-                    "Gravity": false,
-                    "LockLinearX": true,
-                    "LockLinearY": true,
-                    "LockLinearZ": true,
-                    "LockAngularX": true,
-                    "LockAngularY": true,
-                    "LockAngularZ": true,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "AtackBosslv2",
-                    "damage": 20
-                }
-            ]
-        },
-        {
             "name": "Cube",
             "tag": "Untagged",
             "layer": "Default",
@@ -33543,10 +33321,10 @@
                 7.9888238246894616e-09
             ],
             "Rotation": [
-                0.04504496231675148,
-                0.0032072518952190876,
-                -0.012809193693101406,
-                0.99889767169952393
+                0.045044966042041779,
+                0.0032072523608803749,
+                -0.012809195555746555,
+                0.99889779090881348
             ],
             "Scale": [
                 0.99999982118606567,
@@ -33577,10 +33355,10 @@
                 2.3940856408444233e-08
             ],
             "Rotation": [
-                0.044985927641391754,
-                0.0031942867208272219,
-                -0.012903057038784027,
-                0.99889916181564331
+                0.044985931366682053,
+                0.0031942871864885092,
+                -0.012903058901429176,
+                0.99889928102493286
             ],
             "Scale": [
                 1,
@@ -34019,10 +33797,10 @@
                 2.1506608050003706e-08
             ],
             "Rotation": [
-                -0.80621880292892456,
-                0.041009202599525452,
-                -0.047588322311639786,
-                0.58827269077301025
+                -0.80621892213821411,
+                0.04100920632481575,
+                -0.047588329762220383,
+                0.58827275037765503
             ],
             "Scale": [
                 0.9999995231628418,
@@ -34087,10 +33865,10 @@
                 2.0240104703361794e-08
             ],
             "Rotation": [
-                0.33847442269325256,
-                0.0081740841269493103,
-                0.00042836950160562992,
-                0.94093996286392212
+                0.33847445249557495,
+                0.0081740850582718849,
+                0.00042836955981329083,
+                0.94094008207321167
             ],
             "Scale": [
                 1.0000002384185791,
@@ -34257,10 +34035,10 @@
                 5.1593831429386228e-09
             ],
             "Rotation": [
-                0.36184769868850708,
-                -0.011958763934671879,
-                -0.00081397243775427341,
-                0.9321601390838623
+                0.36184772849082947,
+                -0.011958765797317028,
+                -0.00081397255416959524,
+                0.93216025829315186
             ],
             "Scale": [
                 1,

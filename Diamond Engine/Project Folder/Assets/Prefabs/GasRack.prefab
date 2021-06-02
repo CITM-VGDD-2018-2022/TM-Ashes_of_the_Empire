@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                18.363109588623047,
-                0.050000641494989395,
-                11.071786880493164
+                -20.383556365966797,
+                -1.0196530818939209,
+                -9.7039775848388672
             ],
             "Rotation": [
                 0,
@@ -63,9 +63,9 @@
                         1
                     ],
                     "Scale": [
-                        1.1000000238418579,
+                        1.25,
                         1,
-                        1.1000000238418579
+                        1.25
                     ]
                 },
                 {
@@ -213,7 +213,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/Particle.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
                     "MaterialUID": 355756108
                 },
@@ -221,8 +221,8 @@
                     "Type": 20,
                     "Active": true,
                     "systemActive": true,
-                    "looping": true,
-                    "maxDuration": 10,
+                    "looping": false,
+                    "maxDuration": 5,
                     "ParticleEmitters": [
                         {
                             "AssetPath": "Empty",
@@ -382,7 +382,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/Particle.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
                     "MaterialUID": 355756108
                 },

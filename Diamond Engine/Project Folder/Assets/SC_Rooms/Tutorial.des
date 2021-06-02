@@ -1,19 +1,19 @@
 {
     "NavMesh": 912837797,
     "EditorCameraPosition": [
-        -63.414649963378906,
-        9.9312772750854492,
-        23.5048828125
+        -11.780797958374023,
+        26.607160568237305,
+        12.644384384155273
     ],
     "EditorCameraZ": [
-        0.96131044626235962,
-        0.12240871042013168,
-        0.24677611887454987
+        0.45475167036056519,
+        -0.63569974899291992,
+        0.62376821041107178
     ],
     "EditorCameraY": [
-        -0.11856438964605331,
-        0.99247974157333374,
-        -0.030436431989073753
+        0.3745768666267395,
+        0.77193641662597656,
+        0.51362085342407227
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/tutorial.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/tutorial.png",
@@ -2979,290 +2979,6 @@
             ]
         },
         {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 803208534,
-            "ParentUID": 251249233,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -21.631992340087891,
-                9.3783416748046875,
-                -28.962257385253906
-            ],
-            "Rotation": [
-                1.0672356227925395e-11,
-                0.7071068286895752,
-                1.0672356227925395e-11,
-                0.7071068286895752
-            ],
-            "Scale": [
-                0.99999994039535522,
-                1,
-                0.99999994039535522
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1854661381,
-                    "ParentUID": 803208534,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "ParticleSystems",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 151623022,
-                    "ParentUID": 803208534,
-                    "PrefabID": 0,
-                    "PrefabReference": 151623022,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "IdleParticles",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1025933234,
-                    "ParentUID": 151623022,
-                    "PrefabID": 0,
-                    "PrefabReference": 1025933234,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "EruptionParticles",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 480801472,
-                    "ParentUID": 151623022,
-                    "PrefabID": 0,
-                    "PrefabReference": 480801472,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 40632288,
-            "ParentUID": 251249233,
-            "PrefabReference": 1939403477,
-            "PrefabID": 1712240884,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -10.367622375488281,
-                9.3783416748046875,
-                -28.966007232666016
-            ],
-            "Rotation": [
-                6.1817253538265504e-08,
-                0.7071068286895752,
-                6.1817253538265504e-08,
-                0.7071068286895752
-            ],
-            "Scale": [
-                0.99999994039535522,
-                1,
-                0.99999994039535522
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "GasRack",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 624559749,
-                    "ParentUID": 40632288,
-                    "PrefabID": 0,
-                    "PrefabReference": 175167092,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.8489090204238892,
-                        -0.072218582034111023,
-                        -1.0207855701446533
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "ParticleSystems",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 151623022,
-                    "ParentUID": 40632288,
-                    "PrefabID": 0,
-                    "PrefabReference": 151623022,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "IdleParticles",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1025933234,
-                    "ParentUID": 151623022,
-                    "PrefabID": 0,
-                    "PrefabReference": 1025933234,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "EruptionParticles",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 480801472,
-                    "ParentUID": 151623022,
-                    "PrefabID": 0,
-                    "PrefabReference": 480801472,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "SpikeTrap_LB",
             "tag": "Untagged",
             "layer": "Default",
@@ -4886,6 +4602,290 @@
                         1,
                         1,
                         1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 191222844,
+            "ParentUID": 251249233,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -21.082130432128906,
+                9.380457878112793,
+                -29.008609771728516
+            ],
+            "Rotation": [
+                -6.1817253538265504e-08,
+                0.7071068286895752,
+                -6.1817253538265504e-08,
+                0.7071068286895752
+            ],
+            "Scale": [
+                0.99999994039535522,
+                1,
+                0.99999994039535522
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 874494371,
+                    "ParentUID": 191222844,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 2011210941,
+                    "ParentUID": 191222844,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Idle Gas",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 140688020,
+                    "ParentUID": 2011210941,
+                    "PrefabID": 0,
+                    "PrefabReference": 439895910,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.20718519389629364,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "GasEruption",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 167726453,
+                    "ParentUID": 2011210941,
+                    "PrefabID": 0,
+                    "PrefabReference": 1909877198,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 521130131,
+            "ParentUID": 251249233,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -10.44879150390625,
+                9.3719863891601563,
+                -28.899417877197266
+            ],
+            "Rotation": [
+                1.0672356227925395e-11,
+                0.7071068286895752,
+                1.0672356227925395e-11,
+                0.7071068286895752
+            ],
+            "Scale": [
+                0.99999994039535522,
+                1,
+                0.99999994039535522
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 2012117933,
+                    "ParentUID": 521130131,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1009352289,
+                    "ParentUID": 521130131,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Idle Gas",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 8331688,
+                    "ParentUID": 1009352289,
+                    "PrefabID": 0,
+                    "PrefabReference": 439895910,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.20718519389629364,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "GasEruption",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 239865558,
+                    "ParentUID": 1009352289,
+                    "PrefabID": 0,
+                    "PrefabReference": 1909877198,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
                     ]
                 }
             ]
@@ -55269,254 +55269,6 @@
             ]
         },
         {
-            "name": "Cube",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 649957810,
-            "ParentUID": 1084764073,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                7.2450461387634277,
-                5.4080758094787598,
-                38.337757110595703
-            ],
-            "Rotation": [
-                0,
-                0,
-                -1.3289960624376181e-25,
-                1
-            ],
-            "Scale": [
-                11.5,
-                0.10000000149011612,
-                7.1999998092651367
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 1,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
-                    "MaterialUID": 153880261
-                }
-            ]
-        },
-        {
-            "name": "Cube",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 945674687,
-            "ParentUID": 1084764073,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                45.423713684082031,
-                5.4080758094787598,
-                38.325027465820313
-            ],
-            "Rotation": [
-                0,
-                0,
-                -4.2099392364419408e-23,
-                1
-            ],
-            "Scale": [
-                6.5999999046325684,
-                0.10000000149011612,
-                7.1999998092651367
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 1,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
-                    "MaterialUID": 153880261
-                }
-            ]
-        },
-        {
-            "name": "Cube",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1263733901,
-            "ParentUID": 1084764073,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                38.147686004638672,
-                5.4080758094787598,
-                33.435779571533203
-            ],
-            "Rotation": [
-                6.816913689027702e-20,
-                -0.38912391662597656,
-                -3.2417809204366963e-20,
-                0.92118543386459351
-            ],
-            "Scale": [
-                1.2000000476837158,
-                0.10000000149011612,
-                2.0999999046325684
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 1,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
-                    "MaterialUID": 153880261
-                }
-            ]
-        },
-        {
-            "name": "Cube",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 736415705,
-            "ParentUID": 1084764073,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                38.092273712158203,
-                5.4080758094787598,
-                43.229225158691406
-            ],
-            "Rotation": [
-                7.0426835899361011e-20,
-                0.38912397623062134,
-                1.6800337124571762e-20,
-                0.92118537425994873
-            ],
-            "Scale": [
-                1.2000000476837158,
-                0.10000000149011612,
-                2.0999999046325684
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 1,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
-                    "MaterialUID": 153880261
-                }
-            ]
-        },
-        {
             "name": "Floor397",
             "tag": "Untagged",
             "layer": "Default",
@@ -55729,6 +55481,254 @@
                     "stencilEmission": 0.89999997615814209,
                     "doNotDrawStencil": true,
                     "drawShadows": true
+                }
+            ]
+        },
+        {
+            "name": "Water01",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 100328629,
+            "ParentUID": 1084764073,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                6.762087345123291,
+                5.5095829963684082,
+                38.349498748779297
+            ],
+            "Rotation": [
+                2.6044543651186809e-15,
+                0.00017256232968065888,
+                -2.602712423664679e-18,
+                1
+            ],
+            "Scale": [
+                24.080955505371094,
+                0.34273892641067505,
+                14.312395095825195
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1342727876.mmh",
+                    "UID": 1342727876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/water.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
+                    "MaterialUID": 153880261
+                }
+            ]
+        },
+        {
+            "name": "Water02",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1713961993,
+            "ParentUID": 1084764073,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                46.034881591796875,
+                5.4715962409973145,
+                38.336219787597656
+            ],
+            "Rotation": [
+                2.6044543651186809e-15,
+                0.00017256663704756647,
+                -2.6029097062407729e-18,
+                1
+            ],
+            "Scale": [
+                14.339089393615723,
+                0.34273892641067505,
+                14.312395095825195
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1342727876.mmh",
+                    "UID": 1342727876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/water.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
+                    "MaterialUID": 153880261
+                }
+            ]
+        },
+        {
+            "name": "Water03",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2039114335,
+            "ParentUID": 1084764073,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                38.273017883300781,
+                5.4715962409973145,
+                35.755836486816406
+            ],
+            "Rotation": [
+                -5.7111680717980562e-08,
+                -0.92387950420379639,
+                -5.7111680717980562e-08,
+                -0.38268345594406128
+            ],
+            "Scale": [
+                5.5634536743164063,
+                0.34273892641067505,
+                7.3646941184997559
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1342727876.mmh",
+                    "UID": 1342727876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/water.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
+                    "MaterialUID": 153880261
+                }
+            ]
+        },
+        {
+            "name": "Water04",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2144666646,
+            "ParentUID": 1084764073,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                39.44110107421875,
+                5.4715962409973145,
+                40.990779876708984
+            ],
+            "Rotation": [
+                -5.7111680717980562e-08,
+                -0.92387950420379639,
+                -5.7111680717980562e-08,
+                -0.38268345594406128
+            ],
+            "Scale": [
+                5.5634536743164063,
+                0.34273892641067505,
+                7.3646941184997559
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1342727876.mmh",
+                    "UID": 1342727876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/water.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/153880261.mat",
+                    "MaterialUID": 153880261
                 }
             ]
         },
@@ -59547,10 +59547,10 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "DPSDamage",
-                    "baseDamage": 0,
-                    "maxDamage": 0,
-                    "damageIncrease": 0,
-                    "damageTime": 0
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
                 }
             ]
         },
@@ -59624,10 +59624,10 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "DPSDamage",
-                    "baseDamage": 0,
-                    "maxDamage": 0,
-                    "damageIncrease": 0,
-                    "damageTime": 0
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
                 },
                 {
                     "Type": 18,
@@ -74879,8 +74879,8 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 16.625,
-                    "hFOV": 26.524999618530273,
-                    "culling": true,
+                    "hFOV": 31.024999618530273,
+                    "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
                     "ProfileUID": 2022708201
