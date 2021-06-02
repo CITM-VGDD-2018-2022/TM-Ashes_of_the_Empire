@@ -45,6 +45,9 @@ public class MofGuideonRework : Entity
         PRE_BURST_DASH,
         BURST_1,
         BURST_2,
+        LIGHTNING_DASH_CHARGE,
+        LIGHTNING_DASH,
+        LIGHTNING_DASH_TIRED,
 
         THROW_SABER,
         RETRIEVE_SABER,
@@ -80,6 +83,10 @@ public class MofGuideonRework : Entity
         IN_BURST1,
         IN_BURST2,
         IN_BURST_END,
+        IN_LIGHTNING_DASH_CHARGE,
+        IN_LIGHTNING_DASH_CHARGE_END,
+        IN_LIGHTNING_DASH_TIRED,
+        IN_LIGHTNING_DASH_TIRED_END,
 
         // Saber Throw
         IN_THROW_SABER,
@@ -119,6 +126,8 @@ public class MofGuideonRework : Entity
     private float limboHealth = 0.0f;
     private float damageMult = 1.0f;
     public float damageRecieveMult = 1f;
+
+    private bool straightPath = false;
 
     // Animations
     private float currAnimationPlaySpd = 1f;
@@ -218,6 +227,21 @@ public class MofGuideonRework : Entity
     //Burst 2
     //TODO
 
+    //Lightning dash charge
+    public float lightningDashChargeDuration = 0.5f;
+    private float lightningDashChargeDurationTimer = 0.0f;
+
+    public float lightningDashDirectionTime = 0.3f;
+    private float lightningDashDirectionTimer = 0.0f;
+
+    //Lightining dash
+    public float lightningDashLength = 50.0f;
+    public float lightningDashSpeed = 50.0f;
+    private float lightningDashDuration = 0.0f;
+
+    //Lightning dash tired
+    public float lightningDashTiredDuration = 0.5f;
+    private float lightningDashTiredDurationTimer = 0.0f;
 
     //Prepare throw saber
     public float prepSaberThrowDuration = 3.0f;
@@ -399,6 +423,36 @@ public class MofGuideonRework : Entity
 
             if (preBurstDashTimer <= 0)
                 inputsList.Add(INPUT.IN_BURST1);
+        }
+
+        //Lightning dash
+        if (lightningDashChargeDurationTimer > 0.0f)
+        {
+            lightningDashChargeDurationTimer -= myDeltaTime;
+
+            if (lightningDashChargeDurationTimer < 0.0f)
+            {
+                inputsList.Add(INPUT.IN_LIGHTNING_DASH_CHARGE_END);
+            }
+        }
+
+        if (currentState == STATE.LIGHTNING_DASH && lightningDashDuration > 0.0f)
+        {
+            lightningDashDuration -= myDeltaTime;
+            if (Mathf.Distance(gameObject.transform.globalPosition, targetPosition) <= agent.stoppingDistance || lightningDashDuration < 0.0f)
+            {
+                inputsList.Add(INPUT.IN_LIGHTNING_DASH_TIRED);
+            }
+        }
+
+        if (lightningDashTiredDurationTimer > 0.0f)
+        {
+            lightningDashTiredDurationTimer -= myDeltaTime;
+
+            if (lightningDashTiredDurationTimer < 0.0f)
+            {
+                inputsList.Add(INPUT.IN_LIGHTNING_DASH_TIRED_END);
+            }
         }
 
         //Throw 
@@ -1036,6 +1090,126 @@ public class MofGuideonRework : Entity
         Debug.Log("End burst 2");
     }
 
+    #endregion
+
+    #region LIGTHNING_DASH
+    //Lightning dash charge
+    private void StartLightningDashCharge()
+    {
+        Debug.Log("Start lightning dash charge");
+
+        lightningDashChargeDurationTimer = lightningDashChargeDuration;
+        lightningDashDirectionTimer = lightningDashDirectionTime;
+
+        //CREATE AN ARROW (?) FOR VISUAL FEEDBACK AND PLAY MOFF ANTICIPATION ANIMATION
+        //visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/1137197426.prefab", chargePoint.transform.globalPosition, chargePoint.transform.globalRotation, new Vector3(1.0f, 1.0f, 0.01f));
+        //Animator.Play(gameObject, "BT_Charge", speedMult);
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void UpdateLightningDashCharge()
+    {
+        Debug.Log("Update lightning dash charge");
+
+        if (lightningDashDirectionTimer > 0.0f)
+        {
+            lightningDashDirectionTimer -= myDeltaTime;
+
+            if (lightningDashDirectionTimer > 0.1f)
+            {
+                if (Core.instance != null)
+                {
+                    Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+                    targetPosition = direction.normalized * lightningDashLength + gameObject.transform.globalPosition;
+                    agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+                    Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+                }
+            }
+        }
+        //SCALE VISUAL FEEDBACK
+        //if (visualFeedback.transform.globalScale.z < 1.0)
+        //{
+        //    visualFeedback.transform.localScale = new Vector3(1.0f, 1.0f, Mathf.Lerp(visualFeedback.transform.localScale.z, 1.0f, myDeltaTime * (loadingTime / loadingTimer)));
+        //    visualFeedback.transform.localRotation = gameObject.transform.globalRotation;
+        //}
+
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void EndLightningDashCharge()
+    {
+        Debug.Log("End lightning dash charge");
+    }
+
+
+    //Lightning dash
+    private void StartLightningDash()
+    {
+        Debug.Log("Start lightning dash");
+
+        lightningDashDuration = (lightningDashLength / lightningDashSpeed) * speedMult;
+
+        //DASH ANIMATION + DESTROY VISUAL FEEDBACK
+        //Animator.Play(gameObject, "BT_Run", speedMult);
+        //InternalCalls.Destroy(visualFeedback);
+        //visualFeedback = null;
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "Play_Bantha_Attack");
+        //Audio.PlayAudio(gameObject, "Play_Bantha_Ramming");
+        //Audio.PlayAudio(gameObject, "Play_Footsteps_Bantha");
+
+        StraightPath();
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void UpdateLightningDash()
+    {
+        Debug.Log("Update lightning dash");
+
+        agent.MoveToCalculatedPos(lightningDashSpeed * speedMult);
+
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void EndLightningDash()
+    {
+        Debug.Log("End lightning dashh");
+    }
+
+    //Lightning dash tired
+    private void StartLightningDashTired()
+    {
+        Debug.Log("Start lightning dash tired");
+
+        Audio.StopAudio(gameObject);
+
+        lightningDashTiredDurationTimer = lightningDashTiredDuration;
+
+        //TIRED ANIMATION AND AUDIO + STUN PARTICLES
+        //Animator.Play(gameObject, "BT_Idle", speedMult);
+        //Audio.PlayAudio(gameObject, "Play_Bantha_Breath");
+        //stun.Play();
+    }
+
+    private void UpdateLightningDashTired()
+    {
+        Debug.Log("Update lightning dash tired");
+
+        UpdateAnimationSpd(speedMult);
+
+        //STUN PARTICLES
+        //if (stun.playing == false)
+        //    stun.Play();
+    }
+
+    private void EndLightningDashTired()
+    {
+        Debug.Log("End lightning dash tired");
+    }
     #endregion
 
     #region SPAWN_ENEMIES
@@ -1680,6 +1854,19 @@ public class MofGuideonRework : Entity
     public override bool IsDying()
     {
         return currentState == STATE.DEAD;
+    }
+
+    public void StraightPath()
+    {
+        if (agent != null && Vector2.Dot(agent.GetLastVector().ToVector2(), (agent.GetDestination() - gameObject.transform.localPosition).ToVector2()) > 0.9f)
+        {
+            straightPath = true;
+        }
+        else
+        {
+            straightPath = false;
+        }
+        //Debug.Log("StraightPath: " + straightPath);
     }
 
     #endregion
