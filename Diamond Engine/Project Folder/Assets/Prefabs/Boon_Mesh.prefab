@@ -113,6 +113,16 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1540644281.mat",
                     "MaterialUID": 1540644281
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Play_UI_Boon_Pickup",
+                    "audBankReference": "UI",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
@@ -227,7 +237,7 @@
             "layer": "Default",
             "Active": true,
             "UID": 835736709,
-            "ParentUID": 1334828742,
+            "ParentUID": 309117794,
             "PrefabReference": 0,
             "PrefabID": 2009857862,
             "DontDestroy": false,
