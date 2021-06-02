@@ -10,7 +10,6 @@ public class Bosseslv2 : Entity
 
     public GameObject camera = null;
 
-
     public float slerpSpeed = 5.0f;
 
     //Public Variables
@@ -68,6 +67,8 @@ public class Bosseslv2 : Entity
     private float catchProjectileTimer = 0f;
     private float ballTimer = 0f;
     private float ballTime = 0.5f;
+    public float trailTimer = 0.0f;
+    public float trailTime = 0.0f;
 
     //Atacks
     public float projectileAngle = 30.0f;
@@ -102,6 +103,10 @@ public class Bosseslv2 : Entity
     private bool rushOnce = true;
 
     private bool jumpOnce = true;
+
+    public GameObject trailParticlesObj = null;
+    protected ParticleSystem trailParticles = null;
+
     enum JUMPSLAM : int
     {
         NONE = -1,
@@ -141,6 +146,11 @@ public class Bosseslv2 : Entity
         }
         rushOnce = true;
         angle = angleDispersion;
+
+        if(trailParticlesObj != null)
+        {
+            trailParticles = trailParticlesObj.GetComponent<ParticleSystem>();
+        }
     }
 
     #region PROJECTILE
@@ -633,9 +643,21 @@ public class Bosseslv2 : Entity
             UpdateAnimationSpd(speedMult);
             Audio.PlayAudio(gameObject, "Play_Wampa_Footsteps");
         }
+
+        trailTimer = trailTime;
     }
     public void UpdateFollowing()
     {
+        if(trailTimer > 0.0f)
+        {
+            trailTimer -= Time.deltaTime;
+
+            if(trailTimer <= 0.0f)
+            {
+                trailTimer = trailTime;
+            }
+        }
+
         agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(speed * speedMult);
