@@ -66,15 +66,6 @@ public class MofGuideonRework : Entity
 
         // Melee combo
         IN_MELEE_COMBO_1_CHARGE,
-        IN_MELEE_COMBO_1_DASH,
-        IN_MELEE_COMBO_1,
-        IN_MELEE_COMBO_2,
-        IN_MELEE_COMBO_3,
-        IN_MELEE_COMBO_4_CHARGE,
-        IN_MELEE_COMBO_4_DASH,
-        IN_MELEE_COMBO_4,
-        IN_MELEE_COMBO_5,
-        IN_MELEE_COMBO_6,
         IN_MELEE_CHARGE_END,
         IN_MELEE_HIT_END,
         IN_MELEE_DASH_END,
@@ -97,7 +88,6 @@ public class MofGuideonRework : Entity
         IN_RETRIEVE_SABER_END,
 
         // Finishers
-        IN_CHANGE_PHASE,
         IN_PHASE_CHANGE_END,
         IN_DEAD
     }
@@ -495,8 +485,13 @@ public class MofGuideonRework : Entity
                     {
                         case INPUT.IN_CHASE_END:
                             EndChase_P1();
-
                             currentState = STATE.ACTION_SELECT;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            currentState = STATE.CHANGE_PHASE;
+                            EndChase_P1();
+                            StartPhaseChange(); //Change for die or something
                             break;
                     }
                     break;
@@ -505,44 +500,139 @@ public class MofGuideonRework : Entity
                     switch (input)
                     {
                         case INPUT.IN_MELEE_COMBO_1_CHARGE:
+                            StartMeleeCombo1Charge();
                             currentState = STATE.MELEE_COMBO_1_CHARGE;
-                            break; 
+                            break;
+
+                        case INPUT.IN_PRE_BURST_CHARGE:
+                            StartBurstCharge();
+                            break;
 
                         case INPUT.IN_SPAWN_ENEMIES:
                             StartSpawnEnemies();
                             currentState = STATE.SPAWN_ENEMIES;
                             break;
 
+                        case INPUT.IN_DEAD:
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+
                     }
                     break;
 
                 case STATE.MELEE_COMBO_1_CHARGE:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_CHARGE_END:
+                            EndMeleeCombo1Charge();
+                            StartMeleeComboDash1();
+                            currentState = STATE.MELEE_COMBO_1_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeCombo1Charge();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
+
                 case STATE.MELEE_COMBO_1_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash1();
+                            StartMeleeComboHit1();
+                            currentState = STATE.MELEE_COMBO_1;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash1();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.MELEE_COMBO_1:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit1();
+                            StartMeleeComboDash2();
+                            currentState = STATE.MELEE_COMBO_2_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit1();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.MELEE_COMBO_2_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash2();
+                            StartMeleeComboHit2();
+                            currentState = STATE.MELEE_COMBO_2;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash2();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.MELEE_COMBO_2:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit2();
+                            StartMeleeComboDash3();
+                            currentState = STATE.MELEE_COMBO_3_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit2();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.MELEE_COMBO_3_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash3();
+                            StartMeleeComboHit3();
+                            currentState = STATE.MELEE_COMBO_3;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash3();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.MELEE_COMBO_3:
-                    break;
-                case STATE.MELEE_COMBO_4_CHARGE:
-                    break;
-                case STATE.MELEE_COMBO_4_DASH:
-                    break;
-                case STATE.MELEE_COMBO_4:
-                    break;
-                case STATE.MELEE_COMBO_5_DASH:
-                    break;
-                case STATE.MELEE_COMBO_5:
-                    break;
-                case STATE.MELEE_COMBO_6_DASH:
-                    break;
-                case STATE.MELEE_COMBO_6:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit3();
+                            StartChase_P1();
+                            currentState = STATE.CHASE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit3();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
 
                 case STATE.SPAWN_ENEMIES:
@@ -553,10 +643,10 @@ public class MofGuideonRework : Entity
                             EndSpawnEnemies();
                             break;
 
-                        case INPUT.IN_CHANGE_PHASE:
+                        case INPUT.IN_DEAD:
                             currentState = STATE.CHANGE_PHASE;
                             EndSpawnEnemies();
-                            StartPhaseChange();
+                            StartPhaseChange(); //Change for die or something
                             break;
                     }
                     break;
@@ -836,6 +926,189 @@ public class MofGuideonRework : Entity
 
     #endregion
 
+    #region BURST
+    //Burst charge
+    //P1
+    private void StartBurstCharge()
+    {
+        Debug.Log("Start burst charge");
+    }
+
+    private void UpdateBurstCharge()
+    {
+        Debug.Log("Update burst charge");
+    }
+
+    private void EndBurstCharge()
+    {
+        Debug.Log("End burst charge");
+    }
+
+
+    //Burst dash
+    private void StartBurstDash()
+    {
+        Debug.Log("Start burst dash");
+    }
+
+    private void UpdateBurstDash()
+    {
+        Debug.Log("Update burst dash");
+    }
+
+    private void EndBurstDash()
+    {
+        Debug.Log("End burst dash");
+    }
+
+    //Burst
+    //P1
+    private void StartBurst_P1()
+    {
+        Debug.Log("Start burst");
+    }
+
+    private void UpdateBurst_P1()
+    {
+        Debug.Log("Update burst");
+    }
+
+    private void EndBurst_P1()
+    {
+        Debug.Log("End burst");
+    }
+
+    //P2
+    private void StartBurst_P2()
+    {
+        Debug.Log("Start burst 2");
+    }
+
+    private void UpdateBurst_P2()
+    {
+        Debug.Log("Update burst 2");
+    }
+
+    private void EndBurst_P2()
+    {
+        Debug.Log("End burst 2");
+    }
+
+    #endregion
+
+    #region SPAWN_ENEMIES
+    private void StartSpawnEnemies()
+    {
+        CalculateSpawnersScore();
+
+        if (currentPhase == PHASE.PHASE1)
+        {
+            Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult);
+        }
+        else if (currentPhase == PHASE.PHASE2)
+        {
+            Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
+        }
+
+        UpdateAnimationSpd(speedMult);
+        Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
+        if (cameraComp != null)
+            cameraComp.target = this.gameObject;
+
+        Input.PlayHaptic(0.8f, 600);
+
+        SpawnEnemies();
+    }
+
+    private void UpdateSpawnEnemies()
+    {
+        //Debug.Log("Spawning Enemies");
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void EndSpawnEnemies()
+    {
+        enemySkillTimer = enemySkillTime;
+
+        if (cameraComp != null)
+            cameraComp.target = Core.instance.gameObject;
+    }
+
+    private void SpawnEnemies()
+    {
+        spawnEnemyTimer = spawnEnemyTime;
+
+        // The 2 closests spawns are selected
+        var spawnPointEnum = spawnPoints.GetEnumerator();
+
+        spawnPointEnum.MoveNext();
+        SpawnEnemy(spawnPointEnum.Current.Value);
+
+        spawnPointEnum.MoveNext();
+        SpawnEnemy(spawnPointEnum.Current.Value);
+
+        ableToSpawnEnemies = false;
+    }
+
+    private void SpawnEnemy(GameObject spawnPoint)
+    {
+        Debug.Log("Spawning enemy... ");
+
+        if (spawnPoint == null)
+        {
+            Debug.Log("Spawning point was null!!! ");
+            return;
+        }
+
+        SpawnPoint mySpawnPoint = spawnPoint.GetComponent<SpawnPoint>();
+
+        if (mySpawnPoint != null)
+        {
+            Random seed = new Random();
+
+            float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
+
+            mySpawnPoint.QueueSpawnEnemy(delay);
+        }
+    }
+
+    private void CalculateSpawnersScore()
+    {
+        if (spawnPoints != null)
+            spawnPoints.Clear();
+        else
+            spawnPoints = new SortedDictionary<float, GameObject>();
+
+        if (spawner1 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition), spawner1);
+        }
+        if (spawner2 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition), spawner2);
+        }
+        if (spawner3 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition), spawner3);
+        }
+        if (spawner4 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition), spawner4);
+        }
+        if (spawner5 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition), spawner5);
+        }
+        if (spawner6 != null)
+        {
+            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition), spawner6);
+        }
+
+    }
+
+
+    #endregion
+
     #region PRESENTATION
     private void StartPresentation()
     {
@@ -1027,14 +1300,7 @@ public class MofGuideonRework : Entity
                     }
                 }
                 if (currentHealthPoints <= 0.0f)
-                {
-                    if (currentPhase == PHASE.PHASE1)
-                    {
-                        inputsList.Add(INPUT.IN_CHANGE_PHASE);
-                    }
-                    else
-                        inputsList.Add(INPUT.IN_DEAD);
-                }
+                   inputsList.Add(INPUT.IN_DEAD);
             }
         }
     }
@@ -1235,118 +1501,6 @@ public class MofGuideonRework : Entity
 
     #endregion
 
-    #region SPAWN_ENEMIES
-    private void StartSpawnEnemies()
-    {
-        CalculateSpawnersScore();
-
-        if (currentPhase == PHASE.PHASE1)
-        {
-            Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult);
-        }
-        else if (currentPhase == PHASE.PHASE2)
-        {
-            Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
-        }
-
-        UpdateAnimationSpd(speedMult);
-        Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
-        if (cameraComp != null)
-            cameraComp.target = this.gameObject;
-
-        Input.PlayHaptic(0.8f, 600);
-
-        SpawnEnemies();
-    }
-
-    private void UpdateSpawnEnemies()
-    {
-        //Debug.Log("Spawning Enemies");
-        UpdateAnimationSpd(speedMult);
-    }
-
-    private void EndSpawnEnemies()
-    {
-        enemySkillTimer = enemySkillTime;
-
-        if (cameraComp != null)
-            cameraComp.target = Core.instance.gameObject;
-    }
-
-    private void SpawnEnemies()
-    {
-        spawnEnemyTimer = spawnEnemyTime;
-
-        // The 2 closests spawns are selected
-        var spawnPointEnum = spawnPoints.GetEnumerator();
-
-        spawnPointEnum.MoveNext();
-        SpawnEnemy(spawnPointEnum.Current.Value);
-
-        spawnPointEnum.MoveNext();
-        SpawnEnemy(spawnPointEnum.Current.Value);
-
-        ableToSpawnEnemies = false;
-    }
-
-    private void SpawnEnemy(GameObject spawnPoint)
-    {
-        Debug.Log("Spawning enemy... ");
-
-        if (spawnPoint == null)
-        {
-            Debug.Log("Spawning point was null!!! ");
-            return;
-        }
-
-        SpawnPoint mySpawnPoint = spawnPoint.GetComponent<SpawnPoint>();
-
-        if (mySpawnPoint != null)
-        {
-            Random seed = new Random();
-
-            float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
-
-            mySpawnPoint.QueueSpawnEnemy(delay);
-        }
-    }
-
-    private void CalculateSpawnersScore()
-    {
-        if (spawnPoints != null)
-            spawnPoints.Clear();
-        else
-            spawnPoints = new SortedDictionary<float, GameObject>();
-
-        if (spawner1 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition), spawner1);
-        }
-        if (spawner2 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition), spawner2);
-        }
-        if (spawner3 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition), spawner3);
-        }
-        if (spawner4 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition), spawner4);
-        }
-        if (spawner5 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition), spawner5);
-        }
-        if (spawner6 != null)
-        {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition), spawner6);
-        }
-
-    }
-
-
-    #endregion
 
     #region STATUS
 
