@@ -17,7 +17,7 @@ public class InsideCollider : DiamondComponent
 
         if (IsInside() && displayText.IsEnabled() == false && (displaySecondaryText == null || displaySecondaryText.IsEnabled() == false)) 
         {
-            displayText.Enable(true);
+            displayText.EnableNav(true);
 
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = true;
@@ -32,13 +32,13 @@ public class InsideCollider : DiamondComponent
         }
         else if (!IsInside() && displayText.IsEnabled())
         {
-            displayText.Enable(false);
+            displayText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
         }
         else if (!IsInside() && displaySecondaryText!=null && displaySecondaryText.IsEnabled())
         {
-            displaySecondaryText.Enable(false);
+            displaySecondaryText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
         }

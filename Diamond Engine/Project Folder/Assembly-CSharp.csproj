@@ -230,6 +230,7 @@
 		<Compile Include="Assets\Scripts\Menu_Grogu.cs" />
 		<Compile Include="Assets\Scripts\RespawnNoDamage.cs" />
 		<Compile Include="Assets\Scripts\CinematicManager.cs" />
+		<Compile Include="Assets\Scripts\EnableWithPause.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
