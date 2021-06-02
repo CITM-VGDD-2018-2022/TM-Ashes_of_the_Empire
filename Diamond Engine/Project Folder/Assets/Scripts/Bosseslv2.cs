@@ -607,10 +607,14 @@ public class Bosseslv2 : Entity
                             jumpOnce = true;
                             Audio.StopAudio(gameObject);
                             Audio.PlayAudio(gameObject, "Play_Skel_Jump_Impact");
-                        }
-                        else if (gameObject.CompareTag("Wampa"))
-                        {
+                            if (impactParticles != null)
+                            {
+                                impactParticles.Play();
+                                Debug.Log("sdhifgksdfhgklsdfhgklsdfñg");
+                            }
 
+                            if (slamParticles != null)
+                                slamParticles.Play();
                         }
                     }
                 }
