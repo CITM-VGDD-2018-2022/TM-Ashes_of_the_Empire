@@ -29,7 +29,7 @@ public class Bosseslv2 : Entity
     public float maxHealthPoints = 0.0f;
     public GameObject leftSpike = null;
     public GameObject rightSpike = null;
-    public float angleDispersion = 50f;
+    public float angleDispersion = 15f;
 
 
     //Private Variables
@@ -77,7 +77,7 @@ public class Bosseslv2 : Entity
     public float damageBounceRush = 20f;
     private bool wampaRushCharged = false;
     private float wampaRushChargeCounter = 0.0f;
-    List<WampaProjectile> projectiles = new List<WampaProjectile>();
+    List<GameObject> projectiles = new List<GameObject>();
 
     //Jump Slam
     private JUMPSLAM jumpslam = JUMPSLAM.NONE;
@@ -140,7 +140,7 @@ public class Bosseslv2 : Entity
             colliderRush = gameObject.GetChild("Rush");
         }
         rushOnce = true;
-
+        angle = angleDispersion;
     }
 
     #region PROJECTILE
@@ -212,19 +212,22 @@ public class Bosseslv2 : Entity
                     float angleIncrement = angleDispersion / 2;
                     float currentAngle = -(angleDispersion * 0.5f);
 
-                    for (int i = 0; i < 3; i++)
-                    {
-                        GameObject projectile = InternalCalls.CreatePrefab("Library/Prefabs/394647661.prefab", projectilePoint.transform.globalPosition, projectilePoint.transform.localRotation, null);
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1547931276.prefab", projectilePoint.transform.globalPosition, projectilePoint.transform.globalRotation * Quaternion.RotateAroundAxis(Vector3.up, -90 * Mathf.Deg2RRad), null));
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1547931276.prefab", projectilePoint.transform.globalPosition, projectilePoint.transform.globalRotation * Quaternion.RotateAroundAxis(Vector3.up, -90 * Mathf.Deg2RRad), null));
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1547931276.prefab", projectilePoint.transform.globalPosition, projectilePoint.transform.globalRotation * Quaternion.RotateAroundAxis(Vector3.up, -90 * Mathf.Deg2RRad), null));
 
-                        if (projectile != null)
+                    if (projectiles.Count != 0)
+                    {
+                        for (int i = 0; i < projectiles.Count; ++i)
                         {
-                            projectile.transform.localRotation *= Quaternion.RotateAroundAxis(Vector3.up, currentAngle * Mathf.Deg2RRad);
-                            projectile.transform.localPosition += projectile.transform.GetForward().normalized * 1.25f;
+                            if (projectiles[i] != null)
+                            {
+                                projectiles[i].transform.localRotation *= Quaternion.RotateAroundAxis(Vector3.up, currentAngle * Mathf.Deg2RRad);
+                            }
                             currentAngle += angleIncrement;
                         }
+                        angleDispersion = angle;
                     }
-
-                    //Debug.Log("Throwing projectile");
 
                     if (firstShot)
                     {

@@ -1,0 +1,143 @@
+{
+    "assets_path": "Assets\/Prefabs\/Wampa_Spike.prefab",
+    "Game Objects": [
+        {
+            "name": "Wampa_Spike",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1922920936,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 1547931276,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                4.2891507148742676,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "WampaProjectile",
+                    "damage": 10,
+                    "child": 137505315
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": true,
+                    "LockLinearY": true,
+                    "LockLinearZ": true,
+                    "LockAngularX": true,
+                    "LockAngularY": true,
+                    "LockAngularZ": true,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1.2999999523162842,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Spike",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 137505315,
+            "ParentUID": 1922920936,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0.7071068286895752,
+                0,
+                0.7071068286895752
+            ],
+            "Scale": [
+                0.10000000149011612,
+                0.10000000149011612,
+                0.10000000149011612
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1768109.mmh",
+                    "UID": 1768109,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        }
+    ]
+}

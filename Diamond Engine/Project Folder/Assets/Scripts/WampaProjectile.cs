@@ -11,11 +11,12 @@ public class WampaProjectile : DiamondComponent
 	private bool to_destroy = false;
 	private float timer = 3f;
 
+
 	public void Update()
 	{
 		if (!to_destroy)
 		{
-			gameObject.transform.localPosition += gameObject.transform.GetForward() * speed * Time.deltaTime;
+			gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
 		}
 
         if (timer > 0f)
