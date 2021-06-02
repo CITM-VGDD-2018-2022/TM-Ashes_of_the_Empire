@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -6.134101390838623,
-        -31.124710083007813,
-        -50.897815704345703
+        -4.0055594444274902,
+        -96.833259582519531,
+        -2.7953543663024902
     ],
     "EditorCameraZ": [
-        0.12795446813106537,
-        -0.71197676658630371,
-        0.69044685363769531
+        0.91110384464263916,
+        -0.33210828900337219,
+        0.24411857128143311
     ],
     "EditorCameraY": [
-        0.12996071577072144,
-        0.70220303535461426,
-        0.70001506805419922
+        0.32084587216377258,
+        0.94324123859405518,
+        0.085754774510860443
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -106,7 +106,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 10.800000190734863,
-                    "hFOV": 16.200000762939453,
+                    "hFOV": 13.960000038146973,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -39981,6 +39981,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "CinematicManager",
+                    "gameCamera": 1855298081,
                     "cameraPos1": 782994521
                 }
             ]
@@ -40031,20 +40032,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                7.5487761497497559,
-                -98.588027954101563,
-                0
+                3.9382350444793701,
+                -101.20589447021484,
+                -2.6713106632232666
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                6.1817218011128716e-08,
+                -0.70770454406738281,
+                6.1817218011128716e-08,
+                -0.70650851726531982
             ],
             "Scale": [
+                1.0000014305114746,
                 1,
-                1,
-                1
+                1.0000014305114746
             ],
             "Components": [
                 {
@@ -40667,58 +40668,6 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
                     "MaterialUID": 1948688504
-                }
-            ]
-        },
-        {
-            "name": "Game Camera",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": false,
-            "UID": 2026523019,
-            "ParentUID": 27864027,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                2.3791122436523438,
-                -95.724586486816406,
-                -2.2406978607177734
-            ],
-            "Rotation": [
-                0.19560408592224121,
-                0.65415400266647339,
-                -0.18005712330341339,
-                0.70809674263000488
-            ],
-            "Scale": [
-                1.0000007152557373,
-                0.99999964237213135,
-                1.0000001192092896
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 4,
-                    "Active": true,
-                    "fType": 2,
-                    "nearPlaneDist": 1,
-                    "farPlaneDist": 100,
-                    "vFOV": 1.0471975803375244,
-                    "hFOV": 1.4274487495422363,
-                    "culling": false,
-                    "HDR": true,
-                    "drawSkybox": true,
-                    "ProfileUID": 1969686679
-                },
-                {
-                    "Type": 12,
-                    "Active": true,
-                    "isDefaultListener": true
                 }
             ]
         }
