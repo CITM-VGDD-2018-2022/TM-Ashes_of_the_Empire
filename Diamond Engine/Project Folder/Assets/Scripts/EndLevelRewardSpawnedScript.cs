@@ -14,9 +14,17 @@ public class EndLevelRewardSpawn : DiamondComponent
     private float timer = 0.0f;
     public float timeToStarMovingToPlayer = 5.0f;
 
+    public GameObject particleSystemObj = null;
+    private ParticleSystem particleSystem = null;
+
     public void Awake()
     {
         timer = timeToStarMovingToPlayer;
+
+        if(particleSystemObj != null)
+        {
+            particleSystem = particleSystemObj.GetComponent<ParticleSystem>();
+        }
     }
 
     public void OnTriggerEnter(GameObject collidedGameObject)
@@ -84,4 +92,11 @@ public class EndLevelRewardSpawn : DiamondComponent
 
     public float ParametricBlend(float t) => ((t * t) / (2.0f * ((t * t) - t) + 1.0f));
 
+    public void PlayParticles()
+    {
+        if (particleSystem != null)
+        {
+            particleSystem.Play();
+        }
+    }
 }
