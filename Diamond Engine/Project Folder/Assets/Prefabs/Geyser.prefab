@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -20.724592208862305,
-                -1.0260200500488281,
-                -12.365111351013184
+                6.9800815582275391,
+                0.12910756468772888,
+                -6.3542680740356445
             ],
             "Rotation": [
                 0,
@@ -78,6 +78,16 @@
                         1,
                         1.2999999523162842
                     ]
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Play_Geyser",
+                    "audBankReference": "Environment",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },

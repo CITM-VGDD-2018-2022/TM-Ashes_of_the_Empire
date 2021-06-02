@@ -125,6 +125,7 @@ public class Geyser : DiamondComponent
             eruptionParticles.Play();
         }
 
+        Audio.PlayAudio(gameObject, "Play_Geyser");
         eruptionTimer = eruptionTime;
         canHurtPlayer = true;
     }

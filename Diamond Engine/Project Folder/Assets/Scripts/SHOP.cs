@@ -288,7 +288,8 @@ public class SHOP : DiamondComponent
         opening = true;
         shopUI.EnableNav(true);
         textPopUp.Enable(false);
-        Core.instance.LockInputs(true); 
+        Core.instance.LockInputs(true);
+        Audio.PlayAudio(gameObject, "Play_UI_Shop_Open");
         if (defaultButton != null)
             defaultButton.GetComponent<Navigation>().Select();
     }
