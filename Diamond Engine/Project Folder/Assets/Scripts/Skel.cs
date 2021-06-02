@@ -191,6 +191,8 @@ public class Skel : Bosseslv2
         {
             inputsList.Add(INPUT.IN_BOUNCERUSH_END);
             finalBounce = false;
+            if (ballParticles != null)
+                ballParticles.Play();
         }
     }
 

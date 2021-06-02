@@ -106,6 +106,12 @@ public class Bosseslv2 : Entity
 
     public GameObject trailParticlesObj = null;
     protected ParticleSystem trailParticles = null;
+    public GameObject slamParticlesObj = null;
+    protected ParticleSystem slamParticles = null;
+    public GameObject impactParticlesObj = null;
+    protected ParticleSystem impactParticles = null;
+    public GameObject ballParticlesObj = null;
+    protected ParticleSystem ballParticles = null;
 
     enum JUMPSLAM : int
     {
@@ -150,6 +156,21 @@ public class Bosseslv2 : Entity
         if (trailParticlesObj != null)
         {
             trailParticles = trailParticlesObj.GetComponent<ParticleSystem>();
+        }
+
+        if (ballParticlesObj != null)
+        {
+            ballParticles = ballParticlesObj.GetComponent<ParticleSystem>();
+        }
+
+        if (impactParticlesObj != null)
+        {
+            impactParticles = impactParticlesObj.GetComponent<ParticleSystem>();
+        }
+
+        if (slamParticlesObj != null)
+        {
+            slamParticles = slamParticlesObj.GetComponent<ParticleSystem>();
         }
     }
 
@@ -361,7 +382,8 @@ public class Bosseslv2 : Entity
         }
         rushOnce = true;
 
-        trailParticles.Stop();
+        if (trailParticles != null)
+            trailParticles.Stop();
     }
     #endregion
 
@@ -430,17 +452,22 @@ public class Bosseslv2 : Entity
             if (currentTarget == finalTarget)
             {
                 returnToInitTarget = true;
+                if (ballParticles != null)
+                    ballParticles.Play();
             }
         }
         else if (currentTarget != finalTarget && !returnToInitTarget)
         {
             currentTarget = finalTarget;
+            if (ballParticles != null)
+                ballParticles.Play();
         }
         else if (currentTarget == finalTarget && returnToInitTarget)
         {
             currentTarget = initTarget;
             finalBounce = true;
-
+            if (ballParticles != null)
+                ballParticles.Play();
         }
 
         UpdateAnimationSpd(speedMult);
