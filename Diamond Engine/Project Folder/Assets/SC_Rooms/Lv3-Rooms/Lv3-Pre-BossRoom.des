@@ -14784,6 +14784,19 @@
                     "fadeDistance": 100,
                     "maxDistance": 500,
                     "calculateShadows": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "AreaLightOscilate",
+                    "duration": 5,
+                    "initialIntensity": 4,
+                    "finalIntensity": 2,
+                    "initialFadeDistance": 100,
+                    "finalFadeDistance": 50,
+                    "initialMaxDistance": 500,
+                    "finalMaxDistance": 300,
+                    "interpolationType": 2
                 }
             ]
         },
