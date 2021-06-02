@@ -21,13 +21,17 @@ public class RancorProjectile : DiamondComponent
 		lifeTime -= Time.deltaTime;
 
 		if (lifeTime < 0.0f)
+		{
+			Audio.PlayAudio(gameObject, "Play_Rock_Impact");
 			InternalCalls.Destroy(gameObject);
+		}
 	}
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
         if (triggeredGameObject.CompareTag("Player"))
         {
+			Audio.PlayAudio(gameObject, "Play_Rock_Impact");
 			PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
 				health.TakeDamage(damage);
@@ -35,6 +39,7 @@ public class RancorProjectile : DiamondComponent
     }
 	public void OnCollisionEnter(GameObject collidedGameObject)
 	{
+		Audio.PlayAudio(gameObject, "Play_Rock_Impact");
 		InternalCalls.Destroy(gameObject);
     }
 }

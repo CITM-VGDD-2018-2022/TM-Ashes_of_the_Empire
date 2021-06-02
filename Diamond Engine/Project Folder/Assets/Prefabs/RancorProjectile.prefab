@@ -66,7 +66,7 @@
                     ],
                     "Rotation": [
                         0.1265559047460556,
-                        -0.00018361760885454714,
+                        -0.0001836176379583776,
                         0.00020386083633638918,
                         0.99195945262908936
                     ],
@@ -75,6 +75,16 @@
                         0.78900086879730225,
                         1.3359999656677246
                     ]
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Play_Rock_Impact",
+                    "audBankReference": "Rancor",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
@@ -115,6 +125,7 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/57267156.mmh",
                     "UID": 57267156,
+                    "bumpDepth": 0,
                     "alternColor": [
                         0.61032867431640625,
                         0.61032599210739136,
@@ -126,7 +137,8 @@
                         0
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 3,
@@ -140,7 +152,7 @@
                     "Type": 26,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/vertex_color_stencil.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1540644281.mat",
                     "MaterialUID": 1540644281
                 }
