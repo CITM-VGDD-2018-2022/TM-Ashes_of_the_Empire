@@ -229,6 +229,7 @@
 		<Compile Include="Assets\Scripts\MofGuideonRework.cs" />
 		<Compile Include="Assets\Scripts\Menu_Grogu.cs" />
 		<Compile Include="Assets\Scripts\RespawnNoDamage.cs" />
+		<Compile Include="Assets\Scripts\CinematicManager.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />

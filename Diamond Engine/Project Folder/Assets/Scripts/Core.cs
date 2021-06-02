@@ -2383,38 +2383,65 @@ public class Core : Entity
         if (triggeredGameObject.CompareTag("Zone1"))
         {
             tuto_state = TUTO_STATES.DASH;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
             Debug.Log("Entering Zone 1");
         }
 
         if (triggeredGameObject.CompareTag("Zone2"))
         {
             tuto_state = TUTO_STATES.BLASTER;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
             Debug.Log("Entering Zone 2");
         }
 
         if (triggeredGameObject.CompareTag("Zone3"))
         {
             tuto_state = TUTO_STATES.PUSH;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.PUSH;
             Debug.Log("Entering Zone 3");
         }
 
         if (triggeredGameObject.CompareTag("Zone4"))
         {
             tuto_state = TUTO_STATES.SNIPER;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
             Debug.Log("Entering Zone 4");
         }
 
         if (triggeredGameObject.CompareTag("Zone5"))
         {
             tuto_state = TUTO_STATES.WALL;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.WALL;
             Debug.Log("Entering Zone 5");
         }
 
         if (triggeredGameObject.CompareTag("Zone6"))
         {
             tuto_state = TUTO_STATES.NONE;
+            BabyYoda babyYoda = GetBabyYoda();
+            if (babyYoda != null)
+                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.NONE;
             Debug.Log("Entering Zone 6");
         }
+    }
+
+    private BabyYoda GetBabyYoda()
+    {
+        GameObject grogu = gameObject.parent.GetChild("Grogu");
+        BabyYoda babyYoda = null;
+        if (grogu != null)
+            babyYoda = grogu.GetComponent<BabyYoda>();
+        return babyYoda;
     }
 
     public void GetCoin()

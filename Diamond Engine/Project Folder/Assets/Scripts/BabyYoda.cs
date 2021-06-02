@@ -4,6 +4,7 @@ using DiamondEngine;
 
 public class BabyYoda : DiamondComponent
 {
+
     public static BabyYoda instance;
     private Core Mando = null;
     //Vertical Movement
@@ -41,6 +42,18 @@ public class BabyYoda : DiamondComponent
     public GameObject forceGaugeFeedback = null;
     private float forceFBTimer = 0.0f;
     public float forceFBTime = 0.25f;
+
+    //Tutorial limitations
+    public enum TUTO_YODA_STATES : int
+    {
+        NONE = -1,
+        LOCKED,
+        PUSH,
+        WALL
+    }
+
+
+    public TUTO_YODA_STATES tutoState = TUTO_YODA_STATES.NONE;
 
     //State (INPUT AND STATE LOGIC)
     #region STATE
@@ -118,7 +131,7 @@ public class BabyYoda : DiamondComponent
                 }
             }
 
-            Core.instance.hud.GetComponent<HUD>().UpdateForce((int)currentForce,totalForce + (int) maxForceMod);
+            Core.instance.hud.GetComponent<HUD>().UpdateForce((int)currentForce, totalForce + (int)maxForceMod);
         }
     }
     #endregion
@@ -127,6 +140,8 @@ public class BabyYoda : DiamondComponent
     {
         instance = this;
         wallSkillOffset = new Vector3(0.0f, 1.5f, 3.0f);
+
+        tutoState = TUTO_YODA_STATES.NONE;
 
         currentForce = totalForce;
         flipVertical = false;
@@ -203,12 +218,12 @@ public class BabyYoda : DiamondComponent
             //(flipVertical)
             verticalOffset += (flipVertical == true ? verticalSpeed : -verticalSpeed) * Time.deltaTime;
 
-            if(flipVertical == true && gameObject.transform.globalPosition.y - pointToFollow.y >= verticalAmplitude)
+            if (flipVertical == true && gameObject.transform.globalPosition.y - pointToFollow.y >= verticalAmplitude)
             {
                 flipVertical = false;
                 //Debug.Log("Flip to down");
             }
-            else if(flipVertical == false && pointToFollow.y - gameObject.transform.globalPosition.y >= verticalAmplitude)
+            else if (flipVertical == false && pointToFollow.y - gameObject.transform.globalPosition.y >= verticalAmplitude)
             {
                 flipVertical = true;
                 //Debug.Log("Flip to up");
@@ -342,7 +357,7 @@ public class BabyYoda : DiamondComponent
     //All button inputs must be handled here
     private void ProcessExternalInput()
     {
-        if (Input.GetLeftTrigger() > 0 && lefttTriggerPressed == false)
+        if ((tutoState == TUTO_YODA_STATES.NONE || tutoState == TUTO_YODA_STATES.PUSH) && Input.GetLeftTrigger() > 0 && lefttTriggerPressed == false)
         {
             if (input == INPUTS.NONE)
             {
@@ -350,12 +365,12 @@ public class BabyYoda : DiamondComponent
                 lefttTriggerPressed = true;
             }
         }
-        else if (Input.GetLeftTrigger() == 0)
+        else if (tutoState == TUTO_YODA_STATES.LOCKED || tutoState == TUTO_YODA_STATES.WALL || Input.GetLeftTrigger() == 0)
         {
             lefttTriggerPressed = false;
         }
 
-        if (Input.GetGamepadButton(DEControllerButton.LEFTSHOULDER) > 0 && leftButtonPressed == false)
+        if ((tutoState == TUTO_YODA_STATES.NONE || tutoState == TUTO_YODA_STATES.WALL) && Input.GetGamepadButton(DEControllerButton.LEFTSHOULDER) > 0 && leftButtonPressed == false)
         {
             if (input == INPUTS.NONE)
             {
@@ -363,7 +378,7 @@ public class BabyYoda : DiamondComponent
                 leftButtonPressed = true;
             }
         }
-        else if (Input.GetGamepadButton(DEControllerButton.LEFTSHOULDER) == 0)
+        else if (tutoState == TUTO_YODA_STATES.LOCKED || tutoState == TUTO_YODA_STATES.PUSH || Input.GetGamepadButton(DEControllerButton.LEFTSHOULDER) == 0)
         {
             leftButtonPressed = false;
         }
@@ -445,7 +460,7 @@ public class BabyYoda : DiamondComponent
 
     private bool ExecutePushSkill()
     {
-       
+
 
         if (Core.instance.gameObject == null || currentForce < skillPushForceCost * Core.instance.GroguCost)
             return false;
@@ -479,8 +494,8 @@ public class BabyYoda : DiamondComponent
 
         GameObject pushWall = InternalCalls.CreatePrefab("Library/Prefabs/541990364.prefab", new Vector3(mandoTransform.globalPosition.x, mandoTransform.globalPosition.y + 1, mandoTransform.globalPosition.z), mandoTransform.globalRotation, new Vector3(1, 1, 1));
         Audio.PlayAudio(gameObject, "Play_Force_Push");
-        
-        if(aimHelpTarget != null)
+
+        if (aimHelpTarget != null)
         {
             Mathf.LookAt(ref pushWall.transform, aimHelpTarget.transform.globalPosition);
         }
@@ -525,7 +540,7 @@ public class BabyYoda : DiamondComponent
 
         InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1, 1, 1));
         Audio.PlayAudio(gameObject, "Play_Grogu_Wall");
-        
+
         //if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.UTILITY_HEAL_WHEN_GROGU_SKILL))        
         //    Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-Skill_Tree_Data.GetMandoSkillTree().U7_healAmount);                
 
