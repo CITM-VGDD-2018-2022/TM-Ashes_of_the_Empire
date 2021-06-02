@@ -487,6 +487,11 @@ void C_Camera::SetAspectRatio(float aspectRatio)
 	camFrustrum.horizontalFov = 2.f * atanf(tanf(camFrustrum.verticalFov * 0.5f) * aspectRatio);
 }
 
+void C_Camera::SetAsGameCamera()
+{
+	EngineExternal->moduleRenderer3D->SetGameRenderTarget(this);
+}
+
 bool C_Camera::IsInsideFrustum(AABB& globalAABB)
 {
 	return (this->camFrustrum.type == FrustumType::PerspectiveFrustum) ? PrespectiveCulling(globalAABB) : OrthoCulling(globalAABB);
