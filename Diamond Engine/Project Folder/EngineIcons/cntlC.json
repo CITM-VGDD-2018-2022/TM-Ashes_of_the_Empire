@@ -1,55 +1,88 @@
 {
     "Game Objects": [
         {
-            "name": "PitAreaLight2",
+            "name": "Wampa Trail",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1336852597,
-            "ParentUID": 1788828234,
-            "PrefabReference": 0,
-            "PrefabID": 0,
+            "UID": 1078685705,
+            "ParentUID": 424241714,
+            "PrefabReference": 273054205,
+            "PrefabID": 781563061,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                12.624422073364258,
-                1.6095180511474609,
-                -0.5632014274597168
+                0.5825047492980957,
+                0,
+                0.24118614196777344
             ],
             "Rotation": [
-                6.7501566673473096e-14,
-                0.7071068286895752,
-                -0.7071068286895752,
-                -6.1817310381684365e-08
+                -6.2888496188406862e-08,
+                -0.73699939250946045,
+                -6.2888496188406862e-08,
+                0.67589348554611206
             ],
             "Scale": [
-                1.0000684261322021,
-                0.99982213973999023,
-                0.99982213973999023
+                1.0000079870223999,
+                1,
+                1.0000206232070923
             ],
-            "Components": [
+            "PrefabObjects": [
                 {
-                    "Type": 1,
-                    "Active": true
+                    "name": "Small Floor Cracks",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1674332215,
+                    "ParentUID": 1078685705,
+                    "PrefabID": 0,
+                    "PrefabReference": 187950083,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        3.1500000953674316,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 },
                 {
-                    "Type": 27,
+                    "name": "Snow Dust",
+                    "tag": "Untagged",
+                    "layer": "Default",
                     "Active": true,
-                    "lightColor": [
-                        1,
+                    "UID": 1123297708,
+                    "ParentUID": 1078685705,
+                    "PrefabID": 0,
+                    "PrefabReference": 1669359148,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
                         0,
+                        3.2999999523162842,
                         0
                     ],
-                    "ambientLightColor": [
-                        1,
+                    "Rotation": [
                         0,
-                        0
+                        0,
+                        0,
+                        1
                     ],
-                    "lightIntensity": 10,
-                    "specularValue": 1,
-                    "fadeDistance": 50,
-                    "maxDistance": 2500,
-                    "calculateShadows": true
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         }

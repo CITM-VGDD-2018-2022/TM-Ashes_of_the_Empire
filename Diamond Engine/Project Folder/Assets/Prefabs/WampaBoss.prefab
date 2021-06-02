@@ -6,16 +6,16 @@
             "tag": "Wampa",
             "layer": "Default",
             "Active": true,
-            "UID": 1731619441,
+            "UID": 274104517,
             "ParentUID": 0,
             "PrefabReference": 0,
             "PrefabID": 853667087,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                5.4413871765136719,
+                3.0195872783660889,
                 3.2203922271728516,
-                3.0673677921295166
+                3.2772514820098877
             ],
             "Rotation": [
                 -6.1759500624702923e-08,
@@ -114,7 +114,7 @@
                     "dieTime": 2,
                     "dieTimer": 0,
                     "restingTime": 4,
-                    "restingTimer": 3.3180007934570313,
+                    "restingTimer": 3.3180007934570312,
                     "bounceRushTime": 0,
                     "bounceRushTimer": 0,
                     "presentationTimer": -0.0046678381040692329,
@@ -134,7 +134,7 @@
                 {
                     "Type": 16,
                     "Active": true,
-                    "RootBone UID": 1640126575,
+                    "RootBone UID": 1590034714,
                     "MeshRendererUID": 1248796976,
                     "Animations": [
                         894928226,
@@ -162,7 +162,7 @@
             "layer": "Default",
             "Active": true,
             "UID": 1640126575,
-            "ParentUID": 1731619441,
+            "ParentUID": 274104517,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -818,7 +818,7 @@
             "Position": [
                 0.73293805122375488,
                 2.0116567611694336e-07,
-                2.9802322387695313e-08
+                2.9802322387695312e-08
             ],
             "Rotation": [
                 -0.086343824863433838,
@@ -954,7 +954,7 @@
             "Position": [
                 0.19554179906845093,
                 -1.4901161193847656e-08,
-                2.9802322387695313e-08
+                2.9802322387695312e-08
             ],
             "Rotation": [
                 0.040153469890356064,
@@ -1411,7 +1411,7 @@
             "Static": false,
             "Position": [
                 0.26050901412963867,
-                -2.9802322387695313e-08,
+                -2.9802322387695312e-08,
                 5.9604644775390625e-08
             ],
             "Rotation": [
@@ -1896,7 +1896,7 @@
             "layer": "Default",
             "Active": true,
             "UID": 222592259,
-            "ParentUID": 1731619441,
+            "ParentUID": 274104517,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -1930,7 +1930,7 @@
             "layer": "Default",
             "Active": true,
             "UID": 1190528649,
-            "ParentUID": 1731619441,
+            "ParentUID": 274104517,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -2051,7 +2051,237 @@
                     "ScriptName": "AtackBosslv2",
                     "damage": 15,
                     "camera": 1189863237,
-                    "boss": 1731619441
+                    "boss": 274104517
+                }
+            ]
+        },
+        {
+            "name": "Wampa Trail",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 273054205,
+            "ParentUID": 274104517,
+            "PrefabReference": 0,
+            "PrefabID": 781563061,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.56049728393554688,
+                4.5537948608398438e-05,
+                0.060762405395507812
+            ],
+            "Rotation": [
+                -6.2888496188406862e-08,
+                -0.73699939250946045,
+                -6.2888496188406862e-08,
+                0.67589348554611206
+            ],
+            "Scale": [
+                1.0000079870223999,
+                1,
+                1.0000354051589966
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Small Floor Cracks",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1610615566,
+                    "ParentUID": 273054205,
+                    "PrefabID": 0,
+                    "PrefabReference": 187950083,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        3.1500000953674316,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Snow Dust",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1807692381,
+                    "ParentUID": 273054205,
+                    "PrefabID": 0,
+                    "PrefabReference": 1669359148,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        3.2999999523162842,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Wampa Rush",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1161203184,
+            "ParentUID": 274104517,
+            "PrefabReference": 0,
+            "PrefabID": 2104981949,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -6.289104703682824e-08,
+                -0.73700052499771118,
+                -6.289104703682824e-08,
+                0.675892174243927
+            ],
+            "Scale": [
+                0.99999690055847168,
+                1,
+                0.99999696016311646
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Snow Rush",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 609415400,
+                    "ParentUID": 1161203184,
+                    "PrefabID": 0,
+                    "PrefabReference": 366128318,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.24670886993408203
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Wampa Trail",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 273054205,
+            "ParentUID": 274104517,
+            "PrefabReference": 0,
+            "PrefabID": 781563061,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.56049728393554688,
+                4.5537948608398438e-05,
+                0.060762405395507812
+            ],
+            "Rotation": [
+                -6.2888496188406862e-08,
+                -0.73699939250946045,
+                -6.2888496188406862e-08,
+                0.67589348554611206
+            ],
+            "Scale": [
+                1.0000079870223999,
+                1,
+                1.0000354051589966
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Small Floor Cracks",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 857818611,
+                    "ParentUID": 273054205,
+                    "PrefabID": 0,
+                    "PrefabReference": 187950083,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        3.1500000953674316,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Snow Dust",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 669293361,
+                    "ParentUID": 273054205,
+                    "PrefabID": 0,
+                    "PrefabReference": 1669359148,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        3.2999999523162842,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         }
