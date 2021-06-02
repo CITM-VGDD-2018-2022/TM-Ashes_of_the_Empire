@@ -52,6 +52,9 @@ public class GameSceneManager : DiamondComponent
 
                 rewardObject.AssignLibraryTextureToMaterial(rewardData.libraryTextureID, "diffuseTexture");
                 rewardObject.Enable(true);
+                if (rewardSpawnComponent != null) {
+                    rewardSpawnComponent.PlayParticles();
+                }
                 Core.instance.lockInputs = false;
                 Audio.PlayAudio(rewardObject, "Play_UI_Boon_Pickup");
 
