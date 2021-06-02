@@ -469,9 +469,25 @@ public class MofGuideonRework : Entity
                     break;
 
                 case STATE.START:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRESENTATION:
+                            StartPresentation();
+
+                            currentState = STATE.PRESENTATION;
+                            break;
+                    }
                     break;
 
                 case STATE.PRESENTATION:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRESENTATION_END:
+                            EndPresentation();
+
+                            currentState = STATE.CHASE;
+                            break;
+                    }
                     break;
 
                 case STATE.CHASE:
@@ -490,10 +506,16 @@ public class MofGuideonRework : Entity
                     {
                         case INPUT.IN_MELEE_COMBO_1_CHARGE:
                             currentState = STATE.MELEE_COMBO_1_CHARGE;
+                            break; 
+
+                        case INPUT.IN_SPAWN_ENEMIES:
+                            StartSpawnEnemies();
+                            currentState = STATE.SPAWN_ENEMIES;
                             break;
 
                     }
                     break;
+
                 case STATE.MELEE_COMBO_1_CHARGE:
                     break;
                 case STATE.MELEE_COMBO_1_DASH:
@@ -522,8 +544,23 @@ public class MofGuideonRework : Entity
                     break;
                 case STATE.MELEE_COMBO_6:
                     break;
+
                 case STATE.SPAWN_ENEMIES:
+                    switch (input)
+                    {
+                        case INPUT.IN_SPAWN_ENEMIES_END:
+                            currentState = STATE.ACTION_SELECT;
+                            EndSpawnEnemies();
+                            break;
+
+                        case INPUT.IN_CHANGE_PHASE:
+                            currentState = STATE.CHANGE_PHASE;
+                            EndSpawnEnemies();
+                            StartPhaseChange();
+                            break;
+                    }
                     break;
+
                 case STATE.PRE_BURST_CHARGE:
                     break;
                 case STATE.PRE_BURST_DASH:
@@ -536,8 +573,17 @@ public class MofGuideonRework : Entity
                     break;
                 case STATE.RETRIEVE_SABER:
                     break;
+
                 case STATE.CHANGE_PHASE:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_CHARGE_END:
+                            currentState = STATE.CHASE;
+                            EndPhaseChange();
+                            break;
+                    }
                     break;
+
                 case STATE.DEAD:
                     break;
                 default:
