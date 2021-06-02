@@ -1,9 +1,9 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -58.710422515869141,
-        45.812229156494141,
-        -30.649856567382813
+        -2.3463935852050781,
+        1.6921488046646118,
+        -0.79439878463745117
     ],
     "EditorCameraZ": [
         0.78213119506835938,
@@ -1405,7 +1405,7 @@
                         },
                         {
                             "Index": 12,
-                            "UID": 571186766,
+                            "UID": 1675214331,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -1419,7 +1419,7 @@
                         },
                         {
                             "Index": 16,
-                            "UID": 571186766,
+                            "UID": 1675214331,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -1433,7 +1433,7 @@
                         },
                         {
                             "Index": 20,
-                            "UID": 571186766,
+                            "UID": 1675214331,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -1520,503 +1520,6 @@
             ]
         },
         {
-            "name": "Resolution",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 571186766,
-            "ParentUID": 1237621552,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        -3.7999999523162842
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        27.799999237060547,
-                        5.6999998092651367
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 7,
-                    "Active": true,
-                    "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
-                    "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
-                    "Hovered_UID": 619086891,
-                    "Unhovered_AssetsPath": "Assets\/UI\/MENU\/bar_hover.png",
-                    "Unhovered_LibraryPath": "Library\/Textures\/1884509864.dds",
-                    "Unhovered_UID": 1884509864,
-                    "ButtonState": 2,
-                    "Is Selected": false,
-                    "HoverSFX": "Play_UI_Button_Hover",
-                    "PressedSFX": "Empty"
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Assets\/UI\/MENU\/bar_hover.png",
-                    "LibraryPath": "Library\/Textures\/1884509864.dds",
-                    "UID": 1884509864,
-                    "fadeValue": 0
-                },
-                {
-                    "Type": 17,
-                    "Active": true,
-                    "Map": [
-                        {
-                            "Index": 1,
-                            "UID": 883108457,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 11,
-                            "UID": 963703211,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 12,
-                            "UID": 1675214331,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 13,
-                            "UID": 1990196458,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 14,
-                            "UID": 1576441547,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 15,
-                            "UID": 963703211,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 16,
-                            "UID": 1675214331,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 17,
-                            "UID": 1990196458,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 18,
-                            "UID": 1576441547,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 19,
-                            "UID": 963703211,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 20,
-                            "UID": 1675214331,
-                            "Action": 1,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 21,
-                            "UID": 1990196458,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        },
-                        {
-                            "Index": 22,
-                            "UID": 1576441547,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        }
-                    ],
-                    "Button Being Used": -1,
-                    "Type Of UI": 7,
-                    "Is Selected": false
-                }
-            ]
-        },
-        {
-            "name": "Text",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1639144187,
-            "ParentUID": 571186766,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        -21.600000381469727,
-                        8.1999998092651367
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        10,
-                        16
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/744544911.mat",
-                    "MaterialUID": 744544911
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "text": "RESOLUTION",
-                    "maxTextLenght": 0,
-                    "fontName": "Library\/Fonts\/renner-medium.ttf",
-                    "textColor": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "ResolutionUp",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1576441547,
-            "ParentUID": 571186766,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        31.600000381469727,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        3.4000000953674316,
-                        5.6999998092651367
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 7,
-                    "Active": true,
-                    "Pressed_AssetsPath": "Assets\/UI\/MENU\/arrow_right_pressed.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/70978250.dds",
-                    "Pressed_UID": 70978250,
-                    "Unhovered_AssetsPath": "Assets\/UI\/MENU\/arrow_right.png",
-                    "Unhovered_LibraryPath": "Library\/Textures\/1346482548.dds",
-                    "Unhovered_UID": 1346482548,
-                    "Script_Name": "DisSett",
-                    "ButtonState": 2,
-                    "Is Selected": false,
-                    "HoverSFX": "Empty",
-                    "PressedSFX": "Play_UI_Button_Select"
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Assets\/UI\/MENU\/arrow_right.png",
-                    "LibraryPath": "Library\/Textures\/1346482548.dds",
-                    "UID": 1346482548,
-                    "fadeValue": 0
-                },
-                {
-                    "Type": 17,
-                    "Active": true,
-                    "Map": [],
-                    "Button Being Used": -1,
-                    "Type Of UI": 7,
-                    "Is Selected": false
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "DisSett",
-                    "displayScreen": 1618442095,
-                    "bigBrother": 1311017402
-                }
-            ]
-        },
-        {
-            "name": "ResolutionDown",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1990196458,
-            "ParentUID": 571186766,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        -31.899999618530273,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        3.4000000953674316,
-                        5.6999998092651367
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 7,
-                    "Active": true,
-                    "Pressed_AssetsPath": "Assets\/UI\/MENU\/arrow_left_pressed.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/1878130604.dds",
-                    "Pressed_UID": 1878130604,
-                    "Unhovered_AssetsPath": "Assets\/UI\/MENU\/arrow_left.png",
-                    "Unhovered_LibraryPath": "Library\/Textures\/1148197231.dds",
-                    "Unhovered_UID": 1148197231,
-                    "Script_Name": "DisSett",
-                    "ButtonState": 2,
-                    "Is Selected": false,
-                    "HoverSFX": "Empty",
-                    "PressedSFX": "Play_UI_Button_Select"
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Assets\/UI\/MENU\/arrow_left.png",
-                    "LibraryPath": "Library\/Textures\/1148197231.dds",
-                    "UID": 1148197231,
-                    "fadeValue": 0
-                },
-                {
-                    "Type": 17,
-                    "Active": true,
-                    "Map": [],
-                    "Button Being Used": -1,
-                    "Type Of UI": 7,
-                    "Is Selected": false
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "DisSett",
-                    "displayScreen": 1618442095,
-                    "bigBrother": 1311017402
-                }
-            ]
-        },
-        {
-            "name": "Resolution Value",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 220507385,
-            "ParentUID": 571186766,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        -17.299999237060547,
-                        -3.5999999046325684
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        9,
-                        13.800000190734863
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/744544911.mat",
-                    "MaterialUID": 744544911
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "text": "1920 x 1080",
-                    "maxTextLenght": 0,
-                    "fontName": "Library\/Fonts\/renner-medium.ttf",
-                    "textColor": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "WindowMode",
             "tag": "Untagged",
             "layer": "Default",
@@ -2079,7 +1582,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1884509864.dds",
                     "Unhovered_UID": 1884509864,
                     "Script_Name": "DisSett",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Empty"
@@ -2105,7 +1608,7 @@
                         },
                         {
                             "Index": 11,
-                            "UID": 571186766,
+                            "UID": 963703211,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -2133,7 +1636,7 @@
                         },
                         {
                             "Index": 15,
-                            "UID": 571186766,
+                            "UID": 963703211,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -2161,7 +1664,7 @@
                         },
                         {
                             "Index": 19,
-                            "UID": 571186766,
+                            "UID": 963703211,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -2331,7 +1834,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1346482548.dds",
                     "Unhovered_UID": 1346482548,
                     "Script_Name": "DisSett",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Empty",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -2424,7 +1927,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1148197231.dds",
                     "Unhovered_UID": 1148197231,
                     "Script_Name": "DisSett",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Empty",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -2587,7 +2090,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/834295412.dds",
                     "Unhovered_UID": 834295412,
                     "Script_Name": "DisSett",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -2894,9 +2397,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -3404,9 +2904,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -3909,9 +3406,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -4415,9 +3909,6 @@
                 {
                     "Type": 7,
                     "Active": true,
-                    "Pressed_AssetsPath": "Assets\/Baker_house.png",
-                    "Pressed_LibraryPath": "Library\/Textures\/366394407.dds",
-                    "Pressed_UID": 366394407,
                     "Hovered_AssetsPath": "Assets\/UI\/MENU\/bar_empty_hover.png",
                     "Hovered_LibraryPath": "Library\/Textures\/619086891.dds",
                     "Hovered_UID": 619086891,
@@ -8110,8 +7601,8 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 21.617647171020508,
-                    "hFOV": 42.389705657958984,
+                    "vFOV": 22.5,
+                    "hFOV": 43.272056579589844,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": false
@@ -13602,10 +13093,10 @@
                 -0.19471836090087891
             ],
             "Rotation": [
-                0.19392229616641998,
-                -2.7353405651631135e-10,
-                1.3877789462175682e-17,
-                0.98101699352264404
+                0.1939222663640976,
+                -2.7353402876073574e-10,
+                1.3877787807814457e-17,
+                0.98101687431335449
             ],
             "Scale": [
                 1,
@@ -16197,10 +15688,10 @@
                 -0.031259402632713318
             ],
             "Rotation": [
-                0.13620610535144806,
-                -0.046609122306108475,
-                -0.21609100699424744,
-                0.96570199728012085
+                0.13620609045028687,
+                -0.046609118580818176,
+                -0.21609097719192505,
+                0.9657018780708313
             ],
             "Scale": [
                 1,
@@ -16435,10 +15926,10 @@
                 -1.8771970644593239e-09
             ],
             "Rotation": [
-                -0.99998891353607178,
-                0.0036636232398450375,
-                0.0029935899656265974,
-                -1.0057549843622837e-05
+                -0.99998879432678223,
+                0.0036636227741837502,
+                0.0029935894999653101,
+                -1.0057548934128135e-05
             ],
             "Scale": [
                 1.0000998973846436,
@@ -16639,10 +16130,10 @@
                 -0.025999993085861206
             ],
             "Rotation": [
-                0.0091560175642371178,
-                -0.48849374055862427,
-                0.019452359527349472,
-                0.8723025918006897
+                0.0091560166329145432,
+                -0.48849368095397949,
+                0.019452357664704323,
+                0.87230247259140015
             ],
             "Scale": [
                 1,
@@ -19690,10 +19181,10 @@
                 -0.031259402632713318
             ],
             "Rotation": [
-                0.13620610535144806,
-                -0.046609122306108475,
-                -0.21609100699424744,
-                0.96570199728012085
+                0.13620609045028687,
+                -0.046609118580818176,
+                -0.21609097719192505,
+                0.9657018780708313
             ],
             "Scale": [
                 1,
@@ -19928,10 +19419,10 @@
                 -1.8771970644593239e-09
             ],
             "Rotation": [
-                -0.99998891353607178,
-                0.0036636232398450375,
-                0.0029935899656265974,
-                -1.0057549843622837e-05
+                -0.99998879432678223,
+                0.0036636227741837502,
+                0.0029935894999653101,
+                -1.0057548934128135e-05
             ],
             "Scale": [
                 1.0000998973846436,
@@ -20132,10 +19623,10 @@
                 -0.025999993085861206
             ],
             "Rotation": [
-                0.0091560175642371178,
-                -0.48849374055862427,
-                0.019452359527349472,
-                0.8723025918006897
+                0.0091560166329145432,
+                -0.48849368095397949,
+                0.019452357664704323,
+                0.87230247259140015
             ],
             "Scale": [
                 1,
