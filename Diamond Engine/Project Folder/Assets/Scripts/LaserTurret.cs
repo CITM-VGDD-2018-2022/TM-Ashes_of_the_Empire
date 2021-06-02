@@ -404,6 +404,7 @@ public class LaserTurret : Enemy
             BH_Bullet bullet = collidedGameObject.GetComponent<BH_Bullet>();
             if (bullet != null)
             {
+                Audio.PlayAudio(gameObject, "Play_Turret_Hit");
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
                 // healthPoints -= collidedGameObject.GetComponent<BH_Bullet>().damage;
             }
