@@ -79,6 +79,7 @@ public class HubSkillTreeController : DiamondComponent
             }
             if (grogu_tree != null && grogu_tree.IsEnabled())
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
                 grogu_tree.EnableNav(false);
                 if (groguText != null)
                     groguText.Enable(true);
