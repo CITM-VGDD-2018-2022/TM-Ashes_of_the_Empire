@@ -187,27 +187,6 @@ public class Bosseslv2 : Entity
                     else
                         Audio.PlayAudio(gameObject, "Play_Wampa_Projectile_Throw_2");
                     firstThrow = false;
-                    //projectiles.Clear();
-                    //Vector3 targetPos = (Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition);
-                    //projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/394647661.prefab", pos, gameObject.transform.localRotation, null).GetComponent<WampaProjectile>());
-                    //projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/394647661.prefab", pos, gameObject.transform.localRotation, null).GetComponent<WampaProjectile>());
-                    //projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/394647661.prefab", pos, gameObject.transform.localRotation, null).GetComponent<WampaProjectile>());
-
-
-
-                    //if (projectiles.Count!=0)
-                    //{
-                    //    for(int i = 0;i<projectiles.Count;++i)
-                    //    {
-                    //        if (projectiles[i] != null)
-                    //        {
-                    //            projectiles[i].damage = (int)(projectiles[i].damage * damageMult);
-                    //        }
-                    //    }
-                    //    projectiles[0].targetDirection = new Vector3(targetPos.x, targetPos.y, targetPos.z);
-                    //    projectiles[1].targetDirection = new Vector3(targetPos.x - 5, targetPos.y, targetPos.z);
-                    //    projectiles[2].targetDirection = new Vector3(targetPos.x + 5, targetPos.y, targetPos.z);
-                    //}
 
                     float angleIncrement = angleDispersion / 2;
                     float currentAngle = -(angleDispersion * 0.5f);
@@ -226,8 +205,8 @@ public class Bosseslv2 : Entity
                             }
                             currentAngle += angleIncrement;
                         }
-                        angleDispersion = angle;
                     }
+                    projectiles.Clear();
 
                     if (firstShot)
                     {
