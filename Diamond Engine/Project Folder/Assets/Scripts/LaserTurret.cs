@@ -479,6 +479,7 @@ public class LaserTurret : Enemy
                 }
                 this.AddStatus(STATUS_TYPE.ENEMY_VULNERABLE, applyType, vulerableSev, vulerableTime);
 
+                Audio.PlayAudio(gameObject, "Play_Turret_Hit");
                 TakeDamage(bullet.GetDamage() * damageMult);
 
                 if (Core.instance != null)
