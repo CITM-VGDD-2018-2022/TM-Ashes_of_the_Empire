@@ -264,6 +264,9 @@ public class Bosseslv2 : Entity
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
 
+        if (trailParticles != null)
+            trailParticles.Play();
+
         //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
         Animator.Play(gameObject, "WP_Roar", speedMult*2);
         UpdateAnimationSpd(speedMult);
@@ -358,6 +361,8 @@ public class Bosseslv2 : Entity
             Audio.PlayAudio(gameObject, "Play_Skel_Rush_Recovery");
         }
         rushOnce = true;
+
+        trailParticles.Stop();
     }
     #endregion
 

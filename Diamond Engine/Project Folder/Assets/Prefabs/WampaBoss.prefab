@@ -114,11 +114,13 @@
                     "dieTime": 2,
                     "dieTimer": 0,
                     "restingTime": 4,
-                    "restingTimer": 3.3180007934570312,
+                    "restingTimer": 3.3180007934570313,
                     "bounceRushTime": 0,
                     "bounceRushTimer": 0,
                     "presentationTimer": -0.0046678381040692329,
                     "presentationTime": 2.8173332214355469,
+                    "trailTimer": 0,
+                    "trailTime": 0,
                     "projectileAngle": 30,
                     "projectileRange": 6,
                     "projectileDamage": 10,
@@ -127,6 +129,7 @@
                     "totalJumpSlamTimer": 0,
                     "totalJumpSlamTime": 0,
                     "finalBounce": true,
+                    "trailParticlesObj": 609415400,
                     "firstSorrowRoar": false,
                     "angry": false,
                     "rushCrash": false
@@ -818,7 +821,7 @@
             "Position": [
                 0.73293805122375488,
                 2.0116567611694336e-07,
-                2.9802322387695312e-08
+                2.9802322387695313e-08
             ],
             "Rotation": [
                 -0.086343824863433838,
@@ -954,7 +957,7 @@
             "Position": [
                 0.19554179906845093,
                 -1.4901161193847656e-08,
-                2.9802322387695312e-08
+                2.9802322387695313e-08
             ],
             "Rotation": [
                 0.040153469890356064,
@@ -1411,7 +1414,7 @@
             "Static": false,
             "Position": [
                 0.26050901412963867,
-                -2.9802322387695312e-08,
+                -2.9802322387695313e-08,
                 5.9604644775390625e-08
             ],
             "Rotation": [
@@ -2056,92 +2059,6 @@
             ]
         },
         {
-            "name": "Wampa Trail",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 273054205,
-            "ParentUID": 274104517,
-            "PrefabReference": 0,
-            "PrefabID": 781563061,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -0.56049728393554688,
-                4.5537948608398438e-05,
-                0.060762405395507812
-            ],
-            "Rotation": [
-                -6.2888496188406862e-08,
-                -0.73699939250946045,
-                -6.2888496188406862e-08,
-                0.67589348554611206
-            ],
-            "Scale": [
-                1.0000079870223999,
-                1,
-                1.0000354051589966
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "Small Floor Cracks",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1610615566,
-                    "ParentUID": 273054205,
-                    "PrefabID": 0,
-                    "PrefabReference": 187950083,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        3.1500000953674316,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Snow Dust",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1807692381,
-                    "ParentUID": 273054205,
-                    "PrefabID": 0,
-                    "PrefabReference": 1669359148,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        3.2999999523162842,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Wampa Rush",
             "tag": "Untagged",
             "layer": "Default",
@@ -2149,139 +2066,322 @@
             "UID": 1161203184,
             "ParentUID": 274104517,
             "PrefabReference": 0,
-            "PrefabID": 2104981949,
+            "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
                 0,
-                0
+                2.384185791015625e-07
             ],
             "Rotation": [
-                -6.289104703682824e-08,
-                -0.73700052499771118,
-                -6.289104703682824e-08,
-                0.675892174243927
+                -6.2890535446058493e-08,
+                -0.73700028657913208,
+                -6.2890535446058493e-08,
+                0.6758924126625061
             ],
             "Scale": [
-                0.99999690055847168,
+                0.9999968409538269,
                 1,
                 0.99999696016311646
             ],
-            "PrefabObjects": [
+            "Components": [
                 {
-                    "name": "Snow Rush",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 609415400,
-                    "ParentUID": 1161203184,
-                    "PrefabID": 0,
-                    "PrefabReference": 366128318,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        -0.24670886993408203
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
+                    "Type": 1,
+                    "Active": true
                 }
             ]
         },
         {
-            "name": "Wampa Trail",
+            "name": "Snow Rush",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 273054205,
-            "ParentUID": 274104517,
+            "UID": 609415400,
+            "ParentUID": 1161203184,
             "PrefabReference": 0,
-            "PrefabID": 781563061,
+            "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.56049728393554688,
-                4.5537948608398438e-05,
-                0.060762405395507812
+                0,
+                0,
+                -0.24670886993408203
             ],
             "Rotation": [
-                -6.2888496188406862e-08,
-                -0.73699939250946045,
-                -6.2888496188406862e-08,
-                0.67589348554611206
+                0,
+                0,
+                1.938117262436246e-18,
+                1
             ],
             "Scale": [
-                1.0000079870223999,
                 1,
-                1.0000354051589966
+                1,
+                1
             ],
-            "PrefabObjects": [
+            "Components": [
                 {
-                    "name": "Small Floor Cracks",
-                    "tag": "Untagged",
-                    "layer": "Default",
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
                     "Active": true,
-                    "UID": 857818611,
-                    "ParentUID": 273054205,
-                    "PrefabID": 0,
-                    "PrefabReference": 187950083,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        3.1500000953674316,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": true,
+                    "maxDuration": 0.10499999672174454,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/170375526.dds",
+                            "texUID": 170375526,
+                            "paEmitterName": "Trail 1",
+                            "paLifeTime": [
+                                0.30000001192092896,
+                                1
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 50,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 0,
+                                    "paFOLT_gravityMod": 0.10000000149011612,
+                                    "paFOLT_gravity": -0.98000001907348633,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 1,
+                                    "paROLT_rotation": [
+                                        0,
+                                        360
+                                    ],
+                                    "paROLT_rotationSpeed": [
+                                        0.5,
+                                        0.5
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.35686275362968445,
+                                                0.71764707565307617,
+                                                1,
+                                                0.41897231340408325
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.32411068677902222,
+                                                0.62331861257553101,
+                                                1,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0.40540626645088196
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.25,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 1,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeSphereRadius": 1,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/1162313265.dds",
+                            "texUID": 1162313265,
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0.30000001192092896,
+                                1
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 50,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 0,
+                                    "paFOLT_gravityMod": 0.25,
+                                    "paFOLT_gravity": -2.4500000476837158,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 1,
+                                    "paROLT_rotation": [
+                                        0,
+                                        360
+                                    ],
+                                    "paROLT_rotationSpeed": [
+                                        1,
+                                        -1
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.99998998641967773,
+                                                0.99999558925628662,
+                                                1,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.36758893728256226,
+                                                0.72255039215087891,
+                                                1,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.25,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 1,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeSphereRadius": 0.5,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/1723061674.dds",
+                            "texUID": 1723061674,
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0.40000000596046448,
+                                0.60000002384185791
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                0.68840581178665161,
+                                0.86321604251861572,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 150,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 0,
+                                    "paFOLT_gravityMod": 0.80000001192092896,
+                                    "paFOLT_gravity": -7.8400001525878906,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.20000000298023224,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 2,
+                                    "paShapeRandSpeed": 1,
+                                    "PaShapeSphereRadius": 0.5,
+                                    "PaShapeSphereDirection": true,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
-                    "name": "Snow Dust",
-                    "tag": "Untagged",
-                    "layer": "Default",
+                    "Type": 21,
                     "Active": true,
-                    "UID": 669293361,
-                    "ParentUID": 273054205,
-                    "PrefabID": 0,
-                    "PrefabReference": 1669359148,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        3.2999999523162842,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
                 }
             ]
         }
