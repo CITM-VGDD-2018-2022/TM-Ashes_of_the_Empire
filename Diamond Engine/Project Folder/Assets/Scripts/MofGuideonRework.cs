@@ -74,6 +74,7 @@ public class MofGuideonRework : Entity
         IN_SPAWN_ENEMIES_END,
 
         IN_PRE_BURST_CHARGE,
+        IN_PRE_BURST_CHARGE_END,
         IN_PRE_BURST_DASH,
         IN_PRE_BURST_DASH_END,
         IN_BURST1,
@@ -639,25 +640,66 @@ public class MofGuideonRework : Entity
                     switch (input)
                     {
                         case INPUT.IN_SPAWN_ENEMIES_END:
-                            currentState = STATE.ACTION_SELECT;
                             EndSpawnEnemies();
+                            currentState = STATE.ACTION_SELECT;
                             break;
 
                         case INPUT.IN_DEAD:
-                            currentState = STATE.CHANGE_PHASE;
                             EndSpawnEnemies();
                             StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
                             break;
                     }
                     break;
 
                 case STATE.PRE_BURST_CHARGE:
-                    break;
+                    switch (input)
+                    {
+                        case INPUT.IN_PRE_BURST_CHARGE_END:
+                            EndBurstCharge();
+                            StartBurstDash();
+                            currentState = STATE.PRE_BURST_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurstCharge();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
+                        break;
+
                 case STATE.PRE_BURST_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRE_BURST_DASH_END:
+                            EndBurstDash();
+                            StartBurst_P1();
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurstDash();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
+
                 case STATE.BURST_1:
-                    break;
-                case STATE.BURST_2:
+                    switch (input)
+                    {
+                        case INPUT.IN_BURST_END:
+                            EndBurst_P1();
+                            StartChase_P1();
+                            currentState = STATE.CHASE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurst_P1();
+                            StartPhaseChange(); //Change for die or something
+                            currentState = STATE.CHANGE_PHASE;
+                            break;
+                    }
                     break;
                 case STATE.THROW_SABER:
                     break;
@@ -928,7 +970,7 @@ public class MofGuideonRework : Entity
 
     #region BURST
     //Burst charge
-    //P1
+
     private void StartBurstCharge()
     {
         Debug.Log("Start burst charge");
