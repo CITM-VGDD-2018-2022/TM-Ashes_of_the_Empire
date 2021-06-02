@@ -264,9 +264,6 @@ public class Bosseslv2 : Entity
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
 
-        if (trailParticles != null)
-            trailParticles.Play();
-
         //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
         Animator.Play(gameObject, "WP_Roar", speedMult*2);
         UpdateAnimationSpd(speedMult);
@@ -276,17 +273,19 @@ public class Bosseslv2 : Entity
         {
             colliderRush.GetComponent<BoxCollider>().active = true;
         }
-        else
-        {
-            Debug.Log("iobjsdfghiosdfhgo");
-        }
     }
     public void UpdateFastRush()
     {
+        Debug.Log(wampaRushChargeCounter.ToString());
         if (!wampaRushCharged)
         {
             wampaRushChargeCounter += Time.deltaTime;
-            if (wampaRushChargeCounter >= 3.0f) wampaRushCharged = true;
+            if (wampaRushChargeCounter >= 0.49f)
+            {
+                if (trailParticles != null)
+                    trailParticles.Play();
+                wampaRushCharged = true;
+            }
         }
         else
         {
