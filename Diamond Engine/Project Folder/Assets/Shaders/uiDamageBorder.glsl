@@ -27,6 +27,7 @@ uniform float timeSinceStart;
 uniform vec3 damageColor;
 
 uniform float pulsationAmmount;
+uniform float alphaAmmount;
 void main() 
 {
 	
@@ -46,11 +47,14 @@ void main()
 
 	vec4 myColor= vec4(damageColor,1.0);
 	myColor.a *= (1.0-vignette);
+	myColor.a *=clamp(alphaAmmount,0.0,1.0);
 	
 	fragmentColor=myColor;
 }
 
 #endif
+
+
 
 
 

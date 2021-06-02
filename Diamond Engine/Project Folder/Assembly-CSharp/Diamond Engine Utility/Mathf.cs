@@ -35,6 +35,16 @@ namespace DiamondEngine
             float t = InvLerp(iMin, iMax, v);
             return Lerp(oMin,oMax,t);
         }
+        //Same as remap but clamps to the nearest value
+        public static float RemapClamp(float iMin, float iMax, float oMin, float oMax, float v)
+        {
+            float realMin = Math.Min(iMin, iMax);
+            float realMax = Math.Max(iMin, iMax);
+            float newV = Clamp(v, realMin, realMax);
+
+            float t = InvLerp(iMin, iMax, newV);
+            return Lerp(oMin, oMax, t);
+        }
 
         public static float LerpAngle(float from, float to, float t)
         {
