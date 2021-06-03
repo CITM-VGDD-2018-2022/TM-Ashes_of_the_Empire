@@ -30,6 +30,7 @@ public class CameraController : DiamondComponent
 
     private float wait_timer = 0.0f;
 
+    public bool startFollow = false;
     public void Awake()
     {
         //PlayerHealth.onPlayerDeath += DeadZoom;
@@ -41,6 +42,11 @@ public class CameraController : DiamondComponent
 
     public void Update()
     {
+        if (!startFollow)
+        {
+            return;
+        }
+
         if (waitPlayerZoom && target != null)
         {
             if (wait_timer < wait_Time) wait_timer += Time.deltaTime;
