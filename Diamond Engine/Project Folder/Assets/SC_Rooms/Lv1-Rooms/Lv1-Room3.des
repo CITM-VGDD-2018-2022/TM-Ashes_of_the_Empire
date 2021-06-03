@@ -1,26 +1,26 @@
 {
     "NavMesh": 1917905990,
     "EditorCameraPosition": [
-        -10.528655052185059,
-        14.079948425292969,
-        -17.569765090942383
+        -9.3973608016967773,
+        17.073724746704102,
+        -13.522106170654297
     ],
     "EditorCameraZ": [
-        0.36495193839073181,
-        -0.31881639361381531,
-        0.87473785877227783
+        0.35797578096389771,
+        -0.12345625460147858,
+        0.92553365230560303
     ],
     "EditorCameraY": [
-        0.12277793139219284,
-        0.94781649112701416,
-        0.29422691464424133
+        0.044564731419086456,
+        0.99235004186630249,
+        0.11513224244117737
     ],
-    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
-    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
-    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
-    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
-    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
-    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
+    "SkyboxPath0": "Library\/Textures\/2022232686.dds",
+    "SkyboxPath1": "Library\/Textures\/2100226782.dds",
+    "SkyboxPath2": "Library\/Textures\/833934686.dds",
+    "SkyboxPath3": "Library\/Textures\/317611191.dds",
+    "SkyboxPath4": "Library\/Textures\/1917099099.dds",
+    "SkyboxPath5": "Library\/Textures\/182300541.dds",
     "skyboxColor": [
         1,
         1,
@@ -1646,10 +1646,10 @@
                 11.487642288208008
             ],
             "Rotation": [
-                -0.49781492352485657,
-                0.50217866897583008,
-                0.50217604637145996,
-                0.49781152606010437
+                -0.49781486392021179,
+                0.5021786093711853,
+                0.50217598676681519,
+                0.49781146645545959
             ],
             "Scale": [
                 2.6026985645294189,
@@ -4799,8 +4799,8 @@
                     "fSize": 30,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 22.166666030883789,
-                    "hFOV": 41.366664886474609,
+                    "vFOV": 21.666666030883789,
+                    "hFOV": 33.666667938232422,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -4824,7 +4824,8 @@
                     "cornerBotRightX": 100,
                     "cornerBotRightY": 100,
                     "deadZoom": 80,
-                    "deadEasingSec": 5
+                    "deadEasingSec": 5,
+                    "startFollow": true
                 },
                 {
                     "Type": 12,
@@ -6239,7 +6240,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        9.8000001907348633,
                         0,
                         0
                     ],

@@ -1,26 +1,26 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -2.3463935852050781,
-        1.6921488046646118,
-        -0.79439878463745117
+        10.253064155578613,
+        44.663421630859375,
+        -42.998355865478516
     ],
     "EditorCameraZ": [
-        0.78213119506835938,
-        -0.56404960155487061,
-        0.26479959487915039
+        -0.4306110143661499,
+        -0.41209116578102112,
+        0.80296647548675537
     ],
     "EditorCameraY": [
-        0.53426051139831543,
-        0.82574081420898438,
-        0.1808801144361496
+        -0.19476327300071716,
+        0.91114264726638794,
+        0.36316165328025818
     ],
-    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
-    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
-    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
-    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
-    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
-    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
+    "SkyboxPath0": "Library\/Textures\/2022232686.dds",
+    "SkyboxPath1": "Library\/Textures\/2100226782.dds",
+    "SkyboxPath2": "Library\/Textures\/833934686.dds",
+    "SkyboxPath3": "Library\/Textures\/317611191.dds",
+    "SkyboxPath4": "Library\/Textures\/1917099099.dds",
+    "SkyboxPath5": "Library\/Textures\/182300541.dds",
     "skyboxColor": [
         1,
         0.60118746757507324,
@@ -7601,8 +7601,8 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 23.051469802856445,
-                    "hFOV": 38.161762237548828,
+                    "vFOV": 23.897058486938477,
+                    "hFOV": 37.132350921630859,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": false

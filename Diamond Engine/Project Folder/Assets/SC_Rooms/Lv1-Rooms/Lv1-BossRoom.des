@@ -1,26 +1,26 @@
 {
     "NavMesh": 141075303,
     "EditorCameraPosition": [
-        -14.76091194152832,
-        20.508785247802734,
-        -18.640678405761719
+        -44.046276092529297,
+        70.73236083984375,
+        -104.40142059326172
     ],
     "EditorCameraZ": [
-        0.52645623683929443,
-        -0.56674754619598389,
-        0.63375163078308105
+        0.026795333251357079,
+        -0.44656917452812195,
+        0.89434814453125
     ],
     "EditorCameraY": [
-        0.36214762926101685,
-        0.82389152050018311,
-        0.43594944477081299
+        0.013377578929066658,
+        0.89474910497665405,
+        0.44636878371238708
     ],
-    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
-    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
-    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl1up.png",
-    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl1dn.png",
-    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl1ft.png",
-    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl1bk.png",
+    "SkyboxPath0": "Library\/Textures\/2022232686.dds",
+    "SkyboxPath1": "Library\/Textures\/2100226782.dds",
+    "SkyboxPath2": "Library\/Textures\/833934686.dds",
+    "SkyboxPath3": "Library\/Textures\/317611191.dds",
+    "SkyboxPath4": "Library\/Textures\/1917099099.dds",
+    "SkyboxPath5": "Library\/Textures\/182300541.dds",
     "skyboxColor": [
         1,
         1,
@@ -109,8 +109,8 @@
                     "fSize": 39,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 17.05128288269043,
-                    "hFOV": 31.820512771606445,
+                    "vFOV": 16.666666030883789,
+                    "hFOV": 25.897436141967773,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -138,7 +138,8 @@
                     "cornerBotRightX": 100,
                     "cornerBotRightY": 100,
                     "deadZoom": 80,
-                    "deadEasingSec": 5
+                    "deadEasingSec": 5,
+                    "startFollow": true
                 },
                 {
                     "Type": 5,
@@ -347,10 +348,10 @@
                 -1.1299999952316284
             ],
             "Rotation": [
-                -1.8126291934095207e-07,
-                -0.99776542186737061,
-                -1.8126291934095207e-07,
-                0.066814035177230835
+                -1.812629477626615e-07,
+                -0.99776554107666016,
+                -1.812629477626615e-07,
+                0.066814042627811432
             ],
             "Scale": [
                 1.0000159740447998,
@@ -4509,7 +4510,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        9.8000001907348633,
                         0,
                         0
                     ],
@@ -12095,10 +12096,10 @@
                 -17.078739166259766
             ],
             "Rotation": [
-                -0.49484473466873169,
-                0.50511026382446289,
-                0.50510197877883911,
-                0.49483761191368103
+                -0.49484479427337646,
+                0.50511032342910767,
+                0.50510203838348389,
+                0.49483767151832581
             ],
             "Scale": [
                 2.6428577899932861,
