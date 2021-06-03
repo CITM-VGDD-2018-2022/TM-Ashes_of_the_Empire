@@ -7,15 +7,15 @@
             "layer": "Default",
             "Active": true,
             "UID": 149225084,
-            "ParentUID": 48336684,
+            "ParentUID": 0,
             "PrefabReference": 0,
             "PrefabID": 1298559028,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -6.6128301620483398,
-                1.2264294624328613,
-                -6.9130721092224121
+                -1.0472651720046997,
+                9.9741706848144531,
+                -7.246741771697998
             ],
             "Rotation": [
                 -0.7071068286895752,
@@ -25,8 +25,8 @@
             ],
             "Scale": [
                 1,
-                0.99999886751174927,
-                0.99999886751174927
+                0.99996805191040039,
+                0.99996805191040039
             ],
             "Components": [
                 {
@@ -54,8 +54,8 @@
                             "texUID": 2134419253,
                             "paEmitterName": "Entrada",
                             "paLifeTime": [
-                                0.05000000074505806,
-                                0.10000000149011612
+                                0.15000000596046448,
+                                0.15000000596046448
                             ],
                             "paSize": [
                                 1,
@@ -67,7 +67,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 400,
+                            "paPerSec": 600,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -75,35 +75,53 @@
                                     "Gradients": [
                                         {
                                             "paColorOLTcolor": [
-                                                0.97647058963775635,
-                                                0.77254903316497803,
-                                                0.13725490868091583,
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0.012755102477967739
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.59550559520721436,
+                                                0.05918068066239357,
+                                                0,
                                                 1
                                             ],
-                                            "paColorOLTposition": 0
+                                            "paColorOLTposition": 0.30357137322425842
                                         },
                                         {
                                             "paColorOLTcolor": [
                                                 1,
                                                 0.09937894344329834,
                                                 0,
-                                                1
+                                                0.98127341270446777
                                             ],
-                                            "paColorOLTposition": 0.59729701280593872
+                                            "paColorOLTposition": 0.60750102996826172
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.97647058963775635,
+                                                0.77254903316497803,
+                                                0.13725490868091583,
+                                                0.97003746032714844
+                                            ],
+                                            "paColorOLTposition": 0.98469376564025879
                                         }
                                     ]
                                 },
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.10000000149011612,
+                                    "paSizeOLTStartSize": 0.20000000298023224,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
                                     "paEffectType": 5,
                                     "paShapeHasInitSpeed": true,
-                                    "paShapePartSpeed": 0.10000000149011612,
+                                    "paShapePartSpeed": 0.69999998807907104,
                                     "paShapeRandSpeed": 0.5,
-                                    "PaShapeSphereRadius": 0.0099999997764825821,
+                                    "PaShapeSphereRadius": 0.029999999329447746,
                                     "PaShapeSphereDirection": false,
                                     "PaShapeSphereAngle": 0,
                                     "paShapeType": 1,
@@ -121,7 +139,7 @@
                             "texUID": 39569920,
                             "paEmitterName": "Sortida",
                             "paLifeTime": [
-                                0.10000000149011612,
+                                0.20000000298023224,
                                 0.20000000298023224
                             ],
                             "paSize": [
@@ -134,7 +152,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 300,
+                            "paPerSec": 500,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -142,12 +160,12 @@
                                     "Gradients": [
                                         {
                                             "paColorOLTcolor": [
-                                                0.97647058963775635,
-                                                0.77254903316497803,
-                                                0.13725490868091583,
-                                                1
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                0
                                             ],
-                                            "paColorOLTposition": 0
+                                            "paColorOLTposition": 0.018946118652820587
                                         },
                                         {
                                             "paColorOLTcolor": [
@@ -156,7 +174,7 @@
                                                 0,
                                                 1
                                             ],
-                                            "paColorOLTposition": 0.56486433744430542
+                                            "paColorOLTposition": 0.57908183336257935
                                         }
                                     ]
                                 },
@@ -170,8 +188,8 @@
                                     "paShapeHasInitSpeed": true,
                                     "paShapePartSpeed": 3,
                                     "paShapeRandSpeed": 1,
-                                    "PaShapeConeRadius": 0.34999999403953552,
-                                    "PaShapeConeHeight": 0.80000001192092896,
+                                    "PaShapeConeRadius": 0.55000001192092896,
+                                    "PaShapeConeHeight": 1.25,
                                     "PaShapeSphereDirection": false,
                                     "PaShapeSphereAngle": 0,
                                     "paShapeType": 2,
@@ -182,6 +200,26 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0,
+                                0
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 0,
+                            "paRelative": true,
+                            "ParticleEffects": []
                         }
                     ]
                 },

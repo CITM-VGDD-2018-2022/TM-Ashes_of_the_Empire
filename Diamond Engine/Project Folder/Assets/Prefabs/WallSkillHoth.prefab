@@ -13,14 +13,14 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -8.4712934494018555,
+                2.8258984088897705,
                 2.9717388153076172,
                 -0.50391149520874023
             ],
             "Rotation": [
-                0,
+                1.8436322194776865e-15,
                 0.7071068286895752,
-                0,
+                1.8436322194776865e-15,
                 0.7071068286895752
             ],
             "Scale": [
@@ -135,7 +135,7 @@
                                 0,
                                 1
                             ],
-                            "paPerSec": 400,
+                            "paPerSec": 300,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -171,7 +171,16 @@
                                                 1,
                                                 1
                                             ],
-                                            "paColorOLTposition": 0
+                                            "paColorOLTposition": 0.0025510203558951616
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.8215293288230896,
+                                                0.90252751111984253,
+                                                0.96629214286804199,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0.017857180908322334
                                         },
                                         {
                                             "paColorOLTcolor": [
@@ -229,7 +238,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 250,
+                            "paPerSec": 50,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
