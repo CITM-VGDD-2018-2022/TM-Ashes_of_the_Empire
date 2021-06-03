@@ -384,7 +384,7 @@ public class MofGuideonRework : Entity
         {
             comboDashTimer -= myDeltaTime;
 
-            if (comboDashTimer <= 0)
+            if (comboDashTimer <= 0 || Mathf.Distance(gameObject.transform.globalPosition, targetPosition) < agent.stoppingDistance)
                 inputsList.Add(INPUT.IN_MELEE_DASH_END);
         }
 
@@ -990,13 +990,22 @@ public class MofGuideonRework : Entity
                 if (Core.instance != null)
                 {
                     Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-                    targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+
+                    if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboLongDashDistance)
+                    {
+                        targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+                    }
+                    else
+                    {
+                        targetPosition = Core.instance.gameObject.transform.globalPosition;
+                    }
+
                     agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
-                    Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
                 }
             }
         }
 
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1029,13 +1038,20 @@ public class MofGuideonRework : Entity
                 if (Core.instance != null)
                 {
                     Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-                    targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+                    if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboLongDashDistance)
+                    {
+                        targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+                    }
+                    else
+                    {
+                        targetPosition = Core.instance.gameObject.transform.globalPosition;
+                    }
                     agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
-                    Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
                 }
             }
         }
 
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1052,7 +1068,7 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboDash1()
     {
         Debug.Log("Start melee combo dash 1");
-        
+
         comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1072,7 +1088,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 1");
 
         agent.MoveToCalculatedPos(comboLongDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1097,7 +1112,14 @@ public class MofGuideonRework : Entity
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
+        {
+            targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        }
+        else
+        {
+            targetPosition = Core.instance.gameObject.transform.globalPosition;
+        }
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1109,7 +1131,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 2");
 
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1134,7 +1155,14 @@ public class MofGuideonRework : Entity
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
+        {
+            targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        }
+        else
+        {
+            targetPosition = Core.instance.gameObject.transform.globalPosition;
+        }
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1146,7 +1174,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 3");
 
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1180,7 +1207,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 4");
 
         agent.MoveToCalculatedPos(comboLongDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1205,7 +1231,14 @@ public class MofGuideonRework : Entity
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
+        {
+            targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        }
+        else
+        {
+            targetPosition = Core.instance.gameObject.transform.globalPosition;
+        }
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1217,7 +1250,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 5");
 
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1242,7 +1274,14 @@ public class MofGuideonRework : Entity
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
-        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
+        {
+            targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        }
+        else
+        {
+            targetPosition = Core.instance.gameObject.transform.globalPosition;
+        }
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1254,7 +1293,6 @@ public class MofGuideonRework : Entity
         Debug.Log("Update melee combo dash 6");
 
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
-        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
