@@ -261,11 +261,11 @@ public class MofGuideonRework : Entity
     private float saberThrowAnimTimer = 0.0f;
 
     // Change Phase
-    public float changingPhaseTime = 0f;
+    private float changingPhaseTime = 0f;
     private float changingPhaseTimer = 0f;
 
     //Die
-    public float dieTime = 0f;
+    private float dieTime = 0f;
     private float dieTimer = 0f;
 
     // Boss Bar
@@ -301,6 +301,10 @@ public class MofGuideonRework : Entity
 
         //Get anim durations
         presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose");
+
+        changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising") - 0.016f;
+
+        dieTime = Animator.GetAnimationDuration(gameObject, "MG_Death") - 0.016f;
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
 
