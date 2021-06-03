@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 public class GameResources
 {
-    public GameResources(int _id, RewardType _type, float _weight, string _description)
+    public GameResources(int _id, int _meshTextureID, RewardType _type, float _weight, string _description)
     {
         libraryTextureID = _id;
+        meshTextureID = _meshTextureID;
         resourceType = _type;
         rewardDescription = _description;
         rngChanceWeight = _weight;
@@ -15,6 +16,7 @@ public class GameResources
     public virtual void Use() { }
 
     public int libraryTextureID;
+    public int meshTextureID;
     public RewardType resourceType;
     public string rewardDescription;
     public float rngChanceWeight;
@@ -25,7 +27,7 @@ public class GameResources
 #region RESOURCES
 public class BeskarResource : GameResources
 {
-    public BeskarResource() : base(1068400135, RewardType.REWARD_BESKAR, -1.0f, "The metal of the mandalorian people, second to none in the galaxy.") { }
+    public BeskarResource() : base(1068400135, 1068400135, RewardType.REWARD_BESKAR, -1.0f, "The metal of the mandalorian people, second to none in the galaxy.") { }
 
     public override void Use()
     {
@@ -35,7 +37,7 @@ public class BeskarResource : GameResources
 
 public class MacaronResource : GameResources
 {
-    public MacaronResource() : base(694717696, RewardType.REWARD_MACARON, -1.0f, "Just a macaron. Grogu does love them, though.") { }
+    public MacaronResource() : base(694717696, 694717696, RewardType.REWARD_MACARON, -1.0f, "Just a macaron. Grogu does love them, though.") { }
 
     public override void Use()
     {
@@ -45,7 +47,7 @@ public class MacaronResource : GameResources
 
 public class ScrapResource : GameResources
 {
-    public ScrapResource() : base(268510122, RewardType.REWARD_SCRAP, -1.0f, "Remains of powerful imperial technology.") { }
+    public ScrapResource() : base(268510122, 268510122, RewardType.REWARD_SCRAP, -1.0f, "Remains of powerful imperial technology.") { }
 
     public override void Use()
     {
@@ -55,7 +57,7 @@ public class ScrapResource : GameResources
 
 public class MilkResource : GameResources
 {
-    public MilkResource() : base(1314015482, RewardType.REWARD_MILK, -1.0f, "Sweet and tasty blue milk, a true delicacy.") { }
+    public MilkResource() : base(1314015482, 1314015482, RewardType.REWARD_MILK, -1.0f, "Sweet and tasty blue milk, a true delicacy.") { }
 
     public override void Use()
     {
@@ -70,7 +72,7 @@ public class MilkResource : GameResources
 //Each time you kill an enemy heal +1 HP. - Bo Katan’s resilience
 public class BokatanResilence : GameResources
 {
-    public BokatanResilence() : base(1885100100, RewardType.REWARD_BOON, 1.0f, "Each enemy kill heals 1 HP")
+    public BokatanResilence() : base(1885100100, 1175325466, RewardType.REWARD_BOON, 1.0f, "Each enemy kill heals 1 HP")
     {
         name = "Bo-Katan's Resilence";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -95,7 +97,7 @@ public class BokatanResilence : GameResources
 //+20% max HP. - Wrecker’s resilience
 public class WreckerResilence : GameResources
 {
-    public WreckerResilence() : base(1789396100, RewardType.REWARD_BOON, 1.0f, "Increments +20 health")
+    public WreckerResilence() : base(1789396100, 1586965694, RewardType.REWARD_BOON, 1.0f, "Increments +20 health")
     {
         name = "Wrecker's Resilence";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -122,7 +124,7 @@ public class WreckerResilence : GameResources
 
 public class CadBaneSoH : GameResources
 {
-    public CadBaneSoH() : base(405709743, RewardType.REWARD_BOON, 1.0f, "First attack with a different weapon from last attack deals +33% damage.")
+    public CadBaneSoH() : base(405709743, 1749591820, RewardType.REWARD_BOON, 1.0f, "First attack with a different weapon from last attack deals +33% damage.")
     {
         name = "Cad Bane’s Sleight of Hand";
         price = ShopPrice.SHOP_CHEAP;
@@ -148,7 +150,7 @@ public class CadBaneSoH : GameResources
 
 public class CadBaneBoots : GameResources
 {
-    public CadBaneBoots() : base(1747641289, RewardType.REWARD_BOON, 1.0f, "+5% permanent hasted state while grenade is on CD.")
+    public CadBaneBoots() : base(1747641289, 1770856290, RewardType.REWARD_BOON, 1.0f, "+5% permanent hasted state while grenade is on CD.")
     {
         name = "Cad Bane’s Rocket Boots";
         price = ShopPrice.SHOP_CHEAP;
@@ -169,7 +171,7 @@ public class CadBaneBoots : GameResources
 
 public class MandoQuickDraw : GameResources
 {
-    public MandoQuickDraw() : base(821239276, RewardType.REWARD_BOON, 1.0f, "First attack after a dash does 25% more damage")
+    public MandoQuickDraw() : base(821239276, 837843542, RewardType.REWARD_BOON, 1.0f, "First attack after a dash does 25% more damage")
     {
         name = "Mandalorian's Quick Draw";
         price = ShopPrice.SHOP_AVERAGE;
@@ -191,7 +193,7 @@ public class MandoQuickDraw : GameResources
 
 public class BosskStrength : GameResources
 {
-    public BosskStrength() : base(1309422332, RewardType.REWARD_BOON, 1.0f, "Mitigate 10% of the damage received (rounded down).")
+    public BosskStrength() : base(1309422332, 1363306893, RewardType.REWARD_BOON, 1.0f, "Mitigate 10% of the damage received (rounded down).")
     {
         name = "Bossk's Strength";
         price = ShopPrice.SHOP_CHEAP;
@@ -211,7 +213,7 @@ public class BosskStrength : GameResources
 }
 public class RexSecBlaster : GameResources
 {
-    public RexSecBlaster() : base(1417560378, RewardType.REWARD_BOON, 1.0f, "When switching weapons, you get 5% additive haste for 5 seconds, stackable up to 20%.")
+    public RexSecBlaster() : base(1417560378, 238792139, RewardType.REWARD_BOON, 1.0f, "When switching weapons, you get 5% additive haste for 5 seconds, stackable up to 20%.")
     {
         name = "Rex's Second Blaster";
         price = ShopPrice.SHOP_AVERAGE;
@@ -232,7 +234,7 @@ public class RexSecBlaster : GameResources
 
 public class GreedoShooter : GameResources
 {
-    public GreedoShooter() : base(1721324939, RewardType.REWARD_BOON, 1.0f, "+20% fire rate on the primary weapon")
+    public GreedoShooter() : base(1721324939, 1893664948, RewardType.REWARD_BOON, 1.0f, "+20% fire rate on the primary weapon")
     {
         name = "Greedo's Quick Shooter";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -253,7 +255,7 @@ public class GreedoShooter : GameResources
 
 public class FennecSniper : GameResources
 {
-    public FennecSniper() : base(25534683, RewardType.REWARD_BOON, 1.0f, "Double rifle sweet spot time window (non-stackable).")
+    public FennecSniper() : base(25534683, 16741109, RewardType.REWARD_BOON, 1.0f, "Double rifle sweet spot time window (non-stackable).")
     {
         name = "Fennec's Sniper Rifle";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -274,7 +276,7 @@ public class FennecSniper : GameResources
 
 public class AnakinKillstreak : GameResources
 {
-    public AnakinKillstreak() : base(96086378, RewardType.REWARD_BOON, 1.0f, "While over a combo of 3, +5% additive Hasted")
+    public AnakinKillstreak() : base(96086378, 694089819, RewardType.REWARD_BOON, 1.0f, "While over a combo of 3, +5% additive Hasted")
     {
         name = "Anakin's Kill Streak";
         price = ShopPrice.SHOP_AVERAGE;
@@ -295,7 +297,7 @@ public class AnakinKillstreak : GameResources
 
 public class EchoRecovery : GameResources
 {
-    public EchoRecovery() : base(65608412, RewardType.REWARD_BOON, 1.0f, " +10% additive hasted state for 5 seconds after losing a combo.")
+    public EchoRecovery() : base(65608412, 912158733, RewardType.REWARD_BOON, 1.0f, " +10% additive hasted state for 5 seconds after losing a combo.")
     {
         name = "Echo's Quick Recovery";
         price = ShopPrice.SHOP_AVERAGE;
@@ -316,7 +318,7 @@ public class EchoRecovery : GameResources
 
 public class WattoCoolant : GameResources
 {
-    public WattoCoolant() : base(1941353969, RewardType.REWARD_BOON, 1.0f, "Dash cooldown is reduced by 40%")
+    public WattoCoolant() : base(1941353969, 116140543, RewardType.REWARD_BOON, 1.0f, "Dash cooldown is reduced by 40%")
     {
         name = "Watto's Coolant";
         price = ShopPrice.SHOP_CHEAP;
@@ -337,7 +339,7 @@ public class WattoCoolant : GameResources
 
 public class LuminaraForce : GameResources
 {
-    public LuminaraForce() : base(895016668, RewardType.REWARD_BOON, 1.0f, "Grogu’s dynamic covers lasts +5 seconds")
+    public LuminaraForce() : base(895016668, 1554417768, RewardType.REWARD_BOON, 1.0f, "Grogu’s dynamic covers lasts +5 seconds")
     {
         name = "Luminara's Force Control";
         price = ShopPrice.SHOP_AVERAGE;
@@ -357,7 +359,7 @@ public class LuminaraForce : GameResources
 }
 public class MandoCode : GameResources
 {
-    public MandoCode() : base(298014769, RewardType.REWARD_BOON, 1.0f, "Deal +20% damage but have -20% less max health (stackable)")
+    public MandoCode() : base(298014769, 325237486, RewardType.REWARD_BOON, 1.0f, "Deal +20% damage but have -20% less max health (stackable)")
     {
         name = "The Mandalorian's Code";
         price = ShopPrice.SHOP_AVERAGE;
@@ -386,7 +388,7 @@ public class MandoCode : GameResources
 
 public class ItsATrap : GameResources
 {
-    public ItsATrap() : base(561759673, RewardType.REWARD_BOON, 1.0f, "Traps deal -33% damage to Mando")
+    public ItsATrap() : base(561759673, 549360236, RewardType.REWARD_BOON, 1.0f, "Traps deal -33% damage to Mando")
     {
         name = "It's a trap!";
         price = ShopPrice.SHOP_AVERAGE;
@@ -406,7 +408,7 @@ public class ItsATrap : GameResources
 }
 public class WreckHeavyShot : GameResources
 {
-    public WreckHeavyShot() : base(678900863, RewardType.REWARD_BOON, 1.0f, "Hitting an enemy with a slowed status applies +25% non-stackable extra slowed status for 3 seconds.")
+    public WreckHeavyShot() : base(678900863, 544813248, RewardType.REWARD_BOON, 1.0f, "Hitting an enemy with a slowed status applies +25% non-stackable extra slowed status for 3 seconds.")
     {
         name = "Wrecker's Heavy Shot";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -427,7 +429,7 @@ public class WreckHeavyShot : GameResources
 
 public class MandoQuickCombo : GameResources
 {
-    public MandoQuickCombo() : base(1246718882, RewardType.REWARD_BOON, 1.0f, "Hitting an enemy with the primary weapon makes them take +5 % more damage from the primary weapon for 5 seconds. % stacks up to 100%")
+    public MandoQuickCombo() : base(1246718882, 291438838, RewardType.REWARD_BOON, 1.0f, "Hitting an enemy with the primary weapon makes them take +5 % more damage from the primary weapon for 5 seconds. % stacks up to 100%")
     {
         name = "Mandalorian Quick Combo";
         price = ShopPrice.SHOP_AVERAGE;
@@ -447,7 +449,7 @@ public class MandoQuickCombo : GameResources
 }
 public class BlastCannonMouthpiece : GameResources
 {
-    public BlastCannonMouthpiece() : base(1675434209, RewardType.REWARD_BOON, 1.0f, "Primary weapon does double damage while on 75% or more heat.")
+    public BlastCannonMouthpiece() : base(1675434209, 955589072, RewardType.REWARD_BOON, 1.0f, "Primary weapon does double damage while on 75% or more heat.")
     {
         name = "Blast Cannon Mouthpiece";
         price = ShopPrice.SHOP_CHEAP;
@@ -468,7 +470,7 @@ public class BlastCannonMouthpiece : GameResources
 
 public class BountyHunter : GameResources
 {
-    public BountyHunter() : base(463877375, RewardType.REWARD_BOON, 1.0f, "Every time a room is cleared, +10 gold is received.")
+    public BountyHunter() : base(463877375, 306967447, RewardType.REWARD_BOON, 1.0f, "Every time a room is cleared, +10 gold is received.")
     {
         name = "Bounty Hunter Negotiation Skills";
         price = ShopPrice.SHOP_AVERAGE;
@@ -488,7 +490,7 @@ public class BountyHunter : GameResources
 }
 public class BosskSpecialAmmo : GameResources
 {
-    public BosskSpecialAmmo() : base(1238459342, RewardType.REWARD_BOON, 1.0f, "Grenade does double damage as long as more than one enemy is getting hit by it.")
+    public BosskSpecialAmmo() : base(1238459342, 1764866745, RewardType.REWARD_BOON, 1.0f, "Grenade does double damage as long as more than one enemy is getting hit by it.")
     {
         name = "Bossk Special Ammo";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -509,7 +511,7 @@ public class BosskSpecialAmmo : GameResources
 
 public class WinduForceControl : GameResources
 {
-    public WinduForceControl() : base(569941476, RewardType.REWARD_BOON, 1.0f, "When you kill an enemy, gain Force points equal to 5% of max Force")
+    public WinduForceControl() : base(569941476, 1976002657, RewardType.REWARD_BOON, 1.0f, "When you kill an enemy, gain Force points equal to 5% of max Force")
     {
         name = "Master Windu's Force Control";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -530,7 +532,7 @@ public class WinduForceControl : GameResources
 
 public class YodaForceControl : GameResources
 {
-    public YodaForceControl() : base(840154977, RewardType.REWARD_BOON, 1.0f, "Grogu’s push pushes double the range.")
+    public YodaForceControl() : base(840154977, 1331072530, RewardType.REWARD_BOON, 1.0f, "Grogu’s push pushes double the range.")
     {
         name = "Master Yoda's Force Control";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -551,7 +553,7 @@ public class YodaForceControl : GameResources
 
 public class CrossHairLuckyShot : GameResources
 {
-    public CrossHairLuckyShot() : base(218162333, RewardType.REWARD_BOON, 1.0f, "After impacting a sniper shot, you have a 33% chance to recover ammo, and next shot deals +33% more damage.")
+    public CrossHairLuckyShot() : base(218162333, 550263805, RewardType.REWARD_BOON, 1.0f, "After impacting a sniper shot, you have a 33% chance to recover ammo, and next shot deals +33% more damage.")
     {
         name = "Crosshair's Lucky Shot";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -571,7 +573,7 @@ public class CrossHairLuckyShot : GameResources
 }
 public class AhsokaDetermination : GameResources
 {
-    public AhsokaDetermination() : base(724681876, RewardType.REWARD_BOON, 1.0f, "Killing an enemy with a sniper shot refills the bullet")
+    public AhsokaDetermination() : base(724681876, 2053106866, RewardType.REWARD_BOON, 1.0f, "Killing an enemy with a sniper shot refills the bullet")
     {
         name = "Ahsoka's Determination";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -592,7 +594,7 @@ public class AhsokaDetermination : GameResources
 
 public class BobbaStunAmmo : GameResources
 {
-    public BobbaStunAmmo() : base(535810690, RewardType.REWARD_BOON, 1.0f, " Proc ratio and area on grenade boosted by 50%")
+    public BobbaStunAmmo() : base(535810690, 23397652, RewardType.REWARD_BOON, 1.0f, " Proc ratio and area on grenade boosted by 50%")
     {
         name = "Bobba Fett's Stun Ammo";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -612,7 +614,7 @@ public class BobbaStunAmmo : GameResources
 }
 public class SoloQuickDraw : GameResources
 {
-    public SoloQuickDraw() : base(65111559, RewardType.REWARD_BOON, 1.0f, "When hit, heal 25% of the damage received if an enemy is hit back in less than 4 seconds.")
+    public SoloQuickDraw() : base(65111559, 1276597892, RewardType.REWARD_BOON, 1.0f, "When hit, heal 25% of the damage received if an enemy is hit back in less than 4 seconds.")
     {
         name = "Solo's Quick Draw";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -632,7 +634,7 @@ public class SoloQuickDraw : GameResources
 }
 public class GeotermalMarker : GameResources
 {
-    public GeotermalMarker() : base(1781189074, RewardType.REWARD_BOON, 1.0f, "Any enemy affected by any kind of negative status takes +33% damage")
+    public GeotermalMarker() : base(1781189074, 1596613015, RewardType.REWARD_BOON, 1.0f, "Any enemy affected by any kind of negative status takes +33% damage")
     {
         name = "Geotermal Marker";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -652,7 +654,7 @@ public class GeotermalMarker : GameResources
 }
 public class GreefPaycheck : GameResources
 {
-    public GreefPaycheck() : base(38657284, RewardType.REWARD_BOON, 1.0f, "75% Discount on the next item bought in the shop")
+    public GreefPaycheck() : base(38657284, 531288084, RewardType.REWARD_BOON, 1.0f, "75% Discount on the next item bought in the shop")
     {
         name = "Greef's Paycheck";
         price = ShopPrice.SHOP_EXPENSIVE;
