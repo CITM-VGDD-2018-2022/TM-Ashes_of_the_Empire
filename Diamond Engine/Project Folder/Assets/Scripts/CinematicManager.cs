@@ -6,6 +6,8 @@ public class CinematicManager : DiamondComponent
     public GameObject gameCamera;
     public GameObject cameraPos1;
     public GameObject cameraPos2;
+    public GameObject helmet;
+    public GameObject helmetFinal;
     private Vector3 initPos;
     private Quaternion initRot;
     public GameObject postCinematicDialogue;
@@ -16,7 +18,7 @@ public class CinematicManager : DiamondComponent
 
         if (!init)
         {
-            gameCamera.GetComponent<CameraController>().startFollow = false;
+            gameCamera.GetComponent<CameraController>().startFollow = true;
             postCinematicDialogue.Enable(true);
             postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
             CameraManager.SetCameraOrthographic(gameCamera);
@@ -42,8 +44,11 @@ public class CinematicManager : DiamondComponent
         {
             ResetInitalTransform();
         }
-            //ResetInitalTransform();
-        
+
+        helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * Time.deltaTime * 0.60f;
+        helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.25f * Time.deltaTime);
+        //ResetInitalTransform();
+
     }
     private void SetAsPerspectiveCamera()
     {
