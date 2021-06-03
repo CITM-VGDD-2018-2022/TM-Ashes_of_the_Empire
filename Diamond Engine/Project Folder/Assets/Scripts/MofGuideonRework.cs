@@ -302,11 +302,11 @@ public class MofGuideonRework : Entity
         //Get anim durations
         presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose");
 
-        changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising") - 0.016f;
+        changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising");
 
-        dieTime = Animator.GetAnimationDuration(gameObject, "MG_Death") - 0.016f;
+        dieTime = Animator.GetAnimationDuration(gameObject, "MG_Death");
 
-        saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
+        saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow") - 0.016f;
 
         meleeHit1Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo1");
         meleeHit2Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo2");
@@ -1100,12 +1100,15 @@ public class MofGuideonRework : Entity
     {
         meleeHitTimer = meleeHit1Duration;
 
+        Animator.Play(gameObject, "MG_MeleeCombo1", speedMult);
+        UpdateAnimationSpd(speedMult);
+
         Debug.Log("Start melee combo hit 1");
     }
 
     private void UpdateMeleeComboHit1()
     {
-        Debug.Log("Update melee combo hit 1");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit1()
@@ -1117,12 +1120,14 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit2()
     {
         meleeHitTimer = meleeHit2Duration;
-        Debug.Log("Start melee combo hit 2");
+
+        Animator.Play(gameObject, "MG_MeleeCombo2", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboHit2()
     {
-        Debug.Log("Update melee combo hit 2");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit2()
@@ -1134,12 +1139,14 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit3()
     {
         meleeHitTimer = meleeHit3Duration;
-        Debug.Log("Start melee combo hit 3");
+
+        Animator.Play(gameObject, "MG_MeleeCombo3", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboHit3()
     {
-        Debug.Log("Update melee combo hit 3");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit3()
@@ -1151,12 +1158,14 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit4()
     {
         meleeHitTimer = meleeHit4Duration;
-        Debug.Log("Start melee combo hit 4");
+
+        Animator.Play(gameObject, "MG_MeleeCombo4", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboHit4()
     {
-        Debug.Log("Update melee combo hit 4");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit4()
@@ -1168,12 +1177,14 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit5()
     {
         meleeHitTimer = meleeHit5Duration;
-        Debug.Log("Start melee combo hit 5");
+
+        Animator.Play(gameObject, "MG_MeleeCombo5", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboHit5()
     {
-        Debug.Log("Update melee combo hit 5");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit5()
@@ -1185,12 +1196,14 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit6()
     {
         meleeHitTimer = meleeHit6Duration;
-        Debug.Log("Start melee combo hit 6");
+
+        Animator.Play(gameObject, "MG_MeleeCombo6", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboHit6()
     {
-        Debug.Log("Update melee combo hit 6");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboHit6()
@@ -1601,7 +1614,6 @@ public class MofGuideonRework : Entity
         }
 
         Input.PlayHaptic(0.7f, 1000);
-
     }
 
 
