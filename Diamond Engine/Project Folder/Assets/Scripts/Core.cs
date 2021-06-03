@@ -360,7 +360,6 @@ public class Core : Entity
         // Placeholder for Start() function
         if (scriptStart == true)
         {
-
             ConfigFunctionality.UpdateDisplayText();
             lastAction = ACTION.NONE;
             hasDashed = false;
@@ -461,7 +460,6 @@ public class Core : Entity
         if (old_hp < PlayerHealth.currHealth)
             PlayParticles(PARTICLES.HEAL);
         old_hp = PlayerHealth.currHealth;
-
     }
 
 
@@ -2207,7 +2205,7 @@ public class Core : Entity
                 sniperBullet1.SetFloatUniform("maxBulletCooldown", bulletRechargeTime);
             }
 
-            if (sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
+            if (!lockInputs && sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
             {
                 currentBullets++;
                 PlayParticles(PARTICLES.SNIPER);
