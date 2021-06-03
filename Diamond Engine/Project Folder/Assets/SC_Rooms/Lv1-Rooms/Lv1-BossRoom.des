@@ -1,19 +1,19 @@
 {
     "NavMesh": 141075303,
     "EditorCameraPosition": [
-        -9.4309883117675781,
-        14.624167442321777,
-        -10.567882537841797
+        -14.76091194152832,
+        20.508785247802734,
+        -18.640678405761719
     ],
     "EditorCameraZ": [
-        0.50678396224975586,
-        -0.60908973217010498,
-        0.61006534099578857
+        0.52645623683929443,
+        -0.56674754619598389,
+        0.63375163078308105
     ],
     "EditorCameraY": [
-        0.3892035186290741,
-        0.79310131072998047,
-        0.46851992607116699
+        0.36214762926101685,
+        0.82389152050018311,
+        0.43594944477081299
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
@@ -17287,7 +17287,7 @@
             "Static": false,
             "Position": [
                 0,
-                -0.21655035018920898,
+                -0.11500000208616257,
                 0
             ],
             "Rotation": [
@@ -17616,6 +17616,34 @@
                             "ParentUID": 1002670852,
                             "PrefabID": 0,
                             "PrefabReference": 610870844,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "name": "Particle System",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1287064452,
+                            "ParentUID": 1002670852,
+                            "PrefabID": 0,
+                            "PrefabReference": 1287064452,
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [

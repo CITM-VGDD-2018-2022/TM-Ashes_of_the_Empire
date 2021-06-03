@@ -1,19 +1,19 @@
 {
     "NavMesh": 1867217823,
     "EditorCameraPosition": [
-        -13.575871467590332,
-        8.7876071929931641,
-        -14.671877861022949
+        -18.292295455932617,
+        18.004697799682617,
+        -17.457456588745117
     ],
     "EditorCameraZ": [
-        0.49791675806045532,
-        -0.053746215999126434,
-        0.86555790901184082
+        0.42015314102172852,
+        -0.53848868608474731,
+        0.73041176795959473
     ],
     "EditorCameraY": [
-        0.026817858219146729,
-        0.99855464696884155,
-        0.046577446162700653
+        0.26852673292160034,
+        0.84263277053833008,
+        0.46675843000411987
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
@@ -435,184 +435,6 @@
         },
         {
             "name": "Collider",
-            "tag": "SandFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1041654353,
-            "ParentUID": 676358620,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                17.765850067138672,
-                5.1187152862548828,
-                -3.4359421730041504
-            ],
-            "Rotation": [
-                -0.7071068286895752,
-                1.3896901872509916e-23,
-                5.5128265775615228e-22,
-                0.70710670948028564
-            ],
-            "Scale": [
-                4.3514761924743652,
-                3.8136575222015381,
-                0.99974930286407471
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Collider",
-            "tag": "SandFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 494951023,
-            "ParentUID": 676358620,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                17.765850067138672,
-                5.1187152862548828,
-                6.7465286254882813
-            ],
-            "Rotation": [
-                -0.7071068286895752,
-                -4.2407950574331175e-23,
-                7.5353084188026425e-21,
-                0.70710670948028564
-            ],
-            "Scale": [
-                4.576117992401123,
-                3.8135292530059814,
-                0.99971723556518555
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Collider",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
@@ -637,95 +459,6 @@
                 25.664205551147461,
                 12.034339904785156,
                 0.99972003698348999
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": false,
-                    "Path": "Library\/Meshes\/1313575480.mmh",
-                    "UID": 1313575480,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Collider",
-            "tag": "SandFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1096714129,
-            "ParentUID": 676358620,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                17.765850067138672,
-                5.1187152862548828,
-                -3.4387757778167725
-            ],
-            "Rotation": [
-                -0.7071068286895752,
-                -3.6703102378228885e-21,
-                1.5724028775445943e-19,
-                0.70710670948028564
-            ],
-            "Scale": [
-                1.2409110069274902,
-                10.67006778717041,
-                0.99969375133514404
             ],
             "Components": [
                 {
@@ -1591,31 +1324,332 @@
             ]
         },
         {
-            "name": "Collider",
-            "tag": "SandFloor",
+            "name": "Floor",
+            "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 294413433,
+            "UID": 1732253991,
             "ParentUID": 676358620,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -4.1109533309936523,
-                5.1492404937744141,
-                -3.5256047248840332
+                3.1598301923880554e-22,
+                0.10000000149011612,
+                4.76837158203125e-07
             ],
             "Rotation": [
-                -0.7071068286895752,
-                2.3429460716645981e-16,
-                -4.5483678740129881e-15,
-                0.70710670948028564
+                0.00020588701590895653,
+                7.3396165589656448e-07,
+                -0.0011372772278264165,
+                0.99999934434890747
             ],
             "Scale": [
-                12.588966369628906,
-                13.423772811889648,
-                0.99996823072433472
+                1.0000100135803223,
+                1.0000004768371582,
+                1.0000001192092896
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Collider",
+            "tag": "SandFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1041654353,
+            "ParentUID": 1732253991,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                17.753990173339844,
+                5.1999998092651367,
+                -3.4380321502685547
+            ],
+            "Rotation": [
+                -0.70725196599960327,
+                -0.00080468773376196623,
+                0.00080366525799036026,
+                0.70696061849594116
+            ],
+            "Scale": [
+                4.3514323234558105,
+                3.8136570453643799,
+                0.9997488260269165
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Collider",
+            "tag": "SandFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 494951023,
+            "ParentUID": 1732253991,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                17.753971099853516,
+                5.1999998092651367,
+                6.7444372177124023
+            ],
+            "Rotation": [
+                -0.70725196599960327,
+                -0.00080468790838494897,
+                0.00080366525799036026,
+                0.70696061849594116
+            ],
+            "Scale": [
+                4.5760722160339355,
+                3.8135290145874023,
+                0.99971675872802734
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Collider",
+            "tag": "SandFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1096714129,
+            "ParentUID": 1732253991,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                17.753990173339844,
+                5.1999998092651367,
+                -3.4408657550811768
+            ],
+            "Rotation": [
+                -0.70725196599960327,
+                -0.00080468773376196623,
+                0.00080366525799036026,
+                0.70696061849594116
+            ],
+            "Scale": [
+                1.240898609161377,
+                10.670066833496094,
+                0.99969327449798584
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Collider",
+            "tag": "SandFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 294413433,
+            "ParentUID": 1732253991,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -4.1226072311401367,
+                5.1999998092651367,
+                -3.5277292728424072
+            ],
+            "Rotation": [
+                -0.70725196599960327,
+                -0.00080468790838494897,
+                0.00080366525799036026,
+                0.70696061849594116
+            ],
+            "Scale": [
+                12.588840484619141,
+                13.423770904541016,
+                0.99996775388717651
             ],
             "Components": [
                 {
@@ -1685,26 +1719,26 @@
             "layer": "Default",
             "Active": true,
             "UID": 2058378437,
-            "ParentUID": 676358620,
+            "ParentUID": 1732253991,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                17.110370635986328,
-                5.1187152862548828,
-                -14.084481239318848
+                17.098539352416992,
+                5.1999998092651367,
+                -14.086569786071777
             ],
             "Rotation": [
-                -0.7071068286895752,
-                2.1377448955667309e-23,
-                2.9106531541543887e-19,
-                0.70710670948028564
+                -0.70725196599960327,
+                -0.00080468790838494897,
+                0.00080366525799036026,
+                0.70696061849594116
             ],
             "Scale": [
-                3.8552258014678955,
-                3.813434362411499,
-                0.99974930286407471
+                3.8551874160766602,
+                3.8134341239929199,
+                0.9997488260269165
             ],
             "Components": [
                 {
@@ -15807,10 +15841,10 @@
                 2.6705102920532227
             ],
             "Rotation": [
-                1.7394002327364433e-07,
-                -0.99483609199523926,
-                1.7394002327364433e-07,
-                0.10149451345205307
+                1.7394003748449904e-07,
+                -0.99483621120452881,
+                1.7394003748449904e-07,
+                0.10149452835321426
             ],
             "Scale": [
                 1.4999998807907104,
@@ -15874,10 +15908,10 @@
                 -0.37014883756637573
             ],
             "Rotation": [
-                8.3163847364176036e-08,
-                -0.88764703273773193,
-                8.3163847364176036e-08,
-                0.46052438020706177
+                8.3163854469603393e-08,
+                -0.88764715194702148,
+                8.3163854469603393e-08,
+                0.46052443981170654
             ],
             "Scale": [
                 1.4999994039535522,
@@ -16075,10 +16109,10 @@
                 -12.109512329101563
             ],
             "Rotation": [
-                2.7579510231134918e-08,
-                -0.55756598711013794,
-                4.0941415591078112e-08,
-                0.83013260364532471
+                2.7579513783848597e-08,
+                -0.55756604671478271,
+                4.0941419143791791e-08,
+                0.83013272285461426
             ],
             "Scale": [
                 1.4999995231628418,
@@ -18421,9 +18455,9 @@
             ],
             "Rotation": [
                 0,
-                -0.26793074607849121,
+                -0.26793071627616882,
                 0,
-                0.96343827247619629
+                0.96343815326690674
             ],
             "Scale": [
                 0.9999997615814209,
