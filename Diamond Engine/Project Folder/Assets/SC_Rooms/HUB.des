@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -23.835548400878906,
-        -90.474159240722656,
-        -1.1266378164291382
+        -71.861457824707031,
+        1.9303619861602783,
+        -10.766115188598633
     ],
     "EditorCameraZ": [
-        0.94524997472763062,
-        -0.31563305854797363,
-        0.082935214042663574
+        0.68119800090789795,
+        -0.72416645288467407,
+        -0.10748100280761719
     ],
     "EditorCameraY": [
-        0.31445169448852539,
-        0.94888126850128174,
-        0.027284383773803711
+        0.71525025367736816,
+        0.68962514400482178,
+        -0.11328816413879395
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -2655,9 +2655,9 @@
                     "fSize": 50,
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 100,
-                    "vFOV": 13.260000228881836,
-                    "hFOV": 11.819999694824219,
-                    "culling": true,
+                    "vFOV": 12.659999847412109,
+                    "hFOV": 23.639999389648438,
+                    "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
                     "ProfileUID": 1969686679
@@ -2687,6 +2687,20 @@
                     "deadZoom": 0,
                     "deadEasingSec": 0,
                     "startFollow": false
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 2,
+                    "speed": 1,
+                    "point1": 2094269345,
+                    "teleportPoint1": 2094511031,
+                    "rotation": true,
+                    "isRunning": false,
+                    "timeToNextSequence": 0,
+                    "rotationSpeed": 2.5,
+                    "endSequence": true
                 }
             ]
         },
@@ -40594,9 +40608,7 @@
                     "gameCamera": 1855298081,
                     "cameraPos1": 782994521,
                     "helmet": 1156363843,
-                    "helmetFinal": 192671120,
-                    "razorPoint1": 238070173,
-                    "razorPoint2": 680766230,
+                    "razor": 238070173,
                     "postCinematicDialogue": 1027532624,
                     "init": false
                 }
@@ -40662,6 +40674,40 @@
                 1.0000014305114746,
                 1,
                 1.0000014305114746
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "CameraRot1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2094269345,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                3.9382350444793701,
+                -101.20589447021484,
+                -2.6713106632232666
+            ],
+            "Rotation": [
+                -4.7602174646499407e-08,
+                -0.99563062191009521,
+                -4.7602174646499407e-08,
+                -0.09338020533323288
+            ],
+            "Scale": [
+                1.0000007152557373,
+                1,
+                1.0000007152557373
             ],
             "Components": [
                 {
@@ -40962,14 +41008,14 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.92913722991943359,
+                -1.8786461353302002,
                 -0.238006591796875,
-                -2.8897933959960938
+                -3.2825570106506348
             ],
             "Rotation": [
                 0.70710664987564087,
-                6.3132382877029158e-08,
-                -2.4361952455365099e-09,
+                6.4769260177399701e-08,
+                -5.5423754474759335e-09,
                 0.70710688829421997
             ],
             "Scale": [
@@ -41009,6 +41055,20 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 10,
+                    "speed": 0.5,
+                    "point0": 192671120,
+                    "point1": 2062018381,
+                    "rotation": true,
+                    "isRunning": true,
+                    "timeToNextSequence": 8,
+                    "rotationSpeed": 0.40000000596046448,
+                    "endSequence": true
                 }
             ]
         },
@@ -41047,6 +41107,40 @@
             ]
         },
         {
+            "name": "HelmetFinalRotation",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2062018381,
+            "ParentUID": 902026984,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                1.0081503391265869,
+                -0.20694732666015625,
+                0.19266533851623535
+            ],
+            "Rotation": [
+                -0.41934919357299805,
+                -0.56934159994125366,
+                -0.56934052705764771,
+                0.41934219002723694
+            ],
+            "Scale": [
+                0.33333557844161987,
+                0.33331423997879028,
+                0.3333345353603363
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
             "name": "Razxorcrest_Idle_30FPS_blender",
             "tag": "Untagged",
             "layer": "Default",
@@ -41058,9 +41152,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                9.3320522308349609,
-                -102.40464782714844,
-                6.8172459602355957
+                9.3829078674316406,
+                -103.82633209228516,
+                6.5467443466186523
             ],
             "Rotation": [
                 0,
@@ -41069,9 +41163,9 @@
                 1
             ],
             "Scale": [
-                1,
-                1,
-                1
+                1.9800000190734863,
+                1.9800000190734863,
+                1.9800000190734863
             ],
             "Components": [
                 {
@@ -41086,6 +41180,19 @@
                     "Animations": [
                         289574508
                     ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 4,
+                    "speed": 30,
+                    "point0": 556288395,
+                    "rotation": false,
+                    "isRunning": false,
+                    "timeToNextSequence": 0.30000001192092896,
+                    "rotationSpeed": 0,
+                    "endSequence": true
                 }
             ]
         },
@@ -41288,6 +41395,40 @@
             ]
         },
         {
+            "name": "RazorCamera",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2094511031,
+            "ParentUID": 238070173,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -15.429561614990234,
+                0.33339691162109375,
+                -0.065574884414672852
+            ],
+            "Rotation": [
+                1.8430189676238743e-15,
+                0.7071068286895752,
+                1.8430189676238743e-15,
+                0.7071068286895752
+            ],
+            "Scale": [
+                0.99999719858169556,
+                0.99999696016311646,
+                0.99999719858169556
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
             "name": "RazorPoints",
             "tag": "Untagged",
             "layer": "Default",
@@ -41360,16 +41501,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 680766230,
+            "UID": 556288395,
             "ParentUID": 2068184100,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                10.243232727050781,
+                5.7448782920837402,
                 -101.4757080078125,
-                -10.537656784057617
+                -83.962776184082031
             ],
             "Rotation": [
                 0,
