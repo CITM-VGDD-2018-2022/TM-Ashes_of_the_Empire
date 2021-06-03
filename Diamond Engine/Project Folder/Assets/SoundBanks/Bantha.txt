@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2176463949	Play_Bantha_Attack			\Default Work Unit\Bantha\Play_Bantha_Attack	
 	2466961974	Play_Footsteps_Bantha			\Default Work Unit\Bantha\Play_Footsteps_Bantha	
 	2594154506	Play_Growl_Bantha_Hit			\Default Work Unit\Bantha\Play_Growl_Bantha_Hit	
+	3094307109	Play_Bantha_Prepare_Charge			\Default Work Unit\Bantha\Play_Bantha_Prepare_Charge	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 	3322588403	Play_Bantha_Breath			\Default Work Unit\Bantha\Play_Bantha_Breath	
 
@@ -24,8 +25,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	132250433	BanthaPrepareAttack1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\BanthaPrepareAttack1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_Charge_Prepare\BanthaPrepareAttack1		168788
 	166122849	Bantha attack ramming 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack ramming 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_Ramming\Bantha attack ramming 3		69124
 	197876092	Bantha hit 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha hit 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha hit 4		84812
+	204438246	BanthaPrepareAttack2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\BanthaPrepareAttack2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_Charge_Prepare\BanthaPrepareAttack2		280640
 	210317130	Bantha Dead Roar	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha Dead Roar_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha Dead Roar		182276
 	228824925	Bantha attack 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_attack\Bantha attack 2		91292
 	291424242	Bantha attack 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_attack\Bantha attack 1		90440
