@@ -23,6 +23,7 @@ public class TutoDestroyEnemies : DiamondComponent
 				EnemyManager.ClearList();
 				cleared = true;
 				Core.instance.SetMySpawnPosition(spawnPoint.transform.globalPosition);
+				DebugOptionsHolder.godModeActive = true;
 			}
             else
             {

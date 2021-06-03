@@ -36,6 +36,7 @@ public class TutoTriggerSwitch : DiamondComponent
             StaticVariablesInit.InitStaticVars();
             SceneManager.LoadScene(roomUidToLoad);
             Counter.firstRun = false;
+            DebugOptionsHolder.godModeActive = false;
         }
 
     }
