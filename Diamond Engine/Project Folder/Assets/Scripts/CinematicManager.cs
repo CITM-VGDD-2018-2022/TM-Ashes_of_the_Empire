@@ -10,15 +10,22 @@ public class CinematicManager : DiamondComponent
     private Quaternion initRot;
     public GameObject postCinematicDialogue;
     public bool init = false;
+
     public void Awake()
     {
-        postCinematicDialogue.Enable(true);
-        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+
         if (!init)
+        {
+            gameCamera.GetComponent<CameraController>().startFollow = false;
+            postCinematicDialogue.Enable(true);
+            postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+            CameraManager.SetCameraOrthographic(gameCamera);
+            return;
+        }
+        if(gameCamera == null || cameraPos1 == null)
         {
             return;
         }
-
         initPos = gameCamera.transform.localPosition;
         initRot = gameCamera.transform.localRotation;
         Debug.Log(gameCamera.transform.localPosition.ToString());
@@ -31,7 +38,10 @@ public class CinematicManager : DiamondComponent
 
     public void Update()
     {
-
+        if(Input.GetKey(DEKeyCode.A) == KeyState.KEY_DOWN)
+        {
+            ResetInitalTransform();
+        }
             //ResetInitalTransform();
         
     }
@@ -46,5 +56,8 @@ public class CinematicManager : DiamondComponent
         gameCamera.transform.localPosition = initPos;
         gameCamera.transform.localRotation = initRot;
         CameraManager.SetCameraOrthographic(gameCamera);
+        gameCamera.GetComponent<CameraController>().startFollow = true;
+        postCinematicDialogue.Enable(true);
+        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
     }
 }
