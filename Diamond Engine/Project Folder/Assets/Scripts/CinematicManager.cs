@@ -1,26 +1,61 @@
 using System;
 using DiamondEngine;
+using System.Collections.Generic;
 
 public class CinematicManager : DiamondComponent
 {
     public GameObject gameCamera;
     public GameObject cameraPos1;
-    public GameObject cameraPos2;
+
     public GameObject helmet;
-    public GameObject helmetFinal; 
-    public GameObject razorPoint1;
-    public GameObject razorPoint2;
+    public GameObject razor;
+
+
     private Vector3 initPos;
     private Quaternion initRot;
     public GameObject postCinematicDialogue;
     public bool init = false;
-    private bool razorInit = false;
 
-    private float helmetTimer = 0f;
+    private Sequence helmetSequence;
+    private Sequence razorSequence;
+    private Sequence cameraSequence;
+    private List<Sequence> listSequences = new List<Sequence>();
     public void Awake()
     {
-        razorInit = false;
-        helmetTimer = 0f;
+        if(helmet != null)
+        {
+            helmetSequence =  helmet.GetComponent<Sequence>();
+            if (helmetSequence != null)
+            {
+                listSequences.Add(helmetSequence);
+
+            }
+        }   
+        
+        if(razor != null)
+        {
+            razorSequence =  razor.GetComponent<Sequence>();
+            if (razorSequence != null)
+            {
+                listSequences.Add(razorSequence);
+                helmetSequence.startNextSequence += () => { razorSequence.isRunning = true; };
+                
+            }
+        }        
+        if(gameCamera != null)
+        {
+            cameraSequence =  gameCamera.GetComponent<Sequence>();
+            if (cameraSequence != null)
+            {
+                listSequences.Add(cameraSequence);
+                razorSequence.startNextSequence += () => { cameraSequence.isRunning = true; };
+                razorSequence.onEndSequence += () => { cameraSequence.endSequence = true; };
+            }
+        }
+
+
+
+
         if (!init)
         {
             gameCamera.GetComponent<CameraController>().startFollow = true;
@@ -29,6 +64,8 @@ public class CinematicManager : DiamondComponent
             CameraManager.SetCameraOrthographic(gameCamera);
             return;
         }
+
+
         if(gameCamera == null || cameraPos1 == null)
         {
             return;
@@ -45,37 +82,12 @@ public class CinematicManager : DiamondComponent
 
     public void Update()
     {
-        if(Input.GetKey(DEKeyCode.A) == KeyState.KEY_DOWN)
+
+
+        foreach (Sequence sequence in listSequences)
         {
-            ResetInitalTransform();
+            sequence.RunSequence();
         }
-
-        if(helmetTimer < 1f)
-        {
-            helmetTimer += Time.deltaTime * 0.005f;
-        }
-
-        //helmet.transform.localPosition = Vector3.Lerp(helmet.transform.localPosition, helmetFinal.transform.localPosition,helmetTimer);
-        if (helmet.transform.localPosition.Distance(helmetFinal.transform.localPosition) > 0.2)
-        {
-            helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * Time.deltaTime * 0.40f;
-
-        }
-        else
-        {
-            razorInit = true;
-            //Start Razor movement
-        }
-        helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.3f * Time.deltaTime);
-
-
-        //Razor Movement
-        if (razorInit)
-        {
-            razorPoint1.transform.localPosition += (razorPoint2.transform.localPosition - razorPoint1.transform.localPosition).normalized * Time.deltaTime * 8.0f;
-        }
-
-        //ResetInitalTransform();
 
     }
     private void SetAsPerspectiveCamera()
