@@ -8,9 +8,12 @@ public class CinematicManager : DiamondComponent
     public GameObject cameraPos2;
     private Vector3 initPos;
     private Quaternion initRot;
+    public GameObject postCinematicDialogue;
     public bool init = false;
     public void Awake()
     {
+        postCinematicDialogue.Enable(true);
+        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         if (!init)
         {
             return;

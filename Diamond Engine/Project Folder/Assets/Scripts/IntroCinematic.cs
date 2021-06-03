@@ -48,68 +48,68 @@ public class IntroCinematic : DiamondComponent
 
     public void Awake()
     {
-        beyondDark = false;
-        if (Counter.firstRun)
-            once = true;
-        if (Counter.firstRun)
-        {
-            nonCinematicCameraPos = cameraObject.transform.localPosition;
-            nonCinematicCameraRotation = cameraObject.transform.localRotation;
-            CameraManager.SetCameraPerspective(cameraObject);
-            CameraManager.SetVerticalFOV(cameraObject, 60.0f);
+        //beyondDark = false;
+        //if (Counter.firstRun)
+        //    once = true;
+        //if (Counter.firstRun)
+        //{
+        //    nonCinematicCameraPos = cameraObject.transform.localPosition;
+        //    nonCinematicCameraRotation = cameraObject.transform.localRotation;
+        //    CameraManager.SetCameraPerspective(cameraObject);
+        //    CameraManager.SetVerticalFOV(cameraObject, 60.0f);
 
-            if (InitializeTimers())
-            {
-                pointArray = new GameObject[] { point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point14, point15, point16, point17, point18 };
-                UpdateValues();
-                Animator.Play(greefRig, "Greef_Sit");
-            }
-        }
-        else
-        {
-            EndCinematic();
-        }
+        //    if (InitializeTimers())
+        //    {
+        //        pointArray = new GameObject[] { point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point14, point15, point16, point17, point18 };
+        //        UpdateValues();
+        //        Animator.Play(greefRig, "Greef_Sit");
+        //    }
+        //}
+        //else
+        //{
+        //    EndCinematic();
+        //}
     }
 
     public void Update()
     {
-        float newDeltaTime = Time.deltaTime;
-        if (once)
-        {
-            once = false;
-            Audio.SetState("Game_State", "Cinematic");
-        }
+        //float newDeltaTime = Time.deltaTime;
+        //if (once)
+        //{
+        //    once = false;
+        //    Audio.SetState("Game_State", "Cinematic");
+        //}
 
-        if (newDeltaTime > 0.016f) {
-            newDeltaTime = 0.016f;
-        }
-        if (Core.instance != null)
-            Core.instance.LockInputs(true); // Yeah. Not pretty. But calling Core in Awake is not happening, and a boolean checked every frame seems redundant for what the function does
+        //if (newDeltaTime > 0.016f) {
+        //    newDeltaTime = 0.016f;
+        //}
+        //if (Core.instance != null)
+        //    Core.instance.LockInputs(true); // Yeah. Not pretty. But calling Core in Awake is not happening, and a boolean checked every frame seems redundant for what the function does
 
-        if (toGoPosition != null && WeHaveToMove())
-        {
-            cameraAuxPosition += (toGoPosition - cameraAuxPosition).normalized * newDeltaTime * currentSpeed;
-            cameraObject.transform.localRotation = Quaternion.Slerp(cameraObject.transform.localRotation, toRotateQuaternion, 0.25f * newDeltaTime);
-        }
-        cameraObject.transform.localPosition = cameraAuxPosition;
+        //if (toGoPosition != null && WeHaveToMove())
+        //{
+        //    cameraAuxPosition += (toGoPosition - cameraAuxPosition).normalized * newDeltaTime * currentSpeed;
+        //    cameraObject.transform.localRotation = Quaternion.Slerp(cameraObject.transform.localRotation, toRotateQuaternion, 0.25f * newDeltaTime);
+        //}
+        //cameraObject.transform.localPosition = cameraAuxPosition;
 
-        if (arrayCount == 0 && helmet != null)
-        {
-            helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * newDeltaTime * 0.60f;
-            helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.25f * newDeltaTime);
-        }
+        //if (arrayCount == 0 && helmet != null)
+        //{
+        //    helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * newDeltaTime * 0.60f;
+        //    helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.25f * newDeltaTime);
+        //}
 
-        currentTimer += newDeltaTime;
-        if (currentTimer > currentTimeLimit)
-        {
-            ManageCamera();
-            UpdateValues();
-        }
+        //currentTimer += newDeltaTime;
+        //if (currentTimer > currentTimeLimit)
+        //{
+        //    ManageCamera();
+        //    UpdateValues();
+        //}
 
-        if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
-        {
-            EndCinematic();
-        }
+        //if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
+        //{
+        //    EndCinematic();
+        //}
     }
 
     public bool WeHaveToMove() // So... I didn't want to write this function, but otherwise weird behavior unfolds because of float's decimals. So yeah :)
