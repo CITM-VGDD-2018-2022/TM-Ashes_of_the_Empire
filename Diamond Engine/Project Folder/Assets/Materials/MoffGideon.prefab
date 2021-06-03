@@ -183,7 +183,6 @@
                     "lightningDashTiredDuration": 0.5,
                     "prepSaberThrowDuration": 3,
                     "saberThrowDuration": 2,
-                    "changingPhaseTime": 0,
                     "dieTime": 0,
                     "bossBar": 528943371,
                     "moffMesh": 1309753568
