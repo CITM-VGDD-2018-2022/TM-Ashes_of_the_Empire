@@ -893,7 +893,7 @@ public class MofGuideonRework : Entity
         float distance = Mathf.Distance(Core.instance.gameObject.transform.localPosition, gameObject.transform.localPosition);
         int decision = decisionGenerator.Next(1, 100);
 
-        /*if (distance >= minBurstDistance)
+        if (distance >= minBurstDistance)
         {
             if (decision <= maxProbBurst_P1)
                 inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
@@ -924,9 +924,7 @@ public class MofGuideonRework : Entity
 
             else
                 inputsList.Add(INPUT.IN_MELEE_COMBO_1_CHARGE);
-        }*/
-
-        inputsList.Add(INPUT.IN_PRE_BURST_CHARGE); //Need to add all melee timers and im dead, testing purposes
+        }
     }
     #endregion
 
@@ -953,6 +951,7 @@ public class MofGuideonRework : Entity
     #region MELEE_COMBO_CHARGE
     private void StartMeleeCombo1Charge()
     {
+        comboChargeTimer = comboChargeDuration;
         Debug.Log("Start melee combo 1 charge");
     }
 
@@ -968,6 +967,7 @@ public class MofGuideonRework : Entity
 
     private void StartMeleeCombo4Charge()
     {
+        comboChargeTimer = comboChargeDuration;
         Debug.Log("Start melee combo 4 charge");
     }
 
@@ -988,6 +988,7 @@ public class MofGuideonRework : Entity
     //Long dash 1
     private void StartMeleeComboDash1()
     {
+        comboDashTimer = comboLongDashDistance / comboLongDashSpeed;
         Debug.Log("Start melee combo dash 1");
     }
 
@@ -1004,6 +1005,7 @@ public class MofGuideonRework : Entity
     //Short dash 2
     private void StartMeleeComboDash2()
     {
+        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 2");
     }
 
@@ -1020,6 +1022,7 @@ public class MofGuideonRework : Entity
     //Short dash 3
     private void StartMeleeComboDash3()
     {
+        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 3");
     }
 
@@ -1036,6 +1039,7 @@ public class MofGuideonRework : Entity
     //Long dash 4
     private void StartMeleeComboDash4()
     {
+        comboDashTimer = comboLongDashDistance / comboLongDashSpeed;
         Debug.Log("Start melee combo dash 4");
     }
 
@@ -1052,6 +1056,7 @@ public class MofGuideonRework : Entity
     //Short dash 5
     private void StartMeleeComboDash5()
     {
+        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 5");
     }
 
@@ -1068,6 +1073,7 @@ public class MofGuideonRework : Entity
     //Short dash 6
     private void StartMeleeComboDash6()
     {
+        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 6");
     }
 
@@ -1086,6 +1092,8 @@ public class MofGuideonRework : Entity
     //Hit 1
     private void StartMeleeComboHit1()
     {
+        meleeHitTimer = meleeHit1Duration;
+
         Debug.Log("Start melee combo hit 1");
     }
 
@@ -1102,6 +1110,7 @@ public class MofGuideonRework : Entity
     //Hit 2
     private void StartMeleeComboHit2()
     {
+        meleeHitTimer = meleeHit2Duration;
         Debug.Log("Start melee combo hit 2");
     }
 
@@ -1118,6 +1127,7 @@ public class MofGuideonRework : Entity
     //Hit3
     private void StartMeleeComboHit3()
     {
+        meleeHitTimer = meleeHit3Duration;
         Debug.Log("Start melee combo hit 3");
     }
 
@@ -1134,6 +1144,7 @@ public class MofGuideonRework : Entity
     //Hit4
     private void StartMeleeComboHit4()
     {
+        meleeHitTimer = meleeHit4Duration;
         Debug.Log("Start melee combo hit 4");
     }
 
@@ -1150,6 +1161,7 @@ public class MofGuideonRework : Entity
     //Hit5
     private void StartMeleeComboHit5()
     {
+        meleeHitTimer = meleeHit5Duration;
         Debug.Log("Start melee combo hit 5");
     }
 
@@ -1166,6 +1178,7 @@ public class MofGuideonRework : Entity
     //Hit6
     private void StartMeleeComboHit6()
     {
+        meleeHitTimer = meleeHit6Duration;
         Debug.Log("Start melee combo hit 6");
     }
 
