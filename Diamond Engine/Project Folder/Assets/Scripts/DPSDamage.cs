@@ -55,6 +55,7 @@ public class DPSDamage : DiamondComponent
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Water exit");
             damageTimer = 0.0f;
             damage = baseDamage;
             if (Core.instance != null)
