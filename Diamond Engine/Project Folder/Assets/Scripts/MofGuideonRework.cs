@@ -941,6 +941,14 @@ public class MofGuideonRework : Entity
 
     private void UpdateChase_P1()
     {
+        if (agent != null && Core.instance != null)
+        {
+            agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
+        }
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+        agent.MoveToCalculatedPos(chaseSpeed * speedMult);
+
         UpdateAnimationSpd(speedMult);
 
         Debug.Log("Update chase");
