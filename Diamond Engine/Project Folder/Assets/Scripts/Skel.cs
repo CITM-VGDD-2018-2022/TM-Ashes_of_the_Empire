@@ -69,6 +69,8 @@ public class Skel : Bosseslv2
 
         companion = InternalCalls.FindObjectWithName("WampBoss");
         limboHealth = 0f;
+
+        presentationTime = Animator.GetAnimationDuration(gameObject, "Skel_Roar");
     }
 
     public void Update()

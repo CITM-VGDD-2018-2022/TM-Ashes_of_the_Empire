@@ -1061,7 +1061,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "744625270",
+    "Hash": "2959797152",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1073,6 +1073,28 @@
       "DurationType": "OneShot",
       "DurationMin": "0.000000",
       "DurationMax": "0.000000"
+     },
+     {
+      "Id": "437092628",
+      "Name": "Play_Moff_Gideon_Blink",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Blink",
+      "DurationType": "OneShot",
+      "DurationMin": "0.583333",
+      "DurationMax": "0.600521",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "149199245",
+        "Language": "SFX",
+        "ShortName": "MoffBlink2.wav",
+        "Path": "SFX\\MoffBlink2_FC2D3A10.wem"
+       },
+       {
+        "Id": "249683624",
+        "Language": "SFX",
+        "ShortName": "MoffBlink1.wav",
+        "Path": "SFX\\MoffBlink1_FC2D3A10.wem"
+       }
+      ]
      },
      {
       "Id": "3387490186",
@@ -1355,6 +1377,28 @@
       ]
      },
      {
+      "Id": "281182696",
+      "Name": "Play_Moff_Gideon_Phase_Change_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Phase_Change_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.555488",
+      "DurationMax": "0.949333",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "166727117",
+        "Language": "SFX",
+        "ShortName": "MoffHitOnPhaseChange1.wav",
+        "Path": "SFX\\MoffHitOnPhaseChange1_FC2D3A10.wem"
+       },
+       {
+        "Id": "532385421",
+        "Language": "SFX",
+        "ShortName": "MoffHitOnPhaseChange2.wav",
+        "Path": "SFX\\MoffHitOnPhaseChange2_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "3507913642",
       "Name": "Play_Moff_Gideon_Shot",
       "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Shot",
@@ -1419,7 +1463,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "3954228696",
+    "Hash": "2756443060",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1985,6 +2029,40 @@
       ]
      },
      {
+      "Id": "287300333",
+      "Name": "Play_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.584698",
+      "DurationMax": "0.748010",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "2559120509",
       "Name": "Play_Sniper_Shoot_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Sniper_Shoot_Mando",
@@ -2332,7 +2410,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "1209524989",
+    "Hash": "88276705",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2358,6 +2436,60 @@
         "Language": "SFX",
         "ShortName": "Spawn Enemies.wav",
         "Path": "SFX\\Spawn Enemies_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1017258033",
+      "Name": "Play_Interaction_Circle_In",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_Interaction_Circle_In",
+      "DurationType": "OneShot",
+      "DurationMin": "1.184865",
+      "DurationMax": "1.184865",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "6512664",
+        "Language": "SFX",
+        "ShortName": "SkillTreeInteractionIn1.wav",
+        "Path": "SFX\\SkillTreeInteractionIn1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "2570329808",
+      "Name": "Play_Interaction_Circle_Out",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_Interaction_Circle_Out",
+      "DurationType": "OneShot",
+      "DurationMin": "0.494948",
+      "DurationMax": "0.494948",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "803624842",
+        "Language": "SFX",
+        "ShortName": "SkillTreeInteractionOut1.wav",
+        "Path": "SFX\\SkillTreeInteractionOut1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "844563968",
+      "Name": "Play_Shop_Purchase",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_Shop_Purchase",
+      "DurationType": "OneShot",
+      "DurationMin": "1.000000",
+      "DurationMax": "1.000000",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "998598397",
+        "Language": "SFX",
+        "ShortName": "ShopBuyItem1.wav",
+        "Path": "SFX\\ShopBuyItem1_FC2D3A10.wem"
+       },
+       {
+        "Id": "1026939951",
+        "Language": "SFX",
+        "ShortName": "ShopBuyItem2.wav",
+        "Path": "SFX\\ShopBuyItem2_FC2D3A10.wem"
        }
       ]
      },
@@ -2754,7 +2886,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "1756636871",
+    "Hash": "1785992210",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -2863,13 +2995,19 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rancor_Hit",
       "DurationType": "OneShot",
       "DurationMin": "0.000000",
-      "DurationMax": "0.634626",
+      "DurationMax": "0.784594",
       "IncludedMemoryFiles": [
        {
         "Id": "4978000",
         "Language": "SFX",
         "ShortName": "Rancor_Hit_Growl 1.wav",
         "Path": "SFX\\Rancor_Hit_Growl 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "41185061",
+        "Language": "SFX",
+        "ShortName": "RancorHit2.wav",
+        "Path": "SFX\\RancorHit2_FC2D3A10.wem"
        },
        {
         "Id": "126772995",
@@ -2884,6 +3022,12 @@
         "Path": "SFX\\Rancor_Hit_Growl 2_FC2D3A10.wem"
        },
        {
+        "Id": "584482498",
+        "Language": "SFX",
+        "ShortName": "RancorHit3.wav",
+        "Path": "SFX\\RancorHit3_FC2D3A10.wem"
+       },
+       {
         "Id": "612814179",
         "Language": "SFX",
         "ShortName": "Rancor_Hit_Body 2.wav",
@@ -2894,6 +3038,12 @@
         "Language": "SFX",
         "ShortName": "Rancor_Hit_Body 3.wav",
         "Path": "SFX\\Rancor_Hit_Body 3_FC2D3A10.wem"
+       },
+       {
+        "Id": "910784929",
+        "Language": "SFX",
+        "ShortName": "RancorHit1.wav",
+        "Path": "SFX\\RancorHit1_FC2D3A10.wem"
        }
       ]
      },
@@ -3316,7 +3466,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "4118761397",
+    "Hash": "3146192031",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -3368,6 +3518,62 @@
       ]
      },
      {
+      "Id": "869255557",
+      "Name": "Play_Female_Popup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cantine\\Play_Female_Popup",
+      "DurationType": "OneShot",
+      "DurationMin": "0.500000",
+      "DurationMax": "1.125000",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "34766444",
+        "Language": "SFX",
+        "ShortName": "VoiceFemale2.wav",
+        "Path": "SFX\\VoiceFemale2_FC2D3A10.wem"
+       },
+       {
+        "Id": "238236341",
+        "Language": "SFX",
+        "ShortName": "VoiceFemale3.wav",
+        "Path": "SFX\\VoiceFemale3_FC2D3A10.wem"
+       },
+       {
+        "Id": "544809860",
+        "Language": "SFX",
+        "ShortName": "VoiceFemale1.wav",
+        "Path": "SFX\\VoiceFemale1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3958023450",
+      "Name": "Play_Male_Popup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cantine\\Play_Male_Popup",
+      "DurationType": "OneShot",
+      "DurationMin": "0.425692",
+      "DurationMax": "0.976190",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "102273018",
+        "Language": "SFX",
+        "ShortName": "VoiceMale2.wav",
+        "Path": "SFX\\VoiceMale2_FC2D3A10.wem"
+       },
+       {
+        "Id": "147004351",
+        "Language": "SFX",
+        "ShortName": "VoiceMale3.wav",
+        "Path": "SFX\\VoiceMale3_FC2D3A10.wem"
+       },
+       {
+        "Id": "172591438",
+        "Language": "SFX",
+        "ShortName": "VoiceMale1.wav",
+        "Path": "SFX\\VoiceMale1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1931338186",
       "Name": "Resume_Object",
       "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
@@ -3400,7 +3606,7 @@
    {
     "Id": "3795682265",
     "Language": "SFX",
-    "Hash": "1248434596",
+    "Hash": "1820991115",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bantha",
     "ShortName": "Bantha",
     "Path": "Bantha.bnk",
@@ -3446,6 +3652,28 @@
         "Language": "SFX",
         "ShortName": "Bantha tired breath.wav",
         "Path": "SFX\\Bantha tired breath_B182BB5A.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3094307109",
+      "Name": "Play_Bantha_Prepare_Charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bantha\\Play_Bantha_Prepare_Charge",
+      "DurationType": "OneShot",
+      "DurationMin": "0.956485",
+      "DurationMax": "1.590567",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "132250433",
+        "Language": "SFX",
+        "ShortName": "BanthaPrepareAttack1.wav",
+        "Path": "SFX\\BanthaPrepareAttack1_FC2D3A10.wem"
+       },
+       {
+        "Id": "204438246",
+        "Language": "SFX",
+        "ShortName": "BanthaPrepareAttack2.wav",
+        "Path": "SFX\\BanthaPrepareAttack2_FC2D3A10.wem"
        }
       ]
      },

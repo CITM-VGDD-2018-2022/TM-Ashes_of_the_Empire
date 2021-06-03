@@ -1,5 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
+	281182696	Play_Moff_Gideon_Phase_Change_Hit			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Phase_Change_Hit	
+	437092628	Play_Moff_Gideon_Blink			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Blink	
 	500607873	Play_Moff_Gideon_Hit_Phase_1			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Hit_Phase_1	
 	500607874	Play_Moff_Gideon_Hit_Phase_2			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Hit_Phase_2	
 	955348132	Play_Moff_Gideon_Lightsaber_Throw			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Lightsaber_Throw	
@@ -27,7 +29,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	132413711	moff guideon intimidate 2nd phase 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon intimidate 2nd phase 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon intimidate phase 2\moff guideon intimidate 2nd phase 2		155076
 	134030243	moff gideon hit 2nd phase 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 2nd phase 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon hit 2nd phase 1		69276
+	149199245	MoffBlink2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffBlink2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Blink SFX\MoffBlink2		106072
+	166727117	MoffHitOnPhaseChange1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffHitOnPhaseChange1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Phase change hit\MoffHitOnPhaseChange1		98052
 	200020784	moff guideon intimidate 2nd phase 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon intimidate 2nd phase 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon intimidate phase 2\moff guideon intimidate 2nd phase 1		181508
+	249683624	MoffBlink1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffBlink1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Blink SFX\MoffBlink1		103040
 	270470728	moff guideon lightsaber whoosh 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber whoosh 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber whoosh\moff guideon lightsaber whoosh 1		136204
 	274347457	moff guideon blaster shoot	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon blaster shoot_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon blaster shoot		253680
 	336560564	moff guideon intimidate 1rst phase 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon intimidate 1rst phase 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon intimidate phase 1\moff guideon intimidate 1rst phase 2		208296
@@ -37,6 +42,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	388356698	moff gideon dash	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon dash_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff gideon dash		80604
 	466307658	moff gideon armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon armor hit 1		72140
 	509161827	moff gideon hit 1rst phase 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 1rst phase 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon hit 1rst phase 2		78712
+	532385421	MoffHitOnPhaseChange2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffHitOnPhaseChange2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Phase change hit\MoffHitOnPhaseChange2		167524
 	578940370	moff gideon hit 2nd phase 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 2nd phase 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon hit 2nd phase 2		56704
 	589526714	moff gideon armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon armor hit 2		67952
 	608559747	moff guideon lightsaber attack 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber attack 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber attack\moff guideon lightsaber attack 1		141728

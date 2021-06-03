@@ -595,7 +595,7 @@ public class Rancor : Entity
         switch (currentState)
         {
             case RANCOR_STATE.NONE:
-                Debug.Log("CORE ERROR STATE");
+                Debug.Log("RANCOR ERROR STATE");
                 break;
 
             case RANCOR_STATE.ROAR:

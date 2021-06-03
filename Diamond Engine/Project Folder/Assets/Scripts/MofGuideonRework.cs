@@ -338,6 +338,8 @@ public class MofGuideonRework : Entity
         ProcessExternalInput();
         ProcessState();
 
+        UpdateState();
+
         UpdateDamaged();
     }
 
@@ -775,6 +777,83 @@ public class MofGuideonRework : Entity
                 default:
                     break;
             }
+        }
+    }
+
+    private void UpdateState()
+    {
+        switch (currentState)
+        {
+            case STATE.NONE:
+                Debug.Log("MOFF GIDEON ERROR STATE");
+                break;
+
+            case STATE.PRESENTATION:
+                UpdatePresentation();
+                break;
+
+            case STATE.CHASE:
+                UpdateChase_P1();
+                break;
+
+            case STATE.ACTION_SELECT:
+                UpdateActionSelect();
+                break;
+
+            case STATE.MELEE_COMBO_1_CHARGE:
+                UpdateMeleeCombo1Charge();
+                break;
+
+            case STATE.MELEE_COMBO_1_DASH:
+                UpdateMeleeComboDash1();
+                break;
+
+            case STATE.MELEE_COMBO_1:
+                UpdateMeleeComboHit1();
+                break;
+
+            case STATE.MELEE_COMBO_2_DASH:
+                UpdateMeleeComboDash2();
+                break;
+
+            case STATE.MELEE_COMBO_2:
+                UpdateMeleeComboHit2();
+                break;
+
+            case STATE.MELEE_COMBO_3_DASH:
+                UpdateMeleeComboDash3();
+                break;
+
+            case STATE.MELEE_COMBO_3:
+                UpdateMeleeComboHit3();
+                break;
+
+            case STATE.SPAWN_ENEMIES:
+                UpdateSpawnEnemies();
+                break;
+
+            case STATE.PRE_BURST_CHARGE:
+                UpdateBurstCharge();
+                break;
+
+            case STATE.PRE_BURST_DASH:
+                UpdateBurstDash();
+                break;
+
+            case STATE.BURST_1:
+                UpdateBurst_P1();
+                break;
+
+            case STATE.CHANGE_PHASE:
+                UpdatePhaseChange();
+                break;
+
+            case STATE.DEAD:
+                UpdateDie();
+                break;
+            default:
+                Debug.Log("MOFF GIDEON ERROR STATE");
+                break;
         }
     }
 
