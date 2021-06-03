@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -4.6041531562805176,
-                6.4863066673278809,
-                0.56956326961517334
+                -2.4538033008575439,
+                9.9600887298583984,
+                -8.4884328842163086
             ],
             "Rotation": [
                 0,
@@ -50,6 +50,7 @@
                     "pushVerticalForce": 5,
                     "PushStun": 2.5,
                     "forceFBTime": 0.25,
+                    "tutoState": 0,
                     "skillPushDuration": 1
                 },
                 {
@@ -108,10 +109,10 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1995584766,
+                    "UID": 1817119454,
                     "ParentUID": 1871892114,
                     "PrefabID": 0,
-                    "PrefabReference": 497474311,
+                    "PrefabReference": 610870844,
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
@@ -136,38 +137,10 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1004967374,
+                    "UID": 1287064452,
                     "ParentUID": 1871892114,
                     "PrefabID": 0,
                     "PrefabReference": 1287064452,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "ForceParticle",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 610870844,
-                    "ParentUID": 1871892114,
-                    "PrefabID": 0,
-                    "PrefabReference": 610870844,
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
@@ -233,12 +206,12 @@
                         1
                     ],
                     "alternColorStencil": [
-                        1,
-                        1,
+                        0,
+                        0.90477705001831055,
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
+                    "doNotDrawStencil": false,
                     "drawShadows": true
                 },
                 {
@@ -248,6 +221,14 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
                     "MaterialUID": 1948688504
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_colored_mat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/2086070049.mat",
+                    "MaterialUID": 2086070049
                 }
             ]
         },
@@ -1990,26 +1971,34 @@
                     "UID": 68431594,
                     "bumpDepth": 0,
                     "alternColor": [
-                        1,
-                        1,
+                        0.99998998641967773,
+                        0.99999874830245972,
                         1
                     ],
                     "alternColorStencil": [
+                        0,
                         1,
-                        1,
-                        1
+                        0.97023820877075195
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
+                    "doNotDrawStencil": false,
                     "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
                     "MaterialUID": 571353722
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_colored_mat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/2086070049.mat",
+                    "MaterialUID": 2086070049
                 }
             ]
         },
@@ -2052,26 +2041,34 @@
                     "UID": 1157276828,
                     "bumpDepth": 0,
                     "alternColor": [
+                        0.99998998641967773,
                         1,
-                        1,
-                        1
+                        0.99999970197677612
                     ],
                     "alternColorStencil": [
-                        1,
-                        1,
+                        0,
+                        0.96907234191894531,
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
+                    "doNotDrawStencil": false,
                     "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
                     "MaterialUID": 571353722
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_colored_mat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/2086070049.mat",
+                    "MaterialUID": 2086070049
                 }
             ]
         },
@@ -2119,21 +2116,29 @@
                         1
                     ],
                     "alternColorStencil": [
-                        1,
-                        1,
+                        0,
+                        0.9404911994934082,
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
+                    "doNotDrawStencil": false,
                     "drawShadows": true
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/GroguMat.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/571353722.mat",
                     "MaterialUID": 571353722
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_colored_mat.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/2086070049.mat",
+                    "MaterialUID": 2086070049
                 }
             ]
         }
