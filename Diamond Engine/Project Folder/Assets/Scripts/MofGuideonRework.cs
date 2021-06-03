@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class MofGuideonRework : Entity
 {
-
     enum PHASE : int
     {
         NONE = -1,
@@ -133,15 +132,19 @@ public class MofGuideonRework : Entity
     private float currAnimationPlaySpd = 1f;
 
     //Decision making
-    public float probMeleeCombo_P1 = 20.0f;
-    public float probBurst_P1 = 60.0f;
+    public float probSpawnEnemies_P1 = 40.0f;
+    public float maxProbMeleeCombo_P1 = 75.0f;
+    public float maxProbBurst_P1 = 75.0f;
+    public float minProbBurst_P1 = 25.0f;
 
+    public float minBurstDistance = 12.0f;
+    public float maxMeleeDistance = 6.0f;
+
+    //Phase 2
     public float probMeleeCombo_P2 = 20.0f;
     public float probBurst_P2 = 40.0f;
     public float probLightDash = 20.0f; //Onlly phase 2
 
-    public float minProjectileDistance = 17.0f;
-    public float maxMeleeDistance = 5.0f;
 
     // Presentation
     private float presentationTime = 0f;
@@ -498,7 +501,7 @@ public class MofGuideonRework : Entity
 
     private void ProcessExternalInput()
     {
-
+        
     }
 
     private void ProcessState()
@@ -695,7 +698,8 @@ public class MofGuideonRework : Entity
                     {
                         case INPUT.IN_SPAWN_ENEMIES_END:
                             EndSpawnEnemies();
-                            currentState = STATE.ACTION_SELECT;
+                            StartChase_P1();
+                            currentState = STATE.CHASE;
                             break;
 
                         case INPUT.IN_DEAD:
@@ -755,10 +759,6 @@ public class MofGuideonRework : Entity
                             break;
                     }
                     break;
-                case STATE.THROW_SABER:
-                    break;
-                case STATE.RETRIEVE_SABER:
-                    break;
 
                 case STATE.CHANGE_PHASE:
                     switch (input)
@@ -781,9 +781,61 @@ public class MofGuideonRework : Entity
     #endregion
   
     #region ACTION_SELECT
-    private void UpdateActionSelect()   //Jose: this bad boy is mine
+    private void UpdateActionSelect()
     {
+        int decision = decisionGenerator.Next(1, 100);
 
+        if (ableToSpawnEnemies == true)
+        {
+            if (decision <= probSpawnEnemies_P1)
+                inputsList.Add(INPUT.IN_SPAWN_ENEMIES);
+
+            else
+                DecideAttack();
+        }
+
+        else
+            DecideAttack();
+    }
+
+
+    private void DecideAttack()
+    {
+        float distance = Mathf.Distance(Core.instance.gameObject.transform.localPosition, gameObject.transform.localPosition);
+        int decision = decisionGenerator.Next(1, 100);
+
+        if (distance >= minBurstDistance)
+        {
+            if (decision <= maxProbBurst_P1)
+                inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
+
+            else
+                inputsList.Add(INPUT.IN_MELEE_COMBO_1_CHARGE);
+        }
+
+        else if (distance <= maxMeleeDistance)
+        {
+            if (decision <= maxProbMeleeCombo_P1)
+                inputsList.Add(INPUT.IN_MELEE_COMBO_1_CHARGE);
+
+            else
+                inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
+        }
+
+        else
+        {
+            float provavility = Mathf.Lerp(maxMeleeDistance, minBurstDistance, distance) * 100;
+
+            if (maxProbBurst_P1 * provavility < minProbBurst_P1)
+                provavility = minProbBurst_P1 / maxProbBurst_P1;
+
+
+            if (decision <= maxProbBurst_P1 * provavility)
+                inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
+
+            else
+                inputsList.Add(INPUT.IN_MELEE_COMBO_1_CHARGE);
+        }
     }
     #endregion
 
