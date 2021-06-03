@@ -1,26 +1,26 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        -2.6270492076873779,
-        15.824288368225098,
-        -7.1824207305908203
+        -121.92962646484375,
+        142.21023559570313,
+        -180.59646606445313
     ],
     "EditorCameraZ": [
-        0.19181160628795624,
-        -0.59296661615371704,
-        0.78204786777496338
+        0.28439328074455261,
+        -0.57168591022491455,
+        0.76960790157318115
     ],
     "EditorCameraY": [
-        0.14127683639526367,
-        0.80522704124450684,
-        0.57589083909988403
+        0.19818517565727234,
+        0.8204725980758667,
+        0.53623449802398682
     ],
-    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl3ft.png",
-    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl3bk.png",
-    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl3up.png",
-    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl3dn.png",
-    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl3rt.png",
-    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl3lf.png",
+    "SkyboxPath0": "Library\/Textures\/584389129.dds",
+    "SkyboxPath1": "Library\/Textures\/111167881.dds",
+    "SkyboxPath2": "Library\/Textures\/2049471223.dds",
+    "SkyboxPath3": "Library\/Textures\/87979313.dds",
+    "SkyboxPath4": "Library\/Textures\/1757535409.dds",
+    "SkyboxPath5": "Library\/Textures\/1677857694.dds",
     "skyboxColor": [
         1,
         1,
@@ -106,8 +106,8 @@
                     "fSize": 45,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 12.733333587646484,
-                    "hFOV": 24.55555534362793,
+                    "vFOV": 14.44444465637207,
+                    "hFOV": 22.44444465637207,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -136,7 +136,8 @@
                     "cornerBotRightX": 100,
                     "cornerBotRightY": 100,
                     "deadZoom": 80,
-                    "deadEasingSec": 5
+                    "deadEasingSec": 5,
+                    "startFollow": true
                 },
                 {
                     "Type": 5,
@@ -15488,7 +15489,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        9.8000001907348633,
                         0,
                         0
                     ],

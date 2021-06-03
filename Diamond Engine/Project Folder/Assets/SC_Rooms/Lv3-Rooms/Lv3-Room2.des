@@ -1,26 +1,26 @@
 {
     "NavMesh": 759541763,
     "EditorCameraPosition": [
-        -19.448089599609375,
-        5.9050135612487793,
-        -9.1492033004760742
+        -73.220436096191406,
+        50.624313354492188,
+        -83.559120178222656
     ],
     "EditorCameraZ": [
-        0.73202168941497803,
-        -0.48237684369087219,
-        0.48109972476959229
+        0.41376891732215881,
+        -0.34760278463363647,
+        0.84140825271606445
     ],
     "EditorCameraY": [
-        0.40311527252197266,
-        0.87596380710601807,
-        0.26492545008659363
+        0.15340650081634521,
+        0.93764185905456543,
+        0.31192010641098022
     ],
-    "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl3ft.png",
-    "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl3bk.png",
-    "SkyboxPath2": "Assets\/Textures\/Skyboxs\/lvl3up.png",
-    "SkyboxPath3": "Assets\/Textures\/Skyboxs\/lvl3dn.png",
-    "SkyboxPath4": "Assets\/Textures\/Skyboxs\/lvl3rt.png",
-    "SkyboxPath5": "Assets\/Textures\/Skyboxs\/lvl3lf.png",
+    "SkyboxPath0": "Library\/Textures\/584389129.dds",
+    "SkyboxPath1": "Library\/Textures\/111167881.dds",
+    "SkyboxPath2": "Library\/Textures\/2049471223.dds",
+    "SkyboxPath3": "Library\/Textures\/87979313.dds",
+    "SkyboxPath4": "Library\/Textures\/1757535409.dds",
+    "SkyboxPath5": "Library\/Textures\/1677857694.dds",
     "skyboxColor": [
         1,
         1,
@@ -16812,7 +16812,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        9.8000001907348633,
                         0,
                         0
                     ],
@@ -23064,6 +23064,34 @@
                             "ParentUID": 112812981,
                             "PrefabID": 0,
                             "PrefabReference": 1287064452,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "name": "ForceParticle",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 610870844,
+                            "ParentUID": 112812981,
+                            "PrefabID": 0,
+                            "PrefabReference": 610870844,
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [
