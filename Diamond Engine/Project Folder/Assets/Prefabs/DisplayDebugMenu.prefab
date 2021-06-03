@@ -93,7 +93,8 @@
                     "Active": true,
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/2126775415.dds",
-                    "UID": 2126775415
+                    "UID": 2126775415,
+                    "fadeValue": 0
                 }
             ]
         },
@@ -174,14 +175,17 @@
                     "Script_Name": "DebugGodmode",
                     "ButtonState": 4,
                     "Checkbox Active": false,
-                    "Is Selected": true
+                    "Is Selected": true,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/checkbox_empty_hover.png",
                     "LibraryPath": "Library\/Textures\/1711990233.dds",
-                    "UID": 1711990233
+                    "UID": 1711990233,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -395,15 +399,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/834295412.dds",
                     "Unhovered_UID": 834295412,
                     "Script_Name": "DebugReturn",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/button_return.png",
                     "LibraryPath": "Library\/Textures\/834295412.dds",
-                    "UID": 834295412
+                    "UID": 834295412,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -590,15 +597,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugNextRoom",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -812,15 +822,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugAddHP",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -1034,15 +1047,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugSpawnStormTrooper",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -1256,15 +1272,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugSpawnBantha",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -1478,15 +1497,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugSpawnRancor",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -1700,15 +1722,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugAddResources",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -1922,15 +1947,18 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "DebugSkipLevel",
-                    "ButtonState": 2,
-                    "Is Selected": false
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/second_button.png",
                     "LibraryPath": "Library\/Textures\/1618474496.dds",
-                    "UID": 1618474496
+                    "UID": 1618474496,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -2155,14 +2183,17 @@
                     "Script_Name": "DebugToggleFPS",
                     "ButtonState": 3,
                     "Checkbox Active": false,
-                    "Is Selected": false
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/checkbox_empty.png",
                     "LibraryPath": "Library\/Textures\/1244819265.dds",
-                    "UID": 1244819265
+                    "UID": 1244819265,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -2346,7 +2377,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        75.800003051757813,
+                        75.800003051757812,
                         9.3999996185302734
                     ],
                     "Rotation": 0,
@@ -2387,14 +2418,17 @@
                     "Script_Name": "DebugToggleNoClip",
                     "ButtonState": 3,
                     "Checkbox Active": false,
-                    "Is Selected": false
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/checkbox_empty.png",
                     "LibraryPath": "Library\/Textures\/1244819265.dds",
-                    "UID": 1244819265
+                    "UID": 1244819265,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -2619,14 +2653,17 @@
                     "Script_Name": "DebugBossNoDmg",
                     "ButtonState": 3,
                     "Checkbox Active": false,
-                    "Is Selected": false
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/checkbox_empty.png",
                     "LibraryPath": "Library\/Textures\/1244819265.dds",
-                    "UID": 1244819265
+                    "UID": 1244819265,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
@@ -2851,14 +2888,17 @@
                     "Script_Name": "DebugShowTris",
                     "ButtonState": 3,
                     "Checkbox Active": false,
-                    "Is Selected": false
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Assets\/UI\/MENU\/checkbox_empty.png",
                     "LibraryPath": "Library\/Textures\/1244819265.dds",
-                    "UID": 1244819265
+                    "UID": 1244819265,
+                    "fadeValue": 0
                 },
                 {
                     "Type": 17,
