@@ -50,7 +50,7 @@ public class GameSceneManager : DiamondComponent
                 rewardInitialPos = Core.instance.gameObject.transform.globalPosition + new Vector3(2.5f, 1.0f, 2.5f);
                 rewardObject.transform.localPosition = rewardInitialPos;
 
-                rewardObject.AssignLibraryTextureToMaterial(rewardData.libraryTextureID, "diffuseTexture");
+                rewardObject.AssignLibraryTextureToMaterial(rewardData.meshTextureID, "diffuseTexture");
                 rewardObject.Enable(true);
                 if (rewardSpawnComponent != null) {
                     rewardSpawnComponent.PlayParticles();

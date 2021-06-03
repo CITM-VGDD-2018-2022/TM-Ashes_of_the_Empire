@@ -360,7 +360,6 @@ public class Core : Entity
         // Placeholder for Start() function
         if (scriptStart == true)
         {
-
             ConfigFunctionality.UpdateDisplayText();
             lastAction = ACTION.NONE;
             hasDashed = false;
@@ -461,7 +460,6 @@ public class Core : Entity
         if (old_hp < PlayerHealth.currHealth)
             PlayParticles(PARTICLES.HEAL);
         old_hp = PlayerHealth.currHealth;
-
     }
 
 
@@ -2207,7 +2205,7 @@ public class Core : Entity
                 sniperBullet1.SetFloatUniform("maxBulletCooldown", bulletRechargeTime);
             }
 
-            if (sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
+            if (!lockInputs && sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
             {
                 currentBullets++;
                 PlayParticles(PARTICLES.SNIPER);
@@ -2352,6 +2350,28 @@ public class Core : Entity
                         gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(collidedGameObject.GetComponent<BH_DestructBox>().explosion_damage * 0.5f));
                 }
             }
+            else if (collidedGameObject.CompareTag("MoffSwing"))
+            {
+                MoffSwing swing = collidedGameObject.GetComponent<MoffSwing>();
+
+                if (swing != null)
+                {
+                    float damage = swing.damage;
+
+                    if (damage != 0)
+                    {
+                        Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+
+                        int damageFromEnemy = (int)damage;
+                        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+                        if (playerHealth != null)
+                            playerHealth.TakeDamage(damageFromEnemy);
+
+                        damageTaken += damageFromEnemy;
+                    }
+                }
+            }
+
             else if (collidedGameObject.CompareTag("WaterFloor"))
             {
                 floorType = FLOOR_TYPE.WATER;

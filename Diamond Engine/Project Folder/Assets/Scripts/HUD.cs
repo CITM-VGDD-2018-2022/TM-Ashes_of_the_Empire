@@ -561,7 +561,7 @@ public class HUD : DiamondComponent
                 Core.instance.RemoveStatus(STATUS_TYPE.COMBO_DMG_RED, true);
                 if (Core.instance.gameObject != null)
                 {
-                    PlayerResources.AddRunCoins((int)Math.Round(coinsToGain));
+                    PlayerResources.AddRunCoins((int)Math.Round(coinsToGain * 0.8f));
                     UpdateCurrency(PlayerResources.GetRunCoins());
                 }
                 if (Core.instance.HasStatus(STATUS_TYPE.HEAL_COMBO_FINNISH))

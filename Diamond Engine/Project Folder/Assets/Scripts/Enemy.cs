@@ -110,7 +110,7 @@ public class Enemy : Entity
     {
 		//Created dropped coins
 		var rand = new Random();
-		int droppedCoins = rand.Next(1, 4);
+		int droppedCoins = rand.Next(1, 3);
 		for (int i = 0; i < droppedCoins; i++)
 		{
 			Vector3 pos = gameObject.transform.globalPosition;
