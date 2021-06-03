@@ -537,7 +537,7 @@ public class MofGuideonRework : Entity
                     {
                         case INPUT.IN_PRESENTATION_END:
                             EndPresentation();
-
+                            StartChase_P1();
                             currentState = STATE.CHASE;
                             break;
                     }
@@ -887,7 +887,7 @@ public class MofGuideonRework : Entity
         float distance = Mathf.Distance(Core.instance.gameObject.transform.localPosition, gameObject.transform.localPosition);
         int decision = decisionGenerator.Next(1, 100);
 
-        if (distance >= minBurstDistance)
+        /*if (distance >= minBurstDistance)
         {
             if (decision <= maxProbBurst_P1)
                 inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
@@ -918,13 +918,16 @@ public class MofGuideonRework : Entity
 
             else
                 inputsList.Add(INPUT.IN_MELEE_COMBO_1_CHARGE);
-        }
+        }*/
+
+        inputsList.Add(INPUT.IN_PRE_BURST_CHARGE); //Need to add all melee timers and im dead, testing purposes
     }
     #endregion
 
     #region CHASE
     private void StartChase_P1()
     {
+        chaseTimer = chaseDuration;
         Debug.Log("Start chase");
     }
 
@@ -1178,6 +1181,7 @@ public class MofGuideonRework : Entity
 
     private void StartBurstCharge()
     {
+        preBurstChargeTimer = preBurstChargeDuration;
         Debug.Log("Start burst charge");
     }
 
@@ -1195,6 +1199,7 @@ public class MofGuideonRework : Entity
     //Burst dash
     private void StartBurstDash()
     {
+        preBurstDashTimer = preBurstDashDistance / preBurstDashSpeed;
         Debug.Log("Start burst dash");
     }
 
@@ -1212,6 +1217,7 @@ public class MofGuideonRework : Entity
     //P1
     private void StartBurst_P1()
     {
+        inputsList.Add(INPUT.IN_BURST_END); //TODO: you are in charge of this charlie
         Debug.Log("Start burst");
     }
 
@@ -1366,6 +1372,8 @@ public class MofGuideonRework : Entity
     #region SPAWN_ENEMIES
     private void StartSpawnEnemies()
     {
+        spawnEnemyTimer = spawnEnemyTime;
+
         CalculateSpawnersScore();
 
         if (currentPhase == PHASE.PHASE1)
@@ -1403,8 +1411,6 @@ public class MofGuideonRework : Entity
 
     private void SpawnEnemies()
     {
-        spawnEnemyTimer = spawnEnemyTime;
-
         // The 2 closests spawns are selected
         var spawnPointEnum = spawnPoints.GetEnumerator();
 
