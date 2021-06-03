@@ -1,0 +1,412 @@
+{
+    "assets_path": "Assets\/Prefabs\/MoffSwing.prefab",
+    "Game Objects": [
+        {
+            "name": "MoffSwing",
+            "tag": "MoffSwing",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1743631026,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 1157666758,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                2.5841307640075684,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                0.73000001907348633,
+                0.071000002324581146,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 0,
+                    "Density": 0
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        2,
+                        1,
+                        0.89999997615814209
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "MoffSwing",
+                    "speed": 15,
+                    "maxLifeTime": 2,
+                    "damage": 10,
+                    "swingParticleObj": 0
+                }
+            ]
+        },
+        {
+            "name": "Push Particles",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 380063530,
+            "ParentUID": 1743631026,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0.0279216468334198,
+                0,
+                0,
+                0.99961012601852417
+            ],
+            "Scale": [
+                0.99999570846557617,
+                0.99999994039535522,
+                0.9999956488609314
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": true,
+                    "looping": true,
+                    "maxDuration": 0.41999998688697815,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/568017479.dds",
+                            "texUID": 568017479,
+                            "paEmitterName": "Force Wall",
+                            "paLifeTime": [
+                                0.05000000074505806,
+                                0.05000000074505806
+                            ],
+                            "paSize": [
+                                0.20000000298023224,
+                                0.69999998807907104
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 1000,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0.77470356225967407,
+                                                0.74829298257827759,
+                                                0.61660075187683105
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.77865612506866455,
+                                                1,
+                                                1,
+                                                0.85503411293029785
+                                            ],
+                                            "paColorOLTposition": 0.28378379344940186
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0.93435400724411011,
+                                                0.99278068542480469,
+                                                0.59288537502288818
+                                            ],
+                                            "paColorOLTposition": 0.79189187288284302
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0.9167177677154541,
+                                                1,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": false,
+                                    "paShapePartSpeed": 0,
+                                    "paShapeRandSpeed": 0,
+                                    "PaShapeAreaDimensions": [
+                                        2.5,
+                                        1,
+                                        0.10000000149011612
+                                    ],
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 0,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/1162313265.dds",
+                            "texUID": 1162313265,
+                            "paEmitterName": "Suelo",
+                            "paLifeTime": [
+                                0.5,
+                                0.80000001192092896
+                            ],
+                            "paSize": [
+                                0.30000001192092896,
+                                0.05000000074505806
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 50,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        5,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 2,
+                                    "paFOLT_gravityMod": 0,
+                                    "paFOLT_gravity": -0,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 1,
+                                    "paROLT_rotation": [
+                                        360,
+                                        0
+                                    ],
+                                    "paROLT_rotationSpeed": [
+                                        -5,
+                                        5
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.2450593113899231,
+                                                0.058347437530755997,
+                                                0,
+                                                0.78656125068664551
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.30000001192092896,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 2,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeAreaDimensions": [
+                                        2.5,
+                                        0.10000000149011612,
+                                        0.30000001192092896
+                                    ],
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 0,
+                                    "PaShapeOffset": [
+                                        0,
+                                        -1,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/170375526.dds",
+                            "texUID": 170375526,
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0.5,
+                                1
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 25,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        5,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 2,
+                                    "paFOLT_gravityMod": 0,
+                                    "paFOLT_gravity": -0,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 1,
+                                    "paROLT_rotation": [
+                                        360,
+                                        0
+                                    ],
+                                    "paROLT_rotationSpeed": [
+                                        -5,
+                                        5
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.24901187419891357,
+                                                0.077075019478797913,
+                                                0,
+                                                0.84980237483978271
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.30000001192092896,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 2,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeAreaDimensions": [
+                                        2.5,
+                                        0.10000000149011612,
+                                        0.30000001192092896
+                                    ],
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 0,
+                                    "PaShapeOffset": [
+                                        0,
+                                        -1,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
+                }
+            ]
+        }
+    ]
+}
