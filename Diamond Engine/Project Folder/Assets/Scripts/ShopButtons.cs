@@ -65,6 +65,10 @@ public class ShopButtons : DiamondComponent
                     if (priceText != null) priceText.text = "-";
                     //gameObject.Enable(false);
                 }
+                else
+                {
+                    Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
+                }
             }
         }
     }
