@@ -160,6 +160,9 @@ public class MofGuideonRework : Entity
     public float comboChargeDuration = 0.5f;
     private float comboChargeTimer = 0.0f;
 
+    public float comboDirectionTime = 0.3f;
+    private float comboDirectionTimer = 0.0f;
+
     public float comboLongDashDistance = 10.0f;
     public float comboLongDashSpeed = 5.0f;
 
@@ -965,13 +968,36 @@ public class MofGuideonRework : Entity
     #region MELEE_COMBO_CHARGE
     private void StartMeleeCombo1Charge()
     {
-        comboChargeTimer = comboChargeDuration;
         Debug.Log("Start melee combo 1 charge");
+
+        comboChargeTimer = comboChargeDuration;
+        comboDirectionTimer = comboDirectionTime;
+
+        Animator.Play(gameObject, "MG_Swing", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeCombo1Charge()
     {
         Debug.Log("Update melee combo 1 charge");
+
+        if (comboDirectionTimer > 0.0f)
+        {
+            comboDirectionTimer -= myDeltaTime;
+
+            if (comboDirectionTimer > 0.1f)
+            {
+                if (Core.instance != null)
+                {
+                    Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+                    targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+                    agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+                    Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+                }
+            }
+        }
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeCombo1Charge()
@@ -981,13 +1007,36 @@ public class MofGuideonRework : Entity
 
     private void StartMeleeCombo4Charge()
     {
-        comboChargeTimer = comboChargeDuration;
         Debug.Log("Start melee combo 4 charge");
+
+        comboChargeTimer = comboChargeDuration;
+        comboDirectionTimer = comboDirectionTime;
+
+        Animator.Play(gameObject, "MG_Swing", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeCombo4Charge()
     {
         Debug.Log("Update melee combo 4 charge");
+
+        if (comboDirectionTimer > 0.0f)
+        {
+            comboDirectionTimer -= myDeltaTime;
+
+            if (comboDirectionTimer > 0.1f)
+            {
+                if (Core.instance != null)
+                {
+                    Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+                    targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
+                    agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+                    Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+                }
+            }
+        }
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeCombo4Charge()
@@ -1002,13 +1051,30 @@ public class MofGuideonRework : Entity
     //Long dash 1
     private void StartMeleeComboDash1()
     {
-        comboDashTimer = comboLongDashDistance / comboLongDashSpeed;
         Debug.Log("Start melee combo dash 1");
+        
+        comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash1()
     {
         Debug.Log("Update melee combo dash 1");
+
+        agent.MoveToCalculatedPos(comboLongDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash1()
@@ -1019,13 +1085,33 @@ public class MofGuideonRework : Entity
     //Short dash 2
     private void StartMeleeComboDash2()
     {
-        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 2");
+
+        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash2()
     {
         Debug.Log("Update melee combo dash 2");
+
+        agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash2()
@@ -1036,13 +1122,33 @@ public class MofGuideonRework : Entity
     //Short dash 3
     private void StartMeleeComboDash3()
     {
-        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 3");
+
+        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash3()
     {
         Debug.Log("Update melee combo dash 3");
+
+        agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash3()
@@ -1053,13 +1159,30 @@ public class MofGuideonRework : Entity
     //Long dash 4
     private void StartMeleeComboDash4()
     {
-        comboDashTimer = comboLongDashDistance / comboLongDashSpeed;
         Debug.Log("Start melee combo dash 4");
+
+        comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash4()
     {
         Debug.Log("Update melee combo dash 4");
+
+        agent.MoveToCalculatedPos(comboLongDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash4()
@@ -1070,13 +1193,33 @@ public class MofGuideonRework : Entity
     //Short dash 5
     private void StartMeleeComboDash5()
     {
-        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 5");
+
+        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash5()
     {
         Debug.Log("Update melee combo dash 5");
+
+        agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash5()
@@ -1087,13 +1230,33 @@ public class MofGuideonRework : Entity
     //Short dash 6
     private void StartMeleeComboDash6()
     {
-        comboDashTimer = comboShortDashDistance / comboShortDashSpeed;
         Debug.Log("Start melee combo dash 6");
+
+        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+        targetPosition = direction.normalized * comboShortDashDistance + gameObject.transform.globalPosition;
+        agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash6()
     {
         Debug.Log("Update melee combo dash 6");
+
+        agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndMeleeComboDash6()
@@ -1304,9 +1467,7 @@ public class MofGuideonRework : Entity
         lightningDashChargeDurationTimer = lightningDashChargeDuration;
         lightningDashDirectionTimer = lightningDashDirectionTime;
 
-        //CREATE AN ARROW (?) FOR VISUAL FEEDBACK AND PLAY MOFF ANTICIPATION ANIMATION
-        //visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/1137197426.prefab", chargePoint.transform.globalPosition, chargePoint.transform.globalRotation, new Vector3(1.0f, 1.0f, 0.01f));
-        //Animator.Play(gameObject, "BT_Charge", speedMult);
+        Animator.Play(gameObject, "MG_Swing", speedMult);
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1329,12 +1490,6 @@ public class MofGuideonRework : Entity
                 }
             }
         }
-        //SCALE VISUAL FEEDBACK
-        //if (visualFeedback.transform.globalScale.z < 1.0)
-        //{
-        //    visualFeedback.transform.localScale = new Vector3(1.0f, 1.0f, Mathf.Lerp(visualFeedback.transform.localScale.z, 1.0f, myDeltaTime * (loadingTime / loadingTimer)));
-        //    visualFeedback.transform.localRotation = gameObject.transform.globalRotation;
-        //}
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1352,17 +1507,12 @@ public class MofGuideonRework : Entity
 
         lightningDashDuration = (lightningDashLength / lightningDashSpeed) * speedMult;
 
-        //DASH ANIMATION + DESTROY VISUAL FEEDBACK
-        //Animator.Play(gameObject, "BT_Run", speedMult);
-        //InternalCalls.Destroy(visualFeedback);
-        //visualFeedback = null;
+        Animator.Play(gameObject, "MG_Dash", speedMult);
 
         //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "Play_Bantha_Attack");
-        //Audio.PlayAudio(gameObject, "Play_Bantha_Ramming");
-        //Audio.PlayAudio(gameObject, "Play_Footsteps_Bantha");
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
-        StraightPath();
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1393,8 +1543,8 @@ public class MofGuideonRework : Entity
         lightningDashTiredDurationTimer = lightningDashTiredDuration;
 
         //TIRED ANIMATION AND AUDIO + STUN PARTICLES
-        //Animator.Play(gameObject, "BT_Idle", speedMult);
-        //Audio.PlayAudio(gameObject, "Play_Bantha_Breath");
+        Animator.Play(gameObject, "MG_Idle", speedMult);
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAAA");
         //stun.Play();
     }
 
