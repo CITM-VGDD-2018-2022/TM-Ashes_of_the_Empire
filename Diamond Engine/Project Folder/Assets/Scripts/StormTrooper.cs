@@ -966,12 +966,12 @@ public class StormTrooper : Enemy
             if (myParticles != null && myParticles.hit != null)
                 myParticles.hit.Play();
 
-            float mod = 1;
+            float mod = 1f;
             if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
             {
                 if (HasNegativeStatus())
                 {
-                    mod = 1 + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
+                    mod = 1f + GetStatusData(STATUS_TYPE.GEOTERMAL_MARKER).severity / 100;
                 }
             }
             healthPoints -= damage * mod;
