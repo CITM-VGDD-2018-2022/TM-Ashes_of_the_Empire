@@ -8,9 +8,14 @@ public class CinematicManager : DiamondComponent
     public GameObject cameraPos2;
     private Vector3 initPos;
     private Quaternion initRot;
-
+    public bool init = false;
     public void Awake()
     {
+        if (!init)
+        {
+            return;
+        }
+
         initPos = gameCamera.transform.localPosition;
         initRot = gameCamera.transform.localRotation;
         Debug.Log(gameCamera.transform.localPosition.ToString());
