@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -4.0055594444274902,
-        -96.833259582519531,
-        -2.7953543663024902
+        -10.911123275756836,
+        11.885119438171387,
+        -11.266317367553711
     ],
     "EditorCameraZ": [
-        0.91110384464263916,
-        -0.33210828900337219,
-        0.24411857128143311
+        0.42069292068481445,
+        -0.78691494464874268,
+        0.45142245292663574
     ],
     "EditorCameraY": [
-        0.32084587216377258,
-        0.94324123859405518,
-        0.085754774510860443
+        0.53679674863815308,
+        0.61706137657165527,
+        0.57539939880371094
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -105,9 +105,9 @@
                     "fSize": 50,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 10.800000190734863,
-                    "hFOV": 13.960000038146973,
-                    "culling": false,
+                    "vFOV": 13.300000190734863,
+                    "hFOV": 24.819999694824219,
+                    "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
                     "ProfileUID": 1969686679
@@ -115,7 +115,7 @@
                 {
                     "Type": 12,
                     "Active": true,
-                    "isDefaultListener": false
+                    "isDefaultListener": true
                 },
                 {
                     "Type": 5,
@@ -25404,20 +25404,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                2.25,
-                0.11999999731779099,
-                -11.020000457763672
+                2.2500002384185791,
+                0.11999942362308502,
+                -11.071002006530762
             ],
             "Rotation": [
-                -0.50000250339508057,
-                -0.50000333786010742,
-                -0.5,
-                0.49999412894248962
+                -0.50000268220901489,
+                -0.5000033974647522,
+                -0.50000005960464478,
+                0.49999386072158813
             ],
             "Scale": [
-                0.33870244026184082,
+                1.1128123998641968,
                 4.9852108955383301,
-                2.9007327556610107
+                2.9007329940795898
             ],
             "Components": [
                 {
@@ -25448,7 +25448,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -25671,8 +25671,8 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                4.619999885559082,
-                0.11999999731779099,
+                5.00628662109375,
+                0.12000714242458344,
                 -12.649999618530273
             ],
             "Rotation": [
@@ -25683,8 +25683,8 @@
             ],
             "Scale": [
                 0.63609862327575684,
-                1.6570931673049927,
-                1.4943829774856567
+                1.6570839881896973,
+                1.4943737983703613
             ],
             "Components": [
                 {
@@ -27196,8 +27196,8 @@
             ],
             "Scale": [
                 1,
-                10.456748962402344,
-                1.4946150779724121
+                9.9710378646850586,
+                1.494614839553833
             ],
             "Components": [
                 {
@@ -27541,7 +27541,7 @@
             "Static": false,
             "Position": [
                 0.31137728691101074,
-                -0.84752577543258667,
+                -0.67500001192092896,
                 3.5911822319030762
             ],
             "Rotation": [
@@ -28354,6 +28354,95 @@
                 0.72946757078170776,
                 4.9853267669677734,
                 9.3369359970092773
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cube",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1209289800,
+            "ParentUID": 734982776,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                2.388852596282959,
+                0.0087854862213134766,
+                -12.502156257629395
+            ],
+            "Rotation": [
+                -2.1073517473269021e-06,
+                2.1073340121802175e-06,
+                -0.7071077823638916,
+                0.70710575580596924
+            ],
+            "Scale": [
+                0.99998307228088379,
+                0.99998307228088379,
+                1.4317196607589722
             ],
             "Components": [
                 {
@@ -40465,7 +40554,7 @@
                 {
                     "Type": 16,
                     "Active": true,
-                    "RootBone UID": 1191391509,
+                    "RootBone UID": 0,
                     "MeshRendererUID": 1633005126,
                     "Animations": [
                         289574508
