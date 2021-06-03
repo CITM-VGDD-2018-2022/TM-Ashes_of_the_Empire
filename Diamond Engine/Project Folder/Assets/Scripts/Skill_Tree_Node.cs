@@ -200,13 +200,22 @@ public class Skill_Tree_Node : DiamondComponent
 
     public void OnExecuteButton()
     {
-        if (state == NODE_STATE.LOCKED || state == NODE_STATE.OWNED)
+        if (state == NODE_STATE.OWNED)
             return;
-       
+
+        if (state == NODE_STATE.LOCKED)
+        {
+            Debug.Log("Locked node");
+            Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
+            return;
+        }
+
+
         if (skill.type_of_price == RewardType.REWARD_BESKAR)
         {
             if (PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR) < skill.price)
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
                 Debug.Log("You don't have enough Beskar!");
                 return;
             }
@@ -221,6 +230,7 @@ public class Skill_Tree_Node : DiamondComponent
         {
             if (PlayerResources.GetResourceCount(RewardType.REWARD_MACARON) < skill.price)
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
                 Debug.Log("You don't have enough Macarons!");
                 return;
             }
@@ -235,6 +245,7 @@ public class Skill_Tree_Node : DiamondComponent
         {
             if (PlayerResources.GetResourceCount(RewardType.REWARD_SCRAP) < skill.price)
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
                 Debug.Log("You don't have enough Scrap!");
                 return;
             }
