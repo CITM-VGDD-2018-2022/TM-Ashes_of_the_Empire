@@ -681,12 +681,12 @@ public class Core : Entity
                 inputsList.Add(INPUT.IN_CHARGE_SEC_SHOOT_END);
             }
 
-            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true && lockAttacks == false)
+            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true)
             {
                 inputsList.Add(INPUT.IN_DASH);
                 rightTriggerPressed = true;
             }
-            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true && lockAttacks == false)
+            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true)
                 rightTriggerPressed = false;
 
 
@@ -722,12 +722,12 @@ public class Core : Entity
         }
         else if (tuto_state == TUTO_STATES.DASH)
         {
-            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true && lockAttacks == false)
+            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true)
             {
                 inputsList.Add(INPUT.IN_DASH);
                 rightTriggerPressed = true;
             }
-            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true && lockAttacks == false)
+            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true)
                 rightTriggerPressed = false;
 
 
@@ -780,12 +780,12 @@ public class Core : Entity
                 }
             }
 
-            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true && lockAttacks == false)
+            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true)
             {
                 inputsList.Add(INPUT.IN_DASH);
                 rightTriggerPressed = true;
             }
-            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true && lockAttacks == false)
+            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true)
                 rightTriggerPressed = false;
 
 
@@ -820,12 +820,12 @@ public class Core : Entity
                 inputsList.Add(INPUT.IN_CHARGE_SEC_SHOOT_END);
             }
 
-            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true && lockAttacks == false)
+            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true)
             {
                 inputsList.Add(INPUT.IN_DASH);
                 rightTriggerPressed = true;
             }
-            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true && lockAttacks == false)
+            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true)
                 rightTriggerPressed = false;
 
 
@@ -888,12 +888,12 @@ public class Core : Entity
                 inputsList.Add(INPUT.IN_CHARGE_SEC_SHOOT_END);
             }
 
-            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true && lockAttacks == false)
+            if (Input.GetRightTrigger() > 0 && rightTriggerPressed == false && dashAvailable == true)
             {
                 inputsList.Add(INPUT.IN_DASH);
                 rightTriggerPressed = true;
             }
-            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true && lockAttacks == false)
+            else if (Input.GetRightTrigger() == 0 && rightTriggerPressed == true)
                 rightTriggerPressed = false;
 
 
