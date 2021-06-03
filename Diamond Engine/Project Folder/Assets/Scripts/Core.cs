@@ -2352,6 +2352,28 @@ public class Core : Entity
                         gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(collidedGameObject.GetComponent<BH_DestructBox>().explosion_damage * 0.5f));
                 }
             }
+            else if (collidedGameObject.CompareTag("MoffSwing"))
+            {
+                MoffSwing swing = collidedGameObject.GetComponent<MoffSwing>();
+
+                if (swing != null)
+                {
+                    float damage = swing.damage;
+
+                    if (damage != 0)
+                    {
+                        Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+
+                        int damageFromEnemy = (int)damage;
+                        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+                        if (playerHealth != null)
+                            playerHealth.TakeDamage(damageFromEnemy);
+
+                        damageTaken += damageFromEnemy;
+                    }
+                }
+            }
+
             else if (collidedGameObject.CompareTag("WaterFloor"))
             {
                 floorType = FLOOR_TYPE.WATER;

@@ -231,6 +231,7 @@
 		<Compile Include="Assets\Scripts\RespawnNoDamage.cs" />
 		<Compile Include="Assets\Scripts\CinematicManager.cs" />
 		<Compile Include="Assets\Scripts\EnableWithPause.cs" />
+		<Compile Include="Assets\Scripts\MoffSwing.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
