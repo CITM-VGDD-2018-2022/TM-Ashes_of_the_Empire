@@ -7,15 +7,20 @@ public class CinematicManager : DiamondComponent
     public GameObject cameraPos1;
     public GameObject cameraPos2;
     public GameObject helmet;
-    public GameObject helmetFinal;
+    public GameObject helmetFinal; 
+    public GameObject razorPoint1;
+    public GameObject razorPoint2;
     private Vector3 initPos;
     private Quaternion initRot;
     public GameObject postCinematicDialogue;
     public bool init = false;
+    private bool razorInit = false;
 
+    private float helmetTimer = 0f;
     public void Awake()
     {
-
+        razorInit = false;
+        helmetTimer = 0f;
         if (!init)
         {
             gameCamera.GetComponent<CameraController>().startFollow = true;
@@ -45,15 +50,38 @@ public class CinematicManager : DiamondComponent
             ResetInitalTransform();
         }
 
-        helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * Time.deltaTime * 0.60f;
-        helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.25f * Time.deltaTime);
+        if(helmetTimer < 1f)
+        {
+            helmetTimer += Time.deltaTime * 0.005f;
+        }
+
+        //helmet.transform.localPosition = Vector3.Lerp(helmet.transform.localPosition, helmetFinal.transform.localPosition,helmetTimer);
+        if (helmet.transform.localPosition.Distance(helmetFinal.transform.localPosition) > 0.2)
+        {
+            helmet.transform.localPosition += (helmetFinal.transform.localPosition - helmet.transform.localPosition).normalized * Time.deltaTime * 0.40f;
+
+        }
+        else
+        {
+            razorInit = true;
+            //Start Razor movement
+        }
+        helmet.transform.localRotation = Quaternion.Slerp(helmet.transform.localRotation, helmetFinal.transform.localRotation, 0.3f * Time.deltaTime);
+
+
+        //Razor Movement
+        if (razorInit)
+        {
+            razorPoint1.transform.localPosition += (razorPoint2.transform.localPosition - razorPoint1.transform.localPosition).normalized * Time.deltaTime * 8.0f;
+        }
+
         //ResetInitalTransform();
 
     }
     private void SetAsPerspectiveCamera()
     {
         CameraManager.SetCameraPerspective(gameCamera);
-        CameraManager.SetVerticalFOV(gameCamera, 60.0f);
+        CameraManager.SetVerticalFOV(gameCamera, 25.0f);
     }
 
     private void ResetInitalTransform()
