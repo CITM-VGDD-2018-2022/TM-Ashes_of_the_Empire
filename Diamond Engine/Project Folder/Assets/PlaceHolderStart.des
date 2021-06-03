@@ -337,7 +337,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Fade",
-                    "delay": 1.5,
+                    "delay": 0.5,
                     "duration": 1,
                     "playOnAwake": true
                 }
@@ -489,7 +489,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Fade",
-                    "delay": 2,
+                    "delay": 1,
                     "duration": 1,
                     "playOnAwake": true
                 }
@@ -646,7 +646,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Fade",
-                    "delay": 2.5,
+                    "delay": 1.5,
                     "duration": 1,
                     "playOnAwake": true
                 }
@@ -801,7 +801,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Fade",
-                    "delay": 3,
+                    "delay": 2,
                     "duration": 1,
                     "playOnAwake": true
                 }
@@ -872,7 +872,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.5,
+                    "delay": 0,
                     "duration": 1,
                     "initialPosX": -180,
                     "initialPosY": 53.900001525878906,
@@ -7601,8 +7601,8 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 22.5,
-                    "hFOV": 43.272056579589844,
+                    "vFOV": 23.051469802856445,
+                    "hFOV": 38.161762237548828,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": false
