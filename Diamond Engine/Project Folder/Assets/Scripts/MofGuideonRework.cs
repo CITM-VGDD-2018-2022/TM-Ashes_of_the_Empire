@@ -932,11 +932,17 @@ public class MofGuideonRework : Entity
     private void StartChase_P1()
     {
         chaseTimer = chaseDuration;
+
+        Animator.Play(gameObject, "MG_RunPh1_Final", speedMult);
+        UpdateAnimationSpd(speedMult);
+
         Debug.Log("Start chase");
     }
 
     private void UpdateChase_P1()
     {
+        UpdateAnimationSpd(speedMult);
+
         Debug.Log("Update chase");
     }
 
@@ -1435,8 +1441,6 @@ public class MofGuideonRework : Entity
 
         for (int i = 0; i < enemiesToSpawn_P1; ++i)
         {
-            Debug.Log("Spawning enemy: " + (i + 1).ToString());
-
             if (i > spawnPoints.Count - 1)
             {
                 if (i % spawnPoints.Count == 0)
@@ -1444,7 +1448,6 @@ public class MofGuideonRework : Entity
             }
 
             spawnPointEnum.MoveNext();
-
             prevDelay = SpawnEnemy(spawnPointEnum.Current.Value, prevDelay);
         }
 
