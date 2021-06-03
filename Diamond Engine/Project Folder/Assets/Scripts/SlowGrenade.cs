@@ -87,7 +87,7 @@ public class SlowGrenade : DiamondComponent
                     i--;
                 }
 
-                float slow = 0.4f;
+                float slow = 0.3f;
                 if (Core.instance != null)
                     if (Core.instance.HasStatus(STATUS_TYPE.SEC_SLOW))
                         slow *= (1f + Core.instance.GetStatusData(STATUS_TYPE.SEC_SLOW).severity / 100);
@@ -149,7 +149,7 @@ public class SlowGrenade : DiamondComponent
                                     {
                                         Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
                                         bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.5f, 0.175f);
                                     }
                                 }
                             }
@@ -169,7 +169,7 @@ public class SlowGrenade : DiamondComponent
                                     {
                                         Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
                                         bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.5f, 0.175f);
                                     }
                                 }
                             }
@@ -189,7 +189,7 @@ public class SlowGrenade : DiamondComponent
                                     {
                                         Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
                                         bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.5f, 0.175f);
                                     }
                                 }
                             }
@@ -209,7 +209,7 @@ public class SlowGrenade : DiamondComponent
                                     {
                                         Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
                                         bossScript.TakeDamage(grenadeDamage * bossScript.damageRecieveMult);
-                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.75f, 0.175f);
+                                        bossScript.AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_TIME, slow * 0.5f, 0.175f);
                                     }
                                 }
                             }
@@ -399,7 +399,6 @@ public class SlowGrenade : DiamondComponent
             }
         }
 
-
         return ret;
     }
 
@@ -458,8 +457,6 @@ public class SlowGrenade : DiamondComponent
         //this.gameObject.transform.localPosition = Vector3.positiveInfinity;
         this.gameObject.SetVelocity(new Vector3(0, 0, 0));
 
-        this.gameObject.Enable(false);
-
         enemies.Clear();
 
         currentRadius = areaRadius;
@@ -491,13 +488,12 @@ public class SlowGrenade : DiamondComponent
         forceToAdd = Vector3.zero;
         this.gameObject.transform.localScale = myScale;
 
-
         BoxCollider myBoxColl = this.gameObject.GetComponent<BoxCollider>();
 
         if (myBoxColl != null)
             myBoxColl.active = false;
 
-
+        this.gameObject.Enable(false);
     }
 
     public void EnemyDied(GameObject deadEnemy)
