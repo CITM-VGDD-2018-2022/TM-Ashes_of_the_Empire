@@ -38,19 +38,19 @@
                     "Active": true,
                     "Position": [
                         0,
-                        78.199996948242188
+                        78.300003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
                         41.200000762939453,
-                        7.9000000953674316
+                        7.4000000953674316
                     ]
                 },
                 {
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/WampaLife.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/198802351.mat",
                     "MaterialUID": 198802351
                 },
@@ -101,12 +101,12 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -6.6999998092651367
+                        -7
                     ],
                     "Rotation": 0,
                     "Size": [
                         50,
-                        18
+                        21.299999237060547
                     ]
                 },
                 {
