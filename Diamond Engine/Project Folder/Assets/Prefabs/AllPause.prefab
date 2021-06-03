@@ -118,12 +118,12 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -55,
-                        9
+                        -44.099998474121094,
+                        13.399999618530273
                     ],
                     "Rotation": 0,
                     "Size": [
-                        40.099998474121094,
+                        40.5,
                         73.699996948242188
                     ]
                 },
@@ -442,7 +442,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "Pause",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -674,7 +674,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "Pause",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -906,7 +906,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "Pause",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -1138,7 +1138,7 @@
                     "Unhovered_LibraryPath": "Library\/Textures\/1618474496.dds",
                     "Unhovered_UID": 1618474496,
                     "Script_Name": "Pause",
-                    "ButtonState": 2,
+                    "ButtonState": 3,
                     "Is Selected": false,
                     "HoverSFX": "Play_UI_Button_Hover",
                     "PressedSFX": "Play_UI_Button_Select"
@@ -1316,7 +1316,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
+                9.8000001907348633,
                 0,
                 0
             ],
@@ -1340,12 +1340,12 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        45.200000762939453,
+                        44.299999237060547,
                         1
                     ],
                     "Rotation": 0,
                     "Size": [
-                        45,
+                        40.400001525878906,
                         95
                     ]
                 },
@@ -1361,8 +1361,8 @@
                     "Type": 11,
                     "Active": true,
                     "AssetPath": "Empty",
-                    "LibraryPath": "Library\/Textures\/2126775415.dds",
-                    "UID": 2126775415,
+                    "LibraryPath": "Library\/Textures\/414569892.dds",
+                    "UID": 414569892,
                     "fadeValue": 0
                 }
             ]
@@ -1403,12 +1403,12 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -20,
-                        77.5
+                        -15.399999618530273,
+                        79.300003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
-                        10,
+                        9.5,
                         16
                     ]
                 },
@@ -7556,6 +7556,176 @@
             ]
         },
         {
+            "name": "Resolution",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1101809912,
+            "ParentUID": 823322276,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Text",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 992012512,
+            "ParentUID": 1101809912,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "ResolutionUp",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1829010432,
+            "ParentUID": 1101809912,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "ResolutionDown",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 344953760,
+            "ParentUID": 1101809912,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Resolution Value",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 716100559,
+            "ParentUID": 1101809912,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
             "name": "WindowMode",
             "tag": "Untagged",
             "layer": "Default",
@@ -8097,7 +8267,7 @@
                     "Active": true,
                     "Position": [
                         27.799999237060547,
-                        -79.800003051757813
+                        -79.800003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -8602,7 +8772,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -67.300003051757813,
+                        -67.300003051757812,
                         -3.9000000953674316
                     ],
                     "Rotation": 0,
@@ -9105,7 +9275,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -67.300003051757813,
+                        -67.300003051757812,
                         -3.2999999523162842
                     ],
                     "Rotation": 0,
@@ -9608,7 +9778,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -67.300003051757813,
+                        -67.300003051757812,
                         -2.2999999523162842
                     ],
                     "Rotation": 0,
@@ -10114,7 +10284,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -67.300003051757813,
+                        -67.300003051757812,
                         -1.8999999761581421
                     ],
                     "Rotation": 0,
@@ -10321,7 +10491,7 @@
                     "Map": [
                         {
                             "Index": 0,
-                            "UID": 1960196397,
+                            "UID": 1676501951,
                             "Action": 2,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -10603,7 +10773,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -67.300003051757813,
+                        -67.300003051757812,
                         -4.3000001907348633
                     ],
                     "Rotation": 0,
@@ -12132,13 +12302,13 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        77.199996948242188,
-                        -84.300003051757813
+                        -44.200000762939453,
+                        -76.800003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
                         20,
-                        10.300000190734863
+                        9.8000001907348633
                     ]
                 },
                 {
