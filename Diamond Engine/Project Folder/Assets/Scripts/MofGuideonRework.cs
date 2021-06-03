@@ -1482,15 +1482,19 @@ public class MofGuideonRework : Entity
 
             delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
 
-            if (Math.Abs(delay - minDelay) < 0.16f)
+            if (minDelay != 0f)
             {
-                if (delay + 0.16f < maxEnemySpawnDelay)
+                if (Math.Abs(delay - minDelay) < baseEnemySpawnDelay)
                 {
-                    delay += 0.16f;
-                }
-                else
-                {
-                    delay = Math.Max(delay - 0.16f, baseEnemySpawnDelay);
+                    if (minDelay > delay)
+                    {
+                        delay = Math.Max(delay - baseEnemySpawnDelay, baseEnemySpawnDelay);
+                    }
+                    else
+                    {
+                        delay += baseEnemySpawnDelay;
+                    }
+
                 }
             }
 
