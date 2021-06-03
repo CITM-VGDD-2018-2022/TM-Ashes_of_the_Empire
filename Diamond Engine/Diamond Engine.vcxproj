@@ -92,7 +92,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -112,7 +112,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -138,7 +138,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>STANDALONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -162,7 +162,7 @@
       <SDLCheck>false</SDLCheck>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)\Source Code\External Libraries</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
