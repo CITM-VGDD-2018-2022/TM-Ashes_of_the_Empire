@@ -763,7 +763,7 @@ public class MofGuideonRework : Entity
                 case STATE.CHANGE_PHASE:
                     switch (input)
                     {
-                        case INPUT.IN_MELEE_CHARGE_END:
+                        case INPUT.IN_PHASE_CHANGE_END:
                             currentState = STATE.CHASE;
                             EndPhaseChange();
                             break;
@@ -821,6 +821,22 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("End melee combo 1 charge");
     }
+
+    private void StartMeleeCombo4Charge()
+    {
+        Debug.Log("Start melee combo 4 charge");
+    }
+
+    private void UpdateMeleeCombo4Charge()
+    {
+        Debug.Log("Update melee combo 4 charge");
+    }
+
+    private void EndMeleeCombo4Charge()
+    {
+        Debug.Log("End melee combo 4 charge");
+    }
+
     #endregion
 
     #region MELEE_COMBO_DASH
