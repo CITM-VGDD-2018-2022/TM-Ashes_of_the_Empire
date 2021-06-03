@@ -31,6 +31,8 @@ public class TutoTriggerSwitch : DiamondComponent
     {
         if (roomUidToLoad != -1 && triggeredGameObject.CompareTag("Player"))
         {
+            if (EnvironmentSourceLocate.instance != null)
+                Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_UI_Boon_Pickup");
             StaticVariablesInit.InitStaticVars();
             SceneManager.LoadScene(roomUidToLoad);
             Counter.firstRun = false;

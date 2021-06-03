@@ -46,6 +46,8 @@ public class DPSDamage : DiamondComponent
             Debug.Log("Water enter");
             playerHealth = other.GetComponent<PlayerHealth>();
             damageTimer = damageTime;
+            if (Core.instance != null)
+                Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Damaging_Water");
         }
     }
 
@@ -55,6 +57,8 @@ public class DPSDamage : DiamondComponent
         {
             damageTimer = 0.0f;
             damage = baseDamage;
+            if (Core.instance != null)
+                Audio.StopOneAudio(Core.instance.gameObject, "Play_Mando_Damaging_Water");
         }
     }
 
