@@ -189,6 +189,8 @@ public class MofGuideonRework : Entity
     //Enemy spawn
     public float enemySpawnCooldown = 15.0f;
     private float enemySpawnTimer = 0.0f;
+    public int enemiesToSpawn_P1 = 2;
+    public int enemiesToSpawn_P2 = 2;
 
     private GameObject spawner1 = null;
     private GameObject spawner2 = null;
@@ -506,7 +508,7 @@ public class MofGuideonRework : Entity
 
     private void ProcessExternalInput()
     {
-        
+
     }
 
     private void ProcessState()
@@ -730,7 +732,7 @@ public class MofGuideonRework : Entity
                             currentState = STATE.CHANGE_PHASE;
                             break;
                     }
-                        break;
+                    break;
 
                 case STATE.PRE_BURST_DASH:
                     switch (input)
@@ -862,7 +864,7 @@ public class MofGuideonRework : Entity
     }
 
     #endregion
-  
+
     #region ACTION_SELECT
     private void UpdateActionSelect()
     {
@@ -1411,26 +1413,37 @@ public class MofGuideonRework : Entity
 
     private void SpawnEnemies()
     {
-        // The 2 closests spawns are selected
         var spawnPointEnum = spawnPoints.GetEnumerator();
+        float prevDelay = 0f;
 
-        spawnPointEnum.MoveNext();
-        SpawnEnemy(spawnPointEnum.Current.Value);
+        for (int i = 0; i < enemiesToSpawn_P1; ++i)
+        {
+            Debug.Log("Spawning enemy: " + (i + 1).ToString());
 
-        spawnPointEnum.MoveNext();
-        SpawnEnemy(spawnPointEnum.Current.Value);
+            if (i > spawnPoints.Count - 1)
+            {
+                if (i % spawnPoints.Count == 0)
+                    spawnPointEnum = spawnPoints.GetEnumerator();
+            }
+
+            spawnPointEnum.MoveNext();
+
+            prevDelay = SpawnEnemy(spawnPointEnum.Current.Value, prevDelay);
+        }
 
         ableToSpawnEnemies = false;
     }
 
-    private void SpawnEnemy(GameObject spawnPoint)
+    private float SpawnEnemy(GameObject spawnPoint, float minDelay = 0f)
     {
         Debug.Log("Spawning enemy... ");
+
+        float delay = 0f;
 
         if (spawnPoint == null)
         {
             Debug.Log("Spawning point was null!!! ");
-            return;
+            return delay;
         }
 
         SpawnPoint mySpawnPoint = spawnPoint.GetComponent<SpawnPoint>();
@@ -1439,10 +1452,24 @@ public class MofGuideonRework : Entity
         {
             Random seed = new Random();
 
-            float delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
+            delay = (float)((seed.NextDouble() * maxEnemySpawnDelay) + baseEnemySpawnDelay);
+
+            if (Math.Abs(delay - minDelay) < 0.16f)
+            {
+                if (delay + 0.16f < maxEnemySpawnDelay)
+                {
+                    delay += 0.16f;
+                }
+                else
+                {
+                    delay = Math.Max(delay - 0.16f, baseEnemySpawnDelay);
+                }
+            }
 
             mySpawnPoint.QueueSpawnEnemy(delay);
         }
+
+        return delay;
     }
 
     private void CalculateSpawnersScore()
@@ -1588,7 +1615,7 @@ public class MofGuideonRework : Entity
         currentHealthPoints = maxHealthPoints2;
     }
 
-#endregion
+    #endregion
 
     #region DIE_ACTION
     private void StartDie()
@@ -1673,7 +1700,7 @@ public class MofGuideonRework : Entity
                     }
                 }
                 if (currentHealthPoints <= 0.0f)
-                   inputsList.Add(INPUT.IN_DEAD);
+                    inputsList.Add(INPUT.IN_DEAD);
             }
         }
     }
