@@ -461,6 +461,7 @@ public class Core : Entity
         if (old_hp < PlayerHealth.currHealth)
             PlayParticles(PARTICLES.HEAL);
         old_hp = PlayerHealth.currHealth;
+
     }
 
 
@@ -2088,9 +2089,7 @@ public class Core : Entity
         }
         else if (floorType == FLOOR_TYPE.WATER)
         {
-            //Audio.StopOneAudio(this.gameObject, "Play_Mando_Damaging_Water");
             Audio.PlayAudio(this.gameObject, "Play_Footsteps_Water_Mando");
-            //Audio.PlayAudio(this.gameObject, "Play_Mando_Damaging_Water");                //// TODO change damaging water audio play ubication
             lastFootsteps = "Play_Footsteps_Water_Mando";
         }
 
@@ -2353,6 +2352,10 @@ public class Core : Entity
                         gameObject.GetComponent<PlayerHealth>().TakeDamage((int)(collidedGameObject.GetComponent<BH_DestructBox>().explosion_damage * 0.5f));
                 }
             }
+            else if (collidedGameObject.CompareTag("WaterFloor"))
+            {
+                floorType = FLOOR_TYPE.WATER;
+            }
             else if (collidedGameObject.CompareTag("MetalFloor"))
             {
                 floorType = FLOOR_TYPE.METAL;
@@ -2360,10 +2363,6 @@ public class Core : Entity
             else if (collidedGameObject.CompareTag("SnowFloor"))
             {
                 floorType = FLOOR_TYPE.SNOW;
-            }
-            else if (collidedGameObject.CompareTag("WaterFloor"))
-            {
-                floorType = FLOOR_TYPE.WATER;
             }
             else if (collidedGameObject.CompareTag("StoneFloor"))
             {
