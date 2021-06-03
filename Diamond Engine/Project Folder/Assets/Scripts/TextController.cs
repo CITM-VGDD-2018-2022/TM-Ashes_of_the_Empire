@@ -145,7 +145,7 @@ public class TextController : DiamondComponent
     }
     public void Update()
 	{
-		if (gui == null)
+		if (gui == null && Core.instance != null)
 			gui = Core.instance.hud;
 
 		if (startMenu == true && dialog != null && list_of_dialogs != null && dialog_index >= 0)

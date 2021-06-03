@@ -5,6 +5,7 @@ public class TutoManager : DiamondComponent
 {
 	public void Awake()
     {
-        BlackFade.onFadeInCompleted = Core.instance.gameObject.GetComponent<PlayerHealth>().TutorialDie;
+        if (Core.instance != null)
+            BlackFade.onFadeInCompleted = Core.instance.gameObject.GetComponent<PlayerHealth>().TutorialDie;
     }
 }

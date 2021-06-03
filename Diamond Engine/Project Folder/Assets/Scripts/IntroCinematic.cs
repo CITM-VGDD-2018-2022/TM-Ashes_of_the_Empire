@@ -83,7 +83,8 @@ public class IntroCinematic : DiamondComponent
         if (newDeltaTime > 0.016f) {
             newDeltaTime = 0.016f;
         }
-        Core.instance.LockInputs(true); // Yeah. Not pretty. But calling Core in Awake is not happening, and a boolean checked every frame seems redundant for what the function does
+        if (Core.instance != null)
+            Core.instance.LockInputs(true); // Yeah. Not pretty. But calling Core in Awake is not happening, and a boolean checked every frame seems redundant for what the function does
 
         if (toGoPosition != null && WeHaveToMove())
         {
@@ -186,7 +187,8 @@ public class IntroCinematic : DiamondComponent
             cameraObject.transform.localPosition = nonCinematicCameraPos;
             cameraObject.transform.localRotation = nonCinematicCameraRotation;
             CameraManager.SetCameraOrthographic(cameraObject);
-            Core.instance.LockInputs(false);
+            if (Core.instance != null)
+                Core.instance.LockInputs(false);
             postCinematicDialogue.Enable(true);
             postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         }
