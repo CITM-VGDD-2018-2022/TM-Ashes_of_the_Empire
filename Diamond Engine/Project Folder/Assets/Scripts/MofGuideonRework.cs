@@ -107,7 +107,7 @@ public class MofGuideonRework : Entity
 
 
     //State
-    private STATE currentState = STATE.NONE;
+    private STATE currentState = STATE.START;
     private List<INPUT> inputsList = new List<INPUT>();
     private PHASE currentPhase = PHASE.PHASE1;
     private bool start = false;
@@ -190,12 +190,12 @@ public class MofGuideonRework : Entity
     public float enemySpawnCooldown = 15.0f;
     private float enemySpawnTimer = 0.0f;
 
-    public GameObject spawner1 = null;
-    public GameObject spawner2 = null;
-    public GameObject spawner3 = null;
-    public GameObject spawner4 = null;
-    public GameObject spawner5 = null;
-    public GameObject spawner6 = null;
+    private GameObject spawner1 = null;
+    private GameObject spawner2 = null;
+    private GameObject spawner3 = null;
+    private GameObject spawner4 = null;
+    private GameObject spawner5 = null;
+    private GameObject spawner6 = null;
     private SortedDictionary<float, GameObject> spawnPoints = null;
 
     public float baseEnemySpawnDelay = 0f;
@@ -311,6 +311,8 @@ public class MofGuideonRework : Entity
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
+
+        inputsList.Add(INPUT.IN_PRESENTATION);
     }
 
     protected override void InitEntity(ENTITY_TYPE myType)
@@ -353,6 +355,7 @@ public class MofGuideonRework : Entity
             presentationTimer -= myDeltaTime;
             if (presentationTimer <= 0)
             {
+                Debug.Log("In presentation end");
                 inputsList.Add(INPUT.IN_PRESENTATION_END);
             }
 
@@ -777,6 +780,7 @@ public class MofGuideonRework : Entity
                 default:
                     break;
             }
+            inputsList.RemoveAt(0);
         }
     }
 
