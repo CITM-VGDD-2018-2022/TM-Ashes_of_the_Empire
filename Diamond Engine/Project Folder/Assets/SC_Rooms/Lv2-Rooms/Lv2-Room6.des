@@ -1,19 +1,19 @@
 {
     "NavMesh": 93202564,
     "EditorCameraPosition": [
-        -29.514314651489258,
-        9.2163057327270508,
-        -10.603717803955078
+        -28.069198608398438,
+        8.5539846420288086,
+        -2.055250883102417
     ],
     "EditorCameraZ": [
-        0.67658776044845581,
-        -0.66471672058105469,
-        0.31682920455932617
+        0.88149797916412354,
+        -0.33645978569984436,
+        0.33129465579986572
     ],
     "EditorCameraY": [
-        0.60198771953582764,
-        0.74709546566009521,
-        0.28188496828079224
+        0.31496453285217285,
+        0.94169783592224121,
+        0.11833231896162033
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl2rt.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl2lf.png",
@@ -109,8 +109,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 16.625,
-                    "hFOV": 31.024999618530273,
+                    "vFOV": 17.325000762939453,
+                    "hFOV": 31.450000762939453,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -138,7 +138,8 @@
                     "cornerBotRightX": 100,
                     "cornerBotRightY": 100,
                     "deadZoom": 80,
-                    "deadEasingSec": 5
+                    "deadEasingSec": 5,
+                    "startFollow": true
                 }
             ]
         },
@@ -4369,7 +4370,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        9.8000001907348633,
                         0,
                         0
                     ],
@@ -18930,7 +18931,7 @@
             "Static": false,
             "Position": [
                 0,
-                0,
+                0.075153350830078125,
                 0
             ],
             "Rotation": [
@@ -27103,12 +27104,12 @@
             "Static": false,
             "Position": [
                 -0.55058753490447998,
-                -0.87045955657958984,
+                -0.875,
                 0.65629428625106812
             ],
             "Rotation": [
                 0,
-                5.2875369013771767e-13,
+                5.9409340511309972e-13,
                 0,
                 1
             ],
@@ -34183,6 +34184,34 @@
                             "ParentUID": 2127305078,
                             "PrefabID": 0,
                             "PrefabReference": 1287064452,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Rotation": [
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Scale": [
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        {
+                            "name": "ForceParticle",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 610870844,
+                            "ParentUID": 2127305078,
+                            "PrefabID": 0,
+                            "PrefabReference": 610870844,
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [
