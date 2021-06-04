@@ -44,7 +44,7 @@ public class Wampa : Bosseslv2
         IN_PRESENTATION_END,
         IN_DEAD
     }
-
+    public GameObject wampaMesh = null;
     private STATE currentState = STATE.PRESENTATION;
     private List<INPUT> inputsList = new List<INPUT>();
     public bool firstSorrowRoar = false;
@@ -52,6 +52,7 @@ public class Wampa : Bosseslv2
     public bool angry = false;
     float healthPointsAux = 0.0f;
     public bool rushCrash = false;
+    float damaged = 0.0f;
 
     public override void Awake()
     {
@@ -73,7 +74,7 @@ public class Wampa : Bosseslv2
 
         companion = InternalCalls.FindObjectWithName("Skel");
         limboHealth = 0f;
-
+        damaged = 0.0f;
     }
 
     public void Update()
@@ -415,6 +416,25 @@ public class Wampa : Bosseslv2
                 Debug.Log("Boss Bar component was null!!");
 
         }
+        if (damaged > 0.01f)
+        {
+            damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
+        }
+        else
+        {
+            damaged = 0.0f;
+        }
+        if (wampaMesh != null)
+        {
+            Material wampaMeshMat = wampaMesh.GetComponent<Material>();
+
+            if (wampaMeshMat != null)
+            {
+                wampaMeshMat.SetFloatUniform("damaged", damaged);
+            }
+            else
+                Debug.Log("Wampa Mesh Material was null!!");
+        }
     }
 
     private void SelectAction()
@@ -457,6 +477,7 @@ public class Wampa : Bosseslv2
                 if (Core.instance != null)
                     damageToBoss *= Core.instance.DamageToBosses;
                 TakeDamage(damageToBoss * damageRecieveMult * BlasterVulnerability);
+                damaged = 1.0f;
             }
 
             if (Core.instance.hud != null && currentState != STATE.DEAD)
@@ -518,6 +539,7 @@ public class Wampa : Bosseslv2
                     Core.instance.luckyMod = 1 + mod / 100;
                 }
                 TakeDamage(damageToBoss);
+                damaged = 1.0f;
             }
 
             if (Core.instance.hud != null && currentState != STATE.DEAD)
