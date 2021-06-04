@@ -544,7 +544,8 @@ public class Bosseslv2 : Entity
                             if (jumpPositionIndicator != null)
                             {
                                 jumpPositionIndicator.Enable(true);
-                                jumpPositionIndicator.transform.localPosition = Core.instance.gameObject.transform.globalPosition;
+                                Vector3 newPosition = Core.instance.gameObject.transform.globalPosition;
+                                jumpPositionIndicator.transform.localPosition = new Vector3(newPosition.x, newPosition.y, newPosition.z);
                             }
 
                         }
