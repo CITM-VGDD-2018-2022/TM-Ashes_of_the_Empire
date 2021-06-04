@@ -100,7 +100,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "ChargedBullet",
-                    "speed": 35,
+                    "speed": 22.5,
                     "maxLifeTime": 0.10000000149011612,
                     "range_squared": 30,
                     "use_range_instead_of_time": true,

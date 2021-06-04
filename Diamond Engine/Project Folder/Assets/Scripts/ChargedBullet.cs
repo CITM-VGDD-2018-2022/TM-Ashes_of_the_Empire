@@ -45,7 +45,7 @@ public class ChargedBullet : DiamondComponent
         // gameObject.transform.localPosition += gameObject.transform.GetForward() * (speed * Time.deltaTime);
         if (!triggered)
         {
-            gameObject.SetVelocity(gameObject.transform.GetForward() * speed);
+            gameObject.transform.localPosition += gameObject.transform.GetForward() * speed * Time.deltaTime;
         }
         else
         {

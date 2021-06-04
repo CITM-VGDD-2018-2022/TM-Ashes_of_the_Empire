@@ -36,7 +36,7 @@ public class DeathTrooperBullet : DiamondComponent
     private GameObject goToAvoid = null;
 
     public void Update()
-	{
+    {
         if (started == false)
         {
             mesh = this.gameObject.GetChild("bulletmesh");
@@ -54,14 +54,7 @@ public class DeathTrooperBullet : DiamondComponent
         // gameObject.transform.localPosition += gameObject.transform.GetForward() * (speed * Time.deltaTime);
         if (!triggered)
         {
-            if (entity != null && entity.HasStatus(STATUS_TYPE.PRIM_SPEED))
-            {
-                gameObject.SetVelocity(gameObject.transform.GetForward() * speed * (1 + entity.GetStatusData(STATUS_TYPE.PRIM_SPEED).severity / 100));
-            }
-            else
-            {
-                gameObject.SetVelocity(gameObject.transform.GetForward() * speed);
-            }
+            gameObject.transform.localPosition += gameObject.transform.GetForward() * speed * Time.deltaTime;
         }
         else
         {
@@ -81,7 +74,7 @@ public class DeathTrooperBullet : DiamondComponent
             if (/*timer > 0.5 &&*/ gameObject != null)
             {
                 InternalCalls.Destroy(gameObject);
-                if(createT)
+                if (createT)
                     CreateT();
             }
         }
