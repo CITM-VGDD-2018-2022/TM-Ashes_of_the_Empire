@@ -63,12 +63,12 @@
                     "kinematic": false,
                     "Gravity": true,
                     "LockLinearX": true,
-                    "LockLinearY": false,
+                    "LockLinearY": true,
                     "LockLinearZ": true,
                     "LockAngularX": true,
-                    "LockAngularY": false,
+                    "LockAngularY": true,
                     "LockAngularZ": true,
-                    "Mass": 10,
+                    "Mass": 500,
                     "Density": 1
                 },
                 {
@@ -214,7 +214,63 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 126023845,
+                    "UID": 348371308,
+                    "ParentUID": 957246446,
+                    "PrefabID": 0,
+                    "PrefabReference": 287474907,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.066840648651123047,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 278525050,
+                    "ParentUID": 957246446,
+                    "PrefabID": 0,
+                    "PrefabReference": 1890393854,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.25276088714599609,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Barrel Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1562657287,
                     "ParentUID": 957246446,
                     "PrefabID": 0,
                     "PrefabReference": 1594799615,
@@ -242,7 +298,7 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1435414750,
+                    "UID": 93937560,
                     "ParentUID": 957246446,
                     "PrefabID": 0,
                     "PrefabReference": 196995074,

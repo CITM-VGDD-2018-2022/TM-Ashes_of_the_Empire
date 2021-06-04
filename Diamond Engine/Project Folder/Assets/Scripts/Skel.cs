@@ -101,7 +101,7 @@ public class Skel : Bosseslv2
         {
             firstSorrowRoar = false;
             Audio.PlayAudio(gameObject, "Play_Skel_When_Wampa_Dies");
-			//Skel second phase
+            //Skel second phase
             restingTime = 0.5f;
         }
     }
@@ -361,19 +361,13 @@ public class Skel : Bosseslv2
         }
 
         limboHealth = Mathf.Lerp(limboHealth, healthPoints, 0.01f);
-        if (bossHealth != null)
+        if (healthbarMaterial != null)
         {
-            Material bossBarMat = bossHealth.GetComponent<Material>();
-
-            if (bossBarMat != null)
-            {
-                bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
-                bossBarMat.SetFloatUniform("limbo", limboHealth / maxHealthPoints);
-            }
-            else
-                Debug.Log("Boss Bar component was null!!");
-
+            healthbarMaterial.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
+            healthbarMaterial.SetFloatUniform("limbo", limboHealth / maxHealthPoints);
         }
+        else
+            Debug.Log("Boss Bar component was null!!");
 
         if (damaged > 0.01f)
         {
@@ -407,7 +401,7 @@ public class Skel : Bosseslv2
             else
                 inputsList.Add(INPUT.IN_WANDER);
         }
-       
+
         else
         {
             int decision = randomNum.Next(1, 100);
@@ -605,6 +599,8 @@ public class Skel : Bosseslv2
         speed = 8.0f;
         //SetJumpValues(0.5f, 0.3f, 1.0f, 0.4f);
     }
+
+
 
     public void OnDestroy()
     {
