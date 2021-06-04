@@ -51,11 +51,11 @@ public class BH_Bullet : DiamondComponent
         {
             if (entity != null && entity.HasStatus(STATUS_TYPE.PRIM_SPEED))
             {
-                gameObject.SetVelocity(gameObject.transform.GetForward() * speed * (1 + entity.GetStatusData(STATUS_TYPE.PRIM_SPEED).severity / 100));
+                gameObject.transform.localPosition += gameObject.transform.GetForward() * speed * Time.deltaTime * (1 + entity.GetStatusData(STATUS_TYPE.PRIM_SPEED).severity / 100);
             }
             else
             {
-                gameObject.SetVelocity(gameObject.transform.GetForward() * speed);
+                gameObject.transform.localPosition += gameObject.transform.GetForward() * speed * Time.deltaTime;
             }
         }
         else

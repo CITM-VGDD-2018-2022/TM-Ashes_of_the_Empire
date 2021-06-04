@@ -50,13 +50,14 @@
                         1
                     ],
                     "stencilEmission": 0,
-                    "doNotDrawStencil": true
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "BH_Bullet",
-                    "speed": 20,
+                    "speed": 15,
                     "maxLifeTime": 0.10000000149011612,
                     "range_squared": 18,
                     "use_range_instead_of_time": true,
@@ -93,8 +94,8 @@
                         1
                     ],
                     "Scale": [
-                        1,
-                        1,
+                        1.25,
+                        1.2000000476837158,
                         1
                     ]
                 }
@@ -149,7 +150,8 @@
                         0
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 26,
@@ -163,7 +165,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/bloomLaser.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/856092719.mat",
                     "MaterialUID": 856092719
                 }
