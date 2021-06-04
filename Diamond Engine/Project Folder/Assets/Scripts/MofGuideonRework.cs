@@ -163,6 +163,7 @@ public class MofGuideonRework : Entity
     //Melee combo
     public float comboChargeDuration = 0.5f;
     private float comboChargeTimer = 0.0f;
+    private float chargeComboSpdMult = 1f;
 
     public float comboDirectionTime = 0.3f;
     private float comboDirectionTimer = 0.0f;
@@ -170,11 +171,14 @@ public class MofGuideonRework : Entity
     public float comboLongDashDistance = 10.0f;
     public float comboLongDashSpeed = 5.0f;
     private bool stopDashing = false;
+    private Vector3 swingPosition = Vector3.zero;
+    private float swingCorrectionAngle = 0f;
 
     public float comboShortDashDistance = 10.0f;
     public float comboShortDashSpeed = 5.0f;
 
     private float comboDashTimer = 0.0f;
+    private float comboDashTime = 0.0f;
 
     private float meleeHit1Duration = 0.0f;
     private float meleeHit2Duration = 0.0f;
@@ -341,17 +345,14 @@ public class MofGuideonRework : Entity
         meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5") * (1 / meleeHit5SpdMult) * (1 / meleeHit5SpdMult);
         meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6") * (1 / meleeHit6SpdMult) * (1 / meleeHit6SpdMult);
 
-        meleeHit1SwingTime = meleeHit1Duration * (1 / meleeHit1SpdMult) * 0.5f;
-        Debug.Log("meleeHit1SwingTime: " + meleeHit1SwingTime.ToString());
-        meleeHit2SwingTime = meleeHit2Duration * (1 / meleeHit2SpdMult) * 0.5f;
-        Debug.Log("meleeHit2SwingTime: " + meleeHit2SwingTime.ToString());
-        meleeHit3SwingTime = meleeHit3Duration * (1 / meleeHit3SpdMult) * 0.25f;
-        Debug.Log("meleeHit3SwingTime: " + meleeHit3SwingTime.ToString());
+        meleeHit1SwingTime = meleeHit1Duration * (1 / meleeHit1SpdMult);
+        meleeHit2SwingTime = meleeHit2Duration * (1 / meleeHit2SpdMult);
+        meleeHit3SwingTime = meleeHit3Duration * (1 / meleeHit3SpdMult) * 0.5f;
         meleeHit4SwingTime = meleeHit4Duration * (1 / meleeHit4SpdMult);
         meleeHit5SwingTime = meleeHit5Duration * (1 / meleeHit5SpdMult);
         meleeHit6SwingTime = meleeHit6Duration * (1 / meleeHit6SpdMult);
 
-
+        chargeComboSpdMult = Animator.GetAnimationDuration(gameObject, "MG_Swing") / comboChargeDuration;
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
@@ -794,6 +795,7 @@ public class MofGuideonRework : Entity
                         case INPUT.IN_PRE_BURST_DASH_END:
                             EndBurstDash();
                             StartBurst_P1();
+                            currentState = STATE.BURST_1;
                             break;
 
                         case INPUT.IN_DEAD:
@@ -1024,8 +1026,8 @@ public class MofGuideonRework : Entity
         comboChargeTimer = comboChargeDuration;
         comboDirectionTimer = comboDirectionTime;
 
-        Animator.Play(gameObject, "MG_Swing", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
     }
 
     private void UpdateMeleeCombo1Charge()
@@ -1057,7 +1059,7 @@ public class MofGuideonRework : Entity
         }
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-        UpdateAnimationSpd(speedMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
     }
 
     private void EndMeleeCombo1Charge()
@@ -1121,7 +1123,7 @@ public class MofGuideonRework : Entity
         Debug.Log("Start melee combo dash 1");
 
         stopDashing = false;
-        comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
+        comboDashTimer = comboDashTime = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
 
@@ -1139,6 +1141,12 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Update melee combo dash 1");
 
+        if (comboDashTimer > comboDashTime * 0.5f && Core.instance != null)
+        {
+            swingPosition = Core.instance.gameObject.transform.globalPosition;
+        }
+
+
         agent.MoveToCalculatedPos(comboLongDashSpeed * speedMult);
 
         UpdateAnimationSpd(speedMult);
@@ -1155,7 +1163,7 @@ public class MofGuideonRework : Entity
         Debug.Log("Start melee combo dash 2");
 
         stopDashing = false;
-        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+        comboDashTimer = comboDashTime = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
 
@@ -1184,6 +1192,11 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Update melee combo dash 2");
 
+        if (comboDashTimer > comboDashTime * 0.5f && Core.instance != null)
+        {
+            swingPosition = Core.instance.gameObject.transform.globalPosition;
+        }
+
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
 
         UpdateAnimationSpd(speedMult);
@@ -1199,8 +1212,9 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 3");
 
+
         stopDashing = false;
-        comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
+        comboDashTimer = comboDashTime =(comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
 
@@ -1218,6 +1232,7 @@ public class MofGuideonRework : Entity
         {
             targetPosition = Core.instance.gameObject.transform.globalPosition;
         }
+
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1228,7 +1243,14 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Update melee combo dash 3");
 
+        if (comboDashTimer > comboDashTime * 0.5f && Core.instance != null)
+        {
+            swingPosition = Core.instance.gameObject.transform.globalPosition;
+        }
+
         agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -1296,6 +1318,9 @@ public class MofGuideonRework : Entity
         {
             targetPosition = Core.instance.gameObject.transform.globalPosition;
         }
+
+
+
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1371,11 +1396,27 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
         UpdateAnimationSpd(speedMult * meleeHit1SpdMult);
 
+        Vector3 direction = swingPosition - gameObject.transform.globalPosition;
+        direction = direction.normalized;
+        swingCorrectionAngle = (float)Math.Atan2(direction.x, direction.z);
+
+        if (Math.Abs(swingCorrectionAngle * Mathf.Rad2Deg) < 1.0f)
+        {
+            swingCorrectionAngle = 0f;
+        }
+
         Debug.Log("Start melee combo hit 1");
     }
 
     private void UpdateMeleeComboHit1()
     {
+        if (meleeHitSwingTimer > 0)
+        {
+            Debug.Log("Slerp rotation value: " + (1f - (meleeHitSwingTimer / meleeHit1SwingTime)).ToString());
+
+            gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, Quaternion.RotateAroundAxis(Vector3.up, swingCorrectionAngle), 1f - (meleeHitSwingTimer / meleeHit1SwingTime));
+        }
+
         if (launchSwing == true)
         {
             SpawnSwing((int)meleeHit1Damage, gameObject.transform.GetForward());
@@ -1398,10 +1439,24 @@ public class MofGuideonRework : Entity
 
         Animator.Play(gameObject, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
         UpdateAnimationSpd(speedMult * meleeHit2SpdMult);
+
+        Vector3 direction = swingPosition - gameObject.transform.globalPosition;
+        direction = direction.normalized;
+        swingCorrectionAngle = (float)Math.Atan2(direction.x, direction.z);
+
+        if (Math.Abs(swingCorrectionAngle * Mathf.Rad2Deg) < 1.0f)
+        {
+            swingCorrectionAngle = 0f;
+        }
     }
 
     private void UpdateMeleeComboHit2()
     {
+        if (meleeHitSwingTimer > 0)
+        {
+            gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, Quaternion.RotateAroundAxis(Vector3.up, swingCorrectionAngle), 1f - (meleeHitSwingTimer / meleeHit2SwingTime));
+        }
+
         if (launchSwing == true)
         {
             SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward());
@@ -1424,10 +1479,25 @@ public class MofGuideonRework : Entity
 
         Animator.Play(gameObject, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
         UpdateAnimationSpd(speedMult * meleeHit3SpdMult);
+
+        Vector3 direction = swingPosition - gameObject.transform.globalPosition;
+        direction = direction.normalized;
+        swingCorrectionAngle = (float)Math.Atan2(direction.x, direction.z);
+
+        if (Math.Abs(swingCorrectionAngle * Mathf.Rad2Deg) < 1.0f)
+        {
+            swingCorrectionAngle = 0f;
+        }
+
     }
 
     private void UpdateMeleeComboHit3()
     {
+        if (meleeHitSwingTimer > 0)
+        {
+            gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, Quaternion.RotateAroundAxis(Vector3.up, swingCorrectionAngle), 1f - (meleeHitSwingTimer / meleeHit3SwingTime));
+        }
+
         if (launchSwing == true)
         {
             SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward());
