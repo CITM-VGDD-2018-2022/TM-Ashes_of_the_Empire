@@ -50,7 +50,8 @@
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -91,7 +92,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "DeathTrooperBullet",
-                    "speed": 30,
+                    "speed": 20,
                     "maxLifeTime": 5,
                     "range_squared": 18,
                     "use_range_instead_of_time": true,
@@ -151,7 +152,8 @@
                         0
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 26,
@@ -228,10 +230,10 @@
                 -0.92171961069107056
             ],
             "Rotation": [
-                0.00040883934707380831,
-                0.93168950080871582,
-                -6.1044935137033463e-05,
-                0.36325532197952271
+                0.00040883940528146923,
+                0.93168962001800537,
+                -6.1044942412991077e-05,
+                0.36325535178184509
             ],
             "Scale": [
                 8.5000104904174805,
@@ -328,7 +330,8 @@
                         0
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 26,
@@ -405,10 +408,10 @@
                 -0.92171961069107056
             ],
             "Rotation": [
-                0.00040883940528146923,
-                0.93168962001800537,
-                -6.1044942412991077e-05,
-                0.36325535178184509
+                0.00040883934707380831,
+                0.93168950080871582,
+                -6.1044935137033463e-05,
+                0.36325532197952271
             ],
             "Scale": [
                 8.5000104904174805,
