@@ -187,8 +187,9 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().lPos = new Vector3(bo_katan_portrait_pos_x, bo_katan_portrait_pos_y, 0);
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(bo_katan_portrait_size_x, bo_katan_portrait_size_y, 0);
                 }*/
+                Debug.Log("BOKATAN UPDGRADE!!!!!!!!!!!!!!!!");
                 textController.GetComponent<TextController>().dialog_index = boKatanInteractionNum;
-                if (boKatanInteractionNum % 4 != 0)
+                if ((boKatanInteractionNum -1) % 3 != 0)
                 {
                     boKatanInteractionNum++;
                     DiamondPrefs.Write("boKatanInteractionNum", boKatanInteractionNum);
@@ -217,7 +218,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(greef_portrait_size_x, greef_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages) + greefInteractionNum;
-                if (greefInteractionNum % 4 != 0)
+                if ((greefInteractionNum - 1) % 3 != 0)
                 {
                     greefInteractionNum++;
                     DiamondPrefs.Write("greefInteractionNum", greefInteractionNum);
@@ -246,7 +247,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(ashoka_portrait_size_x, ashoka_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 2) + ashokaInteractionNum;
-                if (ashokaInteractionNum % 4 != 0)
+                if ((ashokaInteractionNum - 1) % 3 != 0)
                 {
                     ashokaInteractionNum++;
                     DiamondPrefs.Write("ashokaInteractionNum", ashokaInteractionNum);
@@ -276,7 +277,7 @@ public class HubTextController : DiamondComponent
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 3) + caraInteractionNum;
 
-                if (caraInteractionNum % 4 != 0)
+                if ((caraInteractionNum - 1) % 3 != 0)
                 {
                     caraInteractionNum++;
                     DiamondPrefs.Write("caraInteractionNum", caraInteractionNum);
@@ -303,7 +304,7 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(grogu_portrait_size_x, grogu_portrait_size_y, 0);
                 }*/
                 textController.GetComponent<TextController>().dialog_index = (total_interactions_and_stages * 4) + groguInteractionNum;
-                if (groguInteractionNum % 3 != 0)
+                if ((groguInteractionNum - 1) % 2 != 0)
                 {
                     groguInteractionNum++;
                     DiamondPrefs.Write("groguInteractionNum", groguInteractionNum);
@@ -337,6 +338,7 @@ public class HubTextController : DiamondComponent
             case Interaction.BO_KATAN:
                 if (boKatanStage <= total_stages)
                 {
+                    Debug.Log("BOKATAN STAGE!!!!!!!!!!!!!!!!");
                     boKatanInteractionNum++;
                     DiamondPrefs.Write("boKatanInteractionNum", boKatanInteractionNum);
                     ++boKatanStage;
@@ -456,42 +458,42 @@ public class HubTextController : DiamondComponent
 
     private void CheckInteractionBools()
     {
-        if (greefInteractionNum % 4 != 0 && greefInteractionNum < 19)
+        if ((greefInteractionNum - 1) % 3 != 0 && greefInteractionNum < 19)
             greefHasInteracted = false;
-        if (ashokaInteractionNum % 4 != 0 && ashokaInteractionNum < 19)
+        if ((ashokaInteractionNum - 1) % 3 != 0 && ashokaInteractionNum < 19)
             ashokaHasInteracted = false;
-        if (groguInteractionNum % 3 != 0 && groguInteractionNum < 13)
+        if ((groguInteractionNum - 1) % 2 != 0 && groguInteractionNum < 13)
             groguHasInteracted = false;
-        if (boKatanInteractionNum % 4 != 0 && boKatanInteractionNum < 19)
+        if ((boKatanInteractionNum - 1) % 3 != 0 && boKatanInteractionNum < 19)
             boKatanHasInteracted = false;
-        if (caraInteractionNum % 4 != 0 && caraInteractionNum < 19)
+        if ((caraInteractionNum - 1) % 3 != 0 && caraInteractionNum < 19)
             caraHasInteracted = false;
     }
 
     public bool GreefHasInteractions()
     {
-        return greefInteractionNum % 4 != 0 && !greefHasInteracted && greefInteractionNum < 19;
+        return (greefInteractionNum - 1) % 3 != 0 && !greefHasInteracted && greefInteractionNum < 19;
     }
     public bool AshokaHasInteractions()
     {
-        return ashokaInteractionNum % 4 != 0 && !ashokaHasInteracted && ashokaInteractionNum < 19;
+        return (ashokaInteractionNum - 1) % 3 != 0 && !ashokaHasInteracted && ashokaInteractionNum < 19;
     }
     public bool GroguHasInteractions()
     {
-        return groguInteractionNum % 3 != 0 && !groguHasInteracted && groguInteractionNum < 13;
+        return (groguInteractionNum - 1) % 2 != 0 && !groguHasInteracted && groguInteractionNum < 13;
     }
     public bool BoKatanHasInteractions()
     {
-        return boKatanInteractionNum % 4 != 0 && !boKatanHasInteracted && boKatanInteractionNum < 19;
+        return (boKatanInteractionNum - 1) % 3 != 0 && !boKatanHasInteracted && boKatanInteractionNum < 19;
     }
     public bool CaraDuneHasInteractions()
     {
-        return caraInteractionNum % 4 != 0 && !caraHasInteracted && caraInteractionNum < 19;
+        return (caraInteractionNum - 1) % 3 != 0 && !caraHasInteracted && caraInteractionNum < 19;
     }
 
     public bool GreefCanUpgrade()
     {
-        if (greefInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && greefStage < 5)
+        if ((greefInteractionNum - 1) % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && greefStage < 5)
         {
             greefHasInteracted = false;
             return true;
@@ -503,7 +505,7 @@ public class HubTextController : DiamondComponent
     }
     public bool AshokaCanUpgrade()
     {
-        if (ashokaInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && ashokaStage < 5)
+        if ((ashokaInteractionNum - 1) % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && ashokaStage < 5)
         {
             ashokaHasInteracted = false;
             return true;
@@ -515,7 +517,7 @@ public class HubTextController : DiamondComponent
     }
     public bool GroguCanUpgrade()
     {
-        if (groguInteractionNum % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && groguStage < 5)
+        if ((groguInteractionNum - 1) % 2 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && groguStage < 5)
         {
             groguHasInteracted = false;
             return true;
@@ -527,7 +529,7 @@ public class HubTextController : DiamondComponent
     }
     public bool BoKatanCanUpgrade()
     {
-        if (boKatanInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && boKatanStage < 5)
+        if ((boKatanInteractionNum - 1) % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && boKatanStage < 5)
         {
             boKatanHasInteracted = false;
             return true;
@@ -539,7 +541,7 @@ public class HubTextController : DiamondComponent
     }
     public bool CaraDuneCanUpgrade()
     {
-        if (caraInteractionNum % 4 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && caraStage < 5)
+        if ((caraInteractionNum - 1) % 3 == 0 && PlayerResources.GetResourceCount(RewardType.REWARD_MILK) > 0 && caraStage < 5)
         {
             caraHasInteracted = false;
             return true;
