@@ -182,7 +182,7 @@
    {
     "Id": "833070093",
     "Language": "SFX",
-    "Hash": "2535085162",
+    "Hash": "1856721289",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Stormtrooper",
     "ShortName": "Stormtrooper",
     "Path": "Stormtrooper.bnk",
@@ -243,7 +243,9 @@
       "Id": "1095147418",
       "Name": "Play_Footsteps_Stormtrooper",
       "ObjectPath": "\\Events\\Default Work Unit\\Stormtrooper\\Play_Footsteps_Stormtrooper",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "0.176484",
+      "DurationMax": "0.192928",
       "IncludedMemoryFiles": [
        {
         "Id": "222927635",
@@ -1061,7 +1063,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "2959797152",
+    "Hash": "763831493",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1132,7 +1134,9 @@
       "Id": "1832947079",
       "Name": "Play_Moff_Gideon_Footsteps",
       "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Footsteps",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "0.248565",
+      "DurationMax": "0.284736",
       "IncludedMemoryFiles": [
        {
         "Id": "351242191",
@@ -1463,7 +1467,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "2756443060",
+    "Hash": "3008030950",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1653,14 +1657,20 @@
       "Name": "Play_Footsteps_Stone_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Footsteps_Stone_Mando",
       "DurationType": "OneShot",
-      "DurationMin": "0.107937",
-      "DurationMax": "0.128050",
+      "DurationMin": "0.315529",
+      "DurationMax": "0.335036",
       "IncludedMemoryFiles": [
        {
         "Id": "119721926",
         "Language": "SFX",
         "ShortName": "Footstep stone 2.wav",
         "Path": "SFX\\Footstep stone 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "351780491",
+        "Language": "SFX",
+        "ShortName": "mando stone footstep buckle.wav",
+        "Path": "SFX\\mando stone footstep buckle_FC2D3A10.wem"
        },
        {
         "Id": "470698696",
@@ -2752,6 +2762,135 @@
         "ObjectPath": "\\Switches\\Default Work Unit\\UI\\Button_hover"
        }
       ]
+     }
+    ]
+   },
+   {
+    "Id": "1838596016",
+    "Language": "SFX",
+    "Hash": "3238966799",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
+    "ShortName": "Cinematic",
+    "Path": "Cinematic.bnk",
+    "IncludedEvents": [
+     {
+      "Id": "192623117",
+      "Name": "Pause_Object",
+      "ObjectPath": "\\Events\\Default Work Unit\\Pause_Object",
+      "DurationType": "OneShot",
+      "DurationMin": "0.000000",
+      "DurationMax": "0.000000"
+     },
+     {
+      "Id": "4268479138",
+      "Name": "Play_Greef_Karga_Greeting",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Greef_Karga_Greeting",
+      "DurationType": "OneShot",
+      "DurationMin": "0.450839",
+      "DurationMax": "0.450839",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "925815649",
+        "Language": "SFX",
+        "ShortName": "greef karga greeting.wav",
+        "Path": "SFX\\greef karga greeting_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1933645159",
+      "Name": "Play_Grogu_Dialog",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Grogu_Dialog",
+      "DurationType": "OneShot",
+      "DurationMin": "0.531633",
+      "DurationMax": "0.813152",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "55684314",
+        "Language": "SFX",
+        "ShortName": "grogu dialog 1.wav",
+        "Path": "SFX\\grogu dialog 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "126207516",
+        "Language": "SFX",
+        "ShortName": "grogu dialog 3.wav",
+        "Path": "SFX\\grogu dialog 3_FC2D3A10.wem"
+       },
+       {
+        "Id": "718749945",
+        "Language": "SFX",
+        "ShortName": "grogu dialog 2.wav",
+        "Path": "SFX\\grogu dialog 2_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3565550602",
+      "Name": "Play_Helmet_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Helmet_Impact",
+      "DurationType": "OneShot",
+      "DurationMin": "0.382608",
+      "DurationMax": "0.382608",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "490617671",
+        "Language": "SFX",
+        "ShortName": "helmet impact.wav",
+        "Path": "SFX\\helmet impact_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "275665840",
+      "Name": "Play_Mando_Dialog",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Mando_Dialog",
+      "DurationType": "OneShot",
+      "DurationMin": "0.367823",
+      "DurationMax": "0.759796",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "554598734",
+        "Language": "SFX",
+        "ShortName": "mando dialog 2.wav",
+        "Path": "SFX\\mando dialog 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "635596491",
+        "Language": "SFX",
+        "ShortName": "mando dialog 3.wav",
+        "Path": "SFX\\mando dialog 3_FC2D3A10.wem"
+       },
+       {
+        "Id": "1002885204",
+        "Language": "SFX",
+        "ShortName": "mando dialog 1.wav",
+        "Path": "SFX\\mando dialog 1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1931338186",
+      "Name": "Resume_Object",
+      "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
+      "DurationType": "OneShot",
+      "DurationMin": "0.000000",
+      "DurationMax": "0.000000"
+     },
+     {
+      "Id": "3318621861",
+      "Name": "Stop_Object",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Object",
+      "DurationType": "OneShot",
+      "DurationMin": "0.000000",
+      "DurationMax": "0.000000"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "467158820",
+      "Name": "SourceVolume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\SourceVolume"
      }
     ]
    },
@@ -4567,7 +4706,7 @@
    {
     "Id": "4179269225",
     "Language": "SFX",
-    "Hash": "2859984811",
+    "Hash": "1687704965",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Grogu",
     "ShortName": "Grogu",
     "Path": "Grogu.bnk",
@@ -4597,59 +4736,69 @@
       ]
      },
      {
-      "Id": "3400331702",
-      "Name": "Play_Grogu_Cheering",
-      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Cheering",
+      "Id": "1933645159",
+      "Name": "Play_Grogu_Dialog",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Grogu_Dialog",
       "DurationType": "OneShot",
-      "DurationMin": "0.921950",
-      "DurationMax": "0.960181",
+      "DurationMin": "0.531633",
+      "DurationMax": "0.813152",
       "IncludedMemoryFiles": [
        {
-        "Id": "69887237",
+        "Id": "55684314",
         "Language": "SFX",
-        "ShortName": "Grogu cheering 3.wav",
-        "Path": "SFX\\Grogu cheering 3_FC2D3A10.wem"
+        "ShortName": "grogu dialog 1.wav",
+        "Path": "SFX\\grogu dialog 1_FC2D3A10.wem"
        },
        {
-        "Id": "424537616",
+        "Id": "126207516",
         "Language": "SFX",
-        "ShortName": "Grogu cheering 2.wav",
-        "Path": "SFX\\Grogu cheering 2_FC2D3A10.wem"
+        "ShortName": "grogu dialog 3.wav",
+        "Path": "SFX\\grogu dialog 3_FC2D3A10.wem"
        },
        {
-        "Id": "1026140889",
+        "Id": "718749945",
         "Language": "SFX",
-        "ShortName": "Grogu cheering 1.wav",
-        "Path": "SFX\\Grogu cheering 1_FC2D3A10.wem"
+        "ShortName": "grogu dialog 2.wav",
+        "Path": "SFX\\grogu dialog 2_FC2D3A10.wem"
        }
       ]
      },
      {
-      "Id": "1796781893",
-      "Name": "Play_Grogu_Cry",
-      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Cry",
+      "Id": "311583867",
+      "Name": "Play_Grogu_Ice_Wall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Ice_Wall",
       "DurationType": "OneShot",
-      "DurationMin": "1.859116",
-      "DurationMax": "2.125011",
+      "DurationMin": "0.892948",
+      "DurationMax": "0.892948",
       "IncludedMemoryFiles": [
        {
-        "Id": "273699381",
+        "Id": "454348374",
         "Language": "SFX",
-        "ShortName": "Grogu crying 1.wav",
-        "Path": "SFX\\Grogu crying 1_FC2D3A10.wem"
-       },
-       {
-        "Id": "767617738",
-        "Language": "SFX",
-        "ShortName": "Grogu crying 2.wav",
-        "Path": "SFX\\Grogu crying 2_FC2D3A10.wem"
+        "ShortName": "Grogu ice wall.wav",
+        "Path": "SFX\\Grogu ice wall_FC2D3A10.wem"
        }
       ]
      },
      {
-      "Id": "1808638179",
-      "Name": "Play_Grogu_Wall",
-      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Wall",
+      "Id": "3501543951",
+      "Name": "Play_Grogu_Metal_Wall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Metal_Wall",
+      "DurationType": "OneShot",
+      "DurationMin": "1.059320",
+      "DurationMax": "1.059320",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "718377156",
+        "Language": "SFX",
+        "ShortName": "Grogu metal wall.wav",
+        "Path": "SFX\\Grogu metal wall_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1888416279",
+      "Name": "Play_Grogu_Rock_Wall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Grogu\\Play_Grogu_Rock_Wall",
       "DurationType": "OneShot",
       "DurationMin": "1.101229",
       "DurationMax": "1.101229",
