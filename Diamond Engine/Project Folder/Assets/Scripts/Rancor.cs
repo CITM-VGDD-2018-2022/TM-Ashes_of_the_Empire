@@ -1301,6 +1301,7 @@ public class Rancor : Entity
     {
         dieTimer = dieTime;
 
+        Counter.SumToCounterType(Counter.CounterTypes.RANCOR);
         Animator.Play(gameObject, "RN_Die", 1.0f);
         UpdateAnimationSpd(1f);
 
@@ -1335,7 +1336,6 @@ public class Rancor : Entity
     public void Die()
     {
        // Debug.Log("RANCOR'S DEAD");
-        Counter.SumToCounterType(Counter.CounterTypes.RANCOR);
 
         Animator.Pause(gameObject);
         Audio.StopAudio(gameObject);

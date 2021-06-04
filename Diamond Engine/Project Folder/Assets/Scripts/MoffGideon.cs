@@ -2362,6 +2362,7 @@ public class MoffGideon : Entity
 
     private void StartDie()
     {
+        Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
         dieTimer = dieTime;
         Animator.Play(gameObject, "MG_Death", speedMult);
         UpdateAnimationSpd(speedMult);
@@ -2400,7 +2401,6 @@ public class MoffGideon : Entity
     public void Die()
     {
         Debug.Log("MOFF'S DEAD");
-        Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
         EnemyManager.RemoveEnemy(gameObject);
 
         Animator.Pause(gameObject);

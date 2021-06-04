@@ -200,10 +200,10 @@ public class PlayerHealth : DiamondComponent
     //Also works as a HEAL AMOUNT when taking negative damage ;) When current HP drops to 0, Die() Method is called
     public int TakeDamage(int damage, bool ignoreDashInv = false)
     {
-        if (DebugOptionsHolder.godModeActive)
+        if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs)
             return currHealth;
 
-        if (Core.instance != null && !Core.instance.lockInputs)
+        if (Core.instance != null)
         {
             if (Core.instance.HasStatus(STATUS_TYPE.BLOCK))
             {

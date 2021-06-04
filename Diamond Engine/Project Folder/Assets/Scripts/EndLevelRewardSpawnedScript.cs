@@ -29,10 +29,17 @@ public class EndLevelRewardSpawn : DiamondComponent
 
     public void OnTriggerEnter(GameObject collidedGameObject)
     {
-        if (collidedGameObject != null && collidedGameObject.CompareTag("Player"))
+        if (collidedGameObject != null)
         {
-            trigger = true;
-            Audio.PlayAudio(gameObject, "Play_UI_Boon_Pickup");
+            if(collidedGameObject.CompareTag("Player"))
+            {
+                trigger = true;
+                Audio.PlayAudio(gameObject, "Play_UI_Boon_Pickup");
+            }
+            else
+            {
+                timer = 0.0f;
+            }
         }
     }
 
