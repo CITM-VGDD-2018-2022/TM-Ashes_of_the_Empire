@@ -26,7 +26,7 @@
             "Scale": [
                 1,
                 0.071000002324581146,
-                1
+                5.6295719146728516
             ],
             "Components": [
                 {
@@ -72,7 +72,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "MoffSwing",
-                    "speed": 15,
+                    "speed": 25,
                     "maxLifeTime": 2,
                     "damage": 10,
                     "swingParticleObj": 0,

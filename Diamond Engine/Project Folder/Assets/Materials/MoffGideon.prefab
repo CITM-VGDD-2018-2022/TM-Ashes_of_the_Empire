@@ -3,7 +3,7 @@
     "Game Objects": [
         {
             "name": "MoffGideon",
-            "tag": "Enemy",
+            "tag": "Untagged",
             "layer": "Default",
             "Active": true,
             "UID": 837518950,
@@ -160,19 +160,19 @@
                     "comboLongDashDistance": 12.5,
                     "comboLongDashSpeed": 27.5,
                     "comboShortDashDistance": 5,
-                    "comboShortDashSpeed": 13,
-                    "meleeHit1SpdMult": 1.75,
-                    "meleeHit2SpdMult": 1.75,
-                    "meleeHit3SpdMult": 1.75,
-                    "meleeHit4SpdMult": 1.75,
-                    "meleeHit5SpdMult": 1.75,
-                    "meleeHit6SpdMult": 1.75,
-                    "meleeHit1Damage": 20,
-                    "meleeHit2Damage": 20,
-                    "meleeHit3Damage": 20,
-                    "meleeHit4Damage": 20,
-                    "meleeHit5Damage": 20,
-                    "meleeHit6Damage": 20,
+                    "comboShortDashSpeed": 15,
+                    "meleeHit1SpdMult": 1.8500000238418579,
+                    "meleeHit2SpdMult": 1.8500000238418579,
+                    "meleeHit3SpdMult": 1.8500000238418579,
+                    "meleeHit4SpdMult": 1.8500000238418579,
+                    "meleeHit5SpdMult": 1.8500000238418579,
+                    "meleeHit6SpdMult": 1.8500000238418579,
+                    "meleeHit1Damage": 15,
+                    "meleeHit2Damage": 15,
+                    "meleeHit3Damage": 15,
+                    "meleeHit4Damage": 15,
+                    "meleeHit5Damage": 15,
+                    "meleeHit6Damage": 15,
                     "enemySpawnCooldown": 15,
                     "enemiesToSpawn_P1": 2,
                     "enemiesToSpawn_P2": 3,
@@ -1373,10 +1373,10 @@
                 1.3369902518434174e-08
             ],
             "Rotation": [
-                -0.99996829032897949,
-                0.0040514282882213593,
-                -0.006335199810564518,
-                0.00266489596106112
+                -0.99996817111968994,
+                0.0040514278225600719,
+                -0.0063351988792419434,
+                0.0026648957282304764
             ],
             "Scale": [
                 1.000099778175354,
@@ -2291,10 +2291,10 @@
                 -0.036866538226604462
             ],
             "Rotation": [
-                -0.097951620817184448,
-                0.24442742764949799,
-                -0.20007437467575073,
-                0.94373255968093872
+                -0.097951605916023254,
+                0.2444273978471756,
+                -0.20007434487342834,
+                0.94373244047164917
             ],
             "Scale": [
                 0.99999982118606567,
@@ -2865,10 +2865,10 @@
                 -2.6863153834710829e-06
             ],
             "Rotation": [
-                0.00016948698612395674,
-                -0.014532585628330708,
-                -0.18077297508716583,
-                0.9834175705909729
+                0.00016948697157204151,
+                -0.014532583765685558,
+                -0.18077296018600464,
+                0.98341745138168335
             ],
             "Scale": [
                 0.99999994039535522,
@@ -2899,10 +2899,10 @@
                 -2.4106438445414824e-07
             ],
             "Rotation": [
-                -0.067525416612625122,
-                0.81828749179840088,
-                -0.55898058414459229,
-                0.11570131778717041
+                -0.067525409162044525,
+                0.81828737258911133,
+                -0.55898052453994751,
+                0.11570130288600922
             ],
             "Scale": [
                 1,

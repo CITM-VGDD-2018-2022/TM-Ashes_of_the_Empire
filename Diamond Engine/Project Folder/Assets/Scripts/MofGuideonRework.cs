@@ -335,12 +335,16 @@ public class MofGuideonRework : Entity
         meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5") * (1 / meleeHit5SpdMult) * (1 / meleeHit5SpdMult);
         meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6") * (1 / meleeHit6SpdMult) * (1 / meleeHit6SpdMult);
 
-        meleeHit1SwingTime = meleeHit1Duration * (1 / meleeHit1SpdMult);
-        meleeHit2SwingTime = meleeHit2Duration * (1 / meleeHit2SpdMult);
-        meleeHit3SwingTime = meleeHit3Duration * (1 / meleeHit3SpdMult);
+        meleeHit1SwingTime = meleeHit1Duration * (1 / meleeHit1SpdMult) * 0.5f;
+        Debug.Log("meleeHit1SwingTime: " + meleeHit1SwingTime.ToString());
+        meleeHit2SwingTime = meleeHit2Duration * (1 / meleeHit2SpdMult) * 0.5f;
+        Debug.Log("meleeHit2SwingTime: " + meleeHit2SwingTime.ToString());
+        meleeHit3SwingTime = meleeHit3Duration * (1 / meleeHit3SpdMult) * 0.25f;
+        Debug.Log("meleeHit3SwingTime: " + meleeHit3SwingTime.ToString());
         meleeHit4SwingTime = meleeHit4Duration * (1 / meleeHit4SpdMult);
         meleeHit5SwingTime = meleeHit5Duration * (1 / meleeHit5SpdMult);
         meleeHit6SwingTime = meleeHit6Duration * (1 / meleeHit6SpdMult);
+
 
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
@@ -431,7 +435,7 @@ public class MofGuideonRework : Entity
 
             if (comboChargeTimer <= 0)
                 inputsList.Add(INPUT.IN_MELEE_CHARGE_END);
-        }        
+        }
 
         if (meleeHitSwingTimer > 0)
         {
@@ -1022,7 +1026,7 @@ public class MofGuideonRework : Entity
         {
             comboDirectionTimer -= myDeltaTime;
 
-            if (comboDirectionTimer > 0.1f)
+            if (comboDirectionTimer > 0.05f)
             {
                 if (Core.instance != null)
                 {
@@ -1159,6 +1163,7 @@ public class MofGuideonRework : Entity
         {
             targetPosition = Core.instance.gameObject.transform.globalPosition;
         }
+
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
@@ -1389,7 +1394,7 @@ public class MofGuideonRework : Entity
     {
         if (launchSwing == true)
         {
-            SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward());
+            SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward(), -15f * Mathf.Deg2RRad);
             launchSwing = false;
         }
 
@@ -1415,7 +1420,7 @@ public class MofGuideonRework : Entity
     {
         if (launchSwing == true)
         {
-            SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward());
+            SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward(), 15f * Mathf.Deg2RRad);
             launchSwing = false;
         }
 
@@ -1505,18 +1510,22 @@ public class MofGuideonRework : Entity
         Debug.Log("End melee combo hit 6");
     }
 
-    private void SpawnSwing(int damage, Vector3 direction, float speedMult = 1f, float timeMult = 1f)
+    //Rotation angle in rad
+    private void SpawnSwing(int damage, Vector3 direction, float rotationAngle = 0f, float speedMult = 1f, float timeMult = 1f)
     {
-        GameObject swing = InternalCalls.CreatePrefab("Library/Prefabs/1157666758.prefab", gameObject.transform.globalPosition - gameObject.transform.GetForward().normalized, gameObject.transform.globalRotation, new Vector3(0.7f, 0.07f, 1f));
+        GameObject swing = InternalCalls.CreatePrefab("Library/Prefabs/1157666758.prefab", gameObject.transform.globalPosition - gameObject.transform.GetForward().normalized, gameObject.transform.globalRotation, new Vector3(1f, 0.07f, 1f));
 
         if (swing != null)
         {
+            if (rotationAngle != 0f)
+                swing.transform.localRotation = Quaternion.Slerp(swing.transform.localRotation, Quaternion.RotateAroundAxis(Vector3.up, rotationAngle), 1f);
+
             MoffSwing swingScript = swing.GetComponent<MoffSwing>();
 
             if (swingScript != null)
             {
                 swingScript.SetDamage(damage);
-                swingScript.SetDirection(direction);
+                swingScript.SetDirection(direction.normalized);
                 swingScript.SetMultipliers(speedMult, timeMult);
             }
         }
