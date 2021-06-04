@@ -141,7 +141,7 @@ public class PlayerHealth : DiamondComponent
     //Increments the current Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to take percentual damage
     public void HealPercent(float percent)
     {
-        if (DebugOptionsHolder.godModeActive || invincible)
+        if (DebugOptionsHolder.godModeActive || invincible || die)
             return;
 
         currHealth += (int)(currHealth * percent);
@@ -161,7 +161,7 @@ public class PlayerHealth : DiamondComponent
     //Increments the current Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to take percentual damage
     public void HealPercentMax(float percentofMaxHp)
     {
-        if (DebugOptionsHolder.godModeActive || invincible)
+        if (DebugOptionsHolder.godModeActive || invincible || die)
             return;
 
         currHealth += (int)(currMaxHealth * percentofMaxHp);
@@ -182,7 +182,7 @@ public class PlayerHealth : DiamondComponent
     //When current HP drops to 0, Die() Method is called
     public void SetCurrentHP(int newCurrentHP)
     {
-        if (DebugOptionsHolder.godModeActive || invincible)
+        if (DebugOptionsHolder.godModeActive || invincible || die)
             return;
 
         currHealth = newCurrentHP;
@@ -202,7 +202,7 @@ public class PlayerHealth : DiamondComponent
     //Also works as a HEAL AMOUNT when taking negative damage ;) When current HP drops to 0, Die() Method is called
     public int TakeDamage(int damage, bool ignoreDashInv = false)
     {
-        if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs || invincible)
+        if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs || invincible || die)
             return currHealth;
 
         if (Core.instance != null)
