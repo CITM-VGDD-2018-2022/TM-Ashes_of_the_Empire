@@ -3,7 +3,7 @@
     "Game Objects": [
         {
             "name": "MoffGideon",
-            "tag": "Untagged",
+            "tag": "Enemy",
             "layer": "Default",
             "Active": true,
             "UID": 837518950,
@@ -72,7 +72,7 @@
                     "LockAngularX": true,
                     "LockAngularY": true,
                     "LockAngularZ": true,
-                    "Mass": 10,
+                    "Mass": 950.0999755859375,
                     "Density": 1
                 },
                 {
@@ -91,9 +91,9 @@
                         1
                     ],
                     "Scale": [
-                        0.80000001192092896,
+                        0.75,
                         1.3999999761581421,
-                        0.80000001192092896
+                        0.75
                     ]
                 },
                 {
@@ -101,7 +101,7 @@
                     "Active": true,
                     "Speed": 0,
                     "Angular Speed": 0,
-                    "Stopping Distance": 0.10000000149011612
+                    "Stopping Distance": 0.34999999403953552
                 },
                 {
                     "Type": 13,

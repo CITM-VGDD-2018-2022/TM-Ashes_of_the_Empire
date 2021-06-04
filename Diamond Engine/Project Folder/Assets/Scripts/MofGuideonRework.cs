@@ -165,6 +165,7 @@ public class MofGuideonRework : Entity
 
     public float comboLongDashDistance = 10.0f;
     public float comboLongDashSpeed = 5.0f;
+    private bool stopDashing = false;
 
     public float comboShortDashDistance = 10.0f;
     public float comboShortDashSpeed = 5.0f;
@@ -280,6 +281,7 @@ public class MofGuideonRework : Entity
     public void Awake()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+
         InitEntity(ENTITY_TYPE.MOFF);
 
         if (EnemyManager.EnemiesLeft() > 0)
@@ -384,8 +386,12 @@ public class MofGuideonRework : Entity
         {
             comboDashTimer -= myDeltaTime;
 
-            if (comboDashTimer <= 0 || Mathf.Distance(gameObject.transform.globalPosition, targetPosition) < agent.stoppingDistance)
+            if (comboDashTimer <= 0 || Mathf.Distance(gameObject.transform.globalPosition, agent.GetDestination()) < agent.stoppingDistance || stopDashing == true)
+            {
                 inputsList.Add(INPUT.IN_MELEE_DASH_END);
+                stopDashing = false;
+                comboDashTimer = 0f;
+            }
         }
 
         if (meleeHitTimer > 0)
@@ -1069,6 +1075,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 1");
 
+        stopDashing = false;
         comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1102,6 +1109,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 2");
 
+        stopDashing = false;
         comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1145,6 +1153,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 3");
 
+        stopDashing = false;
         comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1188,6 +1197,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 4");
 
+        stopDashing = false;
         comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1221,6 +1231,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 5");
 
+        stopDashing = false;
         comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -1264,6 +1275,7 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start melee combo dash 6");
 
+        stopDashing = false;
         comboDashTimer = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
@@ -2103,11 +2115,12 @@ public class MofGuideonRework : Entity
         else if (collidedGameObject.CompareTag("Player"))
         {
             //TODO: Make him do the Melee Combo! / Deal Damage when dashing through
-
+            stopDashing = true;
         }
         else if (collidedGameObject.CompareTag("Wall"))
         {
             //TODO: Stop any kind of dash!
+            stopDashing = true;
         }
         else if (collidedGameObject.CompareTag("WorldLimit"))
         {
