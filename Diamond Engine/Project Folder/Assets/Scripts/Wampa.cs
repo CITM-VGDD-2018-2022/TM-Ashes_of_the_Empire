@@ -148,7 +148,7 @@ public class Wampa : Bosseslv2
             {
                 presentationTimer -= myDeltaTime;
                 healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPoints * 0.25f);
-                
+
                 if (presentationTimer <= 0.0f)
                 {
                     inputsList.Add(INPUT.IN_PRESENTATION_END);
@@ -404,18 +404,14 @@ public class Wampa : Bosseslv2
         }
 
         limboHealth = Mathf.Lerp(limboHealth, healthPoints, 0.01f);
-        if (bossHealth != null)
+        if (healthbarMaterial != null)
         {
-            Material bossBarMat = bossHealth.GetComponent<Material>();
-            if (bossBarMat != null)
-            {
-                bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
-                bossBarMat.SetFloatUniform("limbo", limboHealth / maxHealthPoints);
-            }
-            else
-                Debug.Log("Boss Bar component was null!!");
-
+            healthbarMaterial.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
+            healthbarMaterial.SetFloatUniform("limbo", limboHealth / maxHealthPoints);
         }
+        else
+            Debug.Log("Boss Bar component was null!!");
+
         if (damaged > 0.01f)
         {
             damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);

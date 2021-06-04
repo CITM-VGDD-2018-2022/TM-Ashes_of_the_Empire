@@ -24,6 +24,7 @@ public class Bosseslv2 : Entity
     public GameObject colliderRush = null;
     public GameObject jumpPositionIndicator = null;
     public GameObject bossHealth = null;
+    public Material healthbarMaterial = null;
     public float limboHealth = 0.0f;
     public float maxHealthPoints = 0.0f;
     public GameObject leftSpike = null;
@@ -172,6 +173,11 @@ public class Bosseslv2 : Entity
         {
             slamParticles = slamParticlesObj.GetComponent<ParticleSystem>();
         }
+
+        if (bossHealth != null)
+        {
+            healthbarMaterial = bossHealth.GetComponent<Material>();
+        }
     }
 
     #region PROJECTILE
@@ -189,7 +195,7 @@ public class Bosseslv2 : Entity
     {
         LookAt(Core.instance.gameObject.transform.globalPosition);
 
-        if(catchProjectileTimer > 0f)
+        if (catchProjectileTimer > 0f)
         {
             catchProjectileTimer -= myDeltaTime;
             if (catchProjectileTimer < 0f)
@@ -286,7 +292,7 @@ public class Bosseslv2 : Entity
         UpdateAnimationSpd(speedMult);
 
         //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
-        Animator.Play(gameObject, "WP_Roar", speedMult*2);
+        Animator.Play(gameObject, "WP_Roar", speedMult * 2);
         UpdateAnimationSpd(speedMult);
         Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
 
@@ -372,7 +378,7 @@ public class Bosseslv2 : Entity
         {
             colliderRush.GetComponent<BoxCollider>().active = false;
         }
-        
+
         if (gameObject.CompareTag("Wampa"))
             Audio.StopOneAudio(gameObject, "Play_Wampa_Rush");
         else if (gameObject.CompareTag("Skel"))
@@ -569,7 +575,8 @@ public class Bosseslv2 : Entity
 
                     jumpslamTimer -= myDeltaTime;
 
-                    if (Mathf.Distance(jumpPositionIndicator.transform.localPosition, Core.instance.gameObject.transform.globalPosition) > 0.3f) {
+                    if (Mathf.Distance(jumpPositionIndicator.transform.localPosition, Core.instance.gameObject.transform.globalPosition) > 0.3f)
+                    {
                         jumpPositionIndicator.transform.localPosition += (Core.instance.gameObject.transform.globalPosition - jumpPositionIndicator.transform.localPosition) * 0.1f;
                     }
 
@@ -683,13 +690,13 @@ public class Bosseslv2 : Entity
     }
     public void UpdateFollowing()
     {
-        if(trailTimer > 0.0f)
+        if (trailTimer > 0.0f)
         {
             trailTimer -= Time.deltaTime;
 
-            if(trailTimer <= 0.0f)
+            if (trailTimer <= 0.0f)
             {
-                if(trailParticles != null)
+                if (trailParticles != null)
                 {
                     trailParticles.Play();
                 }
@@ -817,6 +824,7 @@ public class Bosseslv2 : Entity
     {
         Debug.Log("DEAD");
         limboHealth = 0.0f;
+        SetLifebarToZero();
 
         EnemyManager.RemoveEnemy(gameObject);
         if (gameObject.CompareTag("Wampa") && companion != null)
@@ -1049,6 +1057,17 @@ public class Bosseslv2 : Entity
     public override bool IsDying()
     {
         return healthPoints <= 0f;
+    }
+
+    private void SetLifebarToZero()
+    {
+        if (healthbarMaterial != null)
+        {
+            healthbarMaterial.SetFloatUniform("length_used", 0.0f);
+            healthbarMaterial.SetFloatUniform("limbo", 0.0f);
+        }
+        else
+            Debug.Log("Boss Bar component was null!!");
     }
 
     /*    public void SetJumpValues(float charge, float up, float down, float recovery)

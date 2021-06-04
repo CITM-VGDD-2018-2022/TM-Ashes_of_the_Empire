@@ -173,6 +173,7 @@ public class SkyTrooperShot : DiamondComponent
 		if (meshRenderer != null)
 			meshRenderer.active = false;
 
-		InternalCalls.CreatePrefab("Library/Prefabs/828188331.prefab", gameObject.transform.globalPosition, Quaternion.identity, new Vector3(1, 1, 1));
+		InternalCalls.CreatePrefab("Library/Prefabs/828188331.prefab", gameObject.transform.globalPosition, Quaternion.identity, new Vector3(1.0f, 1.0f, 1.0f));
+		InternalCalls.Destroy(gameObject);
 	}
 }
