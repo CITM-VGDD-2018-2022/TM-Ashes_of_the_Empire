@@ -113,12 +113,12 @@
                                 0.10000000149011612
                             ],
                             "paColor": [
-                                1,
-                                0.69314074516296387,
-                                0,
+                                0.89743590354919434,
+                                0.67430198192596436,
+                                0.17028270661830902,
                                 1
                             ],
-                            "paPerSec": 2500,
+                            "paPerSec": 400,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -213,7 +213,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 100,
+                            "paPerSec": 60,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -325,7 +325,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 200,
+                            "paPerSec": 100,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -434,7 +434,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 500,
+                            "paPerSec": 200,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
