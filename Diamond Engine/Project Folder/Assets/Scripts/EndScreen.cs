@@ -39,6 +39,7 @@ public class EndScreen : DiamondComponent
             if (boonDisplayObject == null)
                 Debug.Log("Null Boon object");
         }
+        DiamondPrefs.SaveData();
     }
 
     public void OnExecuteButton()
