@@ -52,7 +52,8 @@ public class GameSceneManager : DiamondComponent
 
                 rewardObject.AssignLibraryTextureToMaterial(rewardData.meshTextureID, "diffuseTexture");
                 rewardObject.Enable(true);
-                if (rewardSpawnComponent != null) {
+                if (rewardSpawnComponent != null)
+                {
                     rewardSpawnComponent.PlayParticles();
                 }
                 Core.instance.lockInputs = false;
@@ -68,11 +69,13 @@ public class GameSceneManager : DiamondComponent
 
         if (rewardData != null && rewardObject != null && rewardSpawnComponent != null)
         {
+
             rewardSpawnComponent.AdvanceVerticalMovement(rewardInitialPos);
             rewardSpawnComponent.AdvanceRotation();
 
             if (rewardSpawnComponent.trigger == true)
             {
+
                 ApplyReward();
                 if (InternalCalls.FindObjectWithName("BlackFade") != null)
                 {
@@ -161,5 +164,19 @@ public class GameSceneManager : DiamondComponent
     public void OnApplicationQuit()
     {
         instance = null;
+    }
+
+    public void DeactivateBoon()
+    {
+        if (rewardObject.IsEnabled())
+            rewardObject.Enable(false);
+        if (rewardMenu != null)
+        {
+            InternalCalls.Destroy(rewardMenu);
+            rewardMenu = null;
+        }
+        rewardData = null;
+
+
     }
 }

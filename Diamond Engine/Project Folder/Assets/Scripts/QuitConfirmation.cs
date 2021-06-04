@@ -17,9 +17,9 @@ public class QuitConfirmation : DiamondComponent
 			InternalCalls.CloseGame();
 		if (gameObject.Name == "QuittoMenu")
 		{
+			GameSceneManager.instance.DeactivateBoon();
 			Time.ResumeGame();
 			Audio.SetState("Game_State", "HUB");
-
 			RoomSwitch.OnPlayerQuit();
 		}
 		if (gameObject.Name == "QuittoMenuHUB")
