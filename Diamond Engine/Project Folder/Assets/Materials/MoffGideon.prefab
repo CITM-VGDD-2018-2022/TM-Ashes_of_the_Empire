@@ -174,7 +174,7 @@
                     "meleeHit4Damage": 15,
                     "meleeHit5Damage": 15,
                     "meleeHit6Damage": 15,
-                    "enemySpawnCooldown": 15,
+                    "spawnAnimationSpdMult_P1": 2,
                     "enemiesToSpawn_P1": 2,
                     "enemiesToSpawn_P2": 3,
                     "baseEnemySpawnDelay": 0.15999999642372131,
