@@ -241,17 +241,17 @@ public class MofGuideonRework : Entity
 
     private float preBurstDashTimer = 0.0f;
 
-    //Burst 1   NEED TO ADD TO INTERNAL INPUT
+    //Burst 1
     public float bulletDamage = 5.0f;
 
     public int numBurstBullets = 3;
 
     public float timeBetweenShots = 0.5f;
-    public float timeBetweenStates = 1.5f;
+    public float timeToStartBurst = 1.5f;
 
     private int shotTimes = 0;
     private float shotTimer = 0.0f;
-    private float statesTimer = 0.0f;
+    private float toStartBurstTimer = 0.0f;
 
 
     //Burst 2
@@ -478,7 +478,9 @@ public class MofGuideonRework : Entity
             preBurstChargeTimer -= myDeltaTime;
 
             if (preBurstChargeTimer <= 0)
-                inputsList.Add(INPUT.IN_PRE_BURST_DASH);
+            { 
+                inputsList.Add(INPUT.IN_PRE_BURST_CHARGE_END);
+            }
         }
 
         if (preBurstDashTimer > 0)
@@ -486,7 +488,13 @@ public class MofGuideonRework : Entity
             preBurstDashTimer -= myDeltaTime;
 
             if (preBurstDashTimer <= 0)
-                inputsList.Add(INPUT.IN_BURST1);
+                inputsList.Add(INPUT.IN_PRE_BURST_DASH_END);
+        }
+
+        if (shotTimes >= numBurstBullets && shotTimer <= 0.0f)
+        {
+            inputsList.Add(INPUT.IN_BURST_END);
+            Debug.Log("In burst end input");
         }
 
         //Lightning dash
@@ -625,6 +633,7 @@ public class MofGuideonRework : Entity
 
                         case INPUT.IN_PRE_BURST_CHARGE:
                             StartBurstCharge();
+                            currentState = STATE.PRE_BURST_CHARGE;
                             break;
 
                         case INPUT.IN_SPAWN_ENEMIES:
@@ -794,6 +803,7 @@ public class MofGuideonRework : Entity
                         case INPUT.IN_PRE_BURST_DASH_END:
                             EndBurstDash();
                             StartBurst_P1();
+                            currentState = STATE.BURST_1;
                             break;
 
                         case INPUT.IN_DEAD:
@@ -940,8 +950,8 @@ public class MofGuideonRework : Entity
 
     private void DecideAttack()
     {
-        float distance = Mathf.Distance(Core.instance.gameObject.transform.localPosition, gameObject.transform.localPosition);
-        int decision = decisionGenerator.Next(1, 100);
+        float distance = Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition);
+        float decision = decisionGenerator.Next(1, 100);
 
         if (distance >= minBurstDistance)
         {
@@ -1124,6 +1134,7 @@ public class MofGuideonRework : Entity
         comboDashTimer = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1131,8 +1142,6 @@ public class MofGuideonRework : Entity
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash1()
@@ -1550,13 +1559,15 @@ public class MofGuideonRework : Entity
 
     private void StartBurstCharge()
     {
-        preBurstChargeTimer = preBurstChargeDuration;
-        Debug.Log("Start burst charge");
+        preBurstChargeTimer = comboChargeDuration;
+
+        Animator.Play(gameObject, "MG_Swing", speedMult);
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateBurstCharge()
     {
-        Debug.Log("Update burst charge");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurstCharge()
@@ -1569,12 +1580,16 @@ public class MofGuideonRework : Entity
     private void StartBurstDash()
     {
         preBurstDashTimer = preBurstDashDistance / preBurstDashSpeed;
+
+        Animator.Play(gameObject, "MG_Dash", speedMult);
+        UpdateAnimationSpd(speedMult);
+
         Debug.Log("Start burst dash");
     }
 
     private void UpdateBurstDash()
     {
-        Debug.Log("Update burst dash");
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurstDash()
@@ -1586,22 +1601,51 @@ public class MofGuideonRework : Entity
     //P1
     private void StartBurst_P1()
     {
-        inputsList.Add(INPUT.IN_BURST_END); //TODO: you are in charge of this charlie
         Debug.Log("Start burst");
+        //Animator.Play(gameObject, "MG_Idle", speedMult);
+        //UpdateAnimationSpd(speedMult);
+
+        toStartBurstTimer = timeToStartBurst;
+        shotTimer = timeBetweenShots;
+        
+
+        Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
+
     }
 
     private void UpdateBurst_P1()
     {
         Debug.Log("Update burst");
+
+        if (toStartBurstTimer > 0.0f)
+        {
+            toStartBurstTimer -= myDeltaTime;
+        }
+        else
+        {
+            if (shotTimer > 0.0f)
+            {
+                shotTimer -= myDeltaTime;
+
+                if (shotTimer <= 0.0f)
+                    Shoot();
+            }
+        }
+
+        Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurst_P1()
     {
-        Debug.Log("End burst");
+        shotTimes = 0;
     }
 
     private void Shoot()
     {
+        Animator.Play(gameObject, "MG_Shoot", speedMult);
+
         GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1606118587.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, shootPoint.transform.globalScale);
 
         if (bullet != null)
@@ -1616,6 +1660,10 @@ public class MofGuideonRework : Entity
         }
 
         shotTimes++;
+
+
+        if (shotTimes < numBurstBullets)
+            shotTimer = timeBetweenShots;
     }
 
     //P2
