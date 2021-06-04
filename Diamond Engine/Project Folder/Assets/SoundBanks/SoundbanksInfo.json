@@ -182,7 +182,7 @@
    {
     "Id": "833070093",
     "Language": "SFX",
-    "Hash": "1856721289",
+    "Hash": "3729742681",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Stormtrooper",
     "ShortName": "Stormtrooper",
     "Path": "Stormtrooper.bnk",
@@ -200,8 +200,8 @@
       "Name": "Play_Blaster_Stormtrooper",
       "ObjectPath": "\\Events\\Default Work Unit\\Stormtrooper\\Play_Blaster_Stormtrooper",
       "DurationType": "OneShot",
-      "DurationMin": "0.894172",
-      "DurationMax": "0.894172",
+      "DurationMin": "0.843986",
+      "DurationMax": "0.920374",
       "IncludedMemoryFiles": [
        {
         "Id": "1058641518",
@@ -373,7 +373,7 @@
    {
     "Id": "913881297",
     "Language": "SFX",
-    "Hash": "4059959974",
+    "Hash": "1899932783",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Wampa_Skell",
     "ShortName": "Wampa_Skell",
     "Path": "Wampa_Skell.bnk",
@@ -691,8 +691,8 @@
       "Name": "Play_Wampa_Projectile_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Wampa Skel\\Play_Wampa_Projectile_Impact",
       "DurationType": "OneShot",
-      "DurationMin": "1.039526",
-      "DurationMax": "1.202408",
+      "DurationMin": "1.086177",
+      "DurationMax": "1.184485",
       "IncludedMemoryFiles": [
        {
         "Id": "768195793",
@@ -1063,7 +1063,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "763831493",
+    "Hash": "4186832002",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1407,8 +1407,8 @@
       "Name": "Play_Moff_Gideon_Shot",
       "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Shot",
       "DurationType": "OneShot",
-      "DurationMin": "1.437732",
-      "DurationMax": "1.437732",
+      "DurationMin": "1.357039",
+      "DurationMax": "1.523225",
       "IncludedMemoryFiles": [
        {
         "Id": "274347457",
@@ -1467,7 +1467,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "3008030950",
+    "Hash": "1481444768",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1501,8 +1501,8 @@
       "Name": "Play_Blaster_Shoot_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Blaster_Shoot_Mando",
       "DurationType": "OneShot",
-      "DurationMin": "1.070525",
-      "DurationMax": "1.070525",
+      "DurationMin": "0.981676",
+      "DurationMax": "1.167416",
       "IncludedMemoryFiles": [
        {
         "Id": "713708188",
@@ -1971,6 +1971,46 @@
         "Language": "SFX",
         "ShortName": "Mando push command.wav",
         "Path": "SFX\\Mando push command_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3774924049",
+      "Name": "Play_Mando_Ramming_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Mando_Ramming_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.332240",
+      "DurationMax": "0.686802",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "166122849",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 3.wav",
+        "Path": "SFX\\Bantha attack ramming 3_FC2D3A10.wem"
+       },
+       {
+        "Id": "218041158",
+        "Language": "SFX",
+        "ShortName": "Mando hit 1.wav",
+        "Path": "SFX\\Mando hit 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "426481162",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 2.wav",
+        "Path": "SFX\\Bantha attack ramming 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "647876168",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 1.wav",
+        "Path": "SFX\\Bantha attack ramming 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "1010296783",
+        "Language": "SFX",
+        "ShortName": "Mando hit 2.wav",
+        "Path": "SFX\\Mando hit 2_FC2D3A10.wem"
        }
       ]
      },
@@ -2768,7 +2808,7 @@
    {
     "Id": "1838596016",
     "Language": "SFX",
-    "Hash": "3238966799",
+    "Hash": "2753829045",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
     "ShortName": "Cinematic",
     "Path": "Cinematic.bnk",
@@ -2866,6 +2906,52 @@
         "Language": "SFX",
         "ShortName": "mando dialog 1.wav",
         "Path": "SFX\\mando dialog 1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3691715430",
+      "Name": "Play_Razor_Appearing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Razor_Appearing",
+      "DurationType": "OneShot",
+      "DurationMin": "2.065261",
+      "DurationMax": "2.065261",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "1056562801",
+        "Language": "SFX",
+        "ShortName": "SpaceshipPassing.wav",
+        "Path": "SFX\\SpaceshipPassing_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "967484939",
+      "Name": "Play_Razor_Leaving",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Razor_Leaving",
+      "DurationType": "OneShot",
+      "DurationMin": "3.363424",
+      "DurationMax": "3.363424",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "786979063",
+        "Language": "SFX",
+        "ShortName": "SpaceshipLeaving.wav",
+        "Path": "SFX\\SpaceshipLeaving_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "1412995432",
+      "Name": "Play_Razor_Motor",
+      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Razor_Motor",
+      "DurationType": "Infinite",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "721756660",
+        "Language": "SFX",
+        "ShortName": "SpaceshipLoop.wav",
+        "Path": "SFX\\SpaceshipLoop_B182BB5A.wem"
        }
       ]
      },
@@ -3025,7 +3111,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "1785992210",
+    "Hash": "134731859",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -3329,8 +3415,8 @@
       "Name": "Play_Rock_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rock_Impact",
       "DurationType": "OneShot",
-      "DurationMin": "1.080604",
-      "DurationMax": "1.080604",
+      "DurationMin": "0.962709",
+      "DurationMax": "1.112268",
       "IncludedMemoryFiles": [
        {
         "Id": "769836140",
@@ -3745,7 +3831,7 @@
    {
     "Id": "3795682265",
     "Language": "SFX",
-    "Hash": "1820991115",
+    "Hash": "3844910783",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bantha",
     "ShortName": "Bantha",
     "Path": "Bantha.bnk",
@@ -3813,34 +3899,6 @@
         "Language": "SFX",
         "ShortName": "BanthaPrepareAttack2.wav",
         "Path": "SFX\\BanthaPrepareAttack2_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
-      "Id": "1950875304",
-      "Name": "Play_Bantha_Ramming",
-      "ObjectPath": "\\Events\\Default Work Unit\\Bantha\\Play_Bantha_Ramming",
-      "DurationType": "OneShot",
-      "DurationMin": "0.332240",
-      "DurationMax": "0.686802",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "166122849",
-        "Language": "SFX",
-        "ShortName": "Bantha attack ramming 3.wav",
-        "Path": "SFX\\Bantha attack ramming 3_FC2D3A10.wem"
-       },
-       {
-        "Id": "426481162",
-        "Language": "SFX",
-        "ShortName": "Bantha attack ramming 2.wav",
-        "Path": "SFX\\Bantha attack ramming 2_FC2D3A10.wem"
-       },
-       {
-        "Id": "647876168",
-        "Language": "SFX",
-        "ShortName": "Bantha attack ramming 1.wav",
-        "Path": "SFX\\Bantha attack ramming 1_FC2D3A10.wem"
        }
       ]
      },
