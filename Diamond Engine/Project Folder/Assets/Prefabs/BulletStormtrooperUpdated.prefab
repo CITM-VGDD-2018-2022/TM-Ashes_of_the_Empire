@@ -57,7 +57,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "BH_Bullet",
-                    "speed": 25,
+                    "speed": 12.5,
                     "maxLifeTime": 0.94999998807907104,
                     "range_squared": 20,
                     "use_range_instead_of_time": false,
