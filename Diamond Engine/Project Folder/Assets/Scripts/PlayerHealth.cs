@@ -16,6 +16,8 @@ public class PlayerHealth : DiamondComponent
     private bool die = false;
     private float damaged = 0.0f;
 
+    private bool invincible = false;
+
     public void Awake()
     {
         if (currHealth <= 0 && currMaxHealth <= 0)
@@ -139,7 +141,7 @@ public class PlayerHealth : DiamondComponent
     //Increments the current Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to take percentual damage
     public void HealPercent(float percent)
     {
-        if (DebugOptionsHolder.godModeActive)
+        if (DebugOptionsHolder.godModeActive || invincible)
             return;
 
         currHealth += (int)(currHealth * percent);
@@ -159,7 +161,7 @@ public class PlayerHealth : DiamondComponent
     //Increments the current Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to take percentual damage
     public void HealPercentMax(float percentofMaxHp)
     {
-        if (DebugOptionsHolder.godModeActive)
+        if (DebugOptionsHolder.godModeActive || invincible)
             return;
 
         currHealth += (int)(currMaxHealth * percentofMaxHp);
@@ -180,7 +182,7 @@ public class PlayerHealth : DiamondComponent
     //When current HP drops to 0, Die() Method is called
     public void SetCurrentHP(int newCurrentHP)
     {
-        if (DebugOptionsHolder.godModeActive)
+        if (DebugOptionsHolder.godModeActive || invincible)
             return;
 
         currHealth = newCurrentHP;
@@ -200,7 +202,7 @@ public class PlayerHealth : DiamondComponent
     //Also works as a HEAL AMOUNT when taking negative damage ;) When current HP drops to 0, Die() Method is called
     public int TakeDamage(int damage, bool ignoreDashInv = false)
     {
-        if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs)
+        if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs || invincible)
             return currHealth;
 
         if (Core.instance != null)
@@ -333,5 +335,11 @@ public class PlayerHealth : DiamondComponent
             //Core.instance.gameObject.GetComponent<CapsuleCollider>().active = true;
             //TODO: rigidbody gravity
         }
+    }
+
+
+    public void SetInvincible(bool set)
+    {
+        invincible = set;
     }
 }

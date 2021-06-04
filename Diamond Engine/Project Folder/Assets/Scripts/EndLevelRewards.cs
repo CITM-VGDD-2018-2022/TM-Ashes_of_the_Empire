@@ -52,6 +52,8 @@ public class EndLevelRewards
 
         if (firstButton != null && firstButton.gameObject != null)
             firstButton.gameObject.GetComponent<Navigation>().Select(); // Line added because buttons crashed. For... some reason
+
+        Core.instance.gameObject.GetComponent<PlayerHealth>().SetInvincible(true);
     }
 
     public GameResources GetSelectedReward()
