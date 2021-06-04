@@ -1856,6 +1856,8 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Death", speedMult);
         UpdateAnimationSpd(speedMult);
 
+        Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
+
         Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Lightsaber_Turn_Off");
         Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Death");
         Audio.PlayAudio(gameObject, "Play_Victory_Music");
@@ -1875,7 +1877,6 @@ public class MofGuideonRework : Entity
 
     public void Die()
     {
-        Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
         EnemyManager.RemoveEnemy(gameObject);
 
         Animator.Pause(gameObject);

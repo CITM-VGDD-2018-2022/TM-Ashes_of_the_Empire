@@ -106,27 +106,6 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/571028171.mat",
                     "MaterialUID": 571028171
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        -0.44999998807907104
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        0.60000002384185791,
-                        0.30000004172325134,
-                        0.20000000298023224
-                    ]
                 }
             ]
         },
@@ -194,7 +173,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/bloomLaser.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/856092719.mat",
                     "MaterialUID": 856092719
                 }
