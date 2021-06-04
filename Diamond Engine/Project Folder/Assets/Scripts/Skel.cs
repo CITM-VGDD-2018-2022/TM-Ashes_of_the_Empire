@@ -341,7 +341,7 @@ public class Skel : Bosseslv2
                 UpdateDie();
                 break;
             case STATE.FOLLOW:
-                UpdateFollowing();
+                if (!Core.instance.IsMandoDead()) UpdateFollowing();
                 break;
             case STATE.JUMP_SLAM:
                 UpdateJumpSlam();
@@ -350,7 +350,7 @@ public class Skel : Bosseslv2
                 UpdateBounceRush();
                 break;
             case STATE.WANDER:
-                UpdateWander();
+                if (!Core.instance.IsMandoDead()) UpdateWander();
                 break;
             case STATE.PRESENTATION:
                 UpdatePresentation();
@@ -393,22 +393,25 @@ public class Skel : Bosseslv2
 
     private void SelectAction()
     {
-        if (resting)
+        if (!Core.instance.IsMandoDead())
         {
-            int decision = randomNum.Next(1, 100);
-            if (decision <= 60)
-                inputsList.Add(INPUT.IN_FOLLOW);
-            else
-                inputsList.Add(INPUT.IN_WANDER);
-        }
+            if (resting)
+            {
+                int decision = randomNum.Next(1, 100);
+                if (decision <= 60)
+                    inputsList.Add(INPUT.IN_FOLLOW);
+                else
+                    inputsList.Add(INPUT.IN_WANDER);
+            }
 
-        else
-        {
-            int decision = randomNum.Next(1, 100);
-            if (decision <= 75)
-                inputsList.Add(INPUT.IN_JUMPSLAM);
             else
-                inputsList.Add(INPUT.IN_BOUNCERUSH);
+            {
+                int decision = randomNum.Next(1, 100);
+                if (decision <= 75)
+                    inputsList.Add(INPUT.IN_JUMPSLAM);
+                else
+                    inputsList.Add(INPUT.IN_BOUNCERUSH);
+            }
         }
     }
 
