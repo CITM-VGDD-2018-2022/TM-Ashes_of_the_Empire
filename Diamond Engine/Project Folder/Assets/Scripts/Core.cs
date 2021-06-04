@@ -276,6 +276,7 @@ public class Core : Entity
         //dashDuration = 0.2f;
         //dashDistance = 4.5f;
         lastFootsteps = "Play_Footsteps_Stone_Mando";
+        //sniperRechargeTimer = bulletRechargeTime; // TODO if sniper recharge sfx sounds during cinematic, try uncomment this line
         #endregion
 
         #region SHOOT
@@ -2205,7 +2206,7 @@ public class Core : Entity
                 sniperBullet1.SetFloatUniform("maxBulletCooldown", bulletRechargeTime);
             }
 
-            if (!lockInputs && sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
+            if (sniperRechargeTimer <= ((numberOfBullets - currentBullets - 1) * bulletRechargeTime))
             {
                 currentBullets++;
                 PlayParticles(PARTICLES.SNIPER);
