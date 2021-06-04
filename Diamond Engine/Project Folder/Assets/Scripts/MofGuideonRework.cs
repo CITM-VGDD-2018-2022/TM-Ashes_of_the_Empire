@@ -179,16 +179,31 @@ public class MofGuideonRework : Entity
     private float meleeHit5Duration = 0.0f;
     private float meleeHit6Duration = 0.0f;
 
+    public float meleeHit1SpdMult = 1.0f;
+    public float meleeHit2SpdMult = 1.0f;
+    public float meleeHit3SpdMult = 1.0f;
+    public float meleeHit4SpdMult = 1.0f;
+    public float meleeHit5SpdMult = 1.0f;
+    public float meleeHit6SpdMult = 1.0f;
+
     private float meleeHitTimer = 0.0f;
 
     public float meleeHit1Damage = 2.0f;
     public float meleeHit2Damage = 2.0f;
     public float meleeHit3Damage = 2.0f;
-
     public float meleeHit4Damage = 2.0f;
     public float meleeHit5Damage = 2.0f;
     public float meleeHit6Damage = 2.0f;
 
+    private float meleeHit1SwingTime = 0.0f;
+    private float meleeHit2SwingTime = 0.0f;
+    private float meleeHit3SwingTime = 0.0f;
+    private float meleeHit4SwingTime = 0.0f;
+    private float meleeHit5SwingTime = 0.0f;
+    private float meleeHit6SwingTime = 0.0f;
+
+    private float meleeHitSwingTimer = 0.0f;
+    private bool launchSwing = false;
 
     //Enemy spawn
     public float enemySpawnCooldown = 15.0f;
@@ -313,12 +328,20 @@ public class MofGuideonRework : Entity
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow") - 0.016f;
 
-        meleeHit1Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo1");
-        meleeHit2Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo2");
-        meleeHit3Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo3");
-        meleeHit4Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo4");
-        meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5");
-        meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6");
+        meleeHit1Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo1") * (1 / meleeHit1SpdMult) * (1 / meleeHit1SpdMult);
+        meleeHit2Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo2") * (1 / meleeHit2SpdMult) * (1 / meleeHit2SpdMult);
+        meleeHit3Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo3") * (1 / meleeHit3SpdMult);
+        meleeHit4Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo4") * (1 / meleeHit4SpdMult) * (1 / meleeHit4SpdMult);
+        meleeHit5Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo5") * (1 / meleeHit5SpdMult) * (1 / meleeHit5SpdMult);
+        meleeHit6Duration = Animator.GetAnimationDuration(gameObject, "MG_MeleeCombo6") * (1 / meleeHit6SpdMult) * (1 / meleeHit6SpdMult);
+
+        meleeHit1SwingTime = meleeHit1Duration * (1 / meleeHit1SpdMult);
+        meleeHit2SwingTime = meleeHit2Duration * (1 / meleeHit2SpdMult);
+        meleeHit3SwingTime = meleeHit3Duration * (1 / meleeHit3SpdMult);
+        meleeHit4SwingTime = meleeHit4Duration * (1 / meleeHit4SpdMult);
+        meleeHit5SwingTime = meleeHit5Duration * (1 / meleeHit5SpdMult);
+        meleeHit6SwingTime = meleeHit6Duration * (1 / meleeHit6SpdMult);
+
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
@@ -408,6 +431,14 @@ public class MofGuideonRework : Entity
 
             if (comboChargeTimer <= 0)
                 inputsList.Add(INPUT.IN_MELEE_CHARGE_END);
+        }        
+
+        if (meleeHitSwingTimer > 0)
+        {
+            meleeHitSwingTimer -= myDeltaTime;
+
+            if (meleeHitSwingTimer <= 0)
+                launchSwing = true;
         }
 
         //Spawn Enemies
@@ -922,13 +953,13 @@ public class MofGuideonRework : Entity
 
         else
         {
-            float provavility = Mathf.Lerp(maxMeleeDistance, minBurstDistance, distance) * 100;
+            float probability = Mathf.Lerp(maxMeleeDistance, minBurstDistance, distance) * 100;
 
-            if (maxProbBurst_P1 * provavility < minProbBurst_P1)
-                provavility = minProbBurst_P1 / maxProbBurst_P1;
+            if (maxProbBurst_P1 * probability < minProbBurst_P1)
+                probability = minProbBurst_P1 / maxProbBurst_P1;
 
 
-            if (decision <= maxProbBurst_P1 * provavility)
+            if (decision <= maxProbBurst_P1 * probability)
                 inputsList.Add(INPUT.IN_PRE_BURST_CHARGE);
 
             else
@@ -1320,16 +1351,23 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit1()
     {
         meleeHitTimer = meleeHit1Duration;
+        meleeHitSwingTimer = meleeHit1SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo1", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit1SpdMult);
 
         Debug.Log("Start melee combo hit 1");
     }
 
     private void UpdateMeleeComboHit1()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+            SpawnSwing((int)meleeHit1Damage, gameObject.transform.GetForward());
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit1SpdMult);
     }
 
     private void EndMeleeComboHit1()
@@ -1341,14 +1379,21 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit2()
     {
         meleeHitTimer = meleeHit2Duration;
+        meleeHitSwingTimer = meleeHit2SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo2", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit2SpdMult);
     }
 
     private void UpdateMeleeComboHit2()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+            SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward());
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit2SpdMult);
     }
 
     private void EndMeleeComboHit2()
@@ -1360,14 +1405,21 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit3()
     {
         meleeHitTimer = meleeHit3Duration;
+        meleeHitSwingTimer = meleeHit3SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo3", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit3SpdMult);
     }
 
     private void UpdateMeleeComboHit3()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+            SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward());
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit3SpdMult);
     }
 
     private void EndMeleeComboHit3()
@@ -1379,14 +1431,21 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit4()
     {
         meleeHitTimer = meleeHit4Duration;
+        meleeHitSwingTimer = meleeHit4SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo4", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit4SpdMult);
     }
 
     private void UpdateMeleeComboHit4()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit4SpdMult);
     }
 
     private void EndMeleeComboHit4()
@@ -1398,14 +1457,21 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit5()
     {
         meleeHitTimer = meleeHit5Duration;
+        meleeHitSwingTimer = meleeHit5SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo5", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit5SpdMult);
     }
 
     private void UpdateMeleeComboHit5()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit5SpdMult);
     }
 
     private void EndMeleeComboHit5()
@@ -1417,20 +1483,45 @@ public class MofGuideonRework : Entity
     private void StartMeleeComboHit6()
     {
         meleeHitTimer = meleeHit6Duration;
+        meleeHitSwingTimer = meleeHit6SwingTime;
 
-        Animator.Play(gameObject, "MG_MeleeCombo6", speedMult);
-        UpdateAnimationSpd(speedMult);
+        Animator.Play(gameObject, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
+        UpdateAnimationSpd(speedMult * meleeHit6SpdMult);
     }
 
     private void UpdateMeleeComboHit6()
     {
-        UpdateAnimationSpd(speedMult);
+        if (launchSwing == true)
+        {
+
+            launchSwing = false;
+        }
+
+        UpdateAnimationSpd(speedMult * meleeHit6SpdMult);
     }
 
     private void EndMeleeComboHit6()
     {
         Debug.Log("End melee combo hit 6");
     }
+
+    private void SpawnSwing(int damage, Vector3 direction, float speedMult = 1f, float timeMult = 1f)
+    {
+        GameObject swing = InternalCalls.CreatePrefab("Library/Prefabs/1157666758.prefab", gameObject.transform.globalPosition - gameObject.transform.GetForward().normalized, gameObject.transform.globalRotation, new Vector3(0.7f, 0.07f, 1f));
+
+        if (swing != null)
+        {
+            MoffSwing swingScript = swing.GetComponent<MoffSwing>();
+
+            if (swingScript != null)
+            {
+                swingScript.SetDamage(damage);
+                swingScript.SetDirection(direction);
+                swingScript.SetMultipliers(speedMult, timeMult);
+            }
+        }
+    }
+
     #endregion
 
     #endregion

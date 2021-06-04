@@ -2355,13 +2355,17 @@ public class Core : Entity
             {
                 MoffSwing swing = collidedGameObject.GetComponent<MoffSwing>();
 
+                Debug.Log("Collided w/ Moff Swing!");
+
                 if (swing != null)
                 {
                     float damage = swing.damage;
 
-                    if (damage != 0)
+                    if (damage != 0 && swing.hasCollided == false)
                     {
                         Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+
+                        swing.hasCollided = true;
 
                         int damageFromEnemy = (int)damage;
                         PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
@@ -2372,7 +2376,6 @@ public class Core : Entity
                     }
                 }
             }
-
             else if (collidedGameObject.CompareTag("WaterFloor"))
             {
                 floorType = FLOOR_TYPE.WATER;
@@ -2392,6 +2395,35 @@ public class Core : Entity
             else if (collidedGameObject.CompareTag("SandFloor"))
             {
                 floorType = FLOOR_TYPE.SAND;
+            }
+        }
+    }
+
+    public void OnCollisionStay(GameObject collidedGameObject)
+    {
+        if (collidedGameObject.CompareTag("MoffSwing"))
+        {
+            MoffSwing swing = collidedGameObject.GetComponent<MoffSwing>();
+
+            Debug.Log("Collided STAY w/ Moff Swing!");
+
+            if (swing != null)
+            {
+                float damage = swing.damage;
+
+                if (damage != 0 && swing.hasCollided == false)
+                {
+                    Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+
+                    swing.hasCollided = true;
+
+                    int damageFromEnemy = (int)damage;
+                    PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+                    if (playerHealth != null)
+                        playerHealth.TakeDamage(damageFromEnemy);
+
+                    damageTaken += damageFromEnemy;
+                }
             }
         }
     }
