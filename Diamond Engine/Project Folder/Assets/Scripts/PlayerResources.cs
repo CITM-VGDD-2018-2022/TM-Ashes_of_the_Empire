@@ -41,7 +41,7 @@ public static class PlayerResources
     static int macaronCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("macaronCounter") : 0;
     static int milkCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("milkCounter") : 0;
     static int scrapCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("scrapCounter") : 0;
-    static int runCoins = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("runCoins") : 0;
+    static int runCoins = 0;
     static bool[] accquiredBoons = new bool[(int)BOONS.BOON_MAX];
     static Dictionary<BOONS, int> boonCounter = new Dictionary<BOONS, int>();
 
@@ -237,8 +237,6 @@ public static class PlayerResources
         {
             Counter.SumToCounterType(Counter.CounterTypes.RUN_COINS);
         }
-
-        DiamondPrefs.Write("runCoins", runCoins);
     }
 
     public static void SetRunCoins(int val)
@@ -249,8 +247,6 @@ public static class PlayerResources
         {
             Counter.SumToCounterType(Counter.CounterTypes.RUN_COINS);
         }
-
-        DiamondPrefs.Write("runCoins", runCoins);
     }
 
     public static void ResetRunBoons()
@@ -273,7 +269,7 @@ public static class PlayerResources
         macaronCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("macaronCounter") : 0;
         milkCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("milkCounter") : 0;
         scrapCounter = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("scrapCounter") : 0;
-        runCoins = DiamondPrefs.ReadBool("loadData") ? DiamondPrefs.ReadInt("runCoins") : 0;
+        runCoins = 0;
     }
 
 }

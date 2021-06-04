@@ -22,6 +22,14 @@ public class QuitConfirmation : DiamondComponent
 
 			RoomSwitch.OnPlayerQuit();
 		}
+		if (gameObject.Name == "QuittoMenuHUB")
+		{
+			Time.ResumeGame();
+			if (Core.instance != null)
+				Core.instance.SaveBuffs();
+			SceneManager.LoadScene(1726826608);
+		}
+
 	}
 	public void Update()
 	{

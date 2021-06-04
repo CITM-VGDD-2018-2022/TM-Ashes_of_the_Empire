@@ -381,7 +381,7 @@ public class Wampa : Bosseslv2
                 UpdateDie();
                 break;
             case STATE.FOLLOW:
-                UpdateFollowing();
+                if (!Core.instance.IsMandoDead()) UpdateFollowing();
                 break;
             case STATE.PROJECTILE:
                 UpdateProjectile();
@@ -393,7 +393,7 @@ public class Wampa : Bosseslv2
                 UpdateSlowRush();
                 break;
             case STATE.WANDER:
-                UpdateWander();
+                if (!Core.instance.IsMandoDead()) UpdateWander();
                 break;
             case STATE.PRESENTATION:
                 UpdatePresentation();
@@ -435,20 +435,23 @@ public class Wampa : Bosseslv2
 
     private void SelectAction()
     {
-        if (resting)
+        if (!Core.instance.IsMandoDead())
         {
-            int decision = randomNum.Next(1, 100);
-            if (decision <= 60)
-                inputsList.Add(INPUT.IN_FOLLOW);
+            if (resting)
+            {
+                int decision = randomNum.Next(1, 100);
+                if (decision <= 60)
+                    inputsList.Add(INPUT.IN_FOLLOW);
+                else
+                    inputsList.Add(INPUT.IN_WANDER);
+            }
             else
-                inputsList.Add(INPUT.IN_WANDER);
-        }
-        else
-        {
-            if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) >= distanceProjectile)
-                inputsList.Add(INPUT.IN_PROJECTILE);
-            else
-                inputsList.Add(INPUT.IN_FAST_RUSH);
+            {
+                if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) >= distanceProjectile)
+                    inputsList.Add(INPUT.IN_PROJECTILE);
+                else
+                    inputsList.Add(INPUT.IN_FAST_RUSH);
+            }
         }
     }
 
