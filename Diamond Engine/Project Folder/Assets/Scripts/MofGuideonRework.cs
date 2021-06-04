@@ -153,6 +153,8 @@ public class MofGuideonRework : Entity
     private float presentationTimer = 0f;
 
     //Chase
+    public float endChaseDistance = 1.5f;
+
     public float chaseDuration = 2.0f;
     private float chaseTimer = 0.0f;
 
@@ -994,6 +996,9 @@ public class MofGuideonRework : Entity
             agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
         }
 
+        if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) < endChaseDistance)
+            inputsList.Add(INPUT.IN_CHASE_END);
+
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
         agent.MoveToCalculatedPos(chaseSpeed * speedMult);
 
@@ -1004,6 +1009,7 @@ public class MofGuideonRework : Entity
 
     private void EndChase_P1()
     {
+        chaseTimer = 0.0f;
         Debug.Log("End chase");
     }
 
