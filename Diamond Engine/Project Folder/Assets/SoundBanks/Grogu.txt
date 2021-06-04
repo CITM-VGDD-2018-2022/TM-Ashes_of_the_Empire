@@ -1,11 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
+	311583867	Play_Grogu_Ice_Wall			\Default Work Unit\Grogu\Play_Grogu_Ice_Wall	
 	1240818490	Play_Force_Push			\Default Work Unit\Grogu\Play_Force_Push	
-	1796781893	Play_Grogu_Cry			\Default Work Unit\Grogu\Play_Grogu_Cry	
-	1808638179	Play_Grogu_Wall			\Default Work Unit\Grogu\Play_Grogu_Wall	
+	1888416279	Play_Grogu_Rock_Wall			\Default Work Unit\Grogu\Play_Grogu_Rock_Wall	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
+	1933645159	Play_Grogu_Dialog			\Default Work Unit\Cinematic\Play_Grogu_Dialog	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
-	3400331702	Play_Grogu_Cheering			\Default Work Unit\Grogu\Play_Grogu_Cheering	
+	3501543951	Play_Grogu_Metal_Wall			\Default Work Unit\Grogu\Play_Grogu_Metal_Wall	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	467158820	SourceVolume			\Default Work Unit\SourceVolume	
@@ -15,11 +16,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	69887237	Grogu cheering 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu cheering 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cheering\Grogu cheering 3		169440
-	273699381	Grogu crying 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu crying 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cry\Grogu crying 1		328012
-	424537616	Grogu cheering 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu cheering 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cheering\Grogu cheering 2		162696
-	532606562	Grogu wall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu wall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu wall		194320
-	767617738	Grogu crying 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu crying 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cry\Grogu crying 2		374916
+	55684314	grogu dialog 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 1		95892
+	126207516	grogu dialog 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 3		143504
+	454348374	Grogu ice wall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu ice wall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu ice wall		157580
+	532606562	Grogu rock wall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu wall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu rock wall		194320
+	718377156	Grogu metal wall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu metal wall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu metal wall		186928
+	718749945	grogu dialog 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 2		93844
 	927955603	Force push	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Force push_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Force push		148316
-	1026140889	Grogu cheering 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grogu cheering 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Grogu\Grogu Cheering\Grogu cheering 1		167692
 

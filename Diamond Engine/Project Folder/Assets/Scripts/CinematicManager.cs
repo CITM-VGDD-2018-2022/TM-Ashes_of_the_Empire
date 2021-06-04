@@ -83,6 +83,10 @@ public class CinematicManager : DiamondComponent
     public void Update()
     {
 
+        if (!init)
+        {
+            return;
+        }
 
         foreach (Sequence sequence in listSequences)
         {
