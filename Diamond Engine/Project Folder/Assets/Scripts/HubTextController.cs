@@ -187,7 +187,6 @@ public class HubTextController : DiamondComponent
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().lPos = new Vector3(bo_katan_portrait_pos_x, bo_katan_portrait_pos_y, 0);
                     textController.GetComponent<TextController>().otherimage.GetComponent<Transform2D>().size = new Vector3(bo_katan_portrait_size_x, bo_katan_portrait_size_y, 0);
                 }*/
-                Debug.Log("BOKATAN UPDGRADE!!!!!!!!!!!!!!!!");
                 textController.GetComponent<TextController>().dialog_index = boKatanInteractionNum;
                 if ((boKatanInteractionNum -1) % 3 != 0)
                 {
@@ -338,7 +337,6 @@ public class HubTextController : DiamondComponent
             case Interaction.BO_KATAN:
                 if (boKatanStage <= total_stages)
                 {
-                    Debug.Log("BOKATAN STAGE!!!!!!!!!!!!!!!!");
                     boKatanInteractionNum++;
                     DiamondPrefs.Write("boKatanInteractionNum", boKatanInteractionNum);
                     ++boKatanStage;
