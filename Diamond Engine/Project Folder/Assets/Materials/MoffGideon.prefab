@@ -138,6 +138,7 @@
                     "MaxForceModifier": 0,
                     "ForceRegentPerHPMod": 0,
                     "BlasterVulnerability": 1,
+                    "shootPoint": 2027939547,
                     "camera": 94187255,
                     "hitParticles": 133970082,
                     "slerpRotationSpeed": 5,
@@ -182,9 +183,10 @@
                     "enemySkillTime": 20,
                     "preBurstDashSpeed": 10,
                     "preBurstDashDistance": 7,
-                    "shotNumber": 3,
+                    "bulletDamage": 0,
+                    "numBurstBullets": 0,
                     "timeBetweenShots": 0.30000001192092896,
-                    "timeBeforeShoot": 1,
+                    "timeBetweenStates": 0,
                     "lightningDashChargeDuration": 0.5,
                     "lightningDashDirectionTime": 0.30000001192092896,
                     "lightningDashLength": 50,
@@ -2414,22 +2416,22 @@
             "name": "MOFF Saber",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": false,
-            "UID": 0,
+            "Active": true,
+            "UID": 133970082,
             "ParentUID": 2006506632,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.005842745304107666,
-                -0.036015748977661133,
-                -2.384185791015625e-07
+                -0.0058424770832061768,
+                -0.036016106605529785,
+                0
             ],
             "Rotation": [
-                -2.3283108774307948e-10,
-                -5.8207777486884993e-10,
-                -3.7252974038892717e-09,
+                7.450577932388569e-09,
+                9.3132443979015989e-09,
+                -7.4505948077785433e-09,
                 1
             ],
             "Scale": [
@@ -2717,27 +2719,27 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 0,
-            "ParentUID": 0,
+            "UID": 1935053102,
+            "ParentUID": 133970082,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                -2.384185791015625e-07
+                -1.4901161193847656e-07,
+                -4.76837158203125e-07
             ],
             "Rotation": [
-                -2.3283064365386963e-10,
-                -1.3096720929972605e-10,
-                -1.862645149230957e-09,
+                -1.1175871783564162e-08,
+                7.4505805969238281e-09,
+                -1.4901162970204496e-08,
                 1
             ],
             "Scale": [
                 1,
-                1,
-                0.99999994039535522
+                0.99999988079071045,
+                0.99999988079071045
             ],
             "Components": [
                 {
@@ -2752,7 +2754,7 @@
             "layer": "Default",
             "Active": true,
             "UID": 0,
-            "ParentUID": 0,
+            "ParentUID": 1935053102,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,

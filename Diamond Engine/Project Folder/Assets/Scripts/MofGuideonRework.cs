@@ -102,6 +102,8 @@ public class MofGuideonRework : Entity
     private NavMeshAgent agent = null;
     private GameObject saber = null;
 
+    public GameObject shootPoint = null; 
+
     public GameObject camera = null;
     private CameraController cameraComp = null;
 
@@ -114,7 +116,7 @@ public class MofGuideonRework : Entity
 
     Random decisionGenerator = new Random();
 
-    public GameObject hitParticles = null;
+    //public GameObject hitParticles = null;
 
     public float slerpRotationSpeed = 5.0f;
     private Vector3 targetPosition = new Vector3(0.0f, 0.0f, 0.0f);
@@ -238,14 +240,16 @@ public class MofGuideonRework : Entity
     private float preBurstDashTimer = 0.0f;
 
     //Burst 1   NEED TO ADD TO INTERNAL INPUT
-    public int shotNumber = 3;
+    public float bulletDamage = 5.0f;
+
+    public int numBurstBullets = 3;
+
+    public float timeBetweenShots = 0.5f;
+    public float timeBetweenStates = 1.5f;
+
     private int shotTimes = 0;
-
-    public float timeBetweenShots = 0.3f;
-    private float timeBetweenShotsTimer = 0.0f;
-
-    public float timeBeforeShoot = 1.0f;
-    private float timeBeforeShootTimer = 0.0f;
+    private float shotTimer = 0.0f;
+    private float statesTimer = 0.0f;
 
 
     //Burst 2
@@ -1588,6 +1592,24 @@ public class MofGuideonRework : Entity
     private void EndBurst_P1()
     {
         Debug.Log("End burst");
+    }
+
+    private void Shoot()
+    {
+        GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1606118587.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, shootPoint.transform.globalScale);
+
+        if (bullet != null)
+        {
+            BH_Bullet bulletScript = bullet.GetComponent<BH_Bullet>();
+
+            if (bulletScript != null)
+            {
+                bulletScript.damage = bulletDamage;
+                bulletScript.SetGameObjectToAvoid(this.gameObject);
+            }
+        }
+
+        shotTimes++;
     }
 
     //P2
