@@ -1394,7 +1394,7 @@ public class MofGuideonRework : Entity
     {
         if (launchSwing == true)
         {
-            SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward(), -15f * Mathf.Deg2RRad);
+            SpawnSwing((int)meleeHit2Damage, gameObject.transform.GetForward());
             launchSwing = false;
         }
 
@@ -1420,7 +1420,7 @@ public class MofGuideonRework : Entity
     {
         if (launchSwing == true)
         {
-            SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward(), 15f * Mathf.Deg2RRad);
+            SpawnSwing((int)meleeHit3Damage, gameObject.transform.GetForward());
             launchSwing = false;
         }
 
