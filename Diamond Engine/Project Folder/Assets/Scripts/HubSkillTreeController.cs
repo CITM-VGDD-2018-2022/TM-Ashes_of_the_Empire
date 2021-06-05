@@ -27,6 +27,8 @@ public class HubSkillTreeController : DiamondComponent
     private int macaronResource = 0;
     private int scrapResource = 0;
 
+    private bool firstFrame = true;
+
     public void Awake()
     {
         beskarResourceText.GetComponent<Text>().text = PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR).ToString();
@@ -36,7 +38,13 @@ public class HubSkillTreeController : DiamondComponent
 
     public void Update()
     {
-        if(beskarResource!= PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR))
+        if (firstFrame == true && (mando_tree.IsEnabled() || grogu_tree.IsEnabled() || weapon_tree.IsEnabled()))
+        {
+            Core.instance.BlockInIdle();
+            firstFrame = false;
+        }
+
+        if (beskarResource!= PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR))
         {
             beskarResource = PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR);
             beskarResourceText.GetComponent<Text>().text = beskarResource.ToString();
@@ -70,6 +78,10 @@ public class HubSkillTreeController : DiamondComponent
 
         if (!activate_tree)
         {
+            Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
+            Core.instance.LockInputs(false);
+            firstFrame = true;
+
             if (mando_tree != null && mando_tree.IsEnabled())
             {
                 mando_tree.EnableNav(false);
@@ -79,7 +91,6 @@ public class HubSkillTreeController : DiamondComponent
             }
             if (grogu_tree != null && grogu_tree.IsEnabled())
             {
-                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
                 grogu_tree.EnableNav(false);
                 if (groguText != null)
                     groguText.Enable(true);

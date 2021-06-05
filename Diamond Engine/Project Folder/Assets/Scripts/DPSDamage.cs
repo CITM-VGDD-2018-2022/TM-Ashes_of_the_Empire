@@ -25,7 +25,7 @@ public class DPSDamage : DiamondComponent
         {
             damageTimer -= Time.deltaTime;
 
-            if (damageTimer < 0.0f)
+            if (damageTimer <= 0.0f)
             {
                 if (playerHealth != null)
                 {
