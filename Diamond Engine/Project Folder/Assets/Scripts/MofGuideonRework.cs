@@ -100,7 +100,6 @@ public class MofGuideonRework : Entity
     }
 
     private NavMeshAgent agent = null;
-    private GameObject saber = null;
 
     public GameObject shootPoint = null;
 
@@ -109,6 +108,14 @@ public class MofGuideonRework : Entity
 
     public GameObject cape = null;
     public GameObject capeMesh = null;
+
+    public GameObject saber = null;
+    public GameObject saberMeshObj = null;
+    private MeshRenderer saberMesh = null;
+
+    public GameObject gun = null;
+    public GameObject gunMeshObj = null;
+    private MeshRenderer gunMesh = null;
 
     //State
     private STATE currentState = STATE.START;
@@ -322,7 +329,6 @@ public class MofGuideonRework : Entity
         if (bossBar != null)
             bossBarMat = bossBar.GetComponent<Material>();
 
-
         //Spawners
         spawner1 = InternalCalls.FindObjectWithName("DefaultSpawnPoint1");
         spawner2 = InternalCalls.FindObjectWithName("DefaultSpawnPoint2");
@@ -359,8 +365,19 @@ public class MofGuideonRework : Entity
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
 
+        //Props
         if (cape != null)
             Animator.Pause(cape);
+
+        if (gunMeshObj != null)
+        {
+            gunMesh = gunMeshObj.GetComponent<MeshRenderer>();
+        }
+
+        if (saberMeshObj != null)
+        {
+            saberMesh = saberMeshObj.GetComponent<MeshRenderer>();
+        }
 
         inputsList.Add(INPUT.IN_PRESENTATION);
     }
@@ -999,8 +1016,22 @@ public class MofGuideonRework : Entity
     {
         chaseTimer = chaseDuration;
 
-        Animator.Play(gameObject, "MG_RunPh1_Final", speedMult);
+        Animator.Play(gameObject, "MG_RunPh1_Final", speedMult); 
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_RunPh1_Final", speedMult);
+        }
+
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_RunPh1_Final", speedMult);
+        }
+
         UpdateAnimationSpd(speedMult);
+
+
 
         Debug.Log("Start chase");
     }
@@ -1041,6 +1072,17 @@ public class MofGuideonRework : Entity
         comboDirectionTimer = comboDirectionTime;
 
         Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Swing", speedMult * chargeComboSpdMult);
+        }
+
         UpdateAnimationSpd(speedMult * chargeComboSpdMult);
     }
 
@@ -1089,6 +1131,16 @@ public class MofGuideonRework : Entity
         comboDirectionTimer = comboDirectionTime;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Swing", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Swing", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1140,6 +1192,16 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
@@ -1179,6 +1241,17 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1198,7 +1271,6 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash2()
@@ -1230,6 +1302,17 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1249,7 +1332,6 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash3()
@@ -1282,6 +1364,17 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboLongDashDistance / comboLongDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1290,7 +1383,6 @@ public class MofGuideonRework : Entity
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash4()
@@ -1321,6 +1413,17 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1342,7 +1445,6 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash5()
@@ -1373,6 +1475,17 @@ public class MofGuideonRework : Entity
         comboDashTimer = comboDashTime = (comboShortDashDistance / comboShortDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1391,7 +1504,6 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateMeleeComboDash6()
@@ -1423,6 +1535,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit1SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit1SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1458,6 +1580,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit2SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit2SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1492,6 +1624,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit3SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit3SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1526,6 +1668,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit4SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit4SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1560,6 +1712,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit5SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit5SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1594,6 +1756,16 @@ public class MofGuideonRework : Entity
         meleeHitSwingTimer = meleeHit6SwingTime;
 
         Animator.Play(gameObject, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
+        }
         UpdateAnimationSpd(speedMult * meleeHit6SpdMult);
 
         CalculateSwingCorrectingAngle();
@@ -1666,6 +1838,16 @@ public class MofGuideonRework : Entity
         preBurstChargeTimer = comboChargeDuration;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Swing", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Swing", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1689,6 +1871,17 @@ public class MofGuideonRework : Entity
         preBurstDashTimer = (preBurstDashDistance / preBurstDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         agent.CalculateRandomPath(gameObject.transform.globalPosition, preBurstDashDistance);
 
@@ -1699,7 +1892,6 @@ public class MofGuideonRework : Entity
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateBurstDash()
@@ -1720,7 +1912,17 @@ public class MofGuideonRework : Entity
     {
         Debug.Log("Start burst");
         Animator.Play(gameObject, "MG_PowerPose", speedMult);
-        //UpdateAnimationSpd(speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_PowerPose", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_PowerPose", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         toStartBurstTimer = timeToStartBurst;
         shotTimer = timeBetweenShots;
@@ -1762,6 +1964,17 @@ public class MofGuideonRework : Entity
     private void Shoot()
     {
         Animator.Play(gameObject, "MG_Shoot", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Shoot", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Shoot", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1855132637.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, null);
 
@@ -1811,6 +2024,16 @@ public class MofGuideonRework : Entity
         lightningDashDirectionTimer = lightningDashDirectionTime;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Swing", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Swing", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1851,6 +2074,17 @@ public class MofGuideonRework : Entity
         lightningDashDuration = (lightningDashLength / lightningDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Dash", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Dash", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -1859,7 +2093,6 @@ public class MofGuideonRework : Entity
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
-        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateLightningDash()
@@ -1887,6 +2120,17 @@ public class MofGuideonRework : Entity
 
         //TIRED ANIMATION AND AUDIO + STUN PARTICLES
         Animator.Play(gameObject, "MG_Idle", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Idle", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Idle", speedMult);
+        }
+        UpdateAnimationSpd(speedMult);
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAAA");
         //stun.Play();
     }
@@ -1918,13 +2162,33 @@ public class MofGuideonRework : Entity
         if (currentPhase == PHASE.PHASE1)
         {
             Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
+            if (saber != null)
+            {
+                Animator.Resume(saber);
+                Animator.Play(saber, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
+            }
+            if (gun != null)
+            {
+                Animator.Resume(gun);
+                Animator.Play(gun, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
+            }
         }
         else if (currentPhase == PHASE.PHASE2)
         {
             Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
+            if (saber != null)
+            {
+                Animator.Resume(saber);
+                Animator.Play(saber, "MG_EnemySpawnPh2", speedMult);
+            }
+            if (gun != null)
+            {
+                Animator.Resume(gun);
+                Animator.Play(gun, "MG_EnemySpawnPh2", speedMult);
+            }
         }
-
         UpdateAnimationSpd(speedMult);
+
         Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
         if (cameraComp != null)
             cameraComp.target = this.gameObject;
@@ -2058,13 +2322,23 @@ public class MofGuideonRework : Entity
     private void StartPresentation()
     {
         Animator.Play(gameObject, "MG_CapeOff", speedMult);
-        UpdateAnimationSpd(speedMult);
-
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_CapeOff", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_CapeOff", speedMult);
+        }
         if (cape != null)
         {
             Animator.Resume(cape);
             Animator.Play(cape, "MG_Cape_Off", speedMult);
         }
+
+        UpdateAnimationSpd(speedMult);
 
         presentationTimer = presentationTime;
 
@@ -2124,6 +2398,16 @@ public class MofGuideonRework : Entity
     private void StartPhaseChange()
     {
         Animator.Play(gameObject, "MG_Rising", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Rising", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Rising", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
 
         changingPhaseTimer = changingPhaseTime;
@@ -2183,6 +2467,16 @@ public class MofGuideonRework : Entity
     {
         dieTimer = dieTime;
         Animator.Play(gameObject, "MG_Death", speedMult);
+        if (saber != null)
+        {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Death", speedMult);
+        }
+        if (gun != null)
+        {
+            Animator.Resume(gun);
+            Animator.Play(gun, "MG_Death", speedMult);
+        }
         UpdateAnimationSpd(speedMult);
 
         Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
@@ -2595,6 +2889,17 @@ public class MofGuideonRework : Entity
         if (currAnimationPlaySpd != newSpd)
         {
             Animator.SetSpeed(gameObject, newSpd);
+
+            if (cape != null)
+                Animator.SetSpeed(cape, newSpd);
+
+            if (saber != null)
+                Animator.SetSpeed(saber, newSpd);
+
+            if (gun != null)
+                Animator.SetSpeed(gun, newSpd);
+
+
             currAnimationPlaySpd = newSpd;
         }
     }

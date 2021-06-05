@@ -139,9 +139,13 @@
                     "ForceRegentPerHPMod": 0,
                     "BlasterVulnerability": 1,
                     "shootPoint": 2027939547,
-                    "camera": 94187255,
-                    "cape": 1493285302,
-                    "capeMesh": 1884005094,
+                    "camera": 0,
+                    "cape": 1451459540,
+                    "capeMesh": 1871541341,
+                    "saber": 489363755,
+                    "saberMeshObj": 1121102342,
+                    "gun": 1723243824,
+                    "gunMeshObj": 1674192423,
                     "slerpRotationSpeed": 5,
                     "maxHealthPoints1": 4500,
                     "maxHealthPoints2": 4500,
@@ -1074,7 +1078,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/animated_material.mat",
                     "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
                     "MaterialUID": 1948688504
                 },
@@ -2445,266 +2449,6 @@
                 {
                     "Type": 1,
                     "Active": true
-                },
-                {
-                    "Type": 18,
-                    "Active": false,
-                    "isTrigger": true,
-                    "Position": [
-                        0,
-                        0.60000002384185791,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        0.40000000596046448,
-                        1,
-                        0.40000000596046448
-                    ]
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": false,
-                    "Gravity": true,
-                    "LockLinearX": true,
-                    "LockLinearY": true,
-                    "LockLinearZ": true,
-                    "LockAngularX": true,
-                    "LockAngularY": true,
-                    "LockAngularZ": true,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "HeavyTrooperSpear",
-                    "damage": 10
-                },
-                {
-                    "Type": 13,
-                    "Active": true,
-                    "evName": "Empty",
-                    "audBankReference": "Moff_Gideon",
-                    "pitch": 50,
-                    "playOnAwake": false,
-                    "isMuted": false,
-                    "isMusic": false
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/288767238.mmh",
-                    "UID": 288767238,
-                    "bumpDepth": 1,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/Moff_Sword.mat",
-                    "MaterialLibraryPath": "Library\/Materials\/278583585.mat",
-                    "MaterialUID": 278583585
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "systemActive": false,
-                    "looping": true,
-                    "maxDuration": 0.76499998569488525,
-                    "ParticleEmitters": [
-                        {
-                            "AssetPath": "Empty",
-                            "LibraryPath": "Library\/Textures\/1755453139.dds",
-                            "texUID": 1755453139,
-                            "paEmitterName": "Empty",
-                            "paLifeTime": [
-                                0.5,
-                                0.69999998807907104
-                            ],
-                            "paSize": [
-                                0.019999999552965164,
-                                0.039999999105930328
-                            ],
-                            "paColor": [
-                                0.51037347316741943,
-                                0.04235464334487915,
-                                0.04235464334487915,
-                                1
-                            ],
-                            "paPerSec": 50,
-                            "paRelative": true,
-                            "ParticleEffects": [
-                                {
-                                    "paEffectType": 1,
-                                    "paROLT_rotation": [
-                                        2,
-                                        2
-                                    ],
-                                    "paROLT_rotationSpeed": [
-                                        -10,
-                                        10
-                                    ]
-                                },
-                                {
-                                    "paEffectType": 2,
-                                    "Gradients": [
-                                        {
-                                            "paColorOLTcolor": [
-                                                0.96330273151397705,
-                                                0.092795230448246002,
-                                                0.092795230448246002,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                1,
-                                                1,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 1
-                                        }
-                                    ]
-                                },
-                                {
-                                    "paEffectType": 5,
-                                    "paShapeHasInitSpeed": true,
-                                    "paShapePartSpeed": 0,
-                                    "paShapeRandSpeed": 0,
-                                    "PaShapeAreaDimensions": [
-                                        0,
-                                        0.40000000596046448,
-                                        2.3694278276172396e-38
-                                    ],
-                                    "PaShapeSphereDirection": false,
-                                    "PaShapeSphereAngle": 0,
-                                    "paShapeType": 0,
-                                    "PaShapeOffset": [
-                                        0,
-                                        0,
-                                        0
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "AssetPath": "Empty",
-                            "LibraryPath": "Library\/Textures\/692800487.dds",
-                            "texUID": 692800487,
-                            "paEmitterName": "Empty",
-                            "paLifeTime": [
-                                0.5,
-                                0.80000001192092896
-                            ],
-                            "paSize": [
-                                0,
-                                1
-                            ],
-                            "paColor": [
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            "paPerSec": 150,
-                            "paRelative": true,
-                            "ParticleEffects": [
-                                {
-                                    "paEffectType": 2,
-                                    "Gradients": [
-                                        {
-                                            "paColorOLTcolor": [
-                                                0,
-                                                0,
-                                                0,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                9.9999999747524271e-07,
-                                                9.8165139661432477e-07,
-                                                9.8165139661432477e-07,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0.47151899337768555
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                0.99998998641967773,
-                                                0.99998998641967773,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0.50316452980041504
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                1,
-                                                1,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 1
-                                        }
-                                    ]
-                                },
-                                {
-                                    "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.019999999552965164,
-                                    "paSizeOLTEndSize": 0.0010000000474974513
-                                },
-                                {
-                                    "paEffectType": 5,
-                                    "paShapeHasInitSpeed": true,
-                                    "paShapePartSpeed": 0.5,
-                                    "paShapeRandSpeed": 0,
-                                    "PaShapeAreaDimensions": [
-                                        2.3694278276172396e-38,
-                                        0.40000000596046448,
-                                        2.3694278276172396e-38
-                                    ],
-                                    "PaShapeSphereDirection": false,
-                                    "PaShapeSphereAngle": 0,
-                                    "paShapeType": 0,
-                                    "PaShapeOffset": [
-                                        0,
-                                        0,
-                                        0
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "billboardAlignment": 0,
-                    "horizantalAligned": true
                 }
             ]
         },
@@ -2981,11 +2725,479 @@
             ]
         },
         {
+            "name": "Laser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 489363755,
+            "ParentUID": 837518950,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 16,
+                    "Active": true,
+                    "RootBone UID": 972321753,
+                    "MeshRendererUID": 1121102342,
+                    "Animations": [
+                        989481519,
+                        1277909341,
+                        279899670,
+                        432746369,
+                        258917655,
+                        1007233176,
+                        1381817459,
+                        1869849844,
+                        1145430212,
+                        973503418,
+                        1205966990,
+                        388447612,
+                        818022577,
+                        1043197833,
+                        1210902586,
+                        1134234229,
+                        367877305,
+                        1226030239,
+                        1614330968,
+                        989121474,
+                        1175968837,
+                        2073331381,
+                        342137785,
+                        252901962,
+                        914768341,
+                        972076245,
+                        1662238673,
+                        984011288
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Master_Laser_Ctrl",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 218686686,
+            "ParentUID": 489363755,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Dark_Laser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1121102342,
+            "ParentUID": 489363755,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -1.4557318687438965,
+                0.81361168622970581,
+                -0.0093793263658881187
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1989458958.mmh",
+                    "UID": 1989458958,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_material.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
+                    "MaterialUID": 1948688504
+                }
+            ]
+        },
+        {
+            "name": "Master_Laser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 972321753,
+            "ParentUID": 489363755,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -1.4558044672012329,
+                0.73248153924942017,
+                -0.0054874960333108902
+            ],
+            "Rotation": [
+                -0.055257968604564667,
+                -0.052585769444704056,
+                0.70494437217712402,
+                0.70514875650405884
+            ],
+            "Scale": [
+                0.99999994039535522,
+                1,
+                0.99999994039535522
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Middle_Laser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1033244879,
+            "ParentUID": 972321753,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.19678252935409546,
+                1.1920928955078125e-07,
+                4.4703483581542969e-08
+            ],
+            "Rotation": [
+                -0.65112370252609253,
+                -0.0017968311440199614,
+                -0.0016518472693860531,
+                0.75896769762039185
+            ],
+            "Scale": [
+                0.99999994039535522,
+                0.99999994039535522,
+                1.0000001192092896
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Top_Laser",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1281997300,
+            "ParentUID": 1033244879,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.92088443040847778,
+                -4.6566128730773926e-10,
+                -1.1920928955078125e-07
+            ],
+            "Rotation": [
+                0.49972456693649292,
+                0.50027525424957275,
+                -0.49972456693649292,
+                0.50027525424957275
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Gun",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1723243824,
+            "ParentUID": 1281997300,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 16,
+                    "Active": true,
+                    "RootBone UID": 1459132872,
+                    "MeshRendererUID": 1674192423,
+                    "Animations": [
+                        989481519,
+                        1277909341,
+                        279899670,
+                        432746369,
+                        258917655,
+                        1007233176,
+                        1381817459,
+                        1869849844,
+                        1145430212,
+                        973503418,
+                        1205966990,
+                        388447612,
+                        818022577,
+                        1043197833,
+                        1210902586,
+                        1134234229,
+                        367877305,
+                        1226030239,
+                        1614330968,
+                        989121474,
+                        1175968837,
+                        2073331381,
+                        342137785,
+                        252901962,
+                        914768341,
+                        972076245,
+                        1662238673,
+                        984011288
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Pistol_Joint",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1459132872,
+            "ParentUID": 1723243824,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -1.4608763456344604,
+                -0.028654342517256737,
+                -0.1059807613492012
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Pistol_cotroller",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2128257111,
+            "ParentUID": 1723243824,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "MoffGuideonWeapon1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1674192423,
+            "ParentUID": 1723243824,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/975948798.mmh",
+                    "UID": 975948798,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/animated_material.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
+                    "MaterialUID": 1948688504
+                }
+            ]
+        },
+        {
             "name": "Moff_Cape",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1493285302,
+            "UID": 1451459540,
             "ParentUID": 837518950,
             "PrefabReference": 0,
             "PrefabID": 0,
@@ -3015,9 +3227,10 @@
                 {
                     "Type": 16,
                     "Active": true,
-                    "RootBone UID": 443944272,
-                    "MeshRendererUID": 1884005094,
+                    "RootBone UID": 1798156466,
+                    "MeshRendererUID": 1871541341,
                     "Animations": [
+                        989481519,
                         1277909341
                     ]
                 }
@@ -3028,8 +3241,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1884005094,
-            "ParentUID": 1493285302,
+            "UID": 1871541341,
+            "ParentUID": 1451459540,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3079,7 +3292,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/animated_material.mat",
                     "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
                     "MaterialUID": 1948688504
                 }
@@ -3090,8 +3303,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1731633105,
-            "ParentUID": 1493285302,
+            "UID": 571281586,
+            "ParentUID": 1451459540,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3124,15 +3337,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 443944272,
-            "ParentUID": 1731633105,
+            "UID": 1798156466,
+            "ParentUID": 571281586,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 -0.0067048934288322926,
-                0.048549890518188477,
+                0.048550024628639221,
                 -0.2575085461139679
             ],
             "Rotation": [
@@ -3158,15 +3371,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1259513288,
-            "ParentUID": 443944272,
+            "UID": 1892117521,
+            "ParentUID": 1798156466,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.0044143171980977058,
-                0.22712850570678711,
+                -0.0044143167324364185,
+                0.22712846100330353,
                 0
             ],
             "Rotation": [
@@ -3192,15 +3405,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 374865897,
-            "ParentUID": 1259513288,
+            "UID": 172055267,
+            "ParentUID": 1892117521,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.0034874030388891697,
-                0.44990277290344238,
+                0.0034874025732278824,
+                0.44990280270576477,
                 -0.0045209228992462158
             ],
             "Rotation": [
@@ -3226,15 +3439,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 169853046,
-            "ParentUID": 374865897,
+            "UID": 2143444488,
+            "ParentUID": 172055267,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0.0040750978514552116,
-                0.35814738273620605,
+                0.35814750194549561,
                 -0.011835068464279175
             ],
             "Rotation": [
@@ -3260,16 +3473,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1293955184,
-            "ParentUID": 169853046,
+            "UID": 110069018,
+            "ParentUID": 2143444488,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.025732815265655518,
-                0.2204287052154541,
-                0.01355898380279541
+                -0.025732770562171936,
+                0.220428466796875,
+                0.013559013605117798
             ],
             "Rotation": [
                 5.3407896425424883e-15,
@@ -3294,8 +3507,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1662357261,
-            "ParentUID": 1293955184,
+            "UID": 893449682,
+            "ParentUID": 110069018,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3303,7 +3516,7 @@
             "Position": [
                 -0.16010680794715881,
                 0.059941768646240234,
-                0.0222817063331604
+                0.022281691431999207
             ],
             "Rotation": [
                 -0.54323738813400269,
@@ -3328,16 +3541,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 638680310,
-            "ParentUID": 1662357261,
+            "UID": 996475167,
+            "ParentUID": 893449682,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.16566801071166992,
-                -0.10849893093109131,
-                0.0042159557342529297
+                0.16566860675811768,
+                -0.10849890112876892,
+                0.0042160153388977051
             ],
             "Rotation": [
                 0.23416681587696075,
@@ -3362,16 +3575,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1912951375,
-            "ParentUID": 638680310,
+            "UID": 1138385372,
+            "ParentUID": 996475167,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.020814508199691772,
-                -0.096177816390991211,
-                0.07141876220703125
+                0.020814493298530579,
+                -0.096177637577056885,
+                0.071419119834899902
             ],
             "Rotation": [
                 -0.40699797868728638,
@@ -3396,16 +3609,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1094342876,
-            "ParentUID": 1912951375,
+            "UID": 496507830,
+            "ParentUID": 1138385372,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0.12158942222595215,
-                0
+                1.4901161193847656e-08,
+                0.1215895414352417,
+                -1.1920928955078125e-07
             ],
             "Rotation": [
                 0,
@@ -3430,16 +3643,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 820541730,
-            "ParentUID": 1293955184,
+            "UID": 1474850318,
+            "ParentUID": 110069018,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0.17191398143768311,
-                0.059981346130371094,
-                0.022281497716903687
+                0.059981465339660645,
+                0.022281482815742493
             ],
             "Rotation": [
                 0.66819941997528076,
@@ -3464,16 +3677,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1723290483,
-            "ParentUID": 820541730,
+            "UID": 770891820,
+            "ParentUID": 1474850318,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.085709095001220703,
-                -0.15243613719940186,
-                -0.093024015426635742
+                0.085709452629089355,
+                -0.15243610739707947,
+                -0.093024000525474548
             ],
             "Rotation": [
                 0.47817006707191467,
@@ -3498,16 +3711,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1590326347,
-            "ParentUID": 1723290483,
+            "UID": 348094396,
+            "ParentUID": 770891820,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 -0.035699307918548584,
-                -0.090450525283813477,
-                0.072994709014892578
+                -0.090450406074523926,
+                0.07299506664276123
             ],
             "Rotation": [
                 -0.40076836943626404,
@@ -3532,16 +3745,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 148732461,
-            "ParentUID": 1590326347,
+            "UID": 326987521,
+            "ParentUID": 348094396,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -3.7252902984619141e-08,
-                0.1215893030166626,
-                9.5367431640625e-07
+                -1.4901161193847656e-08,
+                0.12158945202827454,
+                0
             ],
             "Rotation": [
                 -7.4505814851022478e-09,
