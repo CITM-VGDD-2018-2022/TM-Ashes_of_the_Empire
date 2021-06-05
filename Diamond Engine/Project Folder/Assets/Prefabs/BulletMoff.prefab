@@ -1,0 +1,305 @@
+{
+    "assets_path": "Assets\/Prefabs\/BulletMoff.prefab",
+    "Game Objects": [
+        {
+            "name": "BulletMoff",
+            "tag": "Bullet",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2020368285,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -13.239999771118164,
+                7.570000171661377,
+                -5.3499999046325684
+            ],
+            "Rotation": [
+                1.6038714646843139e-18,
+                -0.046226929873228073,
+                -3.4657454841485619e-17,
+                0.99893099069595337
+            ],
+            "Scale": [
+                0.050001546740531921,
+                0.05000000074505806,
+                0.60001856088638306
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/965117995.mmh",
+                    "UID": 965117995,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        0,
+                        6.008148193359375e-05
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "BH_Bullet",
+                    "speed": 15,
+                    "maxLifeTime": 0.10000000149011612,
+                    "range_squared": 18,
+                    "use_range_instead_of_time": true,
+                    "yVel": 0,
+                    "damage": 9
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1.25,
+                        1.2000000476837158,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "bulletmesh",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2028975132,
+            "ParentUID": 2020368285,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/965117995.mmh",
+                    "UID": 965117995,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1540644281.mat",
+                    "MaterialUID": 1540644281
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/856092719.mat",
+                    "MaterialUID": 856092719
+                }
+            ]
+        },
+        {
+            "name": "Standard Impact",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2098332606,
+            "ParentUID": 2020368285,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.4912567138671875,
+                0,
+                -0.92171955108642578
+            ],
+            "Rotation": [
+                6.3398051253216181e-09,
+                0.77589720487594604,
+                -6.3398051253216181e-09,
+                0.630859375
+            ],
+            "Scale": [
+                1.8778964281082153,
+                20,
+                19.981264114379883
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "STimpact Particle",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1144307857,
+            "ParentUID": 2098332606,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": false,
+                    "maxDuration": 0.087999999523162842,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/39569920.dds",
+                            "texUID": 39569920,
+                            "paEmitterName": "Impact",
+                            "paLifeTime": [
+                                0.019999999552965164,
+                                0.029999999329447746
+                            ],
+                            "paSize": [
+                                0.0099999997764825821,
+                                0.029999999329447746
+                            ],
+                            "paColor": [
+                                1,
+                                0.18807339668273926,
+                                0.18807339668273926,
+                                1
+                            ],
+                            "paPerSec": 500,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 0.5,
+                                    "paShapeRandSpeed": 1,
+                                    "PaShapeSphereRadius": 0.0010000000474974513,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
+                }
+            ]
+        }
+    ]
+}

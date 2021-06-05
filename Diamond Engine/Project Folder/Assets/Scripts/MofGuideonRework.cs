@@ -493,7 +493,7 @@ public class MofGuideonRework : Entity
         {
             preBurstDashTimer -= myDeltaTime;
 
-            if (preBurstDashTimer <= 0)
+            if (preBurstDashTimer <= 0 || Mathf.Distance(gameObject.transform.globalPosition, agent.GetDestination()) < agent.stoppingDistance || stopDashing == true)
                 inputsList.Add(INPUT.IN_PRE_BURST_DASH_END);
         }
 
@@ -1683,16 +1683,29 @@ public class MofGuideonRework : Entity
     //Burst dash
     private void StartBurstDash()
     {
-        preBurstDashTimer = preBurstDashDistance / preBurstDashSpeed;
+        Debug.Log("Start burst dash");
+
+        stopDashing = false;
+        preBurstDashTimer = (preBurstDashDistance / preBurstDashSpeed) * speedMult;
 
         Animator.Play(gameObject, "MG_Dash", speedMult);
-        UpdateAnimationSpd(speedMult);
 
-        Debug.Log("Start burst dash");
+        agent.CalculateRandomPath(gameObject.transform.globalPosition, preBurstDashDistance);
+
+        //PLAY AUDIOS
+        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
+
+        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateBurstDash()
     {
+        agent.MoveToCalculatedPos(comboShortDashSpeed * speedMult);
+
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1706,7 +1719,7 @@ public class MofGuideonRework : Entity
     private void StartBurst_P1()
     {
         Debug.Log("Start burst");
-        //Animator.Play(gameObject, "MG_Idle", speedMult);
+        Animator.Play(gameObject, "MG_PowerPose", speedMult);
         //UpdateAnimationSpd(speedMult);
 
         toStartBurstTimer = timeToStartBurst;
@@ -1750,7 +1763,7 @@ public class MofGuideonRework : Entity
     {
         Animator.Play(gameObject, "MG_Shoot", speedMult);
 
-        GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1606118587.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, shootPoint.transform.globalScale);
+        GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1855132637.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, null);
 
         if (bullet != null)
         {
