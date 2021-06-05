@@ -140,8 +140,8 @@
                     "BlasterVulnerability": 1,
                     "shootPoint": 2027939547,
                     "camera": 94187255,
-                    "cape": 947930712,
-                    "capeMesh": 1295097786,
+                    "cape": 1493285302,
+                    "capeMesh": 1884005094,
                     "slerpRotationSpeed": 5,
                     "maxHealthPoints1": 4500,
                     "maxHealthPoints2": 4500,
@@ -2985,7 +2985,7 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 947930712,
+            "UID": 1493285302,
             "ParentUID": 837518950,
             "PrefabReference": 0,
             "PrefabID": 0,
@@ -3003,9 +3003,9 @@
                 -4.3711388286737929e-08
             ],
             "Scale": [
+                0.99999982118606567,
                 1,
-                1,
-                1
+                0.99999994039535522
             ],
             "Components": [
                 {
@@ -3015,8 +3015,8 @@
                 {
                     "Type": 16,
                     "Active": true,
-                    "RootBone UID": 1610419583,
-                    "MeshRendererUID": 1295097786,
+                    "RootBone UID": 443944272,
+                    "MeshRendererUID": 1884005094,
                     "Animations": [
                         1277909341
                     ]
@@ -3028,8 +3028,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1295097786,
-            "ParentUID": 947930712,
+            "UID": 1884005094,
+            "ParentUID": 1493285302,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3090,8 +3090,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1555584640,
-            "ParentUID": 947930712,
+            "UID": 1731633105,
+            "ParentUID": 1493285302,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3124,15 +3124,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1610419583,
-            "ParentUID": 1555584640,
+            "UID": 443944272,
+            "ParentUID": 1731633105,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 -0.0067048934288322926,
-                0.048550024628639221,
+                0.048549890518188477,
                 -0.2575085461139679
             ],
             "Rotation": [
@@ -3158,15 +3158,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1048061820,
-            "ParentUID": 1610419583,
+            "UID": 1259513288,
+            "ParentUID": 443944272,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.0044143167324364185,
-                0.22712846100330353,
+                -0.0044143171980977058,
+                0.22712850570678711,
                 0
             ],
             "Rotation": [
@@ -3192,15 +3192,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 2060096101,
-            "ParentUID": 1048061820,
+            "UID": 374865897,
+            "ParentUID": 1259513288,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.0034874025732278824,
-                0.44990280270576477,
+                0.0034874030388891697,
+                0.44990277290344238,
                 -0.0045209228992462158
             ],
             "Rotation": [
@@ -3226,15 +3226,15 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1960315532,
-            "ParentUID": 2060096101,
+            "UID": 169853046,
+            "ParentUID": 374865897,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0.0040750978514552116,
-                0.35814750194549561,
+                0.35814738273620605,
                 -0.011835068464279175
             ],
             "Rotation": [
@@ -3260,16 +3260,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 99435581,
-            "ParentUID": 1960315532,
+            "UID": 1293955184,
+            "ParentUID": 169853046,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.025732770562171936,
-                0.220428466796875,
-                0.013559013605117798
+                -0.025732815265655518,
+                0.2204287052154541,
+                0.01355898380279541
             ],
             "Rotation": [
                 5.3407896425424883e-15,
@@ -3294,8 +3294,8 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1464790520,
-            "ParentUID": 99435581,
+            "UID": 1662357261,
+            "ParentUID": 1293955184,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -3303,7 +3303,7 @@
             "Position": [
                 -0.16010680794715881,
                 0.059941768646240234,
-                0.022281691431999207
+                0.0222817063331604
             ],
             "Rotation": [
                 -0.54323738813400269,
@@ -3328,16 +3328,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 477364184,
-            "ParentUID": 1464790520,
+            "UID": 638680310,
+            "ParentUID": 1662357261,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.16566860675811768,
-                -0.10849890112876892,
-                0.0042160153388977051
+                0.16566801071166992,
+                -0.10849893093109131,
+                0.0042159557342529297
             ],
             "Rotation": [
                 0.23416681587696075,
@@ -3362,16 +3362,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 114933292,
-            "ParentUID": 477364184,
+            "UID": 1912951375,
+            "ParentUID": 638680310,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.020814493298530579,
-                -0.096177637577056885,
-                0.071419119834899902
+                0.020814508199691772,
+                -0.096177816390991211,
+                0.07141876220703125
             ],
             "Rotation": [
                 -0.40699797868728638,
@@ -3396,16 +3396,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 246653610,
-            "ParentUID": 114933292,
+            "UID": 1094342876,
+            "ParentUID": 1912951375,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.4901161193847656e-08,
-                0.1215895414352417,
-                -1.1920928955078125e-07
+                0,
+                0.12158942222595215,
+                0
             ],
             "Rotation": [
                 0,
@@ -3430,16 +3430,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 991740398,
-            "ParentUID": 99435581,
+            "UID": 820541730,
+            "ParentUID": 1293955184,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0.17191398143768311,
-                0.059981465339660645,
-                0.022281482815742493
+                0.059981346130371094,
+                0.022281497716903687
             ],
             "Rotation": [
                 0.66819941997528076,
@@ -3464,16 +3464,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 64030814,
-            "ParentUID": 991740398,
+            "UID": 1723290483,
+            "ParentUID": 820541730,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.085709452629089355,
-                -0.15243610739707947,
-                -0.093024000525474548
+                0.085709095001220703,
+                -0.15243613719940186,
+                -0.093024015426635742
             ],
             "Rotation": [
                 0.47817006707191467,
@@ -3498,16 +3498,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1860733969,
-            "ParentUID": 64030814,
+            "UID": 1590326347,
+            "ParentUID": 1723290483,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 -0.035699307918548584,
-                -0.090450406074523926,
-                0.07299506664276123
+                -0.090450525283813477,
+                0.072994709014892578
             ],
             "Rotation": [
                 -0.40076836943626404,
@@ -3532,16 +3532,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1356134121,
-            "ParentUID": 1860733969,
+            "UID": 148732461,
+            "ParentUID": 1590326347,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -1.4901161193847656e-08,
-                0.12158945202827454,
-                0
+                -3.7252902984619141e-08,
+                0.1215893030166626,
+                9.5367431640625e-07
             ],
             "Rotation": [
                 -7.4505814851022478e-09,
@@ -3553,210 +3553,6 @@
                 1,
                 0.99999994039535522,
                 0.99999994039535522
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL22",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1564144195,
-            "ParentUID": 947930712,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                -4.371138473402425e-08,
-                -1,
-                -4.371138473402425e-08,
-                4.3711398944878965e-08
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL8",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 534744372,
-            "ParentUID": 1564144195,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL6",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 661418620,
-            "ParentUID": 534744372,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL4",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 133900399,
-            "ParentUID": 661418620,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL2",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 53167152,
-            "ParentUID": 133900399,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Cape_CTRL",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1435965611,
-            "ParentUID": 53167152,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
             ],
             "Components": [
                 {
