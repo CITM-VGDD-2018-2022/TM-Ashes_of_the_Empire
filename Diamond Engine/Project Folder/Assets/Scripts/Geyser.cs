@@ -6,6 +6,8 @@ public class Geyser : DiamondComponent
     public int damage = 5;
     private bool playerInRange = false;
     private bool canHurtPlayer = false;
+    private bool opened = false;
+    private bool closed = false;
 
     //timers
     private float eruptionTimer = 0.0f;
@@ -23,6 +25,8 @@ public class Geyser : DiamondComponent
 
     public GameObject eruptionParticlesObject = null;
     private ParticleSystem eruptionParticles = null;
+
+    private GameObject doorTrap = null;
 
     public void Awake()
     {
@@ -42,6 +46,10 @@ public class Geyser : DiamondComponent
         {
             eruptionParticles = eruptionParticlesObject.GetComponent<ParticleSystem>();
         }
+
+        doorTrap = gameObject.GetChild("DoorTrap");
+        if (doorTrap == null)
+            Debug.Log("DoorTrap is null");
     }
 
     public void Update()
@@ -92,6 +100,16 @@ public class Geyser : DiamondComponent
         {
             regressionTimer -= Time.deltaTime;
 
+            if (regressionTimer <= 0.3f && !opened)
+            {
+                if (doorTrap != null)
+                {
+                    Animator.Play(doorTrap, "DoorTrap_OpenDoor");
+                }
+                opened = true;
+                closed = false;
+            }
+
             if (regressionTimer <= 0.0f)
             {
                 Erupt();
@@ -107,12 +125,22 @@ public class Geyser : DiamondComponent
                 HurtPlayer();
             }
 
+            if (eruptionTimer <= 0.5f && !closed)
+            {
+                if (doorTrap != null)
+                {
+                    Animator.Play(doorTrap, "DoorTrap_CloseDoor");
+                }
+                closed = true;
+            }
+
             if (eruptionTimer <= 0.0f)
             {
                 if(idleParticles != null)
                 {
                     idleParticles.Play();
                     betweenEruptionsTimer = timeBetweenEruptions;
+                    opened = false;
                 }
             }
         }
