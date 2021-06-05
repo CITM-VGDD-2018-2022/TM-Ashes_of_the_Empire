@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
+                4.2523350715637207,
                 0.21558773517608643,
-                0
+                4.132843017578125
             ],
             "Rotation": [
                 0,
@@ -214,63 +214,7 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 348371308,
-                    "ParentUID": 957246446,
-                    "PrefabID": 0,
-                    "PrefabReference": 287474907,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0.066840648651123047,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Wave",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 278525050,
-                    "ParentUID": 957246446,
-                    "PrefabID": 0,
-                    "PrefabReference": 1890393854,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        -0.25276088714599609,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Barrel Explosion",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1562657287,
+                    "UID": 1594799615,
                     "ParentUID": 957246446,
                     "PrefabID": 0,
                     "PrefabReference": 1594799615,
@@ -298,8 +242,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 93937560,
-                    "ParentUID": 957246446,
+                    "UID": 196995074,
+                    "ParentUID": 1594799615,
                     "PrefabID": 0,
                     "PrefabReference": 196995074,
                     "DontDestroy": false,
@@ -647,7 +591,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 600,
+                            "paPerSec": 1000,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -684,14 +628,14 @@
                                 },
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.10000000149011612,
+                                    "paSizeOLTStartSize": 0.20000000298023224,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
                                     "paEffectType": 5,
                                     "paShapeHasInitSpeed": true,
                                     "paShapePartSpeed": 5,
-                                    "paShapeRandSpeed": 1,
+                                    "paShapeRandSpeed": 2,
                                     "PaShapeCircumferenceinnerRadius": 0.30000001192092896,
                                     "PaShapeCircumferenceoutterRadius": 0.30000001192092896,
                                     "PaShapeCircumferenceDirection": false,

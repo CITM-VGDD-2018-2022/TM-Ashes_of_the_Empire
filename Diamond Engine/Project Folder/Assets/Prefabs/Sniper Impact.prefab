@@ -225,7 +225,7 @@
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.15000000596046448,
+                                    "paSizeOLTStartSize": 0.25,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
