@@ -2376,6 +2376,29 @@ public class Core : Entity
                     }
                 }
             }
+            else if (collidedGameObject.CompareTag("MoffBullet"))
+            {
+                PlayParticles(PARTICLES.IMPACT);
+                BH_Bullet bulletScript = collidedGameObject.GetComponent<BH_Bullet>();
+                Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+
+                if (bulletScript != null)
+                {
+                    int damageFromBullet = 0;
+
+                    if (skill_damageReductionDashActive)
+                        damageFromBullet = (int)(bulletScript.damage * (1.0f/* - Skill_Tree_Data.GetMandoSkillTree().U4_damageReduction*/));
+                    else
+                        damageFromBullet = (int)bulletScript.damage;
+
+                    PlayerHealth healthScript = gameObject.GetComponent<PlayerHealth>();
+
+                    if (healthScript != null)
+                        healthScript.TakeDamage(damageFromBullet);
+
+                    damageTaken += damageFromBullet;
+                }
+            }
             else if (collidedGameObject.CompareTag("WaterFloor"))
             {
                 floorType = FLOOR_TYPE.WATER;
