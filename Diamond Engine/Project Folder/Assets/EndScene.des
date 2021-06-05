@@ -1,8 +1,8 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        123.02468872070313,
-        43.976943969726563,
+        123.02468872070312,
+        43.976943969726562,
         -38.491603851318359
     ],
     "EditorCameraZ": [
@@ -102,7 +102,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 1.0471975803375244,
-                    "hFOV": 1.6442846059799194,
+                    "hFOV": 1.6404728889465332,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true
@@ -314,7 +314,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -66.300003051757813
+                        -66.300003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -527,7 +527,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -85.800003051757813
+                        -85.800003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -916,9 +916,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -926,24 +926,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/976483232.dds",
                     "UID": 976483232,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": -22.799999237060547,
-                    "initialPosY": 44.5,
-                    "finalPosX": -22.799999237060547,
-                    "finalPosY": 44.5,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.1000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1016,7 +1007,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.6000000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.399999618530273,
@@ -1080,9 +1071,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1090,24 +1081,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/2069984476.dds",
                     "UID": 2069984476,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0.20000000298023224,
-                    "initialPosY": 44.5,
-                    "finalPosX": 0.20000000298023224,
-                    "finalPosY": 44.5,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.3500000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1180,7 +1162,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.8500000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.600000381469727,
@@ -1244,9 +1226,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1254,24 +1236,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/2056082081.dds",
                     "UID": 2056082081,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 22.899999618530273,
-                    "initialPosY": 44.5,
-                    "finalPosX": 22.899999618530273,
-                    "finalPosY": 44.5,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.6000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1324,9 +1297,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1334,24 +1307,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1458921935.dds",
                     "UID": 1458921935,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": -22.799999237060547,
-                    "initialPosY": 0.20000000298023224,
-                    "finalPosX": -22.799999237060547,
-                    "finalPosY": 0.20000000298023224,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.1000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1424,7 +1388,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.6000000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.399999618530273,
@@ -1488,9 +1452,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1498,24 +1462,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1341141555.dds",
                     "UID": 1341141555,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0.20000000298023224,
-                    "initialPosY": 0.20000000298023224,
-                    "finalPosX": 0.20000000298023224,
-                    "finalPosY": 0.20000000298023224,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.3500000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1588,7 +1543,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.8500000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.399999618530273,
@@ -1652,9 +1607,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1662,7 +1617,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1056620720.dds",
                     "UID": 1056620720,
-                    "fadeValue": 0
+                    "fadeValue": 1
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.6000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1715,9 +1678,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1725,7 +1688,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1673103222.dds",
                     "UID": 1673103222,
-                    "fadeValue": 0
+                    "fadeValue": 1
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.6000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1778,9 +1749,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1788,24 +1759,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/938819135.dds",
                     "UID": 938819135,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 22.899999618530273,
-                    "initialPosY": 0.20000000298023224,
-                    "finalPosX": 22.899999618530273,
-                    "finalPosY": 0.20000000298023224,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.6000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1858,9 +1820,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -1868,24 +1830,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1194381802.dds",
                     "UID": 1194381802,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": -22.799999237060547,
-                    "initialPosY": -44.299999237060547,
-                    "finalPosX": -22.799999237060547,
-                    "finalPosY": -44.299999237060547,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.1000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -1958,7 +1911,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.6000000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.399999618530273,
@@ -2022,9 +1975,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -2032,24 +1985,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/849281993.dds",
                     "UID": 849281993,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0.20000000298023224,
-                    "initialPosY": -44.299999237060547,
-                    "finalPosX": 0.20000000298023224,
-                    "finalPosY": -44,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.3500000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -2122,7 +2066,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
+                    "delay": 1.8500000238418579,
                     "duration": 0.80000001192092896,
                     "initialPosX": -9.3000001907348633,
                     "initialPosY": -15.399999618530273,
@@ -2186,9 +2130,9 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -2196,24 +2140,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1174712742.dds",
                     "UID": 1174712742,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.30000001192092896,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 22.799999237060547,
-                    "initialPosY": -44.299999237060547,
-                    "finalPosX": 22.799999237060547,
-                    "finalPosY": -44.299999237060547,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 12,
-                    "finalScaleY": 21.5,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.6000000238418579,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -8868,7 +8803,7 @@
                     "Active": true,
                     "Position": [
                         -42.599998474121094,
-                        65.800003051757813
+                        65.800003051757812
                     ],
                     "Rotation": 0,
                     "Size": [
