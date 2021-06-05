@@ -1,19 +1,19 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        2.5529289245605469,
-        2.9572784900665283,
-        -0.48383384943008423
+        -21.794034957885742,
+        28.019260406494141,
+        -3.5484707355499268
     ],
     "EditorCameraZ": [
-        0.99661344289779663,
-        -0.076183415949344635,
-        -0.030946850776672363
+        0.77699136734008789,
+        -0.60000693798065186,
+        -0.19046306610107422
     ],
     "EditorCameraY": [
-        0.076146192848682404,
-        0.9970937967300415,
-        -0.0023813247680664063
+        0.58273828029632568,
+        0.7999948263168335,
+        -0.14291416108608246
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -107,8 +107,8 @@
                     "fSize": 45,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 15.511111259460449,
-                    "hFOV": 19.133333206176758,
+                    "vFOV": 15.666666984558105,
+                    "hFOV": 24.866666793823242,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -533,20 +533,20 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0,
+                        4.4703483581542969e-08,
                         1.119743824005127,
                         -0.060867786407470703
                     ],
                     "Rotation": [
                         0,
-                        0,
+                        7.4505814851022478e-09,
                         0,
                         1
                     ],
                     "Scale": [
                         1,
                         1,
-                        1
+                        0.9999997615814209
                     ]
                 },
                 {
@@ -2781,7 +2781,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2824,7 +2824,10 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/1913446479.mmh",
                     "UID": 1913446479,
-                    "bumpDepth": 0,
+                    "NormalMapAssetPath": "Empty",
+                    "NormalMapLibraryPath": "Library\/Textures\/67000607.dds",
+                    "NormalMapUID": 67000607,
+                    "bumpDepth": 0.5,
                     "alternColor": [
                         1,
                         1,
@@ -2843,7 +2846,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -2973,7 +2976,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3035,7 +3038,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3097,7 +3100,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3159,7 +3162,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3255,7 +3258,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3317,7 +3320,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3379,7 +3382,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3441,7 +3444,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3503,7 +3506,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3565,7 +3568,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3661,7 +3664,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3723,7 +3726,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3785,7 +3788,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3847,7 +3850,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -3943,7 +3946,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4059,7 +4062,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4121,7 +4124,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4183,7 +4186,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4245,7 +4248,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4307,7 +4310,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4403,7 +4406,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4465,7 +4468,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4527,7 +4530,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -4623,7 +4626,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -4809,7 +4812,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -5084,7 +5087,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -5181,7 +5184,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 },
@@ -5257,26 +5260,60 @@
             ]
         },
         {
-            "name": "Column",
+            "name": "BossColumn",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1992993254,
+            "UID": 2146240427,
             "ParentUID": 2052786224,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
+                5.0033402442932129,
+                9.8229007720947266,
+                4.9222297668457031
+            ],
+            "Rotation": [
+                1.0672351891116705e-11,
+                -0.70722883939743042,
+                1.0672351891116705e-11,
+                0.70698469877243042
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "column",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1492609907,
+            "ParentUID": 2146240427,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
                 0,
                 0,
                 0
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
             ],
             "Scale": [
                 1,
@@ -5291,20 +5328,20 @@
             ]
         },
         {
-            "name": "Red",
+            "name": "Piece4",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 969936770,
-            "ParentUID": 1992993254,
+            "UID": 260656917,
+            "ParentUID": 1492609907,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                7.0373849868774414,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -5325,8 +5362,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1754378326.mmh",
-                    "UID": 1754378326,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -5346,351 +5383,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Bot",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 344584255,
-            "ParentUID": 1992993254,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": true,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1293527674.mmh",
-                    "UID": 1293527674,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Top",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 760596718,
-            "ParentUID": 1992993254,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1963454609.mmh",
-                    "UID": 1963454609,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Pieces",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 852336152,
-            "ParentUID": 1992993254,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Piece",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1227104488,
-            "ParentUID": 852336152,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1749267051.mmh",
-                    "UID": 1749267051,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece1",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1047114094,
-            "ParentUID": 852336152,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1923736301.mmh",
-                    "UID": 1923736301,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece2",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 502973665,
-            "ParentUID": 852336152,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/332399472.mmh",
-                    "UID": 332399472,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -5701,16 +5394,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 661182983,
-            "ParentUID": 852336152,
+            "UID": 958401307,
+            "ParentUID": 1492609907,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                3.9381914138793945,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -5731,8 +5424,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/699860040.mmh",
-                    "UID": 699860040,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -5752,9 +5445,449 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 392998710,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                0.77930754423141479,
+                -0.034047599881887436
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2021526130,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                -2.4278585910797119,
+                -0.034047603607177734
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1034923291,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                -5.4575867652893066,
+                -0.034047603607177734
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Top",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 23118567,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                10.040472030639648,
+                2.2737367544323206e-13
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/2135965294.mmh",
+                    "UID": 2135965294,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Bot",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1072501504,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                -9.2339763641357422,
+                -1.1368683772161603e-13
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1239629765.mmh",
+                    "UID": 1239629765,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Red",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 620803794,
+            "ParentUID": 1492609907,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0.95534819364547729,
+                2.8421709430404007e-14
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1191063429.mmh",
+                    "UID": 1191063429,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "BossColumn",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 725062552,
+            "ParentUID": 2052786224,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -5.0319666862487793,
+                9.8229007720947266,
+                -5.2035374641418457
+            ],
+            "Rotation": [
+                1.2026057100951398e-19,
+                0,
+                -2.0176377929503886e-12,
+                1
+            ],
+            "Scale": [
+                0.99999892711639404,
+                1,
+                0.99999892711639404
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "column",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 829326410,
+            "ParentUID": 725062552,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
                 }
             ]
         },
@@ -5763,16 +5896,16 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 908485998,
-            "ParentUID": 852336152,
+            "UID": 1288657368,
+            "ParentUID": 829326410,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                7.0373849868774414,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -5793,8 +5926,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/699378057.mmh",
-                    "UID": 699378057,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -5814,33 +5947,501 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Column1",
+            "name": "Piece3",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 2015295314,
+            "UID": 42813162,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                3.9381914138793945,
+                -0.034047603607177734
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 2135333213,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                0.77930754423141479,
+                -0.034047599881887436
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 183191404,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                -2.4278585910797119,
+                -0.034047603607177734
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Piece",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 63358351,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                -5.4575867652893066,
+                -0.034047603607177734
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Top",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 140344033,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                10.040472030639648,
+                2.2737367544323206e-13
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/2135965294.mmh",
+                    "UID": 2135965294,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Bot",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1988811290,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                -9.2339763641357422,
+                -1.1368683772161603e-13
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1239629765.mmh",
+                    "UID": 1239629765,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "Red",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1875197118,
+            "ParentUID": 829326410,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0.95534819364547729,
+                2.8421709430404007e-14
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1191063429.mmh",
+                    "UID": 1191063429,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
+                    "MaterialUID": 82053990
+                }
+            ]
+        },
+        {
+            "name": "BossColumn",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1125200207,
             "ParentUID": 2052786224,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
+                -13.013821601867676,
+                9.8229007720947266,
+                4.9816641807556152
+            ],
+            "Rotation": [
+                -7.2270631790161133e-05,
+                -0.70720517635345459,
+                -7.2091817855834961e-05,
+                0.70700836181640625
+            ],
+            "Scale": [
+                0.99999892711639404,
+                1,
+                0.99999892711639404
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "column",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1655136281,
+            "ParentUID": 1125200207,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
                 0,
                 0,
                 0
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
             ],
             "Scale": [
                 1,
@@ -5855,20 +6456,20 @@
             ]
         },
         {
-            "name": "Red.001",
+            "name": "Piece4",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1030979249,
-            "ParentUID": 2015295314,
+            "UID": 418005128,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                7.0373849868774414,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -5889,8 +6490,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1502977966.mmh",
-                    "UID": 1502977966,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -5910,27 +6511,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Bot.001",
+            "name": "Piece3",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 312877301,
-            "ParentUID": 2015295314,
+            "UID": 1384115991,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
-            "Static": true,
+            "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                3.9381914138793945,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -5951,8 +6552,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/540787164.mmh",
-                    "UID": 540787164,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -5972,27 +6573,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Top.001",
+            "name": "Piece2",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 903941400,
-            "ParentUID": 2015295314,
+            "UID": 1653201227,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                0.77930754423141479,
+                -0.034047599881887436
             ],
             "Rotation": [
                 0,
@@ -6013,8 +6614,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/459845640.mmh",
-                    "UID": 459845640,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6034,61 +6635,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Pieces.001",
+            "name": "Piece1",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1295934065,
-            "ParentUID": 2015295314,
+            "UID": 989080355,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Piece.001",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1995077954,
-            "ParentUID": 1295934065,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                -2.4278585910797119,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6109,8 +6676,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/227092964.mmh",
-                    "UID": 227092964,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6130,27 +6697,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece1.001",
+            "name": "Piece",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 79947474,
-            "ParentUID": 1295934065,
+            "UID": 1700254400,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                -5.4575867652893066,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6171,8 +6738,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/664637430.mmh",
-                    "UID": 664637430,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6192,27 +6759,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece2.001",
+            "name": "Top",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1892957977,
-            "ParentUID": 1295934065,
+            "UID": 1965476113,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                10.040472030639648,
+                2.2737367544323206e-13
             ],
             "Rotation": [
                 0,
@@ -6233,8 +6800,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/892372121.mmh",
-                    "UID": 892372121,
+                    "Path": "Library\/Meshes\/2135965294.mmh",
+                    "UID": 2135965294,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6254,27 +6821,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece3.001",
+            "name": "Bot",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 703383974,
-            "ParentUID": 1295934065,
+            "UID": 754476333,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                -9.2339763641357422,
+                -1.1368683772161603e-13
             ],
             "Rotation": [
                 0,
@@ -6295,8 +6862,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1137528431.mmh",
-                    "UID": 1137528431,
+                    "Path": "Library\/Meshes\/1239629765.mmh",
+                    "UID": 1239629765,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6316,27 +6883,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece4.001",
+            "name": "Red",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1226051313,
-            "ParentUID": 1295934065,
+            "UID": 2094257820,
+            "ParentUID": 1655136281,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                0.95534819364547729,
+                2.8421709430404007e-14
             ],
             "Rotation": [
                 0,
@@ -6357,8 +6924,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/964960585.mmh",
-                    "UID": 964960585,
+                    "Path": "Library\/Meshes\/1191063429.mmh",
+                    "UID": 1191063429,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6378,33 +6945,33 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Column2",
+            "name": "BossColumn",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 738461417,
+            "UID": 921473155,
             "ParentUID": 2052786224,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                13.049975395202637,
+                9.8229007720947266,
+                -5.204463005065918
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                4.371138473402425e-08,
+                1,
+                -4.371138473402425e-08,
+                1.1920927533992653e-07
             ],
             "Scale": [
                 1,
@@ -6419,12 +6986,12 @@
             ]
         },
         {
-            "name": "Red.002",
+            "name": "column",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1663803777,
-            "ParentUID": 738461417,
+            "UID": 2103537424,
+            "ParentUID": 921473155,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
@@ -6433,6 +7000,40 @@
                 0,
                 0,
                 0
+            ],
+            "Rotation": [
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Piece4",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 584205492,
+            "ParentUID": 2103537424,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.0052862167358398438,
+                7.0373849868774414,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6453,8 +7054,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/1789959184.mmh",
-                    "UID": 1789959184,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6474,27 +7075,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Bot.002",
+            "name": "Piece3",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 414839337,
-            "ParentUID": 738461417,
+            "UID": 1777767999,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
-            "Static": true,
+            "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                3.9381914138793945,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6515,8 +7116,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/272313854.mmh",
-                    "UID": 272313854,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6536,27 +7137,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Top.002",
+            "name": "Piece2",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 21912774,
-            "ParentUID": 738461417,
+            "UID": 1913347181,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                0.77930754423141479,
+                -0.034047599881887436
             ],
             "Rotation": [
                 0,
@@ -6577,8 +7178,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/777193618.mmh",
-                    "UID": 777193618,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6598,61 +7199,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Pieces.002",
+            "name": "Piece1",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 875849284,
-            "ParentUID": 738461417,
+            "UID": 733464991,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Piece.002",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1852328446,
-            "ParentUID": 875849284,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                -2.4278585910797119,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6673,8 +7240,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/998908966.mmh",
-                    "UID": 998908966,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6694,27 +7261,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece1.002",
+            "name": "Piece",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 270769322,
-            "ParentUID": 875849284,
+            "UID": 1699980045,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                -0.0052862167358398438,
+                -5.4575867652893066,
+                -0.034047603607177734
             ],
             "Rotation": [
                 0,
@@ -6735,8 +7302,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/930697438.mmh",
-                    "UID": 930697438,
+                    "Path": "Library\/Meshes\/579182846.mmh",
+                    "UID": 579182846,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6756,27 +7323,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece2.002",
+            "name": "Top",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 619513596,
-            "ParentUID": 875849284,
+            "UID": 44475834,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                10.040472030639648,
+                2.2737367544323206e-13
             ],
             "Rotation": [
                 0,
@@ -6797,8 +7364,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/62250067.mmh",
-                    "UID": 62250067,
+                    "Path": "Library\/Meshes\/2135965294.mmh",
+                    "UID": 2135965294,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6818,27 +7385,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece3.002",
+            "name": "Bot",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1094500768,
-            "ParentUID": 875849284,
+            "UID": 1928103587,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                -9.2339763641357422,
+                -1.1368683772161603e-13
             ],
             "Rotation": [
                 0,
@@ -6859,8 +7426,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/289914961.mmh",
-                    "UID": 289914961,
+                    "Path": "Library\/Meshes\/1239629765.mmh",
+                    "UID": 1239629765,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6880,27 +7447,27 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
             ]
         },
         {
-            "name": "Piece4.002",
+            "name": "Red",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1075722427,
-            "ParentUID": 875849284,
+            "UID": 1592023851,
+            "ParentUID": 2103537424,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
                 0,
-                0,
-                0
+                0.95534819364547729,
+                2.8421709430404007e-14
             ],
             "Rotation": [
                 0,
@@ -6921,8 +7488,8 @@
                 {
                     "Type": 2,
                     "Active": true,
-                    "Path": "Library\/Meshes\/2118185275.mmh",
-                    "UID": 2118185275,
+                    "Path": "Library\/Meshes\/1191063429.mmh",
+                    "UID": 1191063429,
                     "bumpDepth": 0,
                     "alternColor": [
                         1,
@@ -6942,571 +7509,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Column3",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1526384689,
-            "ParentUID": 2052786224,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Red.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 200161074,
-            "ParentUID": 1526384689,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/327507638.mmh",
-                    "UID": 327507638,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Bot.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 392747571,
-            "ParentUID": 1526384689,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": true,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1575384999.mmh",
-                    "UID": 1575384999,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Top.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1716846987,
-            "ParentUID": 1526384689,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1446712148.mmh",
-                    "UID": 1446712148,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Pieces.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1811773554,
-            "ParentUID": 1526384689,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Piece.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 739629195,
-            "ParentUID": 1811773554,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/268444314.mmh",
-                    "UID": 268444314,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece1.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1361297329,
-            "ParentUID": 1811773554,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1958888800.mmh",
-                    "UID": 1958888800,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece2.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 2133032905,
-            "ParentUID": 1811773554,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1700658418.mmh",
-                    "UID": 1700658418,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece3.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1094721661,
-            "ParentUID": 1811773554,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/28842233.mmh",
-                    "UID": 28842233,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
-                }
-            ]
-        },
-        {
-            "name": "Piece4.003",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1422128451,
-            "ParentUID": 1811773554,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/127893748.mmh",
-                    "UID": 127893748,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7602,7 +7605,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7664,7 +7667,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7780,7 +7783,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7842,7 +7845,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7904,7 +7907,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -7966,7 +7969,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8062,7 +8065,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8124,7 +8127,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8186,7 +8189,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8282,7 +8285,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8344,7 +8347,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -8406,7 +8409,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
@@ -23278,7 +23281,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
+                    "MaterialAssetPath": "Assets\/Materials\/vertex_color.mat",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
                 }
