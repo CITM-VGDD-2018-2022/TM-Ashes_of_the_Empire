@@ -210,73 +210,73 @@ public class Skill_Tree_Data : DiamondComponent
     public class Grogu_Skills_Data
     {
         //Descriptions
-        public string G1_description = "Regenerate 1 Force  each second";
-        public string G2_description = "Push range             increased";
+        public string G1_description = "Regenerate 1 Force each second";
+        public string G2_description = "Push range increased";
         public string G3_description = "Force cover durationincreased";
-        public string G4_description = "While combo is       active regenerate 4  force per second";
+        public string G4_description = "While combo is active regenerate 4  force per second";
         public string G5_description = "+10% to max Force";
-        public string G6_description = "Rising combo level  grants +2 Force";
-        public string G7_description = "Gain more combo   per hit";
-        public string G8_description = "The more health      missing, the more    force regeneration";
+        public string G6_description = "Rising combo level grants +2 Force";
+        public string G7_description = "Gain more combo per hit";
+        public string G8_description = "The more health missing, the more force regeneration";
     }
     public class Mando_Skills_Data
     {
         //Descriptions - Utility
-        public string U1_description = "As heat rises, so does         damage";
-        public string U2_description = "Movement      speed +20%";
-        public string U3_description = "Damaging an enemy slows  them by 15%";
-        public string U4_description = "Fall damage   reduced by    50%";
-        public string U5_description = "Weapon        overheat takes20% longer";
+        public string U1_description = "As heat rises, so does damage";
+        public string U2_description = "Movement speed +20%";
+        public string U3_description = "Damaging an enemy slows them by 15%";
+        public string U4_description = "Fall damage reduced by 50%";
+        public string U5_description = "Weapon overheat takes20% longer";
         public string U6_description = "Grogu's skill  cost reduced  by 20%";
-        public string U7_description = "Heal  5HP      when Grogu   uses a skill";
-        public string U8_description = "Dashing         leaves a         grenade        behind (10 sec CD)";
+        public string U7_description = "Heal 5HP when Grogu uses a skill";
+        public string U8_description = "Dashing leaves a grenade behind (10 sec CD)";
 
         //Descriptions - Aggression
-        public string A1_description = "Blaster deals  15% more      damage";
-        public string A2_description = "Getting combogrants   5%    fire rate per   level";
-        public string A3_description = "Getting combogrants 20%    damage per   level";
-        public string A4_description = "Grenade        deals 15%      more damage";
-        public string A5_description = "Sniper deals  15% more      damage";
-        public string A6_description = "Greater         enemies take   20% extra     damage";
-        public string A7_description = "Blaster does   more damageas health        decreases";
-        public string A8_description = "Sniper does   more damageas health        decreases";
+        public string A1_description = "Blaster deals 15% more damage";
+        public string A2_description = "Getting combogrants 5% fire rate per level";
+        public string A3_description = "Getting combogrants 20% damage per level";
+        public string A4_description = "Grenade deals 15% more damage";
+        public string A5_description = "Sniper deals 15% more damage";
+        public string A6_description = "Greater enemies take 20% extra damage";
+        public string A7_description = "Blaster does more damageas health decreases";
+        public string A8_description = "Sniper does more damageas health decreases";
 
         //Descriptions - Defense
-        public string D1_description = "Max Health    +10%";
-        public string D2_description = "10% of           incoming       damage is     negated";
-        public string D3_description = "Getting combogrants 5%      damage         reduction";
+        public string D1_description = "Max Health +10%";
+        public string D2_description = "10% of incoming damage is negated";
+        public string D3_description = "Getting combogrants 5% damage reduction";
         public string D4_description = "Getting comboheals 2 HP";
         public string D5_description = "Heal 10 HP oncombo finish";
-        public string D6_description = "30% chance   to heal 1 HP   per bullet";
+        public string D6_description = "30% chance to heal 1 HP per bullet";
         public string D7_description = "1 Extra life per run (revive at 50% hp)";
-        public string D8_description = "5% chance to avoid             incoming       damage";
+        public string D8_description = "5% chance to avoid incoming damage";
     }
     public class Weapons_Skills_Data
     {
         //Descriptions - Primary Weapon
-        public string PrimaryW1_description = "Bullet speed   increased by   30%";
-        public string PrimaryW2_description = "Gain move     speed after    dealing          damage";
-        public string PrimaryW3_description = "Bullets slow    enemies by    20% for 2      seconds";
-        public string PrimaryW4_description = "Overheat       recovery        reduced by    30%";
-        public string PrimaryW5_description = "5% chance to fire double     damage         bullets";
-        public string PrimaryW6_description = "Damage        increased       by 25%";
-        public string PrimaryW7_description = "Rate of fire     +30%, +30%  shots to         overheat";
+        public string PrimaryW1_description = "Gain move speed after dealing damage";
+        public string PrimaryW2_description = "Bullet speed increased by 30%";
+        public string PrimaryW3_description = "Bullets slow enemies by 20% for 2 seconds";
+        public string PrimaryW4_description = "Overheat recovery reduced by 30%";
+        public string PrimaryW5_description = "5% chance to fire double damage bullets";
+        public string PrimaryW6_description = "Damage increased by 25%";
+        public string PrimaryW7_description = "Rate of fire +30%, +30% shots to overheat";
         public string PrimaryW8_description = "";
 
         //Descriptions - Secondary Weapon
-        public string SecondaryW1_description = "Tick damage  +2";
+        public string SecondaryW1_description = "Tick damage +2";
         public string SecondaryW2_description = "Grenade Areaslows by 20%";
         public string SecondaryW3_description = "Time between uses reduced by 30%";
-        public string SecondaryW4_description = "Increased      throw range   by 20%";
-        public string SecondaryW5_description = "Duration        increased by  30%";
-        public string SecondaryW6_description = "Damage        increased by  50%";
+        public string SecondaryW4_description = "Increased throw range by 20%";
+        public string SecondaryW5_description = "Duration increased by  30%";
+        public string SecondaryW6_description = "Damage increased by  50%";
 
         //Descriptions - Special Weapon
-        public string SpecialW1_description = "Non charged damage         increased by  50%";
-        public string SpecialW2_description = "Charge up     time reduced  by 30%";
+        public string SpecialW1_description = "Non charged damage increased by  50%";
+        public string SpecialW2_description = "Charge up time reduced by 30%";
         public string SpecialW3_description = "Kills on minor enemies heal  5HP";
-        public string SpecialW4_description = "Kills on minor enemies         regenerate     5 force";
-        public string SpecialW5_description = "Charge          hotspot          duration         increased by  50%";
+        public string SpecialW4_description = "Kills on minor enemies regenerate 5 force";
+        public string SpecialW5_description = "Charge hotspot duration increased by  50%";
         public string SpecialW6_description = "Deal double damage on full charged shots";
     }
 
