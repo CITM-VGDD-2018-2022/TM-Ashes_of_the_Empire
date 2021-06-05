@@ -79,7 +79,7 @@ public class ChargedBullet : DiamondComponent
         if(triggeredGameObject.CompareTag("Enemy") == false && triggeredGameObject.CompareTag("Player") == false && triggeredGameObject.CompareTag("Wampa") == false && triggeredGameObject.CompareTag("Skel") == false
              && triggeredGameObject.CompareTag("Bullet") == false && triggeredGameObject.CompareTag("StormTrooperBullet") == false && triggeredGameObject.CompareTag("WorldLimit") == false &&
              triggeredGameObject.CompareTag("PushSkill") == false && triggeredGameObject.CompareTag("ChargeBullet") == false && triggeredGameObject.CompareTag("Deathtrooper") == false
-             && triggeredGameObject.CompareTag("ExplosiveBarrel") == false)
+             && triggeredGameObject.CompareTag("ExplosiveBarrel") == false && triggeredGameObject.CompareTag("Moff") == false)
         {
             if (triggered == false)
             {

@@ -107,6 +107,8 @@ public class MofGuideonRework : Entity
     public GameObject camera = null;
     private CameraController cameraComp = null;
 
+    public GameObject cape = null;
+    public GameObject capeMesh = null;
 
     //State
     private STATE currentState = STATE.START;
@@ -357,6 +359,9 @@ public class MofGuideonRework : Entity
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
 
+        if (cape != null)
+            Animator.Pause(cape);
+
         inputsList.Add(INPUT.IN_PRESENTATION);
     }
 
@@ -479,7 +484,7 @@ public class MofGuideonRework : Entity
             preBurstChargeTimer -= myDeltaTime;
 
             if (preBurstChargeTimer <= 0)
-            { 
+            {
                 inputsList.Add(INPUT.IN_PRE_BURST_CHARGE_END);
             }
         }
@@ -1411,18 +1416,6 @@ public class MofGuideonRework : Entity
 
     #region MELEE_COMBO_HIT
 
-    private void CalculateSwingCorrectingAngle()
-    {
-        Vector3 direction = correctSwingPos - gameObject.transform.globalPosition;
-        direction = direction.normalized;
-        swingCorrectionAngle = (float)Math.Atan2(direction.x, direction.z);
-
-        if (Math.Abs(swingCorrectionAngle * Mathf.Rad2Deg) < 1.0f)
-        {
-            swingCorrectionAngle = 0f;
-        }
-    }
-
     //Hit 1
     private void StartMeleeComboHit1()
     {
@@ -1649,6 +1642,18 @@ public class MofGuideonRework : Entity
         }
     }
 
+    private void CalculateSwingCorrectingAngle()
+    {
+        Vector3 direction = correctSwingPos - gameObject.transform.globalPosition;
+        direction = direction.normalized;
+        swingCorrectionAngle = (float)Math.Atan2(direction.x, direction.z);
+
+        if (Math.Abs(swingCorrectionAngle * Mathf.Rad2Deg) < 1.0f)
+        {
+            swingCorrectionAngle = 0f;
+        }
+    }
+
     #endregion
 
     #endregion
@@ -1706,7 +1711,7 @@ public class MofGuideonRework : Entity
 
         toStartBurstTimer = timeToStartBurst;
         shotTimer = timeBetweenShots;
-        
+
 
         Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
 
@@ -2042,6 +2047,9 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_PowerPose", speedMult);
         UpdateAnimationSpd(speedMult);
 
+        if (cape != null)
+            Animator.Play(cape, "MG_Cape_Off", speedMult);
+
         presentationTimer = presentationTime;
 
         if (cameraComp != null)
@@ -2079,6 +2087,17 @@ public class MofGuideonRework : Entity
     {
         //if (cameraComp != null)
         //    cameraComp.target = Core.instance.gameObject;
+
+        if (capeMesh != null)
+        {
+            MeshRenderer capeMeshRend = capeMesh.GetComponent<MeshRenderer>();
+
+            if (capeMeshRend != null)
+            {
+                capeMeshRend.active = false;
+            }
+
+        }
 
         currentHealthPoints = limboHealth = maxHealthPoints1;
     }
