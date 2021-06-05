@@ -3,13 +3,13 @@
     "Game Objects": [
         {
             "name": "BulletMoff",
-            "tag": "Bullet",
+            "tag": "MoffBullet",
             "layer": "Default",
             "Active": true,
             "UID": 2020368285,
             "ParentUID": 0,
             "PrefabReference": 0,
-            "PrefabID": 0,
+            "PrefabID": 1855132637,
             "DontDestroy": false,
             "Static": false,
             "Position": [
