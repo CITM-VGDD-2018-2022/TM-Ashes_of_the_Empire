@@ -1,5 +1,24 @@
 {
     "name": "Moff_Sword",
     "ShaderUID": 2051490536,
-    "Uniforms": []
+    "Uniforms": [
+        {
+            "name": "jointTransforms[0]",
+            "type": 35676
+        },
+        {
+            "name": "shineColor",
+            "type": 35665,
+            "value": [
+                1,
+                0.89999997615814209,
+                0
+            ]
+        },
+        {
+            "name": "shineColorValue",
+            "type": 5126,
+            "value": 0.5899999737739563
+        }
+    ]
 }
