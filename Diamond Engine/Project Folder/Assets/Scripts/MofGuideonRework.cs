@@ -1635,7 +1635,7 @@ public class MofGuideonRework : Entity
 
             if (swingScript != null)
             {
-                swingScript.SetDamage(damage);
+                swingScript.SetDamage((int)(damage * damageMult));
                 swingScript.SetDirection(direction.normalized);
                 swingScript.SetMultipliers(speedMult, timeMult);
             }
@@ -2057,11 +2057,14 @@ public class MofGuideonRework : Entity
     #region PRESENTATION
     private void StartPresentation()
     {
-        Animator.Play(gameObject, "MG_PowerPose", speedMult);
+        Animator.Play(gameObject, "MG_CapeOff", speedMult);
         UpdateAnimationSpd(speedMult);
 
         if (cape != null)
+        {
+            Animator.Resume(cape);
             Animator.Play(cape, "MG_Cape_Off", speedMult);
+        }
 
         presentationTimer = presentationTime;
 
