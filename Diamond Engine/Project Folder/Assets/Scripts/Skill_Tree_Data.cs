@@ -229,13 +229,13 @@ public class Skill_Tree_Data : DiamondComponent
         public string U5_description = "Weapon overheat takes20% longer";
         public string U6_description = "Grogu's skill  cost reduced  by 20%";
         public string U7_description = "Heal 5HP when Grogu uses a skill";
-        public string U8_description = "Dashing leaves a grenade behind (10 sec CD)";
+        public string U8_description = "Dashing leaves a CPD behind (10 sec CD)";
 
         //Descriptions - Aggression
         public string A1_description = "Blaster deals 15% more damage";
         public string A2_description = "Getting combogrants 5% fire rate per level";
         public string A3_description = "Getting combogrants 20% damage per level";
-        public string A4_description = "Grenade deals 15% more damage";
+        public string A4_description = "CPD deals 15% more damage";
         public string A5_description = "Sniper deals 15% more damage";
         public string A6_description = "Greater enemies take 20% extra damage";
         public string A7_description = "Blaster does more damageas health decreases";
@@ -265,7 +265,7 @@ public class Skill_Tree_Data : DiamondComponent
 
         //Descriptions - Secondary Weapon
         public string SecondaryW1_description = "Tick damage +2";
-        public string SecondaryW2_description = "Grenade Areaslows by 20%";
+        public string SecondaryW2_description = "CPD Area slows by 20%";
         public string SecondaryW3_description = "Time between uses reduced by 30%";
         public string SecondaryW4_description = "Increased throw range by 20%";
         public string SecondaryW5_description = "Duration increased by  30%";
