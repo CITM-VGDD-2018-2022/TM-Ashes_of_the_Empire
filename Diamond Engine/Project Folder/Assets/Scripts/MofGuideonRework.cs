@@ -99,6 +99,13 @@ public class MofGuideonRework : Entity
         IN_DEAD
     }
 
+    enum PARTICLES : int
+    {
+        NONE = -1,
+        DASH,
+        AURA
+    }
+
     private NavMeshAgent agent = null;
 
     public GameObject shootPoint = null;
@@ -116,6 +123,16 @@ public class MofGuideonRework : Entity
     public GameObject gun = null;
     public GameObject gunMeshObj = null;
     private MeshRenderer gunMesh = null;
+
+    // Particles
+    public GameObject dashParticleObj = null;
+    private ParticleSystem dashParticle = null;
+
+    public GameObject auraParticleObj = null;
+    private ParticleSystem auraParticle = null;
+
+    public GameObject auraBurstParticleObj = null;
+    private ParticleSystem auraBurstParticle = null;
 
     //State
     private STATE currentState = STATE.START;
@@ -365,6 +382,24 @@ public class MofGuideonRework : Entity
 
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
+
+
+        // Particles
+        if (dashParticleObj != null)
+        {
+            dashParticle = dashParticleObj.GetComponent<ParticleSystem>();
+        }
+
+        if (auraParticleObj != null)
+        {
+            auraParticle = auraParticleObj.GetComponent<ParticleSystem>();
+        }
+
+        if (auraBurstParticleObj != null)
+        {
+            auraBurstParticle = auraBurstParticleObj.GetComponent<ParticleSystem>();
+        }
+
 
         //Props
         if (cape != null)
@@ -1021,7 +1056,7 @@ public class MofGuideonRework : Entity
     {
         chaseTimer = chaseDuration;
 
-        Animator.Play(gameObject, "MG_RunPh1_Final", speedMult); 
+        Animator.Play(gameObject, "MG_RunPh1_Final", speedMult);
         if (saber != null)
         {
             DeActivateSaber();
@@ -1207,6 +1242,8 @@ public class MofGuideonRework : Entity
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
+        PlayParticles(PARTICLES.DASH);
+
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
     }
 
@@ -1253,6 +1290,8 @@ public class MofGuideonRework : Entity
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        PlayParticles(PARTICLES.DASH);
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
@@ -1312,6 +1351,8 @@ public class MofGuideonRework : Entity
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        PlayParticles(PARTICLES.DASH);
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
@@ -1373,6 +1414,8 @@ public class MofGuideonRework : Entity
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
+        PlayParticles(PARTICLES.DASH);
+
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
     }
@@ -1419,6 +1462,8 @@ public class MofGuideonRework : Entity
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        PlayParticles(PARTICLES.DASH);
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
@@ -1479,6 +1524,8 @@ public class MofGuideonRework : Entity
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
+
+        PlayParticles(PARTICLES.DASH);
 
         Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboShortDashDistance)
@@ -1644,6 +1691,9 @@ public class MofGuideonRework : Entity
     private void EndMeleeComboHit3()
     {
         Debug.Log("End melee combo hit 3");
+
+        if (currentPhase == PHASE.PHASE1)
+            StopParticles(PARTICLES.DASH);
     }
 
     //Hit4
@@ -1773,6 +1823,7 @@ public class MofGuideonRework : Entity
     private void EndMeleeComboHit6()
     {
         Debug.Log("End melee combo hit 6");
+        StopParticles(PARTICLES.DASH);
     }
 
     //Rotation angle in rad
@@ -1869,6 +1920,8 @@ public class MofGuideonRework : Entity
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
+        PlayParticles(PARTICLES.DASH);
+
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
     }
@@ -1936,6 +1989,7 @@ public class MofGuideonRework : Entity
     private void EndBurst_P1()
     {
         shotTimes = 0;
+        StopParticles(PARTICLES.DASH);
     }
 
     private void Shoot()
@@ -2847,6 +2901,8 @@ public class MofGuideonRework : Entity
     #endregion
 
     #region HELPERS
+
+    #region ANIMATIONS
     private void UpdateAnimationSpd(float newSpd)
     {
         if (currAnimationPlaySpd != newSpd)
@@ -2866,7 +2922,77 @@ public class MofGuideonRework : Entity
             currAnimationPlaySpd = newSpd;
         }
     }
+    #endregion
 
+
+    #region PARTICLESs
+    private void PlayParticles(PARTICLES particletype, bool forceRestart = false)
+    {
+        switch (particletype)
+        {
+            case PARTICLES.NONE:
+                break;
+            case PARTICLES.DASH:
+                if (dashParticle != null)
+                {
+                    if (dashParticle.playing == false || forceRestart == true)
+                        dashParticle.Play();
+                }
+                else
+                    Debug.Log("Dash Particles not found");
+                break;
+
+            case PARTICLES.AURA:
+                if (auraParticle != null)
+                {
+                    if (auraParticle.playing == false || forceRestart == true)
+                        auraParticle.Play();
+                }
+                else
+                    Debug.Log("Aura Particles not found");
+
+                if (auraBurstParticle != null)
+                {
+                    if (auraBurstParticle.playing == false || forceRestart == true)
+                        auraBurstParticle.Play();
+                }
+                else
+                    Debug.Log("Aura Burst Particles not found");
+
+                break;
+        }
+    }
+
+    private void StopParticles(PARTICLES particletype)
+    {
+        switch (particletype)
+        {
+            case PARTICLES.NONE:
+                break;
+            case PARTICLES.DASH:
+                if (dashParticle != null)
+                {
+                    dashParticle.Stop();
+                }
+                else
+                    Debug.Log("Dash Particles not found");
+                break;
+
+            case PARTICLES.AURA:
+                if (auraParticle != null)
+                {
+                    auraParticle.Stop();
+                }
+                else
+                    Debug.Log("Aura Particles not found");
+                break;
+        }
+    }
+
+    #endregion
+
+
+    #region PROPS
     private void ActivateGun()
     {
         if (gun == null || gunMesh == null)
@@ -2909,6 +3035,8 @@ public class MofGuideonRework : Entity
 
         Animator.Pause(saber);
     }
+
+    #endregion
 
 
     public override bool IsDying()
