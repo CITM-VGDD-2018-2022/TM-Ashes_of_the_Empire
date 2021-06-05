@@ -303,7 +303,6 @@ public class Bosseslv2 : Entity
     }
     public void UpdateFastRush()
     {
-        Debug.Log(wampaRushChargeCounter.ToString());
         if (!wampaRushCharged)
         {
             wampaRushChargeCounter += Time.deltaTime;
@@ -406,6 +405,7 @@ public class Bosseslv2 : Entity
         float nerestDistance = 10000f;
         foreach (GameObject column in Level2BossRoom.columns)
         {
+            if (column == null) continue;
             float distance = Mathf.Distance(gameObject.transform.globalPosition, column.transform.globalPosition);
             if (nerestDistance > distance)
             {
@@ -417,6 +417,7 @@ public class Bosseslv2 : Entity
         nerestDistance = 10000f;
         foreach (GameObject column in Level2BossRoom.columns)
         {
+            if (column == null) continue;
             float distance = Mathf.Distance(Core.instance.gameObject.transform.globalPosition, column.transform.globalPosition);
             if (nerestDistance > distance)
             {
@@ -617,7 +618,6 @@ public class Bosseslv2 : Entity
                             if (impactParticles != null)
                             {
                                 impactParticles.Play();
-                                Debug.Log("sdhifgksdfhgklsdfhgklsdfñg");
                             }
 
                             if (slamParticles != null)

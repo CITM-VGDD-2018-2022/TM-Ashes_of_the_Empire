@@ -37,8 +37,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "WampaProjectile",
-                    "damage": 10,
-                    "child": 137505315
+                    "damage": 10
                 },
                 {
                     "Type": 14,
@@ -74,6 +73,16 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "Wampa_Skell",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
