@@ -1,0 +1,259 @@
+{
+    "assets_path": "Assets\/Prefabs\/Bantha Sniper Impact.prefab",
+    "Game Objects": [
+        {
+            "name": "Bantha Sniper Impact",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 149225084,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 1298559028,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -1.0472651720046997,
+                9.9741706848144531,
+                -7.246741771697998
+            ],
+            "Rotation": [
+                -0.7071068286895752,
+                0,
+                0,
+                0.70710670948028564
+            ],
+            "Scale": [
+                1,
+                0.99996805191040039,
+                0.99996805191040039
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": false,
+                    "maxDuration": 0.14000000059604645,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/2134419253.dds",
+                            "texUID": 2134419253,
+                            "paEmitterName": "Entrada",
+                            "paLifeTime": [
+                                0.15000000596046448,
+                                0.15000000596046448
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 600,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0.012755102477967739
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.59550559520721436,
+                                                0.05918068066239357,
+                                                0,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0.30357137322425842
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                0.98127341270446777
+                                            ],
+                                            "paColorOLTposition": 0.60750102996826172
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.97647058963775635,
+                                                0.77254903316497803,
+                                                0.13725490868091583,
+                                                0.97003746032714844
+                                            ],
+                                            "paColorOLTposition": 0.98469376564025879
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.20000000298023224,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 0.69999998807907104,
+                                    "paShapeRandSpeed": 0.5,
+                                    "PaShapeSphereRadius": 0.029999999329447746,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/39569920.dds",
+                            "texUID": 39569920,
+                            "paEmitterName": "Sortida",
+                            "paLifeTime": [
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 500,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                0
+                                            ],
+                                            "paColorOLTposition": 0.018946118652820587
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0.09937894344329834,
+                                                0,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0.57908183336257935
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.15000000596046448,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 3,
+                                    "paShapeRandSpeed": 1,
+                                    "PaShapeConeRadius": 0.55000001192092896,
+                                    "PaShapeConeHeight": 1.25,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 2,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0.34999999403953552,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/692800487.dds",
+                            "texUID": 692800487,
+                            "paEmitterName": "Sparks",
+                            "paLifeTime": [
+                                0.20000000298023224,
+                                0.30000001192092896
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                0.97647058963775635,
+                                0.77254903316497803,
+                                0.13725490868091583,
+                                1
+                            ],
+                            "paPerSec": 300,
+                            "paRelative": true,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.25,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 4,
+                                    "paShapeRandSpeed": 1,
+                                    "PaShapeSphereRadius": 0.20000000298023224,
+                                    "PaShapeSphereDirection": true,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
+                }
+            ]
+        }
+    ]
+}
