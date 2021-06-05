@@ -1,19 +1,19 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        3.6967625617980957,
-        3.2443523406982422,
-        1.4586873054504395
+        3.3628878593444824,
+        3.9933421611785889,
+        -0.03848642110824585
     ],
     "EditorCameraZ": [
-        0.82737159729003906,
-        -0.20567408204078674,
-        -0.52264177799224854
+        0.75809228420257568,
+        -0.62072628736495972,
+        -0.19998764991760254
     ],
     "EditorCameraY": [
-        0.17388236522674561,
-        0.97862052917480469,
-        -0.1098487377166748
+        0.60018777847290039,
+        0.7840273380279541,
+        -0.15835322439670563
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -1972,34 +1972,6 @@
                         1
                     ],
                     "Scale": [
-                        0.99999988079071045,
-                        1,
-                        0.99999988079071045
-                    ]
-                },
-                {
-                    "name": "Master_Laser_Ctrl",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 218686686,
-                    "ParentUID": 489363755,
-                    "PrefabID": 0,
-                    "PrefabReference": 218686686,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
                         1,
                         1,
                         1
@@ -2115,566 +2087,6 @@
                         1,
                         1,
                         1
-                    ]
-                },
-                {
-                    "name": "Gun",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1723243824,
-                    "ParentUID": 1281997300,
-                    "PrefabID": 0,
-                    "PrefabReference": 1723243824,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        0.99999988079071045,
-                        1,
-                        0.99999988079071045
-                    ]
-                },
-                {
-                    "name": "Pistol_Joint",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1459132872,
-                    "ParentUID": 1723243824,
-                    "PrefabID": 0,
-                    "PrefabReference": 1459132872,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -1.4608763456344604,
-                        -0.028654342517256737,
-                        -0.1059807613492012
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Pistol_cotroller",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2128257111,
-                    "ParentUID": 1723243824,
-                    "PrefabID": 0,
-                    "PrefabReference": 2128257111,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "MoffGuideonWeapon1",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1674192423,
-                    "ParentUID": 1723243824,
-                    "PrefabID": 0,
-                    "PrefabReference": 1674192423,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Moff_Cape",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1451459540,
-                    "ParentUID": 1674192423,
-                    "PrefabID": 0,
-                    "PrefabReference": 1451459540,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        1,
-                        0,
-                        -4.3711388286737929e-08
-                    ],
-                    "Scale": [
-                        0.99999982118606567,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "name": "Cape",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1871541341,
-                    "ParentUID": 1451459540,
-                    "PrefabID": 0,
-                    "PrefabReference": 1871541341,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        -4.371138473402425e-08,
-                        1,
-                        4.371138473402425e-08,
-                        4.3711398944878965e-08
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Armature",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 571281586,
-                    "ParentUID": 1451459540,
-                    "PrefabID": 0,
-                    "PrefabReference": 571281586,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        -4.371138473402425e-08,
-                        -1,
-                        -4.371138473402425e-08,
-                        4.3711398944878965e-08
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Cape_joint",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1798156466,
-                    "ParentUID": 571281586,
-                    "PrefabID": 0,
-                    "PrefabReference": 1798156466,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.0067048934288322926,
-                        0.048550024628639221,
-                        -0.2575085461139679
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Down",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1892117521,
-                    "ParentUID": 1798156466,
-                    "PrefabID": 0,
-                    "PrefabReference": 1892117521,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.0044143167324364185,
-                        0.22712846100330353,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Down1",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 172055267,
-                    "ParentUID": 1892117521,
-                    "PrefabID": 0,
-                    "PrefabReference": 172055267,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.0034874025732278824,
-                        0.44990280270576477,
-                        -0.0045209228992462158
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Down2",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2143444488,
-                    "ParentUID": 172055267,
-                    "PrefabID": 0,
-                    "PrefabReference": 2143444488,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.0040750978514552116,
-                        0.35814750194549561,
-                        -0.011835068464279175
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        -0.06620953232049942,
-                        0.99780583381652832
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Center",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 110069018,
-                    "ParentUID": 2143444488,
-                    "PrefabID": 0,
-                    "PrefabReference": 110069018,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.025732770562171936,
-                        0.220428466796875,
-                        0.013559013605117798
-                    ],
-                    "Rotation": [
-                        5.3407904895754355e-15,
-                        -7.940935142686514e-23,
-                        0.06620953232049942,
-                        0.99780583381652832
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "R_shoulder",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 893449682,
-                    "ParentUID": 110069018,
-                    "PrefabID": 0,
-                    "PrefabReference": 893449682,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.16010680794715881,
-                        0.059941768646240234,
-                        0.022281691431999207
-                    ],
-                    "Rotation": [
-                        -0.54323738813400269,
-                        -0.60017043352127075,
-                        0.35747277736663818,
-                        0.46572732925415039
-                    ],
-                    "Scale": [
-                        1.0000001192092896,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "R_shoulder1",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 996475167,
-                    "ParentUID": 893449682,
-                    "PrefabID": 0,
-                    "PrefabReference": 996475167,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.16566860675811768,
-                        -0.10849890112876892,
-                        0.0042160153388977051
-                    ],
-                    "Rotation": [
-                        0.23416681587696075,
-                        0.69853842258453369,
-                        -0.0059520602226257324,
-                        0.67614680528640747
-                    ],
-                    "Scale": [
-                        1,
-                        0.99999988079071045,
-                        1
-                    ]
-                },
-                {
-                    "name": "R_shoulder2",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1138385372,
-                    "ParentUID": 996475167,
-                    "PrefabID": 0,
-                    "PrefabReference": 1138385372,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.020814493298530579,
-                        -0.096177637577056885,
-                        0.071419119834899902
-                    ],
-                    "Rotation": [
-                        -0.40699797868728638,
-                        1.348533640310734e-08,
-                        3.895601707881724e-08,
-                        0.91342908143997192
-                    ],
-                    "Scale": [
-                        1,
-                        0.99999994039535522,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "name": "R_shoulder2_end",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 496507830,
-                    "ParentUID": 1138385372,
-                    "PrefabID": 0,
-                    "PrefabReference": 496507830,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        1.4901161193847656e-08,
-                        0.1215895414352417,
-                        -1.1920928955078125e-07
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        -2.8421709430404007e-14,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "L_shoulder",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1474850318,
-                    "ParentUID": 110069018,
-                    "PrefabID": 0,
-                    "PrefabReference": 1474850318,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.17191398143768311,
-                        0.059981465339660645,
-                        0.022281482815742493
-                    ],
-                    "Rotation": [
-                        0.66819941997528076,
-                        0.45985612273216248,
-                        -0.49889689683914185,
-                        -0.30519479513168335
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000001192092896,
-                        1
-                    ]
-                },
-                {
-                    "name": "L_shoulder1",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 770891820,
-                    "ParentUID": 1474850318,
-                    "PrefabID": 0,
-                    "PrefabReference": 770891820,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.085709452629089355,
-                        -0.15243610739707947,
-                        -0.093024000525474548
-                    ],
-                    "Rotation": [
-                        0.47817006707191467,
-                        0.60921543836593628,
-                        -0.14553926885128021,
-                        0.61565268039703369
-                    ],
-                    "Scale": [
-                        1.0000001192092896,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "name": "L_shoulder2",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 348094396,
-                    "ParentUID": 770891820,
-                    "PrefabID": 0,
-                    "PrefabReference": 348094396,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.035699307918548584,
-                        -0.090450406074523926,
-                        0.07299506664276123
-                    ],
-                    "Rotation": [
-                        -0.40076836943626404,
-                        0.070939265191555023,
-                        -3.7252902984619141e-09,
-                        0.9134289026260376
-                    ],
-                    "Scale": [
-                        1,
-                        0.99999988079071045,
-                        0.99999982118606567
-                    ]
-                },
-                {
-                    "name": "L_shoulder2_end",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 326987521,
-                    "ParentUID": 348094396,
-                    "PrefabID": 0,
-                    "PrefabReference": 326987521,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -1.4901161193847656e-08,
-                        0.12158945202827454,
-                        0
-                    ],
-                    "Rotation": [
-                        -7.4505814851022478e-09,
-                        2.2204460492503131e-16,
-                        3.7252902984619141e-09,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        0.99999994039535522,
-                        0.99999994039535522
                     ]
                 },
                 {
@@ -3123,6 +2535,90 @@
                         1,
                         0.99999994039535522,
                         0.99999994039535522
+                    ]
+                },
+                {
+                    "name": "Gun",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1723243824,
+                    "ParentUID": 1413930625,
+                    "PrefabID": 0,
+                    "PrefabReference": 1723243824,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Pistol_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1459132872,
+                    "ParentUID": 1723243824,
+                    "PrefabID": 0,
+                    "PrefabReference": 1459132872,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -1.4608763456344604,
+                        -0.028654342517256737,
+                        -0.1059807613492012
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "MoffGuideonWeapon1",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1674192423,
+                    "ParentUID": 1723243824,
+                    "PrefabID": 0,
+                    "PrefabReference": 1674192423,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
