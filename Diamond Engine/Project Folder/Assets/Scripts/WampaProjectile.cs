@@ -19,19 +19,28 @@ public class WampaProjectile : DiamondComponent
 			gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
 		}
 
-        if (timer > 0f)
+        if (timer > 0f && !to_destroy)
         {
             timer -= Time.deltaTime;
             if (timer <= 0f)
             {
                 to_destroy = true;
+				gameObject.GetChild("Spike").GetComponent<MeshRenderer>().active = false;
+				timer = 1f;
             }
         }
 
 
         if (to_destroy)
 		{
-			InternalCalls.Destroy(gameObject);
+			if (timer > 0f && to_destroy)
+			{
+				timer -= Time.deltaTime;
+				if (timer <= 0f)
+				{
+					InternalCalls.Destroy(gameObject);
+				}
+			}
 		}
 	}
 
@@ -43,6 +52,8 @@ public class WampaProjectile : DiamondComponent
 			if (health != null)
 				health.TakeDamage(damage);
 			to_destroy = true;
+			gameObject.GetChild("Spike").GetComponent<MeshRenderer>().active = false;
+			timer = 1f;
 		}
 	}
 	public void OnCollisionEnter(GameObject collidedGameObject)
@@ -50,6 +61,8 @@ public class WampaProjectile : DiamondComponent
 		Audio.PlayAudio(gameObject, "Play_Wampa_Projectile_Impact");
 		//gameObject.transform.localPosition += new Vector3(0f, -10f, 0f);
 		to_destroy = true;
+		gameObject.GetChild("Spike").GetComponent<MeshRenderer>().active = false;
+		timer = 1f;
 	}
 
 	public void LookAt(Vector3 direction)
