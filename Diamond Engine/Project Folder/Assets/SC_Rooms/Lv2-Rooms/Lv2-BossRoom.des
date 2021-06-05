@@ -1,19 +1,19 @@
 {
     "NavMesh": 942369955,
     "EditorCameraPosition": [
-        -10.981115341186523,
-        3.6601176261901855,
-        -15.5738525390625
+        -26.210277557373047,
+        12.299139976501465,
+        -10.981156349182129
     ],
     "EditorCameraZ": [
-        0.020835945382714272,
-        -0.039206396788358688,
-        0.99901390075683594
+        0.38361108303070068,
+        -0.72233223915100098,
+        0.5753943920135498
     ],
     "EditorCameraY": [
-        0.0008663347689434886,
-        0.99923115968704224,
-        0.039196852594614029
+        0.40076041221618652,
+        0.69154620170593262,
+        0.60096168518066406
     ],
     "SkyboxPath0": "Library\/Textures\/483487888.dds",
     "SkyboxPath1": "Library\/Textures\/1874848602.dds",
@@ -109,8 +109,8 @@
                     "fSize": 35,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 17.857143402099609,
-                    "hFOV": 33.428569793701172,
+                    "vFOV": 19.399999618530273,
+                    "hFOV": 35.628570556640625,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -3679,7 +3679,7 @@
             ]
         },
         {
-            "name": "Water ",
+            "name": "WaterRealCollider",
             "tag": "WaterFloor",
             "layer": "Default",
             "Active": true,
@@ -5048,6 +5048,184 @@
             ]
         },
         {
+            "name": "WaterUpperRealCollider",
+            "tag": "WaterFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 389739171,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.85519766807556152,
+                2.0959999561309814,
+                -14.603618621826172
+            ],
+            "Rotation": [
+                -0.7071068286895752,
+                -8.5174228559026233e-08,
+                2.5454789920331677e-07,
+                0.70710670948028564
+            ],
+            "Scale": [
+                8.2410001754760742,
+                1.3619918823242188,
+                0.9997597336769104
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WaterLowerRealCollider",
+            "tag": "WaterFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 574944346,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.86965441703796387,
+                2.0959999561309814,
+                27.296779632568359
+            ],
+            "Rotation": [
+                -0.7071068286895752,
+                -9.0832187993328262e-08,
+                2.5754468424565857e-07,
+                0.70710670948028564
+            ],
+            "Scale": [
+                8.2410001754760742,
+                1.3619190454483032,
+                0.99972331523895264
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Skel",
             "tag": "Skel",
             "layer": "Default",
@@ -5428,10 +5606,10 @@
                         3.3614924177527428e-09
                     ],
                     "Rotation": [
-                        -9.4805807648867813e-09,
-                        -0.0016800141893327236,
-                        4.6926879804232158e-06,
-                        0.99999868869781494
+                        -9.4805798767083616e-09,
+                        -0.00168001395650208,
+                        4.6926875256758649e-06,
+                        0.99999856948852539
                     ],
                     "Scale": [
                         1.0000001192092896,
@@ -5456,10 +5634,10 @@
                         1.1496013030409813e-09
                     ],
                     "Rotation": [
-                        -0.00020733187557198107,
-                        -0.0011754683218896389,
-                        0.059284232556819916,
-                        0.99824053049087524
+                        -0.00020733184646815062,
+                        -0.0011754682054743171,
+                        0.059284225106239319,
+                        0.99824041128158569
                     ],
                     "Scale": [
                         1,
@@ -5624,10 +5802,10 @@
                         -0.028598792850971222
                     ],
                     "Rotation": [
-                        0.096541419625282288,
-                        -0.50104176998138428,
-                        0.18819843232631683,
-                        0.83917725086212158
+                        0.096541404724121094,
+                        -0.5010417103767395,
+                        0.18819840252399445,
+                        0.83917713165283203
                     ],
                     "Scale": [
                         0.99999994039535522,
@@ -5876,10 +6054,10 @@
                         0.028598770499229431
                     ],
                     "Rotation": [
-                        -0.062612101435661316,
-                        0.39902031421661377,
-                        0.16395239531993866,
-                        0.89999020099639893
+                        -0.062612093985080719,
+                        0.39902025461196899,
+                        0.16395238041877747,
+                        0.89999008178710938
                     ],
                     "Scale": [
                         1.0000001192092896,
