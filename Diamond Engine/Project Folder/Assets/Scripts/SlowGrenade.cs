@@ -85,6 +85,7 @@ public class SlowGrenade : DiamondComponent
                 {
                     enemies.Remove(enemies[i]);
                     i--;
+                    continue;
                 }
 
                 float slow = 0.3f;
@@ -219,7 +220,7 @@ public class SlowGrenade : DiamondComponent
                     }
                 }
 
-                if (eneScript != null)
+                if (eneScript != null && !myEntComp.IsBoss())
                 {
                     if (eneScript.healthPoints <= 0)
                     {
