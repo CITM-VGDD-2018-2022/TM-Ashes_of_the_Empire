@@ -286,3 +286,8 @@ void C_AudioSource::SetMuted(bool muted)
 	}
 	isMuted = muted;
 }
+
+bool C_AudioSource::IsMusic()
+{
+	return isMusic;
+}

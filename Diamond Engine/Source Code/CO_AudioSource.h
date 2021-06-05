@@ -48,6 +48,8 @@ public:
 	bool IsMuted();
 	void SetMuted(bool muted);
 
+	bool IsMusic();
+
 private:
 
 	std::string		evName;
