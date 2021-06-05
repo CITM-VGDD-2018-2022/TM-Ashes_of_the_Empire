@@ -1,75 +1,58 @@
 {
     "Game Objects": [
         {
-            "name": "Wampa Trail",
-            "tag": "Untagged",
+            "name": "Right_Platform_Collider1",
+            "tag": "MetalFloor",
             "layer": "Default",
             "Active": true,
-            "UID": 1078685705,
-            "ParentUID": 424241714,
-            "PrefabReference": 273054205,
-            "PrefabID": 781563061,
+            "UID": 1125228482,
+            "ParentUID": 2137059787,
+            "PrefabReference": 0,
+            "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.5825047492980957,
-                0,
-                0.24118614196777344
+                -20.061019897460938,
+                -5.3854150772094727,
+                16.471614837646484
             ],
             "Rotation": [
-                -6.2888496188406862e-08,
-                -0.73699939250946045,
-                -6.2888496188406862e-08,
-                0.67589348554611206
+                0,
+                0.37521511316299438,
+                0,
+                0.9269377589225769
             ],
             "Scale": [
-                1.0000079870223999,
-                1,
-                1.0000206232070923
+                1.6000010967254639,
+                10,
+                1.3000000715255737
             ],
-            "PrefabObjects": [
+            "Components": [
                 {
-                    "name": "Small Floor Cracks",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1674332215,
-                    "ParentUID": 1078685705,
-                    "PrefabID": 0,
-                    "PrefabReference": 187950083,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        3.1500000953674316,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
+                    "Type": 1,
+                    "Active": true
                 },
                 {
-                    "name": "Snow Dust",
-                    "tag": "Untagged",
-                    "layer": "Default",
+                    "Type": 14,
                     "Active": true,
-                    "UID": 1123297708,
-                    "ParentUID": 1078685705,
-                    "PrefabID": 0,
-                    "PrefabReference": 1669359148,
-                    "DontDestroy": false,
-                    "Static": false,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
                     "Position": [
                         0,
-                        3.2999999523162842,
+                        0,
                         0
                     ],
                     "Rotation": [
@@ -81,7 +64,7 @@
                     "Scale": [
                         1,
                         1,
-                        1
+                        1.0499999523162842
                     ]
                 }
             ]
