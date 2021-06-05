@@ -13,14 +13,14 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -20.383556365966797,
-                -1.0196530818939209,
-                -9.7039775848388672
+                10.689765930175781,
+                1.8695820926950546e-06,
+                18.265098571777344
             ],
             "Rotation": [
-                0,
-                0,
-                0,
+                -4.4183406933129277e-15,
+                -0.00017255621787626296,
+                8.7423288164245605e-08,
                 1
             ],
             "Scale": [
@@ -78,68 +78,6 @@
                     "regressionTime": 1.5,
                     "idleParticlesObject": 439895910,
                     "eruptionParticlesObject": 1909877198
-                }
-            ]
-        },
-        {
-            "name": "GasRack",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 175167092,
-            "ParentUID": 1939403477,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                1.8489090204238892,
-                -0.072218582034111023,
-                -1.0207855701446533
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 2,
-                    "Active": true,
-                    "Path": "Library\/Meshes\/1419897563.mmh",
-                    "UID": 1419897563,
-                    "bumpDepth": 0,
-                    "alternColor": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "alternColorStencil": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
-                    "drawShadows": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
-                    "MaterialUID": 82053990
                 }
             ]
         },
@@ -220,7 +158,7 @@
                 {
                     "Type": 20,
                     "Active": true,
-                    "systemActive": true,
+                    "systemActive": false,
                     "looping": false,
                     "maxDuration": 5,
                     "ParticleEmitters": [
@@ -243,7 +181,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 30,
+                            "paPerSec": 15,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -283,21 +221,12 @@
                                         },
                                         {
                                             "paColorOLTcolor": [
-                                                0.62075966596603394,
-                                                0.65216553211212158,
-                                                0.62969183921813965,
+                                                0.15730339288711548,
+                                                0.1179208979010582,
+                                                0.079535424709320068,
                                                 1
                                             ],
-                                            "paColorOLTposition": 0.38108107447624207
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                0.62500590085983276,
-                                                0.65612649917602539,
-                                                0.6338571310043335,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0.38378378748893738
+                                            "paColorOLTposition": 0.39398786425590515
                                         },
                                         {
                                             "paColorOLTcolor": [
@@ -321,9 +250,9 @@
                                     "paShapePartSpeed": 0,
                                     "paShapeRandSpeed": 0,
                                     "PaShapeAreaDimensions": [
-                                        0.40000000596046448,
+                                        0.60000002384185791,
                                         2.3694278276172396e-38,
-                                        0.40000000596046448
+                                        0.60000002384185791
                                     ],
                                     "PaShapeSphereDirection": false,
                                     "PaShapeSphereAngle": 0,
@@ -412,7 +341,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 250,
+                            "paPerSec": 300,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -446,27 +375,27 @@
                                                 0.62352943420410156,
                                                 0.65490198135375977,
                                                 0.63529413938522339,
-                                                0
+                                                0.74531835317611694
                                             ],
                                             "paColorOLTposition": 0.0027027027681469917
                                         },
                                         {
                                             "paColorOLTcolor": [
-                                                0.62352943420410156,
-                                                0.65490198135375977,
-                                                0.63529413938522339,
+                                                0.34831458330154419,
+                                                0.34831270575523376,
+                                                0.34831109642982483,
                                                 1
                                             ],
                                             "paColorOLTposition": 0.5
                                         },
                                         {
                                             "paColorOLTcolor": [
-                                                0.32156863808631897,
-                                                0.32156863808631897,
-                                                0.32156863808631897,
+                                                0.15686275064945221,
+                                                0.11764705926179886,
+                                                0.078431375324726105,
                                                 1
                                             ],
-                                            "paColorOLTposition": 1
+                                            "paColorOLTposition": 0.78316336870193481
                                         }
                                     ]
                                 },
@@ -481,9 +410,9 @@
                                     "paShapePartSpeed": 0.10000000149011612,
                                     "paShapeRandSpeed": 0.20000000298023224,
                                     "PaShapeAreaDimensions": [
-                                        0.40000000596046448,
+                                        0.5,
                                         2.3694278276172396e-38,
-                                        0.40000000596046448
+                                        0.5
                                     ],
                                     "PaShapeSphereDirection": false,
                                     "PaShapeSphereAngle": 0,
@@ -515,7 +444,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 200,
+                            "paPerSec": 400,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -555,21 +484,12 @@
                                         },
                                         {
                                             "paColorOLTcolor": [
-                                                0.62352943420410156,
-                                                0.65490198135375977,
-                                                0.63529413938522339,
+                                                0.15686275064945221,
+                                                0.11764705926179886,
+                                                0.078431375324726105,
                                                 1
                                             ],
-                                            "paColorOLTposition": 0.45408153533935547
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                0.32156863808631897,
-                                                0.32156863808631897,
-                                                0.32156863808631897,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 1
+                                            "paColorOLTposition": 0.66836750507354736
                                         }
                                     ]
                                 },
@@ -603,6 +523,316 @@
                     "Active": true,
                     "billboardAlignment": 0,
                     "horizantalAligned": true
+                }
+            ]
+        },
+        {
+            "name": "DoorTrap",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1109106781,
+            "ParentUID": 1939403477,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.6966957273065759e-15,
+                7.7125150710344315e-10,
+                -5.1158990238553415e-13,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 16,
+                    "Active": true,
+                    "RootBone UID": 214383035,
+                    "MeshRendererUID": 793061693,
+                    "Animations": [
+                        92631021,
+                        1381436234
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Armature",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 53704822,
+            "ParentUID": 1109106781,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.560744398173419e-15,
+                1,
+                -8.1460335366045911e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap_Joint",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 214383035,
+            "ParentUID": 53704822,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.0089687593281269073,
+                0.026137311011552811,
+                0.08327755331993103
+            ],
+            "Rotation": [
+                0,
+                0.85445040464401245,
+                0,
+                0.51953297853469849
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap_Joint2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 549933085,
+            "ParentUID": 214383035,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.43942683935165405,
+                0.021368088200688362,
+                -0.75265926122665405
+            ],
+            "Rotation": [
+                0,
+                -0.85445040464401245,
+                0,
+                0.51953315734863281
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap_Joint2_end",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1552852069,
+            "ParentUID": 549933085,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0.9220890998840332,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap_Joint3",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 344654928,
+            "ParentUID": 214383035,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.40036225318908691,
+                0.021368088200688362,
+                0.88586562871932983
+            ],
+            "Rotation": [
+                0,
+                -0.85445040464401245,
+                0,
+                0.51953315734863281
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap_Joint3_end",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1385954357,
+            "ParentUID": 344654928,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0.9220890998840332,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Trap",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 793061693,
+            "ParentUID": 1109106781,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                -3.5607448216898926e-15,
+                1,
+                -8.1460342471473268e-08,
+                -4.3711388286737929e-08
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/118303733.mmh",
+                    "UID": 118303733,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
+                    "MaterialUID": 1948688504
                 }
             ]
         }
