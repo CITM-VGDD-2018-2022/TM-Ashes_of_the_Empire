@@ -9,11 +9,12 @@ public class AtackBosslv2 : DiamondComponent
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        if (triggeredGameObject.CompareTag("Player"))
+        if (triggeredGameObject.CompareTag("Player") && active)
         {
             PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
             {
+                Debug.Log("Just confirming that damage is " + damage.ToString());
                 health.TakeDamage((int)damage);
                 active = false;
 

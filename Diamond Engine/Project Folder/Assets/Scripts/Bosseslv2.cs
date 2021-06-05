@@ -298,7 +298,7 @@ public class Bosseslv2 : Entity
 
         if (colliderRush != null)
         {
-            colliderRush.GetComponent<BoxCollider>().active = true;
+            colliderRush.GetComponent<AtackBosslv2>().active = true;
         }
     }
     public void UpdateFastRush()
@@ -340,7 +340,7 @@ public class Bosseslv2 : Entity
             Audio.PlayAudio(gameObject, "Play_Skel_Rush_Recovery");
         }
         rushOnce = true;
-        colliderBounceRush.GetComponent<BoxCollider>().active = false;
+        colliderBounceRush.GetComponent<AtackBosslv2>().active = false;
     }
 
     public void StartSlowRush()
@@ -376,7 +376,7 @@ public class Bosseslv2 : Entity
 
         if (colliderRush != null)
         {
-            colliderRush.GetComponent<BoxCollider>().active = false;
+            colliderRush.GetComponent<AtackBosslv2>().active = false;
         }
 
         if (gameObject.CompareTag("Wampa"))
