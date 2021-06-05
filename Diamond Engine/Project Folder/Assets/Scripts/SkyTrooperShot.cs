@@ -158,7 +158,6 @@ public class SkyTrooperShot : DiamondComponent
 						damagedPlayer = true;
 
 					}
-
 				}
             }
         }

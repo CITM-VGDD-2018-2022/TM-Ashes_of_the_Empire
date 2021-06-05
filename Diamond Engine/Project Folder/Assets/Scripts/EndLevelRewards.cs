@@ -34,7 +34,7 @@ public class EndLevelRewards
     EndLevelRewardsButtons secondButton = null;
     EndLevelRewardsButtons thirdButton = null;
 
-    GameObject rewardMenu = null;
+    public GameObject rewardMenu = null;
 
     public GameResources selectedReward = null;
 

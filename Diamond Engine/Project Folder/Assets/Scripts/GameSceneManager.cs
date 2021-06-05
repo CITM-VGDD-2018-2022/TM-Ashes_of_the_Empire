@@ -61,7 +61,7 @@ public class GameSceneManager : DiamondComponent
 
                 if (rewardMenu != null)
                 {
-                    InternalCalls.Destroy(rewardMenu);
+                    InternalCalls.Destroy(rewardMenu.rewardMenu);
                     rewardMenu = null;
                 }
             }
