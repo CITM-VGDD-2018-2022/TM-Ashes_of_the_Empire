@@ -170,6 +170,7 @@ public class MofGuideonRework : Entity
     public float chaseSpeed = 3.0f;
 
     //Melee combo
+    private const float LAST_FRAME_CONST = 0.05f;
     public float comboChargeDuration = 0.5f;
     private float comboChargeTimer = 0.0f;
     private float chargeComboSpdMult = 1f;
@@ -1096,7 +1097,7 @@ public class MofGuideonRework : Entity
         {
             comboDirectionTimer -= myDeltaTime;
 
-            if (comboDirectionTimer > 0.05f)
+            if (comboDirectionTimer > LAST_FRAME_CONST)
             {
                 if (Core.instance != null)
                 {
