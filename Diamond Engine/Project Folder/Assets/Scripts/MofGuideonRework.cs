@@ -119,6 +119,7 @@ public class MofGuideonRework : Entity
     public GameObject saber = null;
     public GameObject saberMeshObj = null;
     private MeshRenderer saberMesh = null;
+    private Material saberMaterial = null;
 
     public GameObject gun = null;
     public GameObject gunMeshObj = null;
@@ -415,6 +416,7 @@ public class MofGuideonRework : Entity
         if (saberMeshObj != null)
         {
             saberMesh = saberMeshObj.GetComponent<MeshRenderer>();
+            saberMaterial = saberMeshObj.GetComponent<Material>();
         }
 
         DeActivateSaber();
@@ -1114,6 +1116,9 @@ public class MofGuideonRework : Entity
         {
             ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
+
+            if (saberMaterial != null)
+                saberMaterial.SetFloatUniform("shineColorValue", 0);
         }
         if (gun != null)
         {
@@ -1126,6 +1131,14 @@ public class MofGuideonRework : Entity
     private void UpdateMeleeCombo1Charge()
     {
         Debug.Log("Update melee combo 1 charge");
+
+        if (saberMaterial != null)
+        {
+            float shineValue = comboChargeTimer / (comboChargeDuration * 0.5f);
+            Mathf.Clamp01(shineValue);
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue * 0.5f);
+        }
 
         if (comboDirectionTimer > 0.0f)
         {
@@ -1170,6 +1183,13 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
         {
+            Animator.Resume(saber);
+            Animator.Play(saber, "MG_Swing", speedMult);
+
+            if (saberMaterial != null)
+            {
+                saberMaterial.SetFloatUniform("shineColorValue", 0);
+            }
             DeActivateSaber();
         }
         if (gun != null)
