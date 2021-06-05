@@ -27,7 +27,7 @@ public class GameResources
 #region RESOURCES
 public class BeskarResource : GameResources
 {
-    public BeskarResource() : base(1068400135, 1068400135, RewardType.REWARD_BESKAR, -1.0f, "The metal of the mandalorian people, second to none in the galaxy.") { }
+    public BeskarResource() : base(1068400135, 1408880572, RewardType.REWARD_BESKAR, -1.0f, "The metal of the mandalorian people, second to none in the galaxy.") { }
 
     public override void Use()
     {
@@ -37,7 +37,7 @@ public class BeskarResource : GameResources
 
 public class MacaronResource : GameResources
 {
-    public MacaronResource() : base(694717696, 694717696, RewardType.REWARD_MACARON, -1.0f, "Just a macaron. Grogu does love them, though.") { }
+    public MacaronResource() : base(694717696, 1358726487, RewardType.REWARD_MACARON, -1.0f, "Just a macaron. Grogu does love them, though.") { }
 
     public override void Use()
     {
@@ -47,7 +47,7 @@ public class MacaronResource : GameResources
 
 public class ScrapResource : GameResources
 {
-    public ScrapResource() : base(268510122, 268510122, RewardType.REWARD_SCRAP, -1.0f, "Remains of powerful imperial technology.") { }
+    public ScrapResource() : base(268510122, 139772254, RewardType.REWARD_SCRAP, -1.0f, "Remains of powerful imperial technology.") { }
 
     public override void Use()
     {
@@ -57,7 +57,7 @@ public class ScrapResource : GameResources
 
 public class MilkResource : GameResources
 {
-    public MilkResource() : base(1314015482, 1314015482, RewardType.REWARD_MILK, -1.0f, "Sweet and tasty blue milk, a true delicacy.") { }
+    public MilkResource() : base(1314015482, 1389584724, RewardType.REWARD_MILK, -1.0f, "Sweet and tasty blue milk, a true delicacy.") { }
 
     public override void Use()
     {
