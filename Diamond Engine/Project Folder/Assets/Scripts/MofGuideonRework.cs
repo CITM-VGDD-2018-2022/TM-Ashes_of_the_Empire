@@ -170,6 +170,7 @@ public class MofGuideonRework : Entity
     public float chaseSpeed = 3.0f;
 
     //Melee combo
+    private const float LAST_FRAME_CONST = 0.05f;
     public float comboChargeDuration = 0.5f;
     private float comboChargeTimer = 0.0f;
     private float chargeComboSpdMult = 1f;
@@ -374,10 +375,14 @@ public class MofGuideonRework : Entity
             gunMesh = gunMeshObj.GetComponent<MeshRenderer>();
         }
 
+        DeActivateGun();
+
         if (saberMeshObj != null)
         {
             saberMesh = saberMeshObj.GetComponent<MeshRenderer>();
         }
+
+        DeActivateSaber();
 
         inputsList.Add(INPUT.IN_PRESENTATION);
     }
@@ -1019,14 +1024,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_RunPh1_Final", speedMult); 
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_RunPh1_Final", speedMult);
+            DeActivateSaber();
         }
 
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_RunPh1_Final", speedMult);
+            DeActivateGun();
         }
 
         UpdateAnimationSpd(speedMult);
@@ -1074,13 +1077,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Swing", speedMult * chargeComboSpdMult);
+            DeActivateGun();
         }
 
         UpdateAnimationSpd(speedMult * chargeComboSpdMult);
@@ -1094,7 +1096,7 @@ public class MofGuideonRework : Entity
         {
             comboDirectionTimer -= myDeltaTime;
 
-            if (comboDirectionTimer > 0.05f)
+            if (comboDirectionTimer > LAST_FRAME_CONST)
             {
                 if (Core.instance != null)
                 {
@@ -1133,13 +1135,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Swing", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Swing", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
     }
@@ -1194,13 +1194,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1243,13 +1241,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1304,13 +1300,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1366,13 +1360,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1415,13 +1407,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1477,13 +1467,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1537,13 +1525,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit1SpdMult);
 
@@ -1582,13 +1569,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit2SpdMult);
 
@@ -1626,13 +1612,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit3SpdMult);
 
@@ -1670,13 +1655,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit4SpdMult);
 
@@ -1714,13 +1698,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit5SpdMult);
 
@@ -1758,13 +1741,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult * meleeHit6SpdMult);
 
@@ -1840,13 +1822,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Swing", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
     }
@@ -1873,13 +1854,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1914,13 +1893,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_PowerPose", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_PowerPose", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_PowerPose", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -1966,12 +1943,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Shoot", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Shoot", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
+            ActivateGun();
             Animator.Play(gun, "MG_Shoot", speedMult);
         }
         UpdateAnimationSpd(speedMult);
@@ -2026,13 +2002,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Swing", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
     }
@@ -2076,13 +2051,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Dash", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Dash", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Dash", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -2122,13 +2095,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Idle", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Idle", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Idle", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAAA");
@@ -2164,13 +2135,11 @@ public class MofGuideonRework : Entity
             Animator.Play(gameObject, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
             if (saber != null)
             {
-                Animator.Resume(saber);
-                Animator.Play(saber, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
+                DeActivateSaber();
             }
             if (gun != null)
             {
-                Animator.Resume(gun);
-                Animator.Play(gun, "MG_EnemySpawnerPh1", speedMult * spawnAnimationSpdMult_P1);
+                DeActivateGun();
             }
         }
         else if (currentPhase == PHASE.PHASE2)
@@ -2178,13 +2147,12 @@ public class MofGuideonRework : Entity
             Animator.Play(gameObject, "MG_EnemySpawnPh2", speedMult);
             if (saber != null)
             {
-                Animator.Resume(saber);
+                ActivateSaber();
                 Animator.Play(saber, "MG_EnemySpawnPh2", speedMult);
             }
             if (gun != null)
             {
-                Animator.Resume(gun);
-                Animator.Play(gun, "MG_EnemySpawnPh2", speedMult);
+                DeActivateGun();
             }
         }
         UpdateAnimationSpd(speedMult);
@@ -2324,13 +2292,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_CapeOff", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_CapeOff", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_CapeOff", speedMult);
+            DeActivateGun();
         }
         if (cape != null)
         {
@@ -2400,13 +2366,12 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Rising", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
+            ActivateSaber();
             Animator.Play(saber, "MG_Rising", speedMult);
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Rising", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -2469,13 +2434,11 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_Death", speedMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Death", speedMult);
+            DeActivateSaber();
         }
         if (gun != null)
         {
-            Animator.Resume(gun);
-            Animator.Play(gun, "MG_Death", speedMult);
+            DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
 
@@ -2903,6 +2866,51 @@ public class MofGuideonRework : Entity
             currAnimationPlaySpd = newSpd;
         }
     }
+
+    private void ActivateGun()
+    {
+        if (gun == null || gunMesh == null)
+            return;
+
+
+        gunMesh.active = true;
+        Animator.Pause(gun);
+
+    }
+
+    private void DeActivateGun()
+    {
+        if (gun == null || gunMesh == null)
+            return;
+
+
+        gunMesh.active = false;
+
+        Animator.Resume(gun);
+    }
+
+
+    private void ActivateSaber()
+    {
+        if (saber == null || saberMesh == null)
+            return;
+
+        saberMesh.active = true;
+
+        Animator.Resume(saber);
+    }
+
+    private void DeActivateSaber()
+    {
+        if (saber == null || saberMesh == null)
+            return;
+
+        saberMesh.active = false;
+
+        Animator.Pause(saber);
+    }
+
+
     public override bool IsDying()
     {
         return currentState == STATE.DEAD;
