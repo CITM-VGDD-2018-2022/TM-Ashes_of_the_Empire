@@ -150,7 +150,7 @@ public class CadBaneSoH : GameResources
 
 public class CadBaneBoots : GameResources
 {
-    public CadBaneBoots() : base(1747641289, 1770856290, RewardType.REWARD_BOON, 1.0f, "+5% permanent hasted state while grenade is on CD.")
+    public CadBaneBoots() : base(1747641289, 1770856290, RewardType.REWARD_BOON, 1.0f, "+5% permanent hasted state while CPD is on CD.")
     {
         name = "Cad Bane’s Rocket Boots";
         price = ShopPrice.SHOP_CHEAP;
@@ -490,7 +490,7 @@ public class BountyHunter : GameResources
 }
 public class BosskSpecialAmmo : GameResources
 {
-    public BosskSpecialAmmo() : base(1238459342, 1764866745, RewardType.REWARD_BOON, 1.0f, "Grenade does double damage as long as more than one enemy is getting hit by it.")
+    public BosskSpecialAmmo() : base(1238459342, 1764866745, RewardType.REWARD_BOON, 1.0f, "CPD does double damage as long as more than one enemy is getting hit by it.")
     {
         name = "Bossk Special Ammo";
         price = ShopPrice.SHOP_EXPENSIVE;
@@ -594,7 +594,7 @@ public class AhsokaDetermination : GameResources
 
 public class BobbaStunAmmo : GameResources
 {
-    public BobbaStunAmmo() : base(535810690, 23397652, RewardType.REWARD_BOON, 1.0f, " Proc ratio and area on grenade boosted by 50%")
+    public BobbaStunAmmo() : base(535810690, 23397652, RewardType.REWARD_BOON, 1.0f, " Proc ratio and area on CPD boosted by 50%")
     {
         name = "Bobba Fett's Stun Ammo";
         price = ShopPrice.SHOP_EXPENSIVE;
