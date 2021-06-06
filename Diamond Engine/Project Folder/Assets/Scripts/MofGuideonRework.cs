@@ -2237,6 +2237,8 @@ public class MofGuideonRework : Entity
 
         Input.PlayHaptic(0.8f, 600);
 
+        PlayParticles(PARTICLES.AURA);
+
         SpawnEnemies();
     }
 
@@ -2259,6 +2261,8 @@ public class MofGuideonRework : Entity
 
         if (cameraComp != null)
             cameraComp.target = Core.instance.gameObject;
+
+        StopParticles(PARTICLES.AURA);
     }
 
     private void SpawnEnemies()
@@ -3005,6 +3009,14 @@ public class MofGuideonRework : Entity
                 }
                 else
                     Debug.Log("Aura Particles not found");
+
+                if (auraBurstParticle != null)
+                {
+                    auraBurstParticle.Stop();
+                }
+                else
+                    Debug.Log("Aura Burst Particles not found");
+
                 break;
         }
     }
