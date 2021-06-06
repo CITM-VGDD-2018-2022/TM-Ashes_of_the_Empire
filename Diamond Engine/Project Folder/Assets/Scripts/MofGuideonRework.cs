@@ -1982,7 +1982,7 @@ public class MofGuideonRework : Entity
             rotationAngle = -preBurstAngleDash;
         }
 
-        pointToGo = this.gameObject.transform.globalPosition + Vector3.RotateAroundQuaternion(Quaternion.RotateAroundAxis(Vector3.up, rotationAngle * Mathf.Deg2RRad), this.gameObject.transform.GetForward()) * preBurstDashDistance;
+        pointToGo = this.gameObject.transform.globalPosition + Vector3.RotateAroundQuaternion(Quaternion.RotateAroundAxis(Vector3.up, rotationAngle * Mathf.Deg2RRad), this.gameObject.transform.GetForward()).normalized * preBurstDashDistance;
 
         agent.CalculatePath(this.gameObject.transform.globalPosition, pointToGo);
 
