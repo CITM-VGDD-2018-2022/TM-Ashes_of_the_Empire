@@ -344,7 +344,7 @@ public class MofGuideonRework : Entity
         EnemyManager.AddEnemy(gameObject);
 
         Audio.SetState("Player_State", "Alive");
-        Audio.SetState("Game_State", "Moff_Gideon_Room");
+        Audio.SetState("Game_State", "Moff_Guideon_Room");
 
         //Boss Bar
         if (bossBar != null)
@@ -2513,6 +2513,10 @@ public class MofGuideonRework : Entity
             }
         }
 
+        PlayParticles(PARTICLES.AURA);
+
+        isInvencible = true;
+
         Input.PlayHaptic(0.7f, 1000);
     }
 
@@ -2545,6 +2549,13 @@ public class MofGuideonRework : Entity
         currentPhase = PHASE.PHASE2;
         enemySkillTimer = enemySkillTime;
         currentHealthPoints = maxHealthPoints2;
+
+        Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
+
     }
 
     #endregion
