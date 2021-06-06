@@ -178,7 +178,7 @@ public static class RoomSwitch
 
     public static void PlayLevelEnvironment()
     {
-        Audio.StopOneAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Spaceship_Interior_Ambience");
+        Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
         switch (currentLevelIndicator)
         {
             case LEVELS.ONE:
@@ -221,6 +221,7 @@ public static class RoomSwitch
     public static void OnPlayerDeath()
     {
         Counter.gameResult = Counter.GameResult.DEFEAT;
+        Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
 
         ToWinLoseScene();
     }
@@ -228,6 +229,7 @@ public static class RoomSwitch
     public static void OnPlayerWin()
     {
         Counter.gameResult = Counter.GameResult.VICTORY;
+        Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
         DebugOptionsHolder.goToNextLevel = false;
 
         ToWinLoseScene();

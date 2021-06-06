@@ -31,7 +31,8 @@ public class EndScreen : DiamondComponent
     public void Awake()
     {
         Counter.firstRun = false;
-
+        if (EnvironmentSourceLocate.instance != null)
+            Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
         if (boonDisplayObject == null)
         {
             boonDisplayObject = InternalCalls.FindObjectWithName("Boons Prefab");

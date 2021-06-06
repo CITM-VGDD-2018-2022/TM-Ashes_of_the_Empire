@@ -19,6 +19,8 @@ public class QuitConfirmation : DiamondComponent
 		{
 			GameSceneManager.instance.DeactivateBoon();
 			Time.ResumeGame();
+			if (EnvironmentSourceLocate.instance != null)
+				Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
 			Audio.SetState("Game_State", "HUB");
 			RoomSwitch.OnPlayerQuit();
 		}
@@ -27,6 +29,8 @@ public class QuitConfirmation : DiamondComponent
 			Time.ResumeGame();
 			if (Core.instance != null)
 				Core.instance.SaveBuffs();
+			if (EnvironmentSourceLocate.instance != null)
+				Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
 			SceneManager.LoadScene(1726826608);
 		}
 
