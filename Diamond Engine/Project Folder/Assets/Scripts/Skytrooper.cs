@@ -41,6 +41,10 @@ public class Skytrooper : Enemy
 
     public GameObject shootPoint = null;
     public GameObject blaster = null;
+
+    public GameObject meshObj = null;
+    public GameObject blasterMeshObj = null;
+
     private float initialHeight = 0.0f;
 
     //Action times
@@ -79,16 +83,18 @@ public class Skytrooper : Enemy
     public float PushStun = 2.0f;
 
     //Shoot
-    public GameObject primaryBulletObj = null;
+    private GameObject primaryBulletObj = null;
     private SkyTrooperShot primaryBullet = null;
-    public GameObject secondaryBulletObj = null;
+    private GameObject secondaryBulletObj = null;
     private SkyTrooperShot secondaryBullet = null;
     private float shootAnimTimer = 0.0f;
 
     //Hit particles
+    public GameObject explosionParticlesObj = null;
     public GameObject hitParticlesObj = null;
     public GameObject sniperHitParticleObj = null;
     public GameObject grenadeHitParticleObj = null;
+    private ParticleSystem explosionParticles = null;
     private ParticleSystem hitParticles = null;
     private ParticleSystem sniperHitParticle = null;
     private ParticleSystem grenadeHitParticle = null;
@@ -111,6 +117,10 @@ public class Skytrooper : Enemy
         dashTime = Animator.GetAnimationDuration(gameObject, "SK_Dash");
 
         initialHeight = gameObject.transform.globalPosition.y;
+
+        if (explosionParticlesObj != null)
+            explosionParticles = explosionParticlesObj.GetComponent<ParticleSystem>();
+
         if (hitParticlesObj != null)
             hitParticles = hitParticlesObj.GetComponent<ParticleSystem>();
 
@@ -126,19 +136,23 @@ public class Skytrooper : Enemy
 
         //Bullets creation
         primaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
-        if(primaryBulletObj != null) {
+        if (primaryBulletObj != null)
+        {
             primaryBullet = primaryBulletObj.GetComponent<SkyTrooperShot>();
 
-            if(primaryBullet != null) {
+            if (primaryBullet != null)
+            {
                 primaryBullet.skytrooper = this;
             }
         }
 
         secondaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
-        if(secondaryBulletObj != null) {
+        if (secondaryBulletObj != null)
+        {
             secondaryBullet = secondaryBulletObj.GetComponent<SkyTrooperShot>();
 
-            if (secondaryBullet != null) {
+            if (secondaryBullet != null)
+            {
                 secondaryBullet.skytrooper = this;
             }
         }
@@ -531,20 +545,19 @@ public class Skytrooper : Enemy
 
     private void Shoot()
     {
-        //SkyTrooperShot bullet = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, new Vector3(2.5f, 2.5f, 2.5f));
-        
         //Check which bullet is available
         SkyTrooperShot bullet = null;
-        if(primaryBullet != null && !primaryBullet.IsActive())
+        if (primaryBullet != null && !primaryBullet.IsActive())
         {
             bullet = primaryBullet;
         }
-        else if( secondaryBullet != null && !secondaryBullet.IsActive())
+        else if (secondaryBullet != null && !secondaryBullet.IsActive())
         {
             bullet = secondaryBullet;
         }
 
-        if(bullet == null)  {
+        if (bullet == null)
+        {
             return;
         }
 
@@ -559,7 +572,8 @@ public class Skytrooper : Enemy
 
         Vector3 projectileEndPosition = new Vector3(randomPosition.x, Core.instance.gameObject.transform.globalPosition.y, randomPosition.y);
 
-        if (Core.instance.GetSate() == Core.STATE.DASH) {
+        if (Core.instance.GetSate() == Core.STATE.DASH)
+        {
             projectileEndPosition += Core.instance.gameObject.transform.GetForward().normalized * Core.instance.dashDistance;
         }
 
@@ -591,10 +605,8 @@ public class Skytrooper : Enemy
     {
         //Debug.Log("SKYTROOPER DIE");
         dieTimer = dieTime;
-        //Audio.StopAudio(gameObject);
 
-        //Animator.Play(gameObject, "ST_Die", 1.0f);
-
+        Explode();
         Audio.PlayAudio(gameObject, "Play_Skytrooper_Death");
         if (Core.instance != null)
             Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Kill_Voice");
@@ -633,14 +645,31 @@ public class Skytrooper : Enemy
         Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
 
         //Explosion
-        Explode();
         InternalCalls.Destroy(gameObject);
     }
 
     private void Explode()
     {
-        Vector3 forward = gameObject.transform.GetForward();
-        InternalCalls.CreatePrefab("Library/Prefabs/828188331.prefab", new Vector3(gameObject.transform.globalPosition.x + forward.x, gameObject.transform.globalPosition.y, gameObject.transform.globalPosition.z + forward.z), Quaternion.identity, new Vector3(1, 1, 1));
+        if (meshObj != null)
+        {
+            MeshRenderer mesh = meshObj.GetComponent<MeshRenderer>();
+            if (mesh != null)
+            {
+                mesh.active = false;
+            }
+        }
+
+        if (blasterMeshObj != null)
+        {
+            MeshRenderer blasterMesh = blasterMeshObj.GetComponent<MeshRenderer>();
+            if (blasterMesh != null)
+            {
+                blasterMesh.active = false;
+            }
+        }
+
+        if (explosionParticles != null)
+            explosionParticles.Play();
 
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) <= explosionDistance)
         {
@@ -975,5 +1004,18 @@ public class Skytrooper : Enemy
     {
         if (grenadeHitParticle != null)
             grenadeHitParticle.Play();
+    }
+
+    public void OnDestroy()
+    {
+        if(primaryBulletObj != null)
+        {
+            InternalCalls.Destroy(primaryBulletObj);
+        }
+
+        if (secondaryBulletObj != null)
+        {
+            InternalCalls.Destroy(secondaryBulletObj);
+        }
     }
 }
