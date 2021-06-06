@@ -272,6 +272,7 @@ public class MofGuideonRework : Entity
     //Pre burst dash
     public float preBurstDashSpeed = 10.0f;
     public float preBurstDashDistance = 7.0f;
+    public float preBurstAngleDash = 45f;
 
     private float preBurstDashTimer = 0.0f;
 
@@ -1968,7 +1969,22 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        agent.CalculateRandomPath(gameObject.transform.globalPosition, preBurstDashDistance);
+        float random = (float)decisionGenerator.NextDouble();
+        Vector3 pointToGo = Vector3.zero;
+        float rotationAngle = 0f;
+
+        if (random <= 0.5f)
+        {
+            rotationAngle = preBurstAngleDash;
+        }
+        else
+        {
+            rotationAngle = -preBurstAngleDash;
+        }
+
+        pointToGo = this.gameObject.transform.globalPosition + Vector3.RotateAroundQuaternion(Quaternion.RotateAroundAxis(Vector3.up, rotationAngle * Mathf.Deg2RRad), this.gameObject.transform.GetForward()) * preBurstDashDistance;
+
+        agent.CalculatePath(this.gameObject.transform.globalPosition, pointToGo);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -2715,7 +2731,7 @@ public class MofGuideonRework : Entity
     {
         if (collidedGameObject.CompareTag("Bullet"))
         {
-            if(isInvencible == true)
+            if (isInvencible == true)
             {
                 Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Phase_Change_Hit");
                 return;
