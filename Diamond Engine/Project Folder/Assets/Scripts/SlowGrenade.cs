@@ -197,11 +197,11 @@ public class SlowGrenade : DiamondComponent
                             break;
                         case ENTITY_TYPE.MOFF:
                             {
-                                MoffGideon bossScript = myEntComp.gameObject.GetComponent<MoffGideon>();
+                                MofGuideonRework bossScript = myEntComp.gameObject.GetComponent<MofGuideonRework>();
 
                                 if (bossScript != null)
                                 {
-                                    if (bossScript.healthPoints <= 0)
+                                    if (bossScript.currentHealthPoints <= 0)
                                     {
                                         enemies.Remove(enemies[i]);
                                         i--;
