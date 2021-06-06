@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -11.310208320617676,
+                11.451717376708984,
                 0.090705655515193939,
-                -1.2296885251998901
+                11.406804084777832
             ],
             "Rotation": [
                 -1.4705429987149289e-17,
@@ -71,8 +71,6 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "SlowGrenade",
-                    "grenadeActiveObj": 0,
-                    "granadeAreaObj": 0,
                     "lifeTime": 2,
                     "explosionTime": 5,
                     "areaRadius": 4,
@@ -211,20 +209,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
+                1.52587890625e-05,
                 0,
-                0,
-                0
+                1.52587890625e-05
             ],
             "Rotation": [
-                0,
-                0.040126044303178787,
-                0,
+                3.2925381532322717e-08,
+                0.04012611135840416,
+                -7.0309774002907943e-08,
                 0.99919462203979492
             ],
             "Scale": [
-                19.999998092651367,
+                19.999996185302734,
                 20,
-                20
+                19.999996185302734
             ],
             "PrefabObjects": [
                 {
@@ -232,7 +230,7 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 1967232169,
+                    "UID": 666542308,
                     "ParentUID": 2033734359,
                     "PrefabID": 0,
                     "PrefabReference": 700134448,
@@ -260,8 +258,8 @@
                     "tag": "Untagged",
                     "layer": "Default",
                     "Active": true,
-                    "UID": 606283230,
-                    "ParentUID": 1967232169,
+                    "UID": 367897245,
+                    "ParentUID": 666542308,
                     "PrefabID": 0,
                     "PrefabReference": 476584602,
                     "DontDestroy": false,
@@ -278,9 +276,9 @@
                         1
                     ],
                     "Scale": [
-                        1.1499999761581421,
-                        1.1499999761581421,
-                        1.1499999761581421
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
