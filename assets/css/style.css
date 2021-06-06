@@ -107,15 +107,38 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   padding: 8px 25px;
   white-space: nowrap;
-  transition: 0.3s;
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-block;
+}
+
+.get-started-btn i {
+  font-size: 16px;
+  padding-left: 5px;
 }
 
 .get-started-btn:hover {
-  background: #111111;
-  color: #fff;
+  color: #111111;
+  background: #fff;
+  border: 2px solid #e03a3c;
+}
+/*.get-started-btn {
+  padding: 8px 30px 9px 30px;
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #e03a3c;
+}
+
+.get-started-btn i {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.get-started-btn:hover {
+  background: #e03a3c;
 }
 
 @media (max-width: 992px) {
@@ -123,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 15px 0 0;
     padding: 6px 18px;
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -167,7 +190,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
-  color: #e03a3c;
+  margin-left: 30px;
+  background: rgb(122, 98, 81);
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .navbar .dropdown ul {
