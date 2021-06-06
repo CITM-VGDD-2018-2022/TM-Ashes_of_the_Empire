@@ -254,4 +254,12 @@ public class SkyTrooperShot : DiamondComponent
 		
 		return false;
 	}
+
+	public void OnDestroy()
+	{
+		if(visualFeedback != null)
+        {
+			InternalCalls.Destroy(visualFeedback);
+        }
+	}
 }
