@@ -197,11 +197,11 @@ public class SlowGrenade : DiamondComponent
                             break;
                         case ENTITY_TYPE.MOFF:
                             {
-                                MoffGideon bossScript = myEntComp.gameObject.GetComponent<MoffGideon>();
+                                MofGuideonRework bossScript = myEntComp.gameObject.GetComponent<MofGuideonRework>();
 
                                 if (bossScript != null)
                                 {
-                                    if (bossScript.healthPoints <= 0)
+                                    if (bossScript.currentHealthPoints <= 0)
                                     {
                                         enemies.Remove(enemies[i]);
                                         i--;
@@ -342,6 +342,14 @@ public class SlowGrenade : DiamondComponent
             }
             if (script == null)
             {
+                script = enemy.GetComponent<HeavyTrooper>();
+            }
+            if (script == null)
+            {
+                script = enemy.GetComponent<Deathtrooper>();
+            }
+            if (script == null)
+            {
                 script = enemy.GetComponent<Rancor>();
             }
             if (script == null)
@@ -351,6 +359,10 @@ public class SlowGrenade : DiamondComponent
             if (script == null)
             {
                 script = enemy.GetComponent<Wampa>();
+            }
+            if (script == null)
+            {
+                script = enemy.GetComponent<MofGuideonRework>();
             }
             if (script == null)
             {
