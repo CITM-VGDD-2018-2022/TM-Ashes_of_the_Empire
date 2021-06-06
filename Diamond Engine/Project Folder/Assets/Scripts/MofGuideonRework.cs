@@ -1118,7 +1118,10 @@ public class MofGuideonRework : Entity
             Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
 
             if (saberMaterial != null)
+            {
                 saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.9f, 1.0f, 0.0f));
+            }
         }
         if (gun != null)
         {
@@ -1134,10 +1137,9 @@ public class MofGuideonRework : Entity
 
         if (saberMaterial != null)
         {
-            float shineValue = comboChargeTimer / (comboChargeDuration * 0.5f);
-            Mathf.Clamp01(shineValue);
+            float shineValue = comboChargeTimer / comboChargeDuration;
 
-            saberMaterial.SetFloatUniform("shineColorValue", shineValue * 0.5f);
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
 
         if (comboDirectionTimer > 0.0f)
@@ -1170,8 +1172,12 @@ public class MofGuideonRework : Entity
 
     private void EndMeleeCombo1Charge()
     {
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
+
         Debug.Log("End melee combo 1 charge");
     }
+
 
     private void StartMeleeCombo4Charge()
     {
@@ -1189,6 +1195,7 @@ public class MofGuideonRework : Entity
             if (saberMaterial != null)
             {
                 saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.9f, 1.0f, 0.0f));
             }
             DeActivateSaber();
         }
@@ -1202,6 +1209,13 @@ public class MofGuideonRework : Entity
     private void UpdateMeleeCombo4Charge()
     {
         Debug.Log("Update melee combo 4 charge");
+
+        if (saberMaterial != null)
+        {
+            float shineValue = comboChargeTimer / comboChargeDuration;
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
 
         if (comboDirectionTimer > 0.0f)
         {
@@ -1231,6 +1245,9 @@ public class MofGuideonRework : Entity
 
     private void EndMeleeCombo4Charge()
     {
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
+
         Debug.Log("End melee combo 4 charge");
     }
 
@@ -1895,6 +1912,12 @@ public class MofGuideonRework : Entity
         {
             ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult);
+
+            if (saberMaterial != null)
+            {
+                saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.5f, 0.0f, 1.0f));
+            }
         }
         if (gun != null)
         {
@@ -1905,12 +1928,20 @@ public class MofGuideonRework : Entity
 
     private void UpdateBurstCharge()
     {
+        if (saberMaterial != null)
+        {
+            float shineValue = preBurstChargeTimer / comboChargeDuration;
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
+
         UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurstCharge()
     {
-        Debug.Log("End burst charge");
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
     }
 
 
