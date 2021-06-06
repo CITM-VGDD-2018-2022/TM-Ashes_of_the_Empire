@@ -78,7 +78,7 @@
                 {
                     "Type": 20,
                     "Active": true,
-                    "systemActive": true,
+                    "systemActive": false,
                     "looping": true,
                     "maxDuration": 10,
                     "ParticleEmitters": [
