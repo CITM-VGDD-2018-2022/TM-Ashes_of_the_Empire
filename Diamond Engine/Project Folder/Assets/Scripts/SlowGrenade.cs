@@ -342,6 +342,14 @@ public class SlowGrenade : DiamondComponent
             }
             if (script == null)
             {
+                script = enemy.GetComponent<HeavyTrooper>();
+            }
+            if (script == null)
+            {
+                script = enemy.GetComponent<Deathtrooper>();
+            }
+            if (script == null)
+            {
                 script = enemy.GetComponent<Rancor>();
             }
             if (script == null)
