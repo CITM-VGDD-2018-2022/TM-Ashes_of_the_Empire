@@ -37,6 +37,8 @@ public class SpawnPoint : DiamondComponent
     public GameObject spawnParticleObj = null;
     private ParticleSystem spawnParticle = null;
 
+    private bool spawnStart = false;
+
     public void Awake()
     {
         if (SpawnManager.instance != null)
@@ -57,6 +59,24 @@ public class SpawnPoint : DiamondComponent
 
     public void Update()
     {
+        if(spawnStart == false)
+        {
+            spawnStart = true;
+            return;
+        }
+
+        for (int i = 0; i < spawningEnemies.Count; i++)
+        {
+            spawningEnemies[i] -= Time.deltaTime;
+
+            if (spawningEnemies[i] <= 0f)
+            {
+                InstanciateEnemy();
+                spawningEnemies.RemoveAt(i);
+                --i;
+            }
+        }
+
         for (int i = 0; i < enemiesToSpawn.Count; i++)
         {
             enemiesToSpawn[i] -= Time.deltaTime;
@@ -76,17 +96,6 @@ public class SpawnPoint : DiamondComponent
         }
 
 
-        for (int i = 0; i < spawningEnemies.Count; i++)
-        {
-            spawningEnemies[i] -= Time.deltaTime;
-
-            if (spawningEnemies[i] <= 0f)
-            {
-                InstanciateEnemy();
-                spawningEnemies.RemoveAt(i);
-                --i;
-            }
-        }
 
     }
 

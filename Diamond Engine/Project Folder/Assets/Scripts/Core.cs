@@ -434,6 +434,8 @@ public class Core : Entity
             old_hp = PlayerHealth.currMaxHealth;
             //Start();
             scriptStart = false;
+
+            return;
         }
 
         #region UPDATE STUFF
@@ -461,6 +463,7 @@ public class Core : Entity
         if (old_hp < PlayerHealth.currHealth)
             PlayParticles(PARTICLES.HEAL);
         old_hp = PlayerHealth.currHealth;
+
     }
 
 
