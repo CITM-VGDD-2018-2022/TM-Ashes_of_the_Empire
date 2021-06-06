@@ -49,6 +49,8 @@ public class HubRoomSwitch : DiamondComponent
             Debug.Log("Exploring");
         }
 
+        if (EnvironmentSourceLocate.instance != null)
+            Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
         //RoomSwitch.PlayLevelEnvironment();
     }
 }
