@@ -208,17 +208,6 @@ public class HeavyTrooper : Enemy
                     inputsList.Add(INPUT.IN_RUN);
             }
         }
-
-        /*if (skill_slowDownActive)
-        {
-            skill_slowDownTimer += myDeltaTime;
-
-            if (skill_slowDownTimer >= Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownDuration) //Get duration from Primary Weapon Skill 4
-            {
-                skill_slowDownTimer = 0.0f;
-                skill_slowDownActive = false;
-            }
-        }*/
     }
 
     //All events from outside the heavytrooper
@@ -807,7 +796,10 @@ public class HeavyTrooper : Enemy
         //Combo
         if (PlayerResources.CheckBoon(BOONS.BOON_MASTER_YODA_FORCE))
         {
-            Core.instance.hud.GetComponent<HUD>().AddToCombo(300, 1.0f);
+            HUD hud = Core.instance.hud.GetComponent<HUD>();
+            
+            if(hud != null)
+                hud.AddToCombo(300, 1.0f);
         }
     }
     private void UpdateDie()
@@ -830,7 +822,10 @@ public class HeavyTrooper : Enemy
 
         DropCoins();
 
-        Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+        PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
+        
+        if(playerHealth != null)
+            playerHealth.TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
 
         InternalCalls.Destroy(gameObject);
     }
