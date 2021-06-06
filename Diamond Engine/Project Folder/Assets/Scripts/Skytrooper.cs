@@ -74,14 +74,18 @@ public class Skytrooper : Enemy
     public int maxShots = 2;
     public float explosionDistance = 2.0f;
 
-    //push
-    public float forcePushMod = 1f;
-    public float PushStun = 2;
+    //Push
+    public float forcePushMod = 1.0f;
+    public float PushStun = 2.0f;
 
     //Shoot
-    private float shootAnimTimer = 0f;
+    public GameObject primaryBulletObj = null;
+    private SkyTrooperShot primaryBullet = null;
+    public GameObject secondaryBulletObj = null;
+    private SkyTrooperShot secondaryBullet = null;
+    private float shootAnimTimer = 0.0f;
 
-    //hit particles
+    //Hit particles
     public GameObject hitParticlesObj = null;
     public GameObject sniperHitParticleObj = null;
     public GameObject grenadeHitParticleObj = null;
@@ -91,6 +95,7 @@ public class Skytrooper : Enemy
 
     public void Awake()
     {
+        Debug.Log("Skytrooper Awake");
         InitEntity(ENTITY_TYPE.SKYTROOPER);
         EnemyManager.AddEnemy(gameObject);
 
@@ -118,6 +123,25 @@ public class Skytrooper : Enemy
         //Debug.Log("Hit particles gameobject not found!");
 
         shootAnimationTime = Animator.GetAnimationDuration(gameObject, "SK_Shoot");
+
+        //Bullets creation
+        primaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
+        if(primaryBulletObj != null) {
+            primaryBullet = primaryBulletObj.GetComponent<SkyTrooperShot>();
+
+            if(primaryBullet != null) {
+                primaryBullet.skytrooper = this;
+            }
+        }
+
+        secondaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
+        if(secondaryBulletObj != null) {
+            secondaryBullet = secondaryBulletObj.GetComponent<SkyTrooperShot>();
+
+            if (secondaryBullet != null) {
+                secondaryBullet.skytrooper = this;
+            }
+        }
     }
 
     public void Update()
@@ -507,19 +531,39 @@ public class Skytrooper : Enemy
 
     private void Shoot()
     {
-        GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, new Vector3(2.5f, 2.5f, 2.5f));
+        //SkyTrooperShot bullet = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, new Vector3(2.5f, 2.5f, 2.5f));
+        
+        //Check which bullet is available
+        SkyTrooperShot bullet = null;
+        if(primaryBullet != null && !primaryBullet.IsActive())
+        {
+            bullet = primaryBullet;
+        }
+        else if( secondaryBullet != null && !secondaryBullet.IsActive())
+        {
+            bullet = secondaryBullet;
+        }
 
+        if(bullet == null)  {
+            return;
+        }
+
+        bullet.Activate();
+
+        bullet.gameObject.transform.localPosition = shootPoint.transform.globalPosition;
+        bullet.gameObject.transform.localRotation = shootPoint.transform.globalRotation;
+
+        //Calculate end position
         Vector2 player2DPosition = new Vector2(Core.instance.gameObject.transform.globalPosition.x, Core.instance.gameObject.transform.globalPosition.z);
         Vector2 randomPosition = Mathf.RandomPointAround(player2DPosition, 1);
 
         Vector3 projectileEndPosition = new Vector3(randomPosition.x, Core.instance.gameObject.transform.globalPosition.y, randomPosition.y);
 
-        if (Core.instance.GetSate() == Core.STATE.DASH)
-        {
+        if (Core.instance.GetSate() == Core.STATE.DASH) {
             projectileEndPosition += Core.instance.gameObject.transform.GetForward().normalized * Core.instance.dashDistance;
         }
 
-        bullet.GetComponent<SkyTrooperShot>().SetTarget(projectileEndPosition, false);
+        bullet.SetTarget(projectileEndPosition, false);
 
         Animator.Play(gameObject, "SK_Shoot", speedMult);
         Animator.Play(blaster, "SK_Shoot", speedMult);
@@ -534,7 +578,6 @@ public class Skytrooper : Enemy
         {
             shootTimer = timeBewteenShootingStates;
         }
-
     }
     private void PlayerDetected()
     {

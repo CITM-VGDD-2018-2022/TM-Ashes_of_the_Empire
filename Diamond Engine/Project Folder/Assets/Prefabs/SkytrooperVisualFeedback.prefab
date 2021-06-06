@@ -6,61 +6,21 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 706016062,
+            "UID": 1678725288,
             "ParentUID": 0,
-            "PrefabReference": 0,
-            "PrefabID": 203996773,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                4.2041473388671875,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "SkytrooperHitCollider",
-                    "destroyTime": 5
-                }
-            ]
-        },
-        {
-            "name": "TargetObject",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1938539966,
-            "ParentUID": 706016062,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                0
+                2.0376548767089844,
+                -0.60799038410186768,
+                -4.4000306129455566
             ],
             "Rotation": [
-                0,
-                0,
-                0,
+                1.8503942952538543e-16,
+                -1.2417634698280722e-09,
+                8.7603535536828758e-16,
                 1
             ],
             "Scale": [
