@@ -16,7 +16,7 @@ public class RancorProjectile : DiamondComponent
 		if (targetDirection == Vector3.zero)
 			targetDirection = targetPos - gameObject.transform.globalPosition;
 		
-		gameObject.transform.localPosition += targetDirection.normalized * speed * Time.deltaTime;
+		gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
 
 		lifeTime -= Time.deltaTime;
 
