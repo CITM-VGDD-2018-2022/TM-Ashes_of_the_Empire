@@ -362,6 +362,10 @@ public class SlowGrenade : DiamondComponent
             }
             if (script == null)
             {
+                script = enemy.GetComponent<MofGuideonRework>();
+            }
+            if (script == null)
+            {
                 script = enemy.GetComponent<MoffGideon>();
             }
 
