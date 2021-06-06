@@ -178,6 +178,26 @@ public class List_Of_Dialogs : DiamondComponent
         DialogImages.IMG_AHSOKA_SERIOUS,
     };
 
+    private List<string> Initial_Cutscene_Dialogue = new List<string>()
+    {
+        "I'm not sure why they want to meet up in that dunghill, It's not even close to Mandalore. I don't know about this kid, curse the time when I agreed to that plan.",
+        "(The kid looks at Mando with his deep dark eyes, you can't be sure if he did underestand something of what he just said).",
+    };
+
+    private List<bool> Initial_Cutscene_Dialogue_bool = new List<bool>()
+    {
+		// Mando true, other false
+		true,
+        false,
+    };
+
+    private List<DialogImages> Initial_Cutscene_Dialogue_images = new List<DialogImages>()
+    {
+		// Mando true, other false
+		DialogImages.IMG_MANDO_ASHAMED,
+        DialogImages.IMG_GROGU_CURIOUS,
+    };
+
     private List<string> Post_Initial_Cutscene_Dialogue = new List<string>()
     {
         "Mando, my friend! Come, I've grabbed you something to drink! It's been too long!",
@@ -3705,6 +3725,9 @@ public class List_Of_Dialogs : DiamondComponent
                 return Bo_Katan_PreBoss_Dialogue;
             case 92:
                 return Grogu_PreBoss_Dialogue;
+            case 93:
+                return Initial_Cutscene_Dialogue;
+               
         }
         return Initial_Cutscene;
 
@@ -3900,6 +3923,8 @@ public class List_Of_Dialogs : DiamondComponent
                 return Bo_Katan_PreBoss_Dialogue_bool;
             case 92:
                 return Grogu_PreBoss_Dialogue_bool;
+            case 93:
+                return Initial_Cutscene_Dialogue_bool;
         }
         return Initial_Cutscene_bool;
     }
@@ -4094,6 +4119,8 @@ public class List_Of_Dialogs : DiamondComponent
                 return Bo_Katan_PreBoss_Dialogue_images;
             case 92:
                 return Grogu_PreBoss_Dialogue_images;
+            case 93:
+                return Initial_Cutscene_Dialogue_images;
         }
         return Initial_Cutscene_images;
     }
