@@ -1,19 +1,19 @@
 {
     "NavMesh": 1440000066,
     "EditorCameraPosition": [
-        20.808374404907227,
-        84.849365234375,
-        -177.81109619140625
+        -28.204723358154297,
+        24.919981002807617,
+        -24.18522834777832
     ],
     "EditorCameraZ": [
-        -0.19905045628547668,
-        -0.4408244788646698,
-        0.87524449825286865
+        0.50564712285995483,
+        -0.65813493728637695,
+        0.55783462524414063
     ],
     "EditorCameraY": [
-        -0.097753256559371948,
-        0.89759331941604614,
-        0.42984941601753235
+        0.44198507070541382,
+        0.75290000438690186,
+        0.48763799667358398
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -28724,8 +28724,8 @@
             "Static": false,
             "Position": [
                 -2.7537763118743896,
-                -5.3854007720947266,
-                20.423851013183594
+                -5.1800003051757813,
+                20.444091796875
             ],
             "Rotation": [
                 0,
@@ -28767,7 +28767,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28813,7 +28813,7 @@
             "Static": false,
             "Position": [
                 18.88658332824707,
-                -5.3854007720947266,
+                -5.179999828338623,
                 19.166877746582031
             ],
             "Rotation": [
@@ -28856,7 +28856,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28902,7 +28902,7 @@
             "Static": false,
             "Position": [
                 25.917383193969727,
-                -5.3854007720947266,
+                -5.179999828338623,
                 17.115325927734375
             ],
             "Rotation": [
@@ -28945,7 +28945,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28991,7 +28991,7 @@
             "Static": false,
             "Position": [
                 28.000579833984375,
-                -5.3854007720947266,
+                -5.179999828338623,
                 -0.45676225423812866
             ],
             "Rotation": [
@@ -29034,7 +29034,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29080,7 +29080,7 @@
             "Static": false,
             "Position": [
                 24.066947937011719,
-                -5.3853969573974609,
+                -5.179999828338623,
                 -20.596511840820313
             ],
             "Rotation": [
@@ -29123,7 +29123,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29169,7 +29169,7 @@
             "Static": false,
             "Position": [
                 7.6073555946350098,
-                -5.3854026794433594,
+                -5.179999828338623,
                 -11.270351409912109
             ],
             "Rotation": [
@@ -29190,7 +29190,7 @@
                 },
                 {
                     "Type": 2,
-                    "Active": true,
+                    "Active": false,
                     "Path": "Library\/Meshes\/408885876.mmh",
                     "UID": 408885876,
                     "bumpDepth": 0,
@@ -29212,7 +29212,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29258,7 +29258,7 @@
             "Static": false,
             "Position": [
                 5.760685920715332,
-                -4.4916486740112305,
+                -5.179999828338623,
                 -10.255757331848145
             ],
             "Rotation": [
@@ -29270,7 +29270,7 @@
             "Scale": [
                 2.5994968414306641,
                 10,
-                2.6311988830566406
+                1.6000000238418579
             ],
             "Components": [
                 {
@@ -29347,7 +29347,7 @@
             "Static": false,
             "Position": [
                 0.65161281824111938,
-                -5.3853998184204102,
+                -5.179999828338623,
                 16.768606185913086
             ],
             "Rotation": [
@@ -29390,7 +29390,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29436,7 +29436,7 @@
             "Static": false,
             "Position": [
                 11.149111747741699,
-                -5.3853950500488281,
+                -5.179999828338623,
                 14.277399063110352
             ],
             "Rotation": [
@@ -29479,7 +29479,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29525,7 +29525,7 @@
             "Static": false,
             "Position": [
                 7.1017861366271973,
-                -5.3853902816772461,
+                -5.179999828338623,
                 -10.321699142456055
             ],
             "Rotation": [
@@ -29568,7 +29568,7 @@
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29648,7 +29648,7 @@
             "Static": false,
             "Position": [
                 -19.808080673217773,
-                -5.3853988647460938,
+                -5.179999828338623,
                 -19.135244369506836
             ],
             "Rotation": [
@@ -29737,7 +29737,7 @@
             "Static": false,
             "Position": [
                 -26.62213134765625,
-                -5.3854007720947266,
+                -5.179999828338623,
                 2.5516819953918457
             ],
             "Rotation": [
@@ -29826,7 +29826,7 @@
             "Static": false,
             "Position": [
                 -18.56104850769043,
-                -5.3854007720947266,
+                -5.179999828338623,
                 -5.3276114463806152
             ],
             "Rotation": [
@@ -29915,7 +29915,7 @@
             "Static": false,
             "Position": [
                 -15.439141273498535,
-                -5.3854007720947266,
+                -5.179999828338623,
                 18.297290802001953
             ],
             "Rotation": [
@@ -30004,7 +30004,7 @@
             "Static": false,
             "Position": [
                 -20.350929260253906,
-                -5.385406494140625,
+                -5.179999828338623,
                 -15.549962043762207
             ],
             "Rotation": [
@@ -30093,7 +30093,7 @@
             "Static": false,
             "Position": [
                 -18.598150253295898,
-                -5.3854084014892578,
+                -5.179999828338623,
                 17.875095367431641
             ],
             "Rotation": [
@@ -30182,7 +30182,7 @@
             "Static": false,
             "Position": [
                 -20.222114562988281,
-                -5.3854122161865234,
+                -5.179999828338623,
                 15.915711402893066
             ],
             "Rotation": [
@@ -31211,6 +31211,230 @@
                         1,
                         0.9999997615814209
                     ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1844302196,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -31352,6 +31576,230 @@
                         0.9999997615814209,
                         1,
                         0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1546696838,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
@@ -31495,6 +31943,230 @@
                         1,
                         0.9999997615814209
                     ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1885364246,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -31636,6 +32308,230 @@
                         0.9999997615814209,
                         1,
                         0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1478218558,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
@@ -31779,6 +32675,230 @@
                         1,
                         0.9999997615814209
                     ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1733029766,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -31921,6 +33041,230 @@
                         1,
                         0.9999997615814209
                     ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 1241208966,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -32062,6 +33406,230 @@
                         0.9999997615814209,
                         1,
                         0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1109106781,
+                    "ParentUID": 695686748,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 53704822,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 214383035,
+                    "ParentUID": 53704822,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 549933085,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1552852069,
+                    "ParentUID": 549933085,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 344654928,
+                    "ParentUID": 214383035,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1385954357,
+                    "ParentUID": 344654928,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 793061693,
+                    "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
@@ -34445,6 +36013,120 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Fasted Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1973663272,
+                    "ParentUID": 59638478,
+                    "PrefabReference": 1973663272,
+                    "PrefabID": 2073226706,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.10300000011920929,
+                        1.0989999771118164,
+                        0.041000001132488251
+                    ],
+                    "Rotation": [
+                        5.1013579138725618e-08,
+                        -0.98289668560028076,
+                        5.1013579138725618e-08,
+                        -0.18415790796279907
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ],
+                    "PrefabObjects": [
+                        {
+                            "name": "Dust fasted",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1669506617,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1669506617,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -0.030359268188476563,
+                                -0.098569869995117188,
+                                -0.00864410400390625
+                            ],
+                            "Rotation": [
+                                -0.7107464075088501,
+                                8.4629483865228394e-08,
+                                -8.3760532731957937e-08,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999880790710449,
+                                0.99999880790710449
+                            ]
+                        },
+                        {
+                            "name": "Slowed Trail",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1283429392,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1283429392,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -14.062906265258789,
+                                2.5918512344360352,
+                                10.017618179321289
+                            ],
+                            "Rotation": [
+                                -6.5570951335303107e-08,
+                                -0.84956026077270508,
+                                -1.4235808976081898e-07,
+                                -0.52749162912368774
+                            ],
+                            "Scale": [
+                                1.0000001192092896,
+                                1,
+                                1.0000001192092896
+                            ]
+                        },
+                        {
+                            "name": "Dust Slowed",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 638363503,
+                            "ParentUID": 1283429392,
+                            "PrefabID": 0,
+                            "PrefabReference": 638363503,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                -0.0081720352172851563
+                            ],
+                            "Rotation": [
+                                -0.71074634790420532,
+                                0,
+                                0,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999886751174927,
+                                0.99999892711639404
+                            ]
+                        }
                     ]
                 }
             ]
