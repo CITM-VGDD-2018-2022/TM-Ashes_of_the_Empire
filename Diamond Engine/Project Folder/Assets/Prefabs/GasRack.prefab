@@ -13,12 +13,12 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                10.689765930175781,
-                1.8695820926950546e-06,
-                18.265098571777344
+                8.0661048889160156,
+                -4.3000001907348633,
+                -25.262552261352539
             ],
             "Rotation": [
-                -4.4183406933129277e-15,
+                -3.8198610941009292e-15,
                 -0.00017255621787626296,
                 8.7423288164245605e-08,
                 1
@@ -78,6 +78,49 @@
                     "regressionTime": 1.5,
                     "idleParticlesObject": 439895910,
                     "eruptionParticlesObject": 1909877198
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 175167092,
+            "ParentUID": 1939403477,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                1.8489090204238892,
+                -0.072218582034111023,
+                -1.0207855701446533
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
                 }
             ]
         },
@@ -656,9 +699,9 @@
             ],
             "Rotation": [
                 0,
-                -0.85445040464401245,
+                -0.8544502854347229,
                 0,
-                0.51953315734863281
+                0.51953309774398804
             ],
             "Scale": [
                 1,
@@ -724,9 +767,9 @@
             ],
             "Rotation": [
                 0,
-                -0.85445040464401245,
+                -0.8544502854347229,
                 0,
-                0.51953315734863281
+                0.51953309774398804
             ],
             "Scale": [
                 1,

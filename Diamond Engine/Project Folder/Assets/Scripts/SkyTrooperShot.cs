@@ -37,7 +37,6 @@ public class SkyTrooperShot : DiamondComponent
 
 	public void Start()
     {
-		Debug.Log("Awake");
 		disableTimer = disableTime;
 
 		if (gravity > 0)
@@ -49,7 +48,6 @@ public class SkyTrooperShot : DiamondComponent
 		visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/203996773.prefab", new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, null);
 		if (visualFeedback != null)
 		{
-			Debug.Log("Feedback");
 			visualFeedbackRenderer = visualFeedback.GetComponent<MeshRenderer>();
 		}
 

@@ -98,11 +98,11 @@ public class SlowGrenade : DiamondComponent
 
                 if(myEntComp.gameObject != null)
                 {
+                    Debug.Log("Grenade");
                     switch (myEntComp.GetEntityType())
                     {
                         case ENTITY_TYPE.STROMTROOPER:
                             {
-                                Debug.Log("Stormtrooper");
                                 eneScript = myEntComp.gameObject.GetComponent<StormTrooper>();
                                 if (eneScript == null)
                                 {

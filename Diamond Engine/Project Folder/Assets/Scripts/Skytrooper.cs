@@ -110,7 +110,9 @@ public class Skytrooper : Enemy
 
         currentState = STATE.IDLE;
         Animator.Play(gameObject, "SK_Idle", speedMult);
-        Animator.Play(blaster, "SK_Idle", speedMult);
+        if(blaster != null)
+            Animator.Play(blaster, "SK_Idle", speedMult);
+
         UpdateAnimationSpd(speedMult);
 
         idleTimer = idleTime;
@@ -951,6 +953,7 @@ public class Skytrooper : Enemy
         if (currAnimationPlaySpd != newSpd)
         {
             Animator.SetSpeed(gameObject, newSpd);
+            Animator.SetSpeed(blaster, newSpd);
             currAnimationPlaySpd = newSpd;
         }
     }
