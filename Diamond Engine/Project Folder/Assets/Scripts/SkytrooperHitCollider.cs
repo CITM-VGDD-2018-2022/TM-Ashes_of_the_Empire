@@ -3,8 +3,6 @@ using DiamondEngine;
 
 public class SkytrooperHitCollider : DiamondComponent
 {
-	private bool colliderMoved = false;
-
 	private float destroyTimer = 0.0f;
 	public float destroyTime = 6.0f;
 
@@ -21,7 +19,9 @@ public class SkytrooperHitCollider : DiamondComponent
 			destroyTimer -= Time.deltaTime;
 
 			if (destroyTimer <= 0.0f)
-				InternalCalls.Destroy(gameObject);
+            {
+				gameObject.Enable(false);
+            }
         }
 	}
 }
