@@ -1,19 +1,19 @@
 {
     "NavMesh": 942369955,
     "EditorCameraPosition": [
-        -26.210277557373047,
-        12.299139976501465,
-        -10.981156349182129
+        8.3807373046875,
+        24.685344696044922,
+        4.8764839172363281
     ],
     "EditorCameraZ": [
-        0.38361108303070068,
-        -0.72233223915100098,
-        0.5753943920135498
+        -0.019585169851779938,
+        -0.98965162038803101,
+        0.14214801788330078
     ],
     "EditorCameraY": [
-        0.40076041221618652,
-        0.69154620170593262,
-        0.60096168518066406
+        -0.13441780209541321,
+        0.14349085092544556,
+        0.9804806113243103
     ],
     "SkyboxPath0": "Library\/Textures\/483487888.dds",
     "SkyboxPath1": "Library\/Textures\/1874848602.dds",
@@ -109,8 +109,8 @@
                     "fSize": 35,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 16.799999237060547,
-                    "hFOV": 32.685714721679688,
+                    "vFOV": 19.399999618530273,
+                    "hFOV": 35.628570556640625,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -5226,6 +5226,790 @@
             ]
         },
         {
+            "name": "ToxicWater1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 511788071,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -10.735480308532715,
+                3.085944652557373,
+                6.0898771286010742
+            ],
+            "Rotation": [
+                -0.49991366267204285,
+                0.50008630752563477,
+                0.50008630752563477,
+                0.49991366267204285
+            ],
+            "Scale": [
+                20,
+                1.9999839067459106,
+                2.4999542236328125
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 148620067,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                12.825860023498535,
+                3.4514620304107666,
+                6.2421383857727051
+            ],
+            "Rotation": [
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
+            ],
+            "Scale": [
+                20,
+                1.9999547004699707,
+                2.4999096393585205
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater3",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 501473361,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                1.0089040994644165,
+                3.95121169090271,
+                26.436563491821289
+            ],
+            "Rotation": [
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                2.1999998092651367,
+                9.699925422668457,
+                2.4999313354492188
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater4",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1435216902,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                1.0163592100143433,
+                2.5627830028533936,
+                -13.808517456054688
+            ],
+            "Rotation": [
+                -0.4999137818813324,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                2.1999998092651367,
+                9.6999979019165039,
+                2.4999997615814209
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater5",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1907786828,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -6.9098443984985352,
+                3.9810600280761719,
+                -10.629376411437988
+            ],
+            "Rotation": [
+                -0.4999137818813324,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                0.59999996423721313,
+                1.5,
+                0.99998486042022705
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater6",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 163185238,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                8.4696674346923828,
+                4,
+                -10.536190986633301
+            ],
+            "Rotation": [
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                0.59999996423721313,
+                1.5,
+                0.99999505281448364
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater7",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 27784564,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -6.6371245384216309,
+                4.0000019073486328,
+                23.137485504150391
+            ],
+            "Rotation": [
+                -0.4999137818813324,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                0.59999996423721313,
+                1.4999998807907104,
+                0.99999505281448364
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
+            "name": "ToxicWater8",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1653847944,
+            "ParentUID": 408068310,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                8.4813375473022461,
+                4,
+                23.215736389160156
+            ],
+            "Rotation": [
+                -0.4999137818813324,
+                0.50008636713027954,
+                0.50008624792098999,
+                0.49991360306739807
+            ],
+            "Scale": [
+                0.59999996423721313,
+                1.4999998807907104,
+                0.99999505281448364
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "DPSDamage",
+                    "baseDamage": 4,
+                    "maxDamage": 10,
+                    "damageIncrease": 2,
+                    "damageTime": 1
+                }
+            ]
+        },
+        {
             "name": "Skel",
             "tag": "Skel",
             "layer": "Default",
@@ -9740,6 +10524,120 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Fasted Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1973663272,
+                    "ParentUID": 1124226365,
+                    "PrefabReference": 1973663272,
+                    "PrefabID": 2073226706,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.10300000011920929,
+                        1.0989999771118164,
+                        0.041000001132488251
+                    ],
+                    "Rotation": [
+                        5.1013579138725618e-08,
+                        -0.98289668560028076,
+                        5.1013579138725618e-08,
+                        -0.18415790796279907
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ],
+                    "PrefabObjects": [
+                        {
+                            "name": "Dust fasted",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1714781978,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1669506617,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -0.030359268188476563,
+                                -0.098569869995117188,
+                                -0.00864410400390625
+                            ],
+                            "Rotation": [
+                                -0.7107464075088501,
+                                8.4629483865228394e-08,
+                                -8.3760532731957937e-08,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999880790710449,
+                                0.99999880790710449
+                            ]
+                        },
+                        {
+                            "name": "Slowed Trail",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1283429392,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1283429392,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -14.062906265258789,
+                                2.5918512344360352,
+                                10.017618179321289
+                            ],
+                            "Rotation": [
+                                -6.5570951335303107e-08,
+                                -0.84956026077270508,
+                                -1.4235808976081898e-07,
+                                -0.52749162912368774
+                            ],
+                            "Scale": [
+                                1.0000001192092896,
+                                1,
+                                1.0000001192092896
+                            ]
+                        },
+                        {
+                            "name": "Dust Slowed",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 0,
+                            "ParentUID": 1283429392,
+                            "PrefabID": 0,
+                            "PrefabReference": 0,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                -0.0081729888916015625
+                            ],
+                            "Rotation": [
+                                -0.71074628829956055,
+                                0,
+                                0,
+                                0.70344847440719604
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999892711639404,
+                                0.99999892711639404
+                            ]
+                        }
                     ]
                 }
             ]
