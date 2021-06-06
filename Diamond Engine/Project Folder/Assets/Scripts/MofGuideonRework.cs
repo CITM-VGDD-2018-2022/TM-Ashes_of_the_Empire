@@ -404,6 +404,8 @@ public class MofGuideonRework : Entity
         }
 
 
+        damaged = 0.0f;
+
         //Props
         if (cape != null)
             Animator.Pause(cape);
@@ -2623,6 +2625,8 @@ public class MofGuideonRework : Entity
                 return;
             }
 
+            damaged = 1.0f;
+
             float mod = 1f;
             if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
             {
@@ -2683,26 +2687,25 @@ public class MofGuideonRework : Entity
             }
         }
 
-        //TODO: Make moff shine red
-        //if (damaged > 0.01f)
-        //{
-        //    damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
-        //}
-        //else
-        //{
-        //    damaged = 0.0f;
-        //}
+        if (damaged > 0.01f)
+        {
+            damaged = Mathf.Lerp(damaged, 0.0f, 0.2f);
+        }
+        else
+        {
+            damaged = 0.0f;
+        }
 
-        //if (moff_mesh != null)
-        //{
-        //    Material moffMeshMat = moff_mesh.GetComponent<Material>();
+        if (moffMesh != null)
+        {
+            Material moffMeshMat = moffMesh.GetComponent<Material>();
 
-        //    if (moffMeshMat != null)
-        //    {
-        //        moffMeshMat.SetFloatUniform("damaged", damaged);
-        //    }
+            if (moffMeshMat != null)
+            {
+                moffMeshMat.SetFloatUniform("damaged", damaged);
+            }
 
-        //}
+        }
     }
 
     #endregion
