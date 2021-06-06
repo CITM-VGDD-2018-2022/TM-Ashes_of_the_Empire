@@ -24,6 +24,7 @@ public class Skill_Tree_Node : DiamondComponent
     #endregion
 
     #region Logic
+    Navigation navigation = null;
     public string skill_name = "";
 
     public GameObject children_1 = null;
@@ -32,8 +33,10 @@ public class Skill_Tree_Node : DiamondComponent
     public GameObject parent_2 = null;
     public GameObject oppositeNode = null;
 
-    public GameObject text_description = null;
-    public GameObject hub_skill_controller = null; 
+    public GameObject textDescriptionObj = null;
+    private Text textDescription = null;
+    public GameObject hubSkillControllerObj = null;
+    private HubSkillTreeController hubSkillController = null;
 
     private Skills skill = null;
 
@@ -42,7 +45,8 @@ public class Skill_Tree_Node : DiamondComponent
 
     public int node_type = 0;
 
-    public GameObject panelImage;
+    public GameObject panelImageObj = null;
+    private Hub_PanelImage panelImage = null;
     public int skillTreeName;
     public int skillTreeNumber;
 
@@ -72,6 +76,17 @@ public class Skill_Tree_Node : DiamondComponent
 
     public void Awake()
     {
+        navigation = gameObject.GetComponent<Navigation>();
+
+        if (hubSkillControllerObj != null)
+            hubSkillController = hubSkillControllerObj.GetComponent<HubSkillTreeController>();
+
+        if (textDescriptionObj != null)
+            textDescription = textDescriptionObj.GetComponent<Text>();
+
+        if (panelImageObj != null)
+            panelImage = panelImageObj.GetComponent<Hub_PanelImage>();
+
         UnlockTreeAfterRun();
 
         AssignCharacteristics();
@@ -81,9 +96,21 @@ public class Skill_Tree_Node : DiamondComponent
     {
         UnlockTreeAfterRun();
         if (children_1 != null)
-            children_1.GetComponent<Skill_Tree_Node>().Reset();
+        {
+            Skill_Tree_Node children1Node = children_1.GetComponent<Skill_Tree_Node>();
+            if(children1Node != null)
+            {
+                children1Node.Reset();
+            }
+        }
         if (children_2 != null)
-            children_2.GetComponent<Skill_Tree_Node>().Reset();
+        {
+            Skill_Tree_Node children2Node = children_2.GetComponent<Skill_Tree_Node>();
+            if(children2Node != null)
+            {
+                children2Node.Reset();
+            }
+        }
     }
 
     //Remember the skills that have already been bought before the run
@@ -152,22 +179,25 @@ public class Skill_Tree_Node : DiamondComponent
         if (skill == null)
             return;
 
-        if (gameObject.GetComponent<Navigation>().is_selected == false)
+        if (navigation != null && navigation.is_selected == false)
             return;
 
-        if (hub_skill_controller == null)
+        if (hubSkillControllerObj == null)
             return;
 
-        if (hub_skill_controller.GetComponent<HubSkillTreeController>().skill_selected == skill)
-            return;
+        if (hubSkillController != null)
+        {
+            if(hubSkillController.skill_selected == skill)
+                return;
 
-        hub_skill_controller.GetComponent<HubSkillTreeController>().skill_selected = skill;
+            hubSkillController.skill_selected = skill;
+        }
 
-        if (text_description != null)
-            text_description.GetComponent<Text>().text = skill.description;
+        if (textDescription != null)
+            textDescription.text = skill.description;
 
         if(panelImage != null)
-            panelImage.GetComponent<Hub_PanelImage>().UpdateIcon(skillTreeName, skillTreeNumber - 1);                  
+            panelImage.UpdateIcon(skillTreeName, skillTreeNumber - 1);                  
 
         if (Input.GetGamepadButton(DEControllerButton.Y) == KeyState.KEY_DOWN)
         {

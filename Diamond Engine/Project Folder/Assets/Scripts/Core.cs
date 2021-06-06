@@ -262,6 +262,7 @@ public class Core : Entity
     private TUTO_STATES tuto_state = TUTO_STATES.NONE;
     public float fallDamage = 15f;
     private string lastFootsteps = "";
+    private bool updateSniper = false;
     public void Awake()
     {
         #region VARIABLES WITH DEPENDENCIES
@@ -276,7 +277,8 @@ public class Core : Entity
         //dashDuration = 0.2f;
         //dashDistance = 4.5f;
         lastFootsteps = "Play_Footsteps_Stone_Mando";
-        //sniperRechargeTimer = bulletRechargeTime; // TODO if sniper recharge sfx sounds during cinematic, try uncomment this line
+        sniperRechargeTimer = 0; // TODO if sniper recharge sfx sounds during cinematic, try uncomment this line
+        updateSniper = false;
         #endregion
 
         #region SHOOT
@@ -434,6 +436,8 @@ public class Core : Entity
             old_hp = PlayerHealth.currMaxHealth;
             //Start();
             scriptStart = false;
+
+            return;
         }
 
         #region UPDATE STUFF
@@ -461,6 +465,7 @@ public class Core : Entity
         if (old_hp < PlayerHealth.currHealth)
             PlayParticles(PARTICLES.HEAL);
         old_hp = PlayerHealth.currHealth;
+
     }
 
 
@@ -1745,7 +1750,7 @@ public class Core : Entity
         inputsList.Add(INPUT.IN_SEC_SHOOT_END);
         --currentBullets;
         sniperRechargeTimer += bulletRechargeTime;
-
+        updateSniper = true;
         if (shootPoint == null)
         {
             Debug.Log("Shootpoint reference is null!");
@@ -2210,8 +2215,8 @@ public class Core : Entity
             {
                 currentBullets++;
                 PlayParticles(PARTICLES.SNIPER);
-
-                Audio.PlayAudio(secSound, "Play_Sniper_Cooldown_Finish");
+                if (updateSniper)
+                    Audio.PlayAudio(secSound, "Play_Sniper_Cooldown_Finish");
             }
 
 

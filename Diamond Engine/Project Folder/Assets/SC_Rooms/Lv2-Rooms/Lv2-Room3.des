@@ -1,19 +1,19 @@
 {
     "NavMesh": 789920900,
     "EditorCameraPosition": [
-        28.390872955322266,
-        30.740077972412109,
-        -44.951778411865234
+        -0.10068702697753906,
+        4.672694206237793,
+        -55.166091918945313
     ],
     "EditorCameraZ": [
-        -0.69735229015350342,
-        -0.64708149433135986,
-        0.308197021484375
+        0.58215409517288208,
+        -0.31441420316696167,
+        0.74982690811157227
     ],
     "EditorCameraY": [
-        -0.59186720848083496,
-        0.76242083311080933,
-        0.2615487277507782
+        0.19287672638893127,
+        0.94928586483001709,
+        0.24830396473407745
     ],
     "SkyboxPath0": "Library\/Textures\/483487888.dds",
     "SkyboxPath1": "Library\/Textures\/1874848602.dds",
@@ -110,7 +110,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 16.575000762939453,
-                    "hFOV": 31.424999237060547,
+                    "hFOV": 30.899999618530273,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -125,6 +125,7 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "CameraController",
+                    "target": 0,
                     "x": -10.300000190734863,
                     "y": 9.3000001907348633,
                     "z": -10,
@@ -242,7 +243,7 @@
             "Position": [
                 9.3617935180664063,
                 0,
-                -13.893880844116211
+                -12.41801643371582
             ],
             "Rotation": [
                 0,
@@ -275,8 +276,8 @@
             "Static": false,
             "Position": [
                 -12.667364120483398,
-                2.0637373924255371,
-                10.188314437866211
+                0,
+                8.3796939849853516
             ],
             "Rotation": [
                 0,
@@ -477,6 +478,7 @@
                     "spawnPoint2": 846734193,
                     "spawnPoint3": 2055140703,
                     "spawnPoint4": 557934894,
+                    "spawnPoint5": 0,
                     "maxSpawnPoints": 5,
                     "maxEnemies": 5
                 }
@@ -3159,6 +3161,120 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Fasted Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1973663272,
+                    "ParentUID": 541035220,
+                    "PrefabReference": 1973663272,
+                    "PrefabID": 2073226706,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.10300000011920929,
+                        1.0989999771118164,
+                        0.041000001132488251
+                    ],
+                    "Rotation": [
+                        5.1013579138725618e-08,
+                        -0.98289668560028076,
+                        5.1013579138725618e-08,
+                        -0.18415790796279907
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ],
+                    "PrefabObjects": [
+                        {
+                            "name": "Dust fasted",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1714781978,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1669506617,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -0.030359268188476563,
+                                -0.098569869995117188,
+                                -0.00864410400390625
+                            ],
+                            "Rotation": [
+                                -0.7107464075088501,
+                                8.4629483865228394e-08,
+                                -8.3760532731957937e-08,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999880790710449,
+                                0.99999880790710449
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Slowed Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1283429392,
+                    "ParentUID": 541035220,
+                    "PrefabID": 0,
+                    "PrefabReference": 1283429392,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -14.062906265258789,
+                        2.5918512344360352,
+                        10.017618179321289
+                    ],
+                    "Rotation": [
+                        -6.5570951335303107e-08,
+                        -0.84956026077270508,
+                        -1.4235808976081898e-07,
+                        -0.52749162912368774
+                    ],
+                    "Scale": [
+                        1.0000001192092896,
+                        1,
+                        1.0000001192092896
+                    ]
+                },
+                {
+                    "name": "Dust Slowed",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 638363503,
+                    "ParentUID": 1283429392,
+                    "PrefabID": 0,
+                    "PrefabReference": 638363503,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081720352172851563
+                    ],
+                    "Rotation": [
+                        -0.71074634790420532,
+                        0,
+                        0,
+                        0.70344835519790649
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999886751174927,
+                        0.99999892711639404
                     ]
                 }
             ]
@@ -7068,6 +7184,146 @@
                     ]
                 },
                 {
+                    "name": "Return Popup",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1829129730,
+                    "ParentUID": 266492693,
+                    "PrefabID": 0,
+                    "PrefabReference": 420399952,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Text",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 60665230,
+                    "ParentUID": 1829129730,
+                    "PrefabID": 0,
+                    "PrefabReference": 610433229,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Image",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1621127828,
+                    "ParentUID": 1829129730,
+                    "PrefabID": 0,
+                    "PrefabReference": 270462079,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Image",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1389961456,
+                    "ParentUID": 1829129730,
+                    "PrefabID": 0,
+                    "PrefabReference": 703785163,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Image",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 598427062,
+                    "ParentUID": 1829129730,
+                    "PrefabID": 0,
+                    "PrefabReference": 1239943271,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
                     "name": "DisplayMenu",
                     "tag": "Untagged",
                     "layer": "Default",
@@ -8616,146 +8872,6 @@
                     "ParentUID": 1519938965,
                     "PrefabID": 0,
                     "PrefabReference": 237700254,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Return Popup",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1829129730,
-                    "ParentUID": 980538046,
-                    "PrefabID": 0,
-                    "PrefabReference": 420399952,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Text",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 60665230,
-                    "ParentUID": 1829129730,
-                    "PrefabID": 0,
-                    "PrefabReference": 610433229,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Image",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1621127828,
-                    "ParentUID": 1829129730,
-                    "PrefabID": 0,
-                    "PrefabReference": 270462079,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Image",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1389961456,
-                    "ParentUID": 1829129730,
-                    "PrefabID": 0,
-                    "PrefabReference": 703785163,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "Image",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 598427062,
-                    "ParentUID": 1829129730,
-                    "PrefabID": 0,
-                    "PrefabReference": 1239943271,
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
@@ -10839,7 +10955,7 @@
             "Static": false,
             "Position": [
                 12.647675514221191,
-                0.46074536442756653,
+                0.55000001192092896,
                 -6.9545488357543945
             ],
             "Rotation": [
@@ -10928,7 +11044,7 @@
             "Static": false,
             "Position": [
                 4.6354179382324219,
-                0.46074521541595459,
+                0.55000001192092896,
                 1.5588153600692749
             ],
             "Rotation": [
@@ -11017,7 +11133,7 @@
             "Static": false,
             "Position": [
                 13.605183601379395,
-                0.4607451856136322,
+                0.55000001192092896,
                 2.5809345245361328
             ],
             "Rotation": [
@@ -11106,12 +11222,12 @@
             "Static": false,
             "Position": [
                 9.4975996017456055,
-                0.46074521541595459,
-                3.5541987419128418
+                0.55000001192092896,
+                3.5541996955871582
             ],
             "Rotation": [
-                0,
-                0,
+                1.7763568394002505e-15,
+                -7.2759576141834259e-12,
                 0,
                 1
             ],
@@ -11195,7 +11311,7 @@
             "Static": false,
             "Position": [
                 8.3754825592041016,
-                0.46074521541595459,
+                0.55000001192092896,
                 13.081417083740234
             ],
             "Rotation": [
@@ -11284,7 +11400,7 @@
             "Static": false,
             "Position": [
                 0.37041878700256348,
-                0.46074521541595459,
+                0.55000001192092896,
                 9.0022563934326172
             ],
             "Rotation": [
@@ -11373,7 +11489,7 @@
             "Static": false,
             "Position": [
                 3.1180562973022461,
-                0.46074521541595459,
+                0.55000001192092896,
                 14.025276184082031
             ],
             "Rotation": [
@@ -11462,7 +11578,7 @@
             "Static": false,
             "Position": [
                 8.1327838897705078,
-                0.46074524521827698,
+                0.55000001192092896,
                 12.242495536804199
             ],
             "Rotation": [
@@ -11551,7 +11667,7 @@
             "Static": false,
             "Position": [
                 9.088475227355957,
-                0.46074521541595459,
+                0.55000001192092896,
                 7.5221219062805176
             ],
             "Rotation": [
@@ -11640,7 +11756,7 @@
             "Static": false,
             "Position": [
                 -14.690253257751465,
-                0.46074521541595459,
+                0.55000001192092896,
                 2.8084440231323242
             ],
             "Rotation": [
@@ -11729,7 +11845,7 @@
             "Static": false,
             "Position": [
                 -8.8603572845458984,
-                0.46074527502059937,
+                0.55000001192092896,
                 10.021512985229492
             ],
             "Rotation": [
@@ -11818,7 +11934,7 @@
             "Static": false,
             "Position": [
                 -8.8409862518310547,
-                0.46074524521827698,
+                0.55000001192092896,
                 14.047052383422852
             ],
             "Rotation": [
@@ -11907,7 +12023,7 @@
             "Static": false,
             "Position": [
                 -12.450631141662598,
-                0.46074521541595459,
+                0.55000001192092896,
                 12.024184226989746
             ],
             "Rotation": [
@@ -11996,7 +12112,7 @@
             "Static": false,
             "Position": [
                 -13.427402496337891,
-                0.46074527502059937,
+                0.55000001192092896,
                 9.9174880981445313
             ],
             "Rotation": [
@@ -12085,7 +12201,7 @@
             "Static": false,
             "Position": [
                 -4.2858328819274902,
-                0.46074524521827698,
+                0.55000001192092896,
                 8.5428733825683594
             ],
             "Rotation": [
@@ -12174,7 +12290,7 @@
             "Static": false,
             "Position": [
                 -9.8765897750854492,
-                0.46074521541595459,
+                0.55000001192092896,
                 5.4927949905395508
             ],
             "Rotation": [
@@ -12263,7 +12379,7 @@
             "Static": false,
             "Position": [
                 -14.390507698059082,
-                0.46074524521827698,
+                0.55000001192092896,
                 3.1003141403198242
             ],
             "Rotation": [
@@ -12352,7 +12468,7 @@
             "Static": false,
             "Position": [
                 -13.172860145568848,
-                0.46074521541595459,
+                0.55000001192092896,
                 -3.1328253746032715
             ],
             "Rotation": [
@@ -12441,7 +12557,7 @@
             "Static": false,
             "Position": [
                 -9.8409147262573242,
-                0.46074521541595459,
+                0.55000001192092896,
                 -2.1442885398864746
             ],
             "Rotation": [
@@ -12530,7 +12646,7 @@
             "Static": false,
             "Position": [
                 -13.005681037902832,
-                0.46074521541595459,
+                0.55000001192092896,
                 -12.891457557678223
             ],
             "Rotation": [
@@ -12619,7 +12735,7 @@
             "Static": false,
             "Position": [
                 -13.700413703918457,
-                0.46074521541595459,
+                0.55000001192092896,
                 -10.185816764831543
             ],
             "Rotation": [
@@ -12708,7 +12824,7 @@
             "Static": false,
             "Position": [
                 -8.200556755065918,
-                0.46074521541595459,
+                0.55000001192092896,
                 -10.939731597900391
             ],
             "Rotation": [
@@ -12796,13 +12912,13 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -8.8511114120483398,
-                -2.6824409360415302e-10,
-                -7.5178718566894531
+                -8.8512859344482422,
+                0.082901358604431152,
+                -7.5178728103637695
             ],
             "Rotation": [
-                0,
-                0,
+                1.7763568394002505e-15,
+                -7.2759576141834259e-12,
                 0,
                 1
             ],
@@ -12886,7 +13002,7 @@
             "Static": false,
             "Position": [
                 8.0614128112792969,
-                0.46074527502059937,
+                0.55000001192092896,
                 -10.066970825195313
             ],
             "Rotation": [
@@ -12975,7 +13091,7 @@
             "Static": false,
             "Position": [
                 9.0619621276855469,
-                0.46074521541595459,
+                0.55000001192092896,
                 -7.975165843963623
             ],
             "Rotation": [
@@ -13064,7 +13180,7 @@
             "Static": false,
             "Position": [
                 -0.37763595581054688,
-                0.46074524521827698,
+                0.55000001192092896,
                 -11.018203735351563
             ],
             "Rotation": [
@@ -13153,7 +13269,7 @@
             "Static": false,
             "Position": [
                 13.575919151306152,
-                0.4607451856136322,
+                0.55000001192092896,
                 -13.128995895385742
             ],
             "Rotation": [
@@ -13241,19 +13357,19 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -13.816837310791016,
-                0.16530948877334595,
+                -13.816844940185547,
+                0.16530954837799072,
                 -7.9385957717895508
             ],
             "Rotation": [
                 -0.27038970589637756,
-                0.65336745977401733,
-                0.65329080820083618,
-                0.2705763578414917
+                0.65336757898330688,
+                0.65329068899154663,
+                0.27057632803916931
             ],
             "Scale": [
-                2.0097751617431641,
-                2.0890243053436279,
+                2.0097758769989014,
+                2.0890252590179443,
                 0.71428155899047852
             ],
             "Components": [
@@ -17155,7 +17271,7 @@
                 0.24532127380371094
             ],
             "Rotation": [
-                3.5527136788005009e-15,
+                1.7763568394002505e-15,
                 -2.1827872842550278e-11,
                 1.4551915228366852e-11,
                 1
@@ -22468,7 +22584,8 @@
                     "spawnLaserTurret": true,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -22750,7 +22867,8 @@
                     "spawnLaserTurret": true,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -23032,7 +23150,8 @@
                     "spawnLaserTurret": true,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -23314,7 +23433,8 @@
                     "spawnLaserTurret": true,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -23630,7 +23750,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -23912,7 +24033,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -24194,7 +24316,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -24476,7 +24599,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -24758,7 +24882,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -25040,7 +25165,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -25322,7 +25448,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -25604,7 +25731,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -25886,7 +26014,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -26168,7 +26297,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -26450,7 +26580,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -26732,7 +26863,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -27014,7 +27146,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -27296,7 +27429,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -27578,7 +27712,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -27860,7 +27995,8 @@
                     "spawnLaserTurret": false,
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
-                    "spawnEnemyAt": 1.6000000238418579
+                    "spawnEnemyAt": 1.6000000238418579,
+                    "spawnParticleObj": 0
                 },
                 {
                     "Type": 13,
@@ -30726,6 +30862,235 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/498186070.mat",
                     "MaterialUID": 498186070
+                }
+            ]
+        },
+        {
+            "name": "Slowed Trail",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1283429392,
+            "ParentUID": 568224617,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -10.517330169677734,
+                3.2969989776611328,
+                -6.8003768920898438
+            ],
+            "Rotation": [
+                1.3984185898152646e-07,
+                0.84956026077270508,
+                1.8847288174583809e-07,
+                0.52749156951904297
+            ],
+            "Scale": [
+                1.0000001192092896,
+                1,
+                1.0000001192092896
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Dust Slowed",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 0,
+            "ParentUID": 1283429392,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                -0.0081729888916015625
+            ],
+            "Rotation": [
+                -0.71074628829956055,
+                0,
+                0,
+                0.70344847440719604
+            ],
+            "Scale": [
+                1,
+                0.99999892711639404,
+                0.99999892711639404
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
+                    "MaterialUID": 355756108
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "systemActive": false,
+                    "looping": true,
+                    "maxDuration": 0.096000000834465027,
+                    "ParticleEmitters": [
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/2134419253.dds",
+                            "texUID": 2134419253,
+                            "paEmitterName": "Effect",
+                            "paLifeTime": [
+                                1,
+                                3
+                            ],
+                            "paSize": [
+                                1,
+                                1
+                            ],
+                            "paColor": [
+                                0.5724637508392334,
+                                0.0020741436164826155,
+                                0.0020741436164826155,
+                                1
+                            ],
+                            "paPerSec": 20,
+                            "paRelative": false,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 0,
+                                    "paFOLT_gravityMod": 0.0080000003799796104,
+                                    "paFOLT_gravity": -0.078400008380413055,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.38735151290893555,
+                                                0,
+                                                1,
+                                                0.81422924995422363
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                0.41106700897216797,
+                                                0,
+                                                1,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.039999999105930328,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 0,
+                                    "paShapeRandSpeed": 0,
+                                    "PaShapeAreaDimensions": [
+                                        0.30000001192092896,
+                                        0.25,
+                                        1
+                                    ],
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 0,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        -0.20000000298023224
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/1273925678.dds",
+                            "texUID": 1273925678,
+                            "paEmitterName": "Empty",
+                            "paLifeTime": [
+                                0.5,
+                                1
+                            ],
+                            "paSize": [
+                                0.15000000596046448,
+                                0.15000000596046448
+                            ],
+                            "paColor": [
+                                0.38823530077934265,
+                                0,
+                                1,
+                                0.81568628549575806
+                            ],
+                            "paPerSec": 3,
+                            "paRelative": false,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 0,
+                                    "paFOLT_gravityMod": 0.20000000298023224,
+                                    "paFOLT_gravity": -1.9600000381469727,
+                                    "paFOLT_forceType": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": false,
+                                    "paShapePartSpeed": 0,
+                                    "paShapeRandSpeed": 0,
+                                    "PaShapeAreaDimensions": [
+                                        0.40000000596046448,
+                                        0.30000001192092896,
+                                        0.69999998807907104
+                                    ],
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 0,
+                                    "PaShapeOffset": [
+                                        0,
+                                        0,
+                                        0.10000000149011612
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "billboardAlignment": 0,
+                    "horizantalAligned": true
                 }
             ]
         }

@@ -13,7 +13,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                4.564908504486084,
+                5.2344965934753418,
                 1.658627986907959,
                 0
             ],
@@ -165,7 +165,7 @@
                     "endChaseDistance": 1,
                     "chaseDuration": 1.5,
                     "chaseSpeed": 4,
-                    "LAST_FRAME_CONST": 0,
+                    "LAST_FRAME_CONST": 0.05000000074505806,
                     "comboChargeDuration": 0.85000002384185791,
                     "comboDirectionTime": 0.30000001192092896,
                     "comboLongDashDistance": 11.5,
@@ -185,18 +185,19 @@
                     "meleeHit5Damage": 15,
                     "meleeHit6Damage": 15,
                     "spawnAnimationSpdMult_P1": 2,
-                    "enemiesToSpawn_P1": 2,
+                    "enemiesToSpawn_P1": 3,
                     "enemiesToSpawn_P2": 3,
                     "baseEnemySpawnDelay": 0.15999999642372131,
                     "maxEnemySpawnDelay": 1.0499999523162842,
                     "spawnEnemyTime": 2.25,
                     "enemySkillTime": 20,
-                    "preBurstDashSpeed": 10,
+                    "preBurstDashSpeed": 30,
                     "preBurstDashDistance": 7,
+                    "preBurstAngleDash": 45,
                     "bulletDamage": 5,
                     "numBurstBullets": 3,
-                    "timeBetweenShots": 0.30000001192092896,
-                    "timeToStartBurst": 1,
+                    "timeBetweenShots": 0.10000000149011612,
+                    "timeToStartBurst": 0.20000000298023224,
                     "lightningDashChargeDuration": 0.5,
                     "lightningDashDirectionTime": 0.30000001192092896,
                     "lightningDashLength": 50,
@@ -1083,8 +1084,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
-                    "MaterialUID": 1948688504
+                    "MaterialLibraryPath": "Library\/Materials\/344241357.mat",
+                    "MaterialUID": 344241357
                 },
                 {
                     "Type": 26,
@@ -2855,8 +2856,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/1948688504.mat",
-                    "MaterialUID": 1948688504
+                    "MaterialLibraryPath": "Library\/Materials\/278583585.mat",
+                    "MaterialUID": 278583585
                 }
             ]
         },

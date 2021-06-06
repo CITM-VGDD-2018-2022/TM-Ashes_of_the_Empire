@@ -125,6 +125,8 @@ public class Rancor : Entity
 
     public GameObject projectilePoint = null;
     private Vector3 target = new Vector3(0, 0, 0);
+    private List<GameObject> projectiles = new List<GameObject>();
+    private float angleDispersion = 15f;
 
     //Hand slam
     private float handSlamTime = 0.0f;
@@ -1015,55 +1017,34 @@ public class Rancor : Entity
                     Vector3 pos = projectilePoint.transform.globalPosition;
                     Vector3 scale = new Vector3(1f, 1f, 1f);
 
-                    GameObject projectile = InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale);
-                    RancorProjectile projectileScript = null;
-                    if (projectile != null)
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale));
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale));
+                    projectiles.Add(InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale));
+
+                    float angleIncrement = angleDispersion / 2;
+                    float currentAngle = -(angleDispersion * 0.5f);
+
+                    if (projectiles.Count != 0)
                     {
-                        projectileScript = projectile.GetComponent<RancorProjectile>();
-
-                        if (projectileScript != null)
+                        for (int i = 0; i < projectiles.Count; ++i)
                         {
-                            projectileScript.damage = (int)(projectileScript.damage * damageMult);
+                            if (projectiles[i] != null)
+                            {
+                                projectiles[i].transform.localRotation *= Quaternion.RotateAroundAxis(Vector3.up, currentAngle * Mathf.Deg2RRad);
+                                RancorProjectile script = projectiles[i].GetComponent<RancorProjectile>();
+                                if (script != null)
+                                {
+                                    script.damage = (int)(script.damage * damageMult);
+                                }
+                                RancorProjectile rancorParticles = projectiles[i].GetComponent<RancorProjectile>();
+
+                                if (rancorParticles != null)
+                                    rancorParticles.targetPos = Core.instance.gameObject.transform.globalPosition - new Vector3(-3f, -1f, 0f);
+                            }
+                            currentAngle += angleIncrement;
                         }
-
-                        RancorProjectile rancorParticles = projectile.GetComponent<RancorProjectile>();
-
-                        if (rancorParticles != null)
-                            rancorParticles.targetPos = Core.instance.gameObject.transform.globalPosition - new Vector3(-3f, -1f, 0f);
                     }
-
-                    projectile = InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale);
-
-                    if (projectile != null)
-                    {
-                        projectileScript = projectile.GetComponent<RancorProjectile>();
-
-                        if (projectileScript != null)
-                        {
-                            projectileScript.damage = (int)(projectileScript.damage * damageMult);
-                        }
-
-                        RancorProjectile rancorParticles = projectile.GetComponent<RancorProjectile>();
-
-                        if (rancorParticles != null)
-                            rancorParticles.targetPos = Core.instance.gameObject.transform.globalPosition - new Vector3(3f, -1f, 0f);
-                    }
-                    projectile = InternalCalls.CreatePrefab("Library/Prefabs/1225675544.prefab", pos, Quaternion.identity, scale);
-
-                    if (projectile != null)
-                    {
-                        projectileScript = projectile.GetComponent<RancorProjectile>();
-
-                        if (projectileScript != null)
-                        {
-                            projectileScript.damage = (int)(projectileScript.damage * damageMult);
-                        }
-
-                        RancorProjectile rancorParticles = projectile.GetComponent<RancorProjectile>();
-
-                        if (rancorParticles != null)
-                            rancorParticles.targetPos = Core.instance.gameObject.transform.globalPosition - new Vector3(0f, -1f, 0f);
-                    }
+                    projectiles.Clear();
                 }
             }
         }

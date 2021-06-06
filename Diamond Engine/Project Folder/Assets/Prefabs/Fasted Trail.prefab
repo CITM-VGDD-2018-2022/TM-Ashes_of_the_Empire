@@ -13,20 +13,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.03125,
-                0.65602970123291016,
-                0.0043191909790039062
+                -0.10345077514648438,
+                1.0985698699951172,
+                0.041170120239257812
             ],
             "Rotation": [
-                0,
-                0,
-                0,
-                1
+                -5.1013579138725618e-08,
+                -0.98289668560028076,
+                -5.1013579138725618e-08,
+                -0.18415790796279907
             ],
             "Scale": [
+                0.99999988079071045,
                 1,
-                1,
-                1
+                0.99999988079071045
             ],
             "Components": [
                 {
@@ -47,20 +47,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0,
-                0,
-                -0.0081729888916015625
+                -0.030359268188476562,
+                -0.098569869995117188,
+                -0.00864410400390625
             ],
             "Rotation": [
-                -0.71074628829956055,
-                0,
-                0,
-                0.70344847440719604
+                -0.7107464075088501,
+                8.4629483865228394e-08,
+                -8.3760532731957937e-08,
+                0.70344835519790649
             ],
             "Scale": [
                 1,
-                0.99999892711639404,
-                0.99999892711639404
+                0.99999880790710449,
+                0.99999880790710449
             ],
             "Components": [
                 {
@@ -78,7 +78,7 @@
                 {
                     "Type": 20,
                     "Active": true,
-                    "systemActive": true,
+                    "systemActive": false,
                     "looping": true,
                     "maxDuration": 10,
                     "ParticleEmitters": [
@@ -102,7 +102,7 @@
                                 1
                             ],
                             "paPerSec": 25,
-                            "paRelative": true,
+                            "paRelative": false,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -148,23 +148,23 @@
                                     "PaShapeOffset": [
                                         0,
                                         0,
-                                        0
+                                        -0.20000000298023224
                                     ]
                                 }
                             ]
                         },
                         {
                             "AssetPath": "Empty",
-                            "LibraryPath": "Library\/Textures\/244086718.dds",
-                            "texUID": 244086718,
+                            "LibraryPath": "Library\/Textures\/905006938.dds",
+                            "texUID": 905006938,
                             "paEmitterName": "Empty",
                             "paLifeTime": [
-                                0.5,
-                                1
+                                0.30000001192092896,
+                                0.60000002384185791
                             ],
                             "paSize": [
-                                0.070000000298023224,
-                                0.10000000149011612
+                                0.15000000596046448,
+                                0.15000000596046448
                             ],
                             "paColor": [
                                 1,
@@ -172,8 +172,8 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 3,
-                            "paRelative": true,
+                            "paPerSec": 7,
+                            "paRelative": false,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -182,7 +182,7 @@
                                         1,
                                         0
                                     ],
-                                    "paFOLT_magnitude": 2,
+                                    "paFOLT_magnitude": 5,
                                     "paFOLT_gravityMod": 0,
                                     "paFOLT_gravity": -0,
                                     "paFOLT_forceType": 0
@@ -216,9 +216,9 @@
                                     "paShapePartSpeed": 0,
                                     "paShapeRandSpeed": 0,
                                     "PaShapeAreaDimensions": [
+                                        0.40000000596046448,
                                         0.30000001192092896,
-                                        0.20000000298023224,
-                                        1
+                                        0.5
                                     ],
                                     "PaShapeSphereDirection": false,
                                     "PaShapeSphereAngle": 0,
@@ -226,7 +226,7 @@
                                     "PaShapeOffset": [
                                         0,
                                         0,
-                                        0
+                                        -0.30000001192092896
                                     ]
                                 }
                             ]

@@ -1,19 +1,19 @@
 {
     "NavMesh": 1440000066,
     "EditorCameraPosition": [
-        -23.832447052001953,
-        9.9267587661743164,
-        -22.970972061157227
+        -28.204723358154297,
+        24.919981002807617,
+        -24.18522834777832
     ],
     "EditorCameraZ": [
-        0.65586656332015991,
-        -0.43302667140960693,
-        0.61832594871520996
+        0.50564712285995483,
+        -0.65813493728637695,
+        0.55783462524414063
     ],
     "EditorCameraY": [
-        0.31507748365402222,
-        0.90138113498687744,
-        0.29704928398132324
+        0.44198507070541382,
+        0.75290000438690186,
+        0.48763799667358398
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -7963,10 +7963,7 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/1771728615.mmh",
                     "UID": 1771728615,
-                    "NormalMapAssetPath": "Empty",
-                    "NormalMapLibraryPath": "Library\/Textures\/1518085379.dds",
-                    "NormalMapUID": 1518085379,
-                    "bumpDepth": 0.20000000298023224,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         1,
@@ -8124,10 +8121,7 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/1057108230.mmh",
                     "UID": 1057108230,
-                    "NormalMapAssetPath": "Empty",
-                    "NormalMapLibraryPath": "Library\/Textures\/1856047803.dds",
-                    "NormalMapUID": 1856047803,
-                    "bumpDepth": 0.20000000298023224,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         1,
@@ -8347,10 +8341,7 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/1766686913.mmh",
                     "UID": 1766686913,
-                    "NormalMapAssetPath": "Empty",
-                    "NormalMapLibraryPath": "Library\/Textures\/1518085379.dds",
-                    "NormalMapUID": 1518085379,
-                    "bumpDepth": 0.20000000298023224,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         1,
@@ -28075,9 +28066,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -6.6848020553588867,
+                -1.8097840547561646,
                 -5.18914794921875,
-                -3.9425551891326904
+                -3.9425556659698486
             ],
             "Rotation": [
                 0,
@@ -28094,6 +28085,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1656147143.mmh",
+                    "UID": 1656147143,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -28125,7 +28136,274 @@
                         1
                     ],
                     "Scale": [
-                        0.60000002384185791,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Center_Platform_Collider2",
+            "tag": "MetalFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1998027562,
+            "ParentUID": 165511528,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0.76499283313751221,
+                -5.2214450836181641,
+                0.55515569448471069
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                10,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/2075751726.mmh",
+                    "UID": 2075751726,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        0.99998998641967773,
+                        0.99998998641967773
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Center_Platform_Collider4",
+            "tag": "MetalFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1643166679,
+            "ParentUID": 165511528,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                5.7979588508605957,
+                -5.20654296875,
+                -1.3489938974380493
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                10,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1826047400.mmh",
+                    "UID": 1826047400,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Center_Platform_Collider7",
+            "tag": "MetalFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1380825333,
+            "ParentUID": 165511528,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                6.1049737930297852,
+                -5.2140512466430664,
+                -4.2920541763305664
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                10,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1980793672.mmh",
+                    "UID": 1980793672,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
                         1,
                         1
                     ]
@@ -28144,9 +28422,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.2239925861358643,
+                4.6286745071411133,
                 -5.2092962265014648,
-                -2.0408384799957275
+                1.3017668724060059
             ],
             "Rotation": [
                 0,
@@ -28163,6 +28441,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/2026362560.mmh",
+                    "UID": 2026362560,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -28194,9 +28492,98 @@
                         1
                     ],
                     "Scale": [
-                        1.5499999523162842,
                         1,
-                        1.1499999761581421
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Center_Platform_Collider_3_Fixed",
+            "tag": "MetalFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1442953866,
+            "ParentUID": 165511528,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -4.9893603324890137,
+                -5.2799892425537109,
+                -0.51885920763015747
+            ],
+            "Rotation": [
+                -0.26887577772140503,
+                0.65399223566055298,
+                0.65399456024169922,
+                0.26886987686157227
+            ],
+            "Scale": [
+                4.655428409576416,
+                10.000002861022949,
+                0.99999696016311646
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        0.98701298236846924,
+                        0,
+                        0
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": true,
+                    "LockLinearY": true,
+                    "LockLinearZ": true,
+                    "LockAngularX": true,
+                    "LockAngularY": true,
+                    "LockAngularZ": true,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
@@ -28213,9 +28600,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -4.9100170135498047,
-                -5.1950016021728516,
-                -0.73702472448348999
+                -4.4387946128845215,
+                -5.1950035095214844,
+                -0.79833650588989258
             ],
             "Rotation": [
                 -0.00097520963754504919,
@@ -28234,73 +28621,24 @@
                     "Active": true
                 },
                 {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1656147143.mmh",
+                    "UID": 1656147143,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
                         1
                     ],
-                    "Scale": [
-                        0.98000001907348633,
+                    "alternColorStencil": [
                         1,
-                        0.89999997615814209
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Center_Platform_Collider1",
-            "tag": "MetalFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 2135621291,
-            "ParentUID": 165511528,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0.70313191413879395,
-                -5.18914794921875,
-                2.4194116592407227
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                10,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -28332,78 +28670,9 @@
                         1
                     ],
                     "Scale": [
-                        0.70999997854232788,
                         1,
-                        0.94999998807907104
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Center_Platform_Collider1",
-            "tag": "MetalFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 912117019,
-            "ParentUID": 165511528,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                5.7534189224243164,
-                -5.1891517639160156,
-                2.3125810623168945
-            ],
-            "Rotation": [
-                -0.0087619833648204803,
-                -0.38484495878219604,
-                0.024318553507328033,
-                0.92261916399002075
-            ],
-            "Scale": [
-                0.99999964237213135,
-                10.000001907348633,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
+                        1,
                         1
-                    ],
-                    "Scale": [
-                        0.30000001192092896,
-                        1,
-                        1.1000000238418579
                     ]
                 }
             ]
@@ -28421,7 +28690,7 @@
             "Static": false,
             "Position": [
                 0,
-                0.15818595886230469,
+                0,
                 0
             ],
             "Rotation": [
@@ -28455,8 +28724,8 @@
             "Static": false,
             "Position": [
                 -2.7537763118743896,
-                -5.3854007720947266,
-                20.423851013183594
+                -5.1800003051757813,
+                20.444091796875
             ],
             "Rotation": [
                 0,
@@ -28475,10 +28744,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/726246803.mmh",
+                    "UID": 726246803,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28524,7 +28813,7 @@
             "Static": false,
             "Position": [
                 18.88658332824707,
-                -5.3854007720947266,
+                -5.179999828338623,
                 19.166877746582031
             ],
             "Rotation": [
@@ -28544,10 +28833,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1673686695.mmh",
+                    "UID": 1673686695,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28593,7 +28902,7 @@
             "Static": false,
             "Position": [
                 25.917383193969727,
-                -5.3854007720947266,
+                -5.179999828338623,
                 17.115325927734375
             ],
             "Rotation": [
@@ -28613,10 +28922,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/881947490.mmh",
+                    "UID": 881947490,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28662,7 +28991,7 @@
             "Static": false,
             "Position": [
                 28.000579833984375,
-                -5.3854007720947266,
+                -5.179999828338623,
                 -0.45676225423812866
             ],
             "Rotation": [
@@ -28682,10 +29011,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1213766266.mmh",
+                    "UID": 1213766266,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28731,7 +29080,7 @@
             "Static": false,
             "Position": [
                 24.066947937011719,
-                -5.3853969573974609,
+                -5.179999828338623,
                 -20.596511840820313
             ],
             "Rotation": [
@@ -28751,10 +29100,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1950882440.mmh",
+                    "UID": 1950882440,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28800,7 +29169,7 @@
             "Static": false,
             "Position": [
                 7.6073555946350098,
-                -5.3854026794433594,
+                -5.179999828338623,
                 -11.270351409912109
             ],
             "Rotation": [
@@ -28820,10 +29189,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/408885876.mmh",
+                    "UID": 408885876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -28869,7 +29258,7 @@
             "Static": false,
             "Position": [
                 5.760685920715332,
-                -4.4916486740112305,
+                -5.179999828338623,
                 -10.255757331848145
             ],
             "Rotation": [
@@ -28881,12 +29270,32 @@
             "Scale": [
                 2.5994968414306641,
                 10,
-                2.6311988830566406
+                1.6000000238418579
             ],
             "Components": [
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 1,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 18,
@@ -28938,7 +29347,7 @@
             "Static": false,
             "Position": [
                 0.65161281824111938,
-                -5.3853998184204102,
+                -5.179999828338623,
                 16.768606185913086
             ],
             "Rotation": [
@@ -28958,10 +29367,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/726246803.mmh",
+                    "UID": 726246803,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29007,7 +29436,7 @@
             "Static": false,
             "Position": [
                 11.149111747741699,
-                -5.3853950500488281,
+                -5.179999828338623,
                 14.277399063110352
             ],
             "Rotation": [
@@ -29027,10 +29456,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/726246803.mmh",
+                    "UID": 726246803,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29076,7 +29525,7 @@
             "Static": false,
             "Position": [
                 7.1017861366271973,
-                -5.3853902816772461,
+                -5.179999828338623,
                 -10.321699142456055
             ],
             "Rotation": [
@@ -29096,10 +29545,30 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/726246803.mmh",
+                    "UID": 726246803,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
-                    "Gravity": true,
+                    "Gravity": false,
                     "LockLinearX": false,
                     "LockLinearY": false,
                     "LockLinearZ": false,
@@ -29145,7 +29614,7 @@
             "Static": false,
             "Position": [
                 0,
-                0.16884613037109375,
+                0,
                 0
             ],
             "Rotation": [
@@ -29179,7 +29648,7 @@
             "Static": false,
             "Position": [
                 -19.808080673217773,
-                -5.3853988647460938,
+                -5.179999828338623,
                 -19.135244369506836
             ],
             "Rotation": [
@@ -29197,6 +29666,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/631129927.mmh",
+                    "UID": 631129927,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29248,7 +29737,7 @@
             "Static": false,
             "Position": [
                 -26.62213134765625,
-                -5.3854007720947266,
+                -5.179999828338623,
                 2.5516819953918457
             ],
             "Rotation": [
@@ -29266,6 +29755,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1177517742.mmh",
+                    "UID": 1177517742,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29317,7 +29826,7 @@
             "Static": false,
             "Position": [
                 -18.56104850769043,
-                -5.4736261367797852,
+                -5.179999828338623,
                 -5.3276114463806152
             ],
             "Rotation": [
@@ -29335,6 +29844,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1921975204.mmh",
+                    "UID": 1921975204,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29386,7 +29915,7 @@
             "Static": false,
             "Position": [
                 -15.439141273498535,
-                -5.3854007720947266,
+                -5.179999828338623,
                 18.297290802001953
             ],
             "Rotation": [
@@ -29404,6 +29933,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/129633114.mmh",
+                    "UID": 129633114,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29455,7 +30004,7 @@
             "Static": false,
             "Position": [
                 -20.350929260253906,
-                -5.385406494140625,
+                -5.179999828338623,
                 -15.549962043762207
             ],
             "Rotation": [
@@ -29473,6 +30022,115 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/631129927.mmh",
+                    "UID": 631129927,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": true,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Right_Platform_Collider1",
+            "tag": "MetalFloor",
+            "layer": "Default",
+            "Active": true,
+            "UID": 898610573,
+            "ParentUID": 2137059787,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -18.598150253295898,
+                -5.179999828338623,
+                17.875095367431641
+            ],
+            "Rotation": [
+                0,
+                0.41471433639526367,
+                0,
+                0.90995168685913086
+            ],
+            "Scale": [
+                1.6000006198883057,
+                10,
+                1.3000000715255737
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/631129927.mmh",
+                    "UID": 631129927,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29523,18 +30181,18 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -20.061019897460938,
-                -5.3854150772094727,
-                16.471614837646484
+                -20.222114562988281,
+                -5.179999828338623,
+                15.915711402893066
             ],
             "Rotation": [
                 0,
-                0.37521511316299438,
+                0.37947213649749756,
                 0,
-                0.9269377589225769
+                0.92520314455032349
             ],
             "Scale": [
-                1.6000010967254639,
+                1.6000006198883057,
                 10,
                 1.3000000715255737
             ],
@@ -29544,6 +30202,26 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/631129927.mmh",
+                    "UID": 631129927,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
@@ -29575,76 +30253,7 @@
                     "Scale": [
                         1,
                         1,
-                        1.0499999523162842
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Right_Platform_Collider1",
-            "tag": "MetalFloor",
-            "layer": "Default",
-            "Active": true,
-            "UID": 2136812273,
-            "ParentUID": 2137059787,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -10.053667068481445,
-                4.9937171936035156,
-                13.370247840881348
-            ],
-            "Rotation": [
-                0,
-                0.41389906406402588,
-                0,
-                0.91032290458679199
-            ],
-            "Scale": [
-                1.6000030040740967,
-                10.000001907348633,
-                1.3000040054321289
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 14,
-                    "Active": true,
-                    "kinematic": true,
-                    "Gravity": true,
-                    "LockLinearX": false,
-                    "LockLinearY": false,
-                    "LockLinearZ": false,
-                    "LockAngularX": false,
-                    "LockAngularY": false,
-                    "LockAngularZ": false,
-                    "Mass": 10,
-                    "Density": 1
-                },
-                {
-                    "Type": 18,
-                    "Active": true,
-                    "isTrigger": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
                         1
-                    ],
-                    "Scale": [
-                        4,
-                        1,
-                        1.0499999523162842
                     ]
                 }
             ]
@@ -29716,6 +30325,26 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
@@ -29783,6 +30412,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29854,6 +30503,26 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
@@ -29921,6 +30590,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -29992,6 +30681,26 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
@@ -30059,6 +30768,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -30130,6 +30859,26 @@
                     "Active": true
                 },
                 {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
                     "Type": 14,
                     "Active": true,
                     "kinematic": true,
@@ -30197,6 +30946,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": false,
+                    "Path": "Library\/Meshes\/1313575480.mmh",
+                    "UID": 1313575480,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0.89999997615814209,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -30545,9 +31314,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -30601,9 +31370,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -30911,9 +31680,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -30967,9 +31736,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -31277,9 +32046,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -31333,9 +32102,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -31643,9 +32412,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -31699,9 +32468,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32009,9 +32778,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32065,9 +32834,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32375,9 +33144,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32431,9 +33200,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32741,9 +33510,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32797,9 +33566,9 @@
                     ],
                     "Rotation": [
                         0,
-                        -0.8544502854347229,
+                        -0.85445040464401245,
                         0,
-                        0.51953309774398804
+                        0.51953315734863281
                     ],
                     "Scale": [
                         1,
@@ -32966,10 +33735,10 @@
                         0.056709360331296921
                     ],
                     "Rotation": [
-                        -0.0271739661693573,
-                        0.19621393084526062,
-                        -0.30611684918403625,
-                        0.93115741014480591
+                        -0.027173969894647598,
+                        0.19621396064758301,
+                        -0.30611687898635864,
+                        0.93115752935409546
                     ],
                     "Scale": [
                         0.99999988079071045,
@@ -32994,10 +33763,10 @@
                         -0.031259376555681229
                     ],
                     "Rotation": [
-                        0.41807758808135986,
-                        -0.27812951803207397,
-                        -0.21258673071861267,
-                        0.8382493257522583
+                        0.41807764768600464,
+                        -0.27812954783439636,
+                        -0.21258676052093506,
+                        0.83824944496154785
                     ],
                     "Scale": [
                         1,
@@ -33386,10 +34155,10 @@
                         0.039999950677156448
                     ],
                     "Rotation": [
-                        -0.35784733295440674,
-                        -0.084992274641990662,
-                        -0.032559704035520554,
-                        0.92933386564254761
+                        -0.35784736275672913,
+                        -0.084992282092571259,
+                        -0.032559707760810852,
+                        0.92933398485183716
                     ],
                     "Scale": [
                         0.99999988079071045,
@@ -33498,10 +34267,10 @@
                         0.039074663072824478
                     ],
                     "Rotation": [
-                        -9.1660311341001943e-08,
-                        -0.31220504641532898,
-                        -3.4376708413219603e-07,
-                        0.95001471042633057
+                        -9.1660325551856658e-08,
+                        -0.31220507621765137,
+                        -3.4376711255390546e-07,
+                        0.95001482963562012
                     ],
                     "Scale": [
                         0.99999982118606567,
@@ -33862,10 +34631,10 @@
                         -0.039136301726102829
                     ],
                     "Rotation": [
-                        -0.04409877210855484,
-                        0.21238310635089874,
-                        -0.031702034175395966,
-                        0.97567600011825562
+                        -0.044098775833845139,
+                        0.21238313615322113,
+                        -0.031702037900686264,
+                        0.97567611932754517
                     ],
                     "Scale": [
                         1.0000001192092896,
@@ -34254,10 +35023,10 @@
                         0.025654623284935951
                     ],
                     "Rotation": [
-                        0.41681963205337524,
-                        -0.57119274139404297,
-                        0.41681960225105286,
-                        0.5711931586265564
+                        0.41681969165802002,
+                        -0.57119280099868774,
+                        0.41681966185569763,
+                        0.57119321823120117
                     ],
                     "Scale": [
                         1,
@@ -34674,10 +35443,10 @@
                         -0.19471836090087891
                     ],
                     "Rotation": [
-                        0.19392229616641998,
-                        -2.7353405651631135e-10,
-                        1.3877789462175682e-17,
-                        0.98101699352264404
+                        0.1939222663640976,
+                        -2.7353402876073574e-10,
+                        1.3877787807814457e-17,
+                        0.98101687431335449
                     ],
                     "Scale": [
                         1,
@@ -35244,6 +36013,120 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Fasted Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1973663272,
+                    "ParentUID": 59638478,
+                    "PrefabReference": 1973663272,
+                    "PrefabID": 2073226706,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.10300000011920929,
+                        1.0989999771118164,
+                        0.041000001132488251
+                    ],
+                    "Rotation": [
+                        5.1013579138725618e-08,
+                        -0.98289668560028076,
+                        5.1013579138725618e-08,
+                        -0.18415790796279907
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ],
+                    "PrefabObjects": [
+                        {
+                            "name": "Dust fasted",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1669506617,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1669506617,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -0.030359268188476563,
+                                -0.098569869995117188,
+                                -0.00864410400390625
+                            ],
+                            "Rotation": [
+                                -0.7107464075088501,
+                                8.4629483865228394e-08,
+                                -8.3760532731957937e-08,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999880790710449,
+                                0.99999880790710449
+                            ]
+                        },
+                        {
+                            "name": "Slowed Trail",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1283429392,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1283429392,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -14.062906265258789,
+                                2.5918512344360352,
+                                10.017618179321289
+                            ],
+                            "Rotation": [
+                                -6.5570951335303107e-08,
+                                -0.84956026077270508,
+                                -1.4235808976081898e-07,
+                                -0.52749162912368774
+                            ],
+                            "Scale": [
+                                1.0000001192092896,
+                                1,
+                                1.0000001192092896
+                            ]
+                        },
+                        {
+                            "name": "Dust Slowed",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 638363503,
+                            "ParentUID": 1283429392,
+                            "PrefabID": 0,
+                            "PrefabReference": 638363503,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                -0.0081720352172851563
+                            ],
+                            "Rotation": [
+                                -0.71074634790420532,
+                                0,
+                                0,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999886751174927,
+                                0.99999892711639404
+                            ]
+                        }
                     ]
                 }
             ]

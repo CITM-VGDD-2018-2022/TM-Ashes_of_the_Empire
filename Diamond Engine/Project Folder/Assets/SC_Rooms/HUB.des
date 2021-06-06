@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -71.861457824707031,
-        1.9303619861602783,
-        -10.766115188598633
+        -1.6156997680664063,
+        31.044225692749023,
+        -36.843742370605469
     ],
     "EditorCameraZ": [
-        0.68119800090789795,
-        -0.72416645288467407,
-        -0.10748100280761719
+        -0.081315234303474426,
+        -0.69965165853500366,
+        0.70984178781509399
     ],
     "EditorCameraY": [
-        0.71525025367736816,
-        0.68962514400482178,
-        -0.11328816413879395
+        -0.079627156257629395,
+        0.71448409557342529,
+        0.69510573148727417
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -78,9 +78,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.7467160224914551,
-                0.42237520217895508,
-                15.345512390136719
+                -5.4453039169311523,
+                0.42237517237663269,
+                -13.012167930603027
             ],
             "Rotation": [
                 -2.120925657322914e-09,
@@ -2613,6 +2613,120 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "name": "Fasted Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1973663272,
+                    "ParentUID": 728409309,
+                    "PrefabReference": 1973663272,
+                    "PrefabID": 2073226706,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.10300000011920929,
+                        1.0989999771118164,
+                        0.041000001132488251
+                    ],
+                    "Rotation": [
+                        5.1013579138725618e-08,
+                        -0.98289668560028076,
+                        5.1013579138725618e-08,
+                        -0.18415790796279907
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ],
+                    "PrefabObjects": [
+                        {
+                            "name": "Dust fasted",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1669506617,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1669506617,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -0.030359268188476563,
+                                -0.098569869995117188,
+                                -0.00864410400390625
+                            ],
+                            "Rotation": [
+                                -0.7107464075088501,
+                                8.4629483865228394e-08,
+                                -8.3760532731957937e-08,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999880790710449,
+                                0.99999880790710449
+                            ]
+                        },
+                        {
+                            "name": "Slowed Trail",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 1283429392,
+                            "ParentUID": 1973663272,
+                            "PrefabID": 0,
+                            "PrefabReference": 1283429392,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                -14.062906265258789,
+                                2.5918512344360352,
+                                10.017618179321289
+                            ],
+                            "Rotation": [
+                                -6.5570951335303107e-08,
+                                -0.84956026077270508,
+                                -1.4235808976081898e-07,
+                                -0.52749162912368774
+                            ],
+                            "Scale": [
+                                1.0000001192092896,
+                                1,
+                                1.0000001192092896
+                            ]
+                        },
+                        {
+                            "name": "Dust Slowed",
+                            "tag": "Untagged",
+                            "layer": "Default",
+                            "Active": true,
+                            "UID": 638363503,
+                            "ParentUID": 1283429392,
+                            "PrefabID": 0,
+                            "PrefabReference": 638363503,
+                            "DontDestroy": false,
+                            "Static": false,
+                            "Position": [
+                                0,
+                                0,
+                                -0.0081720352172851563
+                            ],
+                            "Rotation": [
+                                -0.71074634790420532,
+                                0,
+                                0,
+                                0.70344835519790649
+                            ],
+                            "Scale": [
+                                1,
+                                0.99999886751174927,
+                                0.99999892711639404
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -2630,7 +2744,7 @@
             "Position": [
                 -19.394086837768555,
                 17.199018478393555,
-                -1.4977355003356934
+                -23.132823944091797
             ],
             "Rotation": [
                 0.24263942241668701,
@@ -2656,7 +2770,7 @@
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 100,
                     "vFOV": 12.239999771118164,
-                    "hFOV": 23.540000915527344,
+                    "hFOV": 23.520000457763672,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -5752,8 +5866,8 @@
                     "skill_name": "UDamageHeat",
                     "children_1": 720948924,
                     "children_2": 58943894,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -5903,8 +6017,8 @@
                     "children_1": 1123596302,
                     "parent_1": 1824371181,
                     "oppositeNode": 58943894,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6054,8 +6168,8 @@
                     "children_1": 1123596302,
                     "parent_1": 1824371181,
                     "oppositeNode": 720948924,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6199,8 +6313,8 @@
                     "children_2": 1829051689,
                     "parent_1": 720948924,
                     "parent_2": 58943894,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6357,8 +6471,8 @@
                     "children_1": 137657997,
                     "parent_1": 1123596302,
                     "oppositeNode": 1829051689,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6508,8 +6622,8 @@
                     "children_1": 137657997,
                     "parent_1": 1123596302,
                     "oppositeNode": 1021185009,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6659,8 +6773,8 @@
                     "children_1": 305460945,
                     "parent_1": 1021185009,
                     "parent_2": 1829051689,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6794,8 +6908,8 @@
                     "ownedButtonUnhovered": 1182423882,
                     "skill_name": "UDash",
                     "parent_1": 137657997,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -6978,8 +7092,8 @@
                     "skill_name": "DMaxHPS",
                     "children_1": 1607170750,
                     "oppositeNode": 1354776957,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7121,8 +7235,8 @@
                     "skill_name": "DDmgRed",
                     "children_1": 1607170750,
                     "oppositeNode": 460162084,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7272,8 +7386,8 @@
                     "children_1": 732806743,
                     "parent_1": 460162084,
                     "parent_2": 1354776957,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7429,8 +7543,8 @@
                     "skill_name": "DComboHeal",
                     "children_1": 950483057,
                     "parent_1": 1607170750,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7586,8 +7700,8 @@
                     "skill_name": "DComboFnshHeal",
                     "children_1": 1435809152,
                     "parent_1": 732806743,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7730,8 +7844,8 @@
                     "children_1": 1596525268,
                     "children_2": 1045396363,
                     "parent_1": 950483057,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -7873,8 +7987,8 @@
                     "skill_name": "DHealEfct",
                     "parent_1": 1435809152,
                     "oppositeNode": 1045396363,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8016,8 +8130,8 @@
                     "skill_name": "DAvoidDmg",
                     "parent_1": 1435809152,
                     "oppositeNode": 1596525268,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8313,8 +8427,8 @@
                     "skill_name": "ABlasterDmg",
                     "children_1": 2118389588,
                     "children_2": 1244328558,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8464,8 +8578,8 @@
                     "children_1": 1473497215,
                     "parent_1": 1572989137,
                     "oppositeNode": 1244328558,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8615,8 +8729,8 @@
                     "children_1": 1473497215,
                     "parent_1": 1572989137,
                     "oppositeNode": 2118389588,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8759,8 +8873,8 @@
                     "children_1": 303232640,
                     "parent_1": 2118389588,
                     "parent_2": 1244328558,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -8902,8 +9016,8 @@
                     "skill_name": "ASniperDmg",
                     "children_1": 1193292965,
                     "parent_1": 1473497215,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -9053,8 +9167,8 @@
                     "children_1": 592914278,
                     "children_2": 343923757,
                     "parent_1": 303232640,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -9196,8 +9310,8 @@
                     "skill_name": "AHPMissDmgBlaster",
                     "parent_1": 1193292965,
                     "oppositeNode": 343923757,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -9339,8 +9453,8 @@
                     "skill_name": "AHPMissDmgSniper",
                     "parent_1": 1193292965,
                     "oppositeNode": 592914278,
-                    "text_description": 97862587,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 97862587,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
                     "panelImage": 43469925,
@@ -9935,8 +10049,8 @@
                     "skill_name": "GForceReg",
                     "children_1": 695948772,
                     "children_2": 1407390158,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10086,8 +10200,8 @@
                     "children_1": 525220436,
                     "parent_1": 2129789327,
                     "oppositeNode": 1407390158,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10237,8 +10351,8 @@
                     "children_1": 525220436,
                     "parent_1": 2129789327,
                     "oppositeNode": 695948772,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10381,8 +10495,8 @@
                     "children_1": 1446875919,
                     "parent_1": 695948772,
                     "parent_2": 1407390158,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10525,8 +10639,8 @@
                     "children_1": 772807125,
                     "children_2": 1356414027,
                     "parent_1": 525220436,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10676,8 +10790,8 @@
                     "children_1": 727434170,
                     "parent_1": 1446875919,
                     "oppositeNode": 1356414027,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10827,8 +10941,8 @@
                     "children_1": 727434170,
                     "parent_1": 1446875919,
                     "oppositeNode": 772807125,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -10970,8 +11084,8 @@
                     "skill_name": "GHPForceReg",
                     "parent_1": 772807125,
                     "parent_2": 1356414027,
-                    "text_description": 2027349240,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 2027349240,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
                     "panelImage": 1773988077,
@@ -11723,8 +11837,8 @@
                     "skill_name": "PMovSpd",
                     "children_1": 282933854,
                     "oppositeNode": 1488569487,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -11873,8 +11987,8 @@
                     "skill_name": "PProjRange",
                     "children_1": 282933854,
                     "oppositeNode": 1795127826,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12017,8 +12131,8 @@
                     "children_1": 1417839050,
                     "parent_1": 1795127826,
                     "parent_2": 1488569487,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12160,8 +12274,8 @@
                     "skill_name": "PHeat",
                     "children_1": 139182048,
                     "parent_1": 282933854,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12311,8 +12425,8 @@
                     "children_1": 547148544,
                     "children_2": 963851338,
                     "parent_1": 1417839050,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12454,8 +12568,8 @@
                     "skill_name": "PIncDmg",
                     "parent_1": 139182048,
                     "oppositeNode": 963851338,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12597,8 +12711,8 @@
                     "skill_name": "PRateFire",
                     "parent_1": 139182048,
                     "oppositeNode": 547148544,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12780,8 +12894,8 @@
                     "ownedButtonUnhovered": 694136137,
                     "skill_name": "SeStatEfct",
                     "children_1": 864263089,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -12924,8 +13038,8 @@
                     "children_1": 1194390551,
                     "children_2": 1949910542,
                     "parent_1": 1677675272,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13075,8 +13189,8 @@
                     "children_1": 2111763395,
                     "parent_1": 864263089,
                     "oppositeNode": 1949910542,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13226,8 +13340,8 @@
                     "children_1": 2111763395,
                     "parent_1": 864263089,
                     "oppositeNode": 1194390551,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13377,8 +13491,8 @@
                     "children_1": 999128459,
                     "parent_1": 1194390551,
                     "parent_2": 1949910542,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13512,8 +13626,8 @@
                     "ownedButtonUnhovered": 471823270,
                     "skill_name": "SeDmgInc",
                     "parent_1": 2111763395,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13688,8 +13802,8 @@
                     "ownedButtonUnhovered": 1096582681,
                     "skill_name": "SpNonCharged",
                     "children_1": 492922447,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13832,8 +13946,8 @@
                     "children_1": 965003527,
                     "children_2": 484656872,
                     "parent_1": 2040118087,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -13983,8 +14097,8 @@
                     "children_1": 1033023848,
                     "parent_1": 492922447,
                     "oppositeNode": 484656872,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -14134,8 +14248,8 @@
                     "children_1": 1033023848,
                     "parent_1": 492922447,
                     "oppositeNode": 965003527,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -14285,8 +14399,8 @@
                     "children_1": 925983578,
                     "parent_1": 965003527,
                     "parent_2": 484656872,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -14420,8 +14534,8 @@
                     "ownedButtonUnhovered": 569474747,
                     "skill_name": "SpMaxDmg",
                     "parent_1": 1033023848,
-                    "text_description": 571255318,
-                    "hub_skill_controller": 1070040184,
+                    "textDescriptionObj": 571255318,
+                    "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
                     "panelImage": 653981771,
@@ -17916,6 +18030,325 @@
                         1,
                         1
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Return Popup",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1289421363,
+            "ParentUID": 85098893,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        77.199996948242188,
+                        -84.300003051757813
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        20,
+                        10.300000190734863
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Assets\/UI\/MENU\/bar_hover.png",
+                    "LibraryPath": "Library\/Textures\/1884509864.dds",
+                    "UID": 1884509864,
+                    "fadeValue": 0
+                }
+            ]
+        },
+        {
+            "name": "Text",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1693301529,
+            "ParentUID": 1289421363,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        -17.899999618530273,
+                        -3.0999999046325684
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        6,
+                        11
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/744544911.mat",
+                    "MaterialUID": 744544911
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "text": "RETURN ",
+                    "maxTextLenght": 0,
+                    "fontName": "Library\/Fonts\/renner-medium.ttf",
+                    "textColor": [
+                        0.87000000476837158,
+                        0.69999998807907104,
+                        0.40000000596046448
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Image",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1083464797,
+            "ParentUID": 1289421363,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        14.899999618530273,
+                        0
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        2.9000000953674316,
+                        5.5
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Assets\/UI\/MENU\/button_return.png",
+                    "LibraryPath": "Library\/Textures\/834295412.dds",
+                    "UID": 834295412,
+                    "fadeValue": 0
+                }
+            ]
+        },
+        {
+            "name": "Image",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1539531062,
+            "ParentUID": 1289421363,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        8.1999998092651367,
+                        0
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        2.7000000476837158,
+                        5.5
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Empty",
+                    "LibraryPath": "Library\/Textures\/278754960.dds",
+                    "UID": 278754960,
+                    "fadeValue": 0
+                }
+            ]
+        },
+        {
+            "name": "Image",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 635762085,
+            "ParentUID": 1289421363,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        2,
+                        0
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        2.7000000476837158,
+                        5.5
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Empty",
+                    "LibraryPath": "Library\/Textures\/389352221.dds",
+                    "UID": 389352221,
+                    "fadeValue": 0
                 }
             ]
         },
@@ -22788,325 +23221,6 @@
             ]
         },
         {
-            "name": "Return Popup",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1289421363,
-            "ParentUID": 285584709,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        77.199996948242188,
-                        -84.300003051757813
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        20,
-                        10.300000190734863
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Assets\/UI\/MENU\/bar_hover.png",
-                    "LibraryPath": "Library\/Textures\/1884509864.dds",
-                    "UID": 1884509864,
-                    "fadeValue": 0
-                }
-            ]
-        },
-        {
-            "name": "Text",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1693301529,
-            "ParentUID": 1289421363,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        -17.899999618530273,
-                        -3.0999999046325684
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        6,
-                        11
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/744544911.mat",
-                    "MaterialUID": 744544911
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "text": "RETURN ",
-                    "maxTextLenght": 0,
-                    "fontName": "Library\/Fonts\/renner-medium.ttf",
-                    "textColor": [
-                        0.87000000476837158,
-                        0.69999998807907104,
-                        0.40000000596046448
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Image",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1083464797,
-            "ParentUID": 1289421363,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        14.899999618530273,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        2.9000000953674316,
-                        5.5
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Assets\/UI\/MENU\/button_return.png",
-                    "LibraryPath": "Library\/Textures\/834295412.dds",
-                    "UID": 834295412,
-                    "fadeValue": 0
-                }
-            ]
-        },
-        {
-            "name": "Image",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1539531062,
-            "ParentUID": 1289421363,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        8.1999998092651367,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        2.7000000476837158,
-                        5.5
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Empty",
-                    "LibraryPath": "Library\/Textures\/278754960.dds",
-                    "UID": 278754960,
-                    "fadeValue": 0
-                }
-            ]
-        },
-        {
-            "name": "Image",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 635762085,
-            "ParentUID": 1289421363,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true,
-                    "Position": [
-                        2,
-                        0
-                    ],
-                    "Rotation": 0,
-                    "Size": [
-                        2.7000000476837158,
-                        5.5
-                    ]
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
-                },
-                {
-                    "Type": 11,
-                    "Active": true,
-                    "AssetPath": "Empty",
-                    "LibraryPath": "Library\/Textures\/389352221.dds",
-                    "UID": 389352221,
-                    "fadeValue": 0
-                }
-            ]
-        },
-        {
             "name": "PostCinematicDialogue",
             "tag": "Untagged",
             "layer": "Default",
@@ -27189,20 +27303,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -15.199999809265137,
+                -17.874961853027344,
                 3.4500000476837158,
                 3.6500000953674316
             ],
             "Rotation": [
                 -0.70712375640869141,
-                4.2149153500758985e-07,
-                -4.2146277223764628e-07,
+                4.2149250134571048e-07,
+                -4.2146180589952564e-07,
                 0.70708978176116943
             ],
             "Scale": [
-                0.72950106859207153,
-                11.383183479309082,
-                9.3329839706420898
+                2.7300000190734863,
+                11.383062362670898,
+                9.3328628540039063
             ],
             "Components": [
                 {
@@ -28168,7 +28282,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -11.810000419616699,
+                -15.337106704711914,
                 0.11999999731779099,
                 -7.190000057220459
             ],
@@ -28180,8 +28294,8 @@
             ],
             "Scale": [
                 0.56919413805007935,
-                3.9001970291137695,
-                2.7424170970916748
+                7.5999999046325684,
+                4.2420001029968262
             ],
             "Components": [
                 {
@@ -29503,7 +29617,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -10.739999771118164,
+                -10.318039894104004,
                 0.4699999988079071,
                 8.6000003814697266
             ],
@@ -30823,104 +30937,6 @@
                         1,
                         1
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Hub Controller",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1070040184,
-            "ParentUID": 734982776,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "List_Of_Dialogs"
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "HubTextController",
-                    "textController": 694046767,
-                    "dialog": 206711398,
-                    "mando": 728409309,
-                    "greef": 1079248432,
-                    "greefNotification": 186378143,
-                    "total_interactions": 3,
-                    "total_stages": 6,
-                    "maximum_distance_to_interact_squared": 15,
-                    "insideColliderTextActive": false,
-                    "boKatanStage": 0,
-                    "greefStage": 0,
-                    "ashokaStage": 0,
-                    "caraStage": 0,
-                    "groguStage": 0,
-                    "boKatanInteractionNum": 0,
-                    "greefInteractionNum": 0,
-                    "ashokaInteractionNum": 0,
-                    "caraInteractionNum": 0,
-                    "groguInteractionNum": 0,
-                    "boKatanHasInteracted": true,
-                    "greefHasInteracted": true,
-                    "ashokaHasInteracted": true,
-                    "caraHasInteracted": true,
-                    "groguHasInteracted": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "HubSkillTreeController",
-                    "mando_tree": 408436917,
-                    "grogu_tree": 1603578304,
-                    "weapon_tree": 815764826,
-                    "maximum_distance_to_interact_squared_skill": 20,
-                    "mandoText": 1965028590,
-                    "groguText": 254437374,
-                    "weaponText": 560237047,
-                    "beskarResourceText": 221328869,
-                    "macaronResourceText": 953232161,
-                    "scrapResourceText": 1162272005
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "Skill_Trees_Data_Entry"
-                },
-                {
-                    "Type": 13,
-                    "Active": true,
-                    "evName": "Empty",
-                    "audBankReference": "UI",
-                    "pitch": 50,
-                    "playOnAwake": false,
-                    "isMuted": false,
-                    "isMusic": false
                 }
             ]
         },
@@ -41038,6 +41054,104 @@
                 {
                     "Type": 1,
                     "Active": true
+                }
+            ]
+        },
+        {
+            "name": "Hub Controller",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1070040184,
+            "ParentUID": 1481651339,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "List_Of_Dialogs"
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "HubTextController",
+                    "textController": 694046767,
+                    "dialog": 206711398,
+                    "mando": 728409309,
+                    "greef": 1079248432,
+                    "greefNotification": 186378143,
+                    "total_interactions": 3,
+                    "total_stages": 6,
+                    "maximum_distance_to_interact_squared": 15,
+                    "insideColliderTextActive": false,
+                    "boKatanStage": 0,
+                    "greefStage": 0,
+                    "ashokaStage": 0,
+                    "caraStage": 0,
+                    "groguStage": 0,
+                    "boKatanInteractionNum": 0,
+                    "greefInteractionNum": 0,
+                    "ashokaInteractionNum": 0,
+                    "caraInteractionNum": 0,
+                    "groguInteractionNum": 0,
+                    "boKatanHasInteracted": true,
+                    "greefHasInteracted": true,
+                    "ashokaHasInteracted": true,
+                    "caraHasInteracted": true,
+                    "groguHasInteracted": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "HubSkillTreeController",
+                    "mando_tree": 408436917,
+                    "grogu_tree": 1603578304,
+                    "weapon_tree": 815764826,
+                    "maximum_distance_to_interact_squared_skill": 20,
+                    "mandoText": 1965028590,
+                    "groguText": 254437374,
+                    "weaponText": 560237047,
+                    "beskarResourceText": 221328869,
+                    "macaronResourceText": 953232161,
+                    "scrapResourceText": 1162272005
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Skill_Trees_Data_Entry"
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "UI",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         }

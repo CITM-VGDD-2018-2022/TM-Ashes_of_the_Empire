@@ -150,12 +150,14 @@ public class MofGuideonRework : Entity
 
     public float maxHealthPoints1 = 4500.0f;
     public float maxHealthPoints2 = 4500.0f;
-    private float currentHealthPoints = 0.0f; //Set in start
+    public float currentHealthPoints { get; private set; } = 0.0f;
     private float limboHealth = 0.0f;
     private float damageMult = 1.0f;
     public float damageRecieveMult = 1f;
 
     private bool straightPath = false;
+
+    private bool isInvencible = false;
 
     // Animations
     private float currAnimationPlaySpd = 1f;
@@ -270,6 +272,7 @@ public class MofGuideonRework : Entity
     //Pre burst dash
     public float preBurstDashSpeed = 10.0f;
     public float preBurstDashDistance = 7.0f;
+    public float preBurstAngleDash = 45f;
 
     private float preBurstDashTimer = 0.0f;
 
@@ -401,6 +404,8 @@ public class MofGuideonRework : Entity
             auraBurstParticle = auraBurstParticleObj.GetComponent<ParticleSystem>();
         }
 
+
+        damaged = 0.0f;
 
         //Props
         if (cape != null)
@@ -1118,7 +1123,10 @@ public class MofGuideonRework : Entity
             Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
 
             if (saberMaterial != null)
+            {
                 saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.9f, 1.0f, 0.0f));
+            }
         }
         if (gun != null)
         {
@@ -1134,10 +1142,9 @@ public class MofGuideonRework : Entity
 
         if (saberMaterial != null)
         {
-            float shineValue = comboChargeTimer / (comboChargeDuration * 0.5f);
-            Mathf.Clamp01(shineValue);
+            float shineValue = comboChargeTimer / comboChargeDuration;
 
-            saberMaterial.SetFloatUniform("shineColorValue", shineValue * 0.5f);
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
 
         if (comboDirectionTimer > 0.0f)
@@ -1170,8 +1177,12 @@ public class MofGuideonRework : Entity
 
     private void EndMeleeCombo1Charge()
     {
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
+
         Debug.Log("End melee combo 1 charge");
     }
+
 
     private void StartMeleeCombo4Charge()
     {
@@ -1189,6 +1200,7 @@ public class MofGuideonRework : Entity
             if (saberMaterial != null)
             {
                 saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.9f, 1.0f, 0.0f));
             }
             DeActivateSaber();
         }
@@ -1202,6 +1214,13 @@ public class MofGuideonRework : Entity
     private void UpdateMeleeCombo4Charge()
     {
         Debug.Log("Update melee combo 4 charge");
+
+        if (saberMaterial != null)
+        {
+            float shineValue = comboChargeTimer / comboChargeDuration;
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
 
         if (comboDirectionTimer > 0.0f)
         {
@@ -1231,6 +1250,9 @@ public class MofGuideonRework : Entity
 
     private void EndMeleeCombo4Charge()
     {
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
+
         Debug.Log("End melee combo 4 charge");
     }
 
@@ -1895,6 +1917,12 @@ public class MofGuideonRework : Entity
         {
             ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult);
+
+            if (saberMaterial != null)
+            {
+                saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.5f, 0.0f, 1.0f));
+            }
         }
         if (gun != null)
         {
@@ -1905,12 +1933,20 @@ public class MofGuideonRework : Entity
 
     private void UpdateBurstCharge()
     {
+        if (saberMaterial != null)
+        {
+            float shineValue = preBurstChargeTimer / comboChargeDuration;
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
+
         UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurstCharge()
     {
-        Debug.Log("End burst charge");
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
     }
 
 
@@ -1933,7 +1969,22 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        agent.CalculateRandomPath(gameObject.transform.globalPosition, preBurstDashDistance);
+        float random = (float)decisionGenerator.NextDouble();
+        Vector3 pointToGo = Vector3.zero;
+        float rotationAngle = 0f;
+
+        if (random <= 0.5f)
+        {
+            rotationAngle = preBurstAngleDash;
+        }
+        else
+        {
+            rotationAngle = -preBurstAngleDash;
+        }
+
+        pointToGo = this.gameObject.transform.globalPosition + Vector3.RotateAroundQuaternion(Quaternion.RotateAroundAxis(Vector3.up, rotationAngle * Mathf.Deg2RRad), this.gameObject.transform.GetForward()).normalized * preBurstDashDistance;
+
+        agent.CalculatePath(this.gameObject.transform.globalPosition, pointToGo);
 
         //PLAY AUDIOS
         //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
@@ -2231,11 +2282,15 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Spawn_Enemies");
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Spawn_Enemies");
         if (cameraComp != null)
             cameraComp.target = this.gameObject;
 
         Input.PlayHaptic(0.8f, 600);
+
+        PlayParticles(PARTICLES.AURA);
+
+        isInvencible = true;
 
         SpawnEnemies();
     }
@@ -2259,6 +2314,10 @@ public class MofGuideonRework : Entity
 
         if (cameraComp != null)
             cameraComp.target = Core.instance.gameObject;
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
     }
 
     private void SpawnEnemies()
@@ -2404,6 +2463,9 @@ public class MofGuideonRework : Entity
             }
         }
 
+        PlayParticles(PARTICLES.AURA);
+
+        isInvencible = true;
         Input.PlayHaptic(0.9f, 2200);
     }
 
@@ -2428,6 +2490,10 @@ public class MofGuideonRework : Entity
             }
 
         }
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
 
         currentHealthPoints = limboHealth = maxHealthPoints1;
     }
@@ -2465,6 +2531,10 @@ public class MofGuideonRework : Entity
             }
         }
 
+        PlayParticles(PARTICLES.AURA);
+
+        isInvencible = true;
+
         Input.PlayHaptic(0.7f, 1000);
     }
 
@@ -2497,6 +2567,13 @@ public class MofGuideonRework : Entity
         currentPhase = PHASE.PHASE2;
         enemySkillTimer = enemySkillTime;
         currentHealthPoints = maxHealthPoints2;
+
+        Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
+
     }
 
     #endregion
@@ -2554,8 +2631,18 @@ public class MofGuideonRework : Entity
 
     public void TakeDamage(float damage)
     {
+
         if (!DebugOptionsHolder.bossDmg)
         {
+
+            if (isInvencible == true)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Phase_Change_Hit");
+                return;
+            }
+
+            damaged = 1.0f;
+
             float mod = 1f;
             if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
             {
@@ -2616,26 +2703,25 @@ public class MofGuideonRework : Entity
             }
         }
 
-        //TODO: Make moff shine red
-        //if (damaged > 0.01f)
-        //{
-        //    damaged = Mathf.Lerp(damaged, 0.0f, 0.1f);
-        //}
-        //else
-        //{
-        //    damaged = 0.0f;
-        //}
+        if (damaged > 0.01f)
+        {
+            damaged = Mathf.Lerp(damaged, 0.0f, 0.2f);
+        }
+        else
+        {
+            damaged = 0.0f;
+        }
 
-        //if (moff_mesh != null)
-        //{
-        //    Material moffMeshMat = moff_mesh.GetComponent<Material>();
+        if (moffMesh != null)
+        {
+            Material moffMeshMat = moffMesh.GetComponent<Material>();
 
-        //    if (moffMeshMat != null)
-        //    {
-        //        moffMeshMat.SetFloatUniform("damaged", damaged);
-        //    }
+            if (moffMeshMat != null)
+            {
+                moffMeshMat.SetFloatUniform("damaged", damaged);
+            }
 
-        //}
+        }
     }
 
     #endregion
@@ -2645,6 +2731,13 @@ public class MofGuideonRework : Entity
     {
         if (collidedGameObject.CompareTag("Bullet"))
         {
+            if (isInvencible == true)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Phase_Change_Hit");
+                return;
+            }
+
+
             if (Core.instance != null)
             {
                 if (Core.instance.HasStatus(STATUS_TYPE.MANDO_QUICK_DRAW))
@@ -2688,6 +2781,14 @@ public class MofGuideonRework : Entity
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
+
+            if (isInvencible == true)
+            {
+                //Play Audio no hit
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Phase_Change_Hit");
+                return;
+            }
+
             float damageToBoss = 0f;
 
             ChargedBullet bulletScript = collidedGameObject.GetComponent<ChargedBullet>();
@@ -2783,13 +2884,13 @@ public class MofGuideonRework : Entity
     {
         if (currentPhase == PHASE.PHASE1)
         {
-            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_1");
-            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Intimidation_Phase_1");
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Hit_Phase_1");
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Intimidation_Phase_1");
         }
         else if (currentPhase == PHASE.PHASE2)
         {
-            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Hit_Phase_2");
-            Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Intimidation_Phase_2");
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Hit_Phase_2");
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Intimidation_Phase_2");
         }
     }
 
@@ -3005,6 +3106,14 @@ public class MofGuideonRework : Entity
                 }
                 else
                     Debug.Log("Aura Particles not found");
+
+                if (auraBurstParticle != null)
+                {
+                    auraBurstParticle.Stop();
+                }
+                else
+                    Debug.Log("Aura Burst Particles not found");
+
                 break;
         }
     }

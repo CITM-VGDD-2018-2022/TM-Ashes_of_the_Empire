@@ -3,7 +3,13 @@ using DiamondEngine;
 
 public class SkyTrooperShot : DiamondComponent
 {
-	SkytrooperHitCollider hitCollider = null;
+	public Skytrooper skytrooper = null;
+
+	public GameObject visualFeedback = null;
+	private MeshRenderer visualFeedbackRenderer = null;
+
+	MeshRenderer meshRenderer = null;
+	private BoxCollider collider = null;
 
 	public int damage = 14;
 	public float speed= 0.0f;
@@ -18,20 +24,50 @@ public class SkyTrooperShot : DiamondComponent
 	Vector3 targetPosition = null;
 
 	float time = 0.0f;
-	float deleteTimer = 0.0f;
-	public float lifeTime = 6.0f;
+	float disableTimer = 0.0f;
+	public float disableTime = 4.0f;
 	//private float rotationSpeed = 0.0f;
 
-	public void Awake()
+	public GameObject explosionObj = null;
+	private ParticleSystem explosionParticles = null;
+	public GameObject waveObj = null;
+	private ParticleSystem waveParticles = null;
+
+	private bool started = false;
+
+	public void Start()
     {
-		deleteTimer = lifeTime;
+		disableTimer = disableTime;
 
 		if (gravity > 0)
 			gravity = -gravity;
-    }
+
+		meshRenderer = gameObject.GetComponent<MeshRenderer>();
+		collider = gameObject.GetComponent<BoxCollider>();
+
+		visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/203996773.prefab", new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, null);
+		if (visualFeedback != null)
+		{
+			visualFeedbackRenderer = visualFeedback.GetComponent<MeshRenderer>();
+		}
+
+		if (explosionObj != null)
+			explosionParticles = explosionObj.GetComponent<ParticleSystem>();
+
+		if (waveObj != null)
+			waveParticles = waveObj.GetComponent<ParticleSystem>();
+
+		Deactivate();
+
+		started = true;
+	}
+
 	public void Update()
 	{
-        if (time < lifeTime)
+		if (!started)
+			Start();
+
+		if (time < disableTime && initialPos != null)
         {
 			time += Time.deltaTime;
 			Vector3 pos = new Vector3(initialPos.x,initialPos.y,initialPos.z);
@@ -41,14 +77,13 @@ public class SkyTrooperShot : DiamondComponent
 			gameObject.transform.localPosition = pos;
         }
 
-		if(deleteTimer > 0.0f)
+		if(disableTimer > 0.0f)
         {
-			deleteTimer -= Time.deltaTime;
+			disableTimer -= Time.deltaTime;
 
-			if(deleteTimer <= 0.0f)
+			if(disableTimer <= 0.0f)
             {
-				InternalCalls.Destroy(gameObject);
-				//Debug.Log("Destroyed Bullet");
+				Deactivate();
 			}
         }
 
@@ -57,7 +92,11 @@ public class SkyTrooperShot : DiamondComponent
 
 	public void SetTarget(Vector3 target, bool low_angle)
     {
-		initialPos = gameObject.transform.globalPosition;
+		if (target == null || skytrooper == null)
+			return;
+
+        #region Position and Speed calculations
+        initialPos = gameObject.transform.localPosition;
 		targetPosition = new Vector3(target.x, target.y, target.z);
 
 		float distanceX;
@@ -121,14 +160,14 @@ public class SkyTrooperShot : DiamondComponent
 
 		if ((distanceZ < 0 && velocity.z > 0) || (distanceZ > 0 && velocity.z < 0))
 			velocity.z = -velocity.z;
+        #endregion
 
-		GameObject hitColliderObject = InternalCalls.CreatePrefab("Library/Prefabs/203996773.prefab", 
-												new Vector3(targetPosition.x, targetPosition.y + 0.1f, targetPosition.z), 
-												new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), 
-												new Vector3(1.0f, 1.0f, 1.0f));
-
-		if (hitColliderObject != null)
-			hitCollider = hitColliderObject.GetComponent<SkytrooperHitCollider>();
+        if (visualFeedback != null)
+        {
+			visualFeedback.transform.localPosition = targetPosition;
+        }
+		
+		disableTimer = disableTime;
 	}
 
 	public void OnCollisionEnter(GameObject collidedGameObject)
@@ -144,7 +183,7 @@ public class SkyTrooperShot : DiamondComponent
 		}
 		else if (damagedPlayer == false)
         {
-			if (Mathf.Distance(targetPosition, gameObject.transform.globalPosition) < 1.0f)
+			if (targetPosition != null && Mathf.Distance(targetPosition, gameObject.transform.globalPosition) < 1.0f)
             {
 				//Debug.Log("SKYTROOPER BULLET ON TARGET POSITION");
 				if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, targetPosition) < damageRange)
@@ -156,23 +195,69 @@ public class SkyTrooperShot : DiamondComponent
 						Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
 						//Debug.Log("Damage: " + damage.ToString());
 						damagedPlayer = true;
-
 					}
 				}
             }
         }
 
-		if(hitCollider != null)
-			InternalCalls.Destroy(hitCollider.gameObject);
+		Explode();
+		Deactivate();
+    }
 
-		hitCollider = null;
-		Audio.PlayAudio(gameObject, "Play_Skytrooper_Grenade_Explosion");
+	public void Activate()
+    {
+		if(meshRenderer != null) 
+			meshRenderer.active = true;
+        
+		if(collider != null) 
+			collider.active = true;
+        
+		if (visualFeedbackRenderer != null)
+			visualFeedbackRenderer.active = true;
 
-		MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
+		time = 0.0f;
+		disableTimer = disableTime;
+	}
+
+	public void Deactivate()
+    {
 		if (meshRenderer != null)
 			meshRenderer.active = false;
+		
+		if (collider != null)
+			collider.active = false;
+		
+		if(visualFeedbackRenderer != null)
+			visualFeedbackRenderer.active = false;
 
-		InternalCalls.CreatePrefab("Library/Prefabs/828188331.prefab", gameObject.transform.globalPosition, Quaternion.identity, new Vector3(1.0f, 1.0f, 1.0f));
-		InternalCalls.Destroy(gameObject);
+		initialPos = null;
+	}
+	
+	public void Explode()
+	{
+		if (explosionParticles != null)
+			explosionParticles.Play();
+
+		if (waveParticles != null)
+			waveParticles.Play();
+
+		Audio.PlayAudio(gameObject, "Play_Skytrooper_Grenade_Explosion");
+	}
+
+
+	public bool IsActive()
+    {
+		if (meshRenderer != null)
+			return meshRenderer.active;
+		
+		return false;
+	}
+
+	public void OnDestroy()
+	{
+		if(visualFeedback != null)
+        {
+			InternalCalls.Destroy(visualFeedback);
+        }
 	}
 }

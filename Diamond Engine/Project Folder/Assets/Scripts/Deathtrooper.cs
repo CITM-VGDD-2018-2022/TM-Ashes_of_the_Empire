@@ -63,7 +63,6 @@ public class Deathtrooper : Enemy
     //Speeds
     public float wanderSpeed = 3.5f;
     public float runningSpeed = 7.5f;
-    private bool skill_slowDownActive = false;
     public float recoilSpeed = 0.0f;
 
     //Ranges
@@ -73,8 +72,6 @@ public class Deathtrooper : Enemy
 
     //Action variables
     private int shotsShooted = 0;
-    //public int maxShots = 4;
-    //public float dispersionAngleDeg = 0.0f;
     private bool canShoot = true;
 
     //push
@@ -111,8 +108,6 @@ public class Deathtrooper : Enemy
         recoilTime = recoilDistance / recoilSpeed;
         if (hitParticlesObj != null)
             hitParticle = hitParticlesObj.GetComponent<ParticleSystem>();
-        //else
-        //Debug.Log("Hit particles gameobject not found!");
 
         if (shotgunParticlesObj != null)
             shotgunParticle = shotgunParticlesObj.GetComponent<ParticleSystem>();
@@ -122,11 +117,6 @@ public class Deathtrooper : Enemy
 
         if (grenadeHitParticleObj != null)
             grenadeHitParticle = grenadeHitParticleObj.GetComponent<ParticleSystem>();
-
-        //else
-        //{
-        //    //Debug.Log("Shotgun particles gameobject not found!");
-        //}
     }
 
     public void Update()
@@ -171,16 +161,6 @@ public class Deathtrooper : Enemy
                 inputsList.Add(INPUT.IN_IDLE);
             }
         }
-
-        /*if (skill_slowDownActive)
-        {
-            skill_slowDownTimer += myDeltaTime;
-            if (skill_slowDownTimer >= Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownDuration)
-            {
-                skill_slowDownTimer = 0.0f;
-                skill_slowDownActive = false;
-            }
-        }*/
     }
 
     //All events from outside the stormtrooper
@@ -425,9 +405,6 @@ public class Deathtrooper : Enemy
     private void UpdateWander()
     {
         LookAt(agent.GetDestination());
-        //if (skill_slowDownActive)
-        //    agent.MoveToCalculatedPos(wanderSpeed * (1 - Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownAmount));
-        //else 
         agent.MoveToCalculatedPos(wanderSpeed * speedMult);
 
         UpdateAnimationSpd(speedMult);
@@ -445,6 +422,7 @@ public class Deathtrooper : Enemy
         Animator.Play(gameObject, "DTH_Run", speedMult);
         if (shotgun != null)
             Animator.Play(shotgun, "DTH_Run", speedMult);
+
         UpdateAnimationSpd(speedMult);
         Audio.PlayAudio(gameObject, "Play_Deathtrooper_Run");
 
@@ -524,14 +502,18 @@ public class Deathtrooper : Enemy
     {
        
         GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/550070139.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, null);
-        bullet.GetComponent<DeathTrooperBullet>().damage = damage * damageMult;
-        bullet.GetComponent<DeathTrooperBullet>().SetTagToAvoid("Deathtrooper");
-        bullet.GetComponent<DeathTrooperBullet>().SetGameObjectToAvoid(this.gameObject);
+
+        DeathTrooperBullet deathTrooperBullet = bullet.GetComponent<DeathTrooperBullet>();
+
+        if(deathTrooperBullet != null)
+        {
+            deathTrooperBullet.damage = damage * damageMult;
+            deathTrooperBullet.SetTagToAvoid("Deathtrooper");
+            deathTrooperBullet.SetGameObjectToAvoid(this.gameObject);
+        }
 
         recoilTimer = recoilTime;
         shotsShooted++;
-
-
 
         Animator.Play(gameObject, "DTH_ShootRecoil", speedMult * 2.0f);
         if(shotgun != null)
@@ -565,7 +547,10 @@ public class Deathtrooper : Enemy
         //Combo
         if (PlayerResources.CheckBoon(BOONS.BOON_MASTER_YODA_FORCE))
         {
-            Core.instance.hud.GetComponent<HUD>().AddToCombo(300, 1.0f);
+            HUD hud = Core.instance.hud.GetComponent<HUD>();
+            if(hud != null) {
+                hud.AddToCombo(300, 1.0f);
+            }
         }
     }
     private void UpdateDie()
@@ -596,7 +581,6 @@ public class Deathtrooper : Enemy
     #endregion
 
     #region PUSH
-
     private void StartPush()
     {
         Vector3 force = pushDir.normalized;
@@ -813,7 +797,6 @@ public class Deathtrooper : Enemy
 
     public override void TakeDamage(float damage)
     {
-
         Audio.PlayAudio(gameObject, "Play_Deathtrooper_Hit");
         float mod = 1f;
         if(Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
@@ -886,5 +869,4 @@ public class Deathtrooper : Enemy
             grenadeHitParticle.Play();
         }
     }
-
 }
