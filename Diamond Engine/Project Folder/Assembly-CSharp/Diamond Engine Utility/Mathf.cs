@@ -84,6 +84,11 @@ namespace DiamondEngine
         public static float EaseOutCubic(float x)
         {
             return Convert.ToSingle(1 - Math.Pow(1 - x, 3));
+        }   
+        
+        public static float EaseInOutCubic(float x)
+        {
+            return  Convert.ToSingle( x < 0.5 ? 4 * x * x * x : 1 - Math.Pow(-2 * x + 2, 3) / 2);
         }
 
 

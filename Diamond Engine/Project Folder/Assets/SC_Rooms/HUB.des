@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -839.34027099609375,
-        145.15318298339844,
-        -56.661998748779297
+        -19.233015060424805,
+        19.25970458984375,
+        -24.713821411132813
     ],
     "EditorCameraZ": [
-        0.95127451419830322,
-        -0.27396535873413086,
-        -0.14149153232574463
+        0.47367113828659058,
+        -0.74198341369628906,
+        0.47444307804107666
     ],
     "EditorCameraY": [
-        0.27098071575164795,
-        0.96173954010009766,
-        -0.040329471230506897
+        0.52430170774459839,
+        0.67041820287704468,
+        0.52502107620239258
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -2820,8 +2820,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 500,
-                    "vFOV": 11.880000114440918,
-                    "hFOV": 18.139999389648438,
+                    "vFOV": 12.720000267028809,
+                    "hFOV": 22.5,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -2830,7 +2830,7 @@
                 {
                     "Type": 12,
                     "Active": true,
-                    "isDefaultListener": true
+                    "isDefaultListener": false
                 },
                 {
                     "Type": 5,
@@ -40127,8 +40127,11 @@
                     "sequence5": 1807117180,
                     "sequence6": 401351303,
                     "sequence7": 314575116,
+                    "sequence8": 383914576,
+                    "sequence9": 1269987149,
+                    "sequence10": 804506287,
                     "postCinematicDialogue": 1027532624,
-                    "init": false
+                    "init": true
                 }
             ]
         },
@@ -40226,6 +40229,176 @@
                 1.0000007152557373,
                 1,
                 1.0000007152557373
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HubCameraPos1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 287423649,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -8.3013916015625,
+                16.970912933349609,
+                -17.448259353637695
+            ],
+            "Rotation": [
+                0,
+                0.1882043182849884,
+                0,
+                0.98212987184524536
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HubCameraPos2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1285046510,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -8.3013916015625,
+                2.1022350788116455,
+                -17.448259353637695
+            ],
+            "Rotation": [
+                0,
+                0.1882043182849884,
+                0,
+                0.98212987184524536
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HubCameraPos3",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1791328330,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -6.9274559020996094,
+                4.9840483665466309,
+                0.78145408630371094
+            ],
+            "Rotation": [
+                0,
+                0.18326464295387268,
+                0,
+                0.98306363821029663
+            ],
+            "Scale": [
+                0.99999988079071045,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HubCameraPos4",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1473233015,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -0.86252671480178833,
+                2.274371862411499,
+                19.465595245361328
+            ],
+            "Rotation": [
+                0.044129982590675354,
+                0.62776154279708862,
+                -0.035684272646903992,
+                0.77633410692214966
+            ],
+            "Scale": [
+                1,
+                1,
+                0.99999988079071045
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HubCameraPos5",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1774227022,
+            "ParentUID": 1526343368,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -13.916077613830566,
+                10.29248046875,
+                -19.939996719360352
+            ],
+            "Rotation": [
+                0.24263942241668701,
+                0.39558225870132446,
+                -0.10866371542215347,
+                0.87910920381546021
+            ],
+            "Scale": [
+                1,
+                0.9999997615814209,
+                0.9999997615814209
             ],
             "Components": [
                 {
@@ -41195,17 +41368,21 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "object1": 1156363843,
                     "object2": 1156363843,
                     "object1_pos1": 192671120,
                     "transition1": true,
+                    "lerp1": false,
                     "speedRotationObject1": 0.40000000596046448,
                     "speedObject1": 0.44999998807907104,
                     "object2_pos1": 2062018381,
                     "transition2": true,
+                    "lerp2": false,
                     "speedRotationObject2": 0.60000002384185791,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": true,
@@ -41218,7 +41395,9 @@
                     "stopAllSequences": false,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41260,15 +41439,19 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "object1": 238070173,
                     "object1_pos1": 556288395,
                     "transition1": true,
+                    "lerp1": false,
                     "speedRotationObject1": 0,
                     "speedObject1": 50,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": false,
@@ -41281,7 +41464,9 @@
                     "stopAllSequences": false,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41323,15 +41508,19 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "object1": 1855298081,
                     "object1_pos1": 2094269345,
                     "transition1": true,
+                    "lerp1": false,
                     "speedRotationObject1": 4.5,
                     "speedObject1": 0,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": true,
@@ -41344,7 +41533,9 @@
                     "stopAllSequences": false,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41386,17 +41577,21 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "object1": 1855298081,
                     "object2": 1054867207,
                     "object1_pos1": 2094511031,
                     "transition1": false,
+                    "lerp1": false,
                     "speedRotationObject1": 0,
                     "speedObject1": 0,
                     "object2_pos1": 330335011,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": true,
@@ -41409,7 +41604,9 @@
                     "stopAllSequences": false,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41451,13 +41648,17 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "transition1": false,
+                    "lerp1": false,
                     "speedRotationObject1": 0,
                     "speedObject1": 0,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": false,
@@ -41470,7 +41671,9 @@
                     "stopAllSequences": true,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41512,15 +41715,19 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
                     "endSequence": false,
+                    "endFinalSequence": false,
                     "object1": 1855298081,
                     "object1_pos1": 1354636017,
                     "transition1": true,
+                    "lerp1": false,
                     "speedRotationObject1": 1,
                     "speedObject1": 0,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": true,
@@ -41533,7 +41740,9 @@
                     "stopAllSequences": false,
                     "keepObject1": true,
                     "interpolateAmountSpeed": 0,
-                    "useQuadraticInterpolation": false
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
                 }
             ]
         },
@@ -41574,15 +41783,19 @@
                     "Active": true,
                     "ScriptName": "Sequence",
                     "sequenceTime": 0,
-                    "endSequence": false,
+                    "endSequence": true,
+                    "endFinalSequence": false,
                     "object1": 238070173,
                     "transition1": false,
+                    "lerp1": false,
                     "speedRotationObject1": 0,
                     "speedObject1": 0,
                     "transition2": false,
+                    "lerp2": false,
                     "speedRotationObject2": 0,
                     "speedObject2": 0,
                     "transition3": false,
+                    "lerp3": false,
                     "speedRotationObject3": 0,
                     "speedObject3": 0,
                     "rotateObject1": false,
@@ -41597,7 +41810,223 @@
                     "useQuadraticInterpolation": true,
                     "pointA": 556288395,
                     "pointB": 1925359324,
-                    "pointC": 18863515
+                    "pointC": 18863515,
+                    "useEaseIn": true,
+                    "activateAnimation": false
+                }
+            ]
+        },
+        {
+            "name": "HubSequence1",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 383914576,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "endSequence": false,
+                    "endFinalSequence": false,
+                    "object1": 1855298081,
+                    "object2": 1855298081,
+                    "object1_pos1": 287423649,
+                    "transition1": false,
+                    "lerp1": false,
+                    "speedRotationObject1": 0,
+                    "speedObject1": 0.5,
+                    "object2_pos1": 287423649,
+                    "transition2": true,
+                    "lerp2": true,
+                    "object2_pos2": 1285046510,
+                    "speedRotationObject2": 0,
+                    "speedObject2": 4,
+                    "transition3": false,
+                    "lerp3": false,
+                    "speedRotationObject3": 0,
+                    "speedObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": true,
+                    "rotateObject3": false,
+                    "nextSequenceToStart": 1269987149,
+                    "timeToNextSequence": 2,
+                    "startObject1": false,
+                    "startObject2": false,
+                    "stopAllSequences": false,
+                    "keepObject1": false,
+                    "interpolateAmountSpeed": 0,
+                    "useQuadraticInterpolation": false,
+                    "useEaseIn": false,
+                    "activateAnimation": false
+                }
+            ]
+        },
+        {
+            "name": "HubSequence2",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1269987149,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "endSequence": false,
+                    "endFinalSequence": false,
+                    "object1": 1855298081,
+                    "transition1": false,
+                    "lerp1": false,
+                    "speedRotationObject1": 0,
+                    "speedObject1": 0,
+                    "transition2": false,
+                    "lerp2": false,
+                    "speedRotationObject2": 0,
+                    "speedObject2": 0,
+                    "transition3": false,
+                    "lerp3": false,
+                    "speedRotationObject3": 0,
+                    "speedObject3": 0,
+                    "rotateObject1": false,
+                    "rotateObject2": false,
+                    "rotateObject3": false,
+                    "nextSequenceToStart": 804506287,
+                    "timeToNextSequence": 3,
+                    "startObject1": false,
+                    "startObject2": false,
+                    "stopAllSequences": false,
+                    "keepObject1": true,
+                    "interpolateAmountSpeed": 0.40000000596046448,
+                    "useQuadraticInterpolation": true,
+                    "pointA": 1285046510,
+                    "pointB": 1791328330,
+                    "pointC": 1473233015,
+                    "useEaseIn": true,
+                    "activateAnimation": true,
+                    "greef": 1079248432
+                }
+            ]
+        },
+        {
+            "name": "HubSequence3",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 804506287,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "endSequence": false,
+                    "endFinalSequence": true,
+                    "object1": 1855298081,
+                    "transition1": false,
+                    "lerp1": false,
+                    "speedRotationObject1": 0,
+                    "speedObject1": 0,
+                    "transition2": false,
+                    "lerp2": false,
+                    "speedRotationObject2": 0,
+                    "speedObject2": 0,
+                    "transition3": false,
+                    "lerp3": false,
+                    "speedRotationObject3": 0,
+                    "speedObject3": 0,
+                    "rotateObject1": false,
+                    "rotateObject2": false,
+                    "rotateObject3": false,
+                    "timeToNextSequence": 4,
+                    "startObject1": false,
+                    "startObject2": false,
+                    "stopAllSequences": false,
+                    "keepObject1": true,
+                    "interpolateAmountSpeed": 0.40000000596046448,
+                    "useQuadraticInterpolation": true,
+                    "pointA": 1473233015,
+                    "pointB": 1791328330,
+                    "pointC": 1285046510,
+                    "useEaseIn": true,
+                    "activateAnimation": false
                 }
             ]
         },

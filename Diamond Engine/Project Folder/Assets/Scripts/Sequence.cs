@@ -15,6 +15,7 @@ public class Sequence : DiamondComponent
     //private float timerToNextSequence;
     //public float timeToNextSequence;
     public bool endSequence = false;
+    public bool endFinalSequence = false;
 
     //Game Objects of the sequence
     public GameObject object1;
@@ -24,18 +25,24 @@ public class Sequence : DiamondComponent
     //Positions of the objects
     public GameObject object1_pos1;
     public bool transition1;
+    public bool lerp1;
+    private float lerpTimer1;
     public GameObject object1_pos2;
     public float speedRotationObject1;
     public float speedObject1;
 
     public GameObject object2_pos1;
     public bool transition2;
+    public bool lerp2;
+    private float lerpTimer2;
+
     public GameObject object2_pos2;
     public float speedRotationObject2;
     public float speedObject2;
 
     public GameObject object3_pos1;
     public bool transition3;
+    public bool lerp3;
     public GameObject object3_pos2;
     public float speedRotationObject3;
     public float speedObject3;
@@ -62,10 +69,15 @@ public class Sequence : DiamondComponent
     public GameObject pointA;
     public GameObject pointB;
     public GameObject pointC;
+    public bool useEaseIn = false;
+
+    public bool activateAnimation;
+    public GameObject greef;
     public void Awake()
     {
-        //endSequence = false;
         startObject1 = true;
+        lerpTimer1 = 0f;
+        lerpTimer2 = 0f;
     }
     public void RunSequence()
     {
@@ -73,7 +85,6 @@ public class Sequence : DiamondComponent
         {
             return;
         }
-
 
 
         if (!startedNextSequence)
@@ -104,23 +115,37 @@ public class Sequence : DiamondComponent
 
             if (interpolateAmount < 1)
             {
-                object1.transform.localPosition = QuadraticLerp(pointA.transform.globalPosition, pointB.transform.globalPosition, pointC.transform.globalPosition, interpolateAmount);
+                if (useEaseIn)
+                {
+                    object1.transform.localPosition = QuadraticLerp(pointA.transform.globalPosition, pointB.transform.globalPosition, pointC.transform.globalPosition, Mathf.EaseInOutCubic(interpolateAmount));
 
-                object1.transform.localRotation = QuadraticSlerp(pointA.transform.localRotation, pointB.transform.localRotation, pointC.transform.localRotation, interpolateAmount);
-                ////Rotate
-                //if (interpolateAmount < 0.6f)
-                //{
-                //    object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, pointB.transform.localRotation, interpolateAmount * 0.1f);
-                //}
-                //else
-                //{
-                //    object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, pointC.transform.localRotation, interpolateAmount * 0.05f);
+                    object1.transform.localRotation = QuadraticSlerp(pointA.transform.localRotation, pointB.transform.localRotation, pointC.transform.localRotation, Mathf.EaseInOutCubic(interpolateAmount));
+                }
+                else
+                {
+                    object1.transform.localPosition = QuadraticLerp(pointA.transform.globalPosition, pointB.transform.globalPosition, pointC.transform.globalPosition, interpolateAmount);
 
-                //}
+                    object1.transform.localRotation = QuadraticSlerp(pointA.transform.localRotation, pointB.transform.localRotation, pointC.transform.localRotation, interpolateAmount);
+                }
+
+                if (interpolateAmount > 0.7f)
+                {
+                    if (endSequence)
+                    {
+                        CinematicManager.instance.EndFirstSequences();
+                    }
+                }
+
             }
-            else
+
+            else if (endFinalSequence)
             {
-                CinematicManager.instance.EndFirstSequences();
+                CinematicManager.instance.EndCinematic();
+            }
+            else if(activateAnimation && greef != null)
+            {
+                Animator.Play(greef, "Greef_Greet");
+                activateAnimation = false;
             }
 
 
@@ -134,23 +159,39 @@ public class Sequence : DiamondComponent
             {
                 if (transition1)
                 {
-                    if (object1.transform.localPosition.DistanceNoSqrt(object1_pos1.transform.localPosition) > 0.1)
+                    if (lerp1) 
                     {
-                        object1.transform.localPosition += (object1_pos1.transform.localPosition - object1.transform.localPosition).normalized * Time.deltaTime * speedObject1;
+                        if (lerpTimer1 < 1)
+                        {
+                            lerpTimer1 += Time.deltaTime * 0.5f;
+                            object1.transform.localPosition = Vector3.Lerp(object1_pos1.transform.localPosition, object1_pos2.transform.localPosition, lerpTimer1);
+                            if (rotateObject1)
+                            {
+                                object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos2.transform.localRotation, speedRotationObject1 * Time.deltaTime);
+                            }
+                        }
                     }
                     else
                     {
-                        startObject2 = true;
-                        if (!keepObject1)
+                        if (object1.transform.localPosition.DistanceNoSqrt(object1_pos1.transform.localPosition) > 0.1)
                         {
-                            startObject1 = false;
+                            object1.transform.localPosition += (object1_pos1.transform.localPosition - object1.transform.localPosition).normalized * Time.deltaTime * speedObject1;
+                        }
+                        else
+                        {
+                            startObject2 = true;
+                            if (!keepObject1)
+                            {
+                                startObject1 = false;
+                            }
+                        }
+
+                        if (rotateObject1)
+                        {
+                            object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos1.transform.localRotation, speedRotationObject1 * Time.deltaTime);
                         }
                     }
 
-                    if (rotateObject1)
-                    {
-                        object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos1.transform.localRotation, speedRotationObject1 * Time.deltaTime);
-                    }
                 }
                 else
                 {
@@ -176,19 +217,31 @@ public class Sequence : DiamondComponent
             {
                 if (transition2)
                 {
-                    if (object2.transform.localPosition.DistanceNoSqrt(object2_pos1.transform.localPosition) > 0.1)
+                    if (lerp2)
                     {
-                        object2.transform.localPosition += (object2_pos1.transform.localPosition - object2.transform.localPosition).normalized * Time.deltaTime * speedObject2;
+                        if (lerpTimer2 < 1)
+                        {
+                            lerpTimer2 += Time.deltaTime * 0.5f;
+                            object2.transform.localPosition = Vector3.Lerp(object2_pos1.transform.localPosition, object2_pos2.transform.localPosition, Mathf.EaseOutCubic(lerpTimer2));
+                        }
                     }
                     else
                     {
-                        startObject3 = true;
+                        if (object2.transform.localPosition.DistanceNoSqrt(object2_pos1.transform.localPosition) > 0.1)
+                        {
+                            object2.transform.localPosition += (object2_pos1.transform.localPosition - object2.transform.localPosition).normalized * Time.deltaTime * speedObject2;
+                        }
+                        else
+                        {
+                            startObject3 = true;
+                        }
+
+                        if (rotateObject2)
+                        {
+                            object2.transform.localRotation = Quaternion.Slerp(object2.transform.localRotation, object2_pos1.transform.localRotation, speedRotationObject2 * Time.deltaTime);
+                        }
                     }
 
-                    if (rotateObject2)
-                    {
-                        object2.transform.localRotation = Quaternion.Slerp(object2.transform.localRotation, object2_pos1.transform.localRotation, speedRotationObject2 * Time.deltaTime);
-                    }
                 }
                 else
                 {
@@ -210,75 +263,6 @@ public class Sequence : DiamondComponent
 
         }
 
-        //if(timerToNextSequence < timeToNextSequence && isRunning)
-        //{
-        //    timerToNextSequence += Time.deltaTime;
-        //}
-        //else if(isRunning)
-        //{
-        //    startNextSequence?.Invoke();
-        //    Debug.Log("Finish next sequence");
-            
-        //    nextSequence = true;
-            
-        //}
-
-        //if (endSequence)
-        //{
-        //    if (teleportPoint1 != null)
-        //    {
-           
-        //        gameObject.transform.localPosition = teleportPoint1.transform.globalPosition;
-        //        gameObject.transform.localRotation = teleportPoint1.transform.localRotation;
-
-        //    }
-        //    return;
-
-        //}
-
-        //if (isRunning)
-        //{
-
-
-            //if (nextSequence)
-            //{
-            //    if (point1 != null)
-            //    {
-            //        gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, point1.transform.localRotation, rotationSpeed * Time.deltaTime);
-            //    }
-            //}
-
-            //if (sequenceTimer < sequenceTime)
-            //{
-            //    sequenceTimer += Time.deltaTime;
-            //    if (point0 != null)
-            //    {
-            //        if (gameObject.transform.localPosition.DistanceNoSqrt(point0.transform.localPosition) > 0.1f)
-            //        {
-            //            gameObject.transform.localPosition += (point0.transform.localPosition - gameObject.transform.localPosition).normalized * Time.deltaTime * speed;
-            //        }
-            //        else
-            //        {
-            //            onEndSequence?.Invoke();
-            //        }
-
-            //        if (rotation && !nextSequence)
-            //        {
-            //            gameObject.transform.localRotation = Quaternion.Slerp(gameObject.transform.localRotation, point0.transform.localRotation, 0.4f * Time.deltaTime);
-            //        }
-            //    }
-
-            //}
-            //else
-            //{
-            //    isRunning = false;
-            //    sequenceTimer = 0;
-            //    //endSequence = true;
-            //}
-
-
-
-        //}
     }
 
     public void StartRunning()
@@ -297,6 +281,7 @@ public class Sequence : DiamondComponent
 
         return Vector3.Lerp(ab, bc, t);
     }
+
     private Quaternion QuadraticSlerp(Quaternion a, Quaternion b, Quaternion c, float t)
     {
         Quaternion ab = Quaternion.Slerp(a, b, t);
@@ -304,23 +289,7 @@ public class Sequence : DiamondComponent
 
         return Quaternion.Slerp(ab, bc, t);
     }
-    public void LookAt(Vector3 pointToLook)
-    {
-        Vector3 direction = pointToLook - gameObject.transform.globalPosition;
-        direction = direction.normalized;
-        float angle = (float)Math.Atan2(direction.x, direction.z);
 
-        if (Math.Abs(angle * Mathf.Rad2Deg) < 1.0f)
-            return;
-
-        Quaternion dir = Quaternion.RotateAroundAxis(Vector3.up, angle);
-
-        float rotationSpeed = Time.deltaTime * 1;
-
-        Quaternion desiredRotation = Quaternion.Slerp(gameObject.transform.localRotation, dir, rotationSpeed);
-
-        gameObject.transform.localRotation = desiredRotation;
-    }
 }
 
 
