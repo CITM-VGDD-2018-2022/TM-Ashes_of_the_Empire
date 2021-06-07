@@ -44,5 +44,11 @@ namespace DiamondEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern void SetSwitch(object go, string switchGroup, string stateSwitch);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void PauseAllAudios();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void ResumeAllAudios();
     }
 }

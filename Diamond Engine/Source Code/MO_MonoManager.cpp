@@ -286,6 +286,8 @@ bool M_MonoManager::Init()
 	mono_add_internal_call("DiamondEngine.Audio::SetMuted", SetMuted);
 	mono_add_internal_call("DiamondEngine.Audio::SetState", SetState);
 	mono_add_internal_call("DiamondEngine.Audio::SetSwitch", SetSwitch);
+	mono_add_internal_call("DiamondEngine.Audio::PauseAllSounds", PauseAllAudios);
+	mono_add_internal_call("DiamondEngine.Audio::ResumeAllSounds", ResumeAllAudios);
 #pragma endregion
 
 #pragma region CameraManager
