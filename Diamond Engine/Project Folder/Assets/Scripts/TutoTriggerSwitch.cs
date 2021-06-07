@@ -31,12 +31,20 @@ public class TutoTriggerSwitch : DiamondComponent
     {
         if (roomUidToLoad != -1 && triggeredGameObject.CompareTag("Player"))
         {
+            if (Counter.firstRun)
+            {
+                PlayerResources.AddResourceBy1(RewardType.REWARD_BESKAR);
+                PlayerResources.AddResourceBy1(RewardType.REWARD_MACARON);
+                PlayerResources.AddResourceBy1(RewardType.REWARD_SCRAP);
+                PlayerResources.AddResourceBy1(RewardType.REWARD_MILK);
+            }
             if (EnvironmentSourceLocate.instance != null)
                 Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_UI_Boon_Pickup");
             StaticVariablesInit.InitStaticVars();
             SceneManager.LoadScene(roomUidToLoad);
             Counter.firstRun = false;
             DebugOptionsHolder.godModeActive = false;
+            
         }
 
     }
