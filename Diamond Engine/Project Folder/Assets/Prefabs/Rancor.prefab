@@ -18,10 +18,10 @@
                 -1.1299999952316284
             ],
             "Rotation": [
-                -1.812629477626615e-07,
-                -0.99776554107666016,
-                -1.812629477626615e-07,
-                0.066814042627811432
+                -1.8126291934095207e-07,
+                -0.99776542186737061,
+                -1.8126291934095207e-07,
+                0.066814035177230835
             ],
             "Scale": [
                 1.0000159740447998,
@@ -77,11 +77,22 @@
                     "myDeltaTime": 0,
                     "MovspeedMult": 0,
                     "OverheatMult": 0,
-                    "DamageMult": 0,
+                    "RawDamageMult": 0,
+                    "BlasterDamageMult": 0,
+                    "GrenadeDamageMult": 0,
+                    "SniperDamageMult": 0,
                     "DamageToBosses": 0,
-                    "DamagePerHpMult": 0,
+                    "BlasterDamagePerHpMult": 0,
+                    "SniperDamagePerHpMult": 0,
                     "DamagePerHeatMult": 0,
                     "DamageRed": 0,
+                    "GroguCost": 0,
+                    "FireRateMult": 0,
+                    "SecTickDamage": 0,
+                    "sniperShotIntervalModifier": 0,
+                    "MaxForceModifier": 0,
+                    "ForceRegentPerHPMod": 0,
+                    "BlasterVulnerability": 0,
                     "camera": 71863204,
                     "slerpSpeed": 30,
                     "healthPoints": 638.918212890625,
@@ -142,11 +153,10 @@
                     "Active": true,
                     "evName": "Play_Rancor_Breath",
                     "audBankReference": "Rancor",
-                    "volume": 50,
                     "pitch": 50,
                     "playOnAwake": false,
                     "isMuted": false,
-                    "isMusic":  false
+                    "isMusic": false
                 },
                 {
                     "Type": 5,
@@ -2920,6 +2930,7 @@
                     "Active": true,
                     "Path": "Library\/Meshes\/729690554.mmh",
                     "UID": 729690554,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         1,
@@ -2931,7 +2942,8 @@
                         0
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": false
+                    "doNotDrawStencil": false,
+                    "drawShadows": true
                 },
                 {
                     "Type": 3,
@@ -2963,20 +2975,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.4614632129669189,
-                1.9876432418823242,
-                0
+                1.290024995803833,
+                1.3671836853027344,
+                1.2740422487258911
             ],
             "Rotation": [
-                0,
-                0,
-                0,
+                -1.0658146457412365e-13,
+                -1.043082278329166e-07,
+                1.5454312634298473e-13,
                 1
             ],
             "Scale": [
+                0.99999904632568359,
                 1,
-                1,
-                1
+                0.99999904632568359
             ],
             "Components": [
                 {
@@ -3131,7 +3143,7 @@
             "Static": false,
             "Position": [
                 0.17725276947021484,
-                0.00022554397583007812,
+                0.00022554397583007813,
                 1.3660857677459717
             ],
             "Rotation": [
@@ -3945,7 +3957,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        2.0265579223632812e-05,
+                        2.0265579223632813e-05,
                         -1.811981201171875e-05,
                         0.3052372932434082
                     ],
