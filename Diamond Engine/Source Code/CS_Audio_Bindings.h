@@ -239,3 +239,19 @@ void SetMuted(MonoObject* go, bool muted)
 		LOG(LogType::L_WARNING, "Couldn't set the mute to the given value. Component was null pointer");
 	}
 }
+
+void PauseAllAudios()
+{
+	if (EngineExternal == nullptr)
+		return;
+
+	EngineExternal->moduleAudio->PauseAllSounds();
+}
+
+void ResumeAllAudios()
+{
+	if (EngineExternal == nullptr)
+		return;
+
+	EngineExternal->moduleAudio->ResumeAllSounds();
+}
