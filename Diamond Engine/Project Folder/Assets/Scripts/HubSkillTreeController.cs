@@ -78,12 +78,12 @@ public class HubSkillTreeController : DiamondComponent
 
         if (!activate_tree)
         {
-            Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
             Core.instance.LockInputs(false);
             firstFrame = true;
 
             if (mando_tree != null && mando_tree.IsEnabled())
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
                 mando_tree.EnableNav(false);
                 if (mandoText != null)
                     mandoText.Enable(true);
@@ -91,6 +91,7 @@ public class HubSkillTreeController : DiamondComponent
             }
             if (grogu_tree != null && grogu_tree.IsEnabled())
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
                 grogu_tree.EnableNav(false);
                 if (groguText != null)
                     groguText.Enable(true);
@@ -98,6 +99,7 @@ public class HubSkillTreeController : DiamondComponent
             }
             if (weapon_tree != null && weapon_tree.IsEnabled())
             {
+                Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Close");
                 weapon_tree.EnableNav(false);
                 if (weaponText != null)
                     weaponText.Enable(true);
