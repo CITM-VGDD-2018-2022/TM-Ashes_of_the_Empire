@@ -109,8 +109,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 16.575000762939453,
-                    "hFOV": 30.899999618530273,
+                    "vFOV": 18.25,
+                    "hFOV": 23.149999618530273,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -141,516 +141,6 @@
                     "deadZoom": 80,
                     "deadEasingSec": 5,
                     "startFollow": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoints",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 204740425,
-            "ParentUID": 568224617,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -5.538515567779541,
-                2.0569071769714355,
-                -22.843053817749023
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "TurretSpawnPoints",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1097308921,
-            "ParentUID": 204740425,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                -0.67746591567993164,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "Spawn",
-                    "spawnStormtrooper": false,
-                    "spawnBantha": false,
-                    "spawnSkytrooper": false,
-                    "spawnLaserTurret": true,
-                    "spawnPoint0": 1384163786,
-                    "spawnPoint1": 685769628,
-                    "spawnPoint2": 1110830884,
-                    "spawnPoint3": 1975879200,
-                    "spawnPoint4": 1325807321,
-                    "spawnPoint5": 889379987,
-                    "maxSpawnPoints": 2,
-                    "maxEnemies": 2
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint0",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1384163786,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                9.3617935180664063,
-                0,
-                -12.41801643371582
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint1",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 685769628,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -12.667364120483398,
-                0,
-                8.3796939849853516
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint2",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1110830884,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -18.641658782958984,
-                1.1971654891967773,
-                -21.724761962890625
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint3",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1975879200,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                1.3491151332855225,
-                1.1304430961608887,
-                -1.9317150115966797
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint4",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1325807321,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                10.983608245849609,
-                0.45455837249755859,
-                -22.161064147949219
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint5",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 889379987,
-            "ParentUID": 1097308921,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                10.029287338256836,
-                2.0900788307189941,
-                -36.223587036132813
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SkytrooperSpawnPoints",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1084065648,
-            "ParentUID": 204740425,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "Spawn",
-                    "spawnStormtrooper": false,
-                    "spawnBantha": false,
-                    "spawnSkytrooper": true,
-                    "spawnLaserTurret": false,
-                    "spawnPoint0": 421705593,
-                    "spawnPoint1": 1316152116,
-                    "spawnPoint2": 846734193,
-                    "spawnPoint3": 2055140703,
-                    "spawnPoint4": 557934894,
-                    "spawnPoint5": 0,
-                    "maxSpawnPoints": 5,
-                    "maxEnemies": 5
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint0",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 421705593,
-            "ParentUID": 1084065648,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -12.87849235534668,
-                -1.6599999666213989,
-                9.7952661514282227
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint1",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1316152116,
-            "ParentUID": 1084065648,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                9.6879043579101563,
-                -1.6599999666213989,
-                18.028196334838867
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint2",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 846734193,
-            "ParentUID": 1084065648,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                17.981748580932617,
-                -1.6599999666213989,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint3",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 2055140703,
-            "ParentUID": 1084065648,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                9.4174795150756836,
-                -1.6599999666213989,
-                -11.841432571411133
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "SpawnPoint4",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 557934894,
-            "ParentUID": 1084065648,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -8.8429241180419922,
-                -1.6599999666213989,
-                -22.006189346313477
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
                 }
             ]
         },
@@ -9056,10 +8546,10 @@
                 0.0049104690551757813
             ],
             "Rotation": [
-                -0.49991348385810852,
-                0.50010102987289429,
-                0.50007212162017822,
-                0.49991327524185181
+                -0.4999135434627533,
+                0.50010108947753906,
+                0.500072181224823,
+                0.49991333484649658
             ],
             "Scale": [
                 1.1896101236343384,
@@ -10604,10 +10094,10 @@
                 1.9161882400512695
             ],
             "Rotation": [
-                -0.26933735609054565,
-                0.65380215644836426,
-                0.65372395515441895,
-                0.26952782273292542
+                -0.26933732628822327,
+                0.65380209684371948,
+                0.65372389554977417,
+                0.26952779293060303
             ],
             "Scale": [
                 2.835273265838623,
@@ -22585,7 +22075,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 318142667
                 },
                 {
                     "Type": 13,
@@ -22868,7 +22358,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 823635523
                 },
                 {
                     "Type": 13,
@@ -23151,7 +22641,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1824605849
                 },
                 {
                     "Type": 13,
@@ -23434,7 +22924,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1983558694
                 },
                 {
                     "Type": 13,
@@ -23751,7 +23241,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1345341429
                 },
                 {
                     "Type": 13,
@@ -24034,7 +23524,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1963802316
                 },
                 {
                     "Type": 13,
@@ -24317,7 +23807,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 604644940
                 },
                 {
                     "Type": 13,
@@ -24600,7 +24090,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 443489866
                 },
                 {
                     "Type": 13,
@@ -24883,7 +24373,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1701366362
                 },
                 {
                     "Type": 13,
@@ -25166,7 +24656,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 55560234
                 },
                 {
                     "Type": 13,
@@ -25449,7 +24939,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 2070338345
                 },
                 {
                     "Type": 13,
@@ -25732,7 +25222,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1379675341
                 },
                 {
                     "Type": 13,
@@ -26015,7 +25505,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 705919104
                 },
                 {
                     "Type": 13,
@@ -26298,7 +25788,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 932148539
                 },
                 {
                     "Type": 13,
@@ -26581,7 +26071,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1007450789
                 },
                 {
                     "Type": 13,
@@ -26864,7 +26354,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1616249772
                 },
                 {
                     "Type": 13,
@@ -27147,7 +26637,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1318258784
                 },
                 {
                     "Type": 13,
@@ -27430,7 +26920,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1670411042
                 },
                 {
                     "Type": 13,
@@ -27713,7 +27203,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 40283864
                 },
                 {
                     "Type": 13,
@@ -27996,7 +27486,7 @@
                     "spawnDeathrooper": false,
                     "spawnHeavyTrooper": false,
                     "spawnEnemyAt": 1.6000000238418579,
-                    "spawnParticleObj": 0
+                    "spawnParticleObj": 1212915353
                 },
                 {
                     "Type": 13,
