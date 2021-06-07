@@ -16,6 +16,10 @@ public class CinematicManager : DiamondComponent
     public GameObject sequence5;
     public GameObject sequence6;
     public GameObject sequence7;
+    public GameObject sequence8;
+    public GameObject sequence9;
+    public GameObject sequence10;
+    public GameObject sequence11;
 
 
     private Vector3 initPos;
@@ -42,6 +46,10 @@ public class CinematicManager : DiamondComponent
         AddSequence(sequence5);
         AddSequence(sequence6);
         AddSequence(sequence7);
+        AddSequence(sequence8);
+        AddSequence(sequence9);
+        AddSequence(sequence10);
+        AddSequence(sequence11);
 
         //Start first sequence
         if (listSequences.Count > 0)
@@ -91,6 +99,17 @@ public class CinematicManager : DiamondComponent
             return;
         }
 
+
+
+        if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
+        {
+
+                StopAllSequences();
+                ReturnGame();
+                init = false;
+            
+        }
+
         foreach (Sequence sequence in listSequences)
         {
             sequence.RunSequence();
@@ -108,9 +127,8 @@ public class CinematicManager : DiamondComponent
         gameCamera.transform.localPosition = initPos;
         gameCamera.transform.localRotation = initRot;
         CameraManager.SetCameraOrthographic(gameCamera);
-        gameCamera.GetComponent<CameraController>().startFollow = true;
-        postCinematicDialogue.Enable(true);
-        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+
+
     }
 
     private void AddSequence(GameObject sequenceObject)
@@ -141,10 +159,27 @@ public class CinematicManager : DiamondComponent
 
     public void EndFirstSequences()
     {
+        BlackFade.StartFadeIn(() => {
+            StopAllSequences();
+            listSequences[7].StartRunning();
+            BlackFade.StartFadeOut();
+        });
+
+    }
+    public void EndCinematic()
+    {
         StopAllSequences();
         BlackFade.StartFadeIn(() => {
             ResetInitalTransform();
-            BlackFade.StartFadeOut();
+            BlackFade.StartFadeOut(() => {
+
+                gameCamera.GetComponent<CameraController>().startFollow = true;
+                postCinematicDialogue.Enable(true);
+                postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+            });
         });
+
+        init = false;
+
     }
 }
