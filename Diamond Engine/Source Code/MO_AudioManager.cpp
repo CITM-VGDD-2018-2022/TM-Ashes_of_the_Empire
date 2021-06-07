@@ -226,7 +226,13 @@ void ModuleAudioManager::PauseAllSounds() const
 	std::vector<C_AudioSource*>::const_iterator it;
 	for (it = audio_sources.begin(); it != audio_sources.end(); ++it)
 	{
+#ifdef STANDALONE
+		if (!(*it)->IsMusic())
+			(*it)->PauseEvent();
+#else
 		(*it)->PauseEvent();
+#endif // STANDALONE
+
 	}
 }
 
@@ -235,7 +241,12 @@ void ModuleAudioManager::ResumeAllSounds() const
 	std::vector<C_AudioSource*>::const_iterator it;
 	for (it = audio_sources.begin(); it != audio_sources.end(); ++it)
 	{
+#ifdef STANDALONE
+		if (!(*it)->IsMusic())
+			(*it)->ResumeEvent();
+#else
 		(*it)->ResumeEvent();
+#endif
 	}
 }
 

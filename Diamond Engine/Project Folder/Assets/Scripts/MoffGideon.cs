@@ -2473,7 +2473,7 @@ public class MoffGideon : Entity
             float damageToBoss = 0f;
 
             ChargedBullet bulletScript = collidedGameObject.GetComponent<ChargedBullet>();
-
+            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
             if (bulletScript != null)
             {
                 float vulerableSev = 0.2f;

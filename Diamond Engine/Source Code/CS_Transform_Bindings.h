@@ -345,11 +345,15 @@ float GetTotalTime()
 void CS_PauseGame()
 {
 	DETime::Pause();
+	if (EngineExternal != nullptr)
+		EngineExternal->moduleAudio->PauseAllSounds();
 }
 
 void CS_ResumeGame()
 {
 	DETime::Resume();
+	if (EngineExternal != nullptr)
+		EngineExternal->moduleAudio->ResumeAllSounds();
 }
 
 void Destroy(MonoObject* go)

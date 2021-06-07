@@ -242,6 +242,11 @@ public class Rancor : Entity
             Debug.Log("Null agent, add a NavMeshAgent Component");
 
         Audio.SetState("Game_State", "Rancor_Room");
+        if (EnvironmentSourceLocate.instance !=null)
+        {
+            Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
+            Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Rancor_Ambience");
+        }
     }
 
     public void Update()
@@ -1400,6 +1405,7 @@ public class Rancor : Entity
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
+            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
             if (currentState != RANCOR_STATE.DEAD)
             {
                 float damageToBoss = 0f;

@@ -75,6 +75,12 @@ public class Wampa : Bosseslv2
         companion = InternalCalls.FindObjectWithName("Skel");
         limboHealth = 0f;
         damaged = 0.0f;
+        if (EnvironmentSourceLocate.instance != null)
+        {
+            Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
+            Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Wampa_Skel_Ambience");
+        }
+
     }
 
     public void Update()
@@ -488,7 +494,7 @@ public class Wampa : Bosseslv2
         {
 
             ChargedBullet bulletComp = collidedGameObject.GetComponent<ChargedBullet>();
-
+            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
             if (bulletComp != null)
             {
                 float vulerableSev = 0.2f;

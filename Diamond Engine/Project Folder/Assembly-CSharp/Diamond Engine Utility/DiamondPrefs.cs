@@ -15,6 +15,12 @@ namespace DiamondEngine
 
         public static void SaveData()
         {
+            if (!Directory.Exists("SaveData"))
+                Directory.CreateDirectory("SaveData");
+
+            if (!File.Exists("SaveData/saveData.json"))
+                File.Create("SaveData/saveData.json");
+
             string jsonString = JsonSerializer.Serialize(data);
             File.WriteAllText("SaveData/saveData.json", jsonString);
         }

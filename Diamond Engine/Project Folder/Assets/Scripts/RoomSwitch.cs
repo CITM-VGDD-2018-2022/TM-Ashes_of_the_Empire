@@ -182,11 +182,13 @@ public static class RoomSwitch
         switch (currentLevelIndicator)
         {
             case LEVELS.ONE:
+                Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Level_1_Ambience");
                 Audio.SetState("Game_State", "Run");
                 Audio.SetState("Player_State", "Alive");
                 Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Combat");
                 break;
             case LEVELS.TWO:
+                Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Level_2_Ambience");
                 Audio.SetState("Game_State", "Run_2");
                 Audio.SetState("Player_State", "Alive");
                 Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Combat");
