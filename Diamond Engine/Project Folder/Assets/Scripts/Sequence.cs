@@ -61,6 +61,8 @@ public class Sequence : DiamondComponent
             return;
         }
 
+
+
         if (!startedNextSequence)
         {
             if (timerToNextSequence < timeToNextSequence)
@@ -227,6 +229,10 @@ public class Sequence : DiamondComponent
     public void StartRunning()
     {
         isRunning = true;
+    }
+    public void StopRunning()
+    {
+        isRunning = false;
     }
 }
 

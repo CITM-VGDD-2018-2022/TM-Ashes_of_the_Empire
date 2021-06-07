@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -1.6156997680664063,
-        31.044225692749023,
-        -36.843742370605469
+        -14.833849906921387,
+        -79.060722351074219,
+        -2.9877290725708008
     ],
     "EditorCameraZ": [
-        -0.081315234303474426,
-        -0.69965165853500366,
-        0.70984178781509399
+        0.55926167964935303,
+        -0.82805168628692627,
+        0.039455533027648926
     ],
     "EditorCameraY": [
-        -0.079627156257629395,
-        0.71448409557342529,
-        0.69510573148727417
+        0.82599914073944092,
+        0.56065177917480469,
+        0.058267742395401001
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -2820,8 +2820,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 100,
-                    "vFOV": 12.239999771118164,
-                    "hFOV": 23.520000457763672,
+                    "vFOV": 12.859999656677246,
+                    "hFOV": 15.340000152587891,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -2859,13 +2859,17 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 2,
                     "speed": 1,
-                    "point1": 2094269345,
-                    "teleportPoint1": 2094511031,
-                    "rotation": true,
-                    "isRunning": false,
-                    "timeToNextSequence": 0,
-                    "rotationSpeed": 2.5,
-                    "endSequence": true
+                    "endSequence": true,
+                    "transition1": true,
+                    "speedRotationObject1": 0,
+                    "transition2": true,
+                    "speedRotationObject2": 0,
+                    "transition3": true,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": true,
+                    "rotateObject3": true,
+                    "timeToNextSequence": 0
                 }
             ]
         },
@@ -40134,8 +40138,9 @@
                     "ScriptName": "CinematicManager",
                     "gameCamera": 1855298081,
                     "cameraPos1": 782994521,
-                    "helmet": 1156363843,
-                    "razor": 238070173,
+                    "sequence1": 697086601,
+                    "sequence2": 1784766156,
+                    "sequence3": 917716724,
                     "postCinematicDialogue": 1027532624,
                     "init": false
                 }
@@ -40589,13 +40594,17 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 10,
                     "speed": 0.5,
-                    "point0": 192671120,
-                    "point1": 2062018381,
-                    "rotation": true,
-                    "isRunning": true,
-                    "timeToNextSequence": 8,
-                    "rotationSpeed": 0.40000000596046448,
-                    "endSequence": true
+                    "endSequence": true,
+                    "transition1": true,
+                    "speedRotationObject1": 0,
+                    "transition2": true,
+                    "speedRotationObject2": 0,
+                    "transition3": true,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": true,
+                    "rotateObject3": true,
+                    "timeToNextSequence": 8
                 }
             ]
         },
@@ -40714,12 +40723,17 @@
                     "ScriptName": "Sequence",
                     "sequenceTime": 4,
                     "speed": 30,
-                    "point0": 556288395,
-                    "rotation": false,
-                    "isRunning": false,
-                    "timeToNextSequence": 0.30000001192092896,
-                    "rotationSpeed": 0,
-                    "endSequence": true
+                    "endSequence": true,
+                    "transition1": true,
+                    "speedRotationObject1": 0,
+                    "transition2": true,
+                    "speedRotationObject2": 0,
+                    "transition3": true,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": true,
+                    "rotateObject3": true,
+                    "timeToNextSequence": 0.30000001192092896
                 }
             ]
         },
@@ -40994,7 +41008,7 @@
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 583970176,
+            "UID": 556288395,
             "ParentUID": 2068184100,
             "PrefabReference": 0,
             "PrefabID": 0,
@@ -41003,7 +41017,7 @@
             "Position": [
                 5.7448782920837402,
                 -101.4757080078125,
-                2.9082303047180176
+                -83.962776184082031
             ],
             "Rotation": [
                 0,
@@ -41024,20 +41038,220 @@
             ]
         },
         {
-            "name": "RazonPoint2",
+            "name": "ListSequences",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 556288395,
-            "ParentUID": 2068184100,
+            "UID": 1169986875,
+            "ParentUID": 27864027,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                5.7448782920837402,
-                -101.4757080078125,
-                -83.962776184082031
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "name": "HelmetSequence",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 697086601,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "speed": 0.44999998807907104,
+                    "endSequence": false,
+                    "object1": 1156363843,
+                    "object2": 1156363843,
+                    "object1_pos1": 192671120,
+                    "transition1": true,
+                    "speedRotationObject1": 0.40000000596046448,
+                    "object2_pos1": 2062018381,
+                    "transition2": true,
+                    "speedRotationObject2": 0.60000002384185791,
+                    "transition3": false,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": true,
+                    "rotateObject3": false,
+                    "nextSequenceToStart": 1784766156,
+                    "timeToNextSequence": 9.5
+                }
+            ]
+        },
+        {
+            "name": "RazorSequence",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1784766156,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "speed": 50,
+                    "endSequence": false,
+                    "object1": 238070173,
+                    "object1_pos1": 556288395,
+                    "transition1": true,
+                    "speedRotationObject1": 0,
+                    "transition2": false,
+                    "speedRotationObject2": 0,
+                    "transition3": false,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": false,
+                    "rotateObject2": false,
+                    "rotateObject3": false,
+                    "nextSequenceToStart": 917716724,
+                    "timeToNextSequence": 0.20000000298023224
+                }
+            ]
+        },
+        {
+            "name": "CameraSequence",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 917716724,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "speed": 0,
+                    "endSequence": false,
+                    "object1": 1855298081,
+                    "object1_pos1": 2094269345,
+                    "transition1": true,
+                    "speedRotationObject1": 4.5,
+                    "transition2": false,
+                    "speedRotationObject2": 0,
+                    "transition3": false,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": false,
+                    "rotateObject3": false,
+                    "timeToNextSequence": 0
+                }
+            ]
+        },
+        {
+            "name": "RazorCameraSequence",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 27722078,
+            "ParentUID": 1169986875,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
             ],
             "Rotation": [
                 0,
