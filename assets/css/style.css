@@ -102,7 +102,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .get-started-btn {
   margin-left: 30px;
-  background: #e03a3c;
+  background: rgb(122, 98, 81);
+  border: 2px solid rgb(85, 70, 59);
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
@@ -117,7 +118,8 @@ h1, h2, h3, h4, h5, h6 {
 .get-started-btn:hover {
   color: #111111;
   background: #fff;
-  border: 2px solid #e03a3c;
+  /*border: 2px solid rgb(122, 98, 81);*/
+  border: 2px solid rgb(85, 70, 59);
 }
 /*.get-started-btn {
   padding: 8px 30px 9px 30px;
@@ -410,8 +412,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   margin-top: 30px;
   color: #fff;
-  background: #e03a3c;
-  border: 2px solid #e03a3c;
+  background: rgb(122, 98, 81);
+  border: 2px solid rgb(85, 70, 59);
 }
 
 #hero .btn-get-started:hover {
