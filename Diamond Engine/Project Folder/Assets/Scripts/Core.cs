@@ -2870,7 +2870,6 @@ public class Core : Entity
     {
         Debug.Log("SAVE STATUSES");
         copyBuffs(ref PlayerStatuses);
-
     }
 
     public void LoadBuffs()

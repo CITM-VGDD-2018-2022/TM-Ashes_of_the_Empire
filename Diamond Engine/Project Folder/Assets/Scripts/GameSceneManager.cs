@@ -168,15 +168,16 @@ public class GameSceneManager : DiamondComponent
 
     public void DeactivateBoon()
     {
-        if (rewardObject.IsEnabled())
+        if (rewardObject != null && rewardObject.IsEnabled())
+        {
             rewardObject.Enable(false);
+        }
+
         if (rewardMenu != null)
         {
-            InternalCalls.Destroy(rewardMenu);
+            InternalCalls.Destroy(rewardMenu.rewardMenu);
             rewardMenu = null;
         }
         rewardData = null;
-
-
     }
 }
