@@ -102,7 +102,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 1.0471975803375244,
-                    "hFOV": 1.526031494140625,
+                    "hFOV": 1.4251065254211426,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true
@@ -9761,6 +9761,23 @@
                         1,
                         1
                     ]
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Move",
+                    "delay": 0.25,
+                    "duration": 0.5,
+                    "initialPosX": -89.199996948242188,
+                    "initialPosY": 0,
+                    "finalPosX": -42.599998474121094,
+                    "finalPosY": 65.800003051757812,
+                    "initialScaleX": 21.399999618530273,
+                    "initialScaleY": 44.599998474121094,
+                    "finalScaleX": 10.699999809265137,
+                    "finalScaleY": 22.299999237060547,
+                    "playOnAwake": true,
+                    "interpolationType": 3
                 }
             ]
         },
@@ -9814,8 +9831,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -9823,7 +9840,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/1388776950.dds",
                     "UID": 1388776950,
-                    "fadeValue": 0
+                    "fadeValue": 1
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Fade",
+                    "delay": 0.69999998807907104,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },

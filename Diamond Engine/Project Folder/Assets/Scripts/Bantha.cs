@@ -561,6 +561,7 @@ public class Bantha : Enemy
         directionDecisionTimer = directionDecisionTime;
 
         visualFeedback = InternalCalls.CreatePrefab("Library/Prefabs/1137197426.prefab", chargePoint.transform.globalPosition, chargePoint.transform.globalRotation, new Vector3(1.0f, 1.0f, 0.01f));
+        Audio.PlayAudio(gameObject, "Play_Bantha_Prepare_Charge");
         Animator.Play(gameObject, "BT_Charge", speedMult);
         UpdateAnimationSpd(speedMult);
     }

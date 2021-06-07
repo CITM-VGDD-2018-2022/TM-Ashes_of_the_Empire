@@ -539,7 +539,18 @@ public class BabyYoda : DiamondComponent
         spawnPos += mandoTransform.GetForward() * wallSkillOffset.z;
 
         InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1, 1, 1));
-        Audio.PlayAudio(gameObject, "Play_Grogu_Wall");
+        if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.ONE)
+        {
+            Audio.PlayAudio(gameObject, "Play_Grogu_Rock_Wall");
+        }
+        else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.TWO)
+        {
+            Audio.PlayAudio(gameObject, "Play_Grogu_Ice_Wall");
+        }
+        else
+        {
+            Audio.PlayAudio(gameObject, "Play_Grogu_Metal_Wall");
+        }
 
         //if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.UTILITY_HEAL_WHEN_GROGU_SKILL))        
         //    Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-Skill_Tree_Data.GetMandoSkillTree().U7_healAmount);                
