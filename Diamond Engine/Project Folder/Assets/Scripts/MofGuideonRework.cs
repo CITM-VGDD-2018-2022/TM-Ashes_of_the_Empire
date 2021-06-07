@@ -1436,6 +1436,34 @@ public class MofGuideonRework : Entity
                 UpdateMeleeComboHit3();
                 break;
 
+            case STATE.MELEE_COMBO_4_CHARGE:
+                UpdateMeleeCombo4Charge();
+                break;
+
+            case STATE.MELEE_COMBO_4_DASH:
+                UpdateMeleeComboDash4();
+                break;
+
+            case STATE.MELEE_COMBO_4:
+                UpdateMeleeComboHit4();
+                break;
+
+            case STATE.MELEE_COMBO_5_DASH:
+                UpdateMeleeComboDash5();
+                break;
+
+            case STATE.MELEE_COMBO_5:
+                UpdateMeleeComboHit5();
+                break;
+
+            case STATE.MELEE_COMBO_6_DASH:
+                UpdateMeleeComboDash6();
+                break;
+
+            case STATE.MELEE_COMBO_6:
+                UpdateMeleeComboHit6();
+                break;
+
             case STATE.SPAWN_ENEMIES:
                 UpdateSpawnEnemies();
                 break;
@@ -1528,7 +1556,7 @@ public class MofGuideonRework : Entity
     #endregion
 
     #region CHASE
-#region CHASE_P1
+    #region CHASE_P1
     private void StartChase_P1()
     {
         chaseTimer = chaseDuration;
@@ -1581,7 +1609,7 @@ public class MofGuideonRework : Entity
     {
         chaseTimer = chaseDuration;
 
-        Animator.Play(gameObject, "MG_RunPh2_Final", speedMult);
+        Animator.Play(gameObject, "MG_RunPh2", speedMult);
         if (saber != null)
         {
             ActivateSaber();
@@ -1623,8 +1651,6 @@ public class MofGuideonRework : Entity
     #region MELEE_COMBO_CHARGE
     private void StartMeleeCombo1Charge()
     {
-        Debug.Log("Start melee combo 1 charge");
-
         comboChargeTimer = comboChargeDuration;
         comboDirectionTimer = comboDirectionTime;
 
@@ -1650,8 +1676,6 @@ public class MofGuideonRework : Entity
 
     private void UpdateMeleeCombo1Charge()
     {
-        Debug.Log("Update melee combo 1 charge");
-
         if (saberMaterial != null)
         {
             float shineValue = comboChargeTimer / comboChargeDuration;
@@ -1691,42 +1715,36 @@ public class MofGuideonRework : Entity
     {
         if (saberMaterial != null)
             saberMaterial.SetFloatUniform("shineColorValue", 0);
-
-        Debug.Log("End melee combo 1 charge");
     }
 
 
     private void StartMeleeCombo4Charge()
     {
-        Debug.Log("Start melee combo 4 charge");
-
         comboChargeTimer = comboChargeDuration;
         comboDirectionTimer = comboDirectionTime;
 
-        Animator.Play(gameObject, "MG_Swing", speedMult);
+        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
         if (saber != null)
         {
-            Animator.Resume(saber);
-            Animator.Play(saber, "MG_Swing", speedMult);
+            ActivateSaber();
+            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
 
             if (saberMaterial != null)
             {
                 saberMaterial.SetFloatUniform("shineColorValue", 0);
                 saberMaterial.SetVectorUniform("shineColor", new Vector3(0.9f, 1.0f, 0.0f));
             }
-            DeActivateSaber();
         }
         if (gun != null)
         {
             DeActivateGun();
         }
-        UpdateAnimationSpd(speedMult);
+
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
     }
 
     private void UpdateMeleeCombo4Charge()
     {
-        Debug.Log("Update melee combo 4 charge");
-
         if (saberMaterial != null)
         {
             float shineValue = comboChargeTimer / comboChargeDuration;
@@ -1738,11 +1756,12 @@ public class MofGuideonRework : Entity
         {
             comboDirectionTimer -= myDeltaTime;
 
-            if (comboDirectionTimer > 0.1f)
+            if (comboDirectionTimer > LAST_FRAME_CONST)
             {
                 if (Core.instance != null)
                 {
                     Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+
                     if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) > comboLongDashDistance)
                     {
                         targetPosition = direction.normalized * comboLongDashDistance + gameObject.transform.globalPosition;
@@ -1751,21 +1770,20 @@ public class MofGuideonRework : Entity
                     {
                         targetPosition = Core.instance.gameObject.transform.globalPosition;
                     }
+
                     agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
                 }
             }
         }
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-        UpdateAnimationSpd(speedMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
     }
 
     private void EndMeleeCombo4Charge()
     {
         if (saberMaterial != null)
             saberMaterial.SetFloatUniform("shineColorValue", 0);
-
-        Debug.Log("End melee combo 4 charge");
     }
 
     #endregion
