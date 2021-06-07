@@ -7,8 +7,12 @@ public class CinematicManager : DiamondComponent
     public GameObject gameCamera;
     public GameObject cameraPos1;
 
-    public GameObject helmet;
-    public GameObject razor;
+    public GameObject sequence1;
+    public GameObject sequence2;
+    public GameObject sequence3;
+    public GameObject sequence4;
+    public GameObject sequence5;
+    public GameObject sequence6;
 
 
     private Vector3 initPos;
@@ -16,44 +20,9 @@ public class CinematicManager : DiamondComponent
     public GameObject postCinematicDialogue;
     public bool init = false;
 
-    private Sequence helmetSequence;
-    private Sequence razorSequence;
-    private Sequence cameraSequence;
     private List<Sequence> listSequences = new List<Sequence>();
     public void Awake()
     {
-        if(helmet != null)
-        {
-            helmetSequence =  helmet.GetComponent<Sequence>();
-            if (helmetSequence != null)
-            {
-                listSequences.Add(helmetSequence);
-
-            }
-        }   
-        
-        if(razor != null)
-        {
-            razorSequence =  razor.GetComponent<Sequence>();
-            if (razorSequence != null)
-            {
-                listSequences.Add(razorSequence);
-                helmetSequence.startNextSequence += () => { razorSequence.isRunning = true; };
-                
-            }
-        }        
-        if(gameCamera != null)
-        {
-            cameraSequence =  gameCamera.GetComponent<Sequence>();
-            if (cameraSequence != null)
-            {
-                listSequences.Add(cameraSequence);
-                razorSequence.startNextSequence += () => { cameraSequence.isRunning = true; };
-                razorSequence.onEndSequence += () => { cameraSequence.endSequence = true; };
-            }
-        }
-
-
 
 
         if (!init)
@@ -66,7 +35,24 @@ public class CinematicManager : DiamondComponent
         }
 
 
-        if(gameCamera == null || cameraPos1 == null)
+        AddSequence(sequence1);
+        AddSequence(sequence2);
+        AddSequence(sequence3);
+        AddSequence(sequence4);
+        AddSequence(sequence5);
+        AddSequence(sequence6);
+
+        //Start first sequence
+        if (listSequences.Count > 0)
+        {
+            listSequences[0].StartRunning();
+        }
+
+
+
+
+
+        if (gameCamera == null || cameraPos1 == null)
         {
             return;
         }
@@ -108,5 +94,18 @@ public class CinematicManager : DiamondComponent
         gameCamera.GetComponent<CameraController>().startFollow = true;
         postCinematicDialogue.Enable(true);
         postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+    }
+
+    private void AddSequence(GameObject sequenceObject)
+    {
+        if (sequenceObject == null) 
+            return;
+
+        Sequence sequence = sequenceObject.GetComponent<Sequence>();
+
+        if(sequence != null)
+        {
+            listSequences.Add(sequence);
+        }
     }
 }
