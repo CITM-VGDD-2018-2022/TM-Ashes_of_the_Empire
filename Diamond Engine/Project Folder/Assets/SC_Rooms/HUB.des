@@ -6,14 +6,14 @@
         -2.9877290725708008
     ],
     "EditorCameraZ": [
-        0.55926167964935303,
-        -0.82805168628692627,
-        0.039455533027648926
+        0.63654112815856934,
+        -0.7705036997795105,
+        0.033756017684936523
     ],
     "EditorCameraY": [
-        0.82599914073944092,
-        0.56065177917480469,
-        0.058267742395401001
+        0.76942294836044312,
+        0.63743555545806885,
+        0.040796339511871338
     ],
     "SkyboxPath0": "",
     "SkyboxPath1": "",
@@ -2821,7 +2821,7 @@
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 100,
                     "vFOV": 12.859999656677246,
-                    "hFOV": 15.340000152587891,
+                    "hFOV": 19.520000457763672,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -40141,8 +40141,9 @@
                     "sequence1": 697086601,
                     "sequence2": 1784766156,
                     "sequence3": 917716724,
+                    "sequence4": 27722078,
                     "postCinematicDialogue": 1027532624,
-                    "init": false
+                    "init": true
                 }
             ]
         },
@@ -40620,14 +40621,14 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.0081503391265869,
+                1.3350000381469727,
                 -0.20694732666015625,
-                0.19262814521789551
+                0.19252371788024902
             ],
             "Rotation": [
                 -0.7071068286895752,
-                -1.8390871048268309e-09,
-                6.3710885456202959e-08,
+                -2.2548150013790291e-09,
+                6.4126616905468836e-08,
                 0.70710670948028564
             ],
             "Scale": [
@@ -40654,15 +40655,15 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                1.0081503391265869,
+                1.3350000381469727,
                 -0.20694732666015625,
                 0.19266533851623535
             ],
             "Rotation": [
-                -0.41934919357299805,
+                -0.41934913396835327,
                 -0.56934159994125366,
                 -0.56934052705764771,
-                0.41934219002723694
+                0.41934213042259216
             ],
             "Scale": [
                 0.33333557844161987,
@@ -41124,7 +41125,7 @@
                     "rotateObject2": true,
                     "rotateObject3": false,
                     "nextSequenceToStart": 1784766156,
-                    "timeToNextSequence": 9.5
+                    "timeToNextSequence": 10
                 }
             ]
         },
@@ -41233,7 +41234,8 @@
                     "rotateObject1": true,
                     "rotateObject2": false,
                     "rotateObject3": false,
-                    "timeToNextSequence": 0
+                    "nextSequenceToStart": 27722078,
+                    "timeToNextSequence": 1.7000000476837158
                 }
             ]
         },
@@ -41268,6 +41270,26 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "Sequence",
+                    "sequenceTime": 0,
+                    "speed": 0,
+                    "endSequence": false,
+                    "object1": 1855298081,
+                    "object1_pos1": 2094511031,
+                    "transition1": false,
+                    "speedRotationObject1": 0,
+                    "transition2": false,
+                    "speedRotationObject2": 0,
+                    "transition3": false,
+                    "speedRotationObject3": 0,
+                    "rotateObject1": true,
+                    "rotateObject2": false,
+                    "rotateObject3": false,
+                    "timeToNextSequence": 0
                 }
             ]
         },
