@@ -102,7 +102,8 @@ public class MofGuideonRework : Entity
     {
         NONE = -1,
         DASH,
-        AURA
+        AURA,
+        SWORD_SWING
     }
 
     private NavMeshAgent agent = null;
@@ -124,6 +125,7 @@ public class MofGuideonRework : Entity
     public GameObject gunMeshObj = null;
     private MeshRenderer gunMesh = null;
 
+
     // Particles
     public GameObject dashParticleObj = null;
     private ParticleSystem dashParticle = null;
@@ -133,6 +135,9 @@ public class MofGuideonRework : Entity
 
     public GameObject auraBurstParticleObj = null;
     private ParticleSystem auraBurstParticle = null;
+
+    public GameObject saberParticlesObj = null;
+    private ParticleSystem saberParticles = null;
 
     //State
     private STATE currentState = STATE.START;
@@ -402,6 +407,11 @@ public class MofGuideonRework : Entity
         if (auraBurstParticleObj != null)
         {
             auraBurstParticle = auraBurstParticleObj.GetComponent<ParticleSystem>();
+        }
+
+        if(saberParticlesObj != null)
+        {
+            saberParticles = saberParticlesObj.GetComponent<ParticleSystem>();
         }
 
 
@@ -2144,7 +2154,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo1", speedMult * meleeHit1SpdMult);
         }
         if (gun != null)
@@ -2188,7 +2198,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo2", speedMult * meleeHit2SpdMult);
         }
         if (gun != null)
@@ -2231,7 +2241,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo3", speedMult * meleeHit3SpdMult);
         }
         if (gun != null)
@@ -2277,7 +2287,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo4", speedMult * meleeHit4SpdMult);
         }
         if (gun != null)
@@ -2320,7 +2330,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo5", speedMult * meleeHit5SpdMult);
         }
         if (gun != null)
@@ -2363,7 +2373,7 @@ public class MofGuideonRework : Entity
         Animator.Play(gameObject, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
         if (saber != null)
         {
-            ActivateSaber();
+            ActivateSaber(true);
             Animator.Play(saber, "MG_MeleeCombo6", speedMult * meleeHit6SpdMult);
         }
         if (gun != null)
@@ -3645,7 +3655,16 @@ public class MofGuideonRework : Entity
                 }
                 else
                     Debug.Log("Aura Burst Particles not found");
+                break;
 
+            case PARTICLES.SWORD_SWING:
+                if (saberParticles != null)
+                {
+                    if (saberParticles.playing == false || forceRestart == true)
+                        saberParticles.Play();
+                }
+                else
+                    Debug.Log("Aura Particles not found");
                 break;
         }
     }
@@ -3679,7 +3698,15 @@ public class MofGuideonRework : Entity
                 }
                 else
                     Debug.Log("Aura Burst Particles not found");
+                break;
 
+            case PARTICLES.SWORD_SWING:
+                if (saberParticles != null)
+                {
+                    saberParticles.Stop();
+                }
+                else
+                    Debug.Log("Aura Particles not found");
                 break;
         }
     }
@@ -3711,7 +3738,7 @@ public class MofGuideonRework : Entity
     }
 
 
-    private void ActivateSaber()
+    private void ActivateSaber(bool playSwingParticles = false)
     {
         if (saber == null || saberMesh == null)
             return;
@@ -3719,6 +3746,11 @@ public class MofGuideonRework : Entity
         saberMesh.active = true;
 
         Animator.Resume(saber);
+
+        if(playSwingParticles == true)
+        {
+            PlayParticles(PARTICLES.SWORD_SWING, true);
+        }
     }
 
     private void DeActivateSaber()
@@ -3729,6 +3761,8 @@ public class MofGuideonRework : Entity
         saberMesh.active = false;
 
         Animator.Pause(saber);
+
+        StopParticles(PARTICLES.SWORD_SWING);
     }
 
     #endregion
