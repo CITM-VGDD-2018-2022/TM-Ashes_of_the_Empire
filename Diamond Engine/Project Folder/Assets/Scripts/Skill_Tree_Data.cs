@@ -212,7 +212,7 @@ public class Skill_Tree_Data : DiamondComponent
         //Descriptions
         public string G1_description = "Regenerate 1 Force each second";
         public string G2_description = "Push range increased";
-        public string G3_description = "Force cover durationincreased";
+        public string G3_description = "Force cover duration increased";
         public string G4_description = "While combo is active regenerate 4  force per second";
         public string G5_description = "+10% to max Force";
         public string G6_description = "Rising combo level grants +2 Force";
@@ -226,27 +226,27 @@ public class Skill_Tree_Data : DiamondComponent
         public string U2_description = "Movement speed +20%";
         public string U3_description = "Damaging an enemy slows them by 15%";
         public string U4_description = "Fall damage reduced by 50%";
-        public string U5_description = "Weapon overheat takes20% longer";
+        public string U5_description = "Weapon overheat takes 20% longer";
         public string U6_description = "Grogu's skill  cost reduced  by 20%";
         public string U7_description = "Heal 5HP when Grogu uses a skill";
         public string U8_description = "Dashing leaves a CPD behind (10 sec CD)";
 
         //Descriptions - Aggression
         public string A1_description = "Blaster deals 15% more damage";
-        public string A2_description = "Getting combogrants 5% fire rate per level";
-        public string A3_description = "Getting combogrants 20% damage per level";
+        public string A2_description = "Getting combo grants 5% fire rate per level";
+        public string A3_description = "Getting combo grants 20% damage per level";
         public string A4_description = "CPD deals 15% more damage";
         public string A5_description = "Sniper deals 15% more damage";
         public string A6_description = "Greater enemies take 20% extra damage";
-        public string A7_description = "Blaster does more damageas health decreases";
-        public string A8_description = "Sniper does more damageas health decreases";
+        public string A7_description = "Blaster does more damage as health decreases";
+        public string A8_description = "Sniper does more damage as health decreases";
 
         //Descriptions - Defense
         public string D1_description = "Max Health +10%";
         public string D2_description = "10% of incoming damage is negated";
-        public string D3_description = "Getting combogrants 5% damage reduction";
-        public string D4_description = "Getting comboheals 2 HP";
-        public string D5_description = "Heal 10 HP oncombo finish";
+        public string D3_description = "Getting combo grants 5% damage reduction";
+        public string D4_description = "Getting combo heals 2 HP";
+        public string D5_description = "Heal 10 HP on combo finish";
         public string D6_description = "30% chance to heal 1 HP per bullet";
         public string D7_description = "1 Extra life per run (revive at 50% hp)";
         public string D8_description = "5% chance to avoid incoming damage";
