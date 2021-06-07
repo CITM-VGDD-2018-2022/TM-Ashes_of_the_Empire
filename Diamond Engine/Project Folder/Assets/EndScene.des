@@ -1,9 +1,9 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        123.02468872070312,
-        43.976943969726562,
-        -38.491603851318359
+        68.798164367675781,
+        22.713693618774414,
+        3.0941751003265381
     ],
     "EditorCameraZ": [
         -0.94872152805328369,
@@ -15,16 +15,16 @@
         0.94968056678771973,
         -0.014072748832404613
     ],
-    "SkyboxPath0": "",
-    "SkyboxPath1": "",
-    "SkyboxPath2": "",
-    "SkyboxPath3": "",
-    "SkyboxPath4": "",
-    "SkyboxPath5": "",
+    "SkyboxPath0": "Library\/Textures\/2022232686.dds",
+    "SkyboxPath1": "Library\/Textures\/2100226782.dds",
+    "SkyboxPath2": "Library\/Textures\/833934686.dds",
+    "SkyboxPath3": "Library\/Textures\/317611191.dds",
+    "SkyboxPath4": "Library\/Textures\/1917099099.dds",
+    "SkyboxPath5": "Library\/Textures\/182300541.dds",
     "skyboxColor": [
-        9.9999999747524271e-07,
-        9.9998999303352321e-07,
-        9.9998999303352321e-07,
+        1,
+        0.60118746757507324,
+        0,
         1
     ],
     "tags": [],
@@ -102,10 +102,10 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 1.0471975803375244,
-                    "hFOV": 1.4251065254211426,
+                    "hFOV": 1.6744459867477417,
                     "culling": true,
                     "HDR": true,
-                    "drawSkybox": true
+                    "drawSkybox": false
                 },
                 {
                     "Type": 12,
@@ -314,7 +314,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -66.300003051757812
+                        -66.300003051757813
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -430,7 +430,7 @@
                     "initialPosX": 0,
                     "initialPosY": -120,
                     "finalPosX": 0,
-                    "finalPosY": -66.300003051757812,
+                    "finalPosY": -66.300003051757813,
                     "initialScaleX": 18.600000381469727,
                     "initialScaleY": 8.5,
                     "finalScaleX": 18.600000381469727,
@@ -544,7 +544,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -85.800003051757812
+                        -85.800003051757813
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -660,7 +660,7 @@
                     "initialPosX": 0,
                     "initialPosY": -120,
                     "finalPosX": 0,
-                    "finalPosY": -85.800003051757812,
+                    "finalPosY": -85.800003051757813,
                     "initialScaleX": 18.600000381469727,
                     "initialScaleY": 8.5,
                     "finalScaleX": 18.600000381469727,
@@ -9734,7 +9734,7 @@
                     "Active": true,
                     "Position": [
                         -42.599998474121094,
-                        65.800003051757812
+                        65.800003051757813
                     ],
                     "Rotation": 0,
                     "Size": [
@@ -9771,7 +9771,7 @@
                     "initialPosX": -89.199996948242188,
                     "initialPosY": 0,
                     "finalPosX": -42.599998474121094,
-                    "finalPosY": 65.800003051757812,
+                    "finalPosY": 65.800003051757813,
                     "initialScaleX": 21.399999618530273,
                     "initialScaleY": 44.599998474121094,
                     "finalScaleX": 10.699999809265137,
