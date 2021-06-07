@@ -752,7 +752,7 @@ public class Skytrooper : Enemy
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
-
+            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
             if (bullet != null && currentState != STATE.DIE)
             {
 
