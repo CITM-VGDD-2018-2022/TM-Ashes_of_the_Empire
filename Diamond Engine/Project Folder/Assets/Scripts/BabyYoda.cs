@@ -538,17 +538,19 @@ public class BabyYoda : DiamondComponent
         spawnPos += Vector3.Cross(mandoTransform.GetForward(), mandoTransform.GetRight()) * wallSkillOffset.y;
         spawnPos += mandoTransform.GetForward() * wallSkillOffset.z;
 
-        InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1, 1, 1));
         if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.ONE)
         {
+            InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
             Audio.PlayAudio(gameObject, "Play_Grogu_Rock_Wall");
         }
         else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.TWO)
         {
+            InternalCalls.CreatePrefab("Library/Prefabs/794729648.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
             Audio.PlayAudio(gameObject, "Play_Grogu_Ice_Wall");
         }
         else
         {
+            InternalCalls.CreatePrefab("Library/Prefabs/1561608527.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
             Audio.PlayAudio(gameObject, "Play_Grogu_Metal_Wall");
         }
 

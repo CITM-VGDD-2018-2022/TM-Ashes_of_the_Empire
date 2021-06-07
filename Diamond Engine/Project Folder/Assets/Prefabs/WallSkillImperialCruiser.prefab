@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                15.323540687561035,
                 0,
-                9.3191251754760742
+                0,
+                0
             ],
             "Rotation": [
                 0,
@@ -32,6 +32,52 @@
                 {
                     "Type": 1,
                     "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "BarrierSkill",
+                    "myMeshPivot": 1783484342,
+                    "wall_up": 606105776,
+                    "wall_effects": 1255008467,
+                    "maxTimeAlive": 5,
+                    "maxHP": 30,
+                    "maxSpawnTimeAnim": 1
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": true,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 10,
+                    "Density": 1
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        4,
+                        3,
+                        1
+                    ]
                 }
             ]
         },
@@ -48,14 +94,14 @@
             "Static": false,
             "Position": [
                 0,
-                0,
+                -1.1319999694824219,
                 0
             ],
             "Rotation": [
-                1.8436322194776865e-15,
-                0.7071068286895752,
-                1.8436322194776865e-15,
-                0.7071068286895752
+                2.6072902314260883e-15,
+                0,
+                0,
+                1
             ],
             "Scale": [
                 1,
@@ -82,7 +128,7 @@
             "Static": false,
             "Position": [
                 0,
-                0.40000000596046448,
+                -0.13699999451637268,
                 0
             ],
             "Rotation": [
@@ -340,14 +386,14 @@
             "Static": false,
             "Position": [
                 0,
-                1.0357613563537598,
+                1.0190000534057617,
                 0
             ],
             "Rotation": [
-                -6.1817239327410789e-08,
-                -0.70722883939743042,
-                -6.1817239327410789e-08,
-                -0.70698469877243042
+                0,
+                0,
+                0,
+                1
             ],
             "Scale": [
                 1.0000001192092896,
@@ -374,7 +420,7 @@
             "Static": false,
             "Position": [
                 0,
-                0.5,
+                -1.2489999532699585,
                 0
             ],
             "Rotation": [
@@ -751,14 +797,14 @@
             "Static": false,
             "Position": [
                 0,
-                0,
+                -1.562999963760376,
                 0
             ],
             "Rotation": [
-                1.0672351891116705e-11,
-                0.70722883939743042,
-                -1.0672351891116705e-11,
-                0.70698469877243042
+                4.3711388286737929e-08,
+                1,
+                -4.3711388286737929e-08,
+                1.910685465164705e-15
             ],
             "Scale": [
                 1.0000001192092896,

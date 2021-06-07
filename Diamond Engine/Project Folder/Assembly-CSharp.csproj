@@ -233,6 +233,7 @@
 		<Compile Include="Assets\Scripts\EnableWithPause.cs" />
 		<Compile Include="Assets\Scripts\MoffSwing.cs" />
 		<Compile Include="Assets\Scripts\Sequence.cs" />
+		<Compile Include="Assets\Scripts\CubeSize.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
