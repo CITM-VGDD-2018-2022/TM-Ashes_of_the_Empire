@@ -1167,7 +1167,7 @@ public class Rancor : Entity
     private void StartLoadingRush()
     {
         loadRushTimer = loadRushTime;
-
+        Audio.PlayAudio(gameObject, "Play_Rancor_Roar_Attack");
         //Animator.Play(gameObject, "RN_LoadingRush"); //THIS ANIMATION DOESNT EXIST, BUT ITS NEEDED
 
     }
