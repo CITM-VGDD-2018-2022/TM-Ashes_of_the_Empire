@@ -102,7 +102,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 1.0471975803375244,
-                    "hFOV": 1.6148288249969482,
+                    "hFOV": 1.526031494140625,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true
@@ -420,6 +420,23 @@
                     "ScriptName": "HubRoomSwitch",
                     "nextRoomUID": 1564453141,
                     "isHubScene": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Move",
+                    "delay": 2.2000000476837158,
+                    "duration": 1,
+                    "initialPosX": 0,
+                    "initialPosY": -120,
+                    "finalPosX": 0,
+                    "finalPosY": -66.300003051757812,
+                    "initialScaleX": 18.600000381469727,
+                    "initialScaleY": 8.5,
+                    "finalScaleX": 18.600000381469727,
+                    "finalScaleY": 8.5,
+                    "playOnAwake": true,
+                    "interpolationType": 4
                 }
             ]
         },
@@ -633,6 +650,23 @@
                     "ScriptName": "HubRoomSwitch",
                     "nextRoomUID": 1726826608,
                     "isHubScene": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Move",
+                    "delay": 1.8999999761581421,
+                    "duration": 1,
+                    "initialPosX": 0,
+                    "initialPosY": -120,
+                    "finalPosX": 0,
+                    "finalPosY": -85.800003051757812,
+                    "initialScaleX": 18.600000381469727,
+                    "initialScaleY": 8.5,
+                    "finalScaleX": 18.600000381469727,
+                    "finalScaleY": 8.5,
+                    "playOnAwake": true,
+                    "interpolationType": 4
                 }
             ]
         },
@@ -916,7 +950,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1071,7 +1105,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1226,7 +1260,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1297,7 +1331,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1452,7 +1486,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1607,7 +1641,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1678,7 +1712,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1749,7 +1783,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1820,7 +1854,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -1975,7 +2009,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2130,7 +2164,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2436,7 +2470,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2591,7 +2625,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2662,7 +2696,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2817,7 +2851,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -2888,7 +2922,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3043,7 +3077,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3114,7 +3148,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3269,7 +3303,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3340,7 +3374,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3495,7 +3529,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3613,7 +3647,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3768,7 +3802,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3839,7 +3873,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -3994,7 +4028,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4065,7 +4099,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4220,7 +4254,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4291,7 +4325,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4446,7 +4480,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4517,7 +4551,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4672,7 +4706,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4790,7 +4824,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -4945,7 +4979,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5016,7 +5050,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5171,7 +5205,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5242,7 +5276,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5397,7 +5431,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5468,7 +5502,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5623,7 +5657,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5694,7 +5728,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5849,7 +5883,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -5967,7 +6001,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6122,7 +6156,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6193,7 +6227,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6348,7 +6382,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6419,7 +6453,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6574,7 +6608,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6645,7 +6679,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6800,7 +6834,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -6871,7 +6905,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7026,7 +7060,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7144,7 +7178,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7299,7 +7333,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7370,7 +7404,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7525,7 +7559,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7596,7 +7630,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7751,7 +7785,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7822,7 +7856,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -7977,7 +8011,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8048,7 +8082,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8203,7 +8237,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8321,7 +8355,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8476,7 +8510,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8547,7 +8581,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8702,7 +8736,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8773,7 +8807,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -8928,7 +8962,7 @@
                     "Type": 3,
                     "Active": true,
                     "IsEmpty": true,
-                    "MaterialAssetPath": "Assets\/Materials\/ui_fade.mat",
+                    "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
                     "MaterialUID": 1258986901
                 },
@@ -9164,8 +9198,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -9173,24 +9207,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/20400766.dds",
                     "UID": 20400766,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0,
-                    "initialPosY": 28.799999237060547,
-                    "finalPosX": 0,
-                    "finalPosY": 28.799999237060547,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 15.5,
-                    "finalScaleY": 13,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.5,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -9263,8 +9288,8 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
+                    "delay": 2,
+                    "duration": 0.5,
                     "initialPosX": -1.7000000476837158,
                     "initialPosY": -7.3000001907348633,
                     "finalPosX": -1.7000000476837158,
@@ -9347,8 +9372,8 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
+                    "delay": 2,
+                    "duration": 0.5,
                     "initialPosX": -4.6999998092651367,
                     "initialPosY": -7.3000001907348633,
                     "finalPosX": -4.6999998092651367,
@@ -9412,8 +9437,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -9421,24 +9446,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/2063968483.dds",
                     "UID": 2063968483,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0,
-                    "initialPosY": -0.20000000298023224,
-                    "finalPosX": 0,
-                    "finalPosY": -0.20000000298023224,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 15.5,
-                    "finalScaleY": 13,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 1.75,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -9478,7 +9494,7 @@
                     "Type": 6,
                     "Active": true,
                     "Position": [
-                        -5.5999999046325684,
+                        -5.3000001907348633,
                         -7.3000001907348633
                     ],
                     "Rotation": 0,
@@ -9511,8 +9527,8 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
+                    "delay": 2.25,
+                    "duration": 0.5,
                     "initialPosX": -5.5999999046325684,
                     "initialPosY": -7.3000001907348633,
                     "finalPosX": -5.5999999046325684,
@@ -9576,8 +9592,8 @@
                     "Active": true,
                     "IsEmpty": true,
                     "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
-                    "MaterialUID": 457052853
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
                 },
                 {
                     "Type": 11,
@@ -9585,24 +9601,15 @@
                     "AssetPath": "Empty",
                     "LibraryPath": "Library\/Textures\/714717743.dds",
                     "UID": 714717743,
-                    "fadeValue": 0
+                    "fadeValue": 1
                 },
                 {
                     "Type": 5,
                     "Active": true,
-                    "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
-                    "initialPosX": 0,
-                    "initialPosY": -29.899999618530273,
-                    "finalPosX": 0,
-                    "finalPosY": -29.899999618530273,
-                    "initialScaleX": 0,
-                    "initialScaleY": 0,
-                    "finalScaleX": 15.5,
-                    "finalScaleY": 13,
-                    "playOnAwake": true,
-                    "interpolationType": 0
+                    "ScriptName": "UI_Fade",
+                    "delay": 2,
+                    "duration": 0.5,
+                    "playOnAwake": true
                 }
             ]
         },
@@ -9675,8 +9682,8 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "UI_Move",
-                    "delay": 0.69999998807907104,
-                    "duration": 0.80000001192092896,
+                    "delay": 2.5,
+                    "duration": 0.5,
                     "initialPosX": -3.2000000476837158,
                     "initialPosY": -7.3000001907348633,
                     "finalPosX": -3.2000000476837158,
