@@ -43,7 +43,6 @@ public class MofGuideonRework : Entity
         PRE_BURST_CHARGE,
         PRE_BURST_DASH,
         BURST_1,
-        BURST_2,
         LIGHTNING_DASH_CHARGE,
         LIGHTNING_DASH,
         LIGHTNING_DASH_TIRED,
@@ -187,7 +186,8 @@ public class MofGuideonRework : Entity
     public float chaseDuration = 2.0f;
     private float chaseTimer = 0.0f;
 
-    public float chaseSpeed = 3.0f;
+    public float chaseSpeed_P1 = 3.0f;
+    public float chaseSpeed_P2 = 3.0f;
 
     //Melee combo
     private const float LAST_FRAME_CONST = 0.05f;
@@ -451,10 +451,19 @@ public class MofGuideonRework : Entity
         UpdateStatuses();
 
         ProcessInternalInput();
-        ProcessExternalInput();
-        ProcessState();
 
-        UpdateState();
+        if (currentPhase == PHASE.PHASE1)
+        {
+            ProcessState_P1();
+            UpdateState_P1();
+        }
+
+        else
+        {
+            ProcessState_P2();
+            UpdateState_P2();
+        }
+
 
         UpdateDamaged();
     }
@@ -638,12 +647,7 @@ public class MofGuideonRework : Entity
         }
     }
 
-    private void ProcessExternalInput()
-    {
-
-    }
-
-    private void ProcessState()
+    private void ProcessState_P1()
     {
         while (inputsList.Count > 0)
         {
@@ -905,22 +909,411 @@ public class MofGuideonRework : Entity
                     switch (input)
                     {
                         case INPUT.IN_PHASE_CHANGE_END:
-                            currentState = STATE.CHASE;
                             EndPhaseChange();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
                             break;
                     }
-                    break;
-
-                case STATE.DEAD:
-                    break;
-                default:
                     break;
             }
             inputsList.RemoveAt(0);
         }
     }
 
-    private void UpdateState()
+    private void ProcessState_P2()
+    {
+        while (inputsList.Count > 0)
+        {
+            INPUT input = inputsList[0];
+
+            switch (currentState)
+            {
+                case STATE.NONE:
+                    Debug.Log("Moff gideon ERROR STATE");
+                    break;
+
+                case STATE.START:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRESENTATION:
+                            StartPresentation();
+
+                            currentState = STATE.PRESENTATION;
+                            break;
+                    }
+                    break;
+
+                case STATE.PRESENTATION:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRESENTATION_END:
+                            EndPresentation();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
+                            break;
+                    }
+                    break;
+
+                case STATE.CHASE:
+                    switch (input)
+                    {
+                        case INPUT.IN_CHASE_END:
+                            EndChase_P2();
+                            currentState = STATE.ACTION_SELECT;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndChase_P2();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.ACTION_SELECT:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_COMBO_1_CHARGE:
+                            StartMeleeCombo1Charge();
+                            currentState = STATE.MELEE_COMBO_1_CHARGE;
+                            break;
+
+                        case INPUT.IN_PRE_BURST_CHARGE:
+                            StartBurstCharge();
+                            currentState = STATE.PRE_BURST_CHARGE;
+                            break;
+
+                        case INPUT.IN_SPAWN_ENEMIES:
+                            StartSpawnEnemies();
+                            currentState = STATE.SPAWN_ENEMIES;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            StartDie(); //Change for die or something
+                            currentState = STATE.DEAD;
+                            break;
+
+                    }
+                    break;
+
+                case STATE.MELEE_COMBO_1_CHARGE:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_CHARGE_END:
+                            EndMeleeCombo1Charge();
+                            StartMeleeComboDash1();
+                            currentState = STATE.MELEE_COMBO_1_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeCombo1Charge();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.MELEE_COMBO_1_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash1();
+                            StartMeleeComboHit1();
+                            currentState = STATE.MELEE_COMBO_1;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash1();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_1:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit1();
+                            StartMeleeComboDash2();
+                            currentState = STATE.MELEE_COMBO_2_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit1();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_2_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash2();
+                            StartMeleeComboHit2();
+                            currentState = STATE.MELEE_COMBO_2;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash2();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_2:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit2();
+                            StartMeleeComboDash3();
+                            currentState = STATE.MELEE_COMBO_3_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit2();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_3_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash3();
+                            StartMeleeComboHit3();
+                            currentState = STATE.MELEE_COMBO_3;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash3();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_3:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit3();
+                            StartMeleeCombo4Charge();
+                            currentState = STATE.MELEE_COMBO_4_CHARGE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit3();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.MELEE_COMBO_4_CHARGE:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_CHARGE_END:
+                            EndMeleeCombo4Charge();
+                            StartMeleeComboDash4();
+                            currentState = STATE.MELEE_COMBO_4_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeCombo4Charge();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.MELEE_COMBO_4_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash4();
+                            StartMeleeComboHit4();
+                            currentState = STATE.MELEE_COMBO_4;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash1();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_4:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit4();
+                            StartMeleeComboDash5();
+                            currentState = STATE.MELEE_COMBO_5_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit4();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_5_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash5();
+                            StartMeleeComboHit5();
+                            currentState = STATE.MELEE_COMBO_5;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash5();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_5:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit5();
+                            StartMeleeComboDash6();
+                            currentState = STATE.MELEE_COMBO_6_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit5();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+                case STATE.MELEE_COMBO_6_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_DASH_END:
+                            EndMeleeComboDash6();
+                            StartMeleeComboHit6();
+                            currentState = STATE.MELEE_COMBO_6;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboDash6();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.MELEE_COMBO_6:
+                    switch (input)
+                    {
+                        case INPUT.IN_MELEE_HIT_END:
+                            EndMeleeComboHit6();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndMeleeComboHit6();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.SPAWN_ENEMIES:
+                    switch (input)
+                    {
+                        case INPUT.IN_SPAWN_ENEMIES_END:
+                            EndSpawnEnemies();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndSpawnEnemies();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.PRE_BURST_CHARGE:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRE_BURST_CHARGE_END:
+                            EndBurstCharge();
+                            StartBurstDash();
+                            currentState = STATE.PRE_BURST_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurstCharge();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.PRE_BURST_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_PRE_BURST_DASH_END:
+                            EndBurstDash();
+                            StartBurst_P2();
+                            currentState = STATE.BURST_1;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurstDash();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.BURST_1:
+                    switch (input)
+                    {
+                        case INPUT.IN_BURST_END:
+                            EndBurst_P2();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndBurst_P2();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.CHANGE_PHASE:
+                    switch (input)
+                    {
+                        case INPUT.IN_PHASE_CHANGE_END:
+                            EndPhaseChange();
+                            StartChase_P2();
+                            currentState = STATE.CHASE;
+                            break;
+                    }
+                    break;
+
+                case STATE.DEAD:
+                    //TODO: Fill this bad boy
+                    break;
+            }
+            inputsList.RemoveAt(0);
+        }
+    }
+
+    #region UpdateState_P1
+    private void UpdateState_P1()
     {
         switch (currentState)
         {
@@ -996,6 +1389,82 @@ public class MofGuideonRework : Entity
                 break;
         }
     }
+    #endregion
+
+    #region UpdateState_P2
+    private void UpdateState_P2()
+    {
+        switch (currentState)
+        {
+            case STATE.NONE:
+                Debug.Log("MOFF GIDEON ERROR STATE");
+                break;
+
+            case STATE.CHASE:
+                UpdateChase_P2();
+                break;
+
+            case STATE.ACTION_SELECT:
+                UpdateActionSelect();
+                break;
+
+            case STATE.MELEE_COMBO_1_CHARGE:
+                UpdateMeleeCombo1Charge();
+                break;
+
+            case STATE.MELEE_COMBO_1_DASH:
+                UpdateMeleeComboDash1();
+                break;
+
+            case STATE.MELEE_COMBO_1:
+                UpdateMeleeComboHit1();
+                break;
+
+            case STATE.MELEE_COMBO_2_DASH:
+                UpdateMeleeComboDash2();
+                break;
+
+            case STATE.MELEE_COMBO_2:
+                UpdateMeleeComboHit2();
+                break;
+
+            case STATE.MELEE_COMBO_3_DASH:
+                UpdateMeleeComboDash3();
+                break;
+
+            case STATE.MELEE_COMBO_3:
+                UpdateMeleeComboHit3();
+                break;
+
+            case STATE.SPAWN_ENEMIES:
+                UpdateSpawnEnemies();
+                break;
+
+            case STATE.PRE_BURST_CHARGE:
+                UpdateBurstCharge();
+                break;
+
+            case STATE.PRE_BURST_DASH:
+                UpdateBurstDash();
+                break;
+
+            case STATE.BURST_1:
+                UpdateBurst_P2();
+                break;
+
+            case STATE.CHANGE_PHASE:
+                UpdatePhaseChange();
+                break;
+
+            case STATE.DEAD:
+                UpdateDie();
+                break;
+            default:
+                Debug.Log("MOFF GIDEON ERROR STATE");
+                break;
+        }
+    }
+    #endregion
 
     #endregion
 
@@ -1059,6 +1528,7 @@ public class MofGuideonRework : Entity
     #endregion
 
     #region CHASE
+#region CHASE_P1
     private void StartChase_P1()
     {
         chaseTimer = chaseDuration;
@@ -1092,7 +1562,7 @@ public class MofGuideonRework : Entity
             inputsList.Add(INPUT.IN_CHASE_END);
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-        agent.MoveToCalculatedPos(chaseSpeed * speedMult);
+        agent.MoveToCalculatedPos(chaseSpeed_P1 * speedMult);
 
         UpdateAnimationSpd(speedMult);
 
@@ -1104,6 +1574,48 @@ public class MofGuideonRework : Entity
         chaseTimer = 0.0f;
         Debug.Log("End chase");
     }
+    #endregion
+
+    #region CHASE_P2
+    private void StartChase_P2()
+    {
+        chaseTimer = chaseDuration;
+
+        Animator.Play(gameObject, "MG_RunPh2_Final", speedMult);
+        if (saber != null)
+        {
+            ActivateSaber();
+        }
+
+        if (gun != null)
+        {
+            DeActivateGun();
+        }
+
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void UpdateChase_P2()
+    {
+        if (agent != null && Core.instance != null)
+        {
+            agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
+        }
+
+        if (Mathf.Distance(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition) < endChaseDistance)
+            inputsList.Add(INPUT.IN_CHASE_END);
+
+        Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+        agent.MoveToCalculatedPos(chaseSpeed_P2 * speedMult);
+
+        UpdateAnimationSpd(speedMult);
+    }
+
+    private void EndChase_P2()
+    {
+        chaseTimer = 0.0f;
+    }
+    #endregion
 
     #endregion
 
