@@ -67,6 +67,57 @@
             ]
         },
         {
+            "name": "LoadSkills",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1162756726,
+            "ParentUID": 1481651339,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "LoadSkills",
+                    "hubTextController": 1070040184,
+                    "skillNodeMandoUtility": 1824371181,
+                    "skillNodeMandoAgression": 1572989137,
+                    "skillNodeMandoDefense": 460162084,
+                    "skillNodeMandoDefense2": 1354776957,
+                    "skillNodeGrogu": 2129789327,
+                    "skillNodeWeaponPrimary": 1795127826,
+                    "skillNodeWeaponPrimary2": 1488569487,
+                    "skillNodeWeaponSecondary": 1677675272,
+                    "skillNodeWeaponSpecial": 2040118087,
+                    "start": true,
+                    "skillDictionaryLoading": 0
+                }
+            ]
+        },
+        {
             "name": "DinDjarin",
             "tag": "Player",
             "layer": "Default",
@@ -5870,7 +5921,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 1
                 },
@@ -6021,7 +6071,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 2
                 },
@@ -6172,7 +6221,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 3
                 },
@@ -6317,7 +6365,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 4
                 },
@@ -6475,7 +6522,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 5
                 },
@@ -6626,7 +6672,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 6
                 },
@@ -6777,7 +6822,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 7
                 },
@@ -6912,7 +6956,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 8
                 },
@@ -7096,7 +7139,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 17
                 },
@@ -7239,7 +7281,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 18
                 },
@@ -7390,7 +7431,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 19
                 },
@@ -7547,7 +7587,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 20
                 },
@@ -7704,7 +7743,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 21
                 },
@@ -7848,7 +7886,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 22
                 },
@@ -7991,7 +8028,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 23
                 },
@@ -8134,7 +8170,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 24
                 },
@@ -8431,7 +8466,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 9
                 },
@@ -8582,7 +8616,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 10
                 },
@@ -8733,7 +8766,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 11
                 },
@@ -8877,7 +8909,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 12
                 },
@@ -9020,7 +9051,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 13
                 },
@@ -9171,7 +9201,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 14
                 },
@@ -9314,7 +9343,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 15
                 },
@@ -9457,7 +9485,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 0,
-                    "panelImage": 43469925,
                     "skillTreeName": 2,
                     "skillTreeNumber": 16
                 },
@@ -10053,7 +10080,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 1
                 },
@@ -10204,7 +10230,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 2
                 },
@@ -10355,7 +10380,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 3
                 },
@@ -10499,7 +10523,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 4
                 },
@@ -10643,7 +10666,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 5
                 },
@@ -10794,7 +10816,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 6
                 },
@@ -10945,7 +10966,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 7
                 },
@@ -11088,7 +11108,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 1,
-                    "panelImage": 1773988077,
                     "skillTreeName": 1,
                     "skillTreeNumber": 8
                 },
@@ -11841,7 +11860,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 1
                 },
@@ -11991,7 +12009,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 2
                 },
@@ -12135,7 +12152,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 3
                 },
@@ -12278,7 +12294,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 4
                 },
@@ -12429,7 +12444,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 5
                 },
@@ -12572,7 +12586,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 6
                 },
@@ -12715,7 +12728,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 7
                 },
@@ -12898,7 +12910,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 8
                 },
@@ -13042,7 +13053,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 9
                 },
@@ -13193,7 +13203,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 10
                 },
@@ -13344,7 +13353,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 11
                 },
@@ -13495,7 +13503,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 12
                 },
@@ -13630,7 +13637,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 13
                 },
@@ -13806,7 +13812,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": true,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 14
                 },
@@ -13950,7 +13955,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 15
                 },
@@ -14101,7 +14105,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 16
                 },
@@ -14252,7 +14255,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 17
                 },
@@ -14403,7 +14405,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 18
                 },
@@ -14538,7 +14539,6 @@
                     "hubSkillControllerObj": 1070040184,
                     "isRootNode": false,
                     "node_type": 2,
-                    "panelImage": 653981771,
                     "skillTreeName": 3,
                     "skillTreeNumber": 19
                 },
@@ -32429,57 +32429,6 @@
             ]
         },
         {
-            "name": "LoadSkills",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1162756726,
-            "ParentUID": 1481651339,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                },
-                {
-                    "Type": 5,
-                    "Active": true,
-                    "ScriptName": "LoadSkills",
-                    "hubTextController": 1070040184,
-                    "skillNodeMandoUtility": 1824371181,
-                    "skillNodeMandoAgression": 1572989137,
-                    "skillNodeMandoDefense": 460162084,
-                    "skillNodeMandoDefense2": 1354776957,
-                    "skillNodeGrogu": 2129789327,
-                    "skillNodeWeaponPrimary": 1795127826,
-                    "skillNodeWeaponPrimary2": 1488569487,
-                    "skillNodeWeaponSecondary": 1677675272,
-                    "skillNodeWeaponSpecial": 2040118087,
-                    "start": true,
-                    "skillDictionaryLoading": 0
-                }
-            ]
-        },
-        {
             "name": "HUB_Final",
             "tag": "Untagged",
             "layer": "Default",
@@ -32496,9 +32445,9 @@
                 0.041435003280639648
             ],
             "Rotation": [
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 -0.70722883939743042,
-                -1.0672351891116705e-11,
+                1.0672351891116705e-11,
                 0.70698469877243042
             ],
             "Scale": [
@@ -33378,10 +33327,10 @@
                 7.9888238246894616e-09
             ],
             "Rotation": [
-                0.045044966042041779,
-                0.0032072523608803749,
-                -0.012809195555746555,
-                0.99889779090881348
+                0.04504496231675148,
+                0.0032072518952190876,
+                -0.012809193693101406,
+                0.99889767169952393
             ],
             "Scale": [
                 0.99999982118606567,
@@ -33412,10 +33361,10 @@
                 2.3940856408444233e-08
             ],
             "Rotation": [
-                0.044985931366682053,
-                0.0031942871864885092,
-                -0.012903058901429176,
-                0.99889928102493286
+                0.044985927641391754,
+                0.0031942867208272219,
+                -0.012903057038784027,
+                0.99889916181564331
             ],
             "Scale": [
                 1,
@@ -33854,10 +33803,10 @@
                 2.1506608050003706e-08
             ],
             "Rotation": [
-                -0.80621892213821411,
-                0.04100920632481575,
-                -0.047588329762220383,
-                0.58827275037765503
+                -0.80621880292892456,
+                0.041009202599525452,
+                -0.047588322311639786,
+                0.58827269077301025
             ],
             "Scale": [
                 0.9999995231628418,
@@ -33922,10 +33871,10 @@
                 2.0240104703361794e-08
             ],
             "Rotation": [
-                0.33847445249557495,
-                0.0081740850582718849,
-                0.00042836955981329083,
-                0.94094008207321167
+                0.33847442269325256,
+                0.0081740841269493103,
+                0.00042836950160562992,
+                0.94093996286392212
             ],
             "Scale": [
                 1.0000002384185791,
@@ -34092,10 +34041,10 @@
                 5.1593831429386228e-09
             ],
             "Rotation": [
-                0.36184772849082947,
-                -0.011958765797317028,
-                -0.00081397255416959524,
-                0.93216025829315186
+                0.36184769868850708,
+                -0.011958763934671879,
+                -0.00081397243775427341,
+                0.9321601390838623
             ],
             "Scale": [
                 1,
@@ -38540,9 +38489,9 @@
                 -3.1886420249938965
             ],
             "Rotation": [
-                6.170741073674435e-08,
+                -6.170741073674435e-08,
                 -0.7479819655418396,
-                6.170741073674435e-08,
+                -6.170741073674435e-08,
                 -0.6637190580368042
             ],
             "Scale": [
@@ -39781,7 +39730,7 @@
             ],
             "Rotation": [
                 -6.4237343222472987e-10,
-                -0.0034501713234931231,
+                -0.0034501717891544104,
                 -6.9407665378995453e-12,
                 0.99999403953552246
             ],
@@ -39861,13 +39810,13 @@
             ],
             "Rotation": [
                 0.48055994510650635,
-                0.46385687589645386,
+                0.46385690569877625,
                 -0.69854062795639038,
                 0.25678771734237671
             ],
             "Scale": [
                 1.0000001192092896,
-                1.0000002384185791,
+                1.0000001192092896,
                 1.0000001192092896
             ],
             "Components": [
@@ -39973,8 +39922,8 @@
             ],
             "Scale": [
                 1,
-                0.99998801946640015,
-                0.99998801946640015
+                0.99998795986175537,
+                0.99998795986175537
             ],
             "Components": [
                 {
@@ -40026,8 +39975,8 @@
             ],
             "Scale": [
                 250,
-                249.99501037597656,
-                19.99937629699707
+                249.9949951171875,
+                19.999374389648438
             ],
             "Components": [
                 {
@@ -40226,10 +40175,10 @@
                 -2.6713106632232666
             ],
             "Rotation": [
-                -4.7602174646499407e-08,
-                -0.99563062191009521,
-                -4.7602174646499407e-08,
-                -0.09338020533323288
+                -4.7602167541072049e-08,
+                -0.99563050270080566,
+                -4.7602167541072049e-08,
+                -0.093380197882652283
             ],
             "Scale": [
                 1.0000007152557373,
