@@ -71,9 +71,11 @@ public class MofGuideonRework : Entity
         IN_MELEE_HIT_END,
         IN_MELEE_DASH_END,
 
+        //Enemy spawn
         IN_SPAWN_ENEMIES,
         IN_SPAWN_ENEMIES_END,
 
+        //Burst
         IN_PRE_BURST_CHARGE,
         IN_PRE_BURST_CHARGE_END,
         IN_PRE_BURST_DASH,
@@ -81,6 +83,8 @@ public class MofGuideonRework : Entity
         IN_BURST1,
         IN_BURST2,
         IN_BURST_END,
+
+        //Lightning dash
         IN_LIGHTNING_DASH_CHARGE,
         IN_LIGHTNING_DASH_CHARGE_END,
         IN_LIGHTNING_DASH_TIRED,
@@ -998,6 +1002,11 @@ public class MofGuideonRework : Entity
                             currentState = STATE.SPAWN_ENEMIES;
                             break;
 
+                        case INPUT.IN_LIGHTNING_DASH_CHARGE:
+                            StartLightningDashCharge();
+                            currentState = STATE.LIGHTNING_DASH_CHARGE;
+                            break;
+
                         case INPUT.IN_DEAD:
                             StartDie(); //Change for die or something
                             currentState = STATE.DEAD;
@@ -1303,6 +1312,59 @@ public class MofGuideonRework : Entity
                     }
                     break;
 
+                case STATE.LIGHTNING_DASH_CHARGE:
+                    switch (input)
+                    {
+                        case INPUT.IN_LIGHTNING_DASH_CHARGE_END:
+                            EndLightningDashCharge();
+                            StartLightningDash();
+                            currentState = STATE.LIGHTNING_DASH;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndLightningDashCharge();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.LIGHTNING_DASH:
+                    switch (input)
+                    {
+                        case INPUT.IN_LIGHTNING_DASH_TIRED:
+                            EndLightningDash();
+                            StartLightningDashTired();
+                            currentState = STATE.LIGHTNING_DASH_TIRED;
+                            break;
+
+                        case INPUT.IN_DEAD:
+                            EndLightningDash();
+                            StartDie();
+                            currentState = STATE.DEAD;
+                            break;
+                    }
+                    break;
+
+                case STATE.LIGHTNING_DASH_TIRED:
+                    {
+                        switch (input)
+                        {
+                            case INPUT.IN_LIGHTNING_DASH_TIRED_END:
+                                EndLightningDash();
+                                StartChase_P2();
+                                currentState = STATE.CHASE;
+                                break;
+
+                            case INPUT.IN_DEAD:
+                                EndLightningDash();
+                                StartDie();
+                                currentState = STATE.DEAD;
+                                break;
+                        }
+                    }
+                    break;
+
                 case STATE.CHANGE_PHASE:
                     switch (input)
                     {
@@ -1340,7 +1402,7 @@ public class MofGuideonRework : Entity
                 break;
 
             case STATE.ACTION_SELECT:
-                UpdateActionSelect();
+                UpdateActionSelect_P1();
                 break;
 
             case STATE.MELEE_COMBO_1_CHARGE:
@@ -1415,7 +1477,7 @@ public class MofGuideonRework : Entity
                 break;
 
             case STATE.ACTION_SELECT:
-                UpdateActionSelect();
+                UpdateActionSelect_P2();
                 break;
 
             case STATE.MELEE_COMBO_1_CHARGE:
@@ -1507,7 +1569,25 @@ public class MofGuideonRework : Entity
     #endregion
 
     #region ACTION_SELECT
-    private void UpdateActionSelect()
+    private void UpdateActionSelect_P1()
+    {
+        int decision = decisionGenerator.Next(1, 100);
+
+        if (ableToSpawnEnemies == true)
+        {
+            if (decision <= probSpawnEnemies_P1)
+                inputsList.Add(INPUT.IN_SPAWN_ENEMIES);
+
+            else
+                DecideAttack();
+        }
+
+        else
+            DecideAttack();
+    }
+
+
+    private void UpdateActionSelect_P2()    //TODO: ADD LIGHTNING DASH PROVAVILITY
     {
         int decision = decisionGenerator.Next(1, 100);
 
