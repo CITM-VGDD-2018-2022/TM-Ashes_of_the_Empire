@@ -26,7 +26,7 @@ public class PlayerHealth : DiamondComponent
 
     public void Update()
     {
-        if(Input.GetKey(DEKeyCode.P) == KeyState.KEY_DOWN)
+        if (Input.GetKey(DEKeyCode.P) == KeyState.KEY_DOWN)
         {
             ResetMaxAndCurrentHPToDefault();
         }
@@ -132,6 +132,7 @@ public class PlayerHealth : DiamondComponent
     //Sets the value of the current healing when killing an enemy.
     public void SetHealingWhenKillingEnemy(int newHealing)
     {
+
         healWhenKillingAnEnemy = newHealing;
 
         if (healWhenKillingAnEnemy < 0)
@@ -161,6 +162,7 @@ public class PlayerHealth : DiamondComponent
     //Increments the current Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to take percentual damage
     public void HealPercentMax(float percentofMaxHp)
     {
+
         if (DebugOptionsHolder.godModeActive || invincible || die)
             return;
 
@@ -182,6 +184,7 @@ public class PlayerHealth : DiamondComponent
     //When current HP drops to 0, Die() Method is called
     public void SetCurrentHP(int newCurrentHP)
     {
+
         if (DebugOptionsHolder.godModeActive || invincible || die)
             return;
 
@@ -202,6 +205,7 @@ public class PlayerHealth : DiamondComponent
     //Also works as a HEAL AMOUNT when taking negative damage ;) When current HP drops to 0, Die() Method is called
     public int TakeDamage(int damage, bool ignoreDashInv = false)
     {
+
         if (DebugOptionsHolder.godModeActive || Core.instance.lockInputs || invincible || die)
             return currHealth;
 
@@ -249,11 +253,12 @@ public class PlayerHealth : DiamondComponent
         {
             int damageTaken = (int)(damage * Core.instance.DamageRed);
 
-            if (PlayerResources.CheckBoon(BOONS.BOON_BOSSK_STRENGTH))
+            if (PlayerResources.CheckBoon(BOONS.BOON_BOSSK_STRENGTH) && damage > 0)
             {
                 float damageReduced = (damage * (Core.instance.GetStatusData(STATUS_TYPE.BOSSK_STR).severity / 100f));
 
                 damageTaken = (int)(damage * Core.instance.DamageRed) - (int)(Math.Max(damageReduced, 1f));
+
             }
 
             currHealth -= damageTaken;
