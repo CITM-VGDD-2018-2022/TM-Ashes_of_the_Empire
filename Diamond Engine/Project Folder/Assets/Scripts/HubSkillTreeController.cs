@@ -31,9 +31,12 @@ public class HubSkillTreeController : DiamondComponent
 
     public void Awake()
     {
-        beskarResourceText.GetComponent<Text>().text = PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR).ToString();
-        macaronResourceText.GetComponent<Text>().text = PlayerResources.GetResourceCount(RewardType.REWARD_MACARON).ToString();
-        scrapResourceText.GetComponent<Text>().text = PlayerResources.GetResourceCount(RewardType.REWARD_SCRAP).ToString();
+        beskarResource = PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR);
+        beskarResourceText.GetComponent<Text>().text = beskarResource.ToString();
+        macaronResource = PlayerResources.GetResourceCount(RewardType.REWARD_MACARON);
+        macaronResourceText.GetComponent<Text>().text = macaronResource.ToString();
+        scrapResource = PlayerResources.GetResourceCount(RewardType.REWARD_SCRAP);
+        scrapResourceText.GetComponent<Text>().text = scrapResource.ToString();
     }
 
     public void Update()
