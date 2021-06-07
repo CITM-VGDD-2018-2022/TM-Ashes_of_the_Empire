@@ -17,7 +17,10 @@ public class QuitConfirmation : DiamondComponent
 			InternalCalls.CloseGame();
 		if (gameObject.Name == "QuittoMenu")
 		{
-			GameSceneManager.instance.DeactivateBoon();
+			if(GameSceneManager.instance != null)
+            {
+				GameSceneManager.instance.DeactivateBoon();
+            }
 			Time.ResumeGame();
 			if (EnvironmentSourceLocate.instance != null)
 				Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
