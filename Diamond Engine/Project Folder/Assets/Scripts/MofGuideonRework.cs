@@ -2471,7 +2471,7 @@ public class MofGuideonRework : Entity
 
     private void UpdatePresentation()
     {
-        currentHealthPoints = Mathf.Lerp(currentHealthPoints, maxHealthPoints1, 1f - (presentationTimer / presentationTime));
+        currentHealthPoints = Mathf.Lerp(0, maxHealthPoints1, 1f - (presentationTimer / presentationTime));
     }
 
 
@@ -2558,7 +2558,7 @@ public class MofGuideonRework : Entity
         //    }
         //}
 
-        currentHealthPoints = Mathf.Lerp(currentHealthPoints, maxHealthPoints2, 1f - (changingPhaseTimer / changingPhaseTime));
+        currentHealthPoints = Mathf.Lerp(0, maxHealthPoints2, 1f - (changingPhaseTimer / changingPhaseTime));
     }
 
 
@@ -2566,7 +2566,7 @@ public class MofGuideonRework : Entity
     {
         currentPhase = PHASE.PHASE2;
         enemySkillTimer = enemySkillTime;
-        currentHealthPoints = maxHealthPoints2;
+        currentHealthPoints = limboHealth = maxHealthPoints2;
 
         Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
 
