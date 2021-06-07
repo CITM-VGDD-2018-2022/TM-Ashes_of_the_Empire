@@ -2627,20 +2627,56 @@ public class MofGuideonRework : Entity
             shotTimer = timeBetweenShots;
     }
 
-    //P2
+    //P2   PLACEHOLDER, NEED TO CHANGE FUNCTIONALITY
     private void StartBurst_P2()
     {
-        Debug.Log("Start burst 2");
+        Debug.Log("Start burst");
+        Animator.Play(gameObject, "MG_PowerPose", speedMult);
+        if (saber != null)
+        {
+            DeActivateSaber();
+        }
+        if (gun != null)
+        {
+            DeActivateGun();
+        }
+        UpdateAnimationSpd(speedMult);
+
+        toStartBurstTimer = timeToStartBurst;
+        shotTimer = timeBetweenShots;
+
+
+        Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
     }
 
     private void UpdateBurst_P2()
     {
-        Debug.Log("Update burst 2");
+        Debug.Log("Update burst");
+
+        if (toStartBurstTimer > 0.0f)
+        {
+            toStartBurstTimer -= myDeltaTime;
+        }
+        else
+        {
+            if (shotTimer > 0.0f)
+            {
+                shotTimer -= myDeltaTime;
+
+                if (shotTimer <= 0.0f)
+                    Shoot();
+            }
+        }
+
+        Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
+
+        UpdateAnimationSpd(speedMult);
     }
 
     private void EndBurst_P2()
     {
-        Debug.Log("End burst 2");
+        shotTimes = 0;
+        StopParticles(PARTICLES.DASH);
     }
 
     #endregion
