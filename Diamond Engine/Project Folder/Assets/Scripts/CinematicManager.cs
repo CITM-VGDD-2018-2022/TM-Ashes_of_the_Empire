@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class CinematicManager : DiamondComponent
 {
+    public static CinematicManager instance;
+
     public GameObject gameCamera;
     public GameObject cameraPos1;
 
@@ -13,6 +15,7 @@ public class CinematicManager : DiamondComponent
     public GameObject sequence4;
     public GameObject sequence5;
     public GameObject sequence6;
+    public GameObject sequence7;
 
 
     private Vector3 initPos;
@@ -27,20 +30,18 @@ public class CinematicManager : DiamondComponent
 
         if (!init)
         {
-            gameCamera.GetComponent<CameraController>().startFollow = true;
-            postCinematicDialogue.Enable(true);
-            postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
-            CameraManager.SetCameraOrthographic(gameCamera);
+            StartGame();
             return;
         }
 
-
+        instance = this;
         AddSequence(sequence1);
         AddSequence(sequence2);
         AddSequence(sequence3);
         AddSequence(sequence4);
         AddSequence(sequence5);
         AddSequence(sequence6);
+        AddSequence(sequence7);
 
         //Start first sequence
         if (listSequences.Count > 0)
@@ -58,12 +59,28 @@ public class CinematicManager : DiamondComponent
         }
         initPos = gameCamera.transform.localPosition;
         initRot = gameCamera.transform.localRotation;
-        Debug.Log(gameCamera.transform.localPosition.ToString());
-        Debug.Log(cameraPos1.transform.localPosition.ToString());
         SetAsPerspectiveCamera();
 
         gameCamera.transform.localPosition = cameraPos1.transform.localPosition;
         gameCamera.transform.localRotation = cameraPos1.transform.localRotation;
+    }
+
+    private void StartGame()
+    {
+        gameCamera.GetComponent<CameraController>().startFollow = true;
+        postCinematicDialogue.Enable(true);
+        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+        CameraManager.SetCameraOrthographic(gameCamera);
+    } 
+    
+    private void ReturnGame()
+    {
+        gameCamera.GetComponent<CameraController>().startFollow = true;
+        gameCamera.transform.localPosition = initPos;
+        gameCamera.transform.localRotation = initRot;
+        postCinematicDialogue.Enable(true);
+        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+        CameraManager.SetCameraOrthographic(gameCamera);
     }
 
     public void Update()
@@ -107,5 +124,27 @@ public class CinematicManager : DiamondComponent
         {
             listSequences.Add(sequence);
         }
+    }
+
+    public void StopAllSequences()
+    {
+        foreach (Sequence sequence in listSequences)
+        {
+            sequence.StopRunning();
+        }
+    }
+
+    public void OnApplicationQuit()
+    {
+        instance = null;
+    }
+
+    public void EndFirstSequences()
+    {
+        StopAllSequences();
+        BlackFade.StartFadeIn(() => {
+            ResetInitalTransform();
+            BlackFade.StartFadeOut();
+        });
     }
 }
