@@ -64,6 +64,7 @@ public class ShopButtons : DiamondComponent
                     if (descriptionText != null) descriptionText.text = "-";
                     if (priceText != null) priceText.text = "-";
                     //gameObject.Enable(false);
+                    Audio.PlayAudio(gameObject, "Play_Shop_Purchase");
                 }
                 else
                 {
