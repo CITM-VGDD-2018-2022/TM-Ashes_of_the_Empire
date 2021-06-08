@@ -538,20 +538,43 @@ public class BabyYoda : DiamondComponent
         spawnPos += Vector3.Cross(mandoTransform.GetForward(), mandoTransform.GetRight()) * wallSkillOffset.y;
         spawnPos += mandoTransform.GetForward() * wallSkillOffset.z;
 
-        if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.ONE)
+        int pos = 0;
+        pos = (((int)RoomSwitch.currentLevelIndicator) - 1 < 0) ? 0 : ((int)RoomSwitch.currentLevelIndicator) - 1;
+        if (RoomSwitch.currentroom != RoomSwitch.levelLists[pos].bossScene && RoomSwitch.currentroom != RoomSwitch.levelLists[pos].shopRoom)
         {
-            InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
-            Audio.PlayAudio(gameObject, "Play_Grogu_Rock_Wall");
-        }
-        else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.TWO)
-        {
-            InternalCalls.CreatePrefab("Library/Prefabs/794729648.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
-            Audio.PlayAudio(gameObject, "Play_Grogu_Ice_Wall");
+            if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.ONE)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Rock_Wall");
+            }
+            else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.TWO)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/794729648.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Ice_Wall");
+            }
+            else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.THREE)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/1561608527.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Metal_Wall");
+            }
         }
         else
         {
-            InternalCalls.CreatePrefab("Library/Prefabs/1561608527.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
-            Audio.PlayAudio(gameObject, "Play_Grogu_Metal_Wall");
+            if (pos == (int)RoomSwitch.LEVELS.ONE)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/1850725718.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Rock_Wall");
+            }
+            else if (pos == (int)RoomSwitch.LEVELS.TWO)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/794729648.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Ice_Wall");
+            }
+            else if (pos == (int)RoomSwitch.LEVELS.THREE)
+            {
+                InternalCalls.CreatePrefab("Library/Prefabs/1561608527.prefab", spawnPos, mandoTransform.globalRotation, new Vector3(1.0f, 1.0f, 1.0f));
+                Audio.PlayAudio(gameObject, "Play_Grogu_Metal_Wall");
+            }
         }
 
         //if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.UTILITY_HEAL_WHEN_GROGU_SKILL))        
