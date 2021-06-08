@@ -35,7 +35,7 @@ public class EndLevelRewardSpawn : DiamondComponent
             {
                 Core.instance.gameObject.GetComponent<PlayerHealth>().SetInvincible(false);
                 trigger = true;
-                Audio.PlayAudio(gameObject, "Play_UI_Boon_Pickup");
+                Audio.PlayAudio(gameObject, "Play_UI_Boon_Obtained");
             }
             else
             {
