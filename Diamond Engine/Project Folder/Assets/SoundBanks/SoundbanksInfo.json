@@ -1063,7 +1063,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "1590949922",
+    "Hash": "3592593929",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1245,72 +1245,6 @@
       ]
      },
      {
-      "Id": "2484240183",
-      "Name": "Play_Moff_Gideon_Intimidation_Phase_1",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Intimidation_Phase_1",
-      "DurationType": "OneShot",
-      "DurationMin": "0.000000",
-      "DurationMax": "1.180454",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "336560564",
-        "Language": "SFX",
-        "ShortName": "moff guideon intimidate 1rst phase 2.wav",
-        "Path": "SFX\\moff guideon intimidate 1rst phase 2_FC2D3A10.wem"
-       },
-       {
-        "Id": "827580043",
-        "Language": "SFX",
-        "ShortName": "moff guideon intimidate 1rst phase 1.wav",
-        "Path": "SFX\\moff guideon intimidate 1rst phase 1_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
-      "Id": "2484240180",
-      "Name": "Play_Moff_Gideon_Intimidation_Phase_2",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Intimidation_Phase_2",
-      "DurationType": "OneShot",
-      "DurationMin": "0.000000",
-      "DurationMax": "1.028594",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "132413711",
-        "Language": "SFX",
-        "ShortName": "moff guideon intimidate 2nd phase 2.wav",
-        "Path": "SFX\\moff guideon intimidate 2nd phase 2_FC2D3A10.wem"
-       },
-       {
-        "Id": "200020784",
-        "Language": "SFX",
-        "ShortName": "moff guideon intimidate 2nd phase 1.wav",
-        "Path": "SFX\\moff guideon intimidate 2nd phase 1_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
-      "Id": "3966465840",
-      "Name": "Play_Moff_Gideon_Lightsaber_Attack",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Attack",
-      "DurationType": "OneShot",
-      "DurationMin": "0.803084",
-      "DurationMax": "0.982358",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "608559747",
-        "Language": "SFX",
-        "ShortName": "moff guideon lightsaber attack 1.wav",
-        "Path": "SFX\\moff guideon lightsaber attack 1_FC2D3A10.wem"
-       },
-       {
-        "Id": "703060658",
-        "Language": "SFX",
-        "ShortName": "moff guideon lightsaber attack 2.wav",
-        "Path": "SFX\\moff guideon lightsaber attack 2_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
       "Id": "955348132",
       "Name": "Play_Moff_Gideon_Lightsaber_Throw",
       "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Throw",
@@ -1467,7 +1401,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "1314017898",
+    "Hash": "2438854385",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1955,6 +1889,40 @@
         "Language": "SFX",
         "ShortName": "Mando voice 1.wav",
         "Path": "SFX\\Mando voice 1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3127181133",
+      "Name": "Play_Mando_Lightsaber_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Mando_Lightsaber_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.354399",
+      "DurationMax": "0.982358",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "218041158",
+        "Language": "SFX",
+        "ShortName": "Mando hit 1.wav",
+        "Path": "SFX\\Mando hit 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "608559747",
+        "Language": "SFX",
+        "ShortName": "moff guideon lightsaber attack 1.wav",
+        "Path": "SFX\\moff guideon lightsaber attack 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "703060658",
+        "Language": "SFX",
+        "ShortName": "moff guideon lightsaber attack 2.wav",
+        "Path": "SFX\\moff guideon lightsaber attack 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "1010296783",
+        "Language": "SFX",
+        "ShortName": "Mando hit 2.wav",
+        "Path": "SFX\\Mando hit 2_FC2D3A10.wem"
        }
       ]
      },
@@ -3701,7 +3669,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "1740737945",
+    "Hash": "384938714",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -4052,7 +4020,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "3034759919",
+    "Hash": "2876253245",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
