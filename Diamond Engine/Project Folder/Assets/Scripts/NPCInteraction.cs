@@ -17,6 +17,7 @@ public class NPCInteraction : DiamondComponent
     public bool canUpgrade = false;
 
     private bool start = true;
+    private bool once = true;
 
     public void Awake()
     {
@@ -26,7 +27,7 @@ public class NPCInteraction : DiamondComponent
         {
             return;
         }
-
+        once = true;
 
     }
 
@@ -87,15 +88,30 @@ public class NPCInteraction : DiamondComponent
             if (canInteract || canUpgrade)
             {
                 interactionImage.Enable(true);
+                if (npc == Interaction.GROGU && once)
+                {
+                    Audio.PlayAudio(gameObject, "Play_Grogu_Dialog");
+                }
+                else if (npc == Interaction.GREEF && once)
+                {
+                    Audio.PlayAudio(Core.instance.gameObject, "Play_Male_Popup");
+                }
+                else if (once)
+                {
+                    Audio.PlayAudio(gameObject, "Play_Female_Popup");
+                }
+                once = false;
             }
             else
             {
                 interactionImage.Enable(false);
+                once = true;
             }
         }
         else if (!IsInside() && interactionImage.IsEnabled())
         {
             interactionImage.Enable(false);
+            once = true;
         }
     }
     private void NotificationImage()

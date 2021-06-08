@@ -13,7 +13,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -46.544082641601563,
+                -46.544082641601562,
                 1.4779369831085205,
                 0.57591772079467773
             ],
@@ -48,7 +48,18 @@
                     "interactionImage": 1643031191,
                     "notificationImage": 230334908,
                     "hubTextController": 1070040184,
-                    "canInteract": false
+                    "canInteract": false,
+                    "canUpgrade": true
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "Grogu",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
@@ -558,7 +569,7 @@
                 0.0045479028485715389,
                 -0.068393051624298096,
                 -0.10478206723928452,
-                0.99213027954101563
+                0.99213027954101562
             ],
             "Scale": [
                 0.99999994039535522,
@@ -1718,7 +1729,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.27858352661132813,
+                -0.27858352661132812,
                 0.60543811321258545,
                 -0.24001312255859375
             ],

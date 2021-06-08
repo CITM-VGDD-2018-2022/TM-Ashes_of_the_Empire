@@ -51,7 +51,18 @@
                     "interactionImage": 246480180,
                     "notificationImage": 1231312929,
                     "hubTextController": 1070040184,
-                    "canInteract": false
+                    "canInteract": false,
+                    "canUpgrade": true
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "Cantine",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
@@ -916,10 +927,10 @@
                 1.1248200149083232e-09
             ],
             "Rotation": [
-                -8.8275129428438959e-07,
-                1.9089777936187602e-07,
-                -0.21136733889579773,
-                0.97740668058395386
+                -8.8275140797122731e-07,
+                1.9089780778358545e-07,
+                -0.21136736869812012,
+                0.97740679979324341
             ],
             "Scale": [
                 1,
@@ -1120,10 +1131,10 @@
                 -2.2204460492503131e-16
             ],
             "Rotation": [
-                -0.16956847906112671,
+                -0.1695684939622879,
                 0,
                 0,
-                0.98551839590072632
+                0.98551851511001587
             ],
             "Scale": [
                 1,

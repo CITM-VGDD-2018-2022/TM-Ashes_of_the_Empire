@@ -52,7 +52,18 @@
                     "interactionImage": 625639751,
                     "notificationImage": 254292270,
                     "hubTextController": 1070040184,
-                    "canInteract": false
+                    "canInteract": false,
+                    "canUpgrade": true
+                },
+                {
+                    "Type": 13,
+                    "Active": true,
+                    "evName": "Empty",
+                    "audBankReference": "Cantine",
+                    "pitch": 50,
+                    "playOnAwake": false,
+                    "isMuted": false,
+                    "isMusic": false
                 }
             ]
         },
