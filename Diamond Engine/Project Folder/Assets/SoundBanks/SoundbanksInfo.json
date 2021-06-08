@@ -373,7 +373,7 @@
    {
     "Id": "913881297",
     "Language": "SFX",
-    "Hash": "1899932783",
+    "Hash": "2418368410",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Wampa_Skell",
     "ShortName": "Wampa_Skell",
     "Path": "Wampa_Skell.bnk",
@@ -1063,7 +1063,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "1540916742",
+    "Hash": "1590949922",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -2460,7 +2460,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "88276705",
+    "Hash": "3508772404",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2510,14 +2510,14 @@
       "Name": "Play_Interaction_Circle_Out",
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_Interaction_Circle_Out",
       "DurationType": "OneShot",
-      "DurationMin": "0.494948",
-      "DurationMax": "0.494948",
+      "DurationMin": "1.675652",
+      "DurationMax": "1.675652",
       "IncludedMemoryFiles": [
        {
-        "Id": "803624842",
+        "Id": "6512664",
         "Language": "SFX",
-        "ShortName": "SkillTreeInteractionOut1.wav",
-        "Path": "SFX\\SkillTreeInteractionOut1_FC2D3A10.wem"
+        "ShortName": "SkillTreeInteractionIn1.wav",
+        "Path": "SFX\\SkillTreeInteractionIn1_FC2D3A10.wem"
        }
       ]
      },
@@ -3111,7 +3111,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "134731859",
+    "Hash": "475282980",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -3129,8 +3129,8 @@
       "Name": "Play_Rancor_Area_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rancor_Area_Impact",
       "DurationType": "OneShot",
-      "DurationMin": "1.331917",
-      "DurationMax": "1.331917",
+      "DurationMin": "1.678110",
+      "DurationMax": "1.678110",
       "IncludedMemoryFiles": [
        {
         "Id": "36736387",
@@ -3263,12 +3263,6 @@
         "Language": "SFX",
         "ShortName": "Rancor_Hit_Body 3.wav",
         "Path": "SFX\\Rancor_Hit_Body 3_FC2D3A10.wem"
-       },
-       {
-        "Id": "910784929",
-        "Language": "SFX",
-        "ShortName": "RancorHit1.wav",
-        "Path": "SFX\\RancorHit1_FC2D3A10.wem"
        }
       ]
      },
@@ -4042,7 +4036,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "3534478735",
+    "Hash": "837840401",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -4158,12 +4152,6 @@
         "Path": "SFX\\Moff Gideon\\56336-dramatic-orchestra-09-sudden-interception-L2_03682274.wem"
        },
        {
-        "Id": "463460953",
-        "Language": "SFX",
-        "ShortName": "Cinematic Music\\106162-Violins_loop_D_minor_160_bpm-AOS03055.wav",
-        "Path": "SFX\\Cinematic Music\\106162-Violins_loop_D_minor_160_bpm-AOS03055_03682274.wem"
-       },
-       {
         "Id": "560818724",
         "Language": "SFX",
         "ShortName": "EXP FLUTE 2.wav",
@@ -4264,6 +4252,12 @@
         "Language": "SFX",
         "ShortName": "Moff Gideon\\107318-Violins_fadeout_loop_D_minor_160_bpm-AOS03051.wav",
         "Path": "SFX\\Moff Gideon\\107318-Violins_fadeout_loop_D_minor_160_bpm-AOS03051_03682274.wem"
+       },
+       {
+        "Id": "994179069",
+        "Language": "SFX",
+        "ShortName": "Cinematic Music\\Mystery _ Free mystery music for YouTube videos (no copyright).wav",
+        "Path": "SFX\\Cinematic Music\\Mystery _ Free mystery music for YouTube videos (no copyright)_03682274.wem"
        },
        {
         "Id": "1027776590",
@@ -4523,7 +4517,7 @@
             "SwitchValue": "{979A83A1-5FD3-4444-AB96-1ABEDBCBCCEC}",
             "Media": [
              {
-              "Id": "463460953"
+              "Id": "994179069"
              }
             ]
            }
