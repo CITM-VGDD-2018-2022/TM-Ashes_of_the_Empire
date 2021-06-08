@@ -1186,7 +1186,6 @@ public class Rancor : Entity
         rushTimer = rushTime;
         Animator.Play(gameObject, "RN_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
-        Audio.PlayAudio(gameObject, "Play_Rancor_Hand_Slam");
         targetDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition; //RANCOR CALCULATES RUSH DIRECTION
         startRush = true;
         PlayParticles(PARTICLES.RUSH);
