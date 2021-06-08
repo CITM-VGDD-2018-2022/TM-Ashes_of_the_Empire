@@ -1467,7 +1467,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "1481444768",
+    "Hash": "1314017898",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -2460,7 +2460,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "3508772404",
+    "Hash": "1939998717",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2540,6 +2540,22 @@
         "Language": "SFX",
         "ShortName": "ShopBuyItem2.wav",
         "Path": "SFX\\ShopBuyItem2_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "557522296",
+      "Name": "Play_UI_Boon_Obtained",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Boon_Obtained",
+      "DurationType": "OneShot",
+      "DurationMin": "3.493447",
+      "DurationMax": "3.493447",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "851778756",
+        "Language": "SFX",
+        "ShortName": "UI Boon obtained.wav",
+        "Path": "SFX\\UI Boon obtained_FC2D3A10.wem"
        }
       ]
      },
@@ -3685,7 +3701,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "3146192031",
+    "Hash": "1740737945",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -4036,7 +4052,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "837840401",
+    "Hash": "3034759919",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",

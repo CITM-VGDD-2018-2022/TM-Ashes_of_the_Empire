@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	260317159	Play_Enemy_Respawn			\Default Work Unit\UI\Play_Enemy_Respawn	
 	310530060	Play_UI_Button_Hover			\Default Work Unit\UI\Play_UI_Button_Hover	
+	557522296	Play_UI_Boon_Obtained			\Default Work Unit\UI\Play_UI_Boon_Obtained	
 	844563968	Play_Shop_Purchase			\Default Work Unit\UI\Play_Shop_Purchase	
 	945868158	Play_UI_Button_Select			\Default Work Unit\UI\Play_UI_Button_Select	
 	1017258033	Play_Interaction_Circle_In			\Default Work Unit\UI\Play_Interaction_Circle_In	
@@ -49,6 +50,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	694268143	UI Pause	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Pause_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Pause		111892
 	734513644	UI skill tree cancel	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI skill tree cancel_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI skill tree cancel		31464
 	786398189	UI Skill tree close	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Skill tree close_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Skill tree close		94484
+	851778756	UI Boon obtained	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Boon obtained_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Boon obtained		616308
 	913807497	UI Button select	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Button select_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button\UI Button select		52676
 	998598397	ShopBuyItem1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\ShopBuyItem1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Shop Purchase\ShopBuyItem1		176464
 	1026939951	ShopBuyItem2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\ShopBuyItem2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Shop Purchase\ShopBuyItem2		176464
