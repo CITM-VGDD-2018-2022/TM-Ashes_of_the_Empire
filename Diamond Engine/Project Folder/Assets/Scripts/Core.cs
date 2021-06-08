@@ -2322,7 +2322,7 @@ public class Core : Entity
             if (collidedGameObject.CompareTag("Bantha"))
             {
                 //InternalCalls.Destroy(gameObject);
-                Audio.PlayAudio(gameObject, "Play_Mando_Hit");
+                Audio.PlayAudio(gameObject, "Play_Mando_Ramming_Hit");
 
                 Enemy enemy = collidedGameObject.GetComponent<Enemy>();
 

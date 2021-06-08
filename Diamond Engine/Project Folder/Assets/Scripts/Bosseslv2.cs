@@ -291,10 +291,10 @@ public class Bosseslv2 : Entity
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
 
-        //Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
+        Audio.PlayAudio(gameObject, "Play_Wampa_Rush");
         Animator.Play(gameObject, "WP_Roar", speedMult * 2);
         UpdateAnimationSpd(speedMult);
-        Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
+        //Audio.PlayAudio(gameObject, "Play_Wampa_Roar_Presentation");
 
         if (colliderRush != null)
         {

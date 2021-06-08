@@ -22,10 +22,12 @@ public class AtackBosslv2 : DiamondComponent
                     if (boss.GetComponent<Wampa>() != null && boss.GetComponent<Wampa>().angry)
                     {
                         health.TakeDamage((int)damage);
+                        Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Hit");
                     }
                     else if (boss.GetComponent<Skel>() != null && boss.GetComponent<Skel>().angry)
                     {
                         health.TakeDamage((int)damage);
+                        Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Hit");
                     }
                 }
 
