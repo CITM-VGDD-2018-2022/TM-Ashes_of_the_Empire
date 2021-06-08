@@ -9,6 +9,8 @@ public class InsideCollider : DiamondComponent
     public GameObject displaySecondaryText = null;
     public GameObject selectButton = null;
     public GameObject hubTextController = null;
+    private bool into = false;
+    private bool outOf = false;
 
     public void Update()
     {
@@ -29,20 +31,32 @@ public class InsideCollider : DiamondComponent
                 if (navComponent != null)
                     navComponent.Select();
             }
+            into = true;
         }
         else if (!IsInside() && displayText.IsEnabled())
         {
             displayText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
+            outOf = true;
         }
         else if (!IsInside() && displaySecondaryText!=null && displaySecondaryText.IsEnabled())
         {
             displaySecondaryText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
+            outOf = true;
         }
-       
+        if (into)
+        {
+            Audio.PlayAudio(Core.instance.gameObject, "Play_Interaction_Circle_In");
+            into = false;
+        }
+        else if (outOf)
+        {
+            Audio.PlayAudio(Core.instance.gameObject, "Play_Interaction_Circle_Out");
+            outOf = false;
+        }
     }
 
     public bool IsInside()
