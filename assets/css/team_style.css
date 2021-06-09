@@ -56,7 +56,7 @@
     content: "";
     width: 130%;
     height: 100%;
-    background: #db162f;
+    background: rgb(122, 98, 81);
     border-radius: 0 20px 20px 20px;
     position: absolute;
     top: 0;
@@ -70,7 +70,7 @@
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #047168;
+    color: rgb(122, 98, 81);
     text-transform: uppercase;
     margin-bottom: 7px;
 }
