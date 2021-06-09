@@ -263,6 +263,9 @@ public class Core : Entity
     public float fallDamage = 15f;
     private string lastFootsteps = "";
     private bool updateSniper = false;
+
+    public GameObject fastParticleObject;
+    public GameObject slowParticleObject;
     public void Awake()
     {
         #region VARIABLES WITH DEPENDENCIES
@@ -2946,6 +2949,10 @@ public class Core : Entity
                     }
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
+                    if (slowParticleObject != null)
+                    {
+                        slowParticleObject.GetComponent<ParticleSystem>().Play();
+                    }
 
                 }
                 break;
@@ -2954,6 +2961,11 @@ public class Core : Entity
                     this.speedMult += statusToInit.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
+
+                    if(fastParticleObject != null)
+                    {
+                        fastParticleObject.GetComponent<ParticleSystem>().Play();
+                    }
                 }
                 break;
             case STATUS_TYPE.COMBO_UP_ACCEL:
@@ -3247,6 +3259,10 @@ public class Core : Entity
                     this.speedMult += statusToDelete.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
+                    if (slowParticleObject != null)
+                    {
+                        slowParticleObject.GetComponent<ParticleSystem>().Stop();
+                    }
                 }
                 break;
             case STATUS_TYPE.ACCELERATED:
@@ -3254,6 +3270,10 @@ public class Core : Entity
                     this.speedMult -= statusToDelete.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
+                    if (fastParticleObject != null)
+                    {
+                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                    }
                 }
                 break;
             case STATUS_TYPE.COMBO_UP_ACCEL:
