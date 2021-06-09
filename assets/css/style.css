@@ -488,6 +488,8 @@ section {
 .section-bg:before {
   content: "";
   background: #1b1b1b;
+  background: rgb(85, 70, 59);
+  /*background: rgb(122, 98, 81);*/
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -548,7 +550,7 @@ section {
 .game .content p {
   margin-bottom: 30px;
 }
-
+/*
 .game .content .game-btn {
   padding: 8px 30px 9px 30px;
   color: #fff;
@@ -560,26 +562,38 @@ section {
   display: inline-flex;
   align-items: center;
   border: 2px solid #e03a3c;
-}
+}*/
 
 .game .content .game-btn i {
   font-size: 16px;
   padding-left: 5px;
 }
-
+/*
 .game .content .game-btn:hover {
   background: #e35052;
   background: #e03a3c;
-}
+}*/
 
-.game .game-btn i {
+.game .content .game-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  padding-left: 5px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 15px 200px;
+  border-radius: 4px;
+  transition: 0.5s;
+  /*margin-top: 30px;*/
+  border-radius: 50px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
 }
 
-.game .game-btn:hover {
-  background: #e35052;
-  background: #e03a3c;
+.game .content .game-btn:hover {
+  background: #fff;
+  color: black;
+  border-color: #fff;
 }
 
 .game .icon-boxes .icon-box {
