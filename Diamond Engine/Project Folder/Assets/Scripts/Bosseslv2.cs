@@ -113,6 +113,7 @@ public class Bosseslv2 : Entity
     protected ParticleSystem impactParticles = null;
     public GameObject ballParticlesObj = null;
     protected ParticleSystem ballParticles = null;
+    public GameObject deathParticles = null;
 
     enum JUMPSLAM : int
     {
@@ -773,6 +774,15 @@ public class Bosseslv2 : Entity
     {
         Audio.StopAudio(gameObject);
         dieTimer = dieTime;
+        if (deathParticles != null)
+        {
+            deathParticles.transform.localPosition = gameObject.transform.localPosition;
+            ParticleSystem death = deathParticles.GetComponent<ParticleSystem>();
+            if(death != null)
+            {
+                death.Play();
+            }
+        }
         if (gameObject.CompareTag("Skel"))
         {
             Animator.Play(gameObject, "Skel_Die", speedMult);
