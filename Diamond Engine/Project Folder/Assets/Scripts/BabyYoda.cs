@@ -193,7 +193,6 @@ public class BabyYoda : DiamondComponent
     private void Move()
     {
         FollowPoint();
-        MoveVertically();
         LookAtMando();
     }
 
