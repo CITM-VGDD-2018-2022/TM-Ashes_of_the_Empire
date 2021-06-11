@@ -151,10 +151,6 @@ public class Spawn : DiamondComponent
                 if (spawnPoints[randomIndex] == 0)
                 {
                     GameObject spawnPoint = IntToGameObject(randomIndex);
-
-                    if (spawnPoint == null)
-                        Debug.Log("Null spawn");
-
                     GameObject enemy = SpawnPrefab(spawnPoint.transform.globalPosition);
                     spawnPoints[randomIndex] = 1;
                     spawnEnemies++;

@@ -25,8 +25,6 @@ public static class ConfigFunctionality
                 txt.text = "Windowed";
             else if (Config.GetWindowMode() == 2)
                 txt.text = "Full Screen";
-
-            //Debug.Log(txt.text);
         }
     }
 }

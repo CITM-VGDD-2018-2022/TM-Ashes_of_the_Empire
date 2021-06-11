@@ -33,14 +33,8 @@ public class RespawnNoDamage : DiamondComponent
 
     public void OnTriggerEnter(GameObject other)
     {
-        if(initialPlayerPosition == null)
-        {
-            Debug.Log("Trigger");
-        }
-
         if (other.CompareTag("Player") && initialPlayerPosition != null)
         {
-            Debug.Log("Position: " + initialPlayerPosition.ToString());
             respawn = true;
         }
     }

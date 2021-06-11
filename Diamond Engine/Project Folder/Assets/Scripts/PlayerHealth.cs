@@ -61,8 +61,8 @@ public class PlayerHealth : DiamondComponent
             character_mesh.GetComponent<Material>().SetFloatUniform("damaged", damaged);
         }
 
-        if (Input.GetKey(DEKeyCode.COMMA) == KeyState.KEY_DOWN) Debug.Log(currHealth.ToString());
-        if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN) SetMaxHPValue(50, true);
+        if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN) 
+            SetMaxHPValue(50, true);
     }
 
     //Increments the max Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to substract HP
@@ -238,16 +238,7 @@ public class PlayerHealth : DiamondComponent
 
             if (Core.instance.IsDashing())
                 return currHealth;
-        }
-
-        //if(Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.DEFENSE_CHANCE_AVOID_DAMAGE))
-        //{
-        //    if (ChanceToAvoidDamage(Skill_Tree_Data.GetMandoSkillTree().D8_changeToAvoidDamage))
-        //    {
-        //        Debug.Log("Damage missed!");
-        //        return currHealth; //We have avoided damage with a skill
-        //    }
-        //}        
+        }      
 
         if (Core.instance != null)
         {
@@ -292,7 +283,6 @@ public class PlayerHealth : DiamondComponent
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Critical");
         }
         damaged = (damage > 0) ? 1.0f : damaged;
-        //Debug.Log("Current health: " + currHealth.ToString());
         return currHealth;
     }
 

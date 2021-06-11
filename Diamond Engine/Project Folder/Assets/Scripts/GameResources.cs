@@ -83,8 +83,13 @@ public class BokatanResilence : GameResources
         if (Core.instance.gameObject.GetComponent<PlayerHealth>() != null)
         {
             int currentLifeSteal = Core.instance.gameObject.GetComponent<PlayerHealth>().IncrementHealingWhenKillingEnemy(1);
+            Debug.Log("LifeSteal increased to: " + currentLifeSteal);
 
             PlayerResources.AddBoon(BOONS.BOON_BOKATAN_RESILENCE);
+        }
+        else
+        {
+            Debug.Log("ERROR!! Din Djarin has no player health component");
         }
     }
 }

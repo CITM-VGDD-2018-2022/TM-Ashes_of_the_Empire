@@ -170,7 +170,6 @@ public class Skill_Tree_Data : DiamondComponent
         switch (skillTree)
         {
             case 1:
-                Debug.Log(groguSkillEnabled[skill_Number].ToString());
                 return groguSkillEnabled[skill_Number];
             case 2:
                 return mandoSkillEnabled[skill_Number];

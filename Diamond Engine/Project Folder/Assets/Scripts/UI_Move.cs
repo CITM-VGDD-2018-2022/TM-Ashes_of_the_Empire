@@ -45,7 +45,6 @@ public class UI_Move : DiamondComponent
 
         if (trans == null)
         {
-            Debug.Log("Need to add transform2D to gameObject: " + gameObject.Name);
             ended = true;
         }
         else

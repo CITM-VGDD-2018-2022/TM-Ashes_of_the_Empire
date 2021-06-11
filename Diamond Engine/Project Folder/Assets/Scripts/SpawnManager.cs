@@ -108,7 +108,6 @@ public class SpawnManager : DiamondComponent
 
     private void SpawnWave()
     {
-        //Debug.Log("Count: " + availableSpawnPoints.Count.ToString());
         List<GameObject> spawnPoints = new List<GameObject>();
 
         for (int i = 0; i < availableSpawnPoints.Count; ++i)
@@ -130,7 +129,6 @@ public class SpawnManager : DiamondComponent
         {
             int index = randomizer.Next(0, spawnPoints.Count);
 
-            //Debug.Log("Index: " + index.ToString() + " count: " + spawnPoints.Count.ToString());
             GameObject spawnPoint = spawnPoints[index];
             SpawnPoint spawnScript = spawnPoint.GetComponent<SpawnPoint>();
 

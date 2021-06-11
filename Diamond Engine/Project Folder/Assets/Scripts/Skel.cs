@@ -57,16 +57,11 @@ public class Skel : Bosseslv2
     public override void Awake()
     {
         base.Awake();
-        Debug.Log("Skel Awake");
 
         InitEntity(ENTITY_TYPE.SKEL);
         EnemyManager.AddEnemy(gameObject);
         angry = false;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        if (agent == null)
-            Debug.Log("Null agent, add a NavMeshAgent Component");
-        else
-            Debug.Log("Agent is located");
 
         companion = InternalCalls.FindObjectWithName("WampBoss");
         limboHealth = 0f;
@@ -183,7 +178,6 @@ public class Skel : Bosseslv2
 
         if (!companion.IsEnabled() && !angry)
         {
-            Debug.Log("skel angry");
             inputsList.Add(INPUT.IN_PRESENTATION);
             presentationTimer = presentationTime;
             SkelAngry();
@@ -208,7 +202,6 @@ public class Skel : Bosseslv2
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("SKEL ERROR STATE");
                     break;
 
                 case STATE.SEARCH_STATE:
@@ -324,7 +317,6 @@ public class Skel : Bosseslv2
                     break;
 
                 default:
-                    Debug.Log("NEED TO ADD STATE TO WAMPA");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -335,7 +327,6 @@ public class Skel : Bosseslv2
         switch (currentState)
         {
             case STATE.NONE:
-                Debug.Log("Error Wampa State");
                 break;
             case STATE.DEAD:
                 UpdateDie();
@@ -366,8 +357,6 @@ public class Skel : Bosseslv2
             healthbarMaterial.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
             healthbarMaterial.SetFloatUniform("limbo", limboHealth / maxHealthPoints);
         }
-        else
-            Debug.Log("Boss Bar component was null!!");
 
         if (damaged > 0.01f)
         {
@@ -386,8 +375,6 @@ public class Skel : Bosseslv2
             {
                 skelMeshMat.SetFloatUniform("damaged", damaged);
             }
-            else
-                Debug.Log("Wampa Mesh Material was null!!");
         }
     }
 
@@ -587,7 +574,6 @@ public class Skel : Bosseslv2
                         Core.instance.skill_SoloHeal = 0;
                     }
                 }
-                Debug.Log("Skel HP: " + healthPoints.ToString());
 
                 if (healthPoints <= 0.0f)
                 {

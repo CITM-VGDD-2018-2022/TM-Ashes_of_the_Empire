@@ -108,7 +108,6 @@ public class StartMenu : DiamondComponent
         if (MusicSourceLocate.instance != null)
         {
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Exploring");
-            Debug.Log("Exploring");
         }
     }
 

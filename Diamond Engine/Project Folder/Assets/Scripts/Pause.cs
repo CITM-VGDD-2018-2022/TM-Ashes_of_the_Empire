@@ -74,10 +74,6 @@ public class Pause : DiamondComponent
 				{
 					boonDisplay.ShowBoons();
 				}
-				else
-				{
-					Debug.Log("Null boon display");
-				}
 			}
 		}
 	}

@@ -114,7 +114,6 @@ public static class RoomSwitch
         {
             int shopToLoad = (levelLists[index - 1].shopRoom != 0) ? levelLists[index - 1].shopRoom : defaultErrorShop;
 
-            Debug.Log("PostBoss loaded");
             SceneManager.LoadScene(shopToLoad);
             currentroom = shopToLoad;
             return;
@@ -143,8 +142,6 @@ public static class RoomSwitch
             }
             else
             {
-                Debug.Log("Loading boss scene");
-                //levelLists[index].visited.Clear();
                 levelLists[index].visited = new List<int>(originalLevelPools[index]);
 
                 currentLevelIndicator++;
@@ -203,7 +200,6 @@ public static class RoomSwitch
     }
     public static void PlayMusicBoss(LEVELS index)
     {
-        Debug.Log(index.ToString());
         switch (index)
         {
             case LEVELS.ONE:

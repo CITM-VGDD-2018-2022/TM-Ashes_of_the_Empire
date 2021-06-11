@@ -48,8 +48,6 @@ public class DisSett : DiamondComponent
             Config.SetWindowMode(windowMode);
             ConfigFunctionality.UpdateDisplayText();
         }
-
-        Debug.Log("Executed");
     }
 
     public void Update()

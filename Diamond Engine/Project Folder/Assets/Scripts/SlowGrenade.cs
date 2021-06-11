@@ -98,7 +98,6 @@ public class SlowGrenade : DiamondComponent
 
                 if(myEntComp.gameObject != null)
                 {
-                    Debug.Log("Grenade");
                     switch (myEntComp.GetEntityType())
                     {
                         case ENTITY_TYPE.STROMTROOPER:
@@ -229,7 +228,6 @@ public class SlowGrenade : DiamondComponent
                     }
                     else if (procActivation == true)
                     {
-                        Debug.Log("Enemy ticked!");
                         Core.instance.hud.GetComponent<HUD>().AddToCombo(5, 1.3f);
                         eneScript.TakeDamage(grenadeDamage * eneScript.damageRecieveMult);
                         eneScript.PlayGrenadeHitParticles();
@@ -301,8 +299,6 @@ public class SlowGrenade : DiamondComponent
         detonate = true;
         Audio.PlayAudio(gameObject, "Play_Mando_Grenade_Set_Up");
         lifeTimer = 0;
-
-        // Debug.Log("Detonate!");
 
         SerchEnemiesByDistance();
     }

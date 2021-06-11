@@ -11,13 +11,11 @@ public class TriggerSwitch : DiamondComponent
     {
         Audio.SetState("Game_State", "Run");
         Audio.SetState("Player_State", "Alive");
-        Debug.Log("Before music instance");
         if (MusicSourceLocate.instance != null)
         {
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject,"Player_Health", "Healthy");
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject,"Player_Action", "Exploring");
         }
-        Debug.Log("After music instance");
     }
     public void Update()
     {

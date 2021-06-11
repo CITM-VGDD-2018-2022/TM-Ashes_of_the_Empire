@@ -129,7 +129,6 @@ public class AimBot : DiamondComponent
     {
         float newAngleRad = newAngle * (1 / Mathf.Rad2Deg);
         dotMin = (float)Math.Cos(newAngleRad * 0.5f);
-        //Debug.Log("New Dot Min set to: " + dotMin + " From Angle: " + newAngle);
     }
 
     //assigns a new objective if there is any objective in range, otherwise myCurrentObjective is null
@@ -142,49 +141,28 @@ public class AimBot : DiamondComponent
             return;
         }
 
-
-        //Test
-        //if (spawnComponent.currentEnemies.Count > 0)
-        //    myCurrentObjective = spawnComponent.currentEnemies[0];
-        //end test
-
-        //Debug.Log("Searching for a new objective!");
         KeyValuePair<float, GameObject> weightedObj = new KeyValuePair<float, GameObject>(float.NegativeInfinity, null);
 
-        //Debug.Log("Enemies searching num: " + EnemyManager.currentEnemies.Count.ToString());
         for (int i = 0; i < EnemyManager.currentEnemies.Count; ++i)
         {
             float targetWeight = GetTargetWeight(EnemyManager.currentEnemies[i], maxRange, dotMin, false);
 
             if (targetWeight > weightedObj.Key)
             {
-                //float hitDistance = 0.0f;
-                //GameObject hit = InternalCalls.RayCast(shootPoint.transform.globalPosition + shootPoint.transform.GetRight() * 0.15f,
-                //       (EnemyManager.currentEnemies[i].transform.globalPosition - shootPoint.transform.globalPosition).normalized, maxRange, ref hitDistance);
-                //if (hit.GetUid() == EnemyManager.currentEnemies[i].GetUid())
-                //{
                 weightedObj = new KeyValuePair<float, GameObject>(targetWeight, EnemyManager.currentEnemies[i]);
                 objectiveType = ObjectiveType.IS_ENEMY;
-                //}
             }
         }
         if (EnemyManager.currentDestructibleProps != null)
         {
-            //Debug.Log("Prop searching num: " + EnemyManager.currentDestructibleProps.Count.ToString());
             for (int i = 0; i < EnemyManager.currentDestructibleProps.Count; ++i)
             {
                 float targetWeight = GetTargetWeight(EnemyManager.currentDestructibleProps[i], maxRange, dotMin, true);
 
                 if (targetWeight > weightedObj.Key)
                 {
-                    //float hitDistance = 0.0f;
-                    //GameObject hit = InternalCalls.RayCast(shootPoint.transform.globalPosition + shootPoint.transform.GetRight() * 0.15f, 
-                    //    (EnemyManager.currentDestructibleProps[i].transform.globalPosition- shootPoint.transform.globalPosition).normalized, maxRange, ref hitDistance);
-                    //if (hit.GetUid() == EnemyManager.currentEnemies[i].GetUid())
-                    //{
                     weightedObj = new KeyValuePair<float, GameObject>(targetWeight, EnemyManager.currentDestructibleProps[i]);
                     objectiveType = ObjectiveType.IS_PROP;
-                    //}
                 }
             }
         }
@@ -192,15 +170,11 @@ public class AimBot : DiamondComponent
         if (weightedObj.Key != float.NegativeInfinity)
         {
             myCurrentObjective = weightedObj.Value;
-            //Debug.Log("Objective found: " + myCurrentObjective.name);
-            //Debug.Log("New Objecte! Position: " + weightedObj.Value.Name.ToString());
         }
         else
         {
-            //Debug.Log("No Objective found!!");
             myCurrentObjective = null;
             objectiveType = ObjectiveType.NONE;
-            //Debug.Log("No suitable objective found!");
         }
     }
 
@@ -215,10 +189,8 @@ public class AimBot : DiamondComponent
         float newAngleRad = coneAngleDeg * (1 / Mathf.Rad2Deg);
         float newDotMin = (float)Math.Cos(newAngleRad * 0.5f);
 
-        //Debug.Log("Searching for a new objective!");
         KeyValuePair<float, GameObject> weightedObj = new KeyValuePair<float, GameObject>(float.NegativeInfinity, null);
 
-        //Debug.Log("Enemies searching num: " + EnemyManager.currentEnemies.Count.ToString());
         for (int i = 0; i < EnemyManager.currentEnemies.Count; ++i)
         {
             float targetWeight = GetTargetWeight(EnemyManager.currentEnemies[i], maxRange, newDotMin, false);
@@ -249,7 +221,6 @@ public class AimBot : DiamondComponent
         }
         else
         {
-            //   Debug.Log("No Objective found!!");
             return null;
         }
 
@@ -336,16 +307,12 @@ public class AimBot : DiamondComponent
         if (!HasObjective())
             return;
 
-        //Debug.Log("Rotating to the objective!");
-
         Vector3 targetDire = (myCurrentObjective.transform.globalPosition - gameObject.transform.globalPosition);
         targetDire.y = 0.0f;
         targetDire = targetDire.normalized;
         float angle = (float)Math.Atan2(targetDire.x, targetDire.z);
         Quaternion dir = Quaternion.RotateAroundAxis(Vector3.up, angle);
         gameObject.transform.localRotation = dir;
-        //Debug.Log("ROTATE ANGLE: " + angle.ToString());
-
     }
 
 
