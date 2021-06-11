@@ -269,7 +269,7 @@ public class List_Of_Dialogs : DiamondComponent
         "I hope at least you will buy me a drink after this.",
         "Count on it Greef.",
         "Also a new pair of boots would be nice...",
-        "don't push your luck...",
+        "Don't push your luck...",
     };
 
     private List<bool> Greef_PreBoss_Dialogue_bool = new List<bool>()
@@ -292,7 +292,7 @@ public class List_Of_Dialogs : DiamondComponent
 
     private List<string> Bo_Katan_PreBoss_Dialogue = new List<string>()
     {
-        "Finish this quickly, We have a planet to retake.",
+        "Finish this quickly, we have a planet to retake.",
         "I'll take that as your way to encourage me...",
         "Whatever you want, but go now.",
     };
