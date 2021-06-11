@@ -312,9 +312,15 @@ public class MofGuideonRework : Entity
     private float shotTimer = 0.0f;
     private float toStartBurstTimer = 0.0f;
 
-
     //Burst 2
-    //TODO
+    public float timeBetweenShotsP2 = 0.1f;
+    public float burstDispersionAngle = 60.0f;
+    public float burstDispersionDuration = 1.0f;
+
+    private float burstDispersionTimer = 0.0f;
+
+    private float angle = 0.0f;
+    private float rotationSpeed = 0.0f;
 
     //Lightning dash charge
     public float lightningDashChargeDuration = 0.5f;
@@ -627,10 +633,21 @@ public class MofGuideonRework : Entity
                 inputsList.Add(INPUT.IN_PRE_BURST_DASH_END);
         }
 
-        if (shotTimes >= numBurstBullets && shotTimer <= 0.0f)
+        if (currentPhase == PHASE.PHASE1 && shotTimes >= numBurstBullets && shotTimer <= 0.0f)
         {
             inputsList.Add(INPUT.IN_BURST_END);
             Debug.Log("In burst end input");
+        }
+
+        if (currentPhase == PHASE.PHASE2 && burstDispersionTimer > 0)
+        {
+            burstDispersionTimer -= myDeltaTime;
+
+            if(burstDispersionTimer <= 0)
+            {
+                inputsList.Add(INPUT.IN_BURST_END);
+                Debug.Log("In burst end input");
+            }
         }
 
         //Lightning dash
@@ -2778,11 +2795,21 @@ public class MofGuideonRework : Entity
             }
         }
 
-        shotTimes++;
 
 
-        if (shotTimes < numBurstBullets)
-            shotTimer = timeBetweenShots;
+        if (currentPhase == PHASE.PHASE1)
+        {
+            shotTimes++;
+
+            if(shotTimes < numBurstBullets)
+            {
+                shotTimer = timeBetweenShots;
+            }
+        }
+        else if (currentPhase == PHASE.PHASE2)
+        {
+            shotTimer = timeBetweenShotsP2;
+        }
     }
 
     //P2   PLACEHOLDER, NEED TO CHANGE FUNCTIONALITY
@@ -2801,10 +2828,14 @@ public class MofGuideonRework : Entity
         UpdateAnimationSpd(speedMult);
 
         toStartBurstTimer = timeToStartBurst;
-        shotTimer = timeBetweenShots;
+        shotTimer = timeBetweenShotsP2;
 
+        burstDispersionTimer = burstDispersionDuration;
+        rotationSpeed = burstDispersionAngle * Mathf.Deg2RRad / burstDispersionDuration;
+        angle = 0.0f;
 
         Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
+        gameObject.transform.localRotation *= Quaternion.RotateAroundAxis(Vector3.up, (-burstDispersionAngle * Mathf.Deg2RRad)/2);
     }
 
     private void UpdateBurst_P2()
@@ -2817,6 +2848,9 @@ public class MofGuideonRework : Entity
         }
         else
         {
+            angle = rotationSpeed * myDeltaTime;
+            gameObject.transform.localRotation *= Quaternion.RotateAroundAxis(Vector3.up, angle);
+
             if (shotTimer > 0.0f)
             {
                 shotTimer -= myDeltaTime;
@@ -2826,7 +2860,9 @@ public class MofGuideonRework : Entity
             }
         }
 
-        Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
+        
+
+        //Mathf.LookAt(ref gameObject.transform, Core.instance.gameObject.transform.globalPosition);
 
         UpdateAnimationSpd(speedMult);
     }
