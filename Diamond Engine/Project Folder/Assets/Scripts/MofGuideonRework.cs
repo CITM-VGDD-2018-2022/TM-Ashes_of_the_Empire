@@ -191,12 +191,25 @@ public class MofGuideonRework : Entity
 
     //Chase
     public float endChaseDistance = 1.5f;
+    private const float ANIMATION_MS_CONST = 0.032f;
 
     public float chaseDuration = 2.0f;
     private float chaseTimer = 0.0f;
 
     public float chaseSpeed_P1 = 3.0f;
     public float chaseSpeed_P2 = 3.0f;
+
+    public float chaseFootStepTimeLeft_P1Frames = 0f;
+    private float chaseFootStepTimeLeft_P1 = 0.0f;
+    public float chaseFootStepTimeRight_P1Frames = 0f;
+    private float chaseFootStepTimeRight_P1 = 0.0f;
+    public float chaseFootStepTimeLeft_P2Frames = 0f;
+    private float chaseFootStepTimeLeft_P2 = 0.0f;
+    public float chaseFootStepTimeRight_P2Frames = 0f;
+    private float chaseFootStepTimeRight_P2 = 0.0f;
+
+    private float chaseFootStepTimer_P1 = 0.0f;
+    private float chaseFootStepTimer_P2 = 0.0f;
 
     //Melee combo
     private const float LAST_FRAME_CONST = 0.05f;
@@ -393,6 +406,11 @@ public class MofGuideonRework : Entity
 
         chargeComboSpdMult = Animator.GetAnimationDuration(gameObject, "MG_Swing") / comboChargeDuration;
 
+        chaseFootStepTimeLeft_P1 = ANIMATION_MS_CONST * chaseFootStepTimeLeft_P1Frames;
+        chaseFootStepTimeRight_P1 = ANIMATION_MS_CONST * chaseFootStepTimeRight_P1Frames;
+        chaseFootStepTimeLeft_P2 = ANIMATION_MS_CONST * chaseFootStepTimeLeft_P2Frames;
+        chaseFootStepTimeRight_P2 = ANIMATION_MS_CONST * chaseFootStepTimeRight_P2Frames;
+
         saberThrowAnimDuration = Animator.GetAnimationDuration(gameObject, "MG_SaberThrow");
         //preBurstChargeDuration GetAnimationDuration
 
@@ -413,7 +431,7 @@ public class MofGuideonRework : Entity
             auraBurstParticle = auraBurstParticleObj.GetComponent<ParticleSystem>();
         }
 
-        if(saberParticlesObj != null)
+        if (saberParticlesObj != null)
         {
             saberParticles = saberParticlesObj.GetComponent<ParticleSystem>();
         }
@@ -505,6 +523,28 @@ public class MofGuideonRework : Entity
 
             if (chaseTimer <= 0)
                 inputsList.Add(INPUT.IN_CHASE_END);
+        }
+
+        if (chaseFootStepTimer_P1 > 0)
+        {
+            chaseFootStepTimer_P1 -= myDeltaTime;
+
+            if (chaseFootStepTimer_P1 <= 0)
+            {
+                chaseFootStepTimer_P1 = chaseFootStepTimeRight_P1;
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+            }
+        }
+
+        if (chaseFootStepTimer_P2 > 0)
+        {
+            chaseFootStepTimer_P2 -= myDeltaTime;
+
+            if (chaseFootStepTimer_P2 <= 0)
+            {
+                chaseFootStepTimer_P2 = chaseFootStepTimeRight_P2;
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Footsteps");
+            }
         }
 
         // Melee combo
@@ -1650,6 +1690,7 @@ public class MofGuideonRework : Entity
     private void StartChase_P1()
     {
         chaseTimer = chaseDuration;
+        chaseFootStepTimer_P1 = chaseFootStepTimeLeft_P1;
 
         Animator.Play(gameObject, "MG_RunPh1_Final", speedMult);
         if (saber != null)
@@ -1663,7 +1704,6 @@ public class MofGuideonRework : Entity
         }
 
         UpdateAnimationSpd(speedMult);
-
 
 
         Debug.Log("Start chase");
@@ -1684,13 +1724,17 @@ public class MofGuideonRework : Entity
 
         UpdateAnimationSpd(speedMult);
 
+
+
         Debug.Log("Update chase");
     }
 
     private void EndChase_P1()
     {
         chaseTimer = 0.0f;
+        chaseFootStepTimer_P1 = 0.0f;
         Debug.Log("End chase");
+
     }
     #endregion
 
@@ -1698,6 +1742,7 @@ public class MofGuideonRework : Entity
     private void StartChase_P2()
     {
         chaseTimer = chaseDuration;
+        chaseFootStepTimer_P2 = chaseFootStepTimeLeft_P2;
 
         Animator.Play(gameObject, "MG_RunPh2", speedMult);
         if (saber != null)
@@ -1732,6 +1777,7 @@ public class MofGuideonRework : Entity
     private void EndChase_P2()
     {
         chaseTimer = 0.0f;
+        chaseFootStepTimer_P2 = 0.0f;
     }
     #endregion
 
@@ -3050,7 +3096,7 @@ public class MofGuideonRework : Entity
             float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition);
             float playerScore = 0f;
 
-            if(Core.instance != null)
+            if (Core.instance != null)
             {
                 playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition);
             }
@@ -3877,7 +3923,7 @@ public class MofGuideonRework : Entity
 
         Animator.Resume(saber);
 
-        if(playSwingParticles == true)
+        if (playSwingParticles == true)
         {
             PlayParticles(PARTICLES.SWORD_SWING, true);
         }
