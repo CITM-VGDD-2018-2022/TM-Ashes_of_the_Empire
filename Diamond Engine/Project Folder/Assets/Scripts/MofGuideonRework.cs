@@ -1552,6 +1552,18 @@ public class MofGuideonRework : Entity
                 UpdateBurst_P2();
                 break;
 
+            case STATE.LIGHTNING_DASH_CHARGE:
+                UpdateLightningDashCharge();
+                break;
+
+            case STATE.LIGHTNING_DASH:
+                UpdateLightningDash();
+                break;
+
+            case STATE.LIGHTNING_DASH_TIRED:
+                UpdateLightningDashTired();
+                break;
+
             case STATE.CHANGE_PHASE:
                 UpdatePhaseChange();
                 break;
@@ -1609,6 +1621,14 @@ public class MofGuideonRework : Entity
     {
         float distance = Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition);
         float decision = decisionGenerator.Next(1, 100);
+
+        if (decision <= probLightDash)
+        {
+            inputsList.Add(INPUT.IN_LIGHTNING_DASH_CHARGE);
+            return;
+        }
+
+        decision = decisionGenerator.Next(1, 100);
 
         if (distance >= minBurstDistance)
         {
@@ -2775,9 +2795,7 @@ public class MofGuideonRework : Entity
     //Lightning dash charge
     private void StartLightningDashCharge()
     {
-        Debug.Log("Start lightning dash charge");
-
-        lightningDashChargeDurationTimer = lightningDashChargeDuration;
+        lightningDashChargeDurationTimer = comboChargeDuration;
         lightningDashDirectionTimer = lightningDashDirectionTime;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
@@ -2785,17 +2803,29 @@ public class MofGuideonRework : Entity
         {
             ActivateSaber();
             Animator.Play(saber, "MG_Swing", speedMult);
+
+            if (saberMaterial != null)
+            {
+                saberMaterial.SetFloatUniform("shineColorValue", 0);
+                saberMaterial.SetVectorUniform("shineColor", new Vector3(0.0f, 0.9f, 0.0f));
+            }
         }
         if (gun != null)
         {
             DeActivateGun();
         }
+
         UpdateAnimationSpd(speedMult);
     }
 
     private void UpdateLightningDashCharge()
     {
-        Debug.Log("Update lightning dash charge");
+        if (saberMaterial != null)
+        {
+            float shineValue = lightningDashChargeDurationTimer / comboChargeDuration;
+
+            saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
 
         if (lightningDashDirectionTimer > 0.0f)
         {
@@ -2818,7 +2848,8 @@ public class MofGuideonRework : Entity
 
     private void EndLightningDashCharge()
     {
-        Debug.Log("End lightning dash charge");
+        if (saberMaterial != null)
+            saberMaterial.SetFloatUniform("shineColorValue", 0);
     }
 
 
