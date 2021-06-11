@@ -468,10 +468,6 @@ public class Skytrooper : Enemy
             Animator.Play(blaster, "SK_Dash", speedMult);
             Audio.PlayAudio(gameObject, "Play_Skytrooper_Dash");
         }
-        else
-        {
-            inputsList.Add(INPUT.IN_WANDER);
-        }
 
         UpdateAnimationSpd(speedMult);
     }
@@ -967,7 +963,7 @@ public class Skytrooper : Enemy
         {
             leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
-            if (leftObject != null && !leftObject.CompareTag("Player"))
+            if (leftObject != null)
             {
                 rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
@@ -985,7 +981,7 @@ public class Skytrooper : Enemy
         {
             rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
-            if (rightObject != null && !rightObject.CompareTag("Player"))
+            if (rightObject != null)
             {
                 leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
@@ -1016,16 +1012,16 @@ public class Skytrooper : Enemy
         GameObject rightObject;
 
         Random randomAngle = new Random();
-        float leftAngle  = -50 + randomAngle.Next(-5, 5);
-        float rightAngle =  50 + randomAngle.Next(-5, 5);
+        float leftAngle  = 230 + randomAngle.Next(-5, 5);
+        float rightAngle = 130 + randomAngle.Next(-5, 5);
 
-        Vector3 centerDirection = gameObject.transform.globalPosition - Core.instance.gameObject.transform.globalPosition;
+        Vector3 centerDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
 
         if (randomDirection == 0) //First check left
         {
             leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
-            if (leftObject != null && !leftObject.CompareTag("Player"))
+            if (leftObject != null)
             {
                 rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
@@ -1039,7 +1035,7 @@ public class Skytrooper : Enemy
         {
             rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
-            if (rightObject != null && !rightObject.CompareTag("Player"))
+            if (rightObject != null)
             {
                 leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
