@@ -24,7 +24,7 @@ public class QuitConfirmation : DiamondComponent
 			Time.ResumeGame();
 			if (EnvironmentSourceLocate.instance != null)
 				Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
-			Audio.SetState("Game_State", "HUB");
+			Audio.SetState("Game_State", "NONE");
 			RoomSwitch.OnPlayerQuit();
 		}
 		if (gameObject.Name == "QuittoMenuHUB")
