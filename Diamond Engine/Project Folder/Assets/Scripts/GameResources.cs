@@ -203,7 +203,7 @@ public class BosskStrength : GameResources
     {
         if (Core.instance != null)
         {
-            Core.instance.AddStatus(STATUS_TYPE.BOSSK_STR, STATUS_APPLY_TYPE.ADDITIVE, 10f, 0, true);
+            Core.instance.AddStatus(STATUS_TYPE.BOSSK_STR, STATUS_APPLY_TYPE.ADDITIVE, -10f, 0, true);
             if (!Core.boons.Contains(STATUS_TYPE.BOSSK_STR))
                 Core.boons.Add(STATUS_TYPE.BOSSK_STR);
 
@@ -677,19 +677,19 @@ static class BoonDataHolder
 {
     static BoonDataHolder()
     {
-        boonType[(int)BOONS.BOON_ANAKIN_KILL_STREAK] =         new AnakinKillstreak();
-        boonType[(int)BOONS.BOON_BOKATAN_RESILENCE] =          new BokatanResilence();
-        boonType[(int)BOONS.BOON_BOSSK_STRENGTH] =             new BosskStrength();
-        boonType[(int)BOONS.BOON_BOUNTY_HUNTER_SKILLS] =       new BountyHunter();
-        boonType[(int)BOONS.BOON_CADBANE_ROCKET_BOOTS] =       new CadBaneBoots();
-        boonType[(int)BOONS.BOON_CADBANE_SLEIGHT] =            new CadBaneSoH();
-        boonType[(int)BOONS.BOON_ECHO_QUICK_RECOVERY] =        new EchoRecovery();
-        boonType[(int)BOONS.BOON_GREEF_PAYCHECK] =             new GreefPaycheck();     
-        boonType[(int)BOONS.BOON_ITS_A_TRAP] =                 new ItsATrap();
-        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_DRAW] =     new MandoQuickDraw();
-        boonType[(int)BOONS.BOON_REX_SECOND_BLASTER] =         new RexSecBlaster();
-        boonType[(int)BOONS.BOON_SOLO_QUICK_DRAW] =            new SoloQuickDraw();     
-        boonType[(int)BOONS.BOON_WATTOS_COOLANT] =             new WattoCoolant();
+        boonType[(int)BOONS.BOON_ANAKIN_KILL_STREAK] =         new AnakinKillstreak(); //checked
+        boonType[(int)BOONS.BOON_BOKATAN_RESILENCE] =          new BokatanResilence(); //checked
+        boonType[(int)BOONS.BOON_BOSSK_STRENGTH] =             new BosskStrength(); //checked
+        boonType[(int)BOONS.BOON_BOUNTY_HUNTER_SKILLS] =       new BountyHunter(); //checked
+        boonType[(int)BOONS.BOON_CADBANE_ROCKET_BOOTS] =       new CadBaneBoots(); //checked
+        boonType[(int)BOONS.BOON_CADBANE_SLEIGHT] =            new CadBaneSoH(); //probably ok
+        boonType[(int)BOONS.BOON_ECHO_QUICK_RECOVERY] =        new EchoRecovery(); //checked
+        boonType[(int)BOONS.BOON_GREEF_PAYCHECK] =             new GreefPaycheck(); //probably ok    
+        boonType[(int)BOONS.BOON_ITS_A_TRAP] =                 new ItsATrap(); //checked
+        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_DRAW] =     new MandoQuickDraw(); //not ok
+        boonType[(int)BOONS.BOON_REX_SECOND_BLASTER] =         new RexSecBlaster(); //checked
+        boonType[(int)BOONS.BOON_SOLO_QUICK_DRAW] =            new SoloQuickDraw();  //checked   
+        boonType[(int)BOONS.BOON_WATTOS_COOLANT] =             new WattoCoolant(); //probably ok
         boonType[(int)BOONS.BOON_WRECKER_HEAVY_SHOT] =         new WreckHeavyShot();
         boonType[(int)BOONS.BOON_WRECKER_RESILIENCE] =         new WreckerResilence();
         boonType[(int)BOONS.BOON_BLAST_CANNON_MOUTHPIECE] =    new BlastCannonMouthpiece();

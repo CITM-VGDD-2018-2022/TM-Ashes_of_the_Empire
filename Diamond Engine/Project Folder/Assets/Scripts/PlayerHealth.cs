@@ -242,16 +242,17 @@ public class PlayerHealth : DiamondComponent
 
         if (Core.instance != null)
         {
+          //  Debug.Log("damage = " + damage.ToString() + " Reduction = " + Core.instance.DamageRed);
             int damageTaken = (int)(damage * Core.instance.DamageRed);
 
-            if (PlayerResources.CheckBoon(BOONS.BOON_BOSSK_STRENGTH) && damage > 0)
-            {
-                float damageReduced = (damage * (Core.instance.GetStatusData(STATUS_TYPE.BOSSK_STR).severity / 100f));
+            //if (PlayerResources.CheckBoon(BOONS.BOON_BOSSK_STRENGTH) && damage > 0)
+            //{
+            //    float damageReduced = (damage * (Core.instance.GetStatusData(STATUS_TYPE.BOSSK_STR).severity / 100f));
 
-                damageTaken = (int)(damage * Core.instance.DamageRed) - (int)(Math.Max(damageReduced, 1f));
+            //    damageTaken = (int)(damage * Core.instance.DamageRed) - (int)(Math.Max(damageReduced, 1f));
 
-            }
-
+            //}
+            if(damageTaken > 0)
             currHealth -= damageTaken;
         }
 
