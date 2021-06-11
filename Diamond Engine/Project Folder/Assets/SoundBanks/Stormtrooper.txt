@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	140109862	Play_Stormtrooper_Sniper_Hit			\Default Work Unit\Stormtrooper\Play_Stormtrooper_Sniper_Hit	
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	614214837	Play_Stormtrooper_Death			\Default Work Unit\Stormtrooper\Play_Stormtrooper_Death	
 	1095147418	Play_Footsteps_Stormtrooper			\Default Work Unit\Stormtrooper\Play_Footsteps_Stormtrooper	
@@ -17,17 +18,21 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper Sniper_Hit\SniperHit1		115076
 	152306303	Stormtrooper hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Hit\Stormtrooper hit 2		48040
 	220722716	Stormtrooper hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Hit\Stormtrooper hit 1		53688
 	222927635	Footstep sand 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Footsteps_Stormtrooper\Footsteps sand\Footstep sand 1		42028
 	296902962	Stormtrooper death 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper death 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Death\Stormtrooper death 2		83904
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper Sniper_Hit\SniperHit2		109380
 	326576311	Footstep sand 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Footsteps_Stormtrooper\Footsteps sand\Footstep sand 2		41620
 	353870287	Stormtrooper hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Hit\Stormtrooper hit 3		35888
 	356289844	Stormtrooper enemy detection 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper enemy detection 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Enemy_Detection_Stormtrooper\Stormtrooper enemy detection 2		126232
 	390628259	Stormtrooper enemy detection 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper enemy detection 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Enemy_Detection_Stormtrooper\Stormtrooper enemy detection 3		95340
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper Sniper_Hit\SniperHit4		132012
 	401471880	Stormtrooper armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Hit\Stormtrooper armor hit 1		51064
 	520687832	Stormtrooper death 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper death 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Death\Stormtrooper death 1		79556
 	668413849	Stormtrooper armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper_Hit\Stormtrooper armor hit 2		40036
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Stormtrooper Sniper_Hit\SniperHit3		103204
 	793534180	Footstep sand 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Footsteps_Stormtrooper\Footsteps sand\Footstep sand 3		42640
 	925297908	Footstep sand 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Footsteps_Stormtrooper\Footsteps sand\Footstep sand 4		45492
 	936066558	Stormtrooper enemy detection 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Stormtrooper enemy detection 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stormtrooper\Enemy_Detection_Stormtrooper\Stormtrooper enemy detection 1		160512

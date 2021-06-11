@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	223439734	Play_Skytrooper_Jetpack_Loop			\Default Work Unit\Skytrooper\Play_Skytrooper_Jetpack_Loop	
+	675935766	Play_Skytrooper_Sniper_Hit			\Default Work Unit\Skytrooper\Play_Skytrooper_Sniper_Hit	
 	725663949	Play_Skytrooper_Dash			\Default Work Unit\Skytrooper\Play_Skytrooper_Dash	
 	1195026949	Play_Skytrooper_Death			\Default Work Unit\Skytrooper\Play_Skytrooper_Death	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
@@ -17,13 +18,17 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper Sniper_Hit\SniperHit1		115076
 	48079467	Skytrooper armor hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper armor hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper hit\Skytrooper armor hit 3		52260
 	125444133	Skytrooper dash	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper dash_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper dash		103764
 	205445711	Skytrooper grenade launch	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper grenade launch_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper grenade launch		83100
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper Sniper_Hit\SniperHit2		109380
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper Sniper_Hit\SniperHit4		132012
 	576964154	Skytrooper death	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper death_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper death		322808
 	591271145	Skytrooper armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper hit\Skytrooper armor hit 1		45044
 	626340448	Grenade explosion 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grenade explosion 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Grenade explosion 1		152192
 	627480346	Skytrooper armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper hit\Skytrooper armor hit 2		41100
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper Sniper_Hit\SniperHit3		103204
 	862805567	Skytrooper hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper hit\Skytrooper hit 2		67192
 	873717385	Skytrooper hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper hit\Skytrooper hit 1		31608
 	1056824333	Skytrooper dash loop	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skytrooper dash loop_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Skytrooper\Skytrooper dash loop		176404

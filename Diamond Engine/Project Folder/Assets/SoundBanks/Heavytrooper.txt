@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	45482717	Play_Heavytrooper_Enemy_Detection			\Default Work Unit\Heavytrooper\Play_Heavytrooper_Enemy_Detection	
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	291143311	Play_Heavytrooper_Attack			\Default Work Unit\Heavytrooper\Play_Heavytrooper_Attack	
+	1864088900	Play_Heavytrooper_Sniper_Hit			\Default Work Unit\Heavytrooper\Play_Heavytrooper_Sniper_Hit	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
 	1984950140	Play_Heavytrooper_Wander			\Default Work Unit\Heavytrooper\Play_Heavytrooper_Wander	
 	2136671359	Play_Heavytrooper_Death			\Default Work Unit\Heavytrooper\Play_Heavytrooper_Death	
@@ -18,17 +19,21 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper Sniper_Hit\SniperHit1		115076
 	76206835	heavytrooper enemy detection 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper enemy detection 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\heavytrooper enemy detection\heavytrooper enemy detection 1		246488
 	80430745	heavytrooper armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper hit\heavytrooper armor hit 2		65628
 	225865834	heavytrooper footstep 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Footsteps wander heavytrooper\heavytrooper footstep 2		64364
 	312255773	heavytrooper enemy detection 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper enemy detection 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\heavytrooper enemy detection\heavytrooper enemy detection 2		212720
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper Sniper_Hit\SniperHit2		109380
 	351242191	heavytrooper footstep run 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep run 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Footsteps run heavytrooper\heavytrooper footstep run 1		37692
 	387898307	heavytrooper footstep run 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep run 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Footsteps run heavytrooper\heavytrooper footstep run 2		34368
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper Sniper_Hit\SniperHit4		132012
 	507314420	heavytrooper footstep 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Footsteps wander heavytrooper\heavytrooper footstep 1		59344
 	564071722	heavytrooper spear whoosh 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper spear whoosh 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper whoosh\heavytrooper spear whoosh 2		84064
 	581979028	heavytrooper hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper hit\heavytrooper hit 1		60040
 	600365897	heavytrooper death	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper death_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper death\heavytrooper death		162404
 	622395172	heavytrooper footstep 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Footsteps wander heavytrooper\heavytrooper footstep 4		58296
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper Sniper_Hit\SniperHit3		103204
 	708741777	heavytrooper armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper hit\heavytrooper armor hit 1		64332
 	709235801	heavytrooper hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper hit\heavytrooper hit 2		60748
 	714211610	heavytrooper death 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper death 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Heavytrooper\Heavytrooper death\heavytrooper death 2		93284

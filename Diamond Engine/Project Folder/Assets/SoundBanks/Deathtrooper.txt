@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1377203479	Play_Deathtrooper_Wander			\Default Work Unit\Deathtrooper\Play_Deathtrooper_Wander	
 	1537090995	Play_Deathtrooper_Hit			\Default Work Unit\Deathtrooper\Play_Deathtrooper_Hit	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
+	2477169847	Play_Deathtrooper_Sniper_Hit			\Default Work Unit\Deathtrooper\Play_Deathtrooper_Sniper_Hit	
 	2950577012	Play_Deathtrooper_Enemy_Detection			\Default Work Unit\Deathtrooper\Play_Deathtrooper_Enemy_Detection	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 
@@ -19,17 +20,21 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	28788806	deathtrooper shotgun	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper shotgun_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\deathtrooper shotgun		137000
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper Sniper_Hit\SniperHit1		115076
 	104748994	deathtrooper footstep 5	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep 5_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps run Deathtrooper\deathtrooper footstep 5		40800
 	188616202	deathtrooper footstep wander 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep wander 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps wander deathtrooper\deathtrooper footstep wander 1		16376
 	214758412	deathtrooper footstep 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps run Deathtrooper\deathtrooper footstep 1		37548
 	244670322	deathtrooper footstep wander 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep wander 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps wander deathtrooper\deathtrooper footstep wander 2		17280
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper Sniper_Hit\SniperHit2		109380
 	330372999	deathtrooper death 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper death 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper death\deathtrooper death 1		164748
 	356727513	deathtrooper footstep wander 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep wander 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps wander deathtrooper\deathtrooper footstep wander 3		20124
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper Sniper_Hit\SniperHit4		132012
 	454816313	deathtrooper footstep wander 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep wander 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps wander deathtrooper\deathtrooper footstep wander 4		19464
 	574463678	deathtrooper footstep 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps run Deathtrooper\deathtrooper footstep 3		39584
 	576144405	deathtrooper death 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper death 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper death\deathtrooper death 2		164748
 	586533874	deathtrooper recoil	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper recoil_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\deathtrooper recoil		78756
 	668999596	deathtrooper armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper hit\deathtrooper armor hit 2		42012
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper Sniper_Hit\SniperHit3		103204
 	707667281	deathtrooper hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper hit\deathtrooper hit 2		53056
 	736956591	deathtrooper armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Deathtrooper hit\deathtrooper armor hit 1		63016
 	772149242	deathtrooper footstep 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\deathtrooper footstep 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Deathtrooper\Footsteps run Deathtrooper\deathtrooper footstep 4		40304

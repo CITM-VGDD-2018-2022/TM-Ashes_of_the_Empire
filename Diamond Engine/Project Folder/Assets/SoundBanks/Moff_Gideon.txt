@@ -1,20 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
-	281182696	Play_Moff_Gideon_Phase_Change_Hit			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Phase_Change_Hit	
-	437092628	Play_Moff_Gideon_Blink			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Blink	
-	500607873	Play_Moff_Gideon_Hit_Phase_1			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Hit_Phase_1	
-	500607874	Play_Moff_Gideon_Hit_Phase_2			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Hit_Phase_2	
-	955348132	Play_Moff_Gideon_Lightsaber_Throw			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Lightsaber_Throw	
-	1084418999	Play_Moff_Gideon_Lightsaber_Turn_On			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Lightsaber_Turn_On	
-	1357021886	Play_Moff_Gideon_Lightsaber_Whoosh			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Lightsaber_Whoosh	
-	1832947079	Play_Moff_Gideon_Footsteps			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Footsteps	
+	281182696	Play_Moff_Gideon_Phase_Change_Hit			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Phase_Change_Hit	
+	437092628	Play_Moff_Gideon_Blink			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Blink	
+	500607873	Play_Moff_Gideon_Hit_Phase_1			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Hit_Phase_1	
+	500607874	Play_Moff_Gideon_Hit_Phase_2			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Hit_Phase_2	
+	955348132	Play_Moff_Gideon_Lightsaber_Throw			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Lightsaber_Throw	
+	1084418999	Play_Moff_Gideon_Lightsaber_Turn_On			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Lightsaber_Turn_On	
+	1357021886	Play_Moff_Gideon_Lightsaber_Whoosh			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Lightsaber_Whoosh	
+	1832947079	Play_Moff_Gideon_Footsteps			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Footsteps	
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
-	2138643915	Play_Moff_Gideon_Lightsaber_Turn_Off			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Lightsaber_Turn_Off	
-	2464774886	Play_Moff_Gideon_Spawn_Enemies			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Spawn_Enemies	
+	2047213885	Play_Moff_Gideon_Sniper_Hit			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Sniper_Hit	
+	2138643915	Play_Moff_Gideon_Lightsaber_Turn_Off			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Lightsaber_Turn_Off	
+	2464774886	Play_Moff_Gideon_Spawn_Enemies			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Spawn_Enemies	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
-	3345293244	Play_Moff_Gideon_Death			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Death	
-	3387490186	Play_Moff_Gideon_Dash			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Dash	
-	3507913642	Play_Moff_Gideon_Shot			\Default Work Unit\Moff Guideon\Play_Moff_Gideon_Shot	
+	3345293244	Play_Moff_Gideon_Death			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Death	
+	3387490186	Play_Moff_Gideon_Dash			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Dash	
+	3507913642	Play_Moff_Gideon_Shot			\Default Work Unit\Moff Gideon\Play_Moff_Gideon_Shot	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	467158820	SourceVolume			\Default Work Unit\SourceVolume	
@@ -24,16 +25,19 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Sniper_Hit\SniperHit1		115076
 	134030243	moff gideon hit 2nd phase 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 2nd phase 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 2\moff gideon hit 2nd phase 1		69276
 	149199245	MoffBlink2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffBlink2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Blink SFX\MoffBlink2		106072
 	166727117	MoffHitOnPhaseChange1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffHitOnPhaseChange1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Phase change hit\MoffHitOnPhaseChange1		98052
 	249683624	MoffBlink1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffBlink1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Blink SFX\MoffBlink1		103040
 	270470728	moff guideon lightsaber whoosh 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber whoosh 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber whoosh\moff guideon lightsaber whoosh 1		136204
 	274347457	moff guideon blaster shoot	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon blaster shoot_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon blaster shoot		253680
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Sniper_Hit\SniperHit2		109380
 	351242191	heavytrooper footstep run 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep run 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon footsteps\heavytrooper footstep run 1		37692
 	354392164	moff guideon lightsaber turn on	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber turn on_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber turn on		250176
 	387898307	heavytrooper footstep run 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep run 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon footsteps\heavytrooper footstep run 2		34368
 	388356698	moff gideon dash	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon dash_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff gideon dash		80604
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Sniper_Hit\SniperHit4		132012
 	466307658	moff gideon armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 1\moff gideon armor hit 1		72140
 	509161827	moff gideon hit 1rst phase 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 1rst phase 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 1\moff gideon hit 1rst phase 2		78712
 	532385421	MoffHitOnPhaseChange2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\MoffHitOnPhaseChange2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Phase change hit\MoffHitOnPhaseChange2		167524
@@ -41,6 +45,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	589526714	moff gideon armor hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon armor hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 1\moff gideon armor hit 2		67952
 	626643442	moff gideon hit 1rst phase 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon hit 1rst phase 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon hit phase 1\moff gideon hit 1rst phase 1		90396
 	636417655	moff gideon death	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff gideon death_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff gideon death		501228
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff Gideon Sniper_Hit\SniperHit3		103204
 	720678292	moff guideon lightsaber whoosh 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber whoosh 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber whoosh\moff guideon lightsaber whoosh 2		127188
 	747483108	moff guideon lightsaber throw	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\moff guideon lightsaber throw_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\moff guideon lightsaber throw		152400
 	765061511	heavytrooper footstep run 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\heavytrooper footstep run 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Moff Guideon\Moff guideon footsteps\heavytrooper footstep run 4		32912

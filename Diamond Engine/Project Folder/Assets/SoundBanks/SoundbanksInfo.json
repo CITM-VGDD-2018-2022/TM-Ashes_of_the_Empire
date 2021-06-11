@@ -18,7 +18,7 @@
    {
     "Id": "225682233",
     "Language": "SFX",
-    "Hash": "767238285",
+    "Hash": "4231551919",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Skytrooper",
     "ShortName": "Skytrooper",
     "Path": "Skytrooper.bnk",
@@ -150,6 +150,40 @@
       ]
      },
      {
+      "Id": "675935766",
+      "Name": "Play_Skytrooper_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Skytrooper\\Play_Skytrooper_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.520907",
+      "DurationMax": "0.726716",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1931338186",
       "Name": "Resume_Object",
       "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
@@ -182,7 +216,7 @@
    {
     "Id": "833070093",
     "Language": "SFX",
-    "Hash": "3729742681",
+    "Hash": "657358367",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Stormtrooper",
     "ShortName": "Stormtrooper",
     "Path": "Stormtrooper.bnk",
@@ -336,6 +370,40 @@
       ]
      },
      {
+      "Id": "140109862",
+      "Name": "Play_Stormtrooper_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stormtrooper\\Play_Stormtrooper_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.520907",
+      "DurationMax": "0.726716",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1931338186",
       "Name": "Resume_Object",
       "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
@@ -373,7 +441,7 @@
    {
     "Id": "913881297",
     "Language": "SFX",
-    "Hash": "2418368410",
+    "Hash": "3078650831",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Wampa_Skell",
     "ShortName": "Wampa_Skell",
     "Path": "Wampa_Skell.bnk",
@@ -563,6 +631,40 @@
         "Language": "SFX",
         "ShortName": "skel rush recovery.wav",
         "Path": "SFX\\skel rush recovery_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "228539605",
+      "Name": "Play_Skel_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wampa Skel\\Play_Skel_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.619466",
+      "DurationMax": "0.864216",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
        }
       ]
      },
@@ -789,6 +891,40 @@
       ]
      },
      {
+      "Id": "3784529350",
+      "Name": "Play_Wampa_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wampa Skel\\Play_Wampa_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.736673",
+      "DurationMax": "1.027732",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "2094630229",
       "Name": "Play_Wampa_When_Skel_Dies",
       "ObjectPath": "\\Events\\Default Work Unit\\Wampa Skel\\Play_Wampa_When_Skel_Dies",
@@ -837,7 +973,7 @@
    {
     "Id": "1019160887",
     "Language": "SFX",
-    "Hash": "2803302439",
+    "Hash": "4166640934",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Heavytrooper",
     "ShortName": "Heavytrooper",
     "Path": "Heavytrooper.bnk",
@@ -915,7 +1051,7 @@
       "Name": "Play_Heavytrooper_Enemy_Detection",
       "ObjectPath": "\\Events\\Default Work Unit\\Heavytrooper\\Play_Heavytrooper_Enemy_Detection",
       "DurationType": "OneShot",
-      "DurationMin": "1.205533",
+      "DurationMin": "0.000000",
       "DurationMax": "1.396961",
       "IncludedMemoryFiles": [
        {
@@ -999,6 +1135,40 @@
       ]
      },
      {
+      "Id": "1864088900",
+      "Name": "Play_Heavytrooper_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Heavytrooper\\Play_Heavytrooper_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.520907",
+      "DurationMax": "0.726716",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1984950140",
       "Name": "Play_Heavytrooper_Wander",
       "ObjectPath": "\\Events\\Default Work Unit\\Heavytrooper\\Play_Heavytrooper_Wander",
@@ -1063,7 +1233,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "3592593929",
+    "Hash": "4223478503",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1079,7 +1249,7 @@
      {
       "Id": "437092628",
       "Name": "Play_Moff_Gideon_Blink",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Blink",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Blink",
       "DurationType": "OneShot",
       "DurationMin": "0.583333",
       "DurationMax": "0.600521",
@@ -1101,7 +1271,7 @@
      {
       "Id": "3387490186",
       "Name": "Play_Moff_Gideon_Dash",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Dash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Dash",
       "DurationType": "OneShot",
       "DurationMin": "0.456576",
       "DurationMax": "0.456576",
@@ -1117,7 +1287,7 @@
      {
       "Id": "3345293244",
       "Name": "Play_Moff_Gideon_Death",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Death",
       "DurationType": "OneShot",
       "DurationMin": "2.841066",
       "DurationMax": "2.841066",
@@ -1133,7 +1303,7 @@
      {
       "Id": "1832947079",
       "Name": "Play_Moff_Gideon_Footsteps",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Footsteps",
       "DurationType": "OneShot",
       "DurationMin": "0.248565",
       "DurationMax": "0.284736",
@@ -1167,7 +1337,7 @@
      {
       "Id": "500607873",
       "Name": "Play_Moff_Gideon_Hit_Phase_1",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Hit_Phase_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Hit_Phase_1",
       "DurationType": "OneShot",
       "DurationMin": "0.000000",
       "DurationMax": "0.512086",
@@ -1201,7 +1371,7 @@
      {
       "Id": "500607874",
       "Name": "Play_Moff_Gideon_Hit_Phase_2",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Hit_Phase_2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Hit_Phase_2",
       "DurationType": "OneShot",
       "DurationMin": "0.000000",
       "DurationMax": "0.512086",
@@ -1247,7 +1417,7 @@
      {
       "Id": "955348132",
       "Name": "Play_Moff_Gideon_Lightsaber_Throw",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Throw",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Lightsaber_Throw",
       "DurationType": "OneShot",
       "DurationMin": "0.863583",
       "DurationMax": "0.863583",
@@ -1263,7 +1433,7 @@
      {
       "Id": "2138643915",
       "Name": "Play_Moff_Gideon_Lightsaber_Turn_Off",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Turn_Off",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Lightsaber_Turn_Off",
       "DurationType": "OneShot",
       "DurationMin": "0.732104",
       "DurationMax": "0.732104",
@@ -1279,7 +1449,7 @@
      {
       "Id": "1084418999",
       "Name": "Play_Moff_Gideon_Lightsaber_Turn_On",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Turn_On",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Lightsaber_Turn_On",
       "DurationType": "OneShot",
       "DurationMin": "1.417868",
       "DurationMax": "1.417868",
@@ -1295,7 +1465,7 @@
      {
       "Id": "1357021886",
       "Name": "Play_Moff_Gideon_Lightsaber_Whoosh",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Lightsaber_Whoosh",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Lightsaber_Whoosh",
       "DurationType": "OneShot",
       "DurationMin": "0.720658",
       "DurationMax": "0.771769",
@@ -1317,7 +1487,7 @@
      {
       "Id": "281182696",
       "Name": "Play_Moff_Gideon_Phase_Change_Hit",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Phase_Change_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Phase_Change_Hit",
       "DurationType": "OneShot",
       "DurationMin": "0.555488",
       "DurationMax": "0.949333",
@@ -1339,7 +1509,7 @@
      {
       "Id": "3507913642",
       "Name": "Play_Moff_Gideon_Shot",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Shot",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Shot",
       "DurationType": "OneShot",
       "DurationMin": "1.357039",
       "DurationMax": "1.523225",
@@ -1353,9 +1523,43 @@
       ]
      },
      {
+      "Id": "2047213885",
+      "Name": "Play_Moff_Gideon_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.619466",
+      "DurationMax": "0.864216",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "2464774886",
       "Name": "Play_Moff_Gideon_Spawn_Enemies",
-      "ObjectPath": "\\Events\\Default Work Unit\\Moff Guideon\\Play_Moff_Gideon_Spawn_Enemies",
+      "ObjectPath": "\\Events\\Default Work Unit\\Moff Gideon\\Play_Moff_Gideon_Spawn_Enemies",
       "DurationType": "OneShot",
       "DurationMin": "0.556100",
       "DurationMax": "0.556100",
@@ -1401,7 +1605,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "2438854385",
+    "Hash": "2635338488",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1435,8 +1639,8 @@
       "Name": "Play_Blaster_Shoot_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Blaster_Shoot_Mando",
       "DurationType": "OneShot",
-      "DurationMin": "0.981676",
-      "DurationMax": "1.167416",
+      "DurationMin": "1.010441",
+      "DurationMax": "1.134182",
       "IncludedMemoryFiles": [
        {
         "Id": "713708188",
@@ -2047,40 +2251,6 @@
       ]
      },
      {
-      "Id": "287300333",
-      "Name": "Play_Sniper_Hit",
-      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Sniper_Hit",
-      "DurationType": "OneShot",
-      "DurationMin": "0.584698",
-      "DurationMax": "0.748010",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "46328240",
-        "Language": "SFX",
-        "ShortName": "SniperHit1.wav",
-        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
-       },
-       {
-        "Id": "324695883",
-        "Language": "SFX",
-        "ShortName": "SniperHit2.wav",
-        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
-       },
-       {
-        "Id": "398531261",
-        "Language": "SFX",
-        "ShortName": "SniperHit4.wav",
-        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
-       },
-       {
-        "Id": "703082497",
-        "Language": "SFX",
-        "ShortName": "SniperHit3.wav",
-        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
       "Id": "2559120509",
       "Name": "Play_Sniper_Shoot_Mando",
       "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Sniper_Shoot_Mando",
@@ -2185,7 +2355,7 @@
    {
     "Id": "1229948536",
     "Language": "SFX",
-    "Hash": "1892198201",
+    "Hash": "2871456",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Environment",
     "ShortName": "Environment",
     "Path": "Environment.bnk",
@@ -2428,7 +2598,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "1939998717",
+    "Hash": "1069822425",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2494,8 +2664,8 @@
       "Name": "Play_Shop_Purchase",
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_Shop_Purchase",
       "DurationType": "OneShot",
-      "DurationMin": "1.000000",
-      "DurationMax": "1.000000",
+      "DurationMin": "0.865537",
+      "DurationMax": "0.865537",
       "IncludedMemoryFiles": [
        {
         "Id": "998598397",
@@ -2792,7 +2962,7 @@
    {
     "Id": "1838596016",
     "Language": "SFX",
-    "Hash": "2753829045",
+    "Hash": "4280797689",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
     "ShortName": "Cinematic",
     "Path": "Cinematic.bnk",
@@ -2967,7 +3137,7 @@
    {
     "Id": "2674766611",
     "Language": "SFX",
-    "Hash": "4176771051",
+    "Hash": "3932182960",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Turret",
     "ShortName": "Turret",
     "Path": "Turret.bnk",
@@ -3063,6 +3233,28 @@
       ]
      },
      {
+      "Id": "3422067292",
+      "Name": "Play_Turret_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Turret\\Play_Turret_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.297494",
+      "DurationMax": "0.380844",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "275607941",
+        "Language": "SFX",
+        "ShortName": "Turret hit 2.wav",
+        "Path": "SFX\\Turret hit 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "941832839",
+        "Language": "SFX",
+        "ShortName": "Turret hit 1.wav",
+        "Path": "SFX\\Turret hit 1_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1931338186",
       "Name": "Resume_Object",
       "ObjectPath": "\\Events\\Default Work Unit\\Resume_Object",
@@ -3095,7 +3287,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "475282980",
+    "Hash": "2702778237",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -3367,6 +3559,40 @@
       ]
      },
      {
+      "Id": "2282618325",
+      "Name": "Play_Rancor_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rancor_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.736673",
+      "DurationMax": "1.027732",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1699620314",
       "Name": "Play_Rancor_Throw",
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rancor_Throw",
@@ -3393,8 +3619,8 @@
       "Name": "Play_Rock_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rock_Impact",
       "DurationType": "OneShot",
-      "DurationMin": "0.962709",
-      "DurationMax": "1.112268",
+      "DurationMin": "0.857676",
+      "DurationMax": "0.990918",
       "IncludedMemoryFiles": [
        {
         "Id": "769836140",
@@ -3437,7 +3663,7 @@
    {
     "Id": "3363384534",
     "Language": "SFX",
-    "Hash": "3805461938",
+    "Hash": "761585640",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Deathtrooper",
     "ShortName": "Deathtrooper",
     "Path": "Deathtrooper.bnk",
@@ -3477,7 +3703,7 @@
       "Name": "Play_Deathtrooper_Enemy_Detection",
       "ObjectPath": "\\Events\\Default Work Unit\\Deathtrooper\\Play_Deathtrooper_Enemy_Detection",
       "DurationType": "OneShot",
-      "DurationMin": "0.816236",
+      "DurationMin": "0.000000",
       "DurationMax": "0.901043",
       "IncludedMemoryFiles": [
        {
@@ -3599,6 +3825,40 @@
       ]
      },
      {
+      "Id": "2477169847",
+      "Name": "Play_Deathtrooper_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Deathtrooper\\Play_Deathtrooper_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.520907",
+      "DurationMax": "0.726716",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
       "Id": "1377203479",
       "Name": "Play_Deathtrooper_Wander",
       "ObjectPath": "\\Events\\Default Work Unit\\Deathtrooper\\Play_Deathtrooper_Wander",
@@ -3669,7 +3929,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "384938714",
+    "Hash": "4001349125",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -3689,34 +3949,10 @@
       "DurationType": "Infinite",
       "IncludedMemoryFiles": [
        {
-        "Id": "346414874",
-        "Language": "SFX",
-        "ShortName": "Cantine plates and glasses 1.wav",
-        "Path": "SFX\\Cantine plates and glasses 1_FC2D3A10.wem"
-       },
-       {
-        "Id": "629531791",
-        "Language": "SFX",
-        "ShortName": "Cantine plates and glasses 4.wav",
-        "Path": "SFX\\Cantine plates and glasses 4_FC2D3A10.wem"
-       },
-       {
         "Id": "729275084",
         "Language": "SFX",
         "ShortName": "Cantine ambience.wav",
         "Path": "SFX\\Cantine ambience_B182BB5A.wem"
-       },
-       {
-        "Id": "975946049",
-        "Language": "SFX",
-        "ShortName": "Cantine plates and glasses 2.wav",
-        "Path": "SFX\\Cantine plates and glasses 2_FC2D3A10.wem"
-       },
-       {
-        "Id": "994174341",
-        "Language": "SFX",
-        "ShortName": "Cantine plates and glasses 3.wav",
-        "Path": "SFX\\Cantine plates and glasses 3_FC2D3A10.wem"
        }
       ]
      },
@@ -3809,7 +4045,7 @@
    {
     "Id": "3795682265",
     "Language": "SFX",
-    "Hash": "3844910783",
+    "Hash": "543321482",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bantha",
     "ShortName": "Bantha",
     "Path": "Bantha.bnk",
@@ -3877,6 +4113,40 @@
         "Language": "SFX",
         "ShortName": "BanthaPrepareAttack2.wav",
         "Path": "SFX\\BanthaPrepareAttack2_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "3526027714",
+      "Name": "Play_Bantha_Sniper_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bantha\\Play_Bantha_Sniper_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.551881",
+      "DurationMax": "0.769929",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "46328240",
+        "Language": "SFX",
+        "ShortName": "SniperHit1.wav",
+        "Path": "SFX\\SniperHit1_FC2D3A10.wem"
+       },
+       {
+        "Id": "324695883",
+        "Language": "SFX",
+        "ShortName": "SniperHit2.wav",
+        "Path": "SFX\\SniperHit2_FC2D3A10.wem"
+       },
+       {
+        "Id": "398531261",
+        "Language": "SFX",
+        "ShortName": "SniperHit4.wav",
+        "Path": "SFX\\SniperHit4_FC2D3A10.wem"
+       },
+       {
+        "Id": "703082497",
+        "Language": "SFX",
+        "ShortName": "SniperHit3.wav",
+        "Path": "SFX\\SniperHit3_FC2D3A10.wem"
        }
       ]
      },
@@ -4020,7 +4290,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "2876253245",
+    "Hash": "2192883227",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -4742,7 +5012,7 @@
    {
     "Id": "4179269225",
     "Language": "SFX",
-    "Hash": "1687704965",
+    "Hash": "1549251471",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Grogu",
     "ShortName": "Grogu",
     "Path": "Grogu.bnk",

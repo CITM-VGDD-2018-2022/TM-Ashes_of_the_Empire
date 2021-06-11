@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2750658822	Play_Turret_Hit			\Default Work Unit\Turret\Play_Turret_Hit	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 	3393910755	Play_Turret_Charge			\Default Work Unit\Turret\Play_Turret_Charge	
+	3422067292	Play_Turret_Sniper_Hit			\Default Work Unit\Turret\Play_Turret_Sniper_Hit	
 	3578431673	Play_Turret_Destruction			\Default Work Unit\Turret\Play_Turret_Destruction	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

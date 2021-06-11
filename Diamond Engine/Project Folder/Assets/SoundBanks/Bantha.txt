@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3094307109	Play_Bantha_Prepare_Charge			\Default Work Unit\Bantha\Play_Bantha_Prepare_Charge	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
 	3322588403	Play_Bantha_Breath			\Default Work Unit\Bantha\Play_Bantha_Breath	
+	3526027714	Play_Bantha_Sniper_Hit			\Default Work Unit\Bantha\Play_Bantha_Sniper_Hit	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1239559603	Growl_Bantha			\Default Work Unit\Growl_Bantha	
@@ -24,17 +25,21 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha Sniper_Hit\SniperHit1		115076
 	132250433	BanthaPrepareAttack1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\BanthaPrepareAttack1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_Charge_Prepare\BanthaPrepareAttack1		168788
 	197876092	Bantha hit 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha hit 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha hit 4		84812
 	204438246	BanthaPrepareAttack2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\BanthaPrepareAttack2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_Charge_Prepare\BanthaPrepareAttack2		280640
 	210317130	Bantha Dead Roar	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha Dead Roar_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha Dead Roar		182276
 	228824925	Bantha attack 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_attack\Bantha attack 2		91292
 	291424242	Bantha attack 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha_attack\Bantha attack 1		90440
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha Sniper_Hit\SniperHit2		109380
 	358269163	Bantha body hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha body hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha body hit 1		107620
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha Sniper_Hit\SniperHit4		132012
 	403063460	Bantha tired breath	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha tired breath_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha tired breath		202792
 	491745401	Bantha Footstep 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha Footstep 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Footsteps_Bantha\Bantha Footstep 3		63692
 	502347880	Bantha Footstep 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha Footstep 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Footsteps_Bantha\Bantha Footstep 2		59336
 	656291019	Bantha Footstep	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha Footstep_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Footsteps_Bantha\Bantha Footstep		63692
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Bantha Sniper_Hit\SniperHit3		103204
 	787605823	Bantha hit	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha hit_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha hit		80720
 	857968306	Bantha body hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha body hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha body hit 3		98280
 	927501018	Bantha hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bantha\Growls_bantha\Bantha_Hit\Bantha hit 2		76140

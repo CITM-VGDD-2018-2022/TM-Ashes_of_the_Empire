@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	126468322	Play_Wampa_Footsteps			\Default Work Unit\Wampa Skel\Play_Wampa_Footsteps	
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	210142930	Play_Skel_Jump_In_Progress			\Default Work Unit\Wampa Skel\Play_Skel_Jump_In_Progress	
+	228539605	Play_Skel_Sniper_Hit			\Default Work Unit\Wampa Skel\Play_Skel_Sniper_Hit	
 	528623469	Play_Wampa_Projectile_Impact			\Default Work Unit\Wampa Skel\Play_Wampa_Projectile_Impact	
 	605343841	Play_Wampa_Projectile_Throw_1			\Default Work Unit\Wampa Skel\Play_Wampa_Projectile_Throw_1	
 	605343842	Play_Wampa_Projectile_Throw_2			\Default Work Unit\Wampa Skel\Play_Wampa_Projectile_Throw_2	
@@ -20,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3479049538	Play_Wampa_Ice_Pick			\Default Work Unit\Wampa Skel\Play_Wampa_Ice_Pick	
 	3650769102	Play_Skel_Rush_Preparation			\Default Work Unit\Wampa Skel\Play_Skel_Rush_Preparation	
 	3733308172	Play_Skel_Jump_Preparation			\Default Work Unit\Wampa Skel\Play_Skel_Jump_Preparation	
+	3784529350	Play_Wampa_Sniper_Hit			\Default Work Unit\Wampa Skel\Play_Wampa_Sniper_Hit	
 	3996625941	Play_Wampa_Death			\Default Work Unit\Wampa Skel\Play_Wampa_Death	
 	4012397375	Play_Skel_Footsteps			\Default Work Unit\Wampa Skel\Play_Skel_Footsteps	
 
@@ -34,6 +36,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6301850	Skel footstep 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel footstep 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Footsteps skel\Skel footstep 3		50652
 	11466863	wampa hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa hit\wampa hit 1		124248
 	27275924	wampa rush footstep 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa rush footstep 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Footsteps wampa rush\wampa rush footstep 1		53288
+	46328240	SniperHit1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa Sniper_Hit\SniperHit1		115076
 	66287347	wampa body hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa body hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa hit\wampa body hit 1		71600
 	70488545	Skel voice hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel voice hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Skel hit\Skel voice hit 1		94260
 	74697248	Footstep wampa 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep wampa 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Footsteps wampa\Footstep wampa 2		105152
@@ -43,13 +46,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	263750753	wampa skel projectile throw 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa skel projectile throw 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\wampa skel projectile throw 1		171384
 	309586819	wampa rush footstep 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa rush footstep 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Footsteps wampa rush\wampa rush footstep 3		52228
 	318735960	Skel rush in process	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel rush in process_B182BB5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Skel rush in process		26256
+	324695883	SniperHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa Sniper_Hit\SniperHit2		109380
 	341527135	wampa body hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa body hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa hit\wampa body hit 2		58068
 	368805377	wampa rush roar	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa rush roar_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\wampa rush roar		188108
 	395401549	skel when wampa dies	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\skel when wampa dies_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\skel when wampa dies		338268
+	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa Sniper_Hit\SniperHit4		132012
 	437758057	Skel voice hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel voice hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Skel hit\Skel voice hit 3		79592
 	495246666	wampa rush footstep 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa rush footstep 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Footsteps wampa rush\wampa rush footstep 4		53200
 	534506255	Skel footstep 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel footstep 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Footsteps skel\Skel footstep 2		50652
 	555662456	wampa hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa hit\wampa hit 3		120016
+	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\Wampa Sniper_Hit\SniperHit3		103204
 	716526834	Skel voice hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel voice hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Skel hit\Skel voice hit 2		91088
 	741073719	wampa death	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\wampa death_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Wampa\wampa death		1264176
 	764031307	Skel footstep 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Skel footstep 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wampa skell\Skel\Footsteps skel\Skel footstep 4		50652
