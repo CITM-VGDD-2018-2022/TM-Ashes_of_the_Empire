@@ -22,7 +22,6 @@ public class UI_Fade : DiamondComponent
         if (img == null)
         {
             ended = true;
-            Debug.Log("No Image was found, Fade cannot be performed");
         }
         else
         {

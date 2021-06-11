@@ -103,7 +103,6 @@ public class Skytrooper : Enemy
 
     public void Awake()
     {
-        Debug.Log("Skytrooper Awake");
         InitEntity(ENTITY_TYPE.SKYTROOPER);
         EnemyManager.AddEnemy(gameObject);
 
@@ -133,8 +132,6 @@ public class Skytrooper : Enemy
 
         if (grenadeHitParticleObj != null)
             grenadeHitParticle = grenadeHitParticleObj.GetComponent<ParticleSystem>();
-        //else
-        //Debug.Log("Hit particles gameobject not found!");
 
         shootAnimationTime = Animator.GetAnimationDuration(gameObject, "SK_Shoot");
 
@@ -242,7 +239,6 @@ public class Skytrooper : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("SKYTROOPER ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -366,7 +362,6 @@ public class Skytrooper : Enemy
                     }
                     break;
                 default:
-                    Debug.Log("NEED TO ADD STATE TO SKYTROOPER SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -399,7 +394,6 @@ public class Skytrooper : Enemy
                 UpdatePush();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO SKYTROOPER");
                 break;
         }
     }
@@ -407,7 +401,6 @@ public class Skytrooper : Enemy
     #region IDLE
     private void StartIdle()
     {
-        //Debug.Log("SKYTROOPER IDLE");
         idleTimer = idleTime;
         Animator.Play(gameObject, "SK_Idle", speedMult);
         Animator.Play(blaster, "SK_Idle", speedMult);
@@ -436,7 +429,6 @@ public class Skytrooper : Enemy
     private void StartWander()
     {
         wanderTimer = wanderTime;
-        //Debug.Log("SKYTROOPER WANDER");
 
         Animator.Play(gameObject, "SK_Wander", speedMult);
         Animator.Play(blaster, "SK_Wander", speedMult);
@@ -467,7 +459,6 @@ public class Skytrooper : Enemy
     private void StartDash()
     {
         dashTimer = dashTime;
-        //Debug.Log("SKYTROOPER DASH");
 
         targetPosition = CalculateRandomInRangePosition();
 
@@ -480,10 +471,7 @@ public class Skytrooper : Enemy
         else
         {
             inputsList.Add(INPUT.IN_WANDER);
-            Debug.Log("Emergency wander");
         }
-
-        //Debug.Log(targetPosition.ToString());
 
         UpdateAnimationSpd(speedMult);
     }
@@ -506,7 +494,6 @@ public class Skytrooper : Enemy
     #region SHOOT
     private void StartShoot()
     {
-        //Debug.Log("SKYTROOPER SHOOT");
         shootTimer = timeBewteenShootingStates;
         shotsShooted = 0;
         Animator.Play(gameObject, "SK_Idle", speedMult);
@@ -603,7 +590,6 @@ public class Skytrooper : Enemy
     }
     private void PlayerDetected()
     {
-        //Debug.Log("SKYTROOPER PLAYER DETECTED");
         Audio.PlayAudio(gameObject, "Play_Enemy_Detection");
     }
     #endregion
@@ -611,7 +597,6 @@ public class Skytrooper : Enemy
     #region DIE
     private void StartDie()
     {
-        //Debug.Log("SKYTROOPER DIE");
         dieTimer = dieTime;
 
         Explode();
@@ -624,7 +609,6 @@ public class Skytrooper : Enemy
         //Combo
         if (PlayerResources.CheckBoon(BOONS.BOON_MASTER_YODA_FORCE))
         {
-            //Debug.Log("Start die ended");
             HUD hud = Core.instance.hud.GetComponent<HUD>();
 
             if (hud != null)
@@ -685,7 +669,6 @@ public class Skytrooper : Enemy
 
             if (playerHealth != null)
             {
-                //Debug.Log("Player hurt by skytrooper explosion");
                 playerHealth.TakeDamage((int)damage);
             }
         }

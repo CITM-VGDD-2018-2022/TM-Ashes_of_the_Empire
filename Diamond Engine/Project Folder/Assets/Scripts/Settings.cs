@@ -49,7 +49,7 @@ public class Settings : DiamondComponent
         if (gameObject.Name == "BrightnessUp")
         {
             Config.SetBrightness(Config.GetBrightness() + 0.05f);
-            Debug.Log(Config.GetBrightness().ToString());
+
             if (bar == null)
                 return;
             bar.GetComponent<Material>().SetFloatUniform("length_used", Config.GetBrightness());
@@ -57,7 +57,7 @@ public class Settings : DiamondComponent
         else if (gameObject.Name == "BrightnessDown")
         {
             Config.SetBrightness(Config.GetBrightness() - 0.05f);
-            Debug.Log(Config.GetBrightness().ToString());
+
             if (bar == null)
                 return;
             bar.GetComponent<Material>().SetFloatUniform("length_used", Config.GetBrightness());

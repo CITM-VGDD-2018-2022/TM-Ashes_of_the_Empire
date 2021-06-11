@@ -156,7 +156,7 @@ public class SHOP : DiamondComponent
         {
             int currency = PlayerResources.GetRunCoins();
             int discount = 0;
-            Debug.Log("Discounts left" + Core.instance.ShopDiscount.ToString());
+
             if (Core.instance.ShopDiscount > 0)
             {
                 Core.instance.ShopDiscount--;
@@ -178,8 +178,6 @@ public class SHOP : DiamondComponent
                     {
                         item.resource.Use();
                     }
-                    else
-                        Debug.Log("Null resource");
                 }
                 else if (item.itemType == ShopItems.SHOP_ITEM_HEALTHREPLENISHMENT)
                 {
@@ -199,23 +197,15 @@ public class SHOP : DiamondComponent
     {
         PlayerResources.SetRunCoins(value);
 
-        Debug.Log("Current currency: " + PlayerResources.GetRunCoins().ToString());
-
         if (currencyText != null)
             currencyText.text = PlayerResources.GetRunCoins().ToString();
-        else
-            Debug.Log("Null currency text");
 
         if (currencyText1 != null)
             currencyText1.text = PlayerResources.GetRunCoins().ToString();
-        else
-            Debug.Log("Null currency text");
     }
 
     public void RandomiseItems()
     {
-        Debug.Log("Random");
-
         List<BOONS> available = new List<BOONS>();
         for (int i = 0; i < BoonDataHolder.boonType.Length; ++i)  //Number of boons
         {
@@ -251,7 +241,6 @@ public class SHOP : DiamondComponent
         {
             float price = (float)BoonDataHolder.boonType[(int)boon].price;
             discount = price * 0.75f;
-            Debug.Log("Shop discount " + discount.ToString());
         }
  
 
@@ -262,8 +251,6 @@ public class SHOP : DiamondComponent
                 item.SetItem(type, BoonDataHolder.boonType[(int)boon].price, BoonDataHolder.boonType[(int)boon].name, BoonDataHolder.boonType[(int)boon].rewardDescription, (int)discount);
                 item.resource = BoonDataHolder.boonType[(int)boon];
             }
-            else
-                Debug.Log("Null boon");
         }
         else
         {

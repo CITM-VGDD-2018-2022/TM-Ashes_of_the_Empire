@@ -13,10 +13,6 @@ public class Shake3D : DiamondComponent
 
 	public void Awake()
     {
-        if (gameObject.transform == null)
-        {
-			Debug.Log("Component Transform is NULL");
-        }
         random = new Random();
     }
 

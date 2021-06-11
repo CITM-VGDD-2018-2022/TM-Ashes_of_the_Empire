@@ -201,9 +201,7 @@ public class Skill_Tree_Node : DiamondComponent
 
         if (Input.GetGamepadButton(DEControllerButton.Y) == KeyState.KEY_DOWN)
         {
-            Debug.Log("Beskar: ");
             PlayerResources.AddResourceBy1(RewardType.REWARD_BESKAR);
-            Debug.Log("Beskar: " + PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR));
         }
     }
 
@@ -214,10 +212,6 @@ public class Skill_Tree_Node : DiamondComponent
             Type t = SkillDictionary.skill_type[skill_name];
             skill = (Skills)Activator.CreateInstance(t);
             skill.AssignCharacteristics();
-        }
-        else
-        {
-            Debug.Log("ERROR: Skill doesn't exist: " + skill_name);
         }
 
         if (node_type == 0)
@@ -235,7 +229,6 @@ public class Skill_Tree_Node : DiamondComponent
 
         if (state == NODE_STATE.LOCKED)
         {
-            Debug.Log("Locked node");
             Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
             return;
         }
@@ -246,13 +239,11 @@ public class Skill_Tree_Node : DiamondComponent
             if (PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR) < skill.price)
             {
                 Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
-                Debug.Log("You don't have enough Beskar!");
                 return;
             }
             else
             {
                 PlayerResources.SubstractResource(RewardType.REWARD_BESKAR, skill.price);
-                Debug.Log("Beskar: " + PlayerResources.GetResourceCount(RewardType.REWARD_BESKAR));
             }
         }
 
@@ -261,13 +252,11 @@ public class Skill_Tree_Node : DiamondComponent
             if (PlayerResources.GetResourceCount(RewardType.REWARD_MACARON) < skill.price)
             {
                 Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
-                Debug.Log("You don't have enough Macarons!");
                 return;
             }
             else
             {
                 PlayerResources.SubstractResource(RewardType.REWARD_MACARON, skill.price);
-                Debug.Log("Macarons: " + PlayerResources.GetResourceCount(RewardType.REWARD_MACARON));
             }
         }
 
@@ -276,13 +265,11 @@ public class Skill_Tree_Node : DiamondComponent
             if (PlayerResources.GetResourceCount(RewardType.REWARD_SCRAP) < skill.price)
             {
                 Audio.PlayAudio(gameObject, "Play_UI_Skill_Tree_Lock");
-                Debug.Log("You don't have enough Scrap!");
                 return;
             }
             else
             {
                 PlayerResources.SubstractResource(RewardType.REWARD_SCRAP, skill.price);
-                Debug.Log("Scrap: " + PlayerResources.GetResourceCount(RewardType.REWARD_SCRAP));
             }
         }
         skill.Use();
@@ -301,7 +288,6 @@ public class Skill_Tree_Node : DiamondComponent
 
     public static void addSkill(int skillTree, string name)
     {
-        Debug.Log(skillTree.ToString() + " / " + skillTree.ToString());
         switch(skillTree)
         {
             case 1:
@@ -309,35 +295,27 @@ public class Skill_Tree_Node : DiamondComponent
                 {
                     case "GForceReg":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_FORCE_REGEN, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
-                      //  Debug.Log("GForceReg not implemented yet");
                         break;
                     case "GPushRange":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_PUSH, STATUS_APPLY_TYPE.SUBSTITUTE, 3, 0, true);
-                      //  Debug.Log("GPushRange not implemented yet");
                         break;
                     case "GForceDur":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_COVER, STATUS_APPLY_TYPE.SUBSTITUTE, 3, 0, true);
-                      //  Debug.Log("GForceDur heat not implemented yet");
                         break;
                     case "GThrshComboForce":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_COMBO_REGEN, STATUS_APPLY_TYPE.SUBSTITUTE, 4, 0, true);
-                      //  Debug.Log("GThrshComboForce not implemented yet");
                         break;
                     case "GMaxForce":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_MAX_FORCE, STATUS_APPLY_TYPE.SUBSTITUTE, 10, 0, true);
-                       // Debug.Log("GMaxForce not implemented yet");
                         break;
                     case "GSingComboForce":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_COMBO_ADD, STATUS_APPLY_TYPE.SUBSTITUTE, 2, 0, true);
-                       // Debug.Log("GSingComboForce not implemented yet");
                         break;
                     case "GComboGain":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_COMBO_GAIN, STATUS_APPLY_TYPE.SUBSTITUTE, 30, 0, true);
-                       // Debug.Log("GComboGain not implemented yet");
                         break;
                     case "GHPForceReg":
                         Core.instance.AddStatus(STATUS_TYPE.GRO_FORCE_PER_HP, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
-                       // Debug.Log("GHPForceReg heat not implemented yet");
                         break;
                 }
                 break;
@@ -346,11 +324,9 @@ public class Skill_Tree_Node : DiamondComponent
                 {
                     #region utility
                     case "UDamageHeat":
-                        //Debug.Log("Damage * heat not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.DMG_PER_HEAT, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
                         break;
                     case "UMovSpd":
-                        //Debug.Log("MovementSpeed not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.MOV_SPEED, STATUS_APPLY_TYPE.SUBSTITUTE, 20, 0, true);
                         break;
                     case "USlowDamage":
@@ -358,96 +334,72 @@ public class Skill_Tree_Node : DiamondComponent
                         break;
                     case "UFallDmgRed":
                         Core.instance.AddStatus(STATUS_TYPE.FALL, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
-                      //  Debug.Log("Damage reduction after dash not implemented yet");
                         break;
                     case "UOverheat":
-                        //Debug.Log("More Shots before overheat not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.OVERHEATCAP, STATUS_APPLY_TYPE.ADDITIVE, -20, 0, true);
                         break;
                     case "URedGroguCost":
-                      //  Debug.Log("Grogu Cost reduced");
                         Core.instance.AddStatus(STATUS_TYPE.GROGU_COST, STATUS_APPLY_TYPE.SUBSTITUTE, -20, 0, true);
-                      //  Debug.Log("Grogu reduction cost not implemented yet");
                         break;
                     case "UHeal":
-                        // Debug.Log("Gogu heal not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.SKILL_HEAL, STATUS_APPLY_TYPE.SUBSTITUTE, 5, 1, true);
                         break;
                     case "UDash":
-                        //Debug.Log("Double dash not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.GRENADE_ON_DASH, STATUS_APPLY_TYPE.SUBSTITUTE, 10, 1, true);
-
                         break;
                     #endregion
                     #region Aggression
                     case "ABlasterDmg":
-                       // Debug.Log("Damage not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.BLASTER_DAMAGE, STATUS_APPLY_TYPE.ADDITIVE, 15, 0, true);
                         break;
                     case "AComboFireRate":
-                        // Debug.Log("Combo * speed not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.COMBO_FIRE_RATE, STATUS_APPLY_TYPE.ADDITIVE, 20, 0, true);
                         break;
                     case "AComboDmg":
-                       // Debug.Log("Combo * damage not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.COMBO_DAMAGE, STATUS_APPLY_TYPE.SUBSTITUTE, 20, 0, true);
                         break;
                     case "AGrenadeDmg":
-                        //Debug.Log("Critical chance not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.GRENADE_DAMAGE, STATUS_APPLY_TYPE.ADDITIVE, 15, 0, true);
 
                         break;
                     case "ASniperDmg":
-                        //Debug.Log("Critical damage not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.SNIPER_DAMAGE, STATUS_APPLY_TYPE.SUBSTITUTE, 15, 0, true);
 
                         break;
                     case "ADmgBos":
                         Core.instance.AddStatus(STATUS_TYPE.DMG_TO_BOSSES, STATUS_APPLY_TYPE.SUBSTITUTE, 20, 0, true);
-                       // Debug.Log("Bonus damage to bosses not implemented yet");
                         break;
                     case "AHPMissDmgBlaster":
                         Core.instance.AddStatus(STATUS_TYPE.BLAST_DMG_PER_HP, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
-                        //Debug.Log("Damage * missing hp not implemented yet");
                         break;
                     case "AHPMissDmgSniper":
                         Core.instance.AddStatus(STATUS_TYPE.SNIPER_DMG_PER_HP, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
-                        //  Debug.Log("Crit * missing hp not implemented yet");
                         break;
                     #endregion
                     #region Defense
                     case "DMaxHPS":
                         Core.instance.AddStatus(STATUS_TYPE.MAX_HP, STATUS_APPLY_TYPE.SUBSTITUTE, 10, 0, true);
-                        // Debug.Log("Max Hp not implemented yet");
                         break;
                     case "DDmgRed":
                         Core.instance.AddStatus(STATUS_TYPE.DMG_RED, STATUS_APPLY_TYPE.SUBSTITUTE, -10, 0, true);
-
-                        //   Debug.Log("Dmg reduction not implemented yet");
                         break;
                     case "DComboDmgRed":
                         Core.instance.AddStatus(STATUS_TYPE.COMBO_RED, STATUS_APPLY_TYPE.SUBSTITUTE, 20, 0, true);
-                      //  Debug.Log("Combo * damage red not implemented yet");
                         break;
                     case "DComboHeal":
                         Core.instance.AddStatus(STATUS_TYPE.COMBO_HEAL, STATUS_APPLY_TYPE.SUBSTITUTE, 2, 0, true);
-                     //   Debug.Log("Combo * heal not implemented yet");
                         break;
                     case "DComboFnshHeal":
                         Core.instance.AddStatus(STATUS_TYPE.HEAL_COMBO_FINNISH, STATUS_APPLY_TYPE.SUBSTITUTE, 10, 0, true);
-                        //Debug.Log("Heal on combo finish not implemented yet");
                         break;
                     case "DHeal":
                         Core.instance.AddStatus(STATUS_TYPE.LIFESTEAL, STATUS_APPLY_TYPE.SUBSTITUTE, 5, 0, true);
-                        //Debug.Log("Lifesteal not implemented yet");
                         break;
                     case "DHealEfct":
-                      //  Debug.Log("Healing effects increased not implemented yet");
                         Core.instance.AddStatus(STATUS_TYPE.REVIVE, STATUS_APPLY_TYPE.SUBSTITUTE, 1, 0, true);
                         break;
                     case "DAvoidDmg":
                         Core.instance.AddStatus(STATUS_TYPE.BLOCK, STATUS_APPLY_TYPE.SUBSTITUTE, 5, 0, true);
-                     //   Debug.Log("chance to avoid damage not implemented yet");
                         break;
                         #endregion
                 }
@@ -495,7 +447,6 @@ public class Skill_Tree_Node : DiamondComponent
                         break;
                     case "SeUseRange":
                         Core.instance.AddStatus(STATUS_TYPE.SEC_RANGE, STATUS_APPLY_TYPE.SUBSTITUTE, 30, 1, true);
-                        Debug.Log("rework on grenade?");
                         break;
                     case "SeDuration":
                         Core.instance.AddStatus(STATUS_TYPE.SEC_DURATION, STATUS_APPLY_TYPE.SUBSTITUTE, 30, 1, true);
@@ -511,23 +462,18 @@ public class Skill_Tree_Node : DiamondComponent
                         break;
                     case "SpChargeTime":
                         Core.instance.AddStatus(STATUS_TYPE.SP_CHARGE_TIME, STATUS_APPLY_TYPE.SUBSTITUTE, 30, 0, true);
-
                         break;
                     case "SpHeal":
                         Core.instance.AddStatus(STATUS_TYPE.SP_HEAL, STATUS_APPLY_TYPE.SUBSTITUTE, 5, 0, true);
-
                         break;
                     case "SpRegForce":
                         Core.instance.AddStatus(STATUS_TYPE.SP_FORCE_REGEN, STATUS_APPLY_TYPE.SUBSTITUTE, 5, 0, true);
-
                         break;
                     case "SpMaxIntDmg":
                         Core.instance.AddStatus(STATUS_TYPE.SP_INTERVAL, STATUS_APPLY_TYPE.SUBSTITUTE, 50, 0, true);
-
                         break;
                     case "SpMaxDmg":
                         Core.instance.AddStatus(STATUS_TYPE.SP_DAMAGE_CHARGED, STATUS_APPLY_TYPE.SUBSTITUTE, 100, 0, true);
-
                         break;
                         #endregion
 

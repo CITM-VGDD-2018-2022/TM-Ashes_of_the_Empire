@@ -18,7 +18,6 @@ class RancorHandSlamHitCollider : DiamondComponent
         {
             start = false;
             gameObject.transform.localPosition = initPos;
-            Debug.Log("Init HandSlam");
             timer = 0f;
             gameObject.transform.localRotation = Quaternion.RotateAroundAxis(Vector3.up, 3.14159f);
 
@@ -45,7 +44,6 @@ class RancorHandSlamHitCollider : DiamondComponent
             PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
                 health.TakeDamage(damage);
-            Debug.Log("Damaged From HandSlamHit");
         }
     }
 

@@ -24,10 +24,7 @@ public class TutoButtonLoop : DiamondComponent
     {
         //buttonMaterial=this.gameObject.GetComponent<Material>();
         if (releasedButton == null || pressedButton == null || radiantButton == null)
-        {
-            Debug.Log("Missing tutorial button reference");
-        }
-
+        {}
         else
         {
             currentTime += Time.deltaTime;

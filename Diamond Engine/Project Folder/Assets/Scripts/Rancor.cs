@@ -210,9 +210,6 @@ public class Rancor : Entity
         handSlamTime = Animator.GetAnimationDuration(gameObject, "RN_HandSlam") - 0.016f;
 
         rushTime = Animator.GetAnimationDuration(gameObject, "RN_Rush") - 0.016f;
-        //Debug.Log("RUSH TiME: " + rushTime.ToString());
-
-        //rushStunDuration = Animator.GetAnimationDuration(gameObject, "RN_RushRecover") - 0.016f;
 
         dieTime = Animator.GetAnimationDuration(gameObject, "RN_Die") - 0.016f;
 
@@ -237,9 +234,6 @@ public class Rancor : Entity
             EnemyManager.ClearList();
 
         EnemyManager.AddEnemy(gameObject);
-
-        if (agent == null)
-            Debug.Log("Null agent, add a NavMeshAgent Component");
 
         Audio.SetState("Game_State", "Rancor_Room");
         if (EnvironmentSourceLocate.instance !=null)
@@ -350,13 +344,12 @@ public class Rancor : Entity
         {
             roarTimer -= myDeltaTime;
             healthPoints = (1 - (roarTimer / roarTime)) * maxHealthPoints;
-            //Debug.Log("Rancor health: " + healthPoints.ToString());
+
             if (roarTimer <= 0)
             {
                 healthPoints = maxHealthPoints;
                 limbo_health = healthPoints;
                 inputsList.Add(RANCOR_INPUT.IN_ROAR_END);
-                //Debug.Log("finishing roar");
             }
         }
 
@@ -385,7 +378,6 @@ public class Rancor : Entity
             switch (currentState)
             {
                 case RANCOR_STATE.NONE:
-                    Debug.Log("RANCOR ERROR STATE");
                     break;
 
                 case RANCOR_STATE.SEARCH_STATE:
@@ -590,7 +582,6 @@ public class Rancor : Entity
                     break;
 
                 default:
-                    Debug.Log("NEED TO ADD STATE TO RANCOR");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -602,7 +593,6 @@ public class Rancor : Entity
         switch (currentState)
         {
             case RANCOR_STATE.NONE:
-                Debug.Log("RANCOR ERROR STATE");
                 break;
 
             case RANCOR_STATE.ROAR:
@@ -663,8 +653,6 @@ public class Rancor : Entity
                 bossBarMat.SetFloatUniform("length_used", healthPoints / maxHealthPoints);
                 bossBarMat.SetFloatUniform("limbo", limbo_health / maxHealthPoints);
             }
-            else
-                Debug.Log("Boss Bar component was null!!");
 
         }
         if (damaged > 0.01f)
@@ -683,8 +671,6 @@ public class Rancor : Entity
             {
                 rancorMeshMat.SetFloatUniform("damaged", damaged);
             }
-            else
-                Debug.Log("Rancor Mesh Material was null!!");
         }
         if (rancorParticles.rush.playing && currentState != RANCOR_STATE.RUSH && currentState != RANCOR_STATE.RUSH_STUN)
             PlayParticles(PARTICLES.RUSH);
@@ -693,8 +679,6 @@ public class Rancor : Entity
     private void SelectAction()
     {
         int decision = randomNum.Next(1, 100);
-
-        //Debug.Log("Decision value: " + decision.ToString());
 
         if (decision <= attackProbability)
         {
@@ -750,7 +734,6 @@ public class Rancor : Entity
 
     private void UpdateMCHit1()
     {
-        //Debug.Log("Combo hit 1");
 
         if (meleeCH1ColliderTimer > 0.0f)
         {
@@ -794,7 +777,6 @@ public class Rancor : Entity
 
     private void UpdateMCHit2()
     {
-       // Debug.Log("Combo hit 2");
         if (meleeCH2ColliderTimer > 0.0f)
         {
             meleeCH2ColliderTimer -= myDeltaTime;
@@ -842,8 +824,6 @@ public class Rancor : Entity
 
     private void UpdateMCHit3()
     {
-        //Debug.Log("Combo hit 3");
-
         if (meleeCH3ColliderTimer > 0.0f)
         {
             meleeCH3ColliderTimer -= myDeltaTime;
@@ -884,8 +864,6 @@ public class Rancor : Entity
             {
                 meleeHit3Haptic = false;
                 Input.PlayHaptic(0.8f, 500);
-                //Debug.Log("Hpatic Jump");
-
             }
         }
         if (meleeCH3Timer < (meleeComboHit3Time / 2) + 0.2f && impact)
@@ -977,8 +955,6 @@ public class Rancor : Entity
             toggleLegParticle = !toggleLegParticle;
             dustTime = 0.0f;
         }
-
-        //Debug.Log("Following");
         UpdateAnimationSpd(speedMult);
     }
 
@@ -988,7 +964,6 @@ public class Rancor : Entity
         Audio.StopAudio(gameObject);
         Animator.Play(gameObject, "RN_Idle", speedMult);
         UpdateAnimationSpd(speedMult);
-        //Debug.Log("End Following");
     }
 
     #endregion
@@ -1054,7 +1029,6 @@ public class Rancor : Entity
             }
         }
 
-        //Debug.Log("Projectile");
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1150,8 +1124,6 @@ public class Rancor : Entity
                 handSlamColl.myDeltaTimeMult = speedMult;
             }
         }
-
-        //Debug.Log("Hand slam");
     }
 
 
@@ -1173,8 +1145,6 @@ public class Rancor : Entity
     }
     private void UpdateLoadingRush()
     {
-        //Debug.Log("Loading Rush");
-
         LookAt(Core.instance.gameObject.transform.globalPosition); //RANCOR POINTING PLAYER WHILE LOADING
     }
     #endregion
@@ -1194,8 +1164,6 @@ public class Rancor : Entity
 
     private void UpdateRush()
     {
-        //Debug.Log("Rush");
-
         if (rushTimer < 2.9f)
         {
             if (startRush)
@@ -1237,9 +1205,6 @@ public class Rancor : Entity
 
     private void UpdateRushStun()
     {
-       // Debug.Log("Rush Stun");
-       // Debug.Log(rushStunTimer.ToString());
-
         UpdateAnimationSpd(speedMult);
     }
 
@@ -1320,8 +1285,6 @@ public class Rancor : Entity
 
     public void Die()
     {
-       // Debug.Log("RANCOR'S DEAD");
-
         Animator.Pause(gameObject);
         Audio.StopAudio(gameObject);
         Input.PlayHaptic(0.3f, 3);
@@ -1368,21 +1331,14 @@ public class Rancor : Entity
                 {
                     damageToBoss += bulletScript.GetDamage();
                 }
-                else
-                {
-                    Debug.Log("The collider with tag Bullet didn't have a bullet Script!!");
-                }
+
                 if (Core.instance != null)
                     damageToBoss *= Core.instance.DamageToBosses * BlasterVulnerability;
-                //if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.AGGRESION_INCREASE_DAMAGE_TO_BOSS))
-                //{
-                //    damageToBoss *= (1.0f + Skill_Tree_Data.GetMandoSkillTree().A6_increaseDamageToBossAmount);
-                //}
 
                 TakeDamage(damageToBoss * damageRecieveMult);
-                //Debug.Log("Rancor HP: " + healthPoints.ToString());
+
                 damaged = 1.0f;
-                //CHANGE FOR APPROPIATE RANCOR HIT
+
                 Audio.PlayAudio(gameObject, "Play_Rancor_Hit");
 
                 if (Core.instance.hud != null && currentState != RANCOR_STATE.DEAD)
@@ -1449,15 +1405,6 @@ public class Rancor : Entity
                     damageToBoss += bulletScript.GetDamage() * damageMult;
 
                 }
-                else
-                {
-                    Debug.Log("The collider with tag Bullet didn't have a bullet Script!!");
-                }
-
-                //if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.MANDO, (int)Skill_Tree_Data.MandoSkillNames.AGGRESION_INCREASE_DAMAGE_TO_BOSS))
-                //{
-                //    damageToBoss *= (1.0f + Skill_Tree_Data.GetMandoSkillTree().A6_increaseDamageToBossAmount);
-                //}
 
                 if (Core.instance != null)
                     damageToBoss *= Core.instance.DamageToBosses;
@@ -1472,7 +1419,7 @@ public class Rancor : Entity
                     Core.instance.luckyMod = 1 + mod / 100;
                 }
                 TakeDamage(damageToBoss);
-                //Debug.Log("Rancor HP: " + healthPoints.ToString());
+
                 damaged = 1.0f;
                 //CHANGE FOR APPROPIATE RANCOR HIT
                 Audio.PlayAudio(gameObject, "Play_Rancor_Hit");
@@ -1533,7 +1480,6 @@ public class Rancor : Entity
     {
         if (rancorParticles == null)
         {
-            //Debug.Log("Rancor Particles not found!");
             return;
         }
         ParticleSystem particle = null;
@@ -1545,22 +1491,19 @@ public class Rancor : Entity
                 particle = rancorParticles.trailLeft;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Trail Left particle not found!");
+
                 break;
             case PARTICLES.TRAILRIGHT:
                 particle = rancorParticles.trailRight;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Trail Left particle not found!");
+
                 break;
             case PARTICLES.IMPACT:
                 particle = rancorParticles.impact;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Impact particle not found!");
+
                 break;
             case PARTICLES.RUSH:
                 particle = rancorParticles.rush;
@@ -1568,36 +1511,31 @@ public class Rancor : Entity
                     particle.Play();
                 else if (particle != null && particle.playing)
                     particle.Stop();
-                else
-                    Debug.Log("Rancor Rush particle not found!");
+
                 break;
             case PARTICLES.SWINGLEFT:
                 particle = rancorParticles.swingLeft;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Swing Left particle not found!");
+
                 break;
             case PARTICLES.SWINGRIGHT:
                 particle = rancorParticles.swingRight;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Swing Right particle not found!");
+
                 break;
             case PARTICLES.HANDSLAM:
                 particle = rancorParticles.handSlam;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Hand Slam particle not found!");
+
                 break;
             case PARTICLES.ROAR:
                 particle = rancorParticles.roar;
                 if (particle != null)
                     particle.Play();
-                else
-                    Debug.Log("Rancor Roar particle not found!");
+
                 break;
         }
     }
@@ -1606,7 +1544,6 @@ public class Rancor : Entity
     {
         if (!DebugOptionsHolder.bossDmg)
         {
-            //Debug.Log("Rancor damage" + damage.ToString());
             if (currentState != RANCOR_STATE.DEAD)
             {
                 float mod = 1f;

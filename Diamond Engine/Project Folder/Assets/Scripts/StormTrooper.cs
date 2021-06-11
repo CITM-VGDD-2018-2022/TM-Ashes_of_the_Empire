@@ -92,8 +92,6 @@ public class StormTrooper : Enemy
     private StormTrooperParticles myParticles = null;
     public void Awake()
     {
-        //Debug.Log("Stormtrooper Awake");
-
         InitEntity(ENTITY_TYPE.STROMTROOPER);
         EnemyManager.AddEnemy(gameObject);
 
@@ -198,7 +196,6 @@ public class StormTrooper : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("STORMTROOPER ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -350,7 +347,6 @@ public class StormTrooper : Enemy
                     }
                     break;
                 default:
-                    Debug.Log("NEED TO ADD STATE TO STORMTROOPER SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -386,7 +382,6 @@ public class StormTrooper : Enemy
                 UpdatePush();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO STORMTROOPER");
                 break;
         }
     }
@@ -481,7 +476,6 @@ public class StormTrooper : Enemy
 
     private void StartFindAim()
     {
-        //Debug.Log("STORMTROOPER FIND AIM");
         Animator.Play(gameObject, "ST_Run", speedMult);
         if (blaster != null)
             Animator.Play(blaster, "ST_Run", speedMult);
@@ -750,14 +744,12 @@ public class StormTrooper : Enemy
         {
             if (raycastHit.CompareTag("Player"))
             {
-                //Debug.Log("RayCast Player True with tag");
                 needFindAim = false;
                 return true;
             }
 
         }
 
-        //Debug.Log("RayCast Player False");
         needFindAim = true;
         return false;
     }

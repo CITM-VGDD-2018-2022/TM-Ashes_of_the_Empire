@@ -102,7 +102,6 @@ public class Shake2D : DiamondComponent
         Vector2 offset = new Vector2(0.0f, 0.0f);
         offset.x = shakeXMax * shake * ((shakeNoiseX.GetNoiseAt(new Vector2(0.0f, currShakeTime)) * 2.0f) - 1.0f);
         offset.y = shakeYMax * shake * ((shakeNoiseY.GetNoiseAt(new Vector2(currShakeTime, 0.0f)) * 2.0f) - 1.0f);
-        Debug.Log("NOISE Offset: " + offset.ToString() + " ======================================");
 
         trans2D.lPos = new Vector3(initialPos.x + offset.x, initialPos.y + offset.y, 0.0f);
 

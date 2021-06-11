@@ -8,7 +8,6 @@ public class SkytrooperHitCollider : DiamondComponent
 
 	public void Awake()
     {
-		//Debug.Log("Timer Awake");
 		destroyTimer = destroyTime;
     }
 

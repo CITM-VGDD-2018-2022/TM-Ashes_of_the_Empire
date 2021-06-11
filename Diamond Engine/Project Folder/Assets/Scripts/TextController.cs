@@ -151,8 +151,6 @@ public class TextController : DiamondComponent
 
         if (startMenu == true && dialog != null && list_of_dialogs != null && dialog_index >= 0)
         {
-            //Debug.Log(dialog_index.ToString());
-
             if (gui != null)
             {
                 gui.Enable(false);
@@ -167,8 +165,6 @@ public class TextController : DiamondComponent
         }
         else if (finished == true)
         {
-            //Debug.Log(finished.ToString());
-
             startMenu = true;
             finished = false;
         }
@@ -176,7 +172,6 @@ public class TextController : DiamondComponent
 
     private void TurnOffImage(DialogImages lastImg)
     {
-        //Debug.Log(lastImg.ToString());
         switch (lastImg)
         {
             case DialogImages.IMG_MANDO_SERIOUS:
@@ -273,7 +268,6 @@ public class TextController : DiamondComponent
 
     private void TurnOnImage(DialogImages newImg)
     {
-        //Debug.Log(newImg.ToString());
         switch (newImg)
         {
             case DialogImages.IMG_MANDO_SERIOUS:

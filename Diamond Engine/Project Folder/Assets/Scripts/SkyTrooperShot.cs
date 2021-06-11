@@ -185,15 +185,11 @@ public class SkyTrooperShot : DiamondComponent
         {
 			if (targetPosition != null && Mathf.Distance(targetPosition, gameObject.transform.globalPosition) < 1.0f)
             {
-				//Debug.Log("SKYTROOPER BULLET ON TARGET POSITION");
 				if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, targetPosition) < damageRange)
-				{
-					//Debug.Log("SKYTROOPER BULLET IN DAMAGE RANGE");
-					
+				{		
 					if (Core.instance != null)
                     {
 						Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
-						//Debug.Log("Damage: " + damage.ToString());
 						damagedPlayer = true;
 					}
 				}
