@@ -62,7 +62,7 @@ public class CinematicManager : DiamondComponent
             listSequences[4].onStartSequence = () => { Audio.PlayAudio(gameObject, "Play_Razor_Motor"); };
             listSequences[6].onStartSequence = () =>
             {
-                Input.PlayHaptic(0.3f, 500);
+                Input.PlayHaptic(0.3f, 800);
                 Audio.StopOneAudio(gameObject, "Play_Razor_Motor");
                 Audio.PlayAudio(gameObject, "Play_Razor_Leaving");
             };
