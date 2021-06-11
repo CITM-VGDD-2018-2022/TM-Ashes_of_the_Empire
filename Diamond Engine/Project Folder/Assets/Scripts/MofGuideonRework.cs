@@ -213,9 +213,11 @@ public class MofGuideonRework : Entity
 
     //Melee combo
     private const float LAST_FRAME_CONST = 0.05f;
-    public float comboChargeDuration = 0.5f;
+    public float comboChargeDuration_MC1 = 0.5f;
+    public float comboChargeDuration_MC4 = 0.5f;
     private float comboChargeTimer = 0.0f;
-    private float chargeComboSpdMult = 1f;
+    private float chargeComboSpdMult_MC1 = 1f;
+    private float chargeComboSpdMult_MC4 = 1f;
 
     public float comboDirectionTime = 0.3f;
     private float comboDirectionTimer = 0.0f;
@@ -404,7 +406,8 @@ public class MofGuideonRework : Entity
         meleeHit5SwingTime = meleeHit5Duration * (1 / meleeHit5SpdMult);
         meleeHit6SwingTime = meleeHit6Duration * (1 / meleeHit6SpdMult);
 
-        chargeComboSpdMult = Animator.GetAnimationDuration(gameObject, "MG_Swing") / comboChargeDuration;
+        chargeComboSpdMult_MC1 = Animator.GetAnimationDuration(gameObject, "MG_Swing") / comboChargeDuration_MC1;
+        chargeComboSpdMult_MC4 = Animator.GetAnimationDuration(gameObject, "MG_Swing") / comboChargeDuration_MC4;
 
         chaseFootStepTimeLeft_P1 = ANIMATION_MS_CONST * chaseFootStepTimeLeft_P1Frames;
         chaseFootStepTimeRight_P1 = ANIMATION_MS_CONST * chaseFootStepTimeRight_P1Frames;
@@ -1806,14 +1809,14 @@ public class MofGuideonRework : Entity
     #region MELEE_COMBO_CHARGE
     private void StartMeleeCombo1Charge()
     {
-        comboChargeTimer = comboChargeDuration;
+        comboChargeTimer = comboChargeDuration_MC1;
         comboDirectionTimer = comboDirectionTime;
 
-        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
+        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult_MC1);
         if (saber != null)
         {
             ActivateSaber();
-            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
+            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult_MC1);
 
             if (saberMaterial != null)
             {
@@ -1826,14 +1829,14 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
 
-        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC1);
     }
 
     private void UpdateMeleeCombo1Charge()
     {
         if (saberMaterial != null)
         {
-            float shineValue = comboChargeTimer / comboChargeDuration;
+            float shineValue = comboChargeTimer / comboChargeDuration_MC1;
 
             saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
@@ -1863,7 +1866,7 @@ public class MofGuideonRework : Entity
         }
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC1);
     }
 
     private void EndMeleeCombo1Charge()
@@ -1875,14 +1878,14 @@ public class MofGuideonRework : Entity
 
     private void StartMeleeCombo4Charge()
     {
-        comboChargeTimer = comboChargeDuration;
+        comboChargeTimer = comboChargeDuration_MC4;
         comboDirectionTimer = comboDirectionTime;
 
-        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult);
+        Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult_MC4);
         if (saber != null)
         {
             ActivateSaber();
-            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult);
+            Animator.Play(saber, "MG_Swing", speedMult * chargeComboSpdMult_MC4);
 
             if (saberMaterial != null)
             {
@@ -1895,14 +1898,14 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
 
-        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC4);
     }
 
     private void UpdateMeleeCombo4Charge()
     {
         if (saberMaterial != null)
         {
-            float shineValue = comboChargeTimer / comboChargeDuration;
+            float shineValue = comboChargeTimer / comboChargeDuration_MC4;
 
             saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
@@ -1932,7 +1935,7 @@ public class MofGuideonRework : Entity
         }
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
-        UpdateAnimationSpd(speedMult * chargeComboSpdMult);
+        UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC4);
     }
 
     private void EndMeleeCombo4Charge()
@@ -2595,7 +2598,7 @@ public class MofGuideonRework : Entity
 
     private void StartBurstCharge()
     {
-        preBurstChargeTimer = comboChargeDuration;
+        preBurstChargeTimer = comboChargeDuration_MC1;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
@@ -2620,7 +2623,7 @@ public class MofGuideonRework : Entity
     {
         if (saberMaterial != null)
         {
-            float shineValue = preBurstChargeTimer / comboChargeDuration;
+            float shineValue = preBurstChargeTimer / comboChargeDuration_MC1;
 
             saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
@@ -2840,7 +2843,7 @@ public class MofGuideonRework : Entity
     //Lightning dash charge
     private void StartLightningDashCharge()
     {
-        lightningDashChargeDurationTimer = comboChargeDuration;
+        lightningDashChargeDurationTimer = comboChargeDuration_MC1;
         lightningDashDirectionTimer = lightningDashDirectionTime;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
@@ -2867,7 +2870,7 @@ public class MofGuideonRework : Entity
     {
         if (saberMaterial != null)
         {
-            float shineValue = lightningDashChargeDurationTimer / comboChargeDuration;
+            float shineValue = lightningDashChargeDurationTimer / comboChargeDuration_MC1;
 
             saberMaterial.SetFloatUniform("shineColorValue", shineValue);
         }
