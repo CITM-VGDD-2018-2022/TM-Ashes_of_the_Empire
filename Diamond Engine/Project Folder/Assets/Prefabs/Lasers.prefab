@@ -13,15 +13,15 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                16.194341659545898,
-                2.8315050712990342e-06,
-                -0.10573834180831909
+                -13.280391693115234,
+                -4.3239998817443848,
+                3.5349917411804199
             ],
             "Rotation": [
-                -0.00010094048047903925,
-                0.70717555284500122,
-                0.00010073186422232538,
-                0.70703804492950439
+                6.1817239327410789e-08,
+                -0.70722883939743042,
+                6.1817239327410789e-08,
+                -0.70698469877243042
             ],
             "Scale": [
                 1,
@@ -125,7 +125,7 @@
                         1
                     ],
                     "stencilEmission": 0.89999997615814209,
-                    "doNotDrawStencil": true,
+                    "doNotDrawStencil": false,
                     "drawShadows": true
                 },
                 {
@@ -135,6 +135,14 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 26,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1540644281.mat",
+                    "MaterialUID": 1540644281
                 }
             ]
         }
