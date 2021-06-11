@@ -50,6 +50,12 @@ public class CinematicManager : DiamondComponent
         AddSequence(sequence10);
         AddSequence(sequence11);
 
+        //Maping actions
+        if(listSequences.Count > 0)
+        {
+            listSequences[1].onStartSequence = () => { Audio.PlayAudio(gameObject, "Play_Razor_Appearing"); };
+        }
+
         //Start first sequence
         if (listSequences.Count > 0)
         {

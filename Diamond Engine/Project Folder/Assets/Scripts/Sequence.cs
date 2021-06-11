@@ -3,7 +3,7 @@ using DiamondEngine;
 
 public class Sequence : DiamondComponent
 {
-    public Action startNextSequence;
+    public Action onStartSequence;
     public Action onEndSequence;
     public Sequence numSequence;
     public float sequenceTime;
@@ -104,6 +104,7 @@ public class Sequence : DiamondComponent
                         CinematicManager.instance.StopAllSequences();
                     }
                     nextSequenceToStart.GetComponent<Sequence>().StartRunning();
+                    nextSequenceToStart.GetComponent<Sequence>().onStartSequence?.Invoke();
                 }
             }
         }
