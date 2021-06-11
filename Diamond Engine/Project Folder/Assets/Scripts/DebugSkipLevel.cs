@@ -5,7 +5,6 @@ public class DebugSkipLevel : DiamondComponent
 {
     public void OnExecuteButton()
     {
-        Debug.Log("Skip level");
         //RoomSwitch.SwitchToLevel2();
         DebugOptionsHolder.goToNextLevel = true;
     }

@@ -9,12 +9,10 @@ public class DebugGodmode : DiamondComponent
         if(active)
         {
             DebugOptionsHolder.godModeActive = true;
-            Debug.Log("GOD MODE ACTIVE");
         }
         else
         {
             DebugOptionsHolder.godModeActive = false;
-            Debug.Log("GOD MODE DEACTIVATED");
         }
     }
 

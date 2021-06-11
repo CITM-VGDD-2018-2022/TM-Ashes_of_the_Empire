@@ -8,7 +8,6 @@ public class DebugReturn : DiamondComponent
 
     public void OnExecuteButton()
     {
-        Debug.Log("Deleting debug menu");
         Time.ResumeGame();
 
         if (window != null)

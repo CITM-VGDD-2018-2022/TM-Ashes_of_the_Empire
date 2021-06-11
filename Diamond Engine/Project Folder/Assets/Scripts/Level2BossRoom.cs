@@ -16,7 +16,6 @@ public class Level2BossRoom : DiamondComponent
         columns.Add(column04);
         columns.Add(column05);
         columns.Add(column06);
-        Debug.Log("Position: " + column01.transform.globalPosition.ToString());
     }
 
 }

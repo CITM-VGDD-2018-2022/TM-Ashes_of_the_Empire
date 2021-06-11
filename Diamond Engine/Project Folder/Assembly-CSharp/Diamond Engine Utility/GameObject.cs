@@ -23,9 +23,6 @@ namespace DiamondEngine
 
             transform = new Transform();
             transform.pointer = transPTR;
-            //Debug.Log(transform.type.ToString());
-            //Debug.Log(ptr.ToString());
-            //Debug.Log("Created: " + UID.ToString());
         }
 
         

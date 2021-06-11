@@ -19,7 +19,6 @@ public class GroguFollowPoints : DiamondComponent
     {
         if (triggeredGameObject.CompareTag("Untagged"))
         {
-            //Debug.Log("Colliding with wall");
             blocked = !blocked;
         }
     }

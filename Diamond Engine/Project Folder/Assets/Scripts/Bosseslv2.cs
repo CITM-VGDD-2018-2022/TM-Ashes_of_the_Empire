@@ -135,7 +135,6 @@ public class Bosseslv2 : Entity
 
     public virtual void Awake()
     {
-        Debug.Log("Health 2 Wampa " + healthPoints.ToString());
         maxHealthPoints = healthPoints;
         jumpOnce = true;
 
@@ -143,7 +142,6 @@ public class Bosseslv2 : Entity
         {
             startBounceRushTime = Animator.GetAnimationDuration(gameObject, "Skel_RushStart") - 0.016f;
             chargeTime = Animator.GetAnimationDuration(gameObject, "Skel_Jump_P1") - 0.05f;
-            Debug.Log("Rush Start: " + startBounceRushTime.ToString());
             companion = InternalCalls.FindObjectWithName("WampaBoss");
             presentationTime = 2 * (Animator.GetAnimationDuration(gameObject, "Skel_Roar") - 0.016f);
         }
@@ -184,7 +182,6 @@ public class Bosseslv2 : Entity
     #region PROJECTILE
     public void StartProjectile()
     {
-        Debug.Log("Starting Throwing Projectile");
         catchProjectileTimer = 0.7f;
         shootingTimer = shootingTime;
         firstShot = true;
@@ -267,7 +264,6 @@ public class Bosseslv2 : Entity
                 }
             }
         }
-        if (projectilePoint == null) Debug.Log("Prohjectile null");
 
         UpdateAnimationSpd(speedMult);
     }
@@ -288,7 +284,6 @@ public class Bosseslv2 : Entity
         wampaRushCharged = false;
         wampaRushChargeCounter = 0.0f;
         fastChasingTimer = fastChasingTime;
-        Debug.Log("Fast Rush");
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
 
@@ -319,7 +314,6 @@ public class Bosseslv2 : Entity
             agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
             LookAt(agent.GetDestination());
             agent.MoveToCalculatedPos(fastRushSpeed * speedMult);
-            //Debug.Log("Rush");
 
             UpdateAnimationSpd(speedMult);
             if (gameObject.CompareTag("Skel") && rushOnce)
@@ -346,7 +340,6 @@ public class Bosseslv2 : Entity
     public void StartSlowRush()
     {
         slowChasingTimer = slowChasingTime;
-        Debug.Log("Slow Rush");
         Animator.Play(gameObject, "WP_Rush", speedMult);
         UpdateAnimationSpd(speedMult);
         if (gameObject.CompareTag("Wampa"))
@@ -356,7 +349,6 @@ public class Bosseslv2 : Entity
     }
     public void UpdateSlowRush()
     {
-        //Debug.Log("Slow Rush");
         agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(slowRushSpeed * speedMult);
@@ -488,7 +480,6 @@ public class Bosseslv2 : Entity
 
     public void EndBounceRush()
     {
-        Debug.Log("END BOUNCE RUSH");
         resting = true;
         restingTimer = restingTime;
 
@@ -510,7 +501,6 @@ public class Bosseslv2 : Entity
 
     public void StartJumpSlam()
     {
-        Debug.Log("Starting Jumping");
         jumpslam = JUMPSLAM.CHARGE;
         jumpslamTimer = chargeTime;
         totalJumpSlamTimer = totalJumpSlamTime;
@@ -524,11 +514,10 @@ public class Bosseslv2 : Entity
     public void UpdateJumpSlam()
     {
         LookAt(Core.instance.gameObject.transform.globalPosition);
-        //Debug.Log("Jump Slam");
+
         switch (jumpslam)
         {
             case JUMPSLAM.CHARGE:
-                //Debug.Log("Jump Slam: Charge");
                 if (jumpslamTimer > 0)
                 {
                     if (jumpOnce)
@@ -568,7 +557,6 @@ public class Bosseslv2 : Entity
                 break;
 
             case JUMPSLAM.UP:
-                //Debug.Log("Jump Slam: Up");
                 if (jumpslamTimer > 0)
                 {
                     gameObject.transform.localPosition += Vector3.up * 50f * myDeltaTime;
@@ -598,7 +586,6 @@ public class Bosseslv2 : Entity
                 break;
 
             case JUMPSLAM.FALLING:
-                //Debug.Log("Jump Slam: Falling");
                 if (jumpslamTimer > 0)
                 {
                     MoveToPosition(targetPos, speed * 10);
@@ -630,7 +617,6 @@ public class Bosseslv2 : Entity
                 break;
 
             case JUMPSLAM.RECOVERY:
-                //Debug.Log("Jump Slam: Recovery");
                 if (jumpslamTimer > 0)
                 {
                     jumpslamTimer -= myDeltaTime;
@@ -644,7 +630,6 @@ public class Bosseslv2 : Entity
 
             case JUMPSLAM.NONE:
             default:
-                Debug.Log("Jump slam motion ended");
                 break;
         }
 
@@ -708,7 +693,6 @@ public class Bosseslv2 : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, Core.instance.gameObject.transform.globalPosition);
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(speed * speedMult);
-        //Debug.Log("Following player");
 
         UpdateAnimationSpd(speedMult);
     }
@@ -758,7 +742,6 @@ public class Bosseslv2 : Entity
 
         LookAt(agent.GetDestination());
         agent.MoveToCalculatedPos(speed * speedMult);
-        //Debug.Log("Following player");
 
         UpdateAnimationSpd(speedMult);
     }
@@ -793,7 +776,6 @@ public class Bosseslv2 : Entity
             {
                 Audio.PlayAudio(gameObject, "Play_Victory_Music");
             }
-            Debug.Log("BOOLEAN IS TRUE");
         }
         else if (gameObject.CompareTag("Wampa"))
         {
@@ -811,8 +793,6 @@ public class Bosseslv2 : Entity
         {
             jumpPositionIndicator.Enable(false);
         }
-
-        Debug.Log("Dying");
     }
     public void UpdateDie()
     {
@@ -825,14 +805,12 @@ public class Bosseslv2 : Entity
                 EndDie();
             }
         }
-        //Debug.Log("Dying");
 
         UpdateAnimationSpd(speedMult);
     }
 
     public void EndDie()
     {
-        Debug.Log("DEAD");
         limboHealth = 0.0f;
         SetLifebarToZero();
 
@@ -878,12 +856,10 @@ public class Bosseslv2 : Entity
                 Input.PlayHaptic(0.9f, 800);
             }
         }
-
-        Debug.Log("Start Presentation");
     }
+
     public void UpdatePresentation()
     {
-        Debug.Log("Presentation");
         LookAt(Core.instance.gameObject.transform.globalPosition);
         UpdateAnimationSpd(speedMult);
     }
@@ -1076,8 +1052,6 @@ public class Bosseslv2 : Entity
             healthbarMaterial.SetFloatUniform("length_used", 0.0f);
             healthbarMaterial.SetFloatUniform("limbo", 0.0f);
         }
-        else
-            Debug.Log("Boss Bar component was null!!");
     }
 
     /*    public void SetJumpValues(float charge, float up, float down, float recovery)

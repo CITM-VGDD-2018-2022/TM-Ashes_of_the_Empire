@@ -46,7 +46,6 @@ public class HubRoomSwitch : DiamondComponent
             Audio.SetState("Player_State", "Alive");
             Audio.SetState("Game_State", "NONE");
             Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Exploring");
-            Debug.Log("Exploring");
         }
 
         if (EnvironmentSourceLocate.instance != null)

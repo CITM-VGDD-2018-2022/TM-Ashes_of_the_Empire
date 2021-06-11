@@ -116,7 +116,6 @@ public class FloatingVehicles : DiamondComponent
                 maxRotation = 0.0f;
                 break;
             default:
-                Debug.Log("Vehicle properties have not been setup correctly");
                 break;            
         }        
     }

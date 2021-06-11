@@ -14,7 +14,6 @@ public class AtackBosslv2 : DiamondComponent
             PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
             {
-                Debug.Log("Just confirming that damage is " + damage.ToString());
                 health.TakeDamage((int)damage);
                 active = false;
 

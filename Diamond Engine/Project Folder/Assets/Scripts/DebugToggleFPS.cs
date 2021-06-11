@@ -8,12 +8,10 @@ public class DebugToggleFPS : DiamondComponent
         if (active)
         {
             DebugOptionsHolder.showFPS = true;
-            Debug.Log("FPS SHOW ACTIVE");
         }
         else
         {
             DebugOptionsHolder.showFPS = false;
-            Debug.Log("FPS SHOW DEACTIVATED");
         }
     }
 }

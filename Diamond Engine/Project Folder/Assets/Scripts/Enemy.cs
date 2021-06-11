@@ -46,7 +46,6 @@ public class Enemy : Entity
 		}
 		else if (RoomSwitch.currentLevelIndicator == RoomSwitch.LEVELS.THREE)
 		{
-			Debug.Log("Enemy lvl 3 added statuses");
 			AddStatus(STATUS_TYPE.ACCELERATED, STATUS_APPLY_TYPE.SUBSTITUTE, 0.15f, 1f, true);
 			AddStatus(STATUS_TYPE.ENEMY_DAMAGE_UP, STATUS_APPLY_TYPE.SUBSTITUTE, 0.2f, 1f, true);
 			AddStatus(STATUS_TYPE.ENEMY_HP_UP, STATUS_APPLY_TYPE.SUBSTITUTE, 0.5f, 1f, true);
@@ -86,8 +85,6 @@ public class Enemy : Entity
 		Vector3 direction = pointToLook - gameObject.transform.globalPosition;
 		direction = direction.normalized;
 		float angle = (float)Math.Atan2(direction.x, direction.z);
-
-		//Debug.Log("Desired angle: " + (angle * Mathf.Rad2Deg).ToString());
 
 		if (Math.Abs(angle * Mathf.Rad2Deg) < 1.0f)
 			return;

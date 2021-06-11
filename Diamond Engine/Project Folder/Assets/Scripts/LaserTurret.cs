@@ -91,7 +91,6 @@ public class LaserTurret : Enemy
 
         if (spawnparticles != null)
         {
-            // Debug.Log("PLAY SPAWN!!!");
             spawnparticles.Play();
         }
 
@@ -185,7 +184,6 @@ public class LaserTurret : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("CORE ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -238,7 +236,6 @@ public class LaserTurret : Enemy
                     break;
 
                 default:
-                    Debug.Log("NEED TO ADD STATE TO CORE SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -264,7 +261,6 @@ public class LaserTurret : Enemy
                 UpdateDie();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO CORE");
                 break;
         }
     }
@@ -272,7 +268,6 @@ public class LaserTurret : Enemy
     #region IDLE
     private void StartIdle()
     {
-        //Debug.Log("TURRET IDLE");
         idleTimer = idleTime;
     }
     #endregion
@@ -280,7 +275,6 @@ public class LaserTurret : Enemy
     #region LOAD
     private void StartLoad()
     {
-        //Debug.Log("TURRET LOAD");
         loadTimer = loadTime;
         Audio.PlayAudio(gameObject, "Play_Turret_Shot_Charge");
     }
@@ -297,7 +291,6 @@ public class LaserTurret : Enemy
     #region SHOOT
     private void StartShoot()
     {
-        //Debug.Log("TURRET SHOOT");
         shotTimer = shotTime;
         Audio.PlayAudio(gameObject, "Play_Turret_Shot");
         Audio.PlayAudio(gameObject, "Play_Turret_Charge");
@@ -354,7 +347,7 @@ public class LaserTurret : Enemy
     private void StartDie()
     {
         EnemyManager.RemoveEnemy(gameObject);
-        //Debug.Log("TURRET DIE");
+
         dieTimer = dieTime;
 
         if (Core.instance != null)
@@ -526,7 +519,6 @@ public class LaserTurret : Enemy
 
     public override void TakeDamage(float damage)
     {
-        Debug.Log("Turret Takes damage");
         float mod = 1f;
         if (Core.instance != null && Core.instance.HasStatus(STATUS_TYPE.GEOTERMAL_MARKER))
         {

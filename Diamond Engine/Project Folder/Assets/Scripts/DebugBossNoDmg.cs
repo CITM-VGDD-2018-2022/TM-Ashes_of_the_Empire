@@ -8,12 +8,10 @@ public class DebugBossNoDmg : DiamondComponent
         if (active)
         {
             DebugOptionsHolder.bossDmg = true;
-            Debug.Log("BOSS NO DAMAGE ACTIVE");
         }
         else
         {
             DebugOptionsHolder.bossDmg = false;
-            Debug.Log("BOSS NO DAMAGE DEACTIVATED");
         }
     }
 

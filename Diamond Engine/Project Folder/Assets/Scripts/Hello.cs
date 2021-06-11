@@ -8,10 +8,6 @@ public class Hello : DiamondComponent
 
     public void OnExecuteCheckbox(bool checkbox_active)
     {
-        if(checkbox_active)
-            Debug.Log("Checkbox activated");
-        else
-            Debug.Log("Checkbox disactivated");
     }
     public void OnExecuteButton()
     {
@@ -19,7 +15,6 @@ public class Hello : DiamondComponent
     }
     public void Update()
 	{
-		//Debug.Log(helloWorld.ToString());
 	}
 
 

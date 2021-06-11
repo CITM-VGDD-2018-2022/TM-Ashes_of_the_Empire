@@ -55,7 +55,6 @@ public class GroguFPManager : DiamondComponent
 				if (followPoints[j].GetComponent<GroguFollowPoints>().IsBlocked() == false)
                 {
 					found = true;
-					//Debug.Log("FP manager found");
 
 					if (ret != Vector3.zero || ret.Distance(pos) > followPoints[j].GetComponent<Transform>().globalPosition.Distance(pos))
 						ret = followPoints[j].transform.globalPosition;

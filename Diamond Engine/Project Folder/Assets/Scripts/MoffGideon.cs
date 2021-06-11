@@ -260,9 +260,6 @@ public class MoffGideon : Entity
 
         EnemyManager.AddEnemy(gameObject);
 
-        if (agent == null)
-            Debug.Log("Null agent, add a NavMeshAgent Component");
-
         //comboTime = Animator.GetAnimationDuration(gameObject, "MG_Slash") - 0.016f;
         presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose") - 0.016f;
         changingStateTime = Animator.GetAnimationDuration(gameObject, "MG_Rising") - 0.016f;
@@ -347,7 +344,6 @@ public class MoffGideon : Entity
 
             if (enemySkillTimer <= 0)
             {
-                Debug.Log("Able to spawn enemies again!");
                 ableToSpawnEnemies = true;
             }
         }

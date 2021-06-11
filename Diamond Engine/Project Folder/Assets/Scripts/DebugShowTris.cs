@@ -8,12 +8,10 @@ public class DebugShowTris : DiamondComponent
         if (active)
         {
             DebugOptionsHolder.showTris = true;
-            Debug.Log("SHOW TRIS ACTIVE");
         }
         else
         {
             DebugOptionsHolder.showTris = false;
-            Debug.Log("SHOW TRIS DEACTIVATED");
         }
     }
 }

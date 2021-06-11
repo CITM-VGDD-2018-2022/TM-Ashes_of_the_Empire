@@ -38,11 +38,7 @@ public class AreaLightOscilate : DiamondComponent
 	{
 		light = gameObject.GetComponent<AreaLight>();
 
-		if (light == null)
-		{
-			Debug.Log("Need to add area light component to gameObject: " + gameObject.Name);
-		}
-		else
+		if (light != null)
 		{
 			light.SetIntensity(initialIntensity);
 			light.SetFadeDistance(initialFadeDistance);

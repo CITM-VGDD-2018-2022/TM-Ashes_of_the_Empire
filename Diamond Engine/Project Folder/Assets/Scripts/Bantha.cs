@@ -213,7 +213,6 @@ public class Bantha : Enemy
             if (agent == null)
             {
                 inputsList.Add(INPUT.IN_IDLE);
-                //Debug.Log("My agent is null :)");
             }
             if (Core.instance != null)
             {
@@ -234,7 +233,6 @@ public class Bantha : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("BANTHA ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -418,7 +416,6 @@ public class Bantha : Enemy
                     }
                     break;
                 default:
-                    Debug.Log("NEED TO ADD STATE TO BANTHA SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -455,7 +452,6 @@ public class Bantha : Enemy
                 UpdatePush();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO BANTHA");
                 break;
         }
     }
@@ -750,7 +746,6 @@ public class Bantha : Enemy
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
-            Debug.Log("Bantha charged bullet detection");
             Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
             if (bullet != null)
@@ -762,8 +757,6 @@ public class Bantha : Enemy
                     if (sniperParticles != null)
                         sniperParticles.Play();
                 }
-
-                Debug.Log("Bantha charged bullet scripts detect");
 
                 if (currentState != STATE.DIE)
                 {
@@ -992,7 +985,6 @@ public class Bantha : Enemy
         {
             straightPath = false;
         }
-        //Debug.Log("StraightPath: " + straightPath);
     }
 
     private void UpdateAnimationSpd(float newSpd)

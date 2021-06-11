@@ -22,7 +22,6 @@ public class EnableWithPause : DiamondComponent
     }
 	public void OnExecuteButton()
 	{
-		Debug.Log("EXECUTE!!!!!!!!!!!!!!!!!");
 		if (disable != null)
 		{
 			disable.EnableNav(false);

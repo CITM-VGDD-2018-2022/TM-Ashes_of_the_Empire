@@ -47,7 +47,6 @@ public class NPCSpawnController : DiamondComponent
 
     public void Awake()
     {
-        Debug.Log("Awake");
         GenerateCharactersList();
         GenerateSpawnPointsList();
         SpawnNPCs();
@@ -59,7 +58,6 @@ public class NPCSpawnController : DiamondComponent
         //Generate a prefab on those coordinates
         if (charactersUID.Count > spawnPoints.Count)
         {
-            Debug.Log("Error. There are more NPCs than spawn points available");
             return;
         }
 
@@ -80,7 +78,6 @@ public class NPCSpawnController : DiamondComponent
             alreadyAppeared[randomIndex]++;
 
             //We update the coordinates of the already existing character
-            Debug.Log(spawnPoints[randomIndex].Item3.ToString());
             SpawnUnit(charactersUID[i], GetCoordinatesFromSpawnPoint(randomIndex), GetRotationFromSpawnPoint(randomIndex), spawnPoints[randomIndex].Item3);
         }
     }
@@ -93,8 +90,7 @@ public class NPCSpawnController : DiamondComponent
         if (prefabUID == GroguUID) { pos.y += 1.3f; }
 
         GameObject unit = InternalCalls.CreatePrefab(prefabPath, pos, rot, new Vector3(1, 1, 1));
-        //Animator animatorComponent = unit.GetComponent<Animator>();
-        Debug.Log("Character: " + prefabUID + " , Animation: " + animation);
+
         switch (prefabUID)
         {
             case GroguUID:

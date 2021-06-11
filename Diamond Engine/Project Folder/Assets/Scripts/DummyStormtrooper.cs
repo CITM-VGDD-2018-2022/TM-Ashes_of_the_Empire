@@ -76,8 +76,6 @@ public class DummyStormtrooper : Enemy
     private bool start = true;
     public void Awake()
     {
-        Debug.Log("Stormtrooper Awake");
-
         InitEntity(ENTITY_TYPE.STROMTROOPER);
 
         currentState = STATE.IDLE;
@@ -112,8 +110,6 @@ public class DummyStormtrooper : Enemy
             EnemyManager.AddEnemy(this.gameObject);
             start = false;
         }
-        //Debug.Log("Current State: " + currentState.ToString());
-
 
         myDeltaTime = Time.deltaTime * speedMult;
         UpdateStatuses();
@@ -154,7 +150,6 @@ public class DummyStormtrooper : Enemy
                 if (Core.instance != null && currentState != STATE.SHOOT)
                 {
                     inputsList.Add(INPUT.IN_PLAYER_IN_RANGE);
-                    Debug.Log("Player in range");
                     LookAt(Core.instance.gameObject.transform.globalPosition);
                 }
             }
@@ -171,7 +166,6 @@ public class DummyStormtrooper : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("CORE ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -230,7 +224,6 @@ public class DummyStormtrooper : Enemy
                     }
                     break;
                 default:
-                    Debug.Log("NEED TO ADD STATE TO DUMMY STORMTROOPER SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -257,7 +250,6 @@ public class DummyStormtrooper : Enemy
                 UpdatePush();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO CORE");
                 break;
         }
     }
@@ -283,7 +275,6 @@ public class DummyStormtrooper : Enemy
     #region SHOOT
     private void StartShoot()
     {
-        //Debug.Log("Start Shoot");
         statesTimer = timeBewteenStates;
         Animator.Play(gameObject, "ST_Idle", speedMult);
         if (blaster != null)
@@ -345,7 +336,6 @@ public class DummyStormtrooper : Enemy
                     else
                     {
                         statesTimer = timeBewteenStates;
-                        //Debug.Log("Ending 2 time shot");
                         inputsList.Add(INPUT.IN_IDLE);
                         idleTimer = idleTime;
                     }
