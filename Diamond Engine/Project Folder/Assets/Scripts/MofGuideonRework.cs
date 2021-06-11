@@ -664,9 +664,10 @@ public class MofGuideonRework : Entity
         if (currentState == STATE.LIGHTNING_DASH && lightningDashDuration > 0.0f)
         {
             lightningDashDuration -= myDeltaTime;
-            if (Mathf.Distance(gameObject.transform.globalPosition, targetPosition) <= agent.stoppingDistance || lightningDashDuration < 0.0f)
+            if (Mathf.Distance(gameObject.transform.globalPosition, targetPosition) <= agent.stoppingDistance || lightningDashDuration < 0.0f || stopDashing == true)
             {
                 inputsList.Add(INPUT.IN_LIGHTNING_DASH_TIRED);
+                stopDashing = false;
             }
         }
 
