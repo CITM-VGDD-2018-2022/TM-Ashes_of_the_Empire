@@ -1,19 +1,19 @@
 {
     "NavMesh": 93202564,
     "EditorCameraPosition": [
-        -3.4153776168823242,
-        3.8756537437438965,
-        -0.67651212215423584
+        -3.399261474609375,
+        1.9300127029418945,
+        -8.3588752746582031
     ],
     "EditorCameraZ": [
-        0.6412208080291748,
-        -0.20213782787322998,
-        0.74025416374206543
+        0.57214313745498657,
+        -0.00283051747828722,
+        0.82014894485473633
     ],
     "EditorCameraY": [
-        0.13240256905555725,
-        0.97935706377029419,
-        0.15273919701576233
+        0.0016856333240866661,
+        0.99999600648880005,
+        0.0022752974182367325
     ],
     "SkyboxPath0": "Library\/Textures\/483487888.dds",
     "SkyboxPath1": "Library\/Textures\/1874848602.dds",
@@ -109,7 +109,7 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 18.225000381469727,
+                    "vFOV": 15.949999809265137,
                     "hFOV": 29.725000381469727,
                     "culling": true,
                     "HDR": true,
@@ -36342,6 +36342,92 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/498186070.mat",
                     "MaterialUID": 498186070
+                }
+            ]
+        },
+        {
+            "name": "SkytrooperBullet",
+            "tag": "SK_Bullet",
+            "layer": "Default",
+            "Active": true,
+            "UID": 89104508,
+            "ParentUID": 8413079,
+            "PrefabReference": 337982780,
+            "PrefabID": 1662408971,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                1.2444491386413574,
+                1.9409012794494629,
+                -3.6789638996124268
+            ],
+            "Rotation": [
+                1.6874603936400945e-09,
+                0.0087264757603406906,
+                -7.7927420072398945e-10,
+                0.99996191263198853
+            ],
+            "Scale": [
+                2.5,
+                2.5,
+                2.5
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Explosion",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1612178932,
+                    "ParentUID": 89104508,
+                    "PrefabID": 0,
+                    "PrefabReference": 357910281,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.80562067031860352,
+                        0,
+                        -0.70707082748413086
+                    ],
+                    "Rotation": [
+                        6.8833827526759706e-15,
+                        5.7741999626159668e-08,
+                        -3.4017927363905187e-15,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Wave",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1129130670,
+                    "ParentUID": 89104508,
+                    "PrefabID": 0,
+                    "PrefabReference": 818917360,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.80562090873718262,
+                        0,
+                        -0.70707082748413086
+                    ],
+                    "Rotation": [
+                        6.7723604502134549e-15,
+                        5.6810677051544189e-08,
+                        -3.3445470734415209e-15,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         }
