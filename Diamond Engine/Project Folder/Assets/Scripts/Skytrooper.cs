@@ -462,7 +462,7 @@ public class Skytrooper : Enemy
 
         targetPosition = CalculateRandomInRangePosition();
 
-        if(!standStill)
+        if (!standStill)
         {
             Animator.Play(gameObject, "SK_Dash", speedMult);
             Animator.Play(blaster, "SK_Dash", speedMult);
@@ -473,7 +473,7 @@ public class Skytrooper : Enemy
     }
     private void UpdateDash()
     {
-        if(!standStill)
+        if (!standStill)
         {
             LookAt(targetPosition);
             MoveToPosition(targetPosition, dashSpeed * speedMult);
@@ -954,8 +954,8 @@ public class Skytrooper : Enemy
         GameObject rightObject;
 
         Random randomAngle = new Random();
-        float leftAngle  = -50 + randomAngle.Next(-5, 5);
-        float rightAngle =  50 + randomAngle.Next(-5, 5);
+        float leftAngle = -50 + randomAngle.Next(-5, 5);
+        float rightAngle = 50 + randomAngle.Next(-5, 5);
 
         Vector3 centerDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
 
@@ -1012,7 +1012,7 @@ public class Skytrooper : Enemy
         GameObject rightObject;
 
         Random randomAngle = new Random();
-        float leftAngle  = 230 + randomAngle.Next(-5, 5);
+        float leftAngle = 230 + randomAngle.Next(-5, 5);
         float rightAngle = 130 + randomAngle.Next(-5, 5);
 
         Vector3 centerDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
@@ -1026,10 +1026,16 @@ public class Skytrooper : Enemy
                 rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
                 if (rightObject == null)
+                {
+                    Debug.Log("Right 1");
                     return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                }
             }
             else
+            {
+                Debug.Log("Left 1");
                 return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
         }
         else //First check right
         {
@@ -1040,10 +1046,16 @@ public class Skytrooper : Enemy
                 leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
                 if (leftObject == null)
+                {
+                    Debug.Log("Left 2");
                     return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                }
             }
             else
+            {
+                Debug.Log("Right 2");
                 return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
 
         }
 
@@ -1057,7 +1069,20 @@ public class Skytrooper : Enemy
                                        (float)(Math.Sin(angle * Mathf.Deg2RRad) * centerDirection.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * centerDirection.normalized.z));
 
         float hitDistance = 0.0f;
-        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.5f, desiredDirection, dashRange, ref hitDistance);
+        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f, desiredDirection, dashRange, ref hitDistance);
+
+        if (hitObject == null)
+        {
+            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f,
+                                  gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f + desiredDirection * dashRange,
+                                  new Vector3(1.0f, 1.0f, 1.0f));
+        }
+        else
+        {
+            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f,
+                                  gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f + desiredDirection * hitDistance,
+                                  new Vector3(1.0f, 1.0f, 0.0f));
+        }
 
         return hitObject;
     }
