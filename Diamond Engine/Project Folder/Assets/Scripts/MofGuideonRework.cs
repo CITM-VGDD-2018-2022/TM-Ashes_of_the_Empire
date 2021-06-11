@@ -1351,9 +1351,8 @@ public class MofGuideonRework : Entity
                         switch (input)
                         {
                             case INPUT.IN_LIGHTNING_DASH_TIRED_END:
-                                EndLightningDash();
-                                StartChase_P2();
-                                currentState = STATE.CHASE;
+                                EndLightningDashTired();
+                                currentState = STATE.ACTION_SELECT;
                                 break;
 
                             case INPUT.IN_DEAD:
@@ -2871,11 +2870,6 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
-
-        //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
-
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
     }
@@ -2897,17 +2891,16 @@ public class MofGuideonRework : Entity
     //Lightning dash tired
     private void StartLightningDashTired()
     {
-        Debug.Log("Start lightning dash tired");
-
         Audio.StopAudio(gameObject);
 
         lightningDashTiredDurationTimer = lightningDashTiredDuration;
 
-        //TIRED ANIMATION AND AUDIO + STUN PARTICLES
-        Animator.Play(gameObject, "MG_Idle", speedMult);
+        //TIRED ANIMATION
+        Animator.Play(gameObject, "MG_Rising", speedMult);
         if (saber != null)
         {
-            DeActivateSaber();
+            ActivateSaber();
+            Animator.Play(saber, "MG_Rising", speedMult);
         }
         if (gun != null)
         {
