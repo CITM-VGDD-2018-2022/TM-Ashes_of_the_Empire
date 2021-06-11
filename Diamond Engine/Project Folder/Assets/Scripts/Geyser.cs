@@ -48,8 +48,6 @@ public class Geyser : DiamondComponent
         }
 
         doorTrap = gameObject.GetChild("DoorTrap");
-        if (doorTrap == null)
-            Debug.Log("DoorTrap is null");
     }
 
     public void Update()
@@ -172,7 +170,6 @@ public class Geyser : DiamondComponent
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        //Debug.Log("Player In Range");
         if (triggeredGameObject.CompareTag("Player"))
         {
             playerInRange = true;
@@ -181,7 +178,6 @@ public class Geyser : DiamondComponent
 
     public void OnTriggerExit(GameObject triggeredGameObject)
     {
-        //Debug.Log("Player Out of Range");
         if (triggeredGameObject.CompareTag("Player"))
         {
             playerInRange = false;

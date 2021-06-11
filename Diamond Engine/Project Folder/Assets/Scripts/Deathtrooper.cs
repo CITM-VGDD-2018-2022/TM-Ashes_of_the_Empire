@@ -196,7 +196,6 @@ public class Deathtrooper : Enemy
             switch (currentState)
             {
                 case STATE.NONE:
-                    Debug.Log("DEATHTROOPER ERROR STATE");
                     break;
 
                 case STATE.IDLE:
@@ -334,7 +333,6 @@ public class Deathtrooper : Enemy
                     }
                     break;
                 default:
-                    Debug.Log("NEED TO ADD STATE TO DEATHTROOPER SWITCH");
                     break;
             }
             inputsList.RemoveAt(0);
@@ -367,7 +365,6 @@ public class Deathtrooper : Enemy
                 UpdateDie();
                 break;
             default:
-                Debug.Log("NEED TO ADD STATE TO DEATHTROOPER");
                 break;
         }
     }
@@ -375,7 +372,6 @@ public class Deathtrooper : Enemy
     #region IDLE
     private void StartIdle()
     {
-        //Debug.Log("DEATHTROOPER IDLE");
         idleTimer = idleTime;
         Animator.Play(gameObject, "DTH_Idle", speedMult);
         Animator.Play(shotgun, "DTH_Idle", speedMult);
@@ -392,7 +388,6 @@ public class Deathtrooper : Enemy
     #region WANDER
     private void StartWander()
     {
-        //Debug.Log("DEATHTROOPER WANDER");
         agent.CalculateRandomPath(gameObject.transform.globalPosition, wanderRange);
 
         Animator.Play(gameObject, "DTH_Wander", speedMult);
@@ -418,7 +413,6 @@ public class Deathtrooper : Enemy
     #region RUN
     private void StartRun()
     {
-        //Debug.Log("DEATHTROOPER RUN");
         Animator.Play(gameObject, "DTH_Run", speedMult);
         if (shotgun != null)
             Animator.Play(shotgun, "DTH_Run", speedMult);
@@ -443,7 +437,6 @@ public class Deathtrooper : Enemy
     #region SHOOT
     private void StartShoot()
     {
-        //Debug.Log("DEATHTROOPER SHOOT");
         Animator.Play(gameObject, "DTH_Idle", speedMult);
         if (shotgun != null)
             Animator.Play(shotgun, "DTH_Idle", speedMult);
@@ -525,7 +518,6 @@ public class Deathtrooper : Enemy
     }
     private void PlayerDetected()
     {
-        //Debug.Log("SKYTROOPER PLAYER DETECTED");
         Audio.PlayAudio(gameObject, "Play_Deathtrooper_Enemy_Detection");
     }
     #endregion

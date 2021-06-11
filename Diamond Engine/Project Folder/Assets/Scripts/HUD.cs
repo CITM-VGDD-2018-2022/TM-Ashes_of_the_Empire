@@ -133,10 +133,6 @@ public class HUD : DiamondComponent
                 damageScreen1.GetComponent<Material>().SetVectorUniform("damageColor", new Vector3(1.0f, 0.0f, 0.0f));
             }
         }
-        else
-        {
-            Debug.Log("Damage Screen 1 not found");
-        }
     }
 
     public void Update()
@@ -464,8 +460,6 @@ public class HUD : DiamondComponent
         if (amount < 0f)
             amount = -amount;
 
-        Debug.Log("Combo amount substracted on hit: " + amount.ToString());
-
         currComboTime -= amount;
 
         if (currComboTime <= 0.0f)
@@ -677,10 +671,6 @@ public class HUD : DiamondComponent
             float borderAlphaAmmount= Mathf.RemapClamp(maxHPToShowBorder, minHPToShowBorder, 0.0f, 1.0f, hpPercentage);
             damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", lowHPPulsation * 10.0f);
             damageScreen1.GetComponent<Material>().SetFloatUniform("alphaAmmount", borderAlphaAmmount);
-            //Debug.Log("AlphaBorder: " + borderAlphaAmmount.ToString());
-            //Debug.Log("HP Percent : " + hpPercentage.ToString());
-            //Debug.Log("Curr HP: " + PlayerHealth.currHealth.ToString());
-            //Debug.Log("Max HP: " + PlayerHealth.currMaxHealth.ToString());
         }
     }
 
@@ -705,8 +695,6 @@ public class HUD : DiamondComponent
     {
         if (skill_push == null)
             return;
-
-        //Debug.Log("UUUUUUUUUUUUUUUUUUUU: " + alpha.ToString());
 
         skill_push.GetComponent<Material>().SetFloatUniform("alpha", alpha);
     }
@@ -756,8 +744,6 @@ public class HUD : DiamondComponent
         if (Core.instance != null)
             newValue *= Core.instance.OverheatMult;
 
-        //     Debug.Log("Added Heat: " + newValue);
-
         AddPrimaryHeatAmount(newValue);
     }
 
@@ -802,7 +788,6 @@ public class HUD : DiamondComponent
     {
         if (weapon_bar == null)
         {
-            Debug.Log("Weapon heat bar is null!!");
             return;
         }
 

@@ -54,32 +54,22 @@ public class HeavyTrooperParticles : DiamondComponent
             case HEAVYROOPER_PARTICLES.SPEAR:
                 if (sweepParticles != null)
                     sweepParticles.Play();
-                else
-                    Debug.Log("Sweep particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.DASH:
                 if (dashParticles != null)
                     dashParticles.Play();
-                else
-                    Debug.Log("Dash particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.HIT:
                 if (hitParticles != null)
                     hitParticles.Play();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.SNIPER_HIT:
                 if (sniperHitParticle != null)
                     sniperHitParticle.Play();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.GRENADE_HIT:
                 if (grenadeHitParticle != null)
                     grenadeHitParticle.Play();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
         }
     }
@@ -91,32 +81,22 @@ public class HeavyTrooperParticles : DiamondComponent
             case HEAVYROOPER_PARTICLES.SPEAR:
                 if (sweepParticles != null)
                     sweepParticles.Stop();
-                else
-                    Debug.Log("Sweep particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.DASH:
                 if (dashParticles != null)
                     dashParticles.Stop();
-                else
-                    Debug.Log("Dash particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.HIT:
                 if (hitParticles != null)
                     hitParticles.Stop();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.SNIPER_HIT:
                 if (sniperHitParticle != null)
                     sniperHitParticle.Stop();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
             case HEAVYROOPER_PARTICLES.GRENADE_HIT:
                 if (grenadeHitParticle != null)
                     grenadeHitParticle.Stop();
-                else
-                    Debug.Log("Hit particles not found!");
                 break;
         }
     }

@@ -10,13 +10,8 @@ public class DebugAddHP : DiamondComponent
             PlayerHealth hp = Core.instance.gameObject.GetComponent<PlayerHealth>();
             if (hp != null)
             {
-                if (DebugOptionsHolder.godModeActive)
+                if (!DebugOptionsHolder.godModeActive)
                 {
-                    Debug.Log("Cannot heal when in god mode!");
-                }
-                else
-                {
-                    Debug.Log("Healing 20 Hp");
                     hp.TakeDamage(-20);
                 }
             }

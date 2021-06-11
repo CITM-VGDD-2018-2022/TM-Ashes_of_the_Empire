@@ -23,7 +23,6 @@ public class HeavyTrooperSpear : DiamondComponent
 
             if(playerHealth != null  && collider != null && collider.active)
             {
-                //Debug.Log("Player Hit with damage: " + damage);
                 playerHealth.TakeDamage(damage);
                 if (gameObject.CompareTag("Saber"))
                 {

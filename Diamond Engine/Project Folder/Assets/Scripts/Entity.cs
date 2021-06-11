@@ -402,9 +402,6 @@ public class Entity : DiamondComponent
                 }
                 break;
             default:
-                {
-                    Debug.Log("The status apply type is none!");
-                }
                 break;
         }
 

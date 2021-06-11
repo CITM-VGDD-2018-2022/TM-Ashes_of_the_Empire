@@ -121,7 +121,6 @@ public class BabyYoda : DiamondComponent
                 currentForce = totalForce + maxForceMod;
                 if (canPlayParticles)
                 {
-                    Debug.Log("PARTICLES PLAY!!");
                     if (forcePartSys != null)
                         forcePartSys.Play();
                     canPlayParticles = false;
@@ -149,8 +148,6 @@ public class BabyYoda : DiamondComponent
         if (forceParticle == null)
         {
             forceParticle = InternalCalls.FindObjectWithName("ForceParticle");
-            if (forceParticle == null)
-                Debug.Log("Force particle game object not found");
         }
 
         if (forceParticle != null)
@@ -159,8 +156,6 @@ public class BabyYoda : DiamondComponent
         if (forceGaugeFeedback == null)
         {
             forceGaugeFeedback = InternalCalls.FindObjectWithName("ForceFeedback");
-            if (forceGaugeFeedback == null)
-                Debug.Log("Force feedback game object not found");
         }
 
         if (forceGaugeFeedback != null)
@@ -221,12 +216,10 @@ public class BabyYoda : DiamondComponent
             if (flipVertical == true && gameObject.transform.globalPosition.y - pointToFollow.y >= verticalAmplitude)
             {
                 flipVertical = false;
-                //Debug.Log("Flip to down");
             }
             else if (flipVertical == false && pointToFollow.y - gameObject.transform.globalPosition.y >= verticalAmplitude)
             {
                 flipVertical = true;
-                //Debug.Log("Flip to up");
             }
 
         }
@@ -246,8 +239,6 @@ public class BabyYoda : DiamondComponent
 
             if (_hit != null && !_hit.CompareTag("Player"))
             {
-                //Debug.Log("Should avoid");
-
                 Vector3 avoidVector = (rayDirection.normalized * hitDistance) * -1;
                 avoidVector.y = 0.0f;
                 frameIncrement += avoidVector;
@@ -259,57 +250,7 @@ public class BabyYoda : DiamondComponent
         frameIncrement.z = Mathf.Lerp(gameObject.transform.localPosition.z, frameIncrement.z, horizontalSpeed * Time.deltaTime);
 
         gameObject.transform.localPosition = frameIncrement;
-        //if (followPoint != null)
-        //{
-        //    GroguFPManager fpManager = followPoint.GetComponent<GroguFPManager>();
-        //    if (fpManager == null)
-        //    {
-        //        Debug.Log("Need to add Follow points manager to Grogu!");
-        //        return;
-        //    }
-
-        //    Vector3 point = fpManager.GetPointToFollow(gameObject.transform.globalPosition);
-
-        //    if (point != Vector3.zero)
-        //    {
-        //        float x = Mathf.Lerp(gameObject.transform.localPosition.x, point.x, horizontalSpeed * Time.deltaTime);
-        //        float z = Mathf.Lerp(gameObject.transform.localPosition.z, point.z, horizontalSpeed * Time.deltaTime);
-        //        gameObject.transform.localPosition = new Vector3(x, gameObject.transform.localPosition.y, z);
-        //    }
-
-        //}
     }
-
-
-    private void MoveVertically()
-    {
-        //if (followPoint != null)
-        //{
-
-        //    Vector3 movement = gameObject.transform.localPosition;
-        //    if (moveDown == true)
-        //    {
-        //        movement -= new Vector3(0.0f, 1.0f, 0.0f) * verticalSpeed * Time.deltaTime;
-        //        if (movement.y >= followPoint.transform.globalPosition.y - 2)
-        //            gameObject.transform.localPosition = movement;
-        //    }
-        //    else
-        //    {
-        //        movement += new Vector3(0.0f, 1.0f, 0.0f) * verticalSpeed * Time.deltaTime;
-        //        if (movement.y <= followPoint.transform.globalPosition.y + 2)
-        //            gameObject.transform.localPosition = movement;
-        //    }
-        //}
-
-        //verticalTimer += Time.deltaTime;
-
-        //if (verticalTimer >= verticalTimeInterval)
-        //{
-        //    moveDown = !moveDown;
-        //    verticalTimer = 0.0f;
-        //}
-    }
-
 
     private void LookAtMando()
     {
@@ -469,13 +410,10 @@ public class BabyYoda : DiamondComponent
         {
             if (Core.instance.HasStatus(STATUS_TYPE.SKILL_HEAL))
             {
-                Debug.Log("Has SKILL_HEAL");
                 PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
-                    Debug.Log("Heal");
                     playerHealth.SetCurrentHP((int)(PlayerHealth.currHealth + Core.instance.GetStatusData(STATUS_TYPE.SKILL_HEAL).severity));
-
                 }
             }
             Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Push_Command");

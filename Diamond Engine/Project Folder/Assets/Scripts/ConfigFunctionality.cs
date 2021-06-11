@@ -8,7 +8,6 @@ public static class ConfigFunctionality
 
     public static void UpdateDisplayText()
     {
-        Debug.Log("Inside UpdateDisplayText");
         Text txt = null;
         displayText = InternalCalls.FindObjectWithName("Window Mode Value");
 
@@ -18,7 +17,6 @@ public static class ConfigFunctionality
         if (txt == null)
         {
             displayText = null;
-            Debug.Log("Couldn't get the Window Mode Value text component");
             return;
         }
         else
@@ -28,7 +26,7 @@ public static class ConfigFunctionality
             else if (Config.GetWindowMode() == 2)
                 txt.text = "Full Screen";
 
-            Debug.Log(txt.text);
+            //Debug.Log(txt.text);
         }
     }
 }

@@ -87,7 +87,6 @@ public class CameraController : DiamondComponent
                 return;
             }
             CameraManager.SetOrthSize(this.gameObject, Ease.PointLerp(pointA_zoom, zoomDesired, Ease.OutCubic(t)));
-            Debug.Log(t.ToString());
         }
     }
 

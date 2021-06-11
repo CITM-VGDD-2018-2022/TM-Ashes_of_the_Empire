@@ -28,8 +28,6 @@ public class GameSceneManager : DiamondComponent
         if (instance == null)
             instance = this;
 
-        Debug.Log("I'm cunt number: " + gameObject.pointer.ToString());
-
         rewardObject = InternalCalls.CreatePrefab("Library/Prefabs/1394471616.prefab", new Vector3(rewardInitialPos.x, rewardInitialPos.y, rewardInitialPos.z), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
 
         if (rewardObject != null)
@@ -104,27 +102,19 @@ public class GameSceneManager : DiamondComponent
 
         if (DebugOptionsHolder.goToNextRoom == true)
         {
-            Debug.Log("Change scene");
             ChangeScene();
             DebugOptionsHolder.goToNextRoom = false;
         }
 
         if (DebugOptionsHolder.goToNextLevel == true)
         {
-            Debug.Log("Change scene");
             ChangeScene();
-            //DebugOptionsHolder.goToNextLevel = false;
         }
-
-        // We should clean boons when ending a run :3
-        //PlayerResources.ResetRunBoons();
-
     }
 
 
     private void ChangeScene()
     {
-        Debug.Log("LEAVING SCENE");
         if (Core.instance != null)
             Core.instance.SaveBuffs();
 
@@ -134,9 +124,6 @@ public class GameSceneManager : DiamondComponent
         {
             RoomSwitch.OnPlayerWin();
         }
-
-        Debug.Log("SAVING SCENE");
-
     }
 
     public void StartLevelEnd()

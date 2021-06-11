@@ -74,8 +74,6 @@ public class EndLevelRewardSpawn : DiamondComponent
         {
             timer -= Time.deltaTime;
             newPos.y += yPos * movementSpeed;
-
-            //Debug.Log("Boon timer: " + timer.ToString());
         }
         else
         {
