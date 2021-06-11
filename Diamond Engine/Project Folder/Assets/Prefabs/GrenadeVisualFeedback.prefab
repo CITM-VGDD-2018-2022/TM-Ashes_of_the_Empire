@@ -1,0 +1,67 @@
+{
+    "assets_path": "Assets\/Prefabs\/GrenadeVisualFeedback.prefab",
+    "Game Objects": [
+        {
+            "name": "GrenadeVisualFeedback",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1651843609,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -1.5175652503967285,
+                3.2352080345153809,
+                -0.22176933288574219
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1.6000000238418579,
+                1,
+                1.6000000238418579
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Active": true,
+                    "Path": "Library\/Meshes\/1342727876.mmh",
+                    "UID": 1342727876,
+                    "bumpDepth": 0,
+                    "alternColor": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "alternColorStencil": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Assets\/Materials\/GrenadeVisualFeedback.mat",
+                    "MaterialLibraryPath": "Library\/Materials\/606072712.mat",
+                    "MaterialUID": 606072712
+                }
+            ]
+        }
+    ]
+}
