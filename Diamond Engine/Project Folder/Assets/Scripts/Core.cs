@@ -95,7 +95,6 @@ public class Core : Entity
 
     public GameObject rifle = null;
     public GameObject blaster = null;
-    public GameObject grenadeVisualFeedback = null;
 
     private bool scriptStart = true;
     //State
