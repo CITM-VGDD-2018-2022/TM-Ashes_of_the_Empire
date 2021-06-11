@@ -78,7 +78,7 @@ public class EnemyManager : DiamondComponent
         if (currentEnemies.Count == 0 && awaitingForEnemiesToSpawn == 0 && enemiesLeftToSpawn == false && GameSceneManager.instance != null)
         {
             Debug.Log("Enemy Manager calling to Level End");
-            GameSceneManager.instance.LevelEnd();
+            GameSceneManager.instance.StartLevelEnd();
         }
 
         return ret;

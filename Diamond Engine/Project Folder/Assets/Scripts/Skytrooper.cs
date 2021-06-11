@@ -47,6 +47,8 @@ public class Skytrooper : Enemy
 
     private float initialHeight = 0.0f;
 
+    private bool standStill = false;
+
     //Action times
     public float idleTime = 5.0f;
     public float wanderTime = 0.0f;
@@ -110,7 +112,7 @@ public class Skytrooper : Enemy
 
         currentState = STATE.IDLE;
         Animator.Play(gameObject, "SK_Idle", speedMult);
-        if(blaster != null)
+        if (blaster != null)
             Animator.Play(blaster, "SK_Idle", speedMult);
 
         UpdateAnimationSpd(speedMult);
@@ -137,7 +139,7 @@ public class Skytrooper : Enemy
         shootAnimationTime = Animator.GetAnimationDuration(gameObject, "SK_Shoot");
 
         //Bullets creation
-        primaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
+        primaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), null);
         if (primaryBulletObj != null)
         {
             primaryBullet = primaryBulletObj.GetComponent<SkyTrooperShot>();
@@ -148,7 +150,7 @@ public class Skytrooper : Enemy
             }
         }
 
-        secondaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), new Vector3(1.0f, 1.0f, 1.0f));
+        secondaryBulletObj = InternalCalls.CreatePrefab("Library/Prefabs/1662408971.prefab", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 1.0f), null);
         if (secondaryBulletObj != null)
         {
             secondaryBullet = secondaryBulletObj.GetComponent<SkyTrooperShot>();
@@ -467,27 +469,31 @@ public class Skytrooper : Enemy
         dashTimer = dashTime;
         //Debug.Log("SKYTROOPER DASH");
 
-        Animator.Play(gameObject, "SK_Dash", speedMult);
-        Animator.Play(blaster, "SK_Dash", speedMult);
-        Audio.PlayAudio(gameObject, "Play_Skytrooper_Dash");
-
-        //agent.CalculateRandomPath(gameObject.transform.globalPosition, dashRange);
         targetPosition = CalculateRandomInRangePosition();
 
-        if (targetPosition == null)
+        if(!standStill)
+        {
+            Animator.Play(gameObject, "SK_Dash", speedMult);
+            Animator.Play(blaster, "SK_Dash", speedMult);
+            Audio.PlayAudio(gameObject, "Play_Skytrooper_Dash");
+        }
+        else
         {
             inputsList.Add(INPUT.IN_WANDER);
             Debug.Log("Emergency wander");
         }
+
         //Debug.Log(targetPosition.ToString());
 
         UpdateAnimationSpd(speedMult);
     }
     private void UpdateDash()
     {
-        LookAt(targetPosition);
-
-        MoveToPosition(targetPosition, dashSpeed * speedMult);
+        if(!standStill)
+        {
+            LookAt(targetPosition);
+            MoveToPosition(targetPosition, dashSpeed * speedMult);
+        }
 
         UpdateAnimationSpd(speedMult);
     }
@@ -716,7 +722,6 @@ public class Skytrooper : Enemy
     {
         if (collidedGameObject.CompareTag("Bullet"))
         {
-
             if (Core.instance != null)
             {
                 if (Core.instance.HasStatus(STATUS_TYPE.PRIM_SLOW))
@@ -741,12 +746,6 @@ public class Skytrooper : Enemy
                     if (hudComponent != null)
                         hudComponent.AddToCombo(25, 0.95f);
                 }
-
-                /*if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.WEAPONS, (int)Skill_Tree_Data.WeaponsSkillNames.PRIMARY_SLOW_SPEED))
-                {
-                    skill_slowDownActive = true;
-                    skill_slowDownTimer = 0.0f;
-                }*/
             }
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
@@ -766,8 +765,6 @@ public class Skytrooper : Enemy
                     Core.instance.hud.GetComponent<HUD>().AddToCombo(55, 0.25f);
                 }
                 {
-
-
                     float vulerableSev = 0.2f;
                     float vulerableTime = 4.5f;
                     STATUS_APPLY_TYPE applyType = STATUS_APPLY_TYPE.BIGGER_PERCENTAGE;
@@ -918,7 +915,6 @@ public class Skytrooper : Enemy
                         BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + (int)(Core.instance.GetStatusData(STATUS_TYPE.WINDU_FORCE).severity));
                 }
             }
-
         }
     }
 
@@ -927,25 +923,34 @@ public class Skytrooper : Enemy
         if (Core.instance == null)
             return null;
 
+        Vector3 newPosition = null;
+
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) < detectionRange * 0.5f)
         {
-            float hitDistance = 0.0f;
-            GameObject raycastHit = InternalCalls.RayCast(shootPoint.transform.globalPosition, (Core.instance.gameObject.transform.globalPosition - shootPoint.transform.globalPosition).normalized, dashRange, ref hitDistance);
+            newPosition = GoBackwards();
 
-            if (raycastHit != null)
-            {
-                if (hitDistance < dashRange)
-                    return GoForward();
-            }
-
-            return GoBackwards();
+            if (newPosition == null)
+                newPosition = GoForward();
         }
         else if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) < detectionRange)
         {
-            return GoForward();
+            newPosition = GoForward();
+
+            if (newPosition == null)
+                newPosition = GoBackwards();
         }
 
-        return gameObject.transform.globalPosition;
+        if (newPosition != null)
+        {
+            standStill = false;
+            return newPosition;
+        }
+        else
+        {
+            standStill = true;
+            Debug.Log("Stand still");
+            return gameObject.transform.globalPosition;
+        }
     }
 
     private void UpdateAnimationSpd(float newSpd)
@@ -960,47 +965,122 @@ public class Skytrooper : Enemy
 
     private Vector3 GoForward()
     {
+        Random randomizer = new Random();
+        int randomDirection = randomizer.Next(2);
+
+        //Debug.Log("Un pasito palante, María");
+
+        Vector3 desiredDirection = null;
+        GameObject leftObject;
+        GameObject rightObject;
+
         Random randomAngle = new Random();
+        float leftAngle  = -50 + randomAngle.Next(-5, 5);
+        float rightAngle =  50 + randomAngle.Next(-5, 5);
 
-        float angle = randomAngle.Next(-90, 90);
+        Vector3 centerDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
 
-        //Debug.Log("Un pasito palante, María: " + angle.ToString());
+        if (randomDirection == 0) //First check left
+        {
+            leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
-        Vector3 direction = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
+            if (leftObject != null && !leftObject.CompareTag("Player"))
+            {
+                rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
-        Vector3 randomDirection = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
-                                             0.0f,
-                                             (float)(Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.z));
-        float hitDistance = 0.0f;
-        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition, randomDirection, dashRange, ref hitDistance);
+                if (rightObject == null)
+                {
+                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                }
+            }
+            else
+            {
+                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
+        }
+        else //First check right
+        {
+            rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
-        if (hitObject == null)
-            return gameObject.transform.localPosition + randomDirection * dashRange;
-        else
-            return gameObject.transform.localPosition;
+            if (rightObject != null && !rightObject.CompareTag("Player"))
+            {
+                leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
+
+                if (leftObject == null)
+                {
+                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                }
+            }
+            else
+            {
+                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
+
+        }
+
+        return null;
     }
 
     private Vector3 GoBackwards()
     {
+        Random randomizer = new Random();
+        int randomDirection = randomizer.Next(2);
+
+        //Debug.Log("Un pasito patrás");
+
+        Vector3 desiredDirection = null;
+        GameObject leftObject;
+        GameObject rightObject;
+
         Random randomAngle = new Random();
+        float leftAngle  = -50 + randomAngle.Next(-5, 5);
+        float rightAngle =  50 + randomAngle.Next(-5, 5);
 
-        float angle = randomAngle.Next(-60, 60);
+        Vector3 centerDirection = gameObject.transform.globalPosition - Core.instance.gameObject.transform.globalPosition;
 
-        //Debug.Log("Un pasito patrás: " + angle.ToString());
+        if (randomDirection == 0) //First check left
+        {
+            leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
 
-        Vector3 direction = gameObject.transform.globalPosition - Core.instance.gameObject.transform.globalPosition;
+            if (leftObject != null && !leftObject.CompareTag("Player"))
+            {
+                rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
 
-        Vector3 randomDirection = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.z),
-                                             0.0f,
-                                             (float)(Math.Sin(angle * Mathf.Deg2RRad) * direction.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * direction.normalized.z));
+                if (rightObject == null)
+                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
+            else
+                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+        }
+        else //First check right
+        {
+            rightObject = FindObjectInAngle(rightAngle, centerDirection, ref desiredDirection);
+
+            if (rightObject != null && !rightObject.CompareTag("Player"))
+            {
+                leftObject = FindObjectInAngle(leftAngle, centerDirection, ref desiredDirection);
+
+                if (leftObject == null)
+                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+            }
+            else
+                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+
+        }
+
+        return null;
+    }
+
+    GameObject FindObjectInAngle(float angle, Vector3 centerDirection, ref Vector3 desiredDirection)
+    {
+        desiredDirection = new Vector3((float)(Math.Cos(angle * Mathf.Deg2RRad) * centerDirection.normalized.x - Math.Sin(angle * Mathf.Deg2RRad) * centerDirection.normalized.z),
+                                       0.0f,
+                                       (float)(Math.Sin(angle * Mathf.Deg2RRad) * centerDirection.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * centerDirection.normalized.z));
 
         float hitDistance = 0.0f;
-        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition, randomDirection, dashRange, ref hitDistance);
+        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.5f, desiredDirection, dashRange, ref hitDistance);
 
-        if (hitObject == null)
-            return gameObject.transform.localPosition + randomDirection * dashRange;
-        else
-            return gameObject.transform.localPosition;
+        return hitObject;
     }
 
     public override void PlayGrenadeHitParticles()
@@ -1011,7 +1091,7 @@ public class Skytrooper : Enemy
 
     public void OnDestroy()
     {
-        if(primaryBulletObj != null)
+        if (primaryBulletObj != null)
         {
             InternalCalls.Destroy(primaryBulletObj);
         }
