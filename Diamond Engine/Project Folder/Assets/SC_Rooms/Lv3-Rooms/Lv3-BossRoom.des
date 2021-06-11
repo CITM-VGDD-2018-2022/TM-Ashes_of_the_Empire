@@ -1,19 +1,19 @@
 {
     "NavMesh": 345181959,
     "EditorCameraPosition": [
-        -2.2708783149719238,
-        20.718700408935547,
-        -12.218177795410156
+        -11.192902565002441,
+        12.031036376953125,
+        -12.299304008483887
     ],
     "EditorCameraZ": [
-        0.22106209397315979,
-        -0.97083002328872681,
-        0.092847824096679688
+        0.77931559085845947,
+        -0.20155505836009979,
+        0.59333205223083496
     ],
     "EditorCameraY": [
-        0.89510869979858398,
-        0.23976898193359375,
-        0.37588745355606079
+        0.16039186716079712,
+        0.9794771671295166,
+        0.12206102907657623
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -107,8 +107,8 @@
                     "fSize": 48.5,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 11.793814659118652,
-                    "hFOV": 19.793813705444336,
+                    "vFOV": 12.84536075592041,
+                    "hFOV": 23.072164535522461,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -846,10 +846,10 @@
                         1.3369902518434174e-08
                     ],
                     "Rotation": [
-                        -0.99996817111968994,
-                        0.0040514278225600719,
-                        -0.0063351988792419434,
-                        0.0026648957282304764
+                        -0.99996829032897949,
+                        0.0040514282882213593,
+                        -0.006335199810564518,
+                        0.00266489596106112
                     ],
                     "Scale": [
                         1.000099778175354,
@@ -1602,10 +1602,10 @@
                         -0.036866538226604462
                     ],
                     "Rotation": [
-                        -0.097951605916023254,
-                        0.2444273978471756,
-                        -0.20007434487342834,
-                        0.94373244047164917
+                        -0.097951620817184448,
+                        0.24442742764949799,
+                        -0.20007437467575073,
+                        0.94373255968093872
                     ],
                     "Scale": [
                         0.99999982118606567,
@@ -1854,10 +1854,10 @@
                         -2.6863153834710829e-06
                     ],
                     "Rotation": [
-                        0.00016948697157204151,
-                        -0.014532583765685558,
-                        -0.18077296018600464,
-                        0.98341745138168335
+                        0.00016948698612395674,
+                        -0.014532585628330708,
+                        -0.18077297508716583,
+                        0.9834175705909729
                     ],
                     "Scale": [
                         0.99999994039535522,
@@ -1882,10 +1882,10 @@
                         -2.4106438445414824e-07
                     ],
                     "Rotation": [
-                        -0.067525409162044525,
-                        0.81828737258911133,
-                        -0.55898052453994751,
-                        0.11570130288600922
+                        -0.067525416612625122,
+                        0.81828749179840088,
+                        -0.55898058414459229,
+                        0.11570131778717041
                     ],
                     "Scale": [
                         1,
@@ -2332,8 +2332,8 @@
                     "Rotation": [
                         0,
                         0,
-                        -0.066209524869918823,
-                        0.99780571460723877
+                        -0.06620953232049942,
+                        0.99780583381652832
                     ],
                     "Scale": [
                         1,
@@ -2358,10 +2358,10 @@
                         0.013559013605117798
                     ],
                     "Rotation": [
-                        5.3407896425424883e-15,
-                        -7.9409338805090657e-23,
-                        0.066209524869918823,
-                        0.99780571460723877
+                        5.3407904895754355e-15,
+                        -7.940935142686514e-23,
+                        0.06620953232049942,
+                        0.99780583381652832
                     ],
                     "Scale": [
                         1,
@@ -5442,6 +5442,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -5504,6 +5513,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -5566,6 +5584,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -5628,6 +5655,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -5690,6 +5726,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6006,6 +6051,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6068,6 +6122,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6130,6 +6193,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6192,6 +6264,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6254,6 +6335,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6570,6 +6660,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6632,6 +6731,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6694,6 +6802,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6756,6 +6873,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -6818,6 +6944,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -7134,6 +7269,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -7196,6 +7340,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -7258,6 +7411,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -7320,6 +7482,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -7382,6 +7553,15 @@
                     "MaterialAssetPath": "Empty",
                     "MaterialLibraryPath": "Library\/Materials\/82053990.mat",
                     "MaterialUID": 82053990
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "CubeSize",
+                    "maxHeight": 0.40000000596046448,
+                    "moveSpeed": 0.5,
+                    "maxSize": 0.10000000149011612,
+                    "sizeSpeed": 0.5
                 }
             ]
         },
@@ -15588,10 +15768,10 @@
                                 -2.0594258308410645
                             ],
                             "Rotation": [
-                                3.5362006656214362e-09,
-                                0.60097533464431763,
-                                1.8231361309517524e-07,
-                                0.79926753044128418
+                                3.5362011097106461e-09,
+                                0.6009753942489624,
+                                1.8231364151688467e-07,
+                                0.79926764965057373
                             ],
                             "Scale": [
                                 1.0000003576278687,
