@@ -3047,27 +3047,77 @@ public class MofGuideonRework : Entity
 
         if (spawner1 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition), spawner1);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition);
+            float playerScore = 0f;
+
+            if(Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner1.transform.globalPosition);
+            }
+
+
+            spawnPoints.Add(playerScore + moffScore, spawner1);
         }
         if (spawner2 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition), spawner2);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition);
+            float playerScore = 0f;
+
+            if (Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner2.transform.globalPosition);
+            }
+
+            spawnPoints.Add(playerScore + moffScore, spawner2);
+
         }
         if (spawner3 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition), spawner3);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition);
+            float playerScore = 0f;
+
+            if (Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner3.transform.globalPosition);
+            }
+
+            spawnPoints.Add(playerScore + moffScore, spawner3);
         }
         if (spawner4 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition), spawner4);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition);
+            float playerScore = 0f;
+
+            if (Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner4.transform.globalPosition);
+            }
+
+            spawnPoints.Add(playerScore + moffScore, spawner4);
         }
         if (spawner5 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition), spawner5);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition);
+            float playerScore = 0f;
+
+            if (Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner5.transform.globalPosition);
+            }
+
+            spawnPoints.Add(playerScore + moffScore, spawner5);
         }
         if (spawner6 != null)
         {
-            spawnPoints.Add(gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition), spawner6);
+            float moffScore = gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition);
+            float playerScore = 0f;
+
+            if (Core.instance != null)
+            {
+                playerScore = Core.instance.gameObject.transform.globalPosition.DistanceNoSqrt(spawner6.transform.globalPosition);
+            }
+
+            spawnPoints.Add(playerScore + moffScore, spawner6);
         }
 
     }
