@@ -147,6 +147,7 @@ public class Sequence : DiamondComponent
             {
                 Animator.Play(greef, "Greef_Greet");
                 activateAnimation = false;
+                Audio.PlayAudio(CinematicManager.instance.gameObject, "Play_Greef_Karga_Greeting");
             }
 
 

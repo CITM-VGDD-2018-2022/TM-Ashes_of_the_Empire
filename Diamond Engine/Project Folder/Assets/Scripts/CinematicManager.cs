@@ -37,6 +37,8 @@ public class CinematicManager : DiamondComponent
             return;
         }
 
+        Audio.SetState("Game_State", "Cinematic");
+
         instance = this;
         AddSequence(sequence1);
         AddSequence(sequence2);
@@ -53,7 +55,17 @@ public class CinematicManager : DiamondComponent
         //Maping actions
         if(listSequences.Count > 0)
         {
-            listSequences[1].onStartSequence = () => { Audio.PlayAudio(gameObject, "Play_Razor_Appearing"); };
+            listSequences[1].onStartSequence = () => {
+                Input.PlayHaptic(0.3f, 500);
+                Audio.PlayAudio(gameObject, "Play_Razor_Appearing");
+            };
+            listSequences[4].onStartSequence = () => { Audio.PlayAudio(gameObject, "Play_Razor_Motor"); };
+            listSequences[6].onStartSequence = () =>
+            {
+                Input.PlayHaptic(0.3f, 500);
+                Audio.StopOneAudio(gameObject, "Play_Razor_Motor");
+                Audio.PlayAudio(gameObject, "Play_Razor_Leaving");
+            };
         }
 
         //Start first sequence
@@ -84,6 +96,7 @@ public class CinematicManager : DiamondComponent
             postCinematicDialogue.Enable(true);
             postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         }
+        PlayHUBMusic();
     } 
     
     private void ReturnGame()
@@ -94,6 +107,15 @@ public class CinematicManager : DiamondComponent
         postCinematicDialogue.Enable(true);
         postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         CameraManager.SetCameraOrthographic(gameCamera);
+        PlayHUBMusic();
+    }
+
+    private void PlayHUBMusic()
+    {
+        Audio.PlayAudio(gameObject, "Play_Cantine_Ambience");
+        Audio.SetState("Game_State", "HUB");
+        if (MusicSourceLocate.instance != null)
+            Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Healthy");
     }
 
     public void Update()
@@ -168,6 +190,7 @@ public class CinematicManager : DiamondComponent
             StopAllSequences();
             listSequences[7].StartRunning();
             BlackFade.StartFadeOut();
+            PlayHUBMusic();
         });
 
     }
@@ -187,4 +210,5 @@ public class CinematicManager : DiamondComponent
         init = false;
 
     }
+
 }

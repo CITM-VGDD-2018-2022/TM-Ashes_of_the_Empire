@@ -11,11 +11,11 @@ public class HUBAudio : DiamondComponent
     {
 		if (!Counter.firstRun)
 		{
-			Audio.PlayAudio(gameObject, "Play_Cantine_Ambience");
+			//Audio.PlayAudio(gameObject, "Play_Cantine_Ambience");
 			//Audio.SetState("Game_State", "HUB");   TODO: CHANGE this was just a test for the cinematic scrum
-			Audio.SetState("Game_State", "Cinematic");
-			if (MusicSourceLocate.instance != null)
-				Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Healthy");
+			//Audio.SetState("Game_State", "Cinematic");
+			//if (MusicSourceLocate.instance != null)
+			//	Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Healthy");
 		}
 		start = true;
 		once = true;
@@ -26,19 +26,19 @@ public class HUBAudio : DiamondComponent
     }
 	public void Update()
 	{
-        if (!start)
-        {
-			Start();
-        }
-		if (Counter.firstRun && cinematic.beyondDark && once)
-        {
-			Audio.PlayAudio(gameObject, "Play_Cantine_Ambience");
-			//Audio.SetState("Game_State", "HUB");	// TODO: CHANGE this was just a atest for the cinematic scrum!!
-			Audio.SetState("Game_State", "Cinematic");
-			if (MusicSourceLocate.instance != null)
-				Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Healthy");
-			once = false;
-		}
+  //      if (!start)
+  //      {
+		//	Start();
+  //      }
+		//if (Counter.firstRun && cinematic.beyondDark && once)
+  //      {
+		//	//Audio.PlayAudio(gameObject, "Play_Cantine_Ambience");
+		//	//Audio.SetState("Game_State", "HUB");	// TODO: CHANGE this was just a atest for the cinematic scrum!!
+		//	Audio.SetState("Game_State", "Cinematic");
+		//	if (MusicSourceLocate.instance != null)
+		//		Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Health", "Healthy");
+		//	once = false;
+		//}
 	}
 
 }
