@@ -18,7 +18,7 @@
    {
     "Id": "225682233",
     "Language": "SFX",
-    "Hash": "4231551919",
+    "Hash": "4110720631",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Skytrooper",
     "ShortName": "Skytrooper",
     "Path": "Skytrooper.bnk",
@@ -216,7 +216,7 @@
    {
     "Id": "833070093",
     "Language": "SFX",
-    "Hash": "657358367",
+    "Hash": "1407771626",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Stormtrooper",
     "ShortName": "Stormtrooper",
     "Path": "Stormtrooper.bnk",
@@ -441,7 +441,7 @@
    {
     "Id": "913881297",
     "Language": "SFX",
-    "Hash": "3078650831",
+    "Hash": "574754934",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Wampa_Skell",
     "ShortName": "Wampa_Skell",
     "Path": "Wampa_Skell.bnk",
@@ -1605,7 +1605,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "334762700",
+    "Hash": "284572893",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -2355,7 +2355,7 @@
    {
     "Id": "1229948536",
     "Language": "SFX",
-    "Hash": "2871456",
+    "Hash": "976162173",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Environment",
     "ShortName": "Environment",
     "Path": "Environment.bnk",
@@ -2418,15 +2418,13 @@
       "Id": "1005163266",
       "Name": "Play_Level_2_Ambience",
       "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Level_2_Ambience",
-      "DurationType": "OneShot",
-      "DurationMin": "21.084490",
-      "DurationMax": "21.084490",
+      "DurationType": "Infinite",
       "IncludedMemoryFiles": [
        {
         "Id": "627317939",
         "Language": "SFX",
         "ShortName": "Wind Exterior level 2.wav",
-        "Path": "SFX\\Wind Exterior level 2_FC2D3A10.wem"
+        "Path": "SFX\\Wind Exterior level 2_B182BB5A.wem"
        }
       ]
      },
@@ -2462,15 +2460,13 @@
       "Id": "709214534",
       "Name": "Play_Rancor_Ambience",
       "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Rancor_Ambience",
-      "DurationType": "OneShot",
-      "DurationMin": "13.973175",
-      "DurationMax": "13.973175",
+      "DurationType": "Infinite",
       "IncludedMemoryFiles": [
        {
         "Id": "455819116",
         "Language": "SFX",
         "ShortName": "Wind Cave Rancor.wav",
-        "Path": "SFX\\Wind Cave Rancor_FC2D3A10.wem"
+        "Path": "SFX\\Wind Cave Rancor_B182BB5A.wem"
        }
       ]
      },
@@ -2538,15 +2534,13 @@
       "Id": "2970027071",
       "Name": "Play_Wampa_Skel_Ambience",
       "ObjectPath": "\\Events\\Default Work Unit\\Environment\\Play_Wampa_Skel_Ambience",
-      "DurationType": "OneShot",
-      "DurationMin": "21.065283",
-      "DurationMax": "21.065283",
+      "DurationType": "Infinite",
       "IncludedMemoryFiles": [
        {
         "Id": "1056733374",
         "Language": "SFX",
         "ShortName": "Wind Cave Wampa Skel.wav",
-        "Path": "SFX\\Wind Cave Wampa Skel_FC2D3A10.wem"
+        "Path": "SFX\\Wind Cave Wampa Skel_B182BB5A.wem"
        }
       ]
      },
@@ -2598,7 +2592,7 @@
    {
     "Id": "1551306167",
     "Language": "SFX",
-    "Hash": "1069822425",
+    "Hash": "1309252787",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\UI",
     "ShortName": "UI",
     "Path": "UI.bnk",
@@ -2962,7 +2956,7 @@
    {
     "Id": "1838596016",
     "Language": "SFX",
-    "Hash": "343516461",
+    "Hash": "2753837193",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
     "ShortName": "Cinematic",
     "Path": "Cinematic.bnk",
@@ -3121,7 +3115,7 @@
    {
     "Id": "2674766611",
     "Language": "SFX",
-    "Hash": "3932182960",
+    "Hash": "1703457996",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Turret",
     "ShortName": "Turret",
     "Path": "Turret.bnk",
@@ -3271,7 +3265,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "2702778237",
+    "Hash": "950281157",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -3395,16 +3389,16 @@
         "Path": "SFX\\RancorHit2_FC2D3A10.wem"
        },
        {
-        "Id": "126772995",
-        "Language": "SFX",
-        "ShortName": "Rancor_Hit_Body 1.wav",
-        "Path": "SFX\\Rancor_Hit_Body 1_FC2D3A10.wem"
-       },
-       {
         "Id": "266063656",
         "Language": "SFX",
         "ShortName": "Rancor_Hit_Growl 2.wav",
         "Path": "SFX\\Rancor_Hit_Growl 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "358269163",
+        "Language": "SFX",
+        "ShortName": "Bantha body hit 1.wav",
+        "Path": "SFX\\Bantha body hit 1_FC2D3A10.wem"
        },
        {
         "Id": "584482498",
@@ -3413,16 +3407,10 @@
         "Path": "SFX\\RancorHit3_FC2D3A10.wem"
        },
        {
-        "Id": "612814179",
+        "Id": "857968306",
         "Language": "SFX",
-        "ShortName": "Rancor_Hit_Body 2.wav",
-        "Path": "SFX\\Rancor_Hit_Body 2_FC2D3A10.wem"
-       },
-       {
-        "Id": "813694471",
-        "Language": "SFX",
-        "ShortName": "Rancor_Hit_Body 3.wav",
-        "Path": "SFX\\Rancor_Hit_Body 3_FC2D3A10.wem"
+        "ShortName": "Bantha body hit 3.wav",
+        "Path": "SFX\\Bantha body hit 3_FC2D3A10.wem"
        }
       ]
      },
@@ -4274,7 +4262,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "4258244533",
+    "Hash": "3554406413",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",

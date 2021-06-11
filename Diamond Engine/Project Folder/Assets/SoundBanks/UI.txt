@@ -38,7 +38,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1581692	UI boon pickup	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI boon pickup_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI boon pickup		274784
-	6512664	Interaction circle In	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SkillTreeInteractionIn1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Interaction circle In		209072
+	6512664	Interaction circle Out	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SkillTreeInteractionIn1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Interaction circle Out		209072
 	26559065	Victory music	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Victory music_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Victory music		1011620
 	64859236	UI Resume	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI Resume_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI Resume		118136
 	178388527	UI combo increase	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\UI combo increase_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI combo increase		117240
