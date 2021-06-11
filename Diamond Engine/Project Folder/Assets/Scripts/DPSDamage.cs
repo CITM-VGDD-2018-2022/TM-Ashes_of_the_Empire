@@ -3,10 +3,11 @@ using DiamondEngine;
 
 public class DPSDamage : DiamondComponent
 {
-    public int baseDamage = 4;
-    public int maxDamage = 10;
-    public int damageIncrease = 2;
+    public int  baseDamage = 4;
+    public int  maxDamage = 10;
+    public int  damageIncrease = 2;
     private int damage = 0;
+    private bool canDamage = false;
 
     public float damageTime = 1.0f;
     private float damageTimer = 0.0f;
@@ -27,7 +28,7 @@ public class DPSDamage : DiamondComponent
 
             if (damageTimer <= 0.0f)
             {
-                if (playerHealth != null)
+                if (playerHealth != null && canDamage)
                 {
                     playerHealth.TakeDamage(damage, true);
                     IncrementDamage();
@@ -48,6 +49,8 @@ public class DPSDamage : DiamondComponent
             damageTimer = damageTime;
             if (Core.instance != null)
                 Audio.PlayAudio(Core.instance.gameObject, "Play_Mando_Damaging_Water");
+
+            canDamage = true;
         }
     }
 
@@ -60,6 +63,8 @@ public class DPSDamage : DiamondComponent
             damage = baseDamage;
             if (Core.instance != null)
                 Audio.StopOneAudio(Core.instance.gameObject, "Play_Mando_Damaging_Water");
+
+            canDamage = false;
         }
     }
 
