@@ -6,7 +6,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1931338186	Resume_Object			\Default Work Unit\Resume_Object	
 	1933645159	Play_Grogu_Dialog			\Default Work Unit\Cinematic\Play_Grogu_Dialog	
 	3318621861	Stop_Object			\Default Work Unit\Stop_Object	
-	3565550602	Play_Helmet_Impact			\Default Work Unit\Cinematic\Play_Helmet_Impact	
 	3691715430	Play_Razor_Appearing			\Default Work Unit\Cinematic\Play_Razor_Appearing	
 	4268479138	Play_Greef_Karga_Greeting			\Default Work Unit\Cinematic\Play_Greef_Karga_Greeting	
 
@@ -16,7 +15,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	55684314	grogu dialog 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 1		95892
 	126207516	grogu dialog 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 3		143504
-	490617671	helmet impact	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\helmet impact_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\helmet impact		67556
 	554598734	mando dialog 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\mando dialog 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Mando dialog\mando dialog 2		69784
 	635596491	mando dialog 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\mando dialog 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Mando dialog\mando dialog 3		64948
 	718749945	grogu dialog 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\grogu dialog 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Grogu Dialog\grogu dialog 2		93844

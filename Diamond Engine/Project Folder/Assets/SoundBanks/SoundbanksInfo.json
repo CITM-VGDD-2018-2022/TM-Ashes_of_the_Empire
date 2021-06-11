@@ -1605,7 +1605,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "2635338488",
+    "Hash": "334762700",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -2962,7 +2962,7 @@
    {
     "Id": "1838596016",
     "Language": "SFX",
-    "Hash": "4280797689",
+    "Hash": "343516461",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
     "ShortName": "Cinematic",
     "Path": "Cinematic.bnk",
@@ -3016,22 +3016,6 @@
         "Language": "SFX",
         "ShortName": "grogu dialog 2.wav",
         "Path": "SFX\\grogu dialog 2_FC2D3A10.wem"
-       }
-      ]
-     },
-     {
-      "Id": "3565550602",
-      "Name": "Play_Helmet_Impact",
-      "ObjectPath": "\\Events\\Default Work Unit\\Cinematic\\Play_Helmet_Impact",
-      "DurationType": "OneShot",
-      "DurationMin": "0.382608",
-      "DurationMax": "0.382608",
-      "IncludedMemoryFiles": [
-       {
-        "Id": "490617671",
-        "Language": "SFX",
-        "ShortName": "helmet impact.wav",
-        "Path": "SFX\\helmet impact_FC2D3A10.wem"
        }
       ]
      },
@@ -4290,7 +4274,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "2192883227",
+    "Hash": "4258244533",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
