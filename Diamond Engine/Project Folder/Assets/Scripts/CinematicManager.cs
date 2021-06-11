@@ -30,11 +30,10 @@ public class CinematicManager : DiamondComponent
     private List<Sequence> listSequences = new List<Sequence>();
     public void Awake()
     {
-
-
-        if (!init)
+        if (!Counter.firstRun)
         {
-            StartGame();
+            StartGame(false);
+            init = false;
             return;
         }
 
@@ -57,14 +56,11 @@ public class CinematicManager : DiamondComponent
             listSequences[0].StartRunning();
         }
 
-
-
-
-
         if (gameCamera == null || cameraPos1 == null)
         {
             return;
         }
+
         initPos = gameCamera.transform.localPosition;
         initRot = gameCamera.transform.localRotation;
         SetAsPerspectiveCamera();
@@ -73,12 +69,15 @@ public class CinematicManager : DiamondComponent
         gameCamera.transform.localRotation = cameraPos1.transform.localRotation;
     }
 
-    private void StartGame()
+    private void StartGame(bool withDialog)
     {
         gameCamera.GetComponent<CameraController>().startFollow = true;
-        postCinematicDialogue.Enable(true);
-        postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         CameraManager.SetCameraOrthographic(gameCamera);
+        if (withDialog)
+        {
+            postCinematicDialogue.Enable(true);
+            postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+        }
     } 
     
     private void ReturnGame()
