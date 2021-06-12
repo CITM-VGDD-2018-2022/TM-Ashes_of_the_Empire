@@ -264,8 +264,8 @@ public class Core : Entity
     private string lastFootsteps = "";
     private bool updateSniper = false;
 
-    public GameObject fastParticleObject;
-    public GameObject slowParticleObject;
+    public GameObject fastParticleObject = null;
+    public GameObject slowParticleObject = null;
 
     public bool startAvailable = true;
     public void Awake()
