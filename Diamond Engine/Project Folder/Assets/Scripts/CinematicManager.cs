@@ -239,6 +239,12 @@ public class CinematicManager : DiamondComponent
                 gameCamera.GetComponent<CameraController>().startFollow = true;
                 postCinematicDialogue.Enable(true);
                 postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+
+                if (Core.instance != null)
+                {
+                    Core.instance.LockInputs(false);
+                }
+
             });
         });
 
