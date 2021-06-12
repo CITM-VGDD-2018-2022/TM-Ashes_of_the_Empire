@@ -261,4 +261,14 @@ public static class RoomSwitch
         SceneManager.LoadScene(821370213);
     }
 
+    public static bool IsFinalBoss()
+    {
+        if (true)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 }

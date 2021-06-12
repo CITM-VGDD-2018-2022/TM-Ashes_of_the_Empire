@@ -140,7 +140,8 @@ public class GameSceneManager : DiamondComponent
         Counter.SumToCounterType(Counter.CounterTypes.LEVELS);
         rewardMenu = new EndLevelRewards();
         Core.instance.BlockInIdle();
-        rewardMenu.GenerateRewardPipeline();
+
+        rewardMenu.GenerateRewardPipeline(Counter.isFinalScene);
     }
 
     public void ApplyReward()
