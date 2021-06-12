@@ -10,36 +10,58 @@ public class RancorProjectile : DiamondComponent
 	public Vector3 targetPos = new Vector3(0, 0, 0);    //Set from Rancor.cs
 	private Vector3 targetDirection = Vector3.zero;
 
-
+	private bool to_destroy = false;
+	private float timer = 1.3f;
 	public void Update()
 	{
-		if (targetDirection == Vector3.zero)
-			targetDirection = targetPos - gameObject.transform.globalPosition;
-		
-		gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
-
-		lifeTime -= Time.deltaTime;
-
-		if (lifeTime < 0.0f)
+		if (!to_destroy)
 		{
-			Audio.PlayAudio(gameObject, "Play_Rock_Impact");
-			InternalCalls.Destroy(gameObject);
+			gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
+		}
+
+		if (timer > 0f && !to_destroy)
+		{
+			timer -= Time.deltaTime;
+			if (timer <= 0f)
+			{
+				to_destroy = true;
+				gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
+				timer = 1f;
+			}
+		}
+
+
+		if (to_destroy)
+		{
+			if (timer > 0f && to_destroy)
+			{
+				timer -= Time.deltaTime;
+				if (timer <= 0f)
+				{
+					InternalCalls.Destroy(gameObject);
+				}
+			}
 		}
 	}
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        if (triggeredGameObject.CompareTag("Player"))
+        if (triggeredGameObject.CompareTag("Player") && !to_destroy)
         {
-			Audio.PlayAudio(gameObject, "Play_Rock_Impact");
+
 			PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
             if (health != null)
 				health.TakeDamage(damage);
+			to_destroy = true;
+			gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
+			timer = 1.3f;
 		}
     }
 	public void OnCollisionEnter(GameObject collidedGameObject)
 	{
 		Audio.PlayAudio(gameObject, "Play_Rock_Impact");
-		InternalCalls.Destroy(gameObject);
-    }
+		to_destroy = true;
+		gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
+		timer = 1.3f;
+	}
 }
