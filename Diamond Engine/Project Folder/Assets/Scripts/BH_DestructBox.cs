@@ -3,38 +3,56 @@ using DiamondEngine;
 
 public class BH_DestructBox : DiamondComponent
 {
-	public GameObject thisReference;
 	public GameObject explosion = null;
 	public GameObject wave = null;
-	public GameObject mesh = null;
+	private ParticleSystem partExp = null;
+	private ParticleSystem partWave = null;
 
+	private SphereCollider explosionCollider = null;
+
+	public GameObject mesh = null;
 
 	private bool triggered = false;
 	public float explosionTime = 2.0f;
 	private float timer = 0;
-	private ParticleSystem partExp = null;
-	private ParticleSystem partWave = null;
 	public int explosion_damage = 0;
-	bool firstFrame = true;
+
+	int framesActive = 0;
 
 	public void Awake()
     {
+		EnemyManager.AddProp(gameObject);
+
+		explosionCollider = gameObject.GetComponent<SphereCollider>();
+
+		if(explosionCollider != null)
+        {
+			explosionCollider.active = false;
+        }
 	}
+
 
 	public void Update()
 	{
-		if(firstFrame)
-        {
-			EnemyManager.AddProp(gameObject);
-			firstFrame = false;
-        }
-
 		if (triggered)
+        {
 			timer += Time.deltaTime;
+
+			if(framesActive > 1)
+            {
+				if (explosionCollider != null && explosionCollider.active)
+				{
+					explosionCollider.active = false;
+				}
+			}
+			else {
+				framesActive++;
+            }
+        }
 
 		if (timer >= explosionTime)
         {
-			InternalCalls.Destroy(thisReference);
+			InternalCalls.Destroy(gameObject);
 		}
 
 	}
@@ -43,7 +61,6 @@ public class BH_DestructBox : DiamondComponent
 	{
 		if((triggeredGameObject.CompareTag("Bullet") || triggeredGameObject.CompareTag("ChargeBullet")) && triggered == false)
         {
-
 			if (explosion != null && wave != null)
 			{
 				partExp = explosion.GetComponent<ParticleSystem>();
@@ -62,8 +79,11 @@ public class BH_DestructBox : DiamondComponent
 			if (mesh != null)
 				InternalCalls.Destroy(mesh);
 			triggered = true;
-			gameObject.DisableCollider();
-			gameObject.EnableCollider();
+
+			if(explosionCollider != null)
+            {
+				explosionCollider.active = true;
+            }
 		}
 	}
 
