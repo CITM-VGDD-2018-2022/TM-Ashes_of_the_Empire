@@ -15,7 +15,7 @@
             "Position": [
                 0,
                 35,
-                0
+                -0.48600989580154419
             ],
             "Rotation": [
                 0,
@@ -134,7 +134,7 @@
                             "paEmitterName": "Force Wall",
                             "paLifeTime": [
                                 0.20000000298023224,
-                                0.20000000298023224
+                                0.30000001192092896
                             ],
                             "paSize": [
                                 1.7999999523162842,
@@ -194,7 +194,7 @@
                                 },
                                 {
                                     "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.5,
+                                    "paSizeOLTStartSize": 0.60000002384185791,
                                     "paSizeOLTEndSize": 0
                                 },
                                 {
