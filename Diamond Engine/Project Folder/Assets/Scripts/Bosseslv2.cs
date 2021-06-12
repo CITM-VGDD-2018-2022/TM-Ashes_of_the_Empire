@@ -446,7 +446,7 @@ public class Bosseslv2 : Entity
         }
 
         float distance = Mathf.Distance(gameObject.transform.globalPosition, currentTarget.transform.globalPosition);
-        if (distance > 2f)
+        if (distance > 3f)
         {
             MoveToPosition(currentTarget.transform.globalPosition, 25f);
             LookAt(currentTarget.transform.globalPosition);
