@@ -81,6 +81,7 @@ public class HubSkillTreeController : DiamondComponent
 
         if (!activate_tree)
         {
+            Core.instance.startAvailable = true;
             Core.instance.LockInputs(false);
             firstFrame = true;
 

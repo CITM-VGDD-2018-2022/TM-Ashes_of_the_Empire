@@ -266,6 +266,8 @@ public class Core : Entity
 
     public GameObject fastParticleObject;
     public GameObject slowParticleObject;
+
+    public bool startAvailable = true;
     public void Awake()
     {
         #region VARIABLES WITH DEPENDENCIES
@@ -2125,7 +2127,7 @@ public class Core : Entity
         //else
         //gamepadInput = new Vector3(0f, 0f, 0f);
 
-        if (Input.GetGamepadButton(DEControllerButton.START) == KeyState.KEY_DOWN)
+        if (Input.GetGamepadButton(DEControllerButton.START) == KeyState.KEY_DOWN && startAvailable)
         {
             Audio.StopAudio(gameObject);
 

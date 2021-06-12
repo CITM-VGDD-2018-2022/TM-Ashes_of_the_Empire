@@ -61,6 +61,7 @@ public class EndLevelRewards
         if (CheckRewardSelected())
         {
             CleanAllElements();
+            Core.instance.startAvailable = true;
         }
 
         return selectedReward;
@@ -163,6 +164,7 @@ public class EndLevelRewards
 
         ChangeMusic();
 
+        Core.instance.startAvailable = false;
         return;
     }
 
