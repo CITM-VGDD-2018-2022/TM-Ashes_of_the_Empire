@@ -391,7 +391,7 @@ public class MofGuideonRework : Entity
         spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
 
         //Get anim durations
-        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose");
+        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose") * 1.45f;
 
         changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising");
 
@@ -3330,6 +3330,17 @@ public class MofGuideonRework : Entity
         //if (cameraComp != null)
         //    cameraComp.target = Core.instance.gameObject;
 
+        HideCape();
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
+
+        currentHealthPoints = limboHealth = maxHealthPoints1;
+    }
+
+    public void HideCape()
+    {
         if (capeMesh != null)
         {
             MeshRenderer capeMeshRend = capeMesh.GetComponent<MeshRenderer>();
@@ -3340,12 +3351,6 @@ public class MofGuideonRework : Entity
             }
 
         }
-
-        isInvencible = false;
-
-        StopParticles(PARTICLES.AURA);
-
-        currentHealthPoints = limboHealth = maxHealthPoints1;
     }
 
     #endregion

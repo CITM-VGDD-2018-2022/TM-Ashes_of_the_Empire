@@ -8,8 +8,10 @@ public class MoffGideonCinematic : DiamondComponent
     public GameObject endCamera1 = null;
     public GameObject initialCamera3 = null;
     public GameObject endCamera3 = null;
+    public GameObject moffGideon = null;
     private Vector3 defaultCameraPos = null;
     private Quaternion defaultCameraRot = null;
+    private bool start = false;
 
     int sequenceCounter = 0;
     int amountOfSequencesPlusOne = 3;
@@ -17,8 +19,8 @@ public class MoffGideonCinematic : DiamondComponent
 
     float speed1 = 1.0f;
     float timer2 = 0.0f;
-    float time2 = 0.75f;
-    float speed3 = 3.0f;
+    float time2 = 0.55f;
+    float speed3 = 3.75f;
     float destinationDistance = 0.2f;
 
     public void Awake()
@@ -41,19 +43,38 @@ public class MoffGideonCinematic : DiamondComponent
 
     public void Update()
     {
-        if (sequenceCounter < amountOfSequencesPlusOne)
+        if (start == false)
         {
-            float newDeltaTime = Time.deltaTime;
-            if (newDeltaTime > 0.016f)
+            if (Core.instance != null)
             {
-                newDeltaTime = 0.016f;
+                Core.instance.LockInputs(true);
+
+                if (Core.instance.hud != null)
+                {
+                    Core.instance.hud.Enable(false);
+                }
+
             }
 
+            start = true;
+        }
+
+        if (sequenceCounter < amountOfSequencesPlusOne)
+        {
+            if (Core.instance != null)
+            {
+                if (Core.instance.hud != null)
+                {
+                    Core.instance.hud.Enable(false);
+                }
+            }
+
+            float newDeltaTime = Time.deltaTime;
             switch (sequenceCounter)
             {
                 case 0:
                     cameraAuxPosition += (endCamera1.transform.localPosition - gameCamera.transform.localPosition).normalized * newDeltaTime * speed1;
-                    
+
                     if (Mathf.Distance(gameCamera.transform.localPosition, endCamera1.transform.localPosition) <= destinationDistance)
                     {
                         sequenceCounter++;
@@ -98,15 +119,46 @@ public class MoffGideonCinematic : DiamondComponent
     private void EndCinematic()
     {
         sequenceCounter = amountOfSequencesPlusOne;
+        BlackFade.SetFadeSpdMult(1.5f);
         BlackFade.StartFadeIn(() =>
         {
             gameCamera.transform.localPosition = defaultCameraPos;
             gameCamera.transform.localRotation = defaultCameraRot;
             CameraManager.SetCameraOrthographic(gameCamera);
+
+            if (moffGideon != null)
+            {
+                MofGuideonRework moffScript = moffGideon.GetComponent<MofGuideonRework>();
+
+                if (moffScript != null)
+                {
+                    moffScript.HideCape();
+                }
+            }
+
+            if (Core.instance != null)
+            {
+                if (Core.instance.hud != null)
+                {
+                    Core.instance.hud.Enable(true);
+                }
+            }
+
             BlackFade.StartFadeOut(() =>
             {
                 gameCamera.GetComponent<CameraController>().startFollow = true;
+
+                if (Core.instance != null)
+                {
+                    Core.instance.LockInputs(false);
+                    if (Core.instance.hud != null)
+                    {
+                        Core.instance.hud.Enable(true);
+                    }
+                }
+
             });
+
         });
     }
 
