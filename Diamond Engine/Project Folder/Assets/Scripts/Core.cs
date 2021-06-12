@@ -2953,10 +2953,16 @@ public class Core : Entity
                     this.myDeltaTime = Time.deltaTime * speedMult;
                     if (slowParticleObject != null)
                     {
-                        if (speedMult < 1f)
-                            slowParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            slowParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem slowParticlePart = slowParticleObject.GetComponent<ParticleSystem>();
+
+                        if (slowParticlePart != null)
+                        {
+                            if (speedMult < 1f)
+                                slowParticlePart.Play();
+                            else
+                                slowParticlePart.Stop();
+                        }
+
                     }
 
                 }
@@ -2969,10 +2975,15 @@ public class Core : Entity
 
                     if (fastParticleObject != null)
                     {
-                        if (speedMult > 1f)
-                            fastParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            if (speedMult > 1f)
+                                fastParticlePart.Play();
+                            else
+                                fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -2984,10 +2995,15 @@ public class Core : Entity
 
                     if (fastParticleObject != null)
                     {
-                        if (speedMult > 1f)
-                            fastParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            if (speedMult > 1f)
+                                fastParticlePart.Play();
+                            else
+                                fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3001,10 +3017,15 @@ public class Core : Entity
 
                     if (fastParticleObject != null)
                     {
-                        if (speedMult > 1f)
-                            fastParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            if (speedMult > 1f)
+                                fastParticlePart.Play();
+                            else
+                                fastParticlePart.Stop();
+                        }
                     }
 
                 }
@@ -3019,10 +3040,15 @@ public class Core : Entity
 
                     if (fastParticleObject != null)
                     {
-                        if (speedMult > 1f)
-                            fastParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            if (speedMult > 1f)
+                                fastParticlePart.Play();
+                            else
+                                fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3036,10 +3062,15 @@ public class Core : Entity
 
                     if (fastParticleObject != null)
                     {
-                        if (speedMult > 1f)
-                            fastParticleObject.GetComponent<ParticleSystem>().Play();
-                        else
-                            fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            if (speedMult > 1f)
+                                fastParticlePart.Play();
+                            else
+                                fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3302,7 +3333,12 @@ public class Core : Entity
                     this.myDeltaTime = Time.deltaTime * speedMult;
                     if (slowParticleObject != null)
                     {
-                        slowParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem slowParticlePart = slowParticleObject.GetComponent<ParticleSystem>();
+
+                        if (slowParticlePart != null && speedMult >= 1f)
+                        {
+                            slowParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3313,7 +3349,13 @@ public class Core : Entity
                     this.myDeltaTime = Time.deltaTime * speedMult;
                     if (fastParticleObject != null && speedMult <= 1f)
                     {
-                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            fastParticlePart.Stop();
+                        }
+
                     }
                 }
                 break;
@@ -3325,7 +3367,12 @@ public class Core : Entity
 
                     if (fastParticleObject != null && speedMult <= 1f)
                     {
-                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3337,7 +3384,12 @@ public class Core : Entity
 
                     if (fastParticleObject != null && speedMult <= 1f)
                     {
-                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3349,7 +3401,12 @@ public class Core : Entity
 
                     if (fastParticleObject != null && speedMult <= 1f)
                     {
-                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
@@ -3361,7 +3418,12 @@ public class Core : Entity
 
                     if (fastParticleObject != null && speedMult <= 1f)
                     {
-                        fastParticleObject.GetComponent<ParticleSystem>().Stop();
+                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
+
+                        if (fastParticlePart != null)
+                        {
+                            fastParticlePart.Stop();
+                        }
                     }
                 }
                 break;
