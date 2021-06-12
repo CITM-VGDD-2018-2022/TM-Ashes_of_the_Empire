@@ -13,20 +13,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -11.047249794006348,
-                8.8548679351806641,
-                -11.11531925201416
+                -8.4428396224975586,
+                1.5600008964538574,
+                0.43319374322891235
             ],
             "Rotation": [
                 0,
+                0.7048194408416748,
                 0,
-                0,
-                1
+                0.70938676595687866
             ],
             "Scale": [
+                0.99999934434890747,
                 1,
-                1,
-                1
+                0.99999934434890747
             ],
             "Components": [
                 {
@@ -111,7 +111,8 @@
                     "secSound": 970959798,
                     "fallDamage": 15,
                     "fastParticleObject": 1669506617,
-                    "slowParticleObject": 638363503
+                    "slowParticleObject": 638363503,
+                    "startAvailable": true
                 },
                 {
                     "Type": 13,
@@ -3698,7 +3699,7 @@
             "name": "Rifle",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 866035125,
             "ParentUID": 47750865,
             "PrefabReference": 0,
@@ -4418,7 +4419,7 @@
             "name": "Blaster",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 2037029300,
             "ParentUID": 47750865,
             "PrefabReference": 0,
@@ -4815,208 +4816,36 @@
             ]
         },
         {
-            "name": "Dust fasted",
+            "name": "Slowed Trail",
             "tag": "Untagged",
             "layer": "Default",
             "Active": true,
-            "UID": 1669506617,
+            "UID": 1283429392,
             "ParentUID": 47750865,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -0.077829360961914063,
-                1.0004301071166992,
-                0.060049057006835938
+                0,
+                0,
+                0
             ],
             "Rotation": [
-                -0.13088957965373993,
-                0.6914171576499939,
-                0.69859021902084351,
-                0.12954549491405487
+                -1.9389676708669867e-07,
+                -0.89627164602279663,
+                1.2553097405998415e-07,
+                0.44350546598434448
             ],
             "Scale": [
-                1.0000003576278687,
-                0.99999910593032837,
-                0.99999892711639404
+                1.0000004768371582,
+                1,
+                1.0000004768371582
             ],
             "Components": [
                 {
                     "Type": 1,
                     "Active": true
-                },
-                {
-                    "Type": 3,
-                    "Active": true,
-                    "IsEmpty": true,
-                    "MaterialAssetPath": "Empty",
-                    "MaterialLibraryPath": "Library\/Materials\/355756108.mat",
-                    "MaterialUID": 355756108
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "systemActive": false,
-                    "looping": true,
-                    "maxDuration": 10,
-                    "ParticleEmitters": [
-                        {
-                            "AssetPath": "Empty",
-                            "LibraryPath": "Library\/Textures\/2134419253.dds",
-                            "texUID": 2134419253,
-                            "paEmitterName": "Effect",
-                            "paLifeTime": [
-                                0.30000001192092896,
-                                2
-                            ],
-                            "paSize": [
-                                1,
-                                1
-                            ],
-                            "paColor": [
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            "paPerSec": 25,
-                            "paRelative": false,
-                            "ParticleEffects": [
-                                {
-                                    "paEffectType": 2,
-                                    "Gradients": [
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                0.99604743719100952,
-                                                0,
-                                                0.81422924995422363
-                                            ],
-                                            "paColorOLTposition": 0
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                0.92490118741989136,
-                                                0,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 1
-                                        }
-                                    ]
-                                },
-                                {
-                                    "paEffectType": 3,
-                                    "paSizeOLTStartSize": 0.05000000074505806,
-                                    "paSizeOLTEndSize": 0
-                                },
-                                {
-                                    "paEffectType": 5,
-                                    "paShapeHasInitSpeed": true,
-                                    "paShapePartSpeed": 0,
-                                    "paShapeRandSpeed": 0,
-                                    "PaShapeAreaDimensions": [
-                                        0.30000001192092896,
-                                        0.25,
-                                        1
-                                    ],
-                                    "PaShapeSphereDirection": false,
-                                    "PaShapeSphereAngle": 0,
-                                    "paShapeType": 0,
-                                    "PaShapeOffset": [
-                                        0,
-                                        0,
-                                        -0.20000000298023224
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "AssetPath": "Empty",
-                            "LibraryPath": "Library\/Textures\/905006938.dds",
-                            "texUID": 905006938,
-                            "paEmitterName": "Empty",
-                            "paLifeTime": [
-                                0.30000001192092896,
-                                0.60000002384185791
-                            ],
-                            "paSize": [
-                                0.15000000596046448,
-                                0.15000000596046448
-                            ],
-                            "paColor": [
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            "paPerSec": 7,
-                            "paRelative": false,
-                            "ParticleEffects": [
-                                {
-                                    "paEffectType": 0,
-                                    "paFOLT_direction": [
-                                        0,
-                                        1,
-                                        0
-                                    ],
-                                    "paFOLT_magnitude": 5,
-                                    "paFOLT_gravityMod": 0,
-                                    "paFOLT_gravity": -0,
-                                    "paFOLT_forceType": 0
-                                },
-                                {
-                                    "paEffectType": 2,
-                                    "Gradients": [
-                                        {
-                                            "paColorOLTcolor": [
-                                                0.91304349899291992,
-                                                0.86116570234298706,
-                                                0,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 0
-                                        },
-                                        {
-                                            "paColorOLTcolor": [
-                                                1,
-                                                0.922618567943573,
-                                                0,
-                                                1
-                                            ],
-                                            "paColorOLTposition": 1
-                                        }
-                                    ]
-                                },
-                                {
-                                    "paEffectType": 5,
-                                    "paShapeHasInitSpeed": false,
-                                    "paShapePartSpeed": 0,
-                                    "paShapeRandSpeed": 0,
-                                    "PaShapeAreaDimensions": [
-                                        0.40000000596046448,
-                                        0.30000001192092896,
-                                        0.5
-                                    ],
-                                    "PaShapeSphereDirection": false,
-                                    "PaShapeSphereAngle": 0,
-                                    "paShapeType": 0,
-                                    "PaShapeOffset": [
-                                        0,
-                                        0,
-                                        -0.30000001192092896
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "billboardAlignment": 0,
-                    "horizantalAligned": true
                 }
             ]
         },
@@ -5026,26 +4855,26 @@
             "layer": "Default",
             "Active": true,
             "UID": 638363503,
-            "ParentUID": 47750865,
+            "ParentUID": 1283429392,
             "PrefabReference": 0,
             "PrefabID": 0,
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                15.126165390014648,
-                5.8888483047485352,
-                8.1670799255371094
+                5.245208740234375e-06,
+                1,
+                -2.384185791015625e-06
             ],
             "Rotation": [
-                -0.31521987915039063,
-                -0.63048070669174194,
-                -0.63702231645584106,
-                0.311982661485672
+                -0.31522056460380554,
+                -0.63048195838928223,
+                -0.63702100515365601,
+                0.31198206543922424
             ],
             "Scale": [
-                1.0000009536743164,
-                0.99999964237213135,
-                0.99999922513961792
+                1.0000063180923462,
+                1.0000002384185791,
+                1.000003457069397
             ],
             "Components": [
                 {
@@ -5212,6 +5041,64 @@
                     "Active": true,
                     "billboardAlignment": 0,
                     "horizantalAligned": true
+                }
+            ]
+        },
+        {
+            "name": "Fasted Trail",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1973663272,
+            "ParentUID": 47750865,
+            "PrefabReference": 0,
+            "PrefabID": 2073226706,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                5.1013579138725618e-08,
+                -0.98289668560028076,
+                5.1013579138725618e-08,
+                -0.18415790796279907
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "Dust fasted",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1669506617,
+                    "ParentUID": 1973663272,
+                    "PrefabID": 0,
+                    "PrefabReference": 1669506617,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.030359745025634766,
+                        0.90680027008056641,
+                        -0.0086464881896972656
+                    ],
+                    "Rotation": [
+                        -0.7107468843460083,
+                        1.1087998075254291e-07,
+                        -1.3187482750254276e-07,
+                        0.70344787836074829
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999880790710449,
+                        0.99999994039535522
+                    ]
                 }
             ]
         }
