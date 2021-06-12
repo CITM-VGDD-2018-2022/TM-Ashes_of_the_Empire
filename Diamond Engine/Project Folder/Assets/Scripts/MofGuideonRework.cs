@@ -3447,7 +3447,6 @@ public class MofGuideonRework : Entity
         Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
 
         Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Death");
-        Audio.PlayAudio(gameObject, "Play_Victory_Music");
 
         Input.PlayHaptic(1f, 1000);
 
@@ -3469,7 +3468,8 @@ public class MofGuideonRework : Entity
     public void Die()
     {
         EnemyManager.RemoveEnemy(gameObject);
-
+        if (EnvironmentSourceLocate.instance != null)
+            Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_Victory_Music");
         Animator.Pause(gameObject);
         Audio.StopAudio(gameObject);
         Input.PlayHaptic(0.3f, 3);
