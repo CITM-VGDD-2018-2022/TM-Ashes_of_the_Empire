@@ -66,6 +66,7 @@ public class CinematicManager : DiamondComponent
             {
                 cinematicDialogue.Enable(true);
                 gameObject.GetComponent<CinematicDialog>().StartDialog();
+                Audio.PlayAudio(gameObject, "Play_Mando_Dialog");
 
            
                 Audio.PlayAudio(gameObject, "Play_Razor_Motor");

@@ -31,6 +31,10 @@ public class CinematicDialog : DiamondComponent
 			{
 				textController.OnExecuteButton();
 				countDialogs++;
+				if(countDialogs == 1)
+                {
+					Audio.PlayAudio(gameObject, "Play_Grogu_Dialog");
+				}
 			}
 			timerDialog = 0;
 		}
