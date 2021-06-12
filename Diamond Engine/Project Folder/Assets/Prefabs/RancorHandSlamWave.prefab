@@ -38,6 +38,7 @@
                     "Active": false,
                     "Path": "Library\/Meshes\/1313575480.mmh",
                     "UID": 1313575480,
+                    "bumpDepth": 0,
                     "alternColor": [
                         1,
                         0,
@@ -48,7 +49,9 @@
                         1,
                         1
                     ],
-                    "doNotDrawStencil": true
+                    "stencilEmission": 0,
+                    "doNotDrawStencil": true,
+                    "drawShadows": true
                 },
                 {
                     "Type": 14,
@@ -91,7 +94,7 @@
                     "ScriptName": "RancorHandSlamWave",
                     "colliderSpeed": 0.60000002384185791,
                     "lifeTime": 1,
-                    "damage": 25,
+                    "damage": 20,
                     "slamWave": 807306553
                 }
             ]
@@ -163,6 +166,7 @@
                                 1
                             ],
                             "paPerSec": 500,
+                            "paRelative": true,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -253,6 +257,7 @@
                                 1
                             ],
                             "paPerSec": 250,
+                            "paRelative": true,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
