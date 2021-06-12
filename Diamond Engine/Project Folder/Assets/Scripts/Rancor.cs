@@ -220,7 +220,7 @@ public class Rancor : Entity
         toggleLegParticle = true;
         StartRoar();
 
-        this.AddStatus(STATUS_TYPE.ACCELERATED, STATUS_APPLY_TYPE.SUBSTITUTE, 0.4f, 1f, true);
+        this.AddStatus(STATUS_TYPE.ACCELERATED, STATUS_APPLY_TYPE.SUBSTITUTE, 0.25f, 1f, true);
 
     }
 
