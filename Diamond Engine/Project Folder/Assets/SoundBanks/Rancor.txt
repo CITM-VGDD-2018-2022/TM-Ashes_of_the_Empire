@@ -28,7 +28,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	4978000	Rancor_Hit_Growl 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor_Hit_Growl 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor hit\Rancor_Hit_Growl 1		112012
-	22332606	Rancor rock pull	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor rock pull_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Rock Throw\Rancor rock pull		144712
+	22332606	Rancor rock pull	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor rock pull_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Rock Throw\Rancor rock pull		108004
 	30862167	rancor punch swish 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\rancor punch swish 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\rancor punch swish 2		170736
 	36736387	Rancor booty impact	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor booty impact_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor booty impact		235012
 	41185061	RancorHit2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\RancorHit2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor hit\RancorHit2		138464
@@ -42,14 +42,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	358269163	Bantha body hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha body hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor hit\Bantha body hit 1		107620
 	398531261	SniperHit4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Sniper_Hit\SniperHit4		132012
 	584482498	RancorHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\RancorHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor hit\RancorHit3		36948
-	685391831	rancor rush fall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\rancor death fall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\rancor rush fall		270220
+	685391831	rancor death fall	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\rancor death fall_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Death\rancor death fall		270220
 	703082497	SniperHit3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\SniperHit3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Sniper_Hit\SniperHit3		103204
 	769836140	Rock impact	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rock impact_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rock impact		190680
 	792758880	Rancor roar presentation	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor roar presentation_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor roar presentation		336232
-	818849677	Rancor_HandSlam	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor_HandSlam_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor_HandSlam		285996
+	818849677	Rancor_HandSlam	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor_HandSlam_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor_HandSlam		210444
 	825049687	Rancor wall impact	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor wall impact_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor wall impact		137628
 	857968306	Bantha body hit 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha body hit 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor hit\Bantha body hit 3		98280
 	872536724	rancor punch swish	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\rancor punch swish_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\rancor punch swish		155860
-	930133299	Rancor Projectile throw	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor Projectile throw_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Rock Throw\Rancor Projectile throw		245292
-	1050047278	Rancor Breath	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor Breath_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Breath		362560
+	930133299	Rancor Projectile throw	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Rancor Projectile throw_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Rancor\Rancor Rock Throw\Rancor Projectile throw		152160
 
