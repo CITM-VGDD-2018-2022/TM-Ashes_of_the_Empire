@@ -2,18 +2,18 @@
     "NavMesh": -1,
     "EditorCameraPosition": [
         2.4285941123962402,
-        1.1158713102340698,
+        1.1158714294433594,
         -1.3626304864883423
     ],
     "EditorCameraZ": [
         -0.80953139066696167,
-        -0.37195712327957153,
+        -0.37195715308189392,
         0.45421016216278076
     ],
     "EditorCameraY": [
-        -0.32438564300537109,
+        -0.32438567280769348,
         0.92824989557266235,
-        0.1820056140422821
+        0.1820056289434433
     ],
     "SkyboxPath0": "Assets\/Textures\/Skyboxs\/lvl1rt.png",
     "SkyboxPath1": "Assets\/Textures\/Skyboxs\/lvl1lf.png",
@@ -7515,11 +7515,12 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 23.676469802856445,
-                    "hFOV": 45.772056579589844,
-                    "culling": false,
+                    "vFOV": 23.897058486938477,
+                    "hFOV": 37.132350921630859,
+                    "culling": true,
                     "HDR": true,
-                    "drawSkybox": false
+                    "drawSkybox": false,
+                    "ProfileUID": 75588803
                 },
                 {
                     "Type": 12,
@@ -12684,6 +12685,7 @@
                             ],
                             "paPerSec": 15,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -12736,6 +12738,7 @@
                             ],
                             "paPerSec": 30,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -12879,6 +12882,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12961,6 +12965,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 5,
@@ -13007,10 +13012,10 @@
                 -0.19471836090087891
             ],
             "Rotation": [
-                0.1939222663640976,
-                -2.7353402876073574e-10,
-                1.3877787807814457e-17,
-                0.98101687431335449
+                0.19392229616641998,
+                -2.7353405651631135e-10,
+                1.3877789462175682e-17,
+                0.98101699352264404
             ],
             "Scale": [
                 1,
@@ -13092,6 +13097,7 @@
                             ],
                             "paPerSec": 1000,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13198,6 +13204,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13272,6 +13279,7 @@
                             ],
                             "paPerSec": 1000,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13378,6 +13386,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13543,6 +13552,7 @@
                             ],
                             "paPerSec": 700,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -13635,6 +13645,7 @@
                             ],
                             "paPerSec": 15,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 5,
@@ -13800,6 +13811,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": false,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 3,
@@ -13920,6 +13932,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": false,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 3,
@@ -14050,6 +14063,7 @@
                             ],
                             "paPerSec": 15,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14128,6 +14142,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14416,6 +14431,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -14502,6 +14518,7 @@
                             ],
                             "paPerSec": 10,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -14558,6 +14575,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -14644,6 +14662,7 @@
                             ],
                             "paPerSec": 150,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -14778,6 +14797,7 @@
                             ],
                             "paPerSec": 1000,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -14854,6 +14874,7 @@
                             ],
                             "paPerSec": 1000,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -15135,6 +15156,7 @@
                             ],
                             "paPerSec": 15,
                             "paRelative": false,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15213,6 +15235,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": false,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15602,10 +15625,10 @@
                 -0.031259402632713318
             ],
             "Rotation": [
-                0.13620609045028687,
-                -0.046609118580818176,
-                -0.21609097719192505,
-                0.9657018780708313
+                0.13620610535144806,
+                -0.046609122306108475,
+                -0.21609100699424744,
+                0.96570199728012085
             ],
             "Scale": [
                 1,
@@ -15840,10 +15863,10 @@
                 -1.8771970644593239e-09
             ],
             "Rotation": [
-                -0.99998879432678223,
-                0.0036636227741837502,
-                0.0029935894999653101,
-                -1.0057548934128135e-05
+                -0.99998891353607178,
+                0.0036636232398450375,
+                0.0029935899656265974,
+                -1.0057549843622837e-05
             ],
             "Scale": [
                 1.0000998973846436,
@@ -16044,10 +16067,10 @@
                 -0.025999993085861206
             ],
             "Rotation": [
-                0.0091560166329145432,
-                -0.48849368095397949,
-                0.019452357664704323,
-                0.87230247259140015
+                0.0091560175642371178,
+                -0.48849374055862427,
+                0.019452359527349472,
+                0.8723025918006897
             ],
             "Scale": [
                 1,
@@ -17782,6 +17805,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -17945,6 +17969,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 3,
@@ -18099,6 +18124,7 @@
                             ],
                             "paPerSec": 101,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18172,6 +18198,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18323,6 +18350,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -18390,6 +18418,7 @@
                             ],
                             "paPerSec": 300,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -18515,6 +18544,7 @@
                             ],
                             "paPerSec": 101,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18588,6 +18618,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18739,6 +18770,7 @@
                             ],
                             "paPerSec": 150,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18816,6 +18848,7 @@
                             ],
                             "paPerSec": 700,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -19095,10 +19128,10 @@
                 -0.031259402632713318
             ],
             "Rotation": [
-                0.13620609045028687,
-                -0.046609118580818176,
-                -0.21609097719192505,
-                0.9657018780708313
+                0.13620610535144806,
+                -0.046609122306108475,
+                -0.21609100699424744,
+                0.96570199728012085
             ],
             "Scale": [
                 1,
@@ -19333,10 +19366,10 @@
                 -1.8771970644593239e-09
             ],
             "Rotation": [
-                -0.99998879432678223,
-                0.0036636227741837502,
-                0.0029935894999653101,
-                -1.0057548934128135e-05
+                -0.99998891353607178,
+                0.0036636232398450375,
+                0.0029935899656265974,
+                -1.0057549843622837e-05
             ],
             "Scale": [
                 1.0000998973846436,
@@ -19537,10 +19570,10 @@
                 -0.025999993085861206
             ],
             "Rotation": [
-                0.0091560166329145432,
-                -0.48849368095397949,
-                0.019452357664704323,
-                0.87230247259140015
+                0.0091560175642371178,
+                -0.48849374055862427,
+                0.019452359527349472,
+                0.8723025918006897
             ],
             "Scale": [
                 1,
@@ -21275,6 +21308,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -21438,6 +21472,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 3,
@@ -21592,6 +21627,7 @@
                             ],
                             "paPerSec": 101,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -21665,6 +21701,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -21816,6 +21853,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -21883,6 +21921,7 @@
                             ],
                             "paPerSec": 300,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -22008,6 +22047,7 @@
                             ],
                             "paPerSec": 101,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -22081,6 +22121,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -22232,6 +22273,7 @@
                             ],
                             "paPerSec": 150,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -22309,6 +22351,7 @@
                             ],
                             "paPerSec": 700,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -22826,6 +22869,7 @@
                             ],
                             "paPerSec": 20,
                             "paRelative": false,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -22890,6 +22934,7 @@
                             ],
                             "paPerSec": 300,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
