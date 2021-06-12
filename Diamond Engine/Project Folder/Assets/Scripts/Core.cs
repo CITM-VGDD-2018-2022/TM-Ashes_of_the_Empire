@@ -3671,4 +3671,9 @@ public class Core : Entity
             babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
         Debug.Log("Entering Zone 2");
     }
+
+    public void OnDestroy()
+    {
+        Core.instance = null;
+    }
 }
