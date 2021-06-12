@@ -421,7 +421,7 @@ public class LaserTurret : Enemy
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Turret_Sniper_Hit");
             if (bullet != null && currentState != STATE.DIE)
             {
                 if (sniperHitParticle != null)

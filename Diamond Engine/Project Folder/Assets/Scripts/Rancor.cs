@@ -1367,7 +1367,7 @@ public class Rancor : Entity
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Rancor_Sniper_Hit");
             if (currentState != RANCOR_STATE.DEAD)
             {
                 float damageToBoss = 0f;

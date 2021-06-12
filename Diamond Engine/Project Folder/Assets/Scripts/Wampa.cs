@@ -483,7 +483,7 @@ public class Wampa : Bosseslv2
         {
 
             ChargedBullet bulletComp = collidedGameObject.GetComponent<ChargedBullet>();
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Wampa_Sniper_Hit");
             if (bulletComp != null)
             {
                 float vulerableSev = 0.2f;

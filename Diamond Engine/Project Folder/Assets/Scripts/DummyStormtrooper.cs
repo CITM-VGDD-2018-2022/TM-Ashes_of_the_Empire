@@ -562,7 +562,7 @@ public class DummyStormtrooper : Enemy
                     }
                 }
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Sniper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {
