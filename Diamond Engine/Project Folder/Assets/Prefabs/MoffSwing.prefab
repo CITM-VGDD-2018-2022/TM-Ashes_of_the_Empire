@@ -76,7 +76,7 @@
                     "maxLifeTime": 2,
                     "damage": 15,
                     "swingParticleObj": 380063530,
-                    "hasCollided": true
+                    "hasCollided": false
                 }
             ]
         },
@@ -203,7 +203,7 @@
                                     "paShapePartSpeed": 0,
                                     "paShapeRandSpeed": 0,
                                     "PaShapeAreaDimensions": [
-                                        3,
+                                        2.5,
                                         10,
                                         0.75
                                     ],
