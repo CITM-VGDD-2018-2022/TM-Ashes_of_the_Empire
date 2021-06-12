@@ -865,7 +865,7 @@ public class HeavyTrooper : Enemy
             {
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Heavytrooper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {

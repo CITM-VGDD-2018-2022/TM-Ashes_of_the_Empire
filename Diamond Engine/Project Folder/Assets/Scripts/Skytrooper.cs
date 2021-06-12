@@ -734,7 +734,7 @@ public class Skytrooper : Enemy
             {
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Skytrooper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {
