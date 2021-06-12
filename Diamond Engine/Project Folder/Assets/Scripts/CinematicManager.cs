@@ -108,6 +108,8 @@ public class CinematicManager : DiamondComponent
             postCinematicDialogue.Enable(true);
             postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         }
+        cinematicDialogue.Enable(false);
+        gameObject.GetComponent<CinematicDialog>().StopDialog();
         PlayHUBMusic();
     } 
     
@@ -120,6 +122,8 @@ public class CinematicManager : DiamondComponent
         postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         CameraManager.SetCameraOrthographic(gameCamera);
         PlayHUBMusic();
+        cinematicDialogue.Enable(false);
+        gameObject.GetComponent<CinematicDialog>().StopDialog();
     }
 
     private void PlayHUBMusic()
@@ -145,6 +149,7 @@ public class CinematicManager : DiamondComponent
 
                 StopAllSequences();
                 ReturnGame();
+                
                 init = false;
             
         }

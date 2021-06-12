@@ -53,6 +53,11 @@ public class CinematicDialog : DiamondComponent
 		{
 			textController.PauseGame(false);
 		}
+	}	
+	
+	public void StopDialog()
+    {
+		startDialog = false;
 	}
 
 }
