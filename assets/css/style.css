@@ -551,29 +551,11 @@ section {
 .game .content p {
   margin-bottom: 30px;
 }
-/*
-.game .content .game-btn {
-  padding: 8px 30px 9px 30px;
-  color: #fff;
-  border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid #e03a3c;
-}*/
 
 .game .content .game-btn i {
   font-size: 16px;
   padding-left: 5px;
 }
-/*
-.game .content .game-btn:hover {
-  background: #e35052;
-  background: #e03a3c;
-}*/
 
 .game .content .game-btn {
   font-family: "Raleway", sans-serif;
