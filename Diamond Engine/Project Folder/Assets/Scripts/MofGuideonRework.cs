@@ -3283,6 +3283,18 @@ public class MofGuideonRework : Entity
         }
         if (cape != null)
         {
+
+            if (capeMesh != null)
+            {
+                MeshRenderer capeMeshRend = capeMesh.GetComponent<MeshRenderer>();
+
+                if (capeMeshRend != null)
+                {
+                    capeMeshRend.active = true;
+                }
+
+            }
+
             Animator.Resume(cape);
             Animator.Play(cape, "MG_Cape_Off", speedMult);
         }
