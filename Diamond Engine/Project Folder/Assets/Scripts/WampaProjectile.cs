@@ -46,7 +46,7 @@ public class WampaProjectile : DiamondComponent
 
 	public void OnTriggerEnter(GameObject triggeredGameObject)
 	{
-		if (triggeredGameObject.CompareTag("Player"))
+		if (triggeredGameObject.CompareTag("Player") && !to_destroy)
 		{
 			PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
 			if (health != null)
