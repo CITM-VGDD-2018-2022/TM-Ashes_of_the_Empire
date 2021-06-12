@@ -1,19 +1,19 @@
 {
     "NavMesh": 134349424,
     "EditorCameraPosition": [
-        -2.9312868118286133,
-        38.188018798828125,
-        -37.564971923828125
+        -5.4955568313598633,
+        9.8945350646972656,
+        -9.1893854141235352
     ],
     "EditorCameraZ": [
-        0.34669342637062073,
-        -0.73541927337646484,
-        0.58220469951629639
+        0.27997368574142456,
+        -0.79167741537094116,
+        0.54301166534423828
     ],
     "EditorCameraY": [
-        0.37637960910797119,
-        0.6776123046875,
-        0.63180685043334961
+        0.36280262470245361,
+        0.6109393835067749,
+        0.70365291833877563
     ],
     "SkyboxPath0": "Library\/Textures\/483487888.dds",
     "SkyboxPath1": "Library\/Textures\/1874848602.dds",
@@ -109,8 +109,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 18.25,
-                    "hFOV": 26.375,
+                    "vFOV": 10.925000190734863,
+                    "hFOV": 26.575000762939453,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -2664,20 +2664,20 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -0.10300000011920929,
-                        1.0989999771118164,
-                        0.041000001132488251
+                        -1.0093438625335693,
+                        0.071615219116210938,
+                        0.16918849945068359
                     ],
                     "Rotation": [
-                        5.1013579138725618e-08,
-                        -0.98289668560028076,
-                        5.1013579138725618e-08,
-                        -0.18415790796279907
+                        0.68174362182617188,
+                        0.62862527370452881,
+                        -0.30138823390007019,
+                        0.22185827791690826
                     ],
                     "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
+                        0.99999916553497314,
+                        1.0000003576278687,
+                        1
                     ],
                     "PrefabObjects": [
                         {
@@ -2692,20 +2692,20 @@
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [
-                                -0.030359268188476563,
-                                -0.098569869995117188,
-                                -0.00864410400390625
+                                0.092470169067382813,
+                                0.90680009126663208,
+                                -0.03590923547744751
                             ],
                             "Rotation": [
-                                -0.7107464075088501,
-                                8.4629483865228394e-08,
-                                -8.3760532731957937e-08,
-                                0.70344835519790649
+                                -0.7107468843460083,
+                                -4.4103742879997299e-08,
+                                1.2571691243579153e-08,
+                                0.70344787836074829
                             ],
                             "Scale": [
                                 1,
                                 0.99999880790710449,
-                                0.99999880790710449
+                                1
                             ]
                         },
                         {
@@ -2720,20 +2720,20 @@
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [
-                                -14.062906265258789,
-                                2.5918512344360352,
-                                10.017618179321289
+                                -0.89940214157104492,
+                                0.16611194610595703,
+                                0.14865398406982422
                             ],
                             "Rotation": [
-                                -6.5570951335303107e-08,
-                                -0.84956026077270508,
-                                -1.4235808976081898e-07,
-                                -0.52749162912368774
+                                0.032231856137514114,
+                                0.079952940344810486,
+                                -0.74469602108001709,
+                                0.66181302070617676
                             ],
                             "Scale": [
-                                1.0000001192092896,
-                                1,
-                                1.0000001192092896
+                                1.0000002384185791,
+                                1.0000030994415283,
+                                1.0000003576278687
                             ]
                         },
                         {
@@ -2748,20 +2748,20 @@
                             "DontDestroy": false,
                             "Static": false,
                             "Position": [
-                                0,
-                                0,
-                                -0.0081720352172851563
+                                0.058499336242675781,
+                                0.99999940395355225,
+                                -0.095629692077636719
                             ],
                             "Rotation": [
-                                -0.71074634790420532,
-                                0,
-                                0,
-                                0.70344835519790649
+                                -0.31522074341773987,
+                                -0.63048261404037476,
+                                -0.6370202898979187,
+                                0.31198188662528992
                             ],
                             "Scale": [
-                                1,
-                                0.99999886751174927,
-                                0.99999892711639404
+                                1.0000073909759521,
+                                1.0000004768371582,
+                                1.0000038146972656
                             ]
                         }
                     ]
@@ -27268,10 +27268,10 @@
                 18.273334503173828
             ],
             "Rotation": [
-                -0.65846776962280273,
-                0.25775009393692017,
-                0.25774145126342773,
-                0.65844863653182983
+                -0.65846771001815796,
+                0.25775006413459778,
+                0.25774142146110535,
+                0.65844857692718506
             ],
             "Scale": [
                 2.7491726875305176,
@@ -28281,10 +28281,10 @@
                 9.1278800964355469
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008630752563477,
-                0.50008630752563477,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
             ],
             "Scale": [
                 2.8207032680511475,
@@ -28370,10 +28370,10 @@
                 -8.1764097213745117
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008630752563477,
-                0.50008630752563477,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
             ],
             "Scale": [
                 2.8207032680511475,
@@ -28459,10 +28459,10 @@
                 -6.4609365463256836
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008630752563477,
-                0.50008630752563477,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
             ],
             "Scale": [
                 4.4429512023925781,
@@ -28548,10 +28548,10 @@
                 7.9748992919921875
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008630752563477,
-                0.50008630752563477,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
             ],
             "Scale": [
                 1.2603104114532471,
@@ -28637,10 +28637,10 @@
                 0.075858980417251587
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008630752563477,
-                0.50008630752563477,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008636713027954,
+                0.50008636713027954,
+                0.49991369247436523
             ],
             "Scale": [
                 1.2603104114532471,
@@ -28815,10 +28815,10 @@
                 -12.062021255493164
             ],
             "Rotation": [
-                -0.49991369247436523,
-                0.50008624792098999,
-                0.50008636713027954,
-                0.49991363286972046
+                -0.49991375207901001,
+                0.50008630752563477,
+                0.50008642673492432,
+                0.49991369247436523
             ],
             "Scale": [
                 1.1475074291229248,
@@ -34241,820 +34241,6 @@
             ]
         },
         {
-            "name": "SpikeTrap_LB",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1793268722,
-            "ParentUID": 411617979,
-            "PrefabReference": 2041003809,
-            "PrefabID": 1327417573,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -3.9692912101745605,
-                -0.0016235709190368652,
-                0.47592705488204956
-            ],
-            "Rotation": [
-                0,
-                0,
-                0,
-                1
-            ],
-            "Scale": [
-                1.847599983215332,
-                1.847599983215332,
-                1.847599983215332
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "SpikeTrap",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 904908723,
-                    "ParentUID": 1793268722,
-                    "PrefabID": 0,
-                    "PrefabReference": 2028231693,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.0027942657470703125,
-                        -0.0015521049499511719,
-                        -0.000926971435546875
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        0.99999988079071045,
-                        0.99999988079071045,
-                        0.99999988079071045
-                    ]
-                },
-                {
-                    "name": "Main",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2069935591,
-                    "ParentUID": 1793268722,
-                    "PrefabID": 0,
-                    "PrefabReference": 1878973515,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.0029703022446483374,
-                        -0.38295143842697144,
-                        0.006329632829874754
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_1",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1948165429,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 2048730810,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        3.4694469519536142e-18,
-                        0.37437477707862854,
-                        1.7347234759768071e-18
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_2",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 305671536,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 971372917,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.26471039652824402,
-                        0.19755105674266815,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_3",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1742549733,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1546326780,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.57067579030990601,
-                        0.30665293335914612,
-                        -0.0069137723185122013
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_4",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 261291222,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1314042623,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.52329802513122559,
-                        0.25934121012687683,
-                        -0.307024747133255
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_5",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 22193125,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 10610036,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.53936910629272461,
-                        0.28019478917121887,
-                        -0.58446770906448364
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_6",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1066813432,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 2094425435,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.2636968195438385,
-                        0.2713300883769989,
-                        -0.55071192979812622
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_7",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1896017777,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1853578835,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.0063494876958429813,
-                        0.24322941899299622,
-                        -0.52258211374282837
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_8",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1128838721,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1424756011,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.2735828161239624,
-                        0.26480108499526978,
-                        -0.55071192979812622
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_9",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1569049129,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 668586901,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.55488103628158569,
-                        0.27417433261871338,
-                        -0.55071192979812622
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_10",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 571254513,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 980585796,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.55488103628158569,
-                        0.28273752331733704,
-                        -0.26941367983818054
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_11",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2060790780,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 858565186,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.59388077259063721,
-                        0.34354910254478455,
-                        -0.010619305074214935
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_12",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 932438310,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1106983908,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.5999712347984314,
-                        0.35357654094696045,
-                        0.29599577188491821
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_13",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1004415347,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 433535332,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.53215527534484863,
-                        0.19598537683486938,
-                        0.53961288928985596
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_14",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 2038359873,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 280690587,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.27866026759147644,
-                        0.16040283441543579,
-                        0.47081360220909119
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_15",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 490873432,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 2005653474,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.0086669996380805969,
-                        0.21204797923564911,
-                        0.52899318933486938
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_16",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 44450914,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1918818120,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.28588452935218811,
-                        0.15565747022628784,
-                        0.44932493567466736
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_17",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 193148267,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1521103591,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.53647142648696899,
-                        0.15106487274169922,
-                        0.48372864723205566
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_18",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1780382940,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1892024500,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.57836592197418213,
-                        0.31508022546768188,
-                        0.28755682706832886
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_19",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1432044547,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 138291167,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.26542717218399048,
-                        0.13535948097705841,
-                        0.26664566993713379
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_20",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1297611065,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 800148206,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.00072352326242253184,
-                        0.17780168354511261,
-                        0.24536208808422089
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_21",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 637894369,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1392446746,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.27574560046195984,
-                        0.18616496026515961,
-                        0.25198072195053101
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_22",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 882044189,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1828110392,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.23937207460403442,
-                        0.19393828511238098,
-                        -0.02468421682715416
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_23",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1503596404,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 2107778330,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.26795685291290283,
-                        0.20324593782424927,
-                        -0.26097473502159119
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_24",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 647386222,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 1635062479,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        -0.0091624706983566284,
-                        0.19642050564289093,
-                        -0.26660069823265076
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "spike_25",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 289378626,
-                    "ParentUID": 2069935591,
-                    "PrefabID": 0,
-                    "PrefabReference": 871690283,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0.21225981414318085,
-                        0.1451263427734375,
-                        -0.24909202754497528
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "ctrl_Main",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1285228239,
-                    "ParentUID": 1793268722,
-                    "PrefabID": 0,
-                    "PrefabReference": 61328523,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Prop_Barrel",
             "tag": "ExplosiveBarrel",
             "layer": "Default",
@@ -35560,6 +34746,372 @@
                         0.28591179847717285,
                         0.85974591970443726,
                         0.27513054013252258
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 625016039,
+            "ParentUID": 411617979,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -3.9000000953674316,
+                0,
+                0.4699999988079071
+            ],
+            "Rotation": [
+                1.50841526769252e-11,
+                -7.7125161812574561e-10,
+                8.7423288164245605e-08,
+                1
+            ],
+            "Scale": [
+                0.99999994039535522,
+                1,
+                0.99999994039535522
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1927995705,
+                    "ParentUID": 625016039,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 523622070,
+                    "ParentUID": 625016039,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Idle Gas",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1557227645,
+                    "ParentUID": 523622070,
+                    "PrefabID": 0,
+                    "PrefabReference": 439895910,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.20718519389629364,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "GasEruption",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 33953750,
+                    "ParentUID": 523622070,
+                    "PrefabID": 0,
+                    "PrefabReference": 1909877198,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1662017050,
+                    "ParentUID": 625016039,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 575170396,
+                    "ParentUID": 1662017050,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1958057954,
+                    "ParentUID": 575170396,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1838387521,
+                    "ParentUID": 1958057954,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 352238341,
+                    "ParentUID": 1838387521,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1069773668,
+                    "ParentUID": 1958057954,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1832178221,
+                    "ParentUID": 1069773668,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1846259735,
+                    "ParentUID": 1662017050,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
                 }
             ]
@@ -36327,10 +35879,10 @@
                 8.2156503822261584e-15
             ],
             "Rotation": [
-                0.9791414737701416,
-                -0.20229384303092957,
-                -0.00018554889538791031,
-                0.018956972286105156
+                0.97914135456085205,
+                -0.20229381322860718,
+                -0.00018554886628407985,
+                0.018956970423460007
             ],
             "Scale": [
                 1,
