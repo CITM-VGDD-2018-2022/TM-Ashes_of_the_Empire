@@ -251,6 +251,7 @@ public class Rancor : Entity
         {
             Start();
             start = true;
+            return;
         }
 
         myDeltaTime = Time.deltaTime * speedMult;

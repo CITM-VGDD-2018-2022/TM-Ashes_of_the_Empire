@@ -77,6 +77,7 @@ public class Skel : Bosseslv2
             companion = InternalCalls.FindObjectWithName("WampaBoss");
             firstFrame = false;
             StartPresentation();
+            return;
         }
         myDeltaTime = Time.deltaTime * speedMult;
         if (angry == false)
