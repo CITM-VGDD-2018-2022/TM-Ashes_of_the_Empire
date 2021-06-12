@@ -58,7 +58,7 @@ public class TextController : DiamondComponent
     private bool finished = false;
 
     private float timer = 0.05f;
-
+    private bool pauseGame = true;
     public void Awake()
     {
         if (gui == null)
@@ -156,7 +156,10 @@ public class TextController : DiamondComponent
                 gui.Enable(false);
             }
             startMenu = false;
-            Time.PauseGame();
+            if (pauseGame)
+            {
+                Time.PauseGame();
+            }
             texts = list_of_dialogs.GetComponent<List_Of_Dialogs>().GetListOfDialog((uint)dialog_index);
             charName = list_of_dialogs.GetComponent<List_Of_Dialogs>().GetDialogName((uint)dialog_index);
             images = list_of_dialogs.GetComponent<List_Of_Dialogs>().GetListOfOrder((uint)dialog_index);
@@ -360,5 +363,9 @@ public class TextController : DiamondComponent
             default:
                 break;
         }
+    }
+    public void PauseGame(bool pause)
+    {
+        pauseGame = pause;
     }
 }

@@ -25,6 +25,7 @@ public class CinematicManager : DiamondComponent
     private Vector3 initPos;
     private Quaternion initRot;
     public GameObject postCinematicDialogue;
+    public GameObject cinematicDialogue;
     public bool init = false;
 
     private List<Sequence> listSequences = new List<Sequence>();
@@ -55,11 +56,21 @@ public class CinematicManager : DiamondComponent
         //Maping actions
         if(listSequences.Count > 0)
         {
-            listSequences[1].onStartSequence = () => {
+            listSequences[1].onStartSequence = () => 
+            {
                 Input.PlayHaptic(0.3f, 500);
                 Audio.PlayAudio(gameObject, "Play_Razor_Appearing");
             };
-            listSequences[4].onStartSequence = () => { Audio.PlayAudio(gameObject, "Play_Razor_Motor"); };
+
+            listSequences[4].onStartSequence = () =>
+            {
+                cinematicDialogue.Enable(true);
+                gameObject.GetComponent<CinematicDialog>().StartDialog();
+
+           
+                Audio.PlayAudio(gameObject, "Play_Razor_Motor");
+            };
+
             listSequences[6].onStartSequence = () =>
             {
                 Input.PlayHaptic(0.3f, 800);
