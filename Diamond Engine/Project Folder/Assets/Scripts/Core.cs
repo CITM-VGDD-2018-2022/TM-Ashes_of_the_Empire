@@ -2795,8 +2795,12 @@ public class Core : Entity
             {
                 float currHeat = hud.GetComponent<HUD>().GetPrimaryHeat();
                 float maxHeat = hud.GetComponent<HUD>().GetPrimaryMaxHeat();
-                if (currHeat / maxHeat >= 75 / 100)
+              //  Debug.Log(currHeat.ToString() + " " + maxHeat.ToString());
+                if (currHeat / maxHeat >= 0.75f)
+                {
                     Damage *= 2;
+
+                }
 
             }
         }
