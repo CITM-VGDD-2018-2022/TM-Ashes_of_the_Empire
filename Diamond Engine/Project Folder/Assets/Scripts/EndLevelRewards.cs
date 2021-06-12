@@ -38,11 +38,20 @@ public class EndLevelRewards
 
     public GameResources selectedReward = null;
 
-    public void GenerateRewardPipeline()
+    public void GenerateRewardPipeline(bool endGame)
     {
-        firstReward  = SelectRewards();
-        secondReward = SelectRewards();
-        thirdReward  = SelectRewards();
+        if (endGame == false)
+        {
+            firstReward = SelectRewards();
+            secondReward = SelectRewards();
+            thirdReward = SelectRewards();
+        }
+        else 
+        {
+            firstReward = new EndLevelReward(-1, RewardType.REWARD_BESKAR);
+            secondReward = new EndLevelReward(-1, RewardType.REWARD_SCRAP);
+            thirdReward = new EndLevelReward(-1, RewardType.REWARD_MILK);
+        }
 
         CreatePopUpGameObject();
 

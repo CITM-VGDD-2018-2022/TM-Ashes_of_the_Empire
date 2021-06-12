@@ -17,6 +17,9 @@ public class EndLevelRewardSpawn : DiamondComponent
     public GameObject particleSystemObj = null;
     private ParticleSystem particleSystem = null;
 
+    public GameObject spawnParticlesObj = null;
+    private ParticleSystem spawnParticles = null;
+
     public void Awake()
     {
         timer = timeToStarMovingToPlayer;
@@ -24,6 +27,11 @@ public class EndLevelRewardSpawn : DiamondComponent
         if(particleSystemObj != null)
         {
             particleSystem = particleSystemObj.GetComponent<ParticleSystem>();
+        }
+
+        if(spawnParticlesObj != null)
+        {
+            spawnParticles = spawnParticlesObj.GetComponent<ParticleSystem>();
         }
     }
 
@@ -103,6 +111,11 @@ public class EndLevelRewardSpawn : DiamondComponent
         if (particleSystem != null)
         {
             particleSystem.Play();
+        }
+
+        if(spawnParticles != null)
+        {
+            spawnParticles.Play();
         }
     }
 }

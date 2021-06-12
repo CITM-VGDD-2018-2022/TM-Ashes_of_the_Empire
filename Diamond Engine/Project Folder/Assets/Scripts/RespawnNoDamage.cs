@@ -24,7 +24,7 @@ public class RespawnNoDamage : DiamondComponent
             }
         }
 
-        if(respawn)
+        if(respawn && Core.instance != null)
         {
             Core.instance.gameObject.transform.localPosition = initialPlayerPosition;
             respawn = false;
