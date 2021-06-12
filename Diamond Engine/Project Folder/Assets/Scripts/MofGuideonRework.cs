@@ -3422,6 +3422,10 @@ public class MofGuideonRework : Entity
         if (chargeVisualFeedback != null)
             InternalCalls.Destroy(chargeVisualFeedback);
 
+        StopParticles(PARTICLES.AURA);
+        StopParticles(PARTICLES.SWORD_SWING);
+        StopParticles(PARTICLES.DASH);
+
         //TODO: Delete Deathtroopers!
     }
 

@@ -151,8 +151,8 @@
                     "auraBurstParticleObj": 391754021,
                     "saberParticlesObj": 1882489757,
                     "slerpRotationSpeed": 5,
-                    "maxHealthPoints1": 4500,
-                    "maxHealthPoints2": 4500,
+                    "maxHealthPoints1": 9000,
+                    "maxHealthPoints2": 12000,
                     "damageRecieveMult": 1,
                     "probSpawnEnemies_P1": 35,
                     "maxProbMeleeCombo_P1": 75,
@@ -167,14 +167,14 @@
                     "ANIMATION_MS_CONST": 0,
                     "chaseDuration": 1.5,
                     "chaseSpeed_P1": 4,
-                    "chaseSpeed_P2": 5,
+                    "chaseSpeed_P2": 6,
                     "chaseFootStepTimeLeft_P1Frames": 8,
                     "chaseFootStepTimeRight_P1Frames": 13,
                     "chaseFootStepTimeLeft_P2Frames": 5,
                     "chaseFootStepTimeRight_P2Frames": 9,
                     "LAST_FRAME_CONST": 0.05000000074505806,
                     "comboChargeDuration_MC1": 0.85000002384185791,
-                    "comboChargeDuration_MC4": 0.22499999403953552,
+                    "comboChargeDuration_MC4": 0.18500000238418579,
                     "comboDirectionTime": 0.30000001192092896,
                     "comboLongDashDistance": 11.5,
                     "comboLongDashSpeed": 23,
@@ -186,12 +186,12 @@
                     "meleeHit4SpdMult": 1.8999999761581421,
                     "meleeHit5SpdMult": 1.8999999761581421,
                     "meleeHit6SpdMult": 1.8999999761581421,
-                    "meleeHit1Damage": 15,
-                    "meleeHit2Damage": 15,
-                    "meleeHit3Damage": 15,
-                    "meleeHit4Damage": 15,
-                    "meleeHit5Damage": 15,
-                    "meleeHit6Damage": 15,
+                    "meleeHit1Damage": 20,
+                    "meleeHit2Damage": 20,
+                    "meleeHit3Damage": 20,
+                    "meleeHit4Damage": 20,
+                    "meleeHit5Damage": 20,
+                    "meleeHit6Damage": 20,
                     "spawnAnimationSpdMult_P1": 2,
                     "enemiesToSpawn_P1": 3,
                     "enemiesToSpawn_P2": 3,
@@ -202,7 +202,7 @@
                     "preBurstDashSpeed": 30,
                     "preBurstDashDistance": 7,
                     "preBurstAngleDash": 45,
-                    "bulletDamage": 5,
+                    "bulletDamage": 15,
                     "numBurstBullets": 3,
                     "timeBetweenShots": 0.10000000149011612,
                     "timeToStartBurst": 0.20000000298023224,
@@ -1397,10 +1397,10 @@
                 1.3369902518434174e-08
             ],
             "Rotation": [
-                -0.99996817111968994,
-                0.0040514278225600719,
-                -0.0063351988792419434,
-                0.0026648957282304764
+                -0.99996829032897949,
+                0.0040514282882213593,
+                -0.006335199810564518,
+                0.00266489596106112
             ],
             "Scale": [
                 1.000099778175354,
@@ -2315,10 +2315,10 @@
                 -0.036866538226604462
             ],
             "Rotation": [
-                -0.097951605916023254,
-                0.2444273978471756,
-                -0.20007434487342834,
-                0.94373244047164917
+                -0.097951620817184448,
+                0.24442742764949799,
+                -0.20007437467575073,
+                0.94373255968093872
             ],
             "Scale": [
                 0.99999982118606567,
@@ -2621,10 +2621,10 @@
                 -2.6863153834710829e-06
             ],
             "Rotation": [
-                0.00016948697157204151,
-                -0.014532583765685558,
-                -0.18077296018600464,
-                0.98341745138168335
+                0.00016948698612395674,
+                -0.014532585628330708,
+                -0.18077297508716583,
+                0.9834175705909729
             ],
             "Scale": [
                 0.99999994039535522,
@@ -2655,10 +2655,10 @@
                 -2.4106438445414824e-07
             ],
             "Rotation": [
-                -0.067525409162044525,
-                0.81828737258911133,
-                -0.55898052453994751,
-                0.11570130288600922
+                -0.067525416612625122,
+                0.81828749179840088,
+                -0.55898058414459229,
+                0.11570131778717041
             ],
             "Scale": [
                 1,
@@ -3516,8 +3516,8 @@
             "Rotation": [
                 0,
                 0,
-                -0.066209524869918823,
-                0.99780571460723877
+                -0.06620953232049942,
+                0.99780583381652832
             ],
             "Scale": [
                 1,
@@ -3548,10 +3548,10 @@
                 0.013559013605117798
             ],
             "Rotation": [
-                5.3407896425424883e-15,
-                -7.9409338805090657e-23,
-                0.066209524869918823,
-                0.99780571460723877
+                5.3407904895754355e-15,
+                -7.940935142686514e-23,
+                0.06620953232049942,
+                0.99780583381652832
             ],
             "Scale": [
                 1,
