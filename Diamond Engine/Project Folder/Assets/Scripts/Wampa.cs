@@ -44,6 +44,7 @@ public class Wampa : Bosseslv2
         IN_PRESENTATION_END,
         IN_DEAD
     }
+
     public GameObject wampaMesh = null;
     private STATE currentState = STATE.PRESENTATION;
     private List<INPUT> inputsList = new List<INPUT>();
@@ -148,16 +149,16 @@ public class Wampa : Bosseslv2
             else
             {
                 presentationTimer -= myDeltaTime;
-                healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPoints * 0.25f);
+                healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPointsAngry * 0.25f);
 
                 if (presentationTimer <= 0.0f)
                 {
                     inputsList.Add(INPUT.IN_PRESENTATION_END);
-                    healthPoints = healthPointsAux + (maxHealthPoints * 0.25f);
+                    healthPoints = healthPointsAux + (maxHealthPointsAngry * 0.25f);
                     limboHealth = healthPoints;
-                    if (healthPoints > maxHealthPoints)
+                    if (healthPoints > maxHealthPointsAngry)
                     {
-                        healthPoints = maxHealthPoints;
+                        healthPoints = maxHealthPointsAngry;
                     }
                 }
             }
@@ -613,5 +614,6 @@ public class Wampa : Bosseslv2
         fastRushSpeed = 15.0f;
         slowRushSpeed = 10.0f;
         restingTime = 1.0f;
+        maxHealthPoints = maxHealthPointsAngry;
     }
 }

@@ -133,16 +133,16 @@ public class Skel : Bosseslv2
             else
             {
                 presentationTimer -= myDeltaTime;
-                healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPoints * 0.25f);
+                healthPoints = healthPointsAux + (1 - (presentationTimer / presentationTime)) * (maxHealthPointsAngry * 0.25f);
 
                 if (presentationTimer <= 0.0f)
                 {
                     inputsList.Add(INPUT.IN_PRESENTATION_END);
-                    healthPoints = healthPointsAux + (maxHealthPoints * 0.25f);
+                    healthPoints = healthPointsAux + (maxHealthPointsAngry * 0.25f);
                     limboHealth = healthPoints;
-                    if (healthPoints > maxHealthPoints)
+                    if (healthPoints > maxHealthPointsAngry)
                     {
-                        healthPoints = maxHealthPoints;
+                        healthPoints = maxHealthPointsAngry;
                     }
                 }
             }
@@ -385,7 +385,7 @@ public class Skel : Bosseslv2
             if (resting)
             {
                 int decision = randomNum.Next(1, 100);
-                if (decision <= 60)
+                if (decision <= 50)
                     inputsList.Add(INPUT.IN_FOLLOW);
                 else
                     inputsList.Add(INPUT.IN_WANDER);
@@ -394,7 +394,7 @@ public class Skel : Bosseslv2
             else
             {
                 int decision = randomNum.Next(1, 100);
-                if (decision <= 75)
+                if (decision <= 65)
                     inputsList.Add(INPUT.IN_JUMPSLAM);
                 else
                     inputsList.Add(INPUT.IN_BOUNCERUSH);
@@ -586,6 +586,7 @@ public class Skel : Bosseslv2
     private void SkelAngry()
     {
         speed = 8.0f;
+        maxHealthPoints = maxHealthPointsAngry;
         //SetJumpValues(0.5f, 0.3f, 1.0f, 0.4f);
     }
 }

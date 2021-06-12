@@ -27,6 +27,7 @@ public class Bosseslv2 : Entity
     public Material healthbarMaterial = null;
     public float limboHealth = 0.0f;
     public float maxHealthPoints = 0.0f;
+    public float maxHealthPointsAngry = 0.0f;
     public GameObject leftSpike = null;
     public GameObject rightSpike = null;
     public float angleDispersion = 15f;
@@ -135,7 +136,7 @@ public class Bosseslv2 : Entity
 
     public virtual void Awake()
     {
-        maxHealthPoints = healthPoints;
+        //maxHealthPoints = healthPoints;
         jumpOnce = true;
 
         if (gameObject.CompareTag("Skel"))
@@ -399,18 +400,6 @@ public class Bosseslv2 : Entity
         foreach (GameObject column in Level2BossRoom.columns)
         {
             if (column == null) continue;
-            float distance = Mathf.Distance(gameObject.transform.globalPosition, column.transform.globalPosition);
-            if (nerestDistance > distance)
-            {
-                nerestDistance = distance;
-                nearestSkelColumn = column;
-            }
-        }
-
-        nerestDistance = 10000f;
-        foreach (GameObject column in Level2BossRoom.columns)
-        {
-            if (column == null) continue;
             float distance = Mathf.Distance(Core.instance.gameObject.transform.globalPosition, column.transform.globalPosition);
             if (nerestDistance > distance)
             {
@@ -418,6 +407,18 @@ public class Bosseslv2 : Entity
                 nearestPlayerColumn = column;
             }
         }
+        nerestDistance = 10000f;
+        foreach (GameObject column in Level2BossRoom.columns)
+        {
+            if (column == null) continue;
+            float distance = Mathf.Distance(gameObject.transform.globalPosition, column.transform.globalPosition);
+            if (nerestDistance > distance && Math.Abs(nearestPlayerColumn.transform.globalPosition.z - column.transform.globalPosition.z) > 1f)
+            {
+                nerestDistance = distance;
+                nearestSkelColumn = column;
+            }
+        }
+
 
         initTarget = nearestSkelColumn;
         finalTarget = nearestPlayerColumn;//.GetComponent<TargetColumn>().GetTarget(gameObject.transform.globalPosition);
@@ -447,7 +448,7 @@ public class Bosseslv2 : Entity
         float distance = Mathf.Distance(gameObject.transform.globalPosition, currentTarget.transform.globalPosition);
         if (distance > 2f)
         {
-            MoveToPosition(currentTarget.transform.globalPosition, 20f);
+            MoveToPosition(currentTarget.transform.globalPosition, 25f);
             LookAt(currentTarget.transform.globalPosition);
             if (currentTarget == finalTarget)
             {
