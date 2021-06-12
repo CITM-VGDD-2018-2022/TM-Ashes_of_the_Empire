@@ -702,6 +702,7 @@ public class MofGuideonRework : Entity
         //Change phase
         if (changingPhaseTimer > 0.0f)
         {
+            Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
             changingPhaseTimer -= myDeltaTime;
 
             if (changingPhaseTimer <= 0.0f)
@@ -3353,6 +3354,7 @@ public class MofGuideonRework : Entity
     private void StartPhaseChange()
     {
         Animator.Play(gameObject, "MG_Rising", speedMult);
+        Audio.SetState("Game_State", "Moff_Gideon_Phase_2");
         if (saber != null)
         {
             ActivateSaber();
