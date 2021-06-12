@@ -8,7 +8,8 @@ public class MoffGideonCinematic : DiamondComponent
     public GameObject endCamera1 = null;
     public GameObject initialCamera3 = null;
     public GameObject endCamera3 = null;
-    private Transform defaultCameraTransform = null;
+    private Vector3 defaultCameraPos = null;
+    private Quaternion defaultCameraRot = null;
 
     int sequenceCounter = 0;
     int amountOfSequencesPlusOne = 3;
@@ -28,7 +29,8 @@ public class MoffGideonCinematic : DiamondComponent
             return;
         }
 
-        defaultCameraTransform = gameCamera.transform;
+        defaultCameraPos = gameCamera.transform.localPosition;
+        defaultCameraRot = gameCamera.transform.localRotation;
         cameraAuxPosition = gameCamera.transform.localPosition = initialCamera1.transform.localPosition;
         gameCamera.transform.localRotation = initialCamera1.transform.localRotation;
         gameCamera.GetComponent<CameraController>().startFollow = false;
@@ -98,8 +100,8 @@ public class MoffGideonCinematic : DiamondComponent
         sequenceCounter = amountOfSequencesPlusOne;
         BlackFade.StartFadeIn(() =>
         {
-            gameCamera.transform.localPosition = defaultCameraTransform.localPosition;
-            gameCamera.transform.localRotation = defaultCameraTransform.localRotation;
+            gameCamera.transform.localPosition = defaultCameraPos;
+            gameCamera.transform.localRotation = defaultCameraRot;
             CameraManager.SetCameraOrthographic(gameCamera);
             BlackFade.StartFadeOut(() =>
             {
