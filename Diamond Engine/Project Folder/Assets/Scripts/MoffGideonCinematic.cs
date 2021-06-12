@@ -12,11 +12,12 @@ public class MoffGideonCinematic : DiamondComponent
 
     int sequenceCounter = 0;
     int amountOfSequencesPlusOne = 3;
+    Vector3 cameraAuxPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
     float speed1 = 1.0f;
     float timer2 = 0.0f;
-    float time2 = 1.0f;
-    float speed3 = 1.0f;
+    float time2 = 0.75f;
+    float speed3 = 3.0f;
     float destinationDistance = 0.2f;
 
     public void Awake()
@@ -28,7 +29,11 @@ public class MoffGideonCinematic : DiamondComponent
         }
 
         defaultCameraTransform = gameCamera.transform;
-        gameCamera.transform.localPosition = initialCamera1.transform.localPosition;
+        cameraAuxPosition = gameCamera.transform.localPosition = initialCamera1.transform.localPosition;
+        gameCamera.transform.localRotation = initialCamera1.transform.localRotation;
+        gameCamera.GetComponent<CameraController>().startFollow = false;
+        CameraManager.SetCameraPerspective(gameCamera);
+        CameraManager.SetVerticalFOV(gameCamera, 60.0f);
 
     }
 
@@ -45,7 +50,8 @@ public class MoffGideonCinematic : DiamondComponent
             switch (sequenceCounter)
             {
                 case 0:
-                    gameCamera.transform.localPosition += (endCamera1.transform.localPosition - gameCamera.transform.localPosition) * newDeltaTime * speed1;
+                    cameraAuxPosition += (endCamera1.transform.localPosition - gameCamera.transform.localPosition).normalized * newDeltaTime * speed1;
+                    
                     if (Mathf.Distance(gameCamera.transform.localPosition, endCamera1.transform.localPosition) <= destinationDistance)
                     {
                         sequenceCounter++;
@@ -53,16 +59,17 @@ public class MoffGideonCinematic : DiamondComponent
                     break;
 
                 case 1:
-                    timer2 += Time.deltaTime;
+                    timer2 += newDeltaTime;
                     if (timer2 > time2)
                     {
                         sequenceCounter++;
-                        gameCamera.transform = initialCamera3.transform;
+                        gameCamera.transform.localPosition = initialCamera3.transform.localPosition;
+                        gameCamera.transform.localRotation = initialCamera3.transform.localRotation;
                     }
                     break;
 
                 case 2:
-                    gameCamera.transform.localPosition += (endCamera3.transform.localPosition - gameCamera.transform.localPosition).normalized * newDeltaTime * speed3;
+                    cameraAuxPosition += (endCamera3.transform.localPosition - gameCamera.transform.localPosition).normalized * newDeltaTime * speed3;
                     gameCamera.transform.localRotation = Quaternion.Slerp(gameCamera.transform.localRotation, endCamera3.transform.localRotation, 0.25f * newDeltaTime);
 
                     if (Mathf.Distance(gameCamera.transform.localPosition, endCamera3.transform.localPosition) <= destinationDistance)
@@ -72,7 +79,14 @@ public class MoffGideonCinematic : DiamondComponent
                     break;
             }
 
+            gameCamera.transform.localPosition = cameraAuxPosition;
+
             if (sequenceCounter >= amountOfSequencesPlusOne)
+            {
+                EndCinematic();
+            }
+
+            if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
             {
                 EndCinematic();
             }
@@ -81,9 +95,11 @@ public class MoffGideonCinematic : DiamondComponent
 
     private void EndCinematic()
     {
+        sequenceCounter = amountOfSequencesPlusOne;
         BlackFade.StartFadeIn(() =>
         {
-            gameCamera.transform = defaultCameraTransform;
+            gameCamera.transform.localPosition = defaultCameraTransform.localPosition;
+            gameCamera.transform.localRotation = defaultCameraTransform.localRotation;
             CameraManager.SetCameraOrthographic(gameCamera);
             BlackFade.StartFadeOut(() =>
             {
