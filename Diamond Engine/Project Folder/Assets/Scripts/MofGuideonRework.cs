@@ -169,6 +169,7 @@ public class MofGuideonRework : Entity
 
     // Animations
     private float currAnimationPlaySpd = 1f;
+    private float blinkAudioTimer = 0.0f;
 
     //Decision making
     public float probSpawnEnemies_P1 = 40.0f;
@@ -1829,6 +1830,7 @@ public class MofGuideonRework : Entity
     {
         comboChargeTimer = comboChargeDuration_MC1;
         comboDirectionTimer = comboDirectionTime;
+        blinkAudioTimer = comboChargeDuration_MC1 / 4;
 
         Animator.Play(gameObject, "MG_Swing", speedMult * chargeComboSpdMult_MC1);
         if (saber != null)
@@ -1848,8 +1850,7 @@ public class MofGuideonRework : Entity
         }
 
         UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC1);
-
-        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
+       
     }
 
     private void UpdateMeleeCombo1Charge()
@@ -1882,6 +1883,16 @@ public class MofGuideonRework : Entity
 
                     agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
                 }
+            }
+        }
+
+        if (blinkAudioTimer > 0.0f)
+        {
+            blinkAudioTimer -= myDeltaTime;
+
+            if (blinkAudioTimer <= 0.0f)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
             }
         }
 
@@ -1919,6 +1930,7 @@ public class MofGuideonRework : Entity
         }
 
         UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC4);
+
     }
 
     private void UpdateMeleeCombo4Charge()
@@ -1987,9 +1999,6 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
-
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         PlayParticles(PARTICLES.DASH);
@@ -2037,9 +2046,6 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
-
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
@@ -2100,9 +2106,6 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
-
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
@@ -2165,9 +2168,6 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
-
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
         PlayParticles(PARTICLES.DASH);
@@ -2215,9 +2215,6 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
-
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
@@ -2279,9 +2276,6 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
-
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
@@ -2632,6 +2626,7 @@ public class MofGuideonRework : Entity
     private void StartBurstCharge()
     {
         preBurstChargeTimer = comboChargeDuration_MC1;
+        blinkAudioTimer = comboChargeDuration_MC1 / 4;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
@@ -2651,7 +2646,6 @@ public class MofGuideonRework : Entity
         }
         UpdateAnimationSpd(speedMult);
 
-        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
     }
 
     private void UpdateBurstCharge()
@@ -2661,6 +2655,16 @@ public class MofGuideonRework : Entity
             float shineValue = preBurstChargeTimer / comboChargeDuration_MC1;
 
             saberMaterial.SetFloatUniform("shineColorValue", shineValue);
+        }
+
+        if (blinkAudioTimer > 0.0f)
+        {
+            blinkAudioTimer -= myDeltaTime;
+
+            if (blinkAudioTimer <= 0.0f)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
+            }
         }
 
         UpdateAnimationSpd(speedMult);
@@ -2708,9 +2712,6 @@ public class MofGuideonRework : Entity
         pointToGo = this.gameObject.transform.globalPosition + Vector3.RotateAroundQuaternion(Quaternion.RotateAroundAxis(Vector3.up, rotationAngle * Mathf.Deg2RRad), this.gameObject.transform.GetForward()).normalized * preBurstDashDistance;
 
         agent.CalculatePath(this.gameObject.transform.globalPosition, pointToGo);
-
-        //PLAY AUDIOS
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAA");
 
         //StraightPath();   //IF WE NEED TO DO SOMETHING WITH NOT STRAIGHT PATHS
 
@@ -2902,6 +2903,7 @@ public class MofGuideonRework : Entity
     {
         lightningDashChargeDurationTimer = comboChargeDuration_MC1;
         lightningDashDirectionTimer = lightningDashDirectionTime;
+        blinkAudioTimer = comboChargeDuration_MC1 / 4;
 
         Animator.Play(gameObject, "MG_Swing", speedMult);
         if (saber != null)
@@ -2919,8 +2921,6 @@ public class MofGuideonRework : Entity
         {
             DeActivateGun();
         }
-
-        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
 
         UpdateAnimationSpd(speedMult);
     }
@@ -2947,6 +2947,16 @@ public class MofGuideonRework : Entity
                     agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
                     Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
                 }
+            }
+        }
+
+        if (blinkAudioTimer > 0.0f)
+        {
+            blinkAudioTimer -= myDeltaTime;
+
+            if (blinkAudioTimer <= 0.0f)
+            {
+                Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
             }
         }
 
@@ -3017,7 +3027,6 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
-        //Audio.PlayAudio(gameObject, "AAAAAAAAAAAAA");
         //stun.Play();
     }
 
