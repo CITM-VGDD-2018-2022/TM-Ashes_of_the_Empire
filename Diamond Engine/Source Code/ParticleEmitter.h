@@ -88,9 +88,9 @@ private:
 	std::vector<ParticleEffect*> myEffects;
 	C_Transform* objTransform = nullptr;
 
-	bool delaying = false;
+	bool delaying;
 	float maxDelay;
-	Timer delay;
+	float delay;
 	std::string emitterName;
 	char emitterNameChars[50];
 	bool not_relative;
