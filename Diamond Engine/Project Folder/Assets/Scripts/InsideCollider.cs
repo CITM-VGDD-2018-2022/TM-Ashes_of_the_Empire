@@ -11,6 +11,7 @@ public class InsideCollider : DiamondComponent
     public GameObject hubTextController = null;
     private bool into = false;
     private bool outOf = false;
+    private bool already_zone2 = false;
 
     public void Update()
     {
@@ -33,6 +34,7 @@ public class InsideCollider : DiamondComponent
             }
             into = true;
         }
+
         else if (!IsInside() && displayText.IsEnabled())
         {
             displayText.EnableNav(false);
@@ -56,6 +58,11 @@ public class InsideCollider : DiamondComponent
         {
             Audio.PlayAudio(Core.instance.gameObject, "Play_Interaction_Circle_Out");
             outOf = false;
+        }
+        if(IsInside() && gameObject.CompareTag("ShootZone") && !already_zone2 && Core.instance.GetTutoState() != 1)
+        {
+            Core.instance.Zone2();
+            already_zone2 = true;
         }
     }
 
