@@ -661,15 +661,15 @@ public class HUD : DiamondComponent
 
         if (damageScreen1 != null)
         {
-            const float maxHPToShowBorder = 0.4f; //TODO these are hardcoded for the time being
-            const float minHPToShowBorder = 0.2f;
+            const float maxHPToShowBorder = 0.35f; //TODO these are hardcoded for the time being
+            const float minHPToShowBorder = 0.1f;
 
             float hpPercentage = (float)PlayerHealth.currHealth / (float)PlayerHealth.currMaxHealth;
             float lowHPPulsation = (1.0f - hpPercentage);
             lowHPPulsation *= lowHPPulsation;
            
-            float borderAlphaAmmount= Mathf.RemapClamp(maxHPToShowBorder, minHPToShowBorder, 0.0f, 1.0f, hpPercentage);
-            damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", lowHPPulsation * 10.0f);
+            float borderAlphaAmmount= Mathf.RemapClamp(maxHPToShowBorder, minHPToShowBorder, 0.0f, 0.5f, hpPercentage);
+            damageScreen1.GetComponent<Material>().SetFloatUniform("pulsationAmmount", lowHPPulsation * 5.0f);
             damageScreen1.GetComponent<Material>().SetFloatUniform("alphaAmmount", borderAlphaAmmount);
         }
     }

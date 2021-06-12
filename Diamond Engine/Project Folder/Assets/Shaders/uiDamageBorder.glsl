@@ -35,7 +35,7 @@ void main()
 	//float extend=0.25;//0.25 def
 
 	float extend = 0.5*(sin(timeSinceStart*pulsationAmmount)+1.0);
-	extend *=0.9;
+	extend *=0.25;
 	float vignette = 1.0;
 	//vec4 myColor = texture(ourTexture,textureCoords);
 	
@@ -53,6 +53,8 @@ void main()
 }
 
 #endif
+
+
 
 
 
