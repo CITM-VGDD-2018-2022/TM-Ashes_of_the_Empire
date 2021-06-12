@@ -189,6 +189,7 @@ public class MofGuideonRework : Entity
     // Presentation
     private float presentationTime = 0f;
     private float presentationTimer = 0f;
+    private float cinematicTimerOffset = 0.95f;
 
     //Chase
     public float endChaseDistance = 1.5f;
@@ -391,7 +392,7 @@ public class MofGuideonRework : Entity
         spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
 
         //Get anim durations
-        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose") * 1.45f;
+        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose") * 1.75f;
 
         changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising");
 
@@ -486,6 +487,7 @@ public class MofGuideonRework : Entity
         if (start == false)
         {
             start = true;
+            return;
         }
 
         myDeltaTime = Time.deltaTime * speedMult;
@@ -3351,7 +3353,17 @@ public class MofGuideonRework : Entity
         currentHealthPoints = limboHealth = maxHealthPoints1;
     }
 
-    public void HideCape()
+    public void EndCinematic()
+    {
+        HideCape();
+
+        if(presentationTimer > cinematicTimerOffset)
+        {
+            presentationTimer = cinematicTimerOffset;
+        }
+    }
+
+    private void HideCape()
     {
         if (capeMesh != null)
         {

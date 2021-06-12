@@ -132,7 +132,7 @@ public class MoffGideonCinematic : DiamondComponent
 
                 if (moffScript != null)
                 {
-                    moffScript.HideCape();
+                    moffScript.EndCinematic();
                 }
             }
 
