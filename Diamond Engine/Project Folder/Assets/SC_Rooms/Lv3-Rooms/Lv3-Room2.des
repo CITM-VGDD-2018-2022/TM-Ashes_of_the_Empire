@@ -1,19 +1,19 @@
 {
     "NavMesh": 759541763,
     "EditorCameraPosition": [
-        -15.017727851867676,
-        2.0597541332244873,
-        1.982302188873291
+        -0.78447490930557251,
+        16.683917999267578,
+        -25.548072814941406
     ],
     "EditorCameraZ": [
-        -0.037377811968326569,
-        -0.18818001449108124,
-        -0.98142296075820923
+        -0.14116543531417847,
+        -0.49009737372398376,
+        0.8601611852645874
     ],
     "EditorCameraY": [
-        -0.0071617048233747482,
-        0.98213452100753784,
-        -0.18804368376731873
+        -0.079370453953742981,
+        0.87166768312454224,
+        0.48362770676612854
     ],
     "SkyboxPath0": "Library\/Textures\/584389129.dds",
     "SkyboxPath1": "Library\/Textures\/111167881.dds",
@@ -6537,156 +6537,6 @@
             ]
         },
         {
-            "name": "Lasers",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1362868756,
-            "ParentUID": 1897036471,
-            "PrefabReference": 0,
-            "PrefabID": 0,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                0,
-                0,
-                0
-            ],
-            "Rotation": [
-                6.1817239327410789e-08,
-                -0.70722883939743042,
-                6.1817239327410789e-08,
-                -0.70698469877243042
-            ],
-            "Scale": [
-                0.99999988079071045,
-                1,
-                0.99999988079071045
-            ],
-            "Components": [
-                {
-                    "Type": 1,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "name": "Lasers",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 2015686075,
-            "ParentUID": 1362868756,
-            "PrefabReference": 2015686075,
-            "PrefabID": 1051635160,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                16.194341659545898,
-                2.8315050712990342e-06,
-                -0.10573834180831909
-            ],
-            "Rotation": [
-                -0.00010094048047903925,
-                0.70717555284500122,
-                0.00010073186422232538,
-                0.70703804492950439
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "Lasers",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 318863419,
-                    "ParentUID": 2015686075,
-                    "PrefabID": 0,
-                    "PrefabReference": 318863419,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Lasers",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Active": true,
-            "UID": 1731497189,
-            "ParentUID": 1362868756,
-            "PrefabReference": 2015686075,
-            "PrefabID": 1051635160,
-            "DontDestroy": false,
-            "Static": false,
-            "Position": [
-                -9.6659393310546875,
-                -1.6900609125514165e-06,
-                -0.48806381225585938
-            ],
-            "Rotation": [
-                1.1051179171772674e-07,
-                0.73189526796340942,
-                2.2644820774075924e-07,
-                0.68141710758209229
-            ],
-            "Scale": [
-                1,
-                1,
-                1
-            ],
-            "PrefabObjects": [
-                {
-                    "name": "Lasers",
-                    "tag": "Untagged",
-                    "layer": "Default",
-                    "Active": true,
-                    "UID": 1718754671,
-                    "ParentUID": 1731497189,
-                    "PrefabID": 0,
-                    "PrefabReference": 318863419,
-                    "DontDestroy": false,
-                    "Static": false,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Rotation": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Tie_Fighters",
             "tag": "Untagged",
             "layer": "Default",
@@ -8706,7 +8556,7 @@
                 1
             ],
             "Scale": [
-                7.2635879516601562,
+                7.2635879516601563,
                 10,
                 6.2019815444946289
             ],
@@ -9954,7 +9804,7 @@
             "Scale": [
                 13.416073799133301,
                 10,
-                16.201004028320312
+                16.201004028320313
             ],
             "Components": [
                 {
@@ -10475,7 +10325,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -15.462976455688476,
+                -15.462976455688477,
                 -0.40000000596046448,
                 -6.4972033500671387
             ],
@@ -10666,7 +10516,7 @@
             "Scale": [
                 18.608997344970703,
                 10,
-                20.560998916625976
+                20.560998916625977
             ],
             "Components": [
                 {
@@ -11048,10 +10898,10 @@
                 15.79642391204834
             ],
             "Rotation": [
-                -0.6561281681060791,
-                -0.26363468170166016,
-                -0.26363155245780945,
-                0.65611809492111206
+                -0.65612822771072388,
+                -0.26363471150398254,
+                -0.26363158226013184,
+                0.65611815452575684
             ],
             "Scale": [
                 1.3999999761581421,
@@ -15147,6 +14997,738 @@
                     "Active": true,
                     "UID": 793061693,
                     "ParentUID": 1109106781,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1479208023,
+            "ParentUID": 1478654516,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                -9.6689729690551758,
+                -0.0088952844962477684,
+                0.010831455700099468
+            ],
+            "Rotation": [
+                4.9737991503207013e-14,
+                0.026467056944966316,
+                1.7478755864885898e-07,
+                0.99964970350265503
+            ],
+            "Scale": [
+                1.000001072883606,
+                1,
+                1.000001072883606
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1363477398,
+                    "ParentUID": 1479208023,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1440277817,
+                    "ParentUID": 1479208023,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Idle Gas",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1127967986,
+                    "ParentUID": 1440277817,
+                    "PrefabID": 0,
+                    "PrefabReference": 439895910,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.20718519389629364,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "GasEruption",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1077149810,
+                    "ParentUID": 1440277817,
+                    "PrefabID": 0,
+                    "PrefabReference": 1909877198,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 2117968770,
+                    "ParentUID": 1479208023,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 286598562,
+                    "ParentUID": 2117968770,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1007920725,
+                    "ParentUID": 286598562,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1273145853,
+                    "ParentUID": 1007920725,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 299901788,
+                    "ParentUID": 1273145853,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1626366214,
+                    "ParentUID": 1007920725,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1019413172,
+                    "ParentUID": 1626366214,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 377398109,
+                    "ParentUID": 2117968770,
+                    "PrefabID": 0,
+                    "PrefabReference": 793061693,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.5607448216898926e-15,
+                        1,
+                        -8.1460342471473268e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GasRack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 654518338,
+            "ParentUID": 1478654516,
+            "PrefabReference": 1939403477,
+            "PrefabID": 1712240884,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                16.29008674621582,
+                0.044171381741762161,
+                -0.36284187436103821
+            ],
+            "Rotation": [
+                -9.055256544598933e-15,
+                -0.00034511167905293405,
+                1.7484607894857618e-07,
+                0.99999994039535522
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "PrefabObjects": [
+                {
+                    "name": "GasRack",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 765704205,
+                    "ParentUID": 654518338,
+                    "PrefabID": 0,
+                    "PrefabReference": 175167092,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        1.8489090204238892,
+                        -0.072218582034111023,
+                        -1.0207855701446533
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "ParticleSystems",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 2105886824,
+                    "ParentUID": 654518338,
+                    "PrefabID": 0,
+                    "PrefabReference": 151623022,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Idle Gas",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 943025720,
+                    "ParentUID": 2105886824,
+                    "PrefabID": 0,
+                    "PrefabReference": 439895910,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        -0.20718519389629364,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "GasEruption",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1523596036,
+                    "ParentUID": 2105886824,
+                    "PrefabID": 0,
+                    "PrefabReference": 1909877198,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        0.9999997615814209,
+                        1,
+                        0.9999997615814209
+                    ]
+                },
+                {
+                    "name": "DoorTrap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1472362438,
+                    "ParentUID": 654518338,
+                    "PrefabID": 0,
+                    "PrefabReference": 1109106781,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.6966957273065759e-15,
+                        7.7125150710344315e-10,
+                        -5.1158990238553415e-13,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Armature",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1508373747,
+                    "ParentUID": 1472362438,
+                    "PrefabID": 0,
+                    "PrefabReference": 53704822,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        -3.560744398173419e-15,
+                        1,
+                        -8.1460335366045911e-08,
+                        -4.3711388286737929e-08
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 390817940,
+                    "ParentUID": 1508373747,
+                    "PrefabID": 0,
+                    "PrefabReference": 214383035,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.0089687593281269073,
+                        0.026137311011552811,
+                        0.08327755331993103
+                    ],
+                    "Rotation": [
+                        0,
+                        0.85445040464401245,
+                        0,
+                        0.51953297853469849
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 517993250,
+                    "ParentUID": 390817940,
+                    "PrefabID": 0,
+                    "PrefabReference": 549933085,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0.43942683935165405,
+                        0.021368088200688362,
+                        -0.75265926122665405
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint2_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 515174179,
+                    "ParentUID": 517993250,
+                    "PrefabID": 0,
+                    "PrefabReference": 1552852069,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1817127612,
+                    "ParentUID": 390817940,
+                    "PrefabID": 0,
+                    "PrefabReference": 344654928,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        -0.40036225318908691,
+                        0.021368088200688362,
+                        0.88586562871932983
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.85445040464401245,
+                        0,
+                        0.51953315734863281
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap_Joint3_end",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1979830282,
+                    "ParentUID": 1817127612,
+                    "PrefabID": 0,
+                    "PrefabReference": 1385954357,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0.9220890998840332,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "Trap",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1526180427,
+                    "ParentUID": 1472362438,
                     "PrefabID": 0,
                     "PrefabReference": 793061693,
                     "DontDestroy": false,
@@ -22303,7 +22885,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -20.801782608032226,
+                -20.801782608032227,
                 2.4752986431121826,
                 -17.670480728149414
             ],
@@ -23023,7 +23605,7 @@
                     "Position": [
                         0.0064268112182617188,
                         0.043726921081542969,
-                        -0.0090532302856445312
+                        -0.0090532302856445313
                     ],
                     "Rotation": [
                         0,
@@ -23190,7 +23772,7 @@
                     "Static": false,
                     "Position": [
                         0.017677873373031616,
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         2.2351741790771484e-08
                     ],
                     "Rotation": [
@@ -23225,7 +23807,7 @@
                         0.0045477813109755516,
                         -0.06839299201965332,
                         -0.10478191822767258,
-                        0.99213027954101562
+                        0.99213027954101563
                     ],
                     "Scale": [
                         0.99999988079071045,
@@ -23273,7 +23855,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         0.013573005795478821,
                         9.3132257461547852e-10
                     ],
@@ -23330,7 +23912,7 @@
                     "Static": false,
                     "Position": [
                         0.016821712255477905,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         -7.4505805969238281e-09
                     ],
                     "Rotation": [
@@ -23441,7 +24023,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.0094919204711914062,
+                        0.0094919204711914063,
                         1.4901161193847656e-08,
                         -1.4901161193847656e-08
                     ],
@@ -23638,7 +24220,7 @@
                     "Static": false,
                     "Position": [
                         0.024928808212280273,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.4901161193847656e-08
                     ],
                     "Rotation": [
@@ -23722,7 +24304,7 @@
                     "Static": false,
                     "Position": [
                         0.01357308030128479,
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         -3.7252902984619141e-09
                     ],
                     "Rotation": [
@@ -23974,7 +24556,7 @@
                     "Static": false,
                     "Position": [
                         4.6566128730773926e-09,
-                        0.012781143188476562,
+                        0.012781143188476563,
                         0
                     ],
                     "Rotation": [
@@ -24142,7 +24724,7 @@
                     "Static": false,
                     "Position": [
                         0.032833755016326904,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         3.7252902984619141e-09
                     ],
                     "Rotation": [
@@ -24198,7 +24780,7 @@
                     "Static": false,
                     "Position": [
                         0.049042865633964539,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.862645149230957e-09
                     ],
                     "Rotation": [
@@ -24282,7 +24864,7 @@
                     "Static": false,
                     "Position": [
                         0.032833829522132874,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.1175870895385742e-08
                     ],
                     "Rotation": [
@@ -24365,7 +24947,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         0.04919414222240448,
                         1.862645149230957e-09
                     ],
@@ -24795,7 +25377,7 @@
                         1.5945261111482978e-08,
                         -0.0027633162681013346,
                         -0.0067633301950991154,
-                        0.99997329711914062
+                        0.99997329711914063
                     ],
                     "Scale": [
                         1,
@@ -26131,7 +26713,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -26159,7 +26741,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -26187,7 +26769,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851562,
+                        0.76593399047851563,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -26244,7 +26826,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757812,
+                        -0.0062532424926757813,
                         -0.058134078979492188
                     ],
                     "Rotation": [
