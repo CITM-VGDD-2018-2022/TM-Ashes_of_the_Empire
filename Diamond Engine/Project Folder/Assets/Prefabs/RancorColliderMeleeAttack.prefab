@@ -1,0 +1,82 @@
+{
+    "assets_path": "Assets\/Prefabs\/RancorColliderMeleeAttack.prefab",
+    "Game Objects": [
+        {
+            "name": "RancorColliderMeleeAttack",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 0,
+            "ParentUID": 0,
+            "PrefabReference": 0,
+            "PrefabID": 1846034644,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                4.5690116882324219,
+                21.567977905273438,
+                -3.6980206966400146
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 18,
+                    "Active": true,
+                    "isTrigger": true,
+                    "Position": [
+                        0,
+                        0.5,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "Scale": [
+                        2.2000000476837158,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 14,
+                    "Active": true,
+                    "kinematic": false,
+                    "Gravity": false,
+                    "LockLinearX": false,
+                    "LockLinearY": false,
+                    "LockLinearZ": false,
+                    "LockAngularX": false,
+                    "LockAngularY": false,
+                    "LockAngularZ": false,
+                    "Mass": 1,
+                    "Density": 1
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "RancorMeleeCollider",
+                    "colliderSpeed": 7,
+                    "lifeTime": 1,
+                    "damage": 10
+                }
+            ]
+        }
+    ]
+}

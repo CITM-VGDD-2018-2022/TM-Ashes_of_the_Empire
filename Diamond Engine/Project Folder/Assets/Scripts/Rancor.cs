@@ -743,7 +743,9 @@ public class Rancor : Entity
 
             if (meleeCH1ColliderTimer <= 0.0f)
             {
-                //InternalCalls.CreatePrefab("Library/Prefabs/1846472793.prefab", gameObject.transform.localPosition, gameObject.transform.localRotation, gameObject.transform.localScale);
+                GameObject hitPref = InternalCalls.CreatePrefab("Library/Prefabs/1846034644.prefab", gameObject.transform.localPosition, gameObject.transform.localRotation, gameObject.transform.localScale);
+                hitPref.transform.localRotation = gameObject.transform.localRotation;
+                hitPref.transform.localScale = gameObject.transform.localScale;
             }
         }
 
@@ -785,7 +787,9 @@ public class Rancor : Entity
 
             if (meleeCH2ColliderTimer <= 0.0f)
             {
-                //InternalCalls.CreatePrefab("Library/Prefabs/1846472793.prefab", gameObject.transform.localPosition, gameObject.transform.localRotation, gameObject.transform.localScale);
+                GameObject hitPref = InternalCalls.CreatePrefab("Library/Prefabs/1846034644.prefab", gameObject.transform.localPosition, gameObject.transform.localRotation, gameObject.transform.localScale);
+                hitPref.transform.localRotation = gameObject.transform.localRotation;
+                hitPref.transform.localScale = gameObject.transform.localScale;
             }
         }
 

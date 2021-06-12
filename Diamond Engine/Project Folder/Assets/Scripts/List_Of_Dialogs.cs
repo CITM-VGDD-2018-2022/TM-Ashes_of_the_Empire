@@ -180,7 +180,7 @@ public class List_Of_Dialogs : DiamondComponent
 
     private List<string> Initial_Cutscene_Dialogue = new List<string>()
     {
-        "I'm not sure why they want to meet up in that dunghill, It's not even close to Mandalore. I don't know about this kid, curse the time when I agreed to that plan.",
+        "I'm not sure why they want to meet up in that dunghill, it's not even close to Mandalore. I don't know about this, kid, curse the time when I agreed to that plan.",
         "(The kid looks at Mando with his deep dark eyes, you can't be sure if he did underestand something of what he just said).",
     };
 
