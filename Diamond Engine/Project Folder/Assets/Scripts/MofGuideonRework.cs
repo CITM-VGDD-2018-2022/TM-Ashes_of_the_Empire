@@ -3435,7 +3435,6 @@ public class MofGuideonRework : Entity
 
         Counter.SumToCounterType(Counter.CounterTypes.MOFFGIDEON);
 
-        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Lightsaber_Turn_Off");
         Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Death");
         Audio.PlayAudio(gameObject, "Play_Victory_Music");
 
