@@ -52,7 +52,7 @@ public class Skytrooper : Enemy
     //Action times
     public float idleTime = 5.0f;
     public float wanderTime = 0.0f;
-    private float dashTime = 0.0f;
+    public float dashTime = 1.0f;
     private float dieTime = 0.75f;
     public float timeBewteenShots = 0.5f;
     public float timeBewteenShootingStates = 1.5f;
@@ -60,7 +60,7 @@ public class Skytrooper : Enemy
 
     //Speeds
     public float wanderSpeed = 3.5f;
-    public float dashSpeed = 7.5f;
+    private float dashSpeed = 7.5f;
 
     //Ranges
     public float wanderRange = 7.5f;
@@ -69,7 +69,7 @@ public class Skytrooper : Enemy
     //Timers
     private float idleTimer = 0.0f;
     private float wanderTimer = 0.0f;
-    public float dashTimer = 0.0f;
+    private float dashTimer = 0.0f;
     private float dieTimer = 0.0f;
     private float shootTimer = 0.0f;
     private float pushTimer = 0.0f;
@@ -101,6 +101,12 @@ public class Skytrooper : Enemy
     private ParticleSystem sniperHitParticle = null;
     private ParticleSystem grenadeHitParticle = null;
 
+    private float raycastOffset = 0.75f;
+
+    //Raycast Debug
+    //Vector3 raycastPoint = null;
+    //Vector3 notHitPoint = null;
+
     public void Awake()
     {
         InitEntity(ENTITY_TYPE.SKYTROOPER);
@@ -117,7 +123,8 @@ public class Skytrooper : Enemy
         UpdateAnimationSpd(speedMult);
 
         idleTimer = idleTime;
-        dashTime = Animator.GetAnimationDuration(gameObject, "SK_Dash");
+        //dashTime = Animator.GetAnimationDuration(gameObject, "SK_Dash");
+        dashSpeed = dashRange / dashTime;
 
         initialHeight = gameObject.transform.globalPosition.y;
 
@@ -211,6 +218,21 @@ public class Skytrooper : Enemy
                 inputsList.Add(INPUT.IN_DASH_END);
             }
         }
+
+        //Raycast Debug
+        /*
+        if (notHitPoint != null)
+        {
+            Vector3 offsetedOrigin = gameObject.transform.globalPosition + (notHitPoint - gameObject.transform.globalPosition).normalized * raycastOffset;
+            InternalCalls.DrawRay(offsetedOrigin + Vector3.up, notHitPoint, new Vector3(0.0f, 1.0f, 0.0f));
+        }
+
+        if (raycastPoint != null)
+        {
+            Vector3 offsetedOrigin = gameObject.transform.globalPosition + (raycastPoint - gameObject.transform.globalPosition).normalized * raycastOffset;
+            InternalCalls.DrawRay(offsetedOrigin + Vector3.up, raycastPoint, new Vector3(1.0f, 0.0f, 0.0f));
+        }
+        */
     }
 
     //All events from outside the stormtrooper
@@ -904,6 +926,10 @@ public class Skytrooper : Enemy
 
         Vector3 newPosition = null;
 
+        //Raycast Debug
+        //notHitPoint = null;
+        //raycastPoint = null;
+
         if (Mathf.Distance(Core.instance.gameObject.transform.globalPosition, gameObject.transform.globalPosition) < detectionRange * 0.5f)
         {
             newPosition = GoBackwards();
@@ -927,7 +953,7 @@ public class Skytrooper : Enemy
         else
         {
             standStill = true;
-            Debug.Log("Stand still");
+            //Debug.Log("Stand still");
             return gameObject.transform.globalPosition;
         }
     }
@@ -969,12 +995,12 @@ public class Skytrooper : Enemy
 
                 if (rightObject == null)
                 {
-                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                    return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
                 }
             }
             else
             {
-                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
             }
         }
         else //First check right
@@ -987,12 +1013,12 @@ public class Skytrooper : Enemy
 
                 if (leftObject == null)
                 {
-                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                    return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
                 }
             }
             else
             {
-                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
             }
 
         }
@@ -1012,8 +1038,8 @@ public class Skytrooper : Enemy
         GameObject rightObject;
 
         Random randomAngle = new Random();
-        float leftAngle = 230 + randomAngle.Next(-5, 5);
-        float rightAngle = 130 + randomAngle.Next(-5, 5);
+        float leftAngle = 220 + randomAngle.Next(-5, 5);
+        float rightAngle = 140 + randomAngle.Next(-5, 5);
 
         Vector3 centerDirection = Core.instance.gameObject.transform.globalPosition - gameObject.transform.globalPosition;
 
@@ -1027,14 +1053,12 @@ public class Skytrooper : Enemy
 
                 if (rightObject == null)
                 {
-                    Debug.Log("Right 1");
-                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                    return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
                 }
             }
             else
             {
-                Debug.Log("Left 1");
-                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
             }
         }
         else //First check right
@@ -1047,14 +1071,12 @@ public class Skytrooper : Enemy
 
                 if (leftObject == null)
                 {
-                    Debug.Log("Left 2");
-                    return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                    return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
                 }
             }
             else
             {
-                Debug.Log("Right 2");
-                return gameObject.transform.globalPosition + desiredDirection * dashRange;
+                return gameObject.transform.globalPosition + desiredDirection.normalized * dashRange;
             }
 
         }
@@ -1068,20 +1090,29 @@ public class Skytrooper : Enemy
                                        0.0f,
                                        (float)(Math.Sin(angle * Mathf.Deg2RRad) * centerDirection.normalized.x + Math.Cos(angle * Mathf.Deg2RRad) * centerDirection.normalized.z));
 
+        desiredDirection = desiredDirection.normalized;
+
         float hitDistance = 0.0f;
-        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f, desiredDirection, dashRange, ref hitDistance);
+        Vector3 up = new Vector3(0.0f, 1.0f, 0.0f);
+        GameObject hitObject = InternalCalls.RayCast(gameObject.transform.globalPosition + up + (desiredDirection.normalized * raycastOffset), desiredDirection, dashRange, ref hitDistance);
 
         if (hitObject == null)
         {
-            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f,
-                                  gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f + desiredDirection * dashRange,
-                                  new Vector3(1.0f, 1.0f, 1.0f));
+            //InternalCalls.DrawRay(gameObject.transform.globalPosition + up + (desiredDirection.normalized * raycastOffset),
+            //                      gameObject.transform.globalPosition + up + (desiredDirection.normalized * raycastOffset) + (desiredDirection * dashRange),
+            //                      new Vector3(1.0f, 1.0f, 1.0f));
+
+            //notHitPoint = gameObject.transform.globalPosition + up + desiredDirection.normalized * raycastOffset + desiredDirection * dashRange;
+            //Debug.Log("Null object");
         }
         else
         {
-            InternalCalls.DrawRay(gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f,
-                                  gameObject.transform.globalPosition + Vector3.up + desiredDirection.normalized * 0.2f + desiredDirection * hitDistance,
-                                  new Vector3(1.0f, 1.0f, 0.0f));
+            //InternalCalls.DrawRay(gameObject.transform.globalPosition + up + desiredDirection.normalized * raycastOffset,
+            //                      gameObject.transform.globalPosition + up + desiredDirection.normalized * raycastOffset + desiredDirection * hitDistance,
+            //                      new Vector3(1.0f, 1.0f, 0.0f));
+
+            //raycastPoint = gameObject.transform.globalPosition + up + desiredDirection.normalized * raycastOffset + desiredDirection * hitDistance;
+            //Debug.Log("Raycasted object");
         }
 
         return hitObject;
