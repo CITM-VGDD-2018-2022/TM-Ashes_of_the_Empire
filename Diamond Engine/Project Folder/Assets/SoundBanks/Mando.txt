@@ -5,7 +5,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	192623117	Pause_Object			\Default Work Unit\Pause_Object	
 	326072179	Play_Footsteps_Stone_Mando			\Default Work Unit\Mando\Play_Footsteps_Stone_Mando	
 	329581270	Play_Footsteps_Sand_Mando			\Default Work Unit\Mando\Play_Footsteps_Sand_Mando	
-	373760516	Play_Dash_Transition			\Default Work Unit\Mando\Play_Dash_Transition	
 	500889257	Play_Footsteps_Snow_Mando			\Default Work Unit\Mando\Play_Footsteps_Snow_Mando	
 	574956741	Play_Sniper_Cooldown_Finish			\Default Work Unit\Mando\Play_Sniper_Cooldown_Finish	
 	1184164898	Play_Mando_Damaging_Water			\Default Work Unit\Mando\Play_Mando_Damaging_Water	
@@ -62,7 +61,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	180750331	Footstep mando snow 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep mando snow 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps snow\Footstep mando snow 4		43084
 	194102914	Mando sniper charge	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando sniper charge_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Weapon_Shoot_Mando\Mando sniper charge		104604
 	217252079	Footstep metal platform 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep metal platform 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps metal platform\Footstep metal platform 1		34080
-	218041158	Mando hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando_Hit\Mando hit 1		89636
+	218041158	Mando hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando water hit\Mando hit 1		89636
 	222927635	Footstep sand 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps sand\Footstep sand 1		42028
 	235402370	Footstep metal platform 5	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep metal platform 5_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps metal platform\Footstep metal platform 5		37728
 	236232383	Mando voice 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando voice 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando_Kill_Voice\Mando voice 2		145388
@@ -77,7 +76,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	371786017	Grenade set up	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Grenade charge 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Grenade set up		28992
 	390903921	Dash Movement	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Dash Movement_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Dash Movement		117772
 	401277303	mando damage water 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\mando damage water 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando water hit\mando damage water 2		155296
-	409049906	Dash Transition	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Dash Transition_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Dash Transition		176512
 	426481162	Bantha attack ramming 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Bantha attack ramming 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando Ramming hit\Bantha attack ramming 2		58668
 	470698696	Footstep stone 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep stone 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps stone\Footstep stone 1		22652
 	472984334	Footstep mando water 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep mando water 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps water\Footstep mando water 2		42728
@@ -106,7 +104,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	925297908	Footstep sand 4	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep sand 4_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps sand\Footstep sand 4		45492
 	932035095	Footstep metal platform 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep metal platform 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps metal platform\Footstep metal platform 3		37728
 	967739381	Footstep stone 3	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Footstep stone 3_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Footsteps_Mando\Footsteps stone\Footstep stone 3		19104
-	1010296783	Mando hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando_Hit\Mando hit 2		62580
+	1010296783	Mando hit 2	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando hit 2_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando water hit\Mando hit 2		62580
 	1011831160	Mando armor hit 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando armor hit 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando_Hit\Mando armor hit 1		51768
 	1039797385	Mando voice 1	C:\Users\admin\Documents\GitHub\Wwise-project\Virtual Ragnarok Audio\.cache\Windows\SFX\Mando voice 1_FC2D3A10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mando\Mando_Kill_Voice\Mando voice 1		137224
 
