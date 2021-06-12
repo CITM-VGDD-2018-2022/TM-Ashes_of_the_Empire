@@ -746,20 +746,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                4.4703483581542969e-08,
+                5.9604644775390625e-08,
                 1.119743824005127,
-                -0.060867786407470703
+                -0.060867756605148315
             ],
             "Rotation": [
                 0,
-                7.4505814851022478e-09,
+                1.769513424676461e-08,
                 0,
                 1
             ],
             "Scale": [
                 1,
                 1,
-                0.9999997615814209
+                0.99999946355819702
             ],
             "Components": [
                 {
@@ -803,6 +803,18 @@
                             "paPerSec": 0,
                             "paRelative": true,
                             "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 1,
+                                    "paFOLT_gravityMod": -0.0070000002160668373,
+                                    "paFOLT_gravity": 0.068600006401538849,
+                                    "paFOLT_forceType": 2
+                                },
                                 {
                                     "paEffectType": 2,
                                     "Gradients": [
@@ -875,6 +887,18 @@
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 1,
+                                    "paFOLT_gravityMod": -0.0070000002160668373,
+                                    "paFOLT_gravity": 0.068600006401538849,
+                                    "paFOLT_forceType": 2
+                                },
+                                {
                                     "paEffectType": 2,
                                     "Gradients": [
                                         {
@@ -945,6 +969,18 @@
                             "paPerSec": 100,
                             "paRelative": true,
                             "ParticleEffects": [
+                                {
+                                    "paEffectType": 0,
+                                    "paFOLT_direction": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "paFOLT_magnitude": 1,
+                                    "paFOLT_gravityMod": -0.0070000002160668373,
+                                    "paFOLT_gravity": 0.068600006401538849,
+                                    "paFOLT_forceType": 2
+                                },
                                 {
                                     "paEffectType": 2,
                                     "Gradients": [

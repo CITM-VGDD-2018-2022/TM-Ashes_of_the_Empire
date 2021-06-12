@@ -1848,6 +1848,8 @@ public class MofGuideonRework : Entity
         }
 
         UpdateAnimationSpd(speedMult * chargeComboSpdMult_MC1);
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
     }
 
     private void UpdateMeleeCombo1Charge()
@@ -1993,6 +1995,8 @@ public class MofGuideonRework : Entity
         PlayParticles(PARTICLES.DASH);
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
     }
 
     private void UpdateMeleeComboDash1()
@@ -2053,6 +2057,8 @@ public class MofGuideonRework : Entity
 
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
 
     }
 
@@ -2115,6 +2121,8 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
+
     }
 
     private void UpdateMeleeComboDash3()
@@ -2165,6 +2173,8 @@ public class MofGuideonRework : Entity
         PlayParticles(PARTICLES.DASH);
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
 
     }
 
@@ -2228,6 +2238,8 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
+
     }
 
     private void UpdateMeleeComboDash5()
@@ -2287,6 +2299,7 @@ public class MofGuideonRework : Entity
         agent.CalculatePath(gameObject.transform.globalPosition, targetPosition);
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
     }
 
     private void UpdateMeleeComboDash6()
@@ -2592,6 +2605,8 @@ public class MofGuideonRework : Entity
                 swingScript.SetDirection(direction.normalized);
                 swingScript.SetMultipliers(speedMult, timeMult);
             }
+
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Lightsaber_Whoosh");
         }
     }
 
@@ -2635,6 +2650,8 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
         UpdateAnimationSpd(speedMult);
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
     }
 
     private void UpdateBurstCharge()
@@ -2701,6 +2718,7 @@ public class MofGuideonRework : Entity
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
 
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
     }
 
     private void UpdateBurstDash()
@@ -2788,6 +2806,8 @@ public class MofGuideonRework : Entity
         if (bullet != null)
         {
             BH_Bullet bulletScript = bullet.GetComponent<BH_Bullet>();
+
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Shot");
 
             if (bulletScript != null)
             {
@@ -2900,6 +2920,8 @@ public class MofGuideonRework : Entity
             DeActivateGun();
         }
 
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Blink");
+
         UpdateAnimationSpd(speedMult);
     }
 
@@ -2957,6 +2979,8 @@ public class MofGuideonRework : Entity
         UpdateAnimationSpd(speedMult);
 
         Mathf.LookAt(ref this.gameObject.transform, agent.GetDestination());
+
+        Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Dash");
 
     }
 
@@ -3667,7 +3691,7 @@ public class MofGuideonRework : Entity
             }
 
             TakeDamage(damageToBoss);
-            Debug.Log("Rancor HP: " + currentHealthPoints.ToString());
+            Audio.PlayAudio(gameObject, "Play_Moff_Gideon_Sniper_Hit");
 
             PlayHitAudio();
 
