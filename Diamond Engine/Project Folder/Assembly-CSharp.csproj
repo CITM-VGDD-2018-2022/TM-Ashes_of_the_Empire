@@ -236,6 +236,7 @@
 		<Compile Include="Assets\Scripts\CubeSize.cs" />
 		<Compile Include="Assets\Scripts\RancorMeleeCollider.cs" />
 		<Compile Include="Assets\Scripts\CinematicDialog.cs" />
+		<Compile Include="Assets\Scripts\MoffGideonCinematic.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
