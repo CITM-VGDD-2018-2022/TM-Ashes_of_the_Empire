@@ -13,9 +13,9 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                18.242429733276367,
-                1.2642967700958252,
-                18.474048614501953
+                11.887447357177734,
+                0.19293403625488281,
+                11.093314170837402
             ],
             "Rotation": [
                 1.6874839303682165e-09,
@@ -60,13 +60,12 @@
                     "blasterMeshObj": 1873646506,
                     "idleTime": 2,
                     "wanderTime": 2,
+                    "dashTime": 0.30000001192092896,
                     "timeBewteenShots": 1.5,
                     "timeBewteenShootingStates": 2,
                     "wanderSpeed": 3,
-                    "dashSpeed": 30,
                     "wanderRange": 5,
-                    "dashRange": 10,
-                    "dashTimer": 0,
+                    "dashRange": 6.5,
                     "maxShots": 2,
                     "explosionDistance": 4,
                     "forcePushMod": 1,
