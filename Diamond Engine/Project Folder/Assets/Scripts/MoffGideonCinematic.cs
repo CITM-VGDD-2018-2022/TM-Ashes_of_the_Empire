@@ -43,9 +43,9 @@ public class MoffGideonCinematic : DiamondComponent
 
     public void Update()
     {
-        if (start == false)
+        if (sequenceCounter < amountOfSequencesPlusOne)
         {
-            if (Core.instance != null)
+            if (Core.instance != null && start == false)
             {
                 Core.instance.LockInputs(true);
 
@@ -54,22 +54,12 @@ public class MoffGideonCinematic : DiamondComponent
                     Core.instance.hud.Enable(false);
                 }
 
-            }
-
-            start = true;
-        }
-
-        if (sequenceCounter < amountOfSequencesPlusOne)
-        {
-            if (Core.instance != null)
-            {
-                if (Core.instance.hud != null)
-                {
-                    Core.instance.hud.Enable(false);
-                }
+                start = true;
+                return;
             }
 
             float newDeltaTime = Time.deltaTime;
+
             switch (sequenceCounter)
             {
                 case 0:
@@ -83,6 +73,7 @@ public class MoffGideonCinematic : DiamondComponent
 
                 case 1:
                     timer2 += newDeltaTime;
+
                     if (timer2 > time2)
                     {
                         sequenceCounter++;
