@@ -181,6 +181,7 @@ public class HUD : DiamondComponent
             currency++;
             UpdateCurrency(currency);
         }*/
+
         if (Input.GetKey(DEKeyCode.H) == KeyState.KEY_DOWN)
         {
             if (hp < max_hp)
@@ -202,45 +203,42 @@ public class HUD : DiamondComponent
         }
         if (Input.GetKey(DEKeyCode.F) == KeyState.KEY_DOWN)
         {
-            if (BabyYoda.instance != null)
-            {
-                if (BabyYoda.instance.GetCurrentForce() > 0)
-                {
-                    BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() - 10);
-                }
-            }
-
+            //if (BabyYoda.instance != null)
+            //{
+            //    if (BabyYoda.instance.GetCurrentForce() > 0)
+            //    {
+            //        BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() - 10);
+            //    }
+            //}
         }
         if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN)
         {
-            if (BabyYoda.instance != null)
-            {
-                if (BabyYoda.instance.GetCurrentForce() < BabyYoda.GetMaxForce())
-                {
-                    BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + 10);
-                }
-            }
+            //if (BabyYoda.instance != null)
+            //{
+            //    if (BabyYoda.instance.GetCurrentForce() < BabyYoda.GetMaxForce())
+            //    {
+            //        BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + 10);
+            //    }
+            //}
         }
         if (Input.GetKey(DEKeyCode.S) == KeyState.KEY_DOWN)
         {
-            if (main_weapon)
-            {
-                if (primaryWeaponHeat < 100)
-                {
-                    AddPrimaryHeatAmount(10);
-                }
-            }
-            else
-            {
-                if (bullets_secondary_weapon > 0)
-                {
-                    bullets_secondary_weapon--;
-                    UpdateBullets(bullets_secondary_weapon, max_bullets_secondary_weapon);
+            //if (main_weapon)
+            //{
+            //    if (primaryWeaponHeat < 100)
+            //    {
+            //        AddPrimaryHeatAmount(10);
+            //    }
+            //}
+            //else
+            //{
+            //    if (bullets_secondary_weapon > 0)
+            //    {
+            //        bullets_secondary_weapon--;
+            //        UpdateBullets(bullets_secondary_weapon, max_bullets_secondary_weapon);
 
-                }
-            }
-
-
+            //    }
+            //}
         }
         if (Input.GetKey(DEKeyCode.R) == KeyState.KEY_DOWN)
         {

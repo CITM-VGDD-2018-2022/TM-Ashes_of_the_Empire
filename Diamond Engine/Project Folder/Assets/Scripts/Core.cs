@@ -51,6 +51,8 @@ public class Core : Entity
     {
         NONE = -1,
         DUST,
+        ICE,
+        WATER,
         MUZZLE,
         JETPACK,
         IMPACT,
@@ -1994,7 +1996,21 @@ public class Core : Entity
         dustTime += myDeltaTime;
         if (dustTime >= runTime)
         {
-            PlayParticles(PARTICLES.DUST);
+            switch(floorType)
+            {
+                case FLOOR_TYPE.SAND:
+                    PlayParticles(PARTICLES.DUST);
+                    break;
+                case FLOOR_TYPE.SNOW:
+                    PlayParticles(PARTICLES.ICE);
+                    break;
+                case FLOOR_TYPE.WATER:
+                    PlayParticles(PARTICLES.WATER);
+                    break;
+                default:
+                    PlayParticles(PARTICLES.DUST);
+                    break;
+            }
             dustTime = 0;
         }
 
@@ -2587,11 +2603,35 @@ public class Core : Entity
                         else
                             particle.Stop();
                     }
-                    else
-                        Debug.Log("Jetpack particle not found");
                 }
-                else
-                    Debug.Log("Component Particles not found");
+                break;
+
+            case PARTICLES.ICE:
+                if (myParticles != null)
+                {
+                    particle = myParticles.ice;
+                    if (particle != null)
+                    {
+                        if (stopParticle == false)
+                            particle.Play();
+                        else
+                            particle.Stop();
+                    }
+                }
+                break;
+
+            case PARTICLES.WATER:
+                if (myParticles != null)
+                {
+                    particle = myParticles.water;
+                    if (particle != null)
+                    {
+                        if (stopParticle == false)
+                            particle.Play();
+                        else
+                            particle.Stop();
+                    }
+                }
                 break;
 
             case PARTICLES.IMPACT:

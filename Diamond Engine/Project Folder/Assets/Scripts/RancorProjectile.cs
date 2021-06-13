@@ -7,11 +7,23 @@ public class RancorProjectile : DiamondComponent
 	public float lifeTime = 20.0f;
 	public int damage = 10;
 
+	public GameObject destroyParticlesObj = null;
+	private ParticleSystem destroyParticles = null;
+
 	public Vector3 targetPos = new Vector3(0, 0, 0);    //Set from Rancor.cs
 	private Vector3 targetDirection = Vector3.zero;
 
 	private bool to_destroy = false;
 	private float timer = 1.3f;
+	
+	public void Awake()
+    {
+		if(destroyParticlesObj != null)
+        {
+			destroyParticles = destroyParticlesObj.GetComponent<ParticleSystem>();
+        }
+    }
+	
 	public void Update()
 	{
 		if (!to_destroy)
@@ -63,5 +75,10 @@ public class RancorProjectile : DiamondComponent
 		to_destroy = true;
 		gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
 		timer = 1.3f;
+		if (destroyParticles != null)
+		{
+			destroyParticles.Play();
+			Debug.Log("Particles played");
+		}
 	}
 }
