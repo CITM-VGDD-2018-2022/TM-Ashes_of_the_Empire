@@ -1342,7 +1342,7 @@
             "Position": [
                 32.302097320556641,
                 7.3626213073730469,
-                -20.890710830688476
+                -20.890710830688477
             ],
             "Rotation": [
                 -0.56900990009307861,
@@ -1646,10 +1646,10 @@
                 11.487642288208008
             ],
             "Rotation": [
-                -0.49781492352485657,
-                0.50217866897583008,
-                0.50217604637145996,
-                0.49781152606010437
+                -0.49781486392021179,
+                0.5021786093711853,
+                0.50217598676681519,
+                0.49781146645545959
             ],
             "Scale": [
                 2.6026985645294189,
@@ -1999,7 +1999,7 @@
             "Position": [
                 9.4756145477294922,
                 6.4000000953674316,
-                -12.790063858032226
+                -12.790063858032227
             ],
             "Rotation": [
                 -0.68155515193939209,
@@ -2086,7 +2086,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                12.998437881469726,
+                12.998437881469727,
                 6.4000000953674316,
                 10.993405342102051
             ],
@@ -4799,8 +4799,8 @@
                     "fSize": 30,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 19.899999618530273,
-                    "hFOV": 34.533332824707031,
+                    "vFOV": 22.566667556762695,
+                    "hFOV": 42.900001525878906,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -10699,7 +10699,7 @@
                     "spawningWaves": true,
                     "maxEnemiesPerWave": 6,
                     "enemyIncreasePerWave": -1,
-                    "maxWaves": 3,
+                    "maxWaves": 2,
                     "delayInWaveSpawn": 5,
                     "enemiesLeftToNextWave": 1,
                     "timeBetweenWaves": 20,
@@ -10900,6 +10900,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11183,6 +11184,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11466,6 +11468,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11749,6 +11752,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12032,6 +12036,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12315,6 +12320,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12598,6 +12604,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12881,6 +12888,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13198,6 +13206,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13481,6 +13490,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13764,6 +13774,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -14047,6 +14058,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18375,6 +18387,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18524,6 +18537,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18534,7 +18548,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -18764,6 +18778,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18913,6 +18928,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -18923,7 +18939,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -19153,6 +19169,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -19302,6 +19319,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -19312,7 +19330,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -19542,6 +19560,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -19691,6 +19710,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -19701,7 +19721,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -19931,6 +19951,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20080,6 +20101,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20090,7 +20112,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -20320,6 +20342,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20469,6 +20492,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20479,7 +20503,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -20709,6 +20733,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20858,6 +20883,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -20868,7 +20894,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -25059,6 +25085,118 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Ice Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1319058918,
+                    "ParentUID": 708963024,
+                    "PrefabID": 0,
+                    "PrefabReference": 1319058918,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0.24142935872077942,
+                        -0.63629698753356934,
+                        0.2197878360748291,
+                        0.69895017147064209
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        0.99999946355819702,
+                        0.99999946355819702
+                    ]
+                },
+                {
+                    "name": "Ice",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1357733417,
+                    "ParentUID": 1319058918,
+                    "PrefabID": 0,
+                    "PrefabReference": 1357733417,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0.7071068286895752,
+                        0.7071068286895752
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
+                    ]
+                },
+                {
+                    "name": "WaterIce Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 708076478,
+                    "ParentUID": 1357733417,
+                    "PrefabID": 0,
+                    "PrefabReference": 708076478,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.67318695783615112,
+                        0,
+                        0.73947232961654663
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        1,
+                        0.99999988079071045
+                    ]
+                },
+                {
+                    "name": "Water",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1505357953,
+                    "ParentUID": 708076478,
+                    "PrefabID": 0,
+                    "PrefabReference": 1505357953,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        -0.50257349014282227,
+                        0.50257349014282227,
+                        0.49741318821907043,
+                        0.49741318821907043
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
                     ]
                 }
             ]
