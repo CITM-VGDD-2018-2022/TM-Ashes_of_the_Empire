@@ -66,7 +66,8 @@ public class GameSceneManager : DiamondComponent
                     rewardSpawnComponent.PlayParticles();
                 }
                 Core.instance.lockInputs = false;
-                Audio.PlayAudio(rewardObject, "Play_UI_Boon_Pickup");
+                if (rewardObject.IsEnabled())
+                    Audio.PlayAudio(rewardObject, "Play_UI_Boon_Pickup");
 
                 if (rewardMenu != null)
                 {
