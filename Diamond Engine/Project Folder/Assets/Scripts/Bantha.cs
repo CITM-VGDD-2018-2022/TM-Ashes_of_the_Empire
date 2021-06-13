@@ -674,7 +674,7 @@ public class Bantha : Enemy
 
         if (Core.instance != null)
         {
-            Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+            Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
         }
 
         InternalCalls.Destroy(gameObject);

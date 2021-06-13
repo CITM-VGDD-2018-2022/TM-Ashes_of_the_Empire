@@ -2007,6 +2007,9 @@ public class Core : Entity
                 case FLOOR_TYPE.WATER:
                     PlayParticles(PARTICLES.WATER);
                     break;
+                case FLOOR_TYPE.METAL:
+                    //PlayParticles(PARTICLES.WATER);
+                    break;
                 default:
                     PlayParticles(PARTICLES.DUST);
                     break;

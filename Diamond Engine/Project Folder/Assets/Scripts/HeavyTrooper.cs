@@ -809,7 +809,8 @@ public class HeavyTrooper : Enemy
         PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
         
         if(playerHealth != null)
-            playerHealth.TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+        playerHealth.SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
+
 
         InternalCalls.Destroy(gameObject);
     }
