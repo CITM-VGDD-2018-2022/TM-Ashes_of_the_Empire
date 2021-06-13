@@ -7,23 +7,30 @@ public class HeavyTrooperSpear : DiamondComponent
 
     BoxCollider collider = null;
 
+    public bool canDamage { get; private set; } = false;
+
+    private bool alreadyDamaged = false;
+
     public void Awake()
     {
         collider = gameObject.GetComponent<BoxCollider>();
 
         if (collider != null)
-            collider.active = false;
+        {
+            canDamage = false;
+        }
     }
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
     {
-        if(triggeredGameObject.CompareTag("Player"))
+        if (triggeredGameObject.CompareTag("Player") && alreadyDamaged == false)
         {
             PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
 
-            if(playerHealth != null  && collider != null && collider.active)
+            if (playerHealth != null && collider != null && canDamage == true)
             {
                 playerHealth.TakeDamage(damage);
+                alreadyDamaged = true;
                 if (gameObject.CompareTag("Saber"))
                 {
                     Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Lightsaber_Attack");
@@ -31,5 +38,35 @@ public class HeavyTrooperSpear : DiamondComponent
             }
         }
     }
+
+    public void OnTriggerExit(GameObject triggeredGameObject)
+    {
+        if (triggeredGameObject.CompareTag("Player") && alreadyDamaged == false)
+        {
+            PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null && collider != null && canDamage == true)
+            {
+                playerHealth.TakeDamage(damage);
+                alreadyDamaged = true;
+                if (gameObject.CompareTag("Saber"))
+                {
+                    Audio.PlayAudio(gameObject, "Play_Moff_Guideon_Lightsaber_Attack");
+                }
+            }
+        }
+    }
+
+
+    public void SetCanDamage(bool state)
+    {
+        canDamage = state;
+
+        if(state == false)
+        {
+            alreadyDamaged = false;
+        }
+    }
+
 
 }

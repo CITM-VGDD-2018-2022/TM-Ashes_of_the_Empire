@@ -708,18 +708,20 @@ public class HeavyTrooper : Enemy
             LookAt(Core.instance.gameObject.transform.globalPosition);
         }
 
-        if (spearCollider != null)
+        HeavyTrooperSpear heavyTrooperSpear = spear.GetComponent<HeavyTrooperSpear>();
+
+        if (spearCollider != null && heavyTrooperSpear != null)
         {
-            if (sweepTimer < sweepTime * 0.33f && spearCollider.active) // Stop doing damage at the last third of the animation
+            if (sweepTimer < sweepTime * 0.33f && heavyTrooperSpear.canDamage == true) // Stop doing damage at the last third of the animation
             {
-                spearCollider.active = false;
+                heavyTrooperSpear.SetCanDamage(false);
 
                 if (particles != null)
                     particles.Stop(HeavyTrooperParticles.HEAVYROOPER_PARTICLES.SPEAR);
             }
-            else if (sweepTimer <= sweepTime * 0.75f && !spearCollider.active && canSweep) //Start doing damage at the first fourth of the animation
+            else if (sweepTimer <= sweepTime * 0.75f && !heavyTrooperSpear.canDamage && canSweep) //Start doing damage at the first fourth of the animation
             {
-                spearCollider.active = true;
+                heavyTrooperSpear.SetCanDamage(true);
 
                 if (particles != null)
                     particles.Play(HeavyTrooperParticles.HEAVYROOPER_PARTICLES.SPEAR);
@@ -781,8 +783,8 @@ public class HeavyTrooper : Enemy
         if (PlayerResources.CheckBoon(BOONS.BOON_MASTER_YODA_FORCE))
         {
             HUD hud = Core.instance.hud.GetComponent<HUD>();
-            
-            if(hud != null)
+
+            if (hud != null)
                 hud.AddToCombo(300, 1.0f);
         }
     }
@@ -807,9 +809,9 @@ public class HeavyTrooper : Enemy
         DropCoins();
 
         PlayerHealth playerHealth = Core.instance.gameObject.GetComponent<PlayerHealth>();
-        
-        if(playerHealth != null)
-        playerHealth.SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
+
+        if (playerHealth != null)
+            playerHealth.SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
 
 
         InternalCalls.Destroy(gameObject);
