@@ -58,6 +58,7 @@ public class DummyStormtrooper : Enemy
 
     public void Awake()
     {
+        EnemyManager.AddEnemy(gameObject);
         InitEntity(ENTITY_TYPE.STROMTROOPER);
 
         currentState = STATE.IDLE;
@@ -77,8 +78,6 @@ public class DummyStormtrooper : Enemy
 
         if (spawnparticles != null)
             spawnparticles.Play();
-
-        EnemyManager.AddEnemy(this.gameObject);
     }
 
     public void Update()

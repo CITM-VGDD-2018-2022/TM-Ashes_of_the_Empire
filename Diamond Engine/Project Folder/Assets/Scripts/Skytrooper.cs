@@ -648,7 +648,7 @@ public class Skytrooper : Enemy
 
         DropCoins();
 
-        Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+        Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
 
         //Explosion
         InternalCalls.Destroy(gameObject);

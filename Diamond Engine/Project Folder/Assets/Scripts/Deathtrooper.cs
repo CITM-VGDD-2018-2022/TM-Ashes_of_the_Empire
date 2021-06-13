@@ -561,7 +561,7 @@ public class Deathtrooper : Enemy
     private void Die()
     {
         Vector3 forward = gameObject.transform.GetForward();
-        Core.instance.gameObject.GetComponent<PlayerHealth>().TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+        Core.instance.gameObject.GetComponent<PlayerHealth>().SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
         InternalCalls.CreatePrefab("Library/Prefabs/230945350.prefab", new Vector3(gameObject.transform.globalPosition.x + forward.x, gameObject.transform.globalPosition.y, gameObject.transform.globalPosition.z + forward.z), Quaternion.identity, new Vector3(1, 1, 1));
 
         Counter.SumToCounterType(Counter.CounterTypes.ENEMY_DEATHTROOPER);
