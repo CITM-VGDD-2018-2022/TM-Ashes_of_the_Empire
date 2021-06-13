@@ -143,7 +143,7 @@ public class Core : Entity
     public GameObject RayCastObj = null;
     private Vector3 dashDirection = new Vector3(0, 0, 0);
     private Quaternion preDashRotation = new Quaternion(0, 0, 0, 1);
-    
+
 
     // Shooting
     public float baseFireRate = 0.2f;
@@ -268,7 +268,10 @@ public class Core : Entity
     private bool updateSniper = false;
 
     public GameObject fastParticleObject = null;
+    private ParticleSystem fastParticle = null;
     public GameObject slowParticleObject = null;
+    private ParticleSystem slowParticle = null;
+    private float comboAccelMult = 0f;
 
     public bool startAvailable = true;
     public void Awake()
@@ -361,6 +364,17 @@ public class Core : Entity
         #region STATUS_SYSTEM
 
         InitEntity(ENTITY_TYPE.PLAYER);
+
+        if (slowParticleObject != null)
+        {
+            slowParticle = slowParticleObject.GetComponent<ParticleSystem>();
+
+        }
+
+        if (fastParticleObject != null)
+        {
+            fastParticle = fastParticleObject.GetComponent<ParticleSystem>();
+        }
 
         #endregion
 
@@ -455,6 +469,7 @@ public class Core : Entity
         UpdateControllerInputs();
 
         UpdateStatuses();
+        UpdateStatusesParticles();
 
         #endregion
 
@@ -1996,7 +2011,7 @@ public class Core : Entity
         dustTime += myDeltaTime;
         if (dustTime >= runTime)
         {
-            switch(floorType)
+            switch (floorType)
             {
                 case FLOOR_TYPE.SAND:
                     PlayParticles(PARTICLES.DUST);
@@ -2838,7 +2853,7 @@ public class Core : Entity
             {
                 float currHeat = hud.GetComponent<HUD>().GetPrimaryHeat();
                 float maxHeat = hud.GetComponent<HUD>().GetPrimaryMaxHeat();
-              //  Debug.Log(currHeat.ToString() + " " + maxHeat.ToString());
+                //  Debug.Log(currHeat.ToString() + " " + maxHeat.ToString());
                 if (currHeat / maxHeat >= 0.75f)
                 {
                     Damage *= 2;
@@ -2963,6 +2978,7 @@ public class Core : Entity
     {
         eType = myType;
         speedMult = 1f;
+        comboAccelMult = 0f;
         MovspeedMult = 1f;
         OverheatMult = 1f;
         BlasterDamageMult = 1f;
@@ -2998,19 +3014,7 @@ public class Core : Entity
                     }
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
-                    if (slowParticleObject != null)
-                    {
-                        ParticleSystem slowParticlePart = slowParticleObject.GetComponent<ParticleSystem>();
 
-                        if (slowParticlePart != null)
-                        {
-                            if (speedMult < 1f)
-                                slowParticlePart.Play();
-                            else
-                                slowParticlePart.Stop();
-                        }
-
-                    }
 
                 }
                 break;
@@ -3020,38 +3024,14 @@ public class Core : Entity
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            if (speedMult > 1f)
-                                fastParticlePart.Play();
-                            else
-                                fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.COMBO_UP_ACCEL:
                 {
                     this.speedMult += statusToInit.severity;
+                    this.comboAccelMult += statusToInit.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
-
-                    if (fastParticleObject != null)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            if (speedMult > 1f)
-                                fastParticlePart.Play();
-                            else
-                                fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.REX_SEC_BLASTER_SUBSKILL:
@@ -3061,19 +3041,6 @@ public class Core : Entity
                     speedMult += statusToInit.statChange;
                     Debug.Log("mult = " + speedMult.ToString() + "statChange = " + statusToInit.statChange.ToString());
                     myDeltaTime = Time.deltaTime * speedMult;
-
-                    if (fastParticleObject != null)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            if (speedMult > 1f)
-                                fastParticlePart.Play();
-                            else
-                                fastParticlePart.Stop();
-                        }
-                    }
 
                 }
                 break;
@@ -3085,18 +3052,6 @@ public class Core : Entity
                     Debug.Log("mult = " + speedMult.ToString() + "statChange = " + statusToInit.statChange.ToString());
                     myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            if (speedMult > 1f)
-                                fastParticlePart.Play();
-                            else
-                                fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.ECHO_RECOVERY_SUBSKILL:
@@ -3107,18 +3062,6 @@ public class Core : Entity
                     Debug.Log("mult = " + speedMult.ToString() + "statChange = " + statusToInit.statChange.ToString());
                     myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            if (speedMult > 1f)
-                                fastParticlePart.Play();
-                            else
-                                fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.ENEMY_DAMAGE_DOWN:
@@ -3367,6 +3310,54 @@ public class Core : Entity
             default:
                 break;
         }
+
+    }
+
+    private void UpdateStatusesParticles()
+    {
+        float particleAwareMult = speedMult - comboAccelMult;
+
+        if (particleAwareMult > 1.01f)
+        {
+            if (slowParticle != null)
+            {
+                if (slowParticle.playing == true)
+                    slowParticle.Stop();
+            }
+
+            if (fastParticle != null)
+            {
+                if (fastParticle.playing == false)
+                    fastParticle.Play();
+            }
+
+        }
+        else if (particleAwareMult < 0.99f)
+        {
+            if (slowParticle != null)
+            {
+                if (slowParticle.playing == false)
+                    slowParticle.Play();
+            }
+
+            if (fastParticle != null)
+            {
+                if (fastParticle.playing == true)
+                    fastParticle.Stop();
+            }
+        }
+        else
+        {
+            if (slowParticle != null)
+            {
+                slowParticle.Stop();
+            }
+
+            if (fastParticle != null)
+            {
+                fastParticle.Stop();
+            }
+        }
     }
 
     protected override void OnDeleteStatus(StatusData statusToDelete)
@@ -3378,15 +3369,6 @@ public class Core : Entity
                     this.speedMult += statusToDelete.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
-                    if (slowParticleObject != null)
-                    {
-                        ParticleSystem slowParticlePart = slowParticleObject.GetComponent<ParticleSystem>();
-
-                        if (slowParticlePart != null && speedMult >= 1f)
-                        {
-                            slowParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.ACCELERATED:
@@ -3394,33 +3376,15 @@ public class Core : Entity
                     this.speedMult -= statusToDelete.severity;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
-                    if (fastParticleObject != null && speedMult <= 1f)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
 
-                        if (fastParticlePart != null)
-                        {
-                            fastParticlePart.Stop();
-                        }
-
-                    }
                 }
                 break;
             case STATUS_TYPE.COMBO_UP_ACCEL:
                 {
                     this.speedMult -= statusToDelete.severity;
+                    this.comboAccelMult = 0f ;
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
-
-                    if (fastParticleObject != null && speedMult <= 1f)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.REX_SEC_BLASTER_SUBSKILL:
@@ -3429,15 +3393,6 @@ public class Core : Entity
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null && speedMult <= 1f)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.ANAKIN_KILLSTREAK_SUBSKILL:
@@ -3446,15 +3401,6 @@ public class Core : Entity
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null && speedMult <= 1f)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            fastParticlePart.Stop();
-                        }
-                    }
                 }
                 break;
             case STATUS_TYPE.ECHO_RECOVERY_SUBSKILL:
@@ -3463,15 +3409,7 @@ public class Core : Entity
 
                     this.myDeltaTime = Time.deltaTime * speedMult;
 
-                    if (fastParticleObject != null && speedMult <= 1f)
-                    {
-                        ParticleSystem fastParticlePart = fastParticleObject.GetComponent<ParticleSystem>();
-
-                        if (fastParticlePart != null)
-                        {
-                            fastParticlePart.Stop();
-                        }
-                    }
+                    
                 }
                 break;
             case STATUS_TYPE.ENEMY_DAMAGE_DOWN:
