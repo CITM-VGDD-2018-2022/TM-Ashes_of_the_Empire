@@ -63,11 +63,9 @@ public class GameSceneManager : DiamondComponent
                 rewardObject.Enable(true);
                 if (rewardSpawnComponent != null)
                 {
-                    rewardSpawnComponent.PlayParticles();
+                    rewardSpawnComponent.ShowBoon();
                 }
                 Core.instance.lockInputs = false;
-                if (rewardObject.IsEnabled())
-                    Audio.PlayAudio(rewardObject, "Play_UI_Boon_Pickup");
 
                 if (rewardMenu != null)
                 {
@@ -83,7 +81,7 @@ public class GameSceneManager : DiamondComponent
             rewardSpawnComponent.AdvanceVerticalMovement(rewardInitialPos);
             rewardSpawnComponent.AdvanceRotation();
 
-            if (rewardSpawnComponent.trigger == true)
+            if (rewardSpawnComponent.triggered == true)
             {
 
                 ApplyReward();
@@ -95,7 +93,7 @@ public class GameSceneManager : DiamondComponent
                 {
                     ChangeScene();
                 }
-                rewardSpawnComponent.trigger = false;
+                rewardSpawnComponent.triggered = false;
             }
         }
 
@@ -160,7 +158,7 @@ public class GameSceneManager : DiamondComponent
                 rewardObject.Enable(false);
 
             if (rewardSpawnComponent != null)
-                rewardSpawnComponent.trigger = false;
+                rewardSpawnComponent.triggered = false;
 
             rewardData = null;
         }

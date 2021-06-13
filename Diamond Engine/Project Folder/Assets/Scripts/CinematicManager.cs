@@ -31,6 +31,10 @@ public class CinematicManager : DiamondComponent
     private List<Sequence> listSequences = new List<Sequence>();
     private float timerToSkipCinematic;
     public float timeToSkipCinematic;
+    public GameObject skipText;
+    private Transform2D skipTransform;
+    private Vector3 skipOriginSize;
+    private Vector3 skipOriginPos;
     public void Awake()
     {
         if (!Counter.firstRun)
@@ -45,7 +49,13 @@ public class CinematicManager : DiamondComponent
         }
 
         start = true;
-
+        if(skipText != null)
+        {
+            skipTransform = skipText.GetComponent<Transform2D>();
+            skipOriginSize = skipTransform.size;
+            skipOriginPos = skipTransform.lPos;
+        }
+        Audio.SetState("Game_State", "Cinematic");
 
         instance = this;
         AddSequence(sequence1);
@@ -123,6 +133,7 @@ public class CinematicManager : DiamondComponent
             Core.instance.LockInputs(false);
         }
         Counter.firstRun = false;
+        skipText.Enable(false);
     } 
     
     private void ReturnGame()
@@ -141,6 +152,7 @@ public class CinematicManager : DiamondComponent
             Core.instance.LockInputs(false);
         }
         Counter.firstRun = false;
+        skipText.Enable(false);
     }
 
     private void PlayHUBMusic()
@@ -171,6 +183,8 @@ public class CinematicManager : DiamondComponent
 
         if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
         {
+            skipTransform.size += (new Vector3(1, 1, 0) * 0.3f) * Time.deltaTime;
+            skipTransform.lPos += (new Vector3(-1, 0, 0) * 0.5f) * Time.deltaTime;
             timerToSkipCinematic += Time.deltaTime;
 
             if (timerToSkipCinematic >= timeToSkipCinematic)
@@ -186,6 +200,8 @@ public class CinematicManager : DiamondComponent
         if(Input.GetGamepadButton(DEControllerButton.A)== KeyState.KEY_UP)
         {
             timerToSkipCinematic = 0;
+            skipTransform.size = skipOriginSize;
+            skipTransform.lPos = skipOriginPos;
         }
 
         foreach (Sequence sequence in listSequences)
@@ -265,7 +281,7 @@ public class CinematicManager : DiamondComponent
         });
 
         Counter.firstRun = false;
-
+        skipText.Enable(false);
         init = false;
 
     }
