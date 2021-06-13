@@ -99,11 +99,6 @@ public class MoffGideonCinematic : DiamondComponent
             {
                 EndCinematic();
             }
-
-            if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
-            {
-                EndCinematic();
-            }
         }
     }
 
