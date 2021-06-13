@@ -276,6 +276,9 @@ public class Bosseslv2 : Entity
         resting = true;
         restingTimer = restingTime;
         Audio.StopAudio(gameObject);
+
+        if (rightSpike != null && rightSpike.IsEnabled()) rightSpike.Enable(false);
+        if (leftSpike != null && leftSpike.IsEnabled()) leftSpike.Enable(false);
     }
     #endregion
 
@@ -428,6 +431,7 @@ public class Bosseslv2 : Entity
         if (colliderBounceRush != null)
         {
             colliderBounceRush.GetComponent<AtackBosslv2>().active = true;
+            colliderBounceRush.GetComponent<BoxCollider>().active = true;
         }
         ballTimer = ballTime;
     }
@@ -446,7 +450,7 @@ public class Bosseslv2 : Entity
         }
 
         float distance = Mathf.Distance(gameObject.transform.globalPosition, currentTarget.transform.globalPosition);
-        if (distance > 2.25f)
+        if (distance > 1f)
         {
             MoveToPosition(currentTarget.transform.globalPosition, 25f);
             LookAt(currentTarget.transform.globalPosition);
@@ -489,6 +493,7 @@ public class Bosseslv2 : Entity
 
         if (colliderBounceRush != null)
         {
+            colliderBounceRush.GetComponent<BoxCollider>().active = true;
             colliderBounceRush.GetComponent<AtackBosslv2>().active = false;
         }
         Audio.StopAudio(gameObject);
@@ -510,6 +515,8 @@ public class Bosseslv2 : Entity
             Animator.Play(gameObject, "Skel_Jump_P1", speedMult);
             UpdateAnimationSpd(speedMult);
         }
+        if (colliderJumpSlam != null)
+            colliderJumpSlam.GetComponent<BoxCollider>().active = true;
     }
 
     public void UpdateJumpSlam()
@@ -650,6 +657,7 @@ public class Bosseslv2 : Entity
         if (colliderJumpSlam != null)
         {
             colliderJumpSlam.GetComponent<AtackBosslv2>().active = false;
+            colliderJumpSlam.GetComponent<BoxCollider>().active = false;
         }
         Audio.StopAudio(gameObject);
     }

@@ -58,7 +58,7 @@
                     ],
                     "Rotation": [
                         0,
-                        0.0040162643417716026,
+                        0.0040162648074328899,
                         0,
                         0.99999195337295532
                     ],
@@ -222,10 +222,10 @@
                 0.093965664505958557
             ],
             "Rotation": [
-                0.18554602563381195,
-                0.00087308965157717466,
-                0.0019124092068523169,
-                0.98263329267501831
+                0.18554604053497314,
+                0.00087308976799249649,
+                0.0019124094396829605,
+                0.98263341188430786
             ],
             "Scale": [
                 1,
@@ -1378,10 +1378,10 @@
                 -0.46277880668640137
             ],
             "Rotation": [
-                -4.0590606431578635e-08,
-                -0.9976159930229187,
-                -4.0590606431578635e-08,
-                0.069011136889457703
+                -4.0590602878864956e-08,
+                -0.99761587381362915,
+                -4.0590602878864956e-08,
+                0.069011129438877106
             ],
             "Scale": [
                 0.99999862909317017,
@@ -1533,7 +1533,7 @@
                 },
                 {
                     "Type": 18,
-                    "Active": true,
+                    "Active": false,
                     "isTrigger": true,
                     "Position": [
                         0,
@@ -1630,7 +1630,7 @@
                 },
                 {
                     "Type": 18,
-                    "Active": true,
+                    "Active": false,
                     "isTrigger": true,
                     "Position": [
                         0,
@@ -1727,6 +1727,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -1818,6 +1819,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -1977,6 +1979,7 @@
                             ],
                             "paPerSec": 1500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -2044,6 +2047,7 @@
                             ],
                             "paPerSec": 700,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -2225,6 +2229,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -2340,6 +2345,7 @@
                             ],
                             "paPerSec": 1500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -2419,6 +2425,7 @@
                             ],
                             "paPerSec": 1000,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
