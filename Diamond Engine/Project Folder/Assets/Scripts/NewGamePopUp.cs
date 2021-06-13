@@ -11,6 +11,8 @@ public class NewGamePopUp : DiamondComponent
         if (confirmNewGame)
         {
             StartMenu.StartFadeIn();
+            Counter.firstRun = true;
+            Counter.firstTutorial = true;
         }
         else
         {

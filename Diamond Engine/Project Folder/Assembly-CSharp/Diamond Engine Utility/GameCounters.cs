@@ -40,6 +40,7 @@ namespace DiamondEngine
         public static int maxCombo = 0;
         public static bool isFinalScene = false;
         public static bool firstRun = true; // When we have save / load functionality, this should be in it
+        public static bool firstTutorial = true;
 
         public Counter()
         {

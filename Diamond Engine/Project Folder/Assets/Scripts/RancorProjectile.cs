@@ -11,9 +11,8 @@ public class RancorProjectile : DiamondComponent
 	private ParticleSystem destroyParticles = null;
 
 	public Vector3 targetPos = new Vector3(0, 0, 0);    //Set from Rancor.cs
-	private Vector3 targetDirection = Vector3.zero;
 
-	private bool to_destroy = false;
+	private bool toDestroy = false;
 	private float timer = 1.3f;
 	
 	public void Awake()
@@ -26,26 +25,26 @@ public class RancorProjectile : DiamondComponent
 	
 	public void Update()
 	{
-		if (!to_destroy)
+		if (!toDestroy)
 		{
 			gameObject.transform.localPosition += gameObject.transform.GetForward().normalized * speed * Time.deltaTime;
 		}
 
-		if (timer > 0f && !to_destroy)
+		if (timer > 0f && !toDestroy)
 		{
 			timer -= Time.deltaTime;
 			if (timer <= 0f)
 			{
-				to_destroy = true;
+				toDestroy = true;
 				gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
 				timer = 1f;
 			}
 		}
 
 
-		if (to_destroy)
+		if (toDestroy)
 		{
-			if (timer > 0f && to_destroy)
+			if (timer > 0f && toDestroy)
 			{
 				timer -= Time.deltaTime;
 				if (timer <= 0f)
@@ -56,23 +55,20 @@ public class RancorProjectile : DiamondComponent
 		}
 	}
 
-    public void OnTriggerEnter(GameObject triggeredGameObject)
-    {
-        if (triggeredGameObject.CompareTag("Player") && !to_destroy)
-        {
-
-			PlayerHealth health = triggeredGameObject.GetComponent<PlayerHealth>();
-            if (health != null)
+	public void OnCollisionEnter(GameObject collidedGameObject)
+	{
+		if (collidedGameObject.CompareTag("Player") && !toDestroy)
+		{
+			PlayerHealth health = collidedGameObject.GetComponent<PlayerHealth>();
+			if (health != null)
 				health.TakeDamage(damage);
-			to_destroy = true;
+			toDestroy = true;
 			gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
 			timer = 1.3f;
 		}
-    }
-	public void OnCollisionEnter(GameObject collidedGameObject)
-	{
+
 		Audio.PlayAudio(gameObject, "Play_Rock_Impact");
-		to_destroy = true;
+		toDestroy = true;
 		gameObject.GetChild("RancorProjectile").GetComponent<MeshRenderer>().active = false;
 		timer = 1.3f;
 		if (destroyParticles != null)
