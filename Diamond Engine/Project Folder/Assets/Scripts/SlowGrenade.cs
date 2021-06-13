@@ -266,7 +266,7 @@ public class SlowGrenade : DiamondComponent
         if (detonate == true)
             return;
 
-        if (detonate == false && !collidedGameObject.CompareTag("Player") && !collidedGameObject.CompareTag("StormTrooperBullet"))
+        if (detonate == false && gameObject.IsEnabled() && !collidedGameObject.CompareTag("Player") && !collidedGameObject.CompareTag("StormTrooperBullet"))
         {
             Detonate();
         }
