@@ -176,69 +176,72 @@ public class HUD : DiamondComponent
             UpdateCurrency(PlayerResources.GetRunCoins());
             start = false;
         }
-        /*if (Input.GetKey(DEKeyCode.C) == KeyState.KEY_DOWN)
+
+       /*
+        if (Input.GetKey(DEKeyCode.C) == KeyState.KEY_DOWN)
         {
             currency++;
             UpdateCurrency(currency);
-        }*/
+        }
 
+        
         if (Input.GetKey(DEKeyCode.H) == KeyState.KEY_DOWN)
         {
             if (hp < max_hp)
             {
-                //hp += 5;
-                //UpdateHP(hp, max_hp);
-                //last_hp = hp;
+                hp += 5;
+                UpdateHP(hp, max_hp);
+                last_hp = hp;
             }
         }
         if (Input.GetKey(DEKeyCode.D) == KeyState.KEY_DOWN)
         {
             if (hp > 0)
             {
-                //if (!(last_hp > hp))
-                //last_hp = hp;
-                //hp -= 5;
-                //UpdateHP(hp, max_hp);
+                if (!(last_hp > hp))
+                last_hp = hp;
+                hp -= 5;
+                UpdateHP(hp, max_hp);
             }
         }
         if (Input.GetKey(DEKeyCode.F) == KeyState.KEY_DOWN)
         {
-            //if (BabyYoda.instance != null)
-            //{
-            //    if (BabyYoda.instance.GetCurrentForce() > 0)
-            //    {
-            //        BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() - 10);
-            //    }
-            //}
+            if (BabyYoda.instance != null)
+            {
+                if (BabyYoda.instance.GetCurrentForce() > 0)
+                {
+                    BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() - 10);
+                }
+            }
         }
         if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN)
         {
-            //if (BabyYoda.instance != null)
-            //{
-            //    if (BabyYoda.instance.GetCurrentForce() < BabyYoda.GetMaxForce())
-            //    {
-            //        BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + 10);
-            //    }
-            //}
+            if (BabyYoda.instance != null)
+            {
+                if (BabyYoda.instance.GetCurrentForce() < BabyYoda.GetMaxForce())
+                {
+                    BabyYoda.instance.SetCurrentForce(BabyYoda.instance.GetCurrentForce() + 10);
+                }
+            }
         }
         if (Input.GetKey(DEKeyCode.S) == KeyState.KEY_DOWN)
         {
-            //if (main_weapon)
-            //{
-            //    if (primaryWeaponHeat < 100)
-            //    {
-            //        AddPrimaryHeatAmount(10);
-            //    }
-            //}
-            //else
-            //{
-            //    if (bullets_secondary_weapon > 0)
-            //    {
-            //        bullets_secondary_weapon--;
-            //        UpdateBullets(bullets_secondary_weapon, max_bullets_secondary_weapon);
+            if (main_weapon)
+            {
+                if (primaryWeaponHeat < 100)
+                {
+                    AddPrimaryHeatAmount(10);
+                }
+            }
+            else
+            {
+                if (bullets_secondary_weapon > 0)
+                {
+                    bullets_secondary_weapon--;
+                    UpdateBullets(bullets_secondary_weapon, max_bullets_secondary_weapon);
 
-            //    }
-            //}
+                }
+            }
         }
         if (Input.GetKey(DEKeyCode.R) == KeyState.KEY_DOWN)
         {
@@ -257,7 +260,6 @@ public class HUD : DiamondComponent
                     UpdateBullets(bullets_secondary_weapon, max_bullets_secondary_weapon);
                 }
             }
-
         }
         if (Input.GetKey(DEKeyCode.B) == KeyState.KEY_DOWN) //test key
         {
@@ -265,12 +267,14 @@ public class HUD : DiamondComponent
         }
         if (Input.GetKey(DEKeyCode.N) == KeyState.KEY_DOWN) //test key
         {
-            DecreaseComboPercentage(0.3f);
+            //DecreaseComboPercentage(0.3f);
         }
         if (comboNumber > 0)
         {
             UpdateCombo();
         }
+        */
+
         last_hp = Mathf.Lerp(last_hp, PlayerHealth.currHealth /*- 0.5f*/, 2.5f * Time.deltaTime);
         if (last_hp > PlayerHealth.currHealth)
         {
@@ -330,8 +334,6 @@ public class HUD : DiamondComponent
         {
             damageScreen1.GetComponent<Material>().SetFloatUniform("timeSinceStart", Time.totalTime);
         }
-
-
     }
 
     public void AddToCombo(float comboUnitsToAdd, float weaponDecreaseTimeMultiplier)

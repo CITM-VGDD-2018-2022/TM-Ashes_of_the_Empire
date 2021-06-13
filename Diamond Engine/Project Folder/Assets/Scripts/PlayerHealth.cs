@@ -26,10 +26,10 @@ public class PlayerHealth : DiamondComponent
 
     public void Update()
     {
-        if (Input.GetKey(DEKeyCode.P) == KeyState.KEY_DOWN)
-        {
-            ResetMaxAndCurrentHPToDefault();
-        }
+        //if (Input.GetKey(DEKeyCode.P) == KeyState.KEY_DOWN)
+        //{
+        //    ResetMaxAndCurrentHPToDefault();
+        //}
 
         if (die && !DebugOptionsHolder.godModeActive)
         {
@@ -61,8 +61,8 @@ public class PlayerHealth : DiamondComponent
             character_mesh.GetComponent<Material>().SetFloatUniform("damaged", damaged);
         }
 
-        if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN) 
-            SetMaxHPValue(50, true);
+        //if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN) 
+        //    SetMaxHPValue(50, true);
     }
 
     //Increments the max Hp by the percentatge given as a parameter (1 = 100% 0 = 0%) It can also be negative to substract HP

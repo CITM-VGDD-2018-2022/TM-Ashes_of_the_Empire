@@ -117,16 +117,16 @@ public class SHOP : DiamondComponent
         }
         if (shopOpen)
         {
-            if (Input.GetGamepadButton(DEControllerButton.B) == KeyState.KEY_DOWN)
-            {
-                CloseShop();
-            }
+            //if (Input.GetGamepadButton(DEControllerButton.B) == KeyState.KEY_DOWN)
+            //{
+            //    CloseShop();
+            //}
 
-            if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN)
-            {
-                PlayerResources.AddRunCoins(100);
-                UpdateCurrency(PlayerResources.GetRunCoins());
-            }
+            //if (Input.GetKey(DEKeyCode.M) == KeyState.KEY_DOWN)
+            //{
+            //    PlayerResources.AddRunCoins(100);
+            //    UpdateCurrency(PlayerResources.GetRunCoins());
+            //}
         }
         else
         {

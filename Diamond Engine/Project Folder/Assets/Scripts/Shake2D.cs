@@ -61,14 +61,14 @@ public class Shake2D : DiamondComponent
 
 
         //Test CODE
-        if (Input.GetKey(DEKeyCode.J) == KeyState.KEY_DOWN) //test key
-        {
-            StartShake(1.0f);
-        }
-        if (Input.GetKey(DEKeyCode.K) == KeyState.KEY_DOWN) //test key
-        {
-            StartShake(1.0f, 2);
-        }
+        //if (Input.GetKey(DEKeyCode.J) == KeyState.KEY_DOWN) //test key
+        //{
+        //    StartShake(1.0f);
+        //}
+        //if (Input.GetKey(DEKeyCode.K) == KeyState.KEY_DOWN) //test key
+        //{
+        //    StartShake(1.0f, 2);
+        //}
 
     }
 

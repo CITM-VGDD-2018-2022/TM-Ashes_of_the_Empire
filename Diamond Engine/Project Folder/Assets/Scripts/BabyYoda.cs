@@ -70,7 +70,7 @@ public class BabyYoda : DiamondComponent
     private float wallSkillDuration = 1.0f; //TODO provisional we have to use the force bar with a cost instead
     private float skillWallTimer = 0.0f;
     private bool leftButtonPressed = false;
-    private Vector3 pointToFollow;
+    private Vector3 pointToFollow = null;
 
 
     #region STATE_ENUMS

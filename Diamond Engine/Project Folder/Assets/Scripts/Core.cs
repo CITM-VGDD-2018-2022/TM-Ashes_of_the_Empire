@@ -727,10 +727,10 @@ public class Core : Entity
 
             if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
             {
-                Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
-                Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
-                Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
-                Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
+                //Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
+                //Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
+                //Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
+                //Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
             }
 
             if (Input.GetGamepadButton(DEControllerButton.Y) == KeyState.KEY_DOWN && grenadesFireRateTimer <= 0.0f && lockAttacks == false)
@@ -768,10 +768,10 @@ public class Core : Entity
 
             if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
             {
-                Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
-                Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
-                Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
-                Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
+                //Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
+                //Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
+                //Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
+                //Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
             }
 
             if (IsJoystickMoving() == true)
@@ -826,10 +826,10 @@ public class Core : Entity
 
             if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
             {
-                Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
-                Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
-                Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
-                Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
+                //Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
+                //Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
+                //Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
+                //Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
             }
 
             if (IsJoystickMoving() == true)
@@ -866,10 +866,10 @@ public class Core : Entity
 
             if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
             {
-                Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
-                Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
-                Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
-                Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
+                //Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
+                //Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
+                //Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
+                //Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
             }
 
             if (IsJoystickMoving() == true)
@@ -934,10 +934,10 @@ public class Core : Entity
 
             if (Input.GetKey(DEKeyCode.T) == KeyState.KEY_DOWN)
             {
-                Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
-                Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
-                Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
-                Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
+                //Debug.Log("Amount of bullets fired: " + numberOfShots.ToString());
+                //Debug.Log("Time to complete room: " + timeOfRoom.ToString() + " seconds");
+                //Debug.Log("Times fallen of the map: " + timesFellOfMap.ToString());
+                //Debug.Log("Total distance moved: " + distanceMoved.ToString() + " mandos");
             }
 
             if (IsJoystickMoving() == true)
