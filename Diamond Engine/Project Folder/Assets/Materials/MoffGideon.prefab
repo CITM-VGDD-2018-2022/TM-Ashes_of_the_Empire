@@ -527,6 +527,7 @@
                             ],
                             "paPerSec": 300,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -604,6 +605,7 @@
                             ],
                             "paPerSec": 0,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": []
                         }
                     ]
@@ -684,6 +686,7 @@
                             ],
                             "paPerSec": 3,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -746,20 +749,20 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                5.9604644775390625e-08,
+                -0.000896453857421875,
                 1.119743824005127,
-                -0.060867756605148315
+                -0.03515942394733429
             ],
             "Rotation": [
-                0,
-                1.769513424676461e-08,
-                0,
-                1
+                -0.00018622912466526031,
+                0.011410505510866642,
+                -0.016317345201969147,
+                0.99980181455612183
             ],
             "Scale": [
-                1,
-                1,
-                0.99999946355819702
+                1.0000017881393433,
+                0.99999511241912842,
+                0.99999499320983887
             ],
             "Components": [
                 {
@@ -802,6 +805,7 @@
                             ],
                             "paPerSec": 0,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -885,6 +889,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -968,6 +973,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -1025,6 +1031,85 @@
                                     "PaShapeOffset": [
                                         0,
                                         -0.30000001192092896,
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "AssetPath": "Empty",
+                            "LibraryPath": "Library\/Textures\/1755453139.dds",
+                            "texUID": 1755453139,
+                            "paEmitterName": "Foot",
+                            "paLifeTime": [
+                                0.5,
+                                0.69999998807907104
+                            ],
+                            "paSize": [
+                                0,
+                                0.10000000149011612
+                            ],
+                            "paColor": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            "paPerSec": 250,
+                            "paRelative": true,
+                            "maxDelay": 0,
+                            "ParticleEffects": [
+                                {
+                                    "paEffectType": 1,
+                                    "paROLT_rotation": [
+                                        2,
+                                        2
+                                    ],
+                                    "paROLT_rotationSpeed": [
+                                        -10,
+                                        10
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 2,
+                                    "Gradients": [
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0,
+                                                0,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 0
+                                        },
+                                        {
+                                            "paColorOLTcolor": [
+                                                1,
+                                                0.99998998641967773,
+                                                0.99998998641967773,
+                                                1
+                                            ],
+                                            "paColorOLTposition": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "paEffectType": 3,
+                                    "paSizeOLTStartSize": 0.05000000074505806,
+                                    "paSizeOLTEndSize": 0
+                                },
+                                {
+                                    "paEffectType": 5,
+                                    "paShapeHasInitSpeed": true,
+                                    "paShapePartSpeed": 0,
+                                    "paShapeRandSpeed": 0,
+                                    "PaShapeSphereRadius": 0.05000000074505806,
+                                    "PaShapeSphereDirection": false,
+                                    "PaShapeSphereAngle": 0,
+                                    "paShapeType": 1,
+                                    "PaShapeOffset": [
+                                        0.070000000298023224,
+                                        -1,
                                         0
                                     ]
                                 }
@@ -1088,7 +1173,7 @@
             "Position": [
                 -1.6600983142852783,
                 -1.5799999237060547,
-                4.1479568481445313
+                4.1479568481445312
             ],
             "Rotation": [
                 -6.1578575127896329e-08,
@@ -2516,7 +2601,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -2.9802322387695313e-08,
+                -2.9802322387695312e-08,
                 -1.4901161193847656e-07,
                 -9.5367431640625e-07
             ],
@@ -3112,6 +3197,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -3201,6 +3287,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
