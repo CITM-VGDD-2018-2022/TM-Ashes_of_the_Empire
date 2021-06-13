@@ -4,6 +4,8 @@ using DiamondEngine;
 public class PlayerParticles : DiamondComponent
 {
 	public GameObject dustObj = null;
+	public GameObject iceObj = null;
+	public GameObject waterObj = null;
 	public GameObject muzzleObj = null;
 	public GameObject jetpackObj = null;
 	public GameObject impactObj = null;
@@ -14,6 +16,8 @@ public class PlayerParticles : DiamondComponent
     public GameObject sniperChargeObj = null;
 
 	public ParticleSystem dust = null;
+	public ParticleSystem ice = null;
+	public ParticleSystem water = null;
 	public ParticleSystem muzzle = null;
 	public ParticleSystem jetpack = null;
 	public ParticleSystem impact = null;
@@ -28,6 +32,14 @@ public class PlayerParticles : DiamondComponent
         if (dustObj != null)
         {
             dust = dustObj.GetComponent<ParticleSystem>();
+        }
+        if(iceObj != null)
+        {
+            ice = iceObj.GetComponent<ParticleSystem>();
+        }
+        if (waterObj != null)
+        {
+            water = waterObj.GetComponent<ParticleSystem>();
         }
         if (muzzleObj != null)
         {

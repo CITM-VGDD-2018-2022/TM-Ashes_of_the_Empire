@@ -39,7 +39,8 @@
                     "ScriptName": "RancorProjectile",
                     "speed": 30,
                     "lifeTime": 5,
-                    "damage": 10
+                    "damage": 10,
+                    "destroyParticlesObj": 672337937
                 },
                 {
                     "Type": 14,
