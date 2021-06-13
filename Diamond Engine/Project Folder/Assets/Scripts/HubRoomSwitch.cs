@@ -40,6 +40,15 @@ public class HubRoomSwitch : DiamondComponent
         else
             RoomSwitch.SwitchRooms();
 
+        if (MusicSourceLocate.instance != null)
+        {
+            Audio.SetState("Player_State", "Alive");
+            if (nextRoomUID == 1564453141)
+            {
+                Audio.SetState("Game_State", "HUB");
+            }
+            Audio.SetSwitch(MusicSourceLocate.instance.gameObject, "Player_Action", "Exploring");
+        }
 
         if (EnvironmentSourceLocate.instance != null)
             Audio.StopAudio(EnvironmentSourceLocate.instance.gameObject);
