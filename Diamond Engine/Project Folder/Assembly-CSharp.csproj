@@ -237,6 +237,7 @@
 		<Compile Include="Assets\Scripts\RancorMeleeCollider.cs" />
 		<Compile Include="Assets\Scripts\CinematicDialog.cs" />
 		<Compile Include="Assets\Scripts\MoffGideonCinematic.cs" />
+		<Compile Include="Assets\Scripts\NeedControllerUI.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />

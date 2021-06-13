@@ -1,19 +1,19 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        43.363964080810547,
-        28.216278076171875,
-        -3.548255443572998
+        2.9797859191894531,
+        0.30506932735443115,
+        0.16675937175750732
     ],
     "EditorCameraZ": [
         -0.99326199293136597,
-        -0.10168977081775665,
+        -0.10168977826833725,
         -0.055586457252502441
     ],
     "EditorCameraY": [
-        -0.1015307754278183,
-        0.99481618404388428,
-        -0.005684342235326767
+        -0.10153091698884964,
+        0.99481624364852905,
+        -0.0056820292957127094
     ],
     "SkyboxPath0": "Library\/Textures\/2022232686.dds",
     "SkyboxPath1": "Library\/Textures\/2100226782.dds",
@@ -7329,6 +7329,109 @@
             "PrefabObjects": []
         },
         {
+            "name": "ControllerAlertController",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 804536540,
+            "ParentUID": 456622386,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "NeedControllerUI",
+                    "controllerAlert": 1570191872
+                }
+            ]
+        },
+        {
+            "name": "ControllerAlert",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1570191872,
+            "ParentUID": 804536540,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        60,
+                        60
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/457052853.mat",
+                    "MaterialUID": 457052853
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Empty",
+                    "LibraryPath": "Library\/Textures\/975557229.dds",
+                    "UID": 975557229,
+                    "fadeValue": 1
+                }
+            ]
+        },
+        {
             "name": "MusicSource",
             "tag": "Untagged",
             "layer": "Default",
@@ -7515,12 +7618,11 @@
                     "fSize": 27.200000762939453,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 23.897058486938477,
-                    "hFOV": 37.132350921630859,
+                    "vFOV": 25.036764144897461,
+                    "hFOV": 50.183822631835938,
                     "culling": true,
                     "HDR": true,
-                    "drawSkybox": false,
-                    "ProfileUID": 75588803
+                    "drawSkybox": false
                 },
                 {
                     "Type": 12,
