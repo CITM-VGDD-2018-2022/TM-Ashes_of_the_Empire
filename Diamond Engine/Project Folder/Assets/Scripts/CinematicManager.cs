@@ -39,10 +39,13 @@ public class CinematicManager : DiamondComponent
             init = false;
             return;
         }
+        else
+        {
+            Audio.SetState("Game_State", "Cinematic");
+        }
 
         start = true;
 
-        Audio.SetState("Game_State", "Cinematic");
 
         instance = this;
         AddSequence(sequence1);
