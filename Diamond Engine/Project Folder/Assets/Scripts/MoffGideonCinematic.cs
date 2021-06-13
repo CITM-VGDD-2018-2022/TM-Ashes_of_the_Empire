@@ -12,6 +12,7 @@ public class MoffGideonCinematic : DiamondComponent
     private Vector3 defaultCameraPos = null;
     private Quaternion defaultCameraRot = null;
     private bool start = false;
+    private bool hudStatus = false;
 
     int sequenceCounter = 0;
     int amountOfSequencesPlusOne = 3;
@@ -49,14 +50,11 @@ public class MoffGideonCinematic : DiamondComponent
             {
                 Core.instance.LockInputs(true);
 
-                if (Core.instance.hud != null)
-                {
-                    Core.instance.hud.Enable(false);
-                }
-
                 start = true;
                 return;
             }
+
+            CheckHudDisabled();
 
             float newDeltaTime = Time.deltaTime;
 
@@ -146,6 +144,25 @@ public class MoffGideonCinematic : DiamondComponent
             });
 
         });
+    }
+
+
+    private void CheckHudDisabled()
+    {
+        if (Core.instance != null)
+        {
+            if (Core.instance.hud != null)
+            {
+                hudStatus = Core.instance.hud.IsEnabled();
+
+                if (hudStatus == true)
+                {
+                    Core.instance.hud.Enable(false);
+                }
+
+            }
+
+        }
     }
 
 }
