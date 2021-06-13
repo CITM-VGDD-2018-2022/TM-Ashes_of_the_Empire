@@ -3,7 +3,7 @@ using DiamondEngine;
 
 public class EndLevelRewardSpawn : DiamondComponent
 {
-    public bool trigger = false;
+    public bool triggered = false;
     public float rotSpeedDegSec = 1.0f;
     float rotationAngle = 0.0f;
     public float verticalSpeedMultiplier = 0.5f;
@@ -37,13 +37,13 @@ public class EndLevelRewardSpawn : DiamondComponent
 
     public void OnTriggerEnter(GameObject collidedGameObject)
     {
-        if (collidedGameObject != null)
+        if (collidedGameObject != null && gameObject.IsEnabled())
         {
             if(collidedGameObject.CompareTag("Player"))
             {
                 Core.instance.gameObject.GetComponent<PlayerHealth>().SetInvincible(false);
-                trigger = true;
                 Audio.PlayAudio(gameObject, "Play_UI_Boon_Obtained");
+                triggered = true;
             }
             else
             {
@@ -106,8 +106,10 @@ public class EndLevelRewardSpawn : DiamondComponent
 
     public float ParametricBlend(float t) => ((t * t) / (2.0f * ((t * t) - t) + 1.0f));
 
-    public void PlayParticles()
+    public void ShowBoon()
     {
+        Audio.PlayAudio(gameObject, "Play_UI_Boon_Pickup");
+
         if (particleSystem != null)
         {
             particleSystem.Play();
