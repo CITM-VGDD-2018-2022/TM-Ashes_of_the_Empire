@@ -276,6 +276,9 @@ public class Bosseslv2 : Entity
         resting = true;
         restingTimer = restingTime;
         Audio.StopAudio(gameObject);
+
+        if (rightSpike != null && rightSpike.IsEnabled()) rightSpike.Enable(false);
+        if (leftSpike != null && leftSpike.IsEnabled()) leftSpike.Enable(false);
     }
     #endregion
 
