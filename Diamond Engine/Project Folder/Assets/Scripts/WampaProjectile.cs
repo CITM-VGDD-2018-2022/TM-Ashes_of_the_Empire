@@ -11,6 +11,16 @@ public class WampaProjectile : DiamondComponent
 	private bool to_destroy = false;
 	private float timer = 3f;
 
+	public GameObject	   destroyParticlesObj = null;
+	private ParticleSystem destroyParticles = null;
+
+	public void Awake()
+    {
+		if (destroyParticlesObj != null)
+		{
+			destroyParticles = destroyParticlesObj.GetComponent<ParticleSystem>();
+		}
+	}
 
 	public void Update()
 	{
@@ -63,6 +73,10 @@ public class WampaProjectile : DiamondComponent
 		to_destroy = true;
 		gameObject.GetChild("Spike").GetComponent<MeshRenderer>().active = false;
 		timer = 1f;
+
+		if(destroyParticles != null) {
+			destroyParticles.Play();
+        }
 	}
 
 	public void LookAt(Vector3 direction)

@@ -37,7 +37,8 @@
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "WampaProjectile",
-                    "damage": 10
+                    "damage": 10,
+                    "destroyParticlesObj": 672337937
                 },
                 {
                     "Type": 14,
