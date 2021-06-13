@@ -6,20 +6,20 @@ public class CinematicManager : DiamondComponent
 {
     public static CinematicManager instance;
 
-    public GameObject gameCamera;
-    public GameObject cameraPos1;
+    public GameObject gameCamera = null;
+    public GameObject cameraPos1 = null;
 
-    public GameObject sequence1;
-    public GameObject sequence2;
-    public GameObject sequence3;
-    public GameObject sequence4;
-    public GameObject sequence5;
-    public GameObject sequence6;
-    public GameObject sequence7;
-    public GameObject sequence8;
-    public GameObject sequence9;
-    public GameObject sequence10;
-    public GameObject sequence11;
+    public GameObject sequence1 = null;
+    public GameObject sequence2 = null;
+    public GameObject sequence3 = null;
+    public GameObject sequence4 = null;
+    public GameObject sequence5 = null;
+    public GameObject sequence6 = null;
+    public GameObject sequence7 = null;
+    public GameObject sequence8 = null;
+    public GameObject sequence9 = null;
+    public GameObject sequence10 = null;
+    public GameObject sequence11 = null;
 
 
     private Vector3 initPos;
@@ -31,7 +31,8 @@ public class CinematicManager : DiamondComponent
     private List<Sequence> listSequences = new List<Sequence>();
     private float timerToSkipCinematic;
     public float timeToSkipCinematic;
-    public GameObject skipText;
+    public GameObject skipImage = null;
+    public GameObject skipText = null;
     private Transform2D skipTransform;
     private Vector3 skipOriginSize;
     private Vector3 skipOriginPos;
@@ -134,6 +135,7 @@ public class CinematicManager : DiamondComponent
         }
         Counter.firstRun = false;
         skipText.Enable(false);
+        skipImage.Enable(false);
     } 
     
     private void ReturnGame()
@@ -153,6 +155,7 @@ public class CinematicManager : DiamondComponent
         }
         Counter.firstRun = false;
         skipText.Enable(false);
+        skipImage.Enable(false);
     }
 
     private void PlayHUBMusic()
