@@ -141,6 +141,7 @@ public class Core : Entity
     public GameObject RayCastObj = null;
     private Vector3 dashDirection = new Vector3(0, 0, 0);
     private Quaternion preDashRotation = new Quaternion(0, 0, 0, 1);
+    
 
     // Shooting
     public float baseFireRate = 0.2f;
@@ -2777,14 +2778,17 @@ public class Core : Entity
             }
         }
 
+        float QuickDraw = 1;
         if (hasDashed)
         {
             hasDashed = false;
             AfterDashModifier += 0.25f;
+            if (HasStatus(STATUS_TYPE.MANDO_QUICK_DRAW))
+                QuickDraw += GetStatusData(STATUS_TYPE.MANDO_QUICK_DRAW).severity / 100;
         }
 
 
-        float Damage = BlasterDamageMult * BlasterDamagePerHpMult * DamagePerHeatMult * RawDamageMult * supercharged * ChadBaneModifier * AfterDashModifier;
+        float Damage = BlasterDamageMult * BlasterDamagePerHpMult * DamagePerHeatMult * RawDamageMult * supercharged * ChadBaneModifier * AfterDashModifier * QuickDraw;
         if (HasStatus(STATUS_TYPE.BLAST_CANNON))
         {
             if (hud != null)

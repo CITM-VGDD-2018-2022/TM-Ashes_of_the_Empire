@@ -694,7 +694,7 @@ static class BoonDataHolder
         boonType[(int)BOONS.BOON_WRECKER_RESILIENCE] =         new WreckerResilence(); //probably ok
         boonType[(int)BOONS.BOON_BLAST_CANNON_MOUTHPIECE] =    new BlastCannonMouthpiece(); //Checked
         boonType[(int)BOONS.BOON_GREEDO_QUICKSHOOTER] =        new GreedoShooter(); //checked
-        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_COMBO] =    new MandoQuickCombo(); 
+        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_COMBO] =    new MandoQuickCombo(); //checked
         boonType[(int)BOONS.BOON_FENNEC_SNIPER_RIFLE] =        new FennecSniper(); //probably ok
         boonType[(int)BOONS.BOON_BOBBA_FETT_STUN_AMM] =        new BobbaStunAmmo(); //probably ok    
         boonType[(int)BOONS.BOON_BOSSK_SPECIAL_AMMO] =         new BosskSpecialAmmo(); //checked
