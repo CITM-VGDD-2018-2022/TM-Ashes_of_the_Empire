@@ -1,9 +1,9 @@
 {
     "NavMesh": -1,
     "EditorCameraPosition": [
-        -8.8451881408691406,
-        -92.965286254882813,
-        16.196893692016602
+        -2.9924099445343018,
+        1.4563580751419067,
+        1.3590608835220337
     ],
     "EditorCameraZ": [
         0.83242881298065186,
@@ -156,8 +156,8 @@
                     "fSize": 50,
                     "nearPlaneDist": 0.0099999997764825821,
                     "farPlaneDist": 500,
-                    "vFOV": 11.560000419616699,
-                    "hFOV": 20.540000915527344,
+                    "vFOV": 11.840000152587891,
+                    "hFOV": 21.840000152587891,
                     "culling": false,
                     "HDR": true,
                     "drawSkybox": true,
@@ -23406,22 +23406,6 @@
                     "PressedSFX": "Play_UI_Button_Select"
                 },
                 {
-                    "Type": 17,
-                    "Active": true,
-                    "Map": [
-                        {
-                            "Index": 0,
-                            "UID": 396621942,
-                            "Action": 2,
-                            "Is Key Down": false,
-                            "Is Key Up": true
-                        }
-                    ],
-                    "Button Being Used": -1,
-                    "Type Of UI": 7,
-                    "Is Selected": true
-                },
-                {
                     "Type": 5,
                     "Active": true,
                     "ScriptName": "TextController",
@@ -25368,6 +25352,73 @@
                     "LibraryPath": "Library\/Textures\/809648494.dds",
                     "UID": 809648494,
                     "fadeValue": 0
+                }
+            ]
+        },
+        {
+            "name": "SkipText",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 1089767194,
+            "ParentUID": 1847907807,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        70.199996948242188,
+                        -91.199996948242188
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        5,
+                        9
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/744544911.mat",
+                    "MaterialUID": 744544911
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "text": "Hold A to skip...",
+                    "maxTextLenght": 1120,
+                    "fontName": "Library\/Fonts\/renner-medium.ttf",
+                    "textColor": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         },
@@ -39702,7 +39753,8 @@
                     "postCinematicDialogue": 1027532624,
                     "cinematicDialogue": 910477297,
                     "init": true,
-                    "timeToSkipCinematic": 2
+                    "timeToSkipCinematic": 2,
+                    "skipText": 1089767194
                 },
                 {
                     "Type": 13,
