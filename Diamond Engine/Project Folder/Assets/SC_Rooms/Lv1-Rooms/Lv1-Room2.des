@@ -302,8 +302,8 @@
                     "fSize": 30.239999771118164,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 19.742063522338867,
-                    "hFOV": 34.259258270263672,
+                    "vFOV": 22.387565612792969,
+                    "hFOV": 42.559524536132812,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -16561,9 +16561,9 @@
                     "ScriptName": "SpawnManager",
                     "availableSpawnPoints": 0,
                     "spawningWaves": true,
-                    "maxEnemiesPerWave": 5,
+                    "maxEnemiesPerWave": 6,
                     "enemyIncreasePerWave": -1,
-                    "maxWaves": 3,
+                    "maxWaves": 2,
                     "delayInWaveSpawn": 5,
                     "enemiesLeftToNextWave": 1,
                     "timeBetweenWaves": 20,
@@ -16764,6 +16764,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -17047,6 +17048,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -17330,6 +17332,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -17613,6 +17616,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -17896,6 +17900,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18213,6 +18218,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18496,6 +18502,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -18779,6 +18786,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -23022,6 +23030,118 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Ice Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1319058918,
+                    "ParentUID": 611570775,
+                    "PrefabID": 0,
+                    "PrefabReference": 1319058918,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0.24142935872077942,
+                        -0.63629698753356934,
+                        0.2197878360748291,
+                        0.69895017147064209
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        0.99999946355819702,
+                        0.99999946355819702
+                    ]
+                },
+                {
+                    "name": "Ice",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1357733417,
+                    "ParentUID": 1319058918,
+                    "PrefabID": 0,
+                    "PrefabReference": 1357733417,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0.7071068286895752,
+                        0.7071068286895752
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
+                    ]
+                },
+                {
+                    "name": "WaterIce Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 708076478,
+                    "ParentUID": 1357733417,
+                    "PrefabID": 0,
+                    "PrefabReference": 708076478,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.67318695783615112,
+                        0,
+                        0.73947232961654663
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        1,
+                        0.99999988079071045
+                    ]
+                },
+                {
+                    "name": "Water",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1505357953,
+                    "ParentUID": 708076478,
+                    "PrefabID": 0,
+                    "PrefabReference": 1505357953,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        -0.50257349014282227,
+                        0.50257349014282227,
+                        0.49741318821907043,
+                        0.49741318821907043
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
                     ]
                 }
             ]
