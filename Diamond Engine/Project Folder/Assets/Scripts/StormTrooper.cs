@@ -694,7 +694,7 @@ public class StormTrooper : Enemy
 
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(-PlayerHealth.healWhenKillingAnEnemy);
+                playerHealth.SetCurrentHP(PlayerHealth.currHealth + PlayerHealth.healWhenKillingAnEnemy);
             }
         }
 
