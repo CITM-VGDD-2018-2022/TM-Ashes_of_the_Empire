@@ -29,6 +29,8 @@ public class CinematicManager : DiamondComponent
     public bool init = false;
     private bool start = true;
     private List<Sequence> listSequences = new List<Sequence>();
+    private float timerToSkipCinematic;
+    public float timeToSkipCinematic;
     public void Awake()
     {
         if (!Counter.firstRun)
@@ -164,14 +166,23 @@ public class CinematicManager : DiamondComponent
         }
 
 
-        if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
+        if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
         {
+            timerToSkipCinematic += Time.deltaTime;
 
+            if (timerToSkipCinematic >= timeToSkipCinematic)
+            {
                 StopAllSequences();
                 ReturnGame();
-                
+
                 init = false;
+            }
             
+        }
+        
+        if(Input.GetGamepadButton(DEControllerButton.A)== KeyState.KEY_UP)
+        {
+            timerToSkipCinematic = 0;
         }
 
         foreach (Sequence sequence in listSequences)
