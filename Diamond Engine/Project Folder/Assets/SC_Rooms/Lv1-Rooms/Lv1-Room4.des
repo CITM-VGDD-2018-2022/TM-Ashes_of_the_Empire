@@ -1,19 +1,19 @@
 {
     "NavMesh": 1867217823,
     "EditorCameraPosition": [
-        -21.136875152587891,
-        19.084510803222656,
-        -29.488201141357422
+        -8.119110107421875,
+        18.552082061767578,
+        -25.66912841796875
     ],
     "EditorCameraZ": [
-        0.46529862284660339,
-        -0.51624763011932373,
-        0.7190171480178833
+        0.18370917439460754,
+        -0.4552496075630188,
+        0.87120532989501953
     ],
     "EditorCameraY": [
-        0.28050592541694641,
-        0.85643935203552246,
-        0.43339136242866516
+        0.093970075249671936,
+        0.89036387205123901,
+        0.44544565677642822
     ],
     "SkyboxPath0": "Library\/Textures\/2022232686.dds",
     "SkyboxPath1": "Library\/Textures\/2100226782.dds",
@@ -331,8 +331,8 @@
                     "fSize": 40,
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
-                    "vFOV": 14.925000190734863,
-                    "hFOV": 25.899999618530273,
+                    "vFOV": 21.174999237060547,
+                    "hFOV": 33.450000762939453,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": true,
@@ -445,7 +445,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                22.911148071289062,
+                22.911148071289063,
                 9.6244831085205078,
                 6.7465267181396484
             ],
@@ -545,7 +545,7 @@
                 1
             ],
             "Scale": [
-                25.664209365844726,
+                25.664209365844727,
                 12.034339904785156,
                 0.99972003698348999
             ],
@@ -1814,7 +1814,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                0.00026178359985351562,
+                0.00026178359985351563,
                 -0.00031757354736328125,
                 -0.00014737248420715332
             ],
@@ -4001,7 +4001,7 @@
             ],
             "Scale": [
                 3.8462159633636475,
-                4.4565811157226562,
+                4.4565811157226563,
                 0.99994057416915894
             ],
             "Components": [
@@ -4168,7 +4168,7 @@
             "Static": false,
             "Position": [
                 15.668000221252441,
-                6.0799999237060547,
+                6.1999998092651367,
                 -14.470999717712402
             ],
             "Rotation": [
@@ -4338,7 +4338,7 @@
             "Static": false,
             "Position": [
                 15.668000221252441,
-                6.0799999237060547,
+                6.1999998092651367,
                 -3.9360001087188721
             ],
             "Rotation": [
@@ -4508,7 +4508,7 @@
             "Static": false,
             "Position": [
                 15.668000221252441,
-                6.0799999237060547,
+                6.1999998092651367,
                 6.4210000038146973
             ],
             "Rotation": [
@@ -10549,6 +10549,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -10832,6 +10833,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11115,6 +11117,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11432,6 +11435,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11715,6 +11719,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -11998,6 +12003,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -12281,6 +12287,7 @@
                             ],
                             "paPerSec": 1,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 1,
@@ -13458,10 +13465,10 @@
                 2.6705102920532227
             ],
             "Rotation": [
-                1.7394003748449904e-07,
-                -0.99483621120452881,
-                1.7394003748449904e-07,
-                0.10149452835321426
+                1.7394002327364433e-07,
+                -0.99483609199523926,
+                1.7394002327364433e-07,
+                0.10149451345205307
             ],
             "Scale": [
                 1.4999998807907104,
@@ -13525,10 +13532,10 @@
                 -0.37014883756637573
             ],
             "Rotation": [
-                8.3163854469603393e-08,
-                -0.88764715194702148,
-                8.3163854469603393e-08,
-                0.46052443981170654
+                8.3163847364176036e-08,
+                -0.88764703273773193,
+                8.3163847364176036e-08,
+                0.46052438020706177
             ],
             "Scale": [
                 1.4999994039535522,
@@ -13654,7 +13661,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                29.961572647094726,
+                29.961572647094727,
                 6.7685084342956543,
                 -9.0295114517211914
             ],
@@ -13723,13 +13730,13 @@
             "Position": [
                 29.053884506225586,
                 6.7685084342956543,
-                -12.109512329101562
+                -12.109512329101563
             ],
             "Rotation": [
-                2.7579513783848597e-08,
-                -0.55756604671478271,
-                4.0941419143791791e-08,
-                0.83013272285461426
+                2.7579510231134918e-08,
+                -0.55756598711013794,
+                4.0941415591078112e-08,
+                0.83013260364532471
             ],
             "Scale": [
                 1.4999995231628418,
@@ -13933,7 +13940,7 @@
             "Position": [
                 0,
                 0,
-                -0.098833084106445312
+                -0.098833084106445313
             ],
             "Rotation": [
                 -0.7071068286895752,
@@ -13987,6 +13994,7 @@
                             ],
                             "paPerSec": 70,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14171,6 +14179,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14320,6 +14329,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14330,7 +14340,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -14568,6 +14578,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14717,6 +14728,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -14727,7 +14739,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -14965,6 +14977,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15114,6 +15127,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15124,7 +15138,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -15362,6 +15376,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15511,6 +15526,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15521,7 +15537,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -15759,6 +15775,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15908,6 +15925,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -15918,7 +15936,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -16072,9 +16090,9 @@
             ],
             "Rotation": [
                 0,
-                -0.26793071627616882,
+                -0.26793074607849121,
                 0,
-                0.96343815326690674
+                0.96343827247619629
             ],
             "Scale": [
                 0.9999997615814209,
@@ -16156,6 +16174,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -16305,6 +16324,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -16315,7 +16335,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -16463,7 +16483,7 @@
             "DontDestroy": false,
             "Static": false,
             "Position": [
-                -15.667444229125976,
+                -15.667444229125977,
                 10.023661613464355,
                 9.6809625625610352
             ],
@@ -16553,6 +16573,7 @@
                             ],
                             "paPerSec": 500,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -16702,6 +16723,7 @@
                             ],
                             "paPerSec": 25,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -16712,7 +16734,7 @@
                                     ],
                                     "paFOLT_magnitude": 0,
                                     "paFOLT_gravityMod": 2,
-                                    "paFOLT_gravity": -19.600000381469726,
+                                    "paFOLT_gravity": -19.600000381469727,
                                     "paFOLT_forceType": 1
                                 },
                                 {
@@ -17032,7 +17054,7 @@
                     "Position": [
                         0.0064268112182617188,
                         0.043726921081542969,
-                        -0.0090532302856445312
+                        -0.0090532302856445313
                     ],
                     "Rotation": [
                         0,
@@ -17199,7 +17221,7 @@
                     "Static": false,
                     "Position": [
                         0.017677873373031616,
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         2.2351741790771484e-08
                     ],
                     "Rotation": [
@@ -17234,7 +17256,7 @@
                         0.0045477813109755516,
                         -0.06839299201965332,
                         -0.10478191822767258,
-                        0.99213027954101562
+                        0.99213027954101563
                     ],
                     "Scale": [
                         0.99999988079071045,
@@ -17282,7 +17304,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         0.013573005795478821,
                         9.3132257461547852e-10
                     ],
@@ -17339,7 +17361,7 @@
                     "Static": false,
                     "Position": [
                         0.016821712255477905,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         -7.4505805969238281e-09
                     ],
                     "Rotation": [
@@ -17450,7 +17472,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.0094919204711914062,
+                        0.0094919204711914063,
                         1.4901161193847656e-08,
                         -1.4901161193847656e-08
                     ],
@@ -17647,7 +17669,7 @@
                     "Static": false,
                     "Position": [
                         0.024928808212280273,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.4901161193847656e-08
                     ],
                     "Rotation": [
@@ -17731,7 +17753,7 @@
                     "Static": false,
                     "Position": [
                         0.01357308030128479,
-                        -2.9802322387695312e-08,
+                        -2.9802322387695313e-08,
                         -3.7252902984619141e-09
                     ],
                     "Rotation": [
@@ -17983,7 +18005,7 @@
                     "Static": false,
                     "Position": [
                         4.6566128730773926e-09,
-                        0.012781143188476562,
+                        0.012781143188476563,
                         0
                     ],
                     "Rotation": [
@@ -18151,7 +18173,7 @@
                     "Static": false,
                     "Position": [
                         0.032833755016326904,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         3.7252902984619141e-09
                     ],
                     "Rotation": [
@@ -18207,7 +18229,7 @@
                     "Static": false,
                     "Position": [
                         0.049042865633964539,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.862645149230957e-09
                     ],
                     "Rotation": [
@@ -18291,7 +18313,7 @@
                     "Static": false,
                     "Position": [
                         0.032833829522132874,
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         1.1175870895385742e-08
                     ],
                     "Rotation": [
@@ -18374,7 +18396,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        2.9802322387695312e-08,
+                        2.9802322387695313e-08,
                         0.04919414222240448,
                         1.862645149230957e-09
                     ],
@@ -18804,7 +18826,7 @@
                         1.5945261111482978e-08,
                         -0.0027633162681013346,
                         -0.0067633301950991154,
-                        0.99997329711914062
+                        0.99997329711914063
                     ],
                     "Scale": [
                         1,
@@ -20140,7 +20162,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         -0.77125072479248047
                     ],
@@ -20168,7 +20190,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        -1.8636245727539062,
+                        -1.8636245727539063,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -20196,7 +20218,7 @@
                     "DontDestroy": false,
                     "Static": false,
                     "Position": [
-                        0.76593399047851562,
+                        0.76593399047851563,
                         0.046333789825439453,
                         0.86050128936767578
                     ],
@@ -20253,7 +20275,7 @@
                     "Static": false,
                     "Position": [
                         -0.0040745735168457031,
-                        -0.0062532424926757812,
+                        -0.0062532424926757813,
                         -0.058134078979492188
                     ],
                     "Rotation": [
@@ -20939,6 +20961,118 @@
                         1,
                         1,
                         1
+                    ]
+                },
+                {
+                    "name": "Ice Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1319058918,
+                    "ParentUID": 172071468,
+                    "PrefabID": 0,
+                    "PrefabReference": 1319058918,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0.24142935872077942,
+                        -0.63629698753356934,
+                        0.2197878360748291,
+                        0.69895017147064209
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        0.99999946355819702,
+                        0.99999946355819702
+                    ]
+                },
+                {
+                    "name": "Ice",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1357733417,
+                    "ParentUID": 1319058918,
+                    "PrefabID": 0,
+                    "PrefabReference": 1357733417,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        0,
+                        0,
+                        0.7071068286895752,
+                        0.7071068286895752
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
+                    ]
+                },
+                {
+                    "name": "WaterIce Trail",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 708076478,
+                    "ParentUID": 1357733417,
+                    "PrefabID": 0,
+                    "PrefabReference": 708076478,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Rotation": [
+                        0,
+                        -0.67318695783615112,
+                        0,
+                        0.73947232961654663
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        1,
+                        0.99999988079071045
+                    ]
+                },
+                {
+                    "name": "Water",
+                    "tag": "Untagged",
+                    "layer": "Default",
+                    "Active": true,
+                    "UID": 1505357953,
+                    "ParentUID": 708076478,
+                    "PrefabID": 0,
+                    "PrefabReference": 1505357953,
+                    "DontDestroy": false,
+                    "Static": false,
+                    "Position": [
+                        0,
+                        0,
+                        -0.0081729888916015625
+                    ],
+                    "Rotation": [
+                        -0.50257349014282227,
+                        0.50257349014282227,
+                        0.49741318821907043,
+                        0.49741318821907043
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999892711639404,
+                        0.99999892711639404
                     ]
                 }
             ]
