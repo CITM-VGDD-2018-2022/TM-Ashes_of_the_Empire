@@ -238,6 +238,7 @@
 		<Compile Include="Assets\Scripts\CinematicDialog.cs" />
 		<Compile Include="Assets\Scripts\MoffGideonCinematic.cs" />
 		<Compile Include="Assets\Scripts\NeedControllerUI.cs" />
+		<Compile Include="Assets\Scripts\WebButton.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />

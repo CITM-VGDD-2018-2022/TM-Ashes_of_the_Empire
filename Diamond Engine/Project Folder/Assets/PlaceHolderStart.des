@@ -279,7 +279,7 @@
                         },
                         {
                             "Index": 11,
-                            "UID": 1555216131,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -293,7 +293,7 @@
                         },
                         {
                             "Index": 15,
-                            "UID": 1555216131,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -307,7 +307,7 @@
                         },
                         {
                             "Index": 19,
-                            "UID": 1555216131,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -751,7 +751,7 @@
                         },
                         {
                             "Index": 12,
-                            "UID": 1306709165,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -765,7 +765,7 @@
                         },
                         {
                             "Index": 16,
-                            "UID": 1306709165,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -779,7 +779,7 @@
                         },
                         {
                             "Index": 20,
-                            "UID": 1306709165,
+                            "UID": 414037247,
                             "Action": 1,
                             "Is Key Down": false,
                             "Is Key Up": true
@@ -804,6 +804,158 @@
                     "delay": 2,
                     "duration": 1,
                     "playOnAwake": true
+                }
+            ]
+        },
+        {
+            "name": "Web button",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Active": true,
+            "UID": 414037247,
+            "ParentUID": 1573871419,
+            "PrefabReference": 0,
+            "PrefabID": 0,
+            "DontDestroy": false,
+            "Static": false,
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Rotation": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "Scale": [
+                1,
+                1,
+                1
+            ],
+            "Components": [
+                {
+                    "Type": 1,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true,
+                    "Position": [
+                        -48.700000762939453,
+                        -68.599998474121094
+                    ],
+                    "Rotation": 0,
+                    "Size": [
+                        20,
+                        10
+                    ]
+                },
+                {
+                    "Type": 3,
+                    "Active": true,
+                    "IsEmpty": true,
+                    "MaterialAssetPath": "Empty",
+                    "MaterialLibraryPath": "Library\/Materials\/1258986901.mat",
+                    "MaterialUID": 1258986901
+                },
+                {
+                    "Type": 7,
+                    "Active": true,
+                    "Pressed_AssetsPath": "Assets\/UI\/MENU\/quit_button_pressed.png",
+                    "Pressed_LibraryPath": "Library\/Textures\/648052564.dds",
+                    "Pressed_UID": 648052564,
+                    "Hovered_AssetsPath": "Assets\/UI\/MENU\/quit_button_hover.png",
+                    "Hovered_LibraryPath": "Library\/Textures\/475983801.dds",
+                    "Hovered_UID": 475983801,
+                    "Unhovered_AssetsPath": "Assets\/UI\/MENU\/quit_button.png",
+                    "Unhovered_LibraryPath": "Library\/Textures\/1712478607.dds",
+                    "Unhovered_UID": 1712478607,
+                    "Script_Name": "WebButton",
+                    "ButtonState": 3,
+                    "Is Selected": false,
+                    "HoverSFX": "Play_UI_Button_Hover",
+                    "PressedSFX": "Play_UI_Button_Select"
+                },
+                {
+                    "Type": 11,
+                    "Active": true,
+                    "AssetPath": "Assets\/UI\/MENU\/quit_button.png",
+                    "LibraryPath": "Library\/Textures\/1712478607.dds",
+                    "UID": 1712478607,
+                    "fadeValue": 1
+                },
+                {
+                    "Type": 17,
+                    "Active": true,
+                    "Map": [
+                        {
+                            "Index": 0,
+                            "UID": 414037247,
+                            "Action": 2,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 11,
+                            "UID": 1555216131,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 12,
+                            "UID": 1306709165,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 15,
+                            "UID": 1555216131,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 16,
+                            "UID": 1306709165,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 19,
+                            "UID": 1555216131,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        },
+                        {
+                            "Index": 20,
+                            "UID": 1306709165,
+                            "Action": 1,
+                            "Is Key Down": false,
+                            "Is Key Up": true
+                        }
+                    ],
+                    "Button Being Used": -1,
+                    "Type Of UI": 7,
+                    "Is Selected": false
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "UI_Fade",
+                    "delay": 2.5,
+                    "duration": 1,
+                    "playOnAwake": true
+                },
+                {
+                    "Type": 5,
+                    "Active": true,
+                    "ScriptName": "WebButton"
                 }
             ]
         },
@@ -7372,7 +7524,7 @@
             "name": "ControllerAlert",
             "tag": "Untagged",
             "layer": "Default",
-            "Active": true,
+            "Active": false,
             "UID": 1570191872,
             "ParentUID": 804536540,
             "PrefabReference": 0,
@@ -7619,7 +7771,7 @@
                     "nearPlaneDist": 1,
                     "farPlaneDist": 100,
                     "vFOV": 25.036764144897461,
-                    "hFOV": 50.183822631835938,
+                    "hFOV": 44.301467895507813,
                     "culling": true,
                     "HDR": true,
                     "drawSkybox": false
