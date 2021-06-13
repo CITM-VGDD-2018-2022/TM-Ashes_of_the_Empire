@@ -441,7 +441,7 @@
    {
     "Id": "913881297",
     "Language": "SFX",
-    "Hash": "3979959125",
+    "Hash": "2569358949",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Wampa_Skell",
     "ShortName": "Wampa_Skell",
     "Path": "Wampa_Skell.bnk",
@@ -973,7 +973,7 @@
    {
     "Id": "1019160887",
     "Language": "SFX",
-    "Hash": "1478988250",
+    "Hash": "112926798",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Heavytrooper",
     "ShortName": "Heavytrooper",
     "Path": "Heavytrooper.bnk",
@@ -1233,7 +1233,7 @@
    {
     "Id": "1063759122",
     "Language": "SFX",
-    "Hash": "3104593954",
+    "Hash": "3705729221",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Moff_Gideon",
     "ShortName": "Moff_Gideon",
     "Path": "Moff_Gideon.bnk",
@@ -1605,7 +1605,7 @@
    {
     "Id": "1093318992",
     "Language": "SFX",
-    "Hash": "1434203722",
+    "Hash": "3202581",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Mando",
     "ShortName": "Mando",
     "Path": "Mando.bnk",
@@ -1871,6 +1871,46 @@
         "Language": "SFX",
         "ShortName": "Blaster Mando overcharged.wav",
         "Path": "SFX\\Blaster Mando overcharged_FC2D3A10.wem"
+       }
+      ]
+     },
+     {
+      "Id": "694153689",
+      "Name": "Play_Mando_Boss_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Mando\\Play_Mando_Boss_Hit",
+      "DurationType": "OneShot",
+      "DurationMin": "0.354399",
+      "DurationMax": "0.840683",
+      "IncludedMemoryFiles": [
+       {
+        "Id": "166122849",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 3.wav",
+        "Path": "SFX\\Bantha attack ramming 3_FC2D3A10.wem"
+       },
+       {
+        "Id": "218041158",
+        "Language": "SFX",
+        "ShortName": "Mando hit 1.wav",
+        "Path": "SFX\\Mando hit 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "426481162",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 2.wav",
+        "Path": "SFX\\Bantha attack ramming 2_FC2D3A10.wem"
+       },
+       {
+        "Id": "647876168",
+        "Language": "SFX",
+        "ShortName": "Bantha attack ramming 1.wav",
+        "Path": "SFX\\Bantha attack ramming 1_FC2D3A10.wem"
+       },
+       {
+        "Id": "1010296783",
+        "Language": "SFX",
+        "ShortName": "Mando hit 2.wav",
+        "Path": "SFX\\Mando hit 2_FC2D3A10.wem"
        }
       ]
      },
@@ -2339,7 +2379,7 @@
    {
     "Id": "1229948536",
     "Language": "SFX",
-    "Hash": "1738796662",
+    "Hash": "2944338216",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Environment",
     "ShortName": "Environment",
     "Path": "Environment.bnk",
@@ -2940,7 +2980,7 @@
    {
     "Id": "1838596016",
     "Language": "SFX",
-    "Hash": "2171068007",
+    "Hash": "1605827102",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cinematic",
     "ShortName": "Cinematic",
     "Path": "Cinematic.bnk",
@@ -3249,7 +3289,7 @@
    {
     "Id": "3049191116",
     "Language": "SFX",
-    "Hash": "2356609844",
+    "Hash": "1937635881",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Rancor",
     "ShortName": "Rancor",
     "Path": "Rancor.bnk",
@@ -3291,8 +3331,8 @@
       "Name": "Play_Rancor_Death",
       "ObjectPath": "\\Events\\Default Work Unit\\Rancor\\Play_Rancor_Death",
       "DurationType": "OneShot",
-      "DurationMin": "5.960364",
-      "DurationMax": "5.960364",
+      "DurationMin": "5.560365",
+      "DurationMax": "5.560365",
       "IncludedMemoryFiles": [
        {
         "Id": "287144272",
@@ -3611,7 +3651,7 @@
    {
     "Id": "3363384534",
     "Language": "SFX",
-    "Hash": "2857304730",
+    "Hash": "2982984285",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Deathtrooper",
     "ShortName": "Deathtrooper",
     "Path": "Deathtrooper.bnk",
@@ -3877,7 +3917,7 @@
    {
     "Id": "3434002875",
     "Language": "SFX",
-    "Hash": "3585754411",
+    "Hash": "340234268",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cantine",
     "ShortName": "Cantine",
     "Path": "Cantine.bnk",
@@ -4238,7 +4278,7 @@
    {
     "Id": "3991942870",
     "Language": "SFX",
-    "Hash": "827569961",
+    "Hash": "828496368",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
