@@ -3,7 +3,7 @@
     "Game Objects": [
         {
             "name": "WallSkillImperialCruiser",
-            "tag": "Untagged",
+            "tag": "WallSkill",
             "layer": "Default",
             "Active": true,
             "UID": 1202886656,
@@ -183,6 +183,7 @@
                             ],
                             "paPerSec": 200,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -295,6 +296,7 @@
                             ],
                             "paPerSec": 50,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -475,6 +477,7 @@
                             ],
                             "paPerSec": 20,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -587,6 +590,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -685,6 +689,7 @@
                             ],
                             "paPerSec": 50,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,

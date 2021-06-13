@@ -3,7 +3,7 @@
     "Game Objects": [
         {
             "name": "WallSkillHoth",
-            "tag": "Untagged",
+            "tag": "WallSkill",
             "layer": "Default",
             "Active": true,
             "UID": 245910492,
@@ -183,6 +183,7 @@
                             ],
                             "paPerSec": 300,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -286,6 +287,7 @@
                             ],
                             "paPerSec": 50,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -460,6 +462,7 @@
                             ],
                             "paPerSec": 400,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
@@ -561,6 +564,7 @@
                             ],
                             "paPerSec": 100,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 2,
@@ -659,6 +663,7 @@
                             ],
                             "paPerSec": 50,
                             "paRelative": true,
+                            "maxDelay": 0,
                             "ParticleEffects": [
                                 {
                                     "paEffectType": 0,
