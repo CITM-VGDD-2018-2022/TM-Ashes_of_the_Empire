@@ -18,6 +18,8 @@ public class MoffSwing : DiamondComponent
 
     public bool hasCollided = false;
 
+    private bool readyToDestroy = false;
+
     private Vector3 swingDirection = Vector3.zero;
 
     public void Awake()
@@ -34,7 +36,7 @@ public class MoffSwing : DiamondComponent
 
         gameObject.transform.localPosition += mySwingDir * (speed * speedMult * Time.deltaTime);
 
-        if (currentLifeTime >= maxLifeTime * timeMult)
+        if (currentLifeTime >= maxLifeTime * timeMult || readyToDestroy == true)
         {
             InternalCalls.Destroy(this.gameObject);
         }
@@ -47,6 +49,14 @@ public class MoffSwing : DiamondComponent
             start = true;
         }
 
+    }
+
+    public void OnTriggerEnter(GameObject triggeredGameObject)
+    {
+        if (triggeredGameObject.CompareTag("WallSkill"))
+        {
+            readyToDestroy = true;
+        }
     }
 
     public void SetDirection(Vector3 myDir)
