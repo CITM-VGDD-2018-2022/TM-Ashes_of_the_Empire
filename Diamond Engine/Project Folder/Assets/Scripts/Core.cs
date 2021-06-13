@@ -3129,7 +3129,7 @@ public class Core : Entity
             case STATUS_TYPE.MAX_HP:
                 {
                     PlayerHealth myHealth = gameObject.GetComponent<PlayerHealth>();
-                    if (myHealth != null && PlayerHealth.currMaxHealth <= 100)
+                    if (myHealth != null && PlayerHealth.currMaxHealth == 100)
                     {
                         statusToInit.statChange = statusToInit.severity * PlayerHealth.currMaxHealth / 100;
                         myHealth.SetMaxHPValue((int)(PlayerHealth.currMaxHealth + statusToInit.statChange), true);

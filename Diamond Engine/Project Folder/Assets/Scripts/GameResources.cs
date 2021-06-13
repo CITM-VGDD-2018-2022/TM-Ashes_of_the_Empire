@@ -686,7 +686,7 @@ static class BoonDataHolder
         boonType[(int)BOONS.BOON_ECHO_QUICK_RECOVERY] =        new EchoRecovery(); //checked
         boonType[(int)BOONS.BOON_GREEF_PAYCHECK] =             new GreefPaycheck(); //probably ok    
         boonType[(int)BOONS.BOON_ITS_A_TRAP] =                 new ItsATrap(); //checked
-        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_DRAW] =     new MandoQuickDraw(); 
+        boonType[(int)BOONS.BOON_MANDALORIAN_QUICK_DRAW] =     new MandoQuickDraw(); //checked
         boonType[(int)BOONS.BOON_REX_SECOND_BLASTER] =         new RexSecBlaster(); //checked
         boonType[(int)BOONS.BOON_SOLO_QUICK_DRAW] =            new SoloQuickDraw();  //checked   
         boonType[(int)BOONS.BOON_WATTOS_COOLANT] =             new WattoCoolant(); //probably ok
@@ -702,7 +702,7 @@ static class BoonDataHolder
         boonType[(int)BOONS.BOON_MASTER_LUMINARA_FORCE] =      new LuminaraForce(); //checked
         boonType[(int)BOONS.BOON_MASTER_WINDU_FORCE] =         new WinduForceControl(); //checked
         boonType[(int)BOONS.BOON_MASTER_YODA_FORCE] =          new YodaForceControl(); //checked
-        boonType[(int)BOONS.BOON_MANDALORIAN_CODE] =           new MandoCode(); 
+        boonType[(int)BOONS.BOON_MANDALORIAN_CODE] =           new MandoCode(); //checked
         boonType[(int)BOONS.CROSSHAIR_LUCKY_SHOT] =            new CrossHairLuckyShot(); //probably ok
         boonType[(int)BOONS.BOON_AHSOKA_DETERMINATION] =       new AhsokaDetermination(); //probably ok
 
