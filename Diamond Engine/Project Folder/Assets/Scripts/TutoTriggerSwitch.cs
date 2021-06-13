@@ -29,7 +29,7 @@ public class TutoTriggerSwitch : DiamondComponent
     {
         if (roomUidToLoad != -1 && triggeredGameObject.CompareTag("Player"))
         {
-            if (Counter.firstRun)
+            if (Counter.firstTutorial)
             {
                 PlayerResources.AddResourceBy1(RewardType.REWARD_BESKAR);
                 PlayerResources.AddResourceBy1(RewardType.REWARD_MACARON);
@@ -39,9 +39,14 @@ public class TutoTriggerSwitch : DiamondComponent
             if (EnvironmentSourceLocate.instance != null)
                 Audio.PlayAudio(EnvironmentSourceLocate.instance.gameObject, "Play_UI_Boon_Pickup");
             StaticVariablesInit.InitStaticVars();
-            SceneManager.LoadScene(roomUidToLoad);
-            Counter.firstRun = false;
+            Core.instance.LockInputs(true);
+            Counter.firstTutorial = false;
             DebugOptionsHolder.godModeActive = false;
+            BlackFade.StartFadeIn( () => 
+            {
+                Core.instance.LockInputs(false);
+                SceneManager.LoadScene(roomUidToLoad); 
+            });
             
         }
 

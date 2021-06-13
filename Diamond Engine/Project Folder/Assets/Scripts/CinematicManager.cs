@@ -117,6 +117,7 @@ public class CinematicManager : DiamondComponent
         {
             Core.instance.LockInputs(false);
         }
+        Counter.firstRun = false;
     } 
     
     private void ReturnGame()
@@ -134,6 +135,7 @@ public class CinematicManager : DiamondComponent
         {
             Core.instance.LockInputs(false);
         }
+        Counter.firstRun = false;
     }
 
     private void PlayHUBMusic()
@@ -247,6 +249,8 @@ public class CinematicManager : DiamondComponent
 
             });
         });
+
+        Counter.firstRun = false;
 
         init = false;
 
