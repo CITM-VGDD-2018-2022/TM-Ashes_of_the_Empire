@@ -203,7 +203,7 @@
                     "preBurstDashDistance": 7,
                     "preBurstAngleDash": 45,
                     "bulletDamage": 7,
-                    "numBurstBullets": 3,
+                    "numBurstBullets": 6,
                     "timeBetweenShots": 0.10000000149011612,
                     "timeToStartBurst": 0.20000000298023224,
                     "timeBetweenShotsP2": 0.029999999329447746,

@@ -272,7 +272,7 @@ public class Core : Entity
     {
         #region VARIABLES WITH DEPENDENCIES
 
-        //bulletDamage = 1000.0f;  //Please do not delete this, it's for quick debugging purposes
+        //bulletDamage *= 2.0f;  //Please do not delete this, it's for quick debugging purposes
 
         // INIT VARIABLES WITH DEPENDENCIES //
         //Animation
@@ -2476,11 +2476,7 @@ public class Core : Entity
 
         if (triggeredGameObject.CompareTag("Zone2"))
         {
-            tuto_state = TUTO_STATES.BLASTER;
-            BabyYoda babyYoda = GetBabyYoda();
-            if (babyYoda != null)
-                babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
-            Debug.Log("Entering Zone 2");
+            Zone2();
         }
 
         if (triggeredGameObject.CompareTag("Zone3"))
@@ -3660,5 +3656,24 @@ public class Core : Entity
         currentState = STATE.IDLE;
         DisableBlaster();
         StartIdle();
+    }
+
+    public int GetTutoState()
+    {
+        return (int)tuto_state;
+    }
+
+    public void Zone2()
+    {
+        tuto_state = TUTO_STATES.BLASTER;
+        BabyYoda babyYoda = GetBabyYoda();
+        if (babyYoda != null)
+            babyYoda.tutoState = BabyYoda.TUTO_YODA_STATES.LOCKED;
+        Debug.Log("Entering Zone 2");
+    }
+
+    public void OnDestroy()
+    {
+        instance = null;
     }
 }

@@ -5,7 +5,7 @@
             "Type": 0,
             "Active": false,
             "Name": "Screen Space Ambient Oclussion",
-            "RadiusAO": 1,
+            "RadiusAO": 1.0759999752044678,
             "GlowSpread": 0,
             "UseBlur": false,
             "Bias": 0.10000000149011612,
@@ -13,16 +13,16 @@
         },
         {
             "Type": 1,
-            "Active": false,
+            "Active": true,
             "Name": "Bloom",
             "BrightThreshold": 0.69999998807907104,
-            "BrightnessIntensity": 1,
+            "BrightnessIntensity": 0.22800000011920929,
             "GlowBlurSpread": 0,
             "SmoothGlow": false,
             "BlurIterations": 2,
             "StartingDownscaleFactor": 2,
             "DownscaleFactorMultiplier": 2,
-            "NormalizeAspectRatio": false
+            "NormalizeAspectRatio": true
         },
         {
             "Type": 2,
@@ -33,17 +33,17 @@
         },
         {
             "Type": 3,
-            "Active": false,
+            "Active": true,
             "Name": "Vignette",
             "Mode": 0,
             "Tint": [
                 1,
-                1,
-                1,
+                0.99998998641967773,
+                0.99998998641967773,
                 0
             ],
             "Intensity": 15,
-            "Extend": 0.25,
+            "Extend": 0.31499999761581421,
             "MinMaxRadius": [
                 0.40000000596046448,
                 0.69999998807907104

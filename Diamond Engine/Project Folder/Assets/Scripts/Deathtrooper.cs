@@ -617,7 +617,7 @@ public class Deathtrooper : Enemy
             {
                 TakeDamage(bullet.damage * damageRecieveMult * BlasterVulnerability);
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Deathtrooper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {
@@ -632,10 +632,9 @@ public class Deathtrooper : Enemy
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Deathtrooper_Sniper_Hit");
             if (bullet != null && currentState != STATE.DIE)
             {
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
 
                 if (Core.instance.hud != null)
                 {

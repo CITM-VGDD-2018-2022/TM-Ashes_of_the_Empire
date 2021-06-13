@@ -746,7 +746,7 @@ public class Bantha : Enemy
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Bantha_Sniper_Hit");
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
             if (bullet != null)
             {

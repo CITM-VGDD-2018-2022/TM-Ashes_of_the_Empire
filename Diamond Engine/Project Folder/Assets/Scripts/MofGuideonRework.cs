@@ -189,6 +189,7 @@ public class MofGuideonRework : Entity
     // Presentation
     private float presentationTime = 0f;
     private float presentationTimer = 0f;
+    private float cinematicTimerOffset = 0.95f;
 
     //Chase
     public float endChaseDistance = 1.5f;
@@ -391,7 +392,7 @@ public class MofGuideonRework : Entity
         spawner6 = InternalCalls.FindObjectWithName("DefaultSpawnPoint6");
 
         //Get anim durations
-        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose");
+        presentationTime = Animator.GetAnimationDuration(gameObject, "MG_PowerPose") * 1.75f;
 
         changingPhaseTime = Animator.GetAnimationDuration(gameObject, "MG_Rising");
 
@@ -486,6 +487,7 @@ public class MofGuideonRework : Entity
         if (start == false)
         {
             start = true;
+            return;
         }
 
         myDeltaTime = Time.deltaTime * speedMult;
@@ -3283,6 +3285,18 @@ public class MofGuideonRework : Entity
         }
         if (cape != null)
         {
+
+            if (capeMesh != null)
+            {
+                MeshRenderer capeMeshRend = capeMesh.GetComponent<MeshRenderer>();
+
+                if (capeMeshRend != null)
+                {
+                    capeMeshRend.active = true;
+                }
+
+            }
+
             Animator.Resume(cape);
             Animator.Play(cape, "MG_Cape_Off", speedMult);
         }
@@ -3330,6 +3344,27 @@ public class MofGuideonRework : Entity
         //if (cameraComp != null)
         //    cameraComp.target = Core.instance.gameObject;
 
+        HideCape();
+
+        isInvencible = false;
+
+        StopParticles(PARTICLES.AURA);
+
+        currentHealthPoints = limboHealth = maxHealthPoints1;
+    }
+
+    public void EndCinematic()
+    {
+        HideCape();
+
+        if(presentationTimer > cinematicTimerOffset)
+        {
+            presentationTimer = cinematicTimerOffset;
+        }
+    }
+
+    private void HideCape()
+    {
         if (capeMesh != null)
         {
             MeshRenderer capeMeshRend = capeMesh.GetComponent<MeshRenderer>();
@@ -3340,12 +3375,6 @@ public class MofGuideonRework : Entity
             }
 
         }
-
-        isInvencible = false;
-
-        StopParticles(PARTICLES.AURA);
-
-        currentHealthPoints = limboHealth = maxHealthPoints1;
     }
 
     #endregion

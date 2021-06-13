@@ -66,7 +66,8 @@ public class SHOP : DiamondComponent
             if (items[i] != null)
                 shopButtons[i] = items[i].GetComponent<ShopButtons>();
         }
-        envObj = InternalCalls.FindObjectWithName("Environment");
+        if (EnvironmentSourceLocate.instance != null)
+            envObj = EnvironmentSourceLocate.instance.gameObject;
     }
 
     private void Start()
@@ -85,6 +86,7 @@ public class SHOP : DiamondComponent
         }
         if (RoomSwitch.currentLevelIndicator-1 == RoomSwitch.LEVELS.ONE && toCheck)
         {
+            Audio.StopAudio(envObj);
             Audio.SetState("Game_State", "Run");
             Audio.SetState("Player_State", "Alive");
             if (MusicSourceLocate.instance != null)
@@ -94,6 +96,7 @@ public class SHOP : DiamondComponent
         }
         else if (RoomSwitch.currentLevelIndicator-1 == RoomSwitch.LEVELS.TWO && toCheck)
         {
+            Audio.StopAudio(envObj);
             Audio.SetState("Game_State", "Run_2");
             Audio.SetState("Player_State", "Alive");
             if (MusicSourceLocate.instance != null)

@@ -40,8 +40,9 @@ Emitter::Emitter() :
 	myParticles(),
 	myEffects(),
 	objTransform(nullptr),
-	delaying(false),
+	delaying(true),
 	maxDelay(0.0f),
+	delay(0.0f),
 	emitterName(""),
 	lastTimeSinceParticle(0.0f),
 	not_relative(true),
@@ -117,18 +118,18 @@ Emitter::~Emitter()
 	myParticles.clear();
 	emitterName.clear();
 	objTransform = nullptr;
-	delay.Stop();
 }
 
 
 void Emitter::Update(float dt, bool systemActive)
 {
-	if (delaying)
+	if (delaying==true)
 	{
-		if (delay.Read() >= maxDelay * 1000)
+		delay += dt;
+		if (delay >= maxDelay)
 		{
-			delay.Stop();
 			delaying = false;
+			delay = 0.0f;
 		}
 	}
 
@@ -470,6 +471,9 @@ void Emitter::SaveData(JSON_Object* nObj)
 	DEJson::WriteVector4(nObj, "paColor", &particlesColor[0]);
 	DEJson::WriteFloat(nObj, "paPerSec", particlesPerSec);
 	DEJson::WriteBool(nObj, "paRelative", not_relative);
+
+	DEJson::WriteFloat(nObj, "maxDelay", maxDelay);
+
 	JSON_Value* effectsArray = json_value_init_array();
 	JSON_Array* jsArray = json_value_get_array(effectsArray);
 
@@ -515,7 +519,7 @@ void Emitter::LoadData(DEConfig& nObj)
 	SetParticlesPerSec(nObj.ReadFloat("paPerSec"));
 
 	not_relative = nObj.ReadBool("paRelative");
-
+	maxDelay = nObj.ReadFloat("maxDelay");
 	DEConfig conf(nullptr);
 	JSON_Array* effArray = json_object_get_array(nObj.nObj, "ParticleEffects");
 
@@ -534,7 +538,8 @@ void Emitter::RestartEmitter()
 {
 	lastUsedParticle = 0;
 	lastParticeTime = secPerParticle - 0.016f;
-
+	delaying = true;
+	delay = 0.0f;
 	int particlesCount = myParticles.size();
 	for (int i = 0; i < particlesCount; ++i)
 	{

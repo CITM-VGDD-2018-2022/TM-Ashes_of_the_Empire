@@ -8,7 +8,10 @@ public class MoffGideonCinematic : DiamondComponent
     public GameObject endCamera1 = null;
     public GameObject initialCamera3 = null;
     public GameObject endCamera3 = null;
-    private Transform defaultCameraTransform = null;
+    public GameObject moffGideon = null;
+    private Vector3 defaultCameraPos = null;
+    private Quaternion defaultCameraRot = null;
+    private bool start = false;
 
     int sequenceCounter = 0;
     int amountOfSequencesPlusOne = 3;
@@ -16,8 +19,8 @@ public class MoffGideonCinematic : DiamondComponent
 
     float speed1 = 1.0f;
     float timer2 = 0.0f;
-    float time2 = 0.75f;
-    float speed3 = 3.0f;
+    float time2 = 0.55f;
+    float speed3 = 3.75f;
     float destinationDistance = 0.2f;
 
     public void Awake()
@@ -28,7 +31,8 @@ public class MoffGideonCinematic : DiamondComponent
             return;
         }
 
-        defaultCameraTransform = gameCamera.transform;
+        defaultCameraPos = gameCamera.transform.localPosition;
+        defaultCameraRot = gameCamera.transform.localRotation;
         cameraAuxPosition = gameCamera.transform.localPosition = initialCamera1.transform.localPosition;
         gameCamera.transform.localRotation = initialCamera1.transform.localRotation;
         gameCamera.GetComponent<CameraController>().startFollow = false;
@@ -41,17 +45,26 @@ public class MoffGideonCinematic : DiamondComponent
     {
         if (sequenceCounter < amountOfSequencesPlusOne)
         {
-            float newDeltaTime = Time.deltaTime;
-            if (newDeltaTime > 0.016f)
+            if (Core.instance != null && start == false)
             {
-                newDeltaTime = 0.016f;
+                Core.instance.LockInputs(true);
+
+                if (Core.instance.hud != null)
+                {
+                    Core.instance.hud.Enable(false);
+                }
+
+                start = true;
+                return;
             }
+
+            float newDeltaTime = Time.deltaTime;
 
             switch (sequenceCounter)
             {
                 case 0:
                     cameraAuxPosition += (endCamera1.transform.localPosition - gameCamera.transform.localPosition).normalized * newDeltaTime * speed1;
-                    
+
                     if (Mathf.Distance(gameCamera.transform.localPosition, endCamera1.transform.localPosition) <= destinationDistance)
                     {
                         sequenceCounter++;
@@ -60,6 +73,7 @@ public class MoffGideonCinematic : DiamondComponent
 
                 case 1:
                     timer2 += newDeltaTime;
+
                     if (timer2 > time2)
                     {
                         sequenceCounter++;
@@ -96,15 +110,46 @@ public class MoffGideonCinematic : DiamondComponent
     private void EndCinematic()
     {
         sequenceCounter = amountOfSequencesPlusOne;
+        BlackFade.SetFadeSpdMult(1.5f);
         BlackFade.StartFadeIn(() =>
         {
-            gameCamera.transform.localPosition = defaultCameraTransform.localPosition;
-            gameCamera.transform.localRotation = defaultCameraTransform.localRotation;
+            gameCamera.transform.localPosition = defaultCameraPos;
+            gameCamera.transform.localRotation = defaultCameraRot;
             CameraManager.SetCameraOrthographic(gameCamera);
+
+            if (moffGideon != null)
+            {
+                MofGuideonRework moffScript = moffGideon.GetComponent<MofGuideonRework>();
+
+                if (moffScript != null)
+                {
+                    moffScript.EndCinematic();
+                }
+            }
+
+            if (Core.instance != null)
+            {
+                if (Core.instance.hud != null)
+                {
+                    Core.instance.hud.Enable(true);
+                }
+            }
+
             BlackFade.StartFadeOut(() =>
             {
                 gameCamera.GetComponent<CameraController>().startFollow = true;
+
+                if (Core.instance != null)
+                {
+                    Core.instance.LockInputs(false);
+                    if (Core.instance.hud != null)
+                    {
+                        Core.instance.hud.Enable(true);
+                    }
+                }
+
             });
+
         });
     }
 

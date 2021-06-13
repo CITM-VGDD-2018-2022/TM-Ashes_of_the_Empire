@@ -27,7 +27,7 @@ public class CinematicManager : DiamondComponent
     public GameObject postCinematicDialogue;
     public GameObject cinematicDialogue;
     public bool init = false;
-
+    private bool start = true;
     private List<Sequence> listSequences = new List<Sequence>();
     public void Awake()
     {
@@ -37,6 +37,8 @@ public class CinematicManager : DiamondComponent
             init = false;
             return;
         }
+
+        start = true;
 
         Audio.SetState("Game_State", "Cinematic");
 
@@ -108,7 +110,13 @@ public class CinematicManager : DiamondComponent
             postCinematicDialogue.Enable(true);
             postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         }
+        cinematicDialogue.Enable(false);
+        gameObject.GetComponent<CinematicDialog>().StopDialog();
         PlayHUBMusic();
+        if (Core.instance != null)
+        {
+            Core.instance.LockInputs(false);
+        }
     } 
     
     private void ReturnGame()
@@ -120,6 +128,12 @@ public class CinematicManager : DiamondComponent
         postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
         CameraManager.SetCameraOrthographic(gameCamera);
         PlayHUBMusic();
+        cinematicDialogue.Enable(false);
+        gameObject.GetComponent<CinematicDialog>().StopDialog();
+        if (Core.instance != null)
+        {
+            Core.instance.LockInputs(false);
+        }
     }
 
     private void PlayHUBMusic()
@@ -138,6 +152,14 @@ public class CinematicManager : DiamondComponent
             return;
         }
 
+        if (start)
+        {
+            if (Core.instance != null)
+            {
+                Core.instance.LockInputs(true);
+            }
+            start = false;
+        }
 
 
         if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN || Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
@@ -145,6 +167,7 @@ public class CinematicManager : DiamondComponent
 
                 StopAllSequences();
                 ReturnGame();
+                
                 init = false;
             
         }
@@ -216,6 +239,12 @@ public class CinematicManager : DiamondComponent
                 gameCamera.GetComponent<CameraController>().startFollow = true;
                 postCinematicDialogue.Enable(true);
                 postCinematicDialogue.GetChild("Button").GetComponent<Navigation>().Select();
+
+                if (Core.instance != null)
+                {
+                    Core.instance.LockInputs(false);
+                }
+
             });
         });
 

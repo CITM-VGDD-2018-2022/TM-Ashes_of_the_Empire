@@ -12,7 +12,6 @@ public class DummyStormtrooper : Enemy
         NONE = -1,
         IDLE,
         PUSHED,
-        SHOOT,
         HIT,
         DIE
     }
@@ -22,10 +21,8 @@ public class DummyStormtrooper : Enemy
         IN_IDLE,
         IN_IDLE_END,
         IN_PUSHED,
-        IN_SHOOT,
         IN_HIT,
         IN_DIE,
-        IN_PLAYER_IN_RANGE
     }
 
     //State
@@ -36,44 +33,29 @@ public class DummyStormtrooper : Enemy
     public GameObject shootPoint = null;
     public GameObject blaster = null;
 
-    public bool canShoot = true;
-
     //Action times
-    public float idleTime = 5.0f;
+    public  float idleTime = 5.0f;
     private float dieTime = 3.0f;
-    public float timeBewteenShots = 0.5f;
-    public float timeBewteenSequences = 0.5f;
-    public float timeBewteenStates = 1.5f;
+    public  float timeBewteenShots = 0.5f;
+    public  float timeBewteenSequences = 0.5f;
+    public  float timeBewteenStates = 1.5f;
 
     //Speeds
-    public float bulletSpeed = 10.0f;
-    private bool skill_slowDownActive = false;
+    public  float bulletSpeed = 10.0f;
     private float currAnimationPlaySpd = 1.0f;
 
     //Timers
-    public float idleTimer = 0.0f;
-    private float shotTimer = 0.0f;
-    private float sequenceTimer = 0.0f;
+    public  float idleTimer = 0.0f;
     private float dieTimer = 0.0f;
-    private float statesTimer = 0.0f;
     private float pushTimer = 0.0f;
-    private float skill_slowDownTimer = 0.0f;
-
-    //Action variables
-    int shotTimes = 0;
-    public int maxShots = 2;
-    private int shotSequences = 0;
-    public int maxSequences = 2;
 
     //force
     public float forcePushMod = 1;
 
     //Death point
     public GameObject deathPoint = null;
-
     private StormTrooperParticles myParticles = null;
 
-    private bool start = true;
     public void Awake()
     {
         InitEntity(ENTITY_TYPE.STROMTROOPER);
@@ -84,11 +66,6 @@ public class DummyStormtrooper : Enemy
             Animator.Play(blaster, "ST_Idle");
 
         UpdateAnimationSpd(1.0f);
-
-        targetPosition = null;
-
-        shotTimes = 0;
-        shotSequences = 0;
 
         dieTime = Animator.GetAnimationDuration(gameObject, "ST_Die");
 
@@ -101,59 +78,18 @@ public class DummyStormtrooper : Enemy
         if (spawnparticles != null)
             spawnparticles.Play();
 
+        EnemyManager.AddEnemy(this.gameObject);
     }
 
     public void Update()
     {
-        if (start)
-        {
-            EnemyManager.AddEnemy(this.gameObject);
-            start = false;
-        }
-
         myDeltaTime = Time.deltaTime * speedMult;
         UpdateStatuses();
 
         #region STATE MACHINE
-
-        ProcessInternalInput();
-        ProcessExternalInput();
         ProcessState();
-
         UpdateState();
-
         #endregion
-    }
-
-
-    //Timers go here
-    private void ProcessInternalInput()
-    {
-        /*if (skill_slowDownActive)
-        {
-            skill_slowDownTimer += myDeltaTime;
-            if (skill_slowDownTimer >= Skill_Tree_Data.GetWeaponsSkillTree().PW3_SlowDownDuration)
-            {
-                skill_slowDownTimer = 0.0f;
-                skill_slowDownActive = false;
-            }
-        }*/
-    }
-
-    //All events from outside the stormtrooper
-    private void ProcessExternalInput()
-    {
-        if (currentState != STATE.DIE && canShoot)
-        {
-            if (InRange(Core.instance.gameObject.transform.globalPosition, detectionRange) && idleTimer <= 0.0f)
-            {
-                if (Core.instance != null && currentState != STATE.SHOOT)
-                {
-                    inputsList.Add(INPUT.IN_PLAYER_IN_RANGE);
-                    LookAt(Core.instance.gameObject.transform.globalPosition);
-                }
-            }
-        }
     }
 
     //Manages state changes throught inputs
@@ -171,32 +107,6 @@ public class DummyStormtrooper : Enemy
                 case STATE.IDLE:
                     switch (input)
                     {
-                        case INPUT.IN_PLAYER_IN_RANGE:
-                            currentState = STATE.SHOOT;
-                            PlayerDetected();
-                            StartShoot();
-                            break;
-
-                        case INPUT.IN_DIE:
-                            currentState = STATE.DIE;
-                            StartDie();
-                            break;
-
-                        case INPUT.IN_PUSHED:
-                            currentState = STATE.PUSHED;
-                            StartPush();
-                            break;
-                    }
-                    break;
-
-                case STATE.SHOOT:
-                    switch (input)
-                    {
-                        case INPUT.IN_IDLE:
-                            currentState = STATE.IDLE;
-                            StartIdle();
-                            break;
-
                         case INPUT.IN_DIE:
                             currentState = STATE.DIE;
                             StartDie();
@@ -240,9 +150,6 @@ public class DummyStormtrooper : Enemy
             case STATE.IDLE:
                 UpdateIdle();
                 break;
-            case STATE.SHOOT:
-                UpdateShoot();
-                break;
             case STATE.DIE:
                 UpdateDie();
                 break;
@@ -260,6 +167,7 @@ public class DummyStormtrooper : Enemy
         Animator.Play(gameObject, "ST_Idle", speedMult);
         if (blaster != null)
             Animator.Play(blaster, "ST_Idle");
+
         UpdateAnimationSpd(speedMult);
     }
 
@@ -269,113 +177,6 @@ public class DummyStormtrooper : Enemy
             idleTimer -= Time.deltaTime;
 
         UpdateAnimationSpd(speedMult);
-    }
-    #endregion
-
-    #region SHOOT
-    private void StartShoot()
-    {
-        statesTimer = timeBewteenStates;
-        Animator.Play(gameObject, "ST_Idle", speedMult);
-        if (blaster != null)
-            Animator.Play(blaster, "ST_Idle");
-        UpdateAnimationSpd(speedMult);
-    }
-
-    private void UpdateShoot()
-    {
-        if (statesTimer > 0.0f)
-        {
-            statesTimer -= myDeltaTime;
-
-            if (statesTimer <= 0.0f)
-            {
-                //First Timer
-                if (shotSequences == 0)
-                {
-                    //First Shot
-                    Shoot();
-                    shotTimer = timeBewteenShots;
-                }
-                //Second Timer
-                else
-                {
-                    //Reboot times
-                    shotTimes = 0;
-                    shotSequences = 0;
-                    inputsList.Add(INPUT.IN_IDLE);
-                }
-            }
-        }
-
-        if (shotTimer > 0.0f)
-        {
-            shotTimer -= myDeltaTime;
-
-            if (shotTimer <= 0.0f)
-            {
-                Shoot();
-
-                if (shotTimes >= maxShots)
-                {
-                    shotSequences++;
-
-                    Animator.Play(gameObject, "ST_Idle", speedMult);
-                    if (blaster != null)
-                        Animator.Play(blaster, "ST_Idle");
-                    UpdateAnimationSpd(speedMult);
-
-                    //End of second shot of the first sequence
-                    if (shotSequences < maxSequences)
-                    {
-                        sequenceTimer = timeBewteenSequences;
-                        shotTimes = 0;
-                        //Start of pause between sequences
-                    }
-                    //End of second shot of the second sequence
-                    else
-                    {
-                        statesTimer = timeBewteenStates;
-                        inputsList.Add(INPUT.IN_IDLE);
-                        idleTimer = idleTime;
-                    }
-                }
-            }
-        }
-
-        if (sequenceTimer > 0.0f)
-        {
-            sequenceTimer -= myDeltaTime;
-
-            if (sequenceTimer <= 0.0f)
-            {
-                Shoot();
-                shotTimer = timeBewteenShots;
-            }
-        }
-
-        LookAt(Core.instance.gameObject.transform.globalPosition);
-        UpdateAnimationSpd(speedMult);
-    }
-
-    private void Shoot()
-    {
-        GameObject bullet = InternalCalls.CreatePrefab("Library/Prefabs/1635392825.prefab", shootPoint.transform.globalPosition, shootPoint.transform.globalRotation, shootPoint.transform.globalScale);
-        bullet.GetComponent<BH_Bullet>().damage = damage;
-
-        Animator.Play(gameObject, "ST_Shoot", speedMult);
-        if (blaster != null)
-            Animator.Play(blaster, "ST_Shoot");
-        UpdateAnimationSpd(speedMult);
-        Audio.PlayAudio(gameObject, "PLay_Blaster_Stormtrooper");
-        shotTimes++;
-    }
-
-    private void PlayerDetected()
-    {
-        Audio.PlayAudio(gameObject, "Play_Enemy_Detection");
-        if (myParticles != null && myParticles.alert != null)
-            myParticles.alert.Play();
     }
     #endregion
 
@@ -430,7 +231,7 @@ public class DummyStormtrooper : Enemy
         Vector3 force = pushDir.normalized;
         if (BabyYoda.instance != null)
         {
-            force.y = BabyYoda.instance.pushVerticalForce;
+            force.y  = BabyYoda.instance.pushVerticalForce;
             force.x *= BabyYoda.instance.pushHorizontalForce;
             force.z *= BabyYoda.instance.pushHorizontalForce;
             gameObject.AddForce(force * forcePushMod);
@@ -476,12 +277,6 @@ public class DummyStormtrooper : Enemy
 
                 if (hudComponent != null)
                     hudComponent.AddToCombo(25, 0.95f);
-            }
-
-            if (Skill_Tree_Data.IsEnabled((int)Skill_Tree_Data.SkillTreesNames.WEAPONS, (int)Skill_Tree_Data.WeaponsSkillNames.PRIMARY_SLOW_SPEED))
-            {
-                skill_slowDownActive = true;
-                skill_slowDownTimer = 0.0f;
             }
         }
         else if (collidedGameObject.CompareTag("ChargeBullet"))
@@ -562,7 +357,7 @@ public class DummyStormtrooper : Enemy
                     }
                 }
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Sniper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {
@@ -602,10 +397,7 @@ public class DummyStormtrooper : Enemy
                         hudComponent.AddToCombo(33, 0.65f);
                 }
             }
-
         }
-
-
     }
 
     public void OnTriggerEnter(GameObject triggeredGameObject)
@@ -678,9 +470,8 @@ public class DummyStormtrooper : Enemy
                 inputsList.Add(INPUT.IN_DIE);
             }
         }
-
-
     }
+
     private void UpdateAnimationSpd(float newSpd)
     {
         if (currAnimationPlaySpd != newSpd)
@@ -695,7 +486,9 @@ public class DummyStormtrooper : Enemy
     public override void PlayGrenadeHitParticles()
     {
         if (myParticles != null && myParticles.grenadeHit != null)
+        {
             myParticles.grenadeHit.Play();
+        }
     }
 
 }

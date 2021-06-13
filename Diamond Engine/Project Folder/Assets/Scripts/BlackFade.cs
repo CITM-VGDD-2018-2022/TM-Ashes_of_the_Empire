@@ -22,6 +22,8 @@ public class BlackFade : DiamondComponent
     public float fadeOutSpeed = 1.0f;
     public float fadeInSpeed = 1.0f;
 
+    private static float fadeSpeedMult = 1f;
+
     private void Awake()
     {
         fade = gameObject.GetComponent<Material>();
@@ -47,7 +49,7 @@ public class BlackFade : DiamondComponent
     {
         if (current_alpha <= 1.1f)
         {
-            current_alpha += Time.deltaTime * fadeInSpeed;
+            current_alpha += Time.deltaTime * fadeInSpeed * fadeSpeedMult;
             if (current_alpha > 1.1f)
             {
                 current_alpha = 1.1f;
@@ -62,12 +64,13 @@ public class BlackFade : DiamondComponent
     {
         if (current_alpha > 0)
         {
-            current_alpha -= Time.deltaTime * fadeOutSpeed;
+            current_alpha -= Time.deltaTime * fadeOutSpeed * fadeSpeedMult;
             if (current_alpha < 0)
             {
                 current_alpha = 0;
                 state = STATE.NONE;
                 onFadeOutCompleted?.Invoke();
+                fadeSpeedMult = 1f;
             }
             fade.SetFloatUniform("fadeValue", current_alpha);
         }
@@ -88,6 +91,12 @@ public class BlackFade : DiamondComponent
     {
         state = STATE.FADE_OUT;
     }
+
+    public static void SetFadeSpdMult(float spdMult)
+    {
+        fadeSpeedMult = spdMult;
+    }
+
     public static void StartFadeOut(Action action)
     {
         onFadeOutCompleted = action;

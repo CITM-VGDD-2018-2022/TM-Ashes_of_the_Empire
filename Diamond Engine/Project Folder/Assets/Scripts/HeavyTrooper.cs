@@ -865,7 +865,7 @@ public class HeavyTrooper : Enemy
             {
                 TakeDamage(bullet.GetDamage() * damageRecieveMult * BlasterVulnerability);
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
+                Audio.PlayAudio(gameObject, "Play_Heavytrooper_Hit");
 
                 if (Core.instance.hud != null && currentState != STATE.DIE)
                 {
@@ -885,13 +885,12 @@ public class HeavyTrooper : Enemy
         else if (collidedGameObject.CompareTag("ChargeBullet"))
         {
             ChargedBullet bullet = collidedGameObject.GetComponent<ChargedBullet>();
-            Audio.PlayAudio(gameObject, "Play_Sniper_Hit");
+            Audio.PlayAudio(gameObject, "Play_Heavytrooper_Sniper_Hit");
             if (bullet != null && currentState != STATE.DIE)
             {
 
                 particles.Play(HeavyTrooperParticles.HEAVYROOPER_PARTICLES.SNIPER_HIT);
 
-                Audio.PlayAudio(gameObject, "Play_Stormtrooper_Hit");
 
                 if (Core.instance.hud != null)
                 {

@@ -63,7 +63,7 @@
                         1
                     ],
                     "Scale": [
-                        2.2000000476837158,
+                        2,
                         1.1000000238418579,
                         1.2999999523162842
                     ]
@@ -146,7 +146,7 @@
                                 1,
                                 1
                             ],
-                            "paPerSec": 1000,
+                            "paPerSec": 500,
                             "paRelative": true,
                             "ParticleEffects": [
                                 {
@@ -203,8 +203,8 @@
                                     "paShapePartSpeed": 0,
                                     "paShapeRandSpeed": 0,
                                     "PaShapeAreaDimensions": [
-                                        2.5,
-                                        10,
+                                        2,
+                                        5,
                                         0.75
                                     ],
                                     "PaShapeSphereDirection": true,
@@ -297,7 +297,7 @@
                                     "paShapePartSpeed": 2,
                                     "paShapeRandSpeed": 0.5,
                                     "PaShapeAreaDimensions": [
-                                        2.5,
+                                        2,
                                         0.10000000149011612,
                                         0.30000001192092896
                                     ],
