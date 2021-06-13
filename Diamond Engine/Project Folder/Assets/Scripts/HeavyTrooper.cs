@@ -854,8 +854,8 @@ public class HeavyTrooper : Enemy
             {
                 if (Core.instance.HasStatus(STATUS_TYPE.PRIM_SLOW))
                     AddStatus(STATUS_TYPE.SLOWED, STATUS_APPLY_TYPE.BIGGER_PERCENTAGE, Core.instance.GetStatusData(STATUS_TYPE.PRIM_SLOW).severity / 100, 2, false);
-                if (Core.instance.HasStatus(STATUS_TYPE.MANDO_QUICK_DRAW))
-                    AddStatus(STATUS_TYPE.BLASTER_VULN, STATUS_APPLY_TYPE.ADDITIVE, Core.instance.GetStatusData(STATUS_TYPE.MANDO_QUICK_DRAW).severity / 100, 5);
+                if (Core.instance.HasStatus(STATUS_TYPE.QUICK_COMBO))
+                    AddStatus(STATUS_TYPE.BLASTER_VULN, STATUS_APPLY_TYPE.ADDITIVE, Core.instance.GetStatusData(STATUS_TYPE.QUICK_COMBO).severity / 100, 5);
                 if (Core.instance.HasStatus(STATUS_TYPE.PRIM_MOV_SPEED))
                     Core.instance.AddStatus(STATUS_TYPE.ACCELERATED, STATUS_APPLY_TYPE.BIGGER_PERCENTAGE, Core.instance.GetStatusData(STATUS_TYPE.PRIM_MOV_SPEED).severity / 100, 5, false);
             }
