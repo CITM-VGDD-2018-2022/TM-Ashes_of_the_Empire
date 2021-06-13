@@ -8,7 +8,6 @@ public class Enable : DiamondComponent
 	public GameObject disable2 = null;
 	public GameObject disable3 = null;
 	public GameObject select = null;
-	public int startStatus = 0;
 
 	public void OnExecuteButton()
     {
@@ -38,17 +37,6 @@ public class Enable : DiamondComponent
 			if (navComponent != null)
 			{
 				navComponent.Select();
-			}
-		}
-        if (startStatus > 0)
-        {
-            if (startStatus == 1)
-            {
-				Core.instance.startAvailable = false;
-            }
-			else if (startStatus == 2)
-            {
-				Core.instance.startAvailable = true;
 			}
 		}
     }

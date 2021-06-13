@@ -22,6 +22,8 @@ public class SHOP : DiamondComponent
     public GameObject shopUI;
     public GameObject textPopUp;
 
+    public bool maintainStart = true;
+
     //Buttons
     public GameObject item1 = null;
     public GameObject item2 = null;
@@ -130,7 +132,14 @@ public class SHOP : DiamondComponent
         {
             if (InRange(Core.instance.gameObject.transform.globalPosition, interactionRange))
             {
-                if (!textPopUp.IsEnabled()) textPopUp.Enable(true);
+                if (!textPopUp.IsEnabled())
+                {
+                    textPopUp.Enable(true);
+                    if (!maintainStart)
+                    {
+                        Core.instance.startAvailable = false;
+                    }
+                }
 
                 if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_DOWN)
                 {
@@ -141,6 +150,10 @@ public class SHOP : DiamondComponent
             else if (textPopUp.IsEnabled())
             {
                 textPopUp.Enable(false);
+                if (!maintainStart)
+                {
+                    Core.instance.startAvailable = true;
+                }
             }
         }
 

@@ -14,6 +14,7 @@ public class InsideCollider : DiamondComponent
     private bool notInNorOut = false;
     private bool already_zone2 = false;
     public bool playSFX = true;
+    public bool maintainStart = true;
 
     public void Update()
     {
@@ -22,6 +23,10 @@ public class InsideCollider : DiamondComponent
 
         if (IsInside() && displayText.IsEnabled() == false && (displaySecondaryText == null || displaySecondaryText.IsEnabled() == false)) 
         {
+            if (!maintainStart)
+            {
+                Core.instance.startAvailable = false;
+            }
             displayText.EnableNav(true);
 
             if (hubTextController != null)
@@ -39,6 +44,8 @@ public class InsideCollider : DiamondComponent
 
         else if (!IsInside() && displayText.IsEnabled())
         {
+            if (!maintainStart)
+                Core.instance.startAvailable = true;
             displayText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;
@@ -46,6 +53,8 @@ public class InsideCollider : DiamondComponent
         }
         else if (!IsInside() && displaySecondaryText!=null && displaySecondaryText.IsEnabled())
         {
+            if (!maintainStart)
+                Core.instance.startAvailable = true;
             displaySecondaryText.EnableNav(false);
             if (hubTextController != null)
                 hubTextController.GetComponent<HubTextController>().insideColliderTextActive = false;

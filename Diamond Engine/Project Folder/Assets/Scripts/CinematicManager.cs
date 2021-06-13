@@ -50,7 +50,7 @@ public class CinematicManager : DiamondComponent
         }
 
         start = true;
-        if(skipText != null)
+        if (skipText != null)
         {
             skipTransform = skipText.GetComponent<Transform2D>();
             skipOriginSize = skipTransform.size;
@@ -72,9 +72,9 @@ public class CinematicManager : DiamondComponent
         AddSequence(sequence11);
 
         //Maping actions
-        if(listSequences.Count > 0)
+        if (listSequences.Count > 0)
         {
-            listSequences[1].onStartSequence = () => 
+            listSequences[1].onStartSequence = () =>
             {
                 Input.PlayHaptic(0.3f, 500);
                 Audio.PlayAudio(gameObject, "Play_Razor_Appearing");
@@ -86,7 +86,7 @@ public class CinematicManager : DiamondComponent
                 gameObject.GetComponent<CinematicDialog>().StartDialog();
                 Audio.PlayAudio(gameObject, "Play_Mando_Dialog");
 
-           
+
                 Audio.PlayAudio(gameObject, "Play_Razor_Motor");
             };
 
@@ -136,8 +136,8 @@ public class CinematicManager : DiamondComponent
         Counter.firstRun = false;
         skipText.Enable(false);
         skipImage.Enable(false);
-    } 
-    
+    }
+
     private void ReturnGame()
     {
         gameCamera.GetComponent<CameraController>().startFollow = true;
@@ -179,6 +179,7 @@ public class CinematicManager : DiamondComponent
             if (Core.instance != null)
             {
                 Core.instance.LockInputs(true);
+                Core.instance.startAvailable = false;
             }
             start = false;
         }
@@ -194,13 +195,13 @@ public class CinematicManager : DiamondComponent
             {
                 StopAllSequences();
                 ReturnGame();
-
+                Core.instance.startAvailable = true;
                 init = false;
             }
-            
+
         }
-        
-        if(Input.GetGamepadButton(DEControllerButton.A)== KeyState.KEY_UP)
+
+        if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_UP)
         {
             timerToSkipCinematic = 0;
             skipTransform.size = skipOriginSize;
@@ -230,12 +231,12 @@ public class CinematicManager : DiamondComponent
 
     private void AddSequence(GameObject sequenceObject)
     {
-        if (sequenceObject == null) 
+        if (sequenceObject == null)
             return;
 
         Sequence sequence = sequenceObject.GetComponent<Sequence>();
 
-        if(sequence != null)
+        if (sequence != null)
         {
             listSequences.Add(sequence);
         }
@@ -256,7 +257,8 @@ public class CinematicManager : DiamondComponent
 
     public void EndFirstSequences()
     {
-        BlackFade.StartFadeIn(() => {
+        BlackFade.StartFadeIn(() =>
+        {
             StopAllSequences();
             listSequences[7].StartRunning();
             BlackFade.StartFadeOut();
@@ -267,9 +269,11 @@ public class CinematicManager : DiamondComponent
     public void EndCinematic()
     {
         StopAllSequences();
-        BlackFade.StartFadeIn(() => {
+        BlackFade.StartFadeIn(() =>
+        {
             ResetInitalTransform();
-            BlackFade.StartFadeOut(() => {
+            BlackFade.StartFadeOut(() =>
+            {
 
                 gameCamera.GetComponent<CameraController>().startFollow = true;
                 postCinematicDialogue.Enable(true);
@@ -285,6 +289,8 @@ public class CinematicManager : DiamondComponent
 
         Counter.firstRun = false;
         skipText.Enable(false);
+        skipImage.Enable(false);
+        Core.instance.startAvailable = true;
         init = false;
 
     }

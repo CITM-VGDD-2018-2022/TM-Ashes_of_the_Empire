@@ -55,6 +55,7 @@ public class StartMenu : DiamondComponent
                 DiamondPrefs.LoadData();
                 if (DiamondPrefs.ReadBool("loadData") == false)
                     return;
+                Counter.firstRun = false;
             }
 
             StartFadeIn();
