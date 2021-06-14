@@ -63,6 +63,10 @@
   width: 100%;
 }
 
+.column-two .profile-pic img{
+  width: 60%;
+}
+
 /* Clear floats after the columns */
 .row:after-two {
   content: "";
