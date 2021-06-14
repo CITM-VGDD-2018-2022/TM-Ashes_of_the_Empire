@@ -60,6 +60,10 @@
 }
 
 .column-two img{
+  width: 100%;
+}
+
+.column-two .profile-pic img{
   width: 60%;
 }
 

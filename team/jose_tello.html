@@ -82,7 +82,9 @@
                     <a href="https://github.com/jose-tello" target="_blank" class="fa fa-github"></a>
                 </div>
                 <div class="column-two">
-                    <img class="individual-img" src="../assets/img/team/jose_tello.jpeg" alt="" style="display: block;margin-left: auto; margin-right: auto;">
+                    <div class="profile-pic">
+                        <img class="individual-img" src="../assets/img/team/jose_tello.jpeg" alt="" style="display: block;margin-left: auto; margin-right: auto;">
+                    </div>                    
                 </div>
             </div>
         </section>
@@ -96,7 +98,7 @@
                     <h3><strong>Real time lights and shadows</strong></h3>
                 </div>
                 <div class="column-two">
-                    
+
                     <h4>Directional & Area lights: </h4>
                     <p>&emsp; Normal and specular maps</p>
                     <p>&emsp; Bump depth</p>
@@ -111,105 +113,106 @@
                 <div class="column-two">
                     <img src="../assets/img/individual-pages/JoseLightGif.gif" alt="" height="100%" width="auto">   <!-- Area light gif-->
                 </div>
+
+                <div align ="center">
+
+                    <img src="../assets/img/individual-pages/JoseMoffRoom.jpg" alt="" height="450" width="auto" >   <!-- Moff gideon room image-->
+
+                </div>
             </div>
 
-            </section>
-            <section>
-                <div class="align-items-center">
-                    &emsp; &emsp; &emsp; &emsp; &emsp;  <!-- this feels wrong...-->
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div>
+                    <h3><strong>Particle system rendering</strong></h3>
+                    <p>
+                        The particle system is able to render <strong>+100.000</strong> particles at 60fps in the target hardware using instanced rendering. Thought this
+                        was my biggest implication in this system, I also participaded in the design of the system and coded some effects for it.
+                    </p>
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/JoseparticleSystemGif.gif" alt="" height="100%" width="auto"> <!-- Particle system going jam-->
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/JoseParticleInGame.gif" alt="" height="100%" width="auto"> <!-- Particle system going jam IN GAME-->
+                </div>
+
+                <div>
+                    <p>Each particle system can hold multiple emitters, with different settings such as:</p>
+                    <p>&emsp;&emsp;· Particle rate  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Color</p>
+                    <p>&emsp;&emsp;· Rexture        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Max - min life time</p>
+                    <p>&emsp;&emsp;· Delay          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Max - min size</p>
+
+                    <p>The emitters can also have different effects, for example (the ones shown in the left): Color over life time and area spawn.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div>
+                    <h3><strong>Bosses</strong></h3>
+                </div>
+                <div class="column-two">
+                    <h4><strong>Rancor first implementation</strong></h4>
+                    <img src="../assets/img/individual-pages/JoseRancorFightGif.gif" alt="" height="100%" width="auto"> <!-- Rancor gif-->
+                </div>
+
+                <div class="column-two">
+                    <h4><strong>Moff Gideon final implementation and polish</strong></h4>
+                    <img src="../assets/img/individual-pages/JoseMoffFightGif.gif" alt="" height="100%" width="auto"> <!-- Moff gif-->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div>
+                    <h3><strong>UI rendering system</strong></h3>
+                </div>
+                <div class="column-two">
+                    <br />
+                    <p>
+                        The ui system is based on a canvas that holds all ui elements, which will be rendered to the game camera. The ui elements can be moved using the 2d transform component.
+                    </p>
+                    <p>
+                        It includes a text system that supports ttf fonts.
+
+                        I also worked on ui easy-ins, fade-ins, and the grenade reload effect.
+                    </p>
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/JoseuiGif.gif" alt="" height="100%" width="auto"> <!-- Ui effect-->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div>
+                    <h3><strong>Companion</strong></h3>
+                    <h4>Grogu movement first implementation and push skill</h4>
+                </div>
+
+                <div class="column">
                     &emsp; &emsp; &emsp; &emsp; &emsp;
                     &emsp; &emsp; &emsp; &emsp; &emsp;
-                    &emsp; &emsp; &emsp; &emsp; &emsp;
-                    &emsp; &emsp; &emsp; &emsp; &emsp;
-                    <img src="../assets/img/individual-pages/JoseMoffRoom.jpg" alt="" height="450" width="auto">   <!-- Moff gideon room image-->
-
+                    <img src="../assets/img/individual-pages/JosegroguPush.gif" alt="" height="100%" width="auto"> <!-- Grogu gif-->
                 </div>
+            </div>
+        </section>
 
-            </section>
-
-
-
-            <section>
-                <div class="container">
-                    <div>
-                        <h3><strong>Particle system rendering</strong></h3>
-                        <p>
-                            The particle system is able to render <strong>+100.000</strong> particles at 60fps in the target hardware using instanced rendering. Thought this
-                            was my biggest implication in this system, I also participaded in the design of the system and coded some effects for it.
-                        </p>
-                    </div>
-                    <div class="column-two">
-                        <img src="../assets/img/individual-pages/JoseparticleSystemGif.gif" alt="" height="100%" width="auto"> <!-- Particle system going jam-->
-                    </div>
-                    <div class="column-two">
-                        <img src="../assets/img/individual-pages/JoseParticleInGame.gif" alt="" height="100%" width="auto"> <!-- Particle system going jam IN GAME-->
-                    </div>
+        <section>
+            <div class="container">
+                <div>
+                    <h3><strong>Dinjarin state machine rework</strong></h3>
+                    <img src="../assets/img/individual-pages/JoseMando_StateMachine.jpg" alt="" height="100%" width="auto"> <!-- Grogu gif-->
                 </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <div>
-                        <h3><strong>Bosses</strong></h3>
-                    </div>
-                    <div class="column-two">
-                        <h4><strong>Rancor first implementation</strong></h4>
-                        <img src="../assets/img/individual-pages/JoseRancorFightGif.gif" alt="" height="100%" width="auto"> <!-- Rancor gif-->
-                    </div>
-
-                    <div class="column-two">
-                        <h4><strong>Moff Gideon final implementation and polish</strong></h4>
-                        <img src="../assets/img/individual-pages/JoseMoffFightGif.gif" alt="" height="100%" width="auto"> <!-- Moff gif-->
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <div>
-                        <h3><strong>Ui rendering system</strong></h3>
-                    </div>
-                    <div class="column-two">
-                        <br />
-                        <br />
-                        <br />
-                        <p>
-                            The ui system is based on a canvas that holds all ui elements, which will be rendered to the game camera. The ui elements can be moved using the 2d transform component.
-                        </p>
-                        <p>
-                            It includes a text system that supports ttf fonts.
-
-                            I also worked on ui easy-ins, fade-ins, and the grenade reload effect.
-                        </p>
-                    </div>
-                    <div class="column-two">
-                        <img src="../assets/img/individual-pages/JoseuiGif.gif" alt="" height="100%" width="auto"> <!-- Ui effect-->
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <div>
-                        <h3><strong>Grogu</strong></h3>
-                        <h4>Movement first implementation and push skill</h4>
-                    </div>
-
-                    <div class="column">
-                        &emsp; &emsp; &emsp; &emsp; &emsp;
-                        &emsp; &emsp; &emsp; &emsp; &emsp;
-                        <img src="../assets/img/individual-pages/JosegroguPush.gif" alt="" height="100%" width="auto"> <!-- Grogu gif-->
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <div>
-                        <h3><strong>Dinjarin state machine rework</strong></h3>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
         </section>
 
