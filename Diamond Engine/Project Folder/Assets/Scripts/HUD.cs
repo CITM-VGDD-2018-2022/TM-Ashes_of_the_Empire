@@ -268,12 +268,12 @@ public class HUD : DiamondComponent
         if (Input.GetKey(DEKeyCode.N) == KeyState.KEY_DOWN) //test key
         {
             //DecreaseComboPercentage(0.3f);
-        }
+        }*/
         if (comboNumber > 0)
         {
             UpdateCombo();
         }
-        */
+        
 
         last_hp = Mathf.Lerp(last_hp, PlayerHealth.currHealth /*- 0.5f*/, 2.5f * Time.deltaTime);
         if (last_hp > PlayerHealth.currHealth)
