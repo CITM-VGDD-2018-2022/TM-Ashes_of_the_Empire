@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -95,114 +95,118 @@
     
 
     <section class="inner-page">
-       <section>
-        <div class="container" data-aos="fade-up">
-           <div>
-            <h2 style="text-align: center;">My contribution</h2>
-            <hr>
-          </div>     
-          <div>
-            <h3><strong>Physics System</strong></h3>
-               <div>
-             <p style="text-align:center;"> <img src="../assets/img/individual-pages/Albert_NVIDIA_PhysX_Logo.png" alt="" height="50%" width="50%"> </p>      
-          </div>
-            <p>I added the physics system to our engine using the physics library PhysX from NVidia.<br/>
-            We didn't need all of the features Nvidia provides added to our engine, so I ended adding the following ones:<br/>
-            <ul>
-              <li> Editable rigidbodies and different types of colliders (boxes, spheres, capsules, and mesh colliders)</li>
-              <li> Triggers</li>
-              <li> Syncronitzation between our gameobjects transform and rigidbodies position</li>
-              <li> continuous collision detection to avoid tunneling </li>
-              <li> Debug rendering </li>
-              <li> Communication with c#, using collision callbacks (on enter, on stay, on exit) </li>
-              <li> Raycast </li>
-              <li> C# functions addforce and setvelocity </li>
-             </ul>
-          </div>
-          
-          <div class="column-two"> 
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto"> 
-          </div>
-          <div class="column-two">
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">       
-          </div>
-       
-        </div>
-      </section>
-      
-         <section>
-        <div class="container" data-aos="fade-up">
-               <div>          
-            <h3><strong>Skilltree Skill effects</strong></h3>
-            <p>The design team wanted the game to be as similar as possible to a complete rogue lite experience. And this required a lot of game progress, in which the player could choose differents paths and decisions on how to upgrade it's character. So I implemented up to 54 skills present in the skill trees. This consisted mainly in buffs, but high tier skills could add new effects such as dropping grenades on dashes and such. This process requered a lot of coordination with the design team, in terms of balance and rewriting some skills which conflicted with the already established game mechanics</p>          
-            <p style="text-align:center;"> <img src="../assets/img/engine/animation_01.gif" alt="" height="50%" width="50%"></p>       
-          </div>
-        </div>
-      </section>
-      
-            <section>
-        <div class="container" data-aos="fade-up">
-          <div>          
-            <h3><strong>Boon effects</strong></h3>
-            <p>After having all skills implemented in game, now we changed focus to another progression element, but this time centered on the run progression, the boons, which always give that special flavour to rogue likes and rogue lites. There's almost 30 boons in our game, which are similar to the skills, but more simple in design. Which makes them special is the fact that they can stack with other boons or even themselves. This leads to crazy and powerful combinations. Again cooperation with the design team was crucial to develop them. </p>          
-            <p style="text-align:center;"><img src="../assets/img/engine/animation_01.gif" alt="" height="50%" width="50%"></p>       
-          </div>
-        </div>
-      </section>
-      
-      <section>
-        <div class="container" data-aos="fade-up">        
-          <div class="column-two">          
-            <h3><strong>First ingame conversation</strong></h3>
-            <p>Since one of our game pillars was having some kind of storytelling, a conversation system connceted to ui was necessary. I added the first two conversations in game, with Grogu and Bo-Katan. More conversations would come up later in the development of the game.</p>          
-          </div>
-          <div class="column-two">
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">       
-          </div>
-        </div>
-      </section>
-      
         <section>
-        <div class="container" data-aos="fade-up">
-          <div>
-            <h3><strong>Grenade skill and force push rework</strong></h3>
-            <p>I added the grenade skill, which at the time was described as a cluster grenade, and updated it later to a damage over time area. I also updated one of the grugu's force skills, the push, which was a more similar approach to the final push we have in the current version of the game.</p>
-          </div>    
-          <div class="column-two"> 
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto"> 
-          </div>
-          <div class="column-two">
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">       
-          </div>
-        </div>
-      </section>
-      
-            <section>
-        <div class="container" data-aos="fade-up">
-          <div>
-            <h3><strong>Particle tweaks and first Ingame particles</strong></h3>
-            <p>Some of my companions created an awesome particle system. But we I got some requests from the art direction team, so i had to upgrade it a bit in order to have particle bursts and that same particles to face the direction they were moving. I also added the first ingame particles using scripting, and created a simple yet useful script to have all player particles sorted and accessible, hich proved really useful later on and was replicated in other ingame entities.</p>
-          </div>    
-          <div class="column-two"> 
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto"> 
-          </div>
-          <div class="column-two">
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">       
-          </div>
-        </div>
-      </section>
-      
-      <section>
-        <div class="container" data-aos="fade-up">
-         <div class="column-two">          
-            <h3><strong>First room switch and respawn system</strong></h3>
-            <p>This was one of the first implementations of scripting using collision callbacks. Basically it aimed to create the first game flow between levels and scenes. It consisted on a respawn on the same scene when the player fell opff the map, and a change of scenes when the player touched a portal.</p>          
-          </div>
-          <div class="column-two">
-            <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">       
-          </div>
-        </div>
-      </section>
+            <div class="container" data-aos="fade-up">
+                <div>
+                    <h2 style="text-align: center;">My contribution</h2>
+                    <hr>
+                </div>
+                <div>
+                    <h3><strong>Physics System</strong></h3>
+                    <div>
+                        <p style="text-align:center;"> <img src="../assets/img/individual-pages/AlbertGarcia/Albert_NVIDIA_PhysX_Logo.png" alt="" height="auto" width="50%"> </p>
+                    </div>
+                    <p>
+                        I added the physics system to our engine using the physics library PhysX from NVidia.<br />
+                        We didn't need all of the features Nvidia provides added to our engine, so I ended adding the following ones:<br />
+                        <ul>
+                            <li> Editable rigidbodies and different types of colliders (boxes, spheres, capsules, and mesh colliders)</li>
+                            <li> Triggers</li>
+                            <li> Syncronitzation between our gameobjects transform and rigidbodies position</li>
+                            <li> continuous collision detection to avoid tunneling </li>
+                            <li> Debug rendering </li>
+                            <li> Communication with c#, using collision callbacks (on enter, on stay, on exit) </li>
+                            <li> Raycast </li>
+                            <li> C# functions addforce and setvelocity </li>
+                        </ul>
+                </div>
+
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/AlbertGarcia/Physics1.gif" alt="" height="100%" width="auto">
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div>
+                    <h3><strong>Skilltree Skill effects</strong></h3>
+                    <p>The design team wanted the game to be as similar as possible to a complete rogue lite experience. And this required a lot of game progress, in which the player could choose differents paths and decisions on how to upgrade it's character. So I implemented up to 54 skills present in the skill trees. This consisted mainly in buffs, but high tier skills could add new effects such as dropping grenades on dashes and such. This process requered a lot of coordination with the design team, in terms of balance and rewriting some skills which conflicted with the already established game mechanics</p>
+                    <p style="text-align:center;"> <img src="../assets/img/individual-pages/AlbertGarcia/skills.gif" alt="" height="50%" width="auto"></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div>
+                    <h3><strong>Boon effects</strong></h3>
+                    <p>After having all skills implemented in game, now we changed focus to another progression element, but this time centered on the run progression, the boons, which always give that special flavour to rogue likes and rogue lites. There's almost 30 boons in our game, which are similar to the skills, but more simple in design. Which makes them special is the fact that they can stack with other boons or even themselves. This leads to crazy and powerful combinations. Again cooperation with the design team was crucial to develop them. </p>
+                    <p style="text-align:center;"> <img src="../assets/img/individual-pages/AlbertGarcia/particles.gif" alt="" height="50%" width="auto"></p>
+                </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div class="column-two">
+                    <h3><strong>First ingame conversation</strong></h3>
+                    <p>Since one of our game pillars was having some kind of storytelling, a conversation system connceted to ui was necessary. I added the first two conversations in game, with Grogu and Bo-Katan. More conversations would come up later in the development of the game.</p>
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/engine/animation_01.gif" alt="" height="100%" width="auto">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div>
+                    <h3><strong>Grenade skill and force push rework</strong></h3>
+                    <p>I added the grenade skill, which at the time was described as a cluster grenade, and updated it later to a damage over time area. I also updated one of the grugu's force skills, the push, which was a more similar approach to the final push we have in the current version of the game.</p>
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/AlbertGarcia/force.gif" alt="" height="100%" width="auto">
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/individual-pages/AlbertGarcia/grenade.gif" alt="" height="100%" width="auto">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div>
+                    <h3><strong>Particle tweaks and first Ingame particles</strong></h3>
+                    <p>Some of my companions created an awesome particle system. But we I got some requests from the art direction team, so i had to upgrade it a bit in order to have particle bursts and that same particles to face the direction they were moving. I also added the first ingame particles using scripting, and created a simple yet useful script to have all player particles sorted and accessible, hich proved really useful later on and was replicated in other ingame entities.</p>
+                </div>
+                <div>
+                    <p style="text-align:center;"> <img src="../assets/img/individual-pages/AlbertGarcia/particles2.gif" alt="" height="100%" width="auto"></p>
+                    <div class="column-two">
+                       <img src="../assets/img/individual-pages/AlbertGarcia/particles.gif" alt="" height="50%" width="auto">
+                    </div>
+                    <div class="column-two">
+                       <img src="../assets/img/individual-pages/AlbertGarcia/particles3.gif" alt="" height="100%" width="auto">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" data-aos="fade-up">
+                <div class="column-two">
+                    <h3><strong>First room switch and respawn system</strong></h3>
+                    <p>This was one of the first implementations of scripting using collision callbacks. Basically it aimed to create the first game flow between levels and scenes. It consisted on a respawn on the same scene when the player fell opff the map, and a change of scenes when the player touched a portal.</p>
+                </div>
+                <div class="column-two">
+                    <img src="../assets/img/engine/animation_01.gif" alt="" height="60%" width="auto">
+                </div>
+            </div>
+        </section>
 
     </section>
 
