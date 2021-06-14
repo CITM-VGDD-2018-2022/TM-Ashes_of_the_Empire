@@ -86,12 +86,18 @@ public class Sequence : DiamondComponent
             return;
         }
 
+        float newDeltaTime = Time.deltaTime;
+
+        if (newDeltaTime > 0.016f)
+        {
+            newDeltaTime = 0.016f;
+        }
 
         if (!startedNextSequence)
         {
             if (timerToNextSequence < timeToNextSequence)
             {
-                timerToNextSequence += Time.deltaTime;
+                timerToNextSequence += newDeltaTime;
             }
             else
             {
@@ -112,7 +118,7 @@ public class Sequence : DiamondComponent
 
         if (useQuadraticInterpolation)
         {
-            interpolateAmount += Time.deltaTime * interpolateAmountSpeed;
+            interpolateAmount += newDeltaTime * interpolateAmountSpeed;
 
             if (interpolateAmount < 1)
             {
@@ -165,11 +171,11 @@ public class Sequence : DiamondComponent
                     {
                         if (lerpTimer1 < 1)
                         {
-                            lerpTimer1 += Time.deltaTime * 0.5f;
+                            lerpTimer1 += newDeltaTime * 0.5f;
                             object1.transform.localPosition = Vector3.Lerp(object1_pos1.transform.localPosition, object1_pos2.transform.localPosition, lerpTimer1);
                             if (rotateObject1)
                             {
-                                object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos2.transform.localRotation, speedRotationObject1 * Time.deltaTime);
+                                object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos2.transform.localRotation, speedRotationObject1 * newDeltaTime);
                             }
                         }
                     }
@@ -177,7 +183,7 @@ public class Sequence : DiamondComponent
                     {
                         if (object1.transform.localPosition.DistanceNoSqrt(object1_pos1.transform.localPosition) > 0.1)
                         {
-                            object1.transform.localPosition += (object1_pos1.transform.localPosition - object1.transform.localPosition).normalized * Time.deltaTime * speedObject1;
+                            object1.transform.localPosition += (object1_pos1.transform.localPosition - object1.transform.localPosition).normalized * newDeltaTime * speedObject1;
                         }
                         else
                         {
@@ -190,7 +196,7 @@ public class Sequence : DiamondComponent
 
                         if (rotateObject1)
                         {
-                            object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos1.transform.localRotation, speedRotationObject1 * Time.deltaTime);
+                            object1.transform.localRotation = Quaternion.Slerp(object1.transform.localRotation, object1_pos1.transform.localRotation, speedRotationObject1 * newDeltaTime);
                         }
                     }
 
@@ -223,7 +229,7 @@ public class Sequence : DiamondComponent
                     {
                         if (lerpTimer2 < 1)
                         {
-                            lerpTimer2 += Time.deltaTime * 0.5f;
+                            lerpTimer2 += newDeltaTime * 0.5f;
                             object2.transform.localPosition = Vector3.Lerp(object2_pos1.transform.localPosition, object2_pos2.transform.localPosition, Mathf.EaseOutCubic(lerpTimer2));
                         }
                     }
@@ -231,7 +237,7 @@ public class Sequence : DiamondComponent
                     {
                         if (object2.transform.localPosition.DistanceNoSqrt(object2_pos1.transform.localPosition) > 0.1)
                         {
-                            object2.transform.localPosition += (object2_pos1.transform.localPosition - object2.transform.localPosition).normalized * Time.deltaTime * speedObject2;
+                            object2.transform.localPosition += (object2_pos1.transform.localPosition - object2.transform.localPosition).normalized * newDeltaTime * speedObject2;
                         }
                         else
                         {
@@ -240,7 +246,7 @@ public class Sequence : DiamondComponent
 
                         if (rotateObject2)
                         {
-                            object2.transform.localRotation = Quaternion.Slerp(object2.transform.localRotation, object2_pos1.transform.localRotation, speedRotationObject2 * Time.deltaTime);
+                            object2.transform.localRotation = Quaternion.Slerp(object2.transform.localRotation, object2_pos1.transform.localRotation, speedRotationObject2 * newDeltaTime);
                         }
                     }
 

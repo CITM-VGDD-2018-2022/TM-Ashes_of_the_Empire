@@ -183,13 +183,18 @@ public class CinematicManager : DiamondComponent
             }
             start = false;
         }
+        float newDeltaTime = Time.deltaTime;
 
+        if (newDeltaTime > 0.016f)
+        {
+            newDeltaTime = 0.016f;
+        }
 
         if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
         {
-            skipTransform.size += (new Vector3(1, 1, 0) * 0.3f) * Time.deltaTime;
-            skipTransform.lPos += (new Vector3(-1, 0, 0) * 0.5f) * Time.deltaTime;
-            timerToSkipCinematic += Time.deltaTime;
+            skipTransform.size += (new Vector3(1, 1, 0) * 0.3f) * newDeltaTime;
+            skipTransform.lPos += (new Vector3(-1, 0, 0) * 0.5f) * newDeltaTime;
+            timerToSkipCinematic += newDeltaTime;
 
             if (timerToSkipCinematic >= timeToSkipCinematic)
             {
