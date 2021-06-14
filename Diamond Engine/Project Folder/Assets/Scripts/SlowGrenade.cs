@@ -30,6 +30,8 @@ public class SlowGrenade : DiamondComponent
     List<Entity> enemies = new List<Entity>();
     private bool destroy = false;
 
+    private bool finished = false;
+
     public void Update()
     {
         if (start == true)
@@ -39,6 +41,7 @@ public class SlowGrenade : DiamondComponent
 
             detonate = false;
             start = false;
+            finished = false;
         }
 
         if (addedForce == false && readyToAddForce == true)
@@ -463,46 +466,52 @@ public class SlowGrenade : DiamondComponent
 
     public void GrenadeFinish()
     {
-        //this.gameObject.transform.localPosition = Vector3.positiveInfinity;
-        this.gameObject.SetVelocity(new Vector3(0, 0, 0));
+        this.gameObject.transform.localPosition = Vector3.positiveInfinity;
 
-        enemies.Clear();
-
-        currentRadius = areaRadius;
-        readyToAddForce = false;
-        start = true;
-        detonate = false;
-        lifeTimer = 0.0f;
-        procTimer = 0f;
-
-        explosionTimer = 0.0f;
-        procActivation = false;
-        addedForce = false;
-
-        Audio.StopAudio(gameObject);
-
-        if (grenadeActiveObj != null)
+        if (finished == true)
         {
-            grenadeActivePar = grenadeActiveObj.GetComponent<ParticleSystem>();
-            if (grenadeActivePar != null)
-                grenadeActivePar.Stop();
+            this.gameObject.SetVelocity(new Vector3(0, 0, 0));
+
+            enemies.Clear();
+
+            currentRadius = areaRadius;
+            readyToAddForce = false;
+            start = true;
+            detonate = false;
+            lifeTimer = 0.0f;
+            procTimer = 0f;
+
+            explosionTimer = 0.0f;
+            procActivation = false;
+            addedForce = false;
+
+            Audio.StopAudio(gameObject);
+
+            if (grenadeActiveObj != null)
+            {
+                grenadeActivePar = grenadeActiveObj.GetComponent<ParticleSystem>();
+                if (grenadeActivePar != null)
+                    grenadeActivePar.Stop();
+            }
+            if (granadeAreaObj != null)
+            {
+                granadeArea = granadeAreaObj.GetComponent<ParticleSystem>();
+                if (granadeArea != null)
+                    granadeArea.Stop();
+            }
+
+            forceToAdd = Vector3.zero;
+            this.gameObject.transform.localScale = myScale;
+
+            BoxCollider myBoxColl = this.gameObject.GetComponent<BoxCollider>();
+
+            if (myBoxColl != null)
+                myBoxColl.active = false;
+
+            this.gameObject.Enable(false);
         }
-        if (granadeAreaObj != null)
-        {
-            granadeArea = granadeAreaObj.GetComponent<ParticleSystem>();
-            if (granadeArea != null)
-                granadeArea.Stop();
-        }
 
-        forceToAdd = Vector3.zero;
-        this.gameObject.transform.localScale = myScale;
-
-        BoxCollider myBoxColl = this.gameObject.GetComponent<BoxCollider>();
-
-        if (myBoxColl != null)
-            myBoxColl.active = false;
-
-        this.gameObject.Enable(false);
+        finished = true;
     }
 
     public void EnemyDied(GameObject deadEnemy)
