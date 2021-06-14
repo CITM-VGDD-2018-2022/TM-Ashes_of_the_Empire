@@ -456,7 +456,6 @@
     <ClInclude Include="Source Code\Component.h">
       <Filter>Sources\Components\Base</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Source Code\DEJsonSupport.h">
       <Filter>Sources\Tools\MMath\MMJsonSupport</Filter>
     </ClInclude>
@@ -1070,6 +1069,7 @@
     <ClInclude Include="Source Code\CS_AreaLight_Bindings.h">
       <Filter>Sources\Tools\Bindings</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Code\Main.cpp">
@@ -1698,6 +1698,6 @@
     <ResourceCompile Include="Diamond Engine.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="DiamondIcon.ico" />
+    <Image Include="GameIcon.ico" />
   </ItemGroup>
 </Project>
