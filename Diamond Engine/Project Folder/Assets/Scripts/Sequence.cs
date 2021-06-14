@@ -86,12 +86,9 @@ public class Sequence : DiamondComponent
             return;
         }
 
-        float newDeltaTime = Time.deltaTime;
 
-        if (newDeltaTime > 0.016f)
-        {
-            newDeltaTime = 0.016f;
-        }
+
+        float newDeltaTime = Time.deltaTime;
 
         if (!startedNextSequence)
         {

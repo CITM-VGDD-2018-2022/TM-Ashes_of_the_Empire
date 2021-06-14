@@ -182,13 +182,11 @@ public class CinematicManager : DiamondComponent
                 Core.instance.startAvailable = false;
             }
             start = false;
+            return;
+
         }
         float newDeltaTime = Time.deltaTime;
 
-        if (newDeltaTime > 0.016f)
-        {
-            newDeltaTime = 0.016f;
-        }
 
         if (Input.GetGamepadButton(DEControllerButton.A) == KeyState.KEY_REPEAT)
         {
