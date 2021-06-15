@@ -25,6 +25,21 @@
     background: #4c00ff;
     color: white;
   }
+
+  .fa-twitter-contact {
+    background: transparent;
+    color: #55ACEE;
+  }
+
+  .fa-youtube-contact {
+    background: transparent;
+    color: #bb0000;
+  }
+
+  .github-style-contact{
+    background: transparent;
+    color: black;
+  }
   
   .fa-rss {
     background: #ff6600;
