@@ -6,7 +6,7 @@ The Mandalorian: Ashes of the Empire is a fast-paced roguelite with an emphasis 
 
 Disclaimer: play using headphones & a controller.
 
-This project is made as a 3rd year assignment for Bachelor’s Degree in Video Games by UPC at CITM, Terrassa, under the supervision of lecturer [Marc Garrigó](www.linkedin.com/in/mgarrigo/), [Joan Pons](https://www.linkedin.com/in/joanjoseppons/) & [Marc Ripoll](https://www.linkedin.com/in/marc-ripoll-tarr%C3%A9-2625303b/?originalSubdomain=es).
+This project is made as a 3rd year assignment for Bachelor’s Degree in Video Games by UPC at CITM, Terrassa, under the supervision of lecturer [Marc Garrigó](https://www.linkedin.com/in/mgarrigo/), [Joan Pons](https://www.linkedin.com/in/joanjoseppons/) & [Marc Ripoll](https://www.linkedin.com/in/marc-ripoll-tarr%C3%A9-2625303b/?originalSubdomain=es).
 
 ## [Check the Webpage!](https://citm-vgdd-2018-2022.github.io/TM-Ashes_of_the_Empire/index.html)
 
