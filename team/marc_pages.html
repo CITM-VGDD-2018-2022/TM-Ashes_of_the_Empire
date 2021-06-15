@@ -73,7 +73,7 @@
 
   <main id="main">
     <br><br>
-    <section class="inner-page">
+    <section class="inner-page" style="padding-bottom: 10px;">
       <div class="container" data-aos="fade-up">
         <div class="column-two">
           <h2>Marc Pagès</h2>
@@ -81,7 +81,7 @@
           <hr>
 
           <h3>Project Overview</h3>
-          <p>
+          <p style="text-align: justify;">
             The development of this project has been without any doubt the hardest and most time consuming subject in
             all the degree, and I don't regret having spent
             a single hour of my time on it. Being a part of the team has let me know people I hadn't talked as much in
@@ -115,7 +115,7 @@
     </section>
 
 
-    <section class="inner-page">
+    <section class="inner-page" style="padding-top: 0px;">
       <section>
         <div class="container" data-aos="fade-up">
           <div>
@@ -123,15 +123,23 @@
             <hr>
           </div>
           <div class="column-two">
-            <h3>Shader Animation</h3>
+
+            <h3><strong>Shader Animation</strong></h3>
             <p style="text-align: justify;">In order to optimize our game animation system we switched from traditional
               skeletal animation to
-              shader animation. We had to rework the entire system but it was worth witout any doubt, it decreased the
+              shader animation. It allowed us to move the processing from the CPU to the GPU, taking advantage of its
+              multihtreading capability. We had to rework the entire system but it was worth witout any doubt, it
+              decreased the
               time to calculate the new position of the mesh vertices to one fifth of its original value.</p>
-            <h3>Animation Optimitzation</h3>
+
+            <h3><strong>Animation Optimitzation</strong></h3>
             <p style="text-align: justify;">To keep FPS high, the way animations were loaded, set and reproduced was
-              optimized. Before this optimitzation only 6 characters consumed the same as the ones in the
+              optimized. I made that instead of having to iterate each bone identifying it by its name, when the
+              animation is played, every bone is identified and saved in a Look Up Table from where it will be iterated
+              from then on. Before this
+              optimitzation only 6 characters consumed the same as the ones in the
               gif, in which there are almost 400. </p>
+
           </div>
           <div class="column-two">
             <img src="../assets/img/engine/legion.gif" alt="" width="100%">
@@ -148,15 +156,15 @@
           <div class="row" style="margin-top: 2.5%;">
             <div class="column-two">
               <h3><strong>Prefabs</strong></h3>
-              <p>For fast scene editing and character and prop iteration we implemented our own prefabs system. In its
+              <p style="text-align: justify;">For fast scene editing and character and prop iteration we implemented our own prefabs system. In its
                 usage we tryied to replicate Unity as much as possible so the members of the team could easily adapt to
                 it and using them was intuitive.
               </p>
               <ul>
-                <li>Create prefabs from any kind of game object placed in the scene</li>
-                <li>Override them in real time</li>
-                <li>Set prefabs inside prefabs</li>
-                <li>Instantiate them from script</li>
+                <li>Create prefabs from any kind of game object placed in the scene.</li>
+                <li>Override them in real time.</li>
+                <li>Set prefabs inside prefabs.</li>
+                <li>Instantiate them from script.</li>
               </ul>
             </div>
             <div class="column-two">
@@ -167,7 +175,7 @@
           <div class="row" style="margin-top: 2.5%;">
             <div class="column-two">
               <h3><strong>Recast Navigation</strong></h3>
-              <p>Moving entities in scene can be a hard task if there is not a pathfinding system in the engine. <a
+              <p style="text-align: justify;">Moving entities in scene can be a hard task if there is not a pathfinding system in the engine. <a
                   href="https://github.com/recastnavigation/recastnavigation">Recast</a> is an open source library
                 which can easily create NavMeshes from meshes in scene. It comes with Detour, a pathfinding and
                 spatial reasoning toolkit. Knowing about the existence of such a powerful toolkit we couldn't resist
@@ -202,7 +210,7 @@
                 <li>Create new tags and remove existing ones for every scene, uisng only those necessary for every
                   scene. </li>
                 <li>Assign them to GameObjects in scene or prefabs.</li>
-                <li>Compare tags directly from C#</li>
+                <li>Compare tags directly from C#.</li>
               </ul>
             </div>
 
@@ -211,21 +219,23 @@
               <p>In order to use C++ funcionality from C# I implemented a full variety of functions for different
                 systems such as: </p>
               <ul>
-                <li>Animator Component</li>
-                <li>Camera management</li>
-                <li>Input</li>
-                <li>Drawing rays</li>
+                <li>Animator Component.</li>
+                <li>Camera management.</li>
+                <li>Input.</li>
+                <li>Drawing rays.</li>
               </ul>
             </div>
 
             <div class="column-three">
               <h3><strong>Engine Usability</strong></h3>
-              <p>Many people have used the engine through the development of the game, and to work faster and more
+              <p style="text-align: justify;">Many people have used the engine through the development of the game, and to work faster and more
                 confortably it is important to constantly make minor changes in the way it is used depending on the team
                 needs.</p>
               <ul>
+                <li>Auto detect which files need to be reimported, including the ones changed by someone else and
+                  received by GitHub. </li>
                 <li>Drag & dropping materials into the inspector to add them.</li>
-                <li>Easy addition of animations into Animator Component dragging & dropping fbxs. </li>
+                <li>Easy addition of animations into Animator Component dragging & dropping FBXs. </li>
               </ul>
             </div>
           </div>
@@ -240,14 +250,15 @@
           </div>
           <div class="row">
             <div class="column-two">
-              <p>During the second half of the Project I moved form engine extension to gameplay programming. What I
+              <p style="text-align: justify;">During the second half of the Project I moved form engine extension to gameplay programming. What I
                 spent most time on was in the
                 enemies implementation. During this period I participated in:
               </p>
               <ul>
-                <li>Enemies state machine development and polishing.</li>
+                <li>Enemies state machine development, general behavior and polishing.</li>
                 <li>Integrate the pathfinding system into their behavior.</li>
                 <li>Polishing interaction feedback.</li>
+                <li>Fix behavior artifacts.</li>
                 <li>Create a first and second version of the Spawn Manager.</li>
               </ul>
             </div>
@@ -265,13 +276,16 @@
           </div>
           <div class="row">
             <div class="column-two">
-              <p>During the development of the game minor bugs may be accumulated and not taken into account. For the
+              <p style="text-align: justify;">During the development of the game minor bugs may be accumulated and not taken into account. For the
                 last month of the project I was responsible of directing the scrum destinated to identify all
                 the bugs possible and fix them.</p>
-              <p>My scrum ended up touching almost every system of the game due to the fact that game development
+              <p style="text-align: justify;">My scrum ended up touching almost every system of the game due to the fact that game development
                 implies that sometimes some tasks may be rushed and this can bring to code which lacks important
                 nullchecks, does not completely accomplish its purpose or requires some optimitzation. For this reason
-                we constantly made testing and tried to solve all the bugs reported by the rest of the team. </p>
+                we constantly made testing and tried to solve all the bugs reported by the rest of the team. </br>
+                It also meant having to do an entire rework of scripts such as the postboss shop, the damaging water and
+                part of the boons.
+              </p>
             </div>
             <div class="column-two">
               <img src="../assets/img/engine/jumping_stormtroopers.gif" alt="" width="100%" width="auto">
