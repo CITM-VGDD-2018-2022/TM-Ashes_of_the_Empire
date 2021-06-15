@@ -74,7 +74,7 @@ Game developed by Virtual Ragnarok:
 ### Controller
 
 * Left Joystick
-	- Move Mando around / Move around when shooting / Navigate through the menus.
+	- Move Mando around / Navigate through the menus.
 
 * R2
 	- Dash, increasing your speed momentarily in the direction of your movement. This makes moving & Shooting unavailable for the duration of the action; also makes the fire rate of the shooting faster.
@@ -83,16 +83,16 @@ Game developed by Virtual Ragnarok:
 	- Select items in the menus & pass dialogues.
 	
 * X
-	- Shoot, becoming still in the process, & using the Left Joystick to aim. This weapon has a "Heat mechanic", the more you use it, the less fire rate it will have; if you overdo it the weapon will enter in an "overheat" state where you will be not able to shot until it has completely cooled down. You can cool it down by not shooting or by using other weapons.
+	- Shoot, becoming still in the process, & using the Left Joystick to aim. This weapon has a "Heat mechanic", the more you use it, the less fire rate it will have; if you overdo it the weapon will enter in an "overheat" state where you will be not able to shot until it has completely cooled down. You can cool it down by not shooting or by using other weapons. Note that this weapon has a high degree of autoaim.
 	
 * Y
-	- CrypPulse Device (CPD) Launcher, becoming still in the process, & using the Left Joystick to aim. Shoots a mine-like device that explodes in contact with the ground or in a few seconds; once it explodes it deploys an area that hits consecutively in an area. You can't throw another set of CPD until every single one has disappeared. The longer the button is pressed, the further the CPD will go.
+	- CrypPulse Device (CPD) launcher, becoming still in the process, & using the Left Joystick to aim. Shoots a mine-like device that explodes in contact with the ground or in a few seconds; once it explodes it deploys an area that damages foes over time while slowing their movements. You can't throw another set of CPD until every single one has disappeared. The longer the button is pressed, the further the CPD will go.
 
 * B
 	- Sniper Shot, becoming still in the process, & using the Left Joystick to aim. Holding down this button makes the Mandalorian charge his sniper rifle, once you release it you shot the bullet with less or more damage depending on the charge. If the sniper laser is red, it is undercharged; if it is yellow is optimally charged and if it neeps between white & red is overcharged & won't do as much damage. You have 2 sniper charges that regenerate with time.
 
 * L2
-	- Push Companion Skill, use the force through Grogu to channel a Force Wall in front of you, that propels forward and moves enemies and will fade with time.
+	- Push Companion Skill, use the force through Grogu to channel a Force field in front of you, and watch as it launches itself forward pushing your enemies away.
 
 * L1
 	- Wall Companion Skill, use the force through Grogu to channel a Force Wall in front of you, that is static and will act as a cover as long as it has HP.
