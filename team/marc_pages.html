@@ -89,13 +89,16 @@
             with them and collaborate to create an amazing game. In the team we have great people who have shown how
             creative and effcient they can be and have helped
             me grow and learn. </br>
-          </br>
-          Improving and expanding our engine, allong with programming the enemies and other gameplay elements has helped me learn C++, C# and how important it is 
-          to write functional, safe and readable code.</br>
-          Spending the last month of the Project 
-            doing QA and bugfixing has made me learn how to find errors more easily and fix them in a clean and creative way.</br>
-          </br>
-            The entire Project has been a great way to learn hard and soft skills and an experience I will remember with affection despite the hard times. 
+            </br>
+            Improving and expanding our engine, allong with programming the enemies and other gameplay elements has
+            helped me learn C++, C# and how important it is
+            to write functional, safe and readable code.</br>
+            Spending the last month of the Project
+            doing QA and bugfixing has made me learn how to find errors more easily and fix them in a clean and creative
+            way.</br>
+            </br>
+            The entire Project has been a great way to learn hard and soft skills and an experience I will remember with
+            affection despite the hard times.
           </p>
           <a href="https://www.linkedin.com/in/marc-pagès-francesch-7206b3186/" target="_blank"
             class="fa fa-linkedin"></a>
@@ -105,8 +108,8 @@
         <div class="column-two">
           <div class="profile-pic">
             <img class="individual-img" src="../assets/img/team/marc_pages.jpeg" alt=""
-            style="display: block;margin-left: auto; margin-right: auto;">
-          </div>          
+              style="display: block;margin-left: auto; margin-right: auto;">
+          </div>
         </div>
       </div>
     </section>
@@ -120,12 +123,15 @@
             <hr>
           </div>
           <div class="column-two">
-            <h3><strong>Shader Animation</strong></h3>
-            <p>In order to optimize our game animation system we switched from traditional skeletal animation to
-              animation using shaders.</p>
-            <h3><strong>Animation Optimitzation</strong></h3>
-            <p>To keep fps high, the way animations were loaded and set was optimized increasing the performance five
-              times.</p>
+            <h3>Shader Animation</h3>
+            <p style="text-align: justify;">In order to optimize our game animation system we switched from traditional
+              skeletal animation to
+              shader animation. We had to rework the entire system but it was worth witout any doubt, it decreased the
+              time to calculate the new position of the mesh vertices to one fifth of its original value.</p>
+            <h3>Animation Optimitzation</h3>
+            <p style="text-align: justify;">To keep FPS high, the way animations were loaded, set and reproduced was
+              optimized. Before this optimitzation only 6 characters consumed the same as the ones in the
+              gif, in which there are almost 400. </p>
           </div>
           <div class="column-two">
             <img src="../assets/img/engine/legion.gif" alt="" width="100%">
@@ -139,25 +145,92 @@
             <h2 style="text-align: center;">Engine Systems</h2>
             <hr>
           </div>
-          <div class="row">
+          <div class="row" style="margin-top: 2.5%;">
             <div class="column-two">
               <h3><strong>Prefabs</strong></h3>
-              <p>Create prefabs from any kind of game object placed in the scene</p>
-              <p>Override them in real time</p>
-              <p>Set prefabs inside prefabs</p>
-              <p>Instantiate them from script</p>
-              <img src="../assets/img/engine/prefabs_01.gif" alt="" width="100%" width="auto">
+              <p>For fast scene editing and character and prop iteration we implemented our own prefabs system. In its
+                usage we tryied to replicate Unity as much as possible so the members of the team could easily adapt to
+                it and using them was intuitive.
+              </p>
+              <ul>
+                <li>Create prefabs from any kind of game object placed in the scene</li>
+                <li>Override them in real time</li>
+                <li>Set prefabs inside prefabs</li>
+                <li>Instantiate them from script</li>
+              </ul>
             </div>
             <div class="column-two">
-              <h3><strong>Recast</strong></h3>
-              <p>Create NavMeshes from static objects</p>
-              <p>Find a path easily between two points of the NavMesh</p>
-              <p>Find a point in the NavMesh around another point</p>
-              <p>Use all of its functionality from C#</p>
+              <img src="../assets/img/engine/prefabs_01.gif" alt="" width="100%" width="auto">
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 2.5%;">
+            <div class="column-two">
+              <h3><strong>Recast Navigation</strong></h3>
+              <p>Moving entities in scene can be a hard task if there is not a pathfinding system in the engine. <a
+                  href="https://github.com/recastnavigation/recastnavigation">Recast</a> is an open source library
+                which can easily create NavMeshes from meshes in scene. It comes with Detour, a pathfinding and
+                spatial reasoning toolkit. Knowing about the existence of such a powerful toolkit we couldn't resist
+                integrating it
+                into Diamond Engine. With its implementation we accomplisehd that the usaer could: </p>
+              <ul>
+                <li>Create NavMeshes from static objects.</li>
+                <li>Find a path easily between two points of the NavMesh.</li>
+                <li>Find a point in the NavMesh around another point.</li>
+                <li>Check if a path between two points can be created.</li>
+                <li>Use all of its functionality from C#.</li>
+              </ul>
+            </div>
+            <div class="column-two">
               <img src="../assets/img/engine/recast.gif" alt="" width="100%" width="auto">
             </div>
           </div>
       </section>
+
+      <section>
+        <div class="container" data-aos="fade-up">
+          <div>
+            <h2 style="text-align: center;">Minor Implementations</h2>
+            <hr>
+          </div>
+          <div class="row" style="margin-top: 2.5%;">
+            <div class="column-three">
+              <h3><strong>Tags</strong></h3>
+              <p>For GameObject differentiations I implemented a basic tags system which lets the user:
+              </p>
+              <ul>
+                <li>Create new tags and remove existing ones for every scene, uisng only those necessary for every
+                  scene. </li>
+                <li>Assign them to GameObjects in scene or prefabs.</li>
+                <li>Compare tags directly from C#</li>
+              </ul>
+            </div>
+
+            <div class="column-three">
+              <h3><strong>C++/C# communication</strong></h3>
+              <p>In order to use C++ funcionality from C# I implemented a full variety of functions for different
+                systems such as: </p>
+              <ul>
+                <li>Animator Component</li>
+                <li>Camera management</li>
+                <li>Input</li>
+                <li>Drawing rays</li>
+              </ul>
+            </div>
+
+            <div class="column-three">
+              <h3><strong>Engine Usability</strong></h3>
+              <p>Many people have used the engine through the development of the game, and to work faster and more
+                confortably it is important to constantly make minor changes in the way it is used depending on the team
+                needs.</p>
+              <ul>
+                <li>Drag & dropping materials into the inspector to add them.</li>
+                <li>Easy addition of animations into Animator Component dragging & dropping fbxs. </li>
+              </ul>
+            </div>
+          </div>
+      </section>
+
 
       <section>
         <div class="container" data-aos="fade-up">
@@ -167,9 +240,16 @@
           </div>
           <div class="row">
             <div class="column-two">
-              <p>Enemies state machine development and polish</p>
-              <p>Recast implementation</p>
-              <p>Interaction feedback</p>
+              <p>During the second half of the Project I moved form engine extension to gameplay programming. What I
+                spent most time on was in the
+                enemies implementation. During this period I participated in:
+              </p>
+              <ul>
+                <li>Enemies state machine development and polishing.</li>
+                <li>Integrate the pathfinding system into their behavior.</li>
+                <li>Polishing interaction feedback.</li>
+                <li>Create a first and second version of the Spawn Manager.</li>
+              </ul>
             </div>
             <div class="column-two">
               <img src="../assets/img/engine/enemies_showcase.gif" alt="" width="100%" width="auto">
@@ -185,8 +265,13 @@
           </div>
           <div class="row">
             <div class="column-two">
-              <p>For the last month of the Project I was responsible of directing the scrum destinated to identify all
+              <p>During the development of the game minor bugs may be accumulated and not taken into account. For the
+                last month of the project I was responsible of directing the scrum destinated to identify all
                 the bugs possible and fix them.</p>
+              <p>My scrum ended up touching almost every system of the game due to the fact that game development
+                implies that sometimes some tasks may be rushed and this can bring to code which lacks important
+                nullchecks, does not completely accomplish its purpose or requires some optimitzation. For this reason
+                we constantly made testing and tried to solve all the bugs reported by the rest of the team. </p>
             </div>
             <div class="column-two">
               <img src="../assets/img/engine/jumping_stormtroopers.gif" alt="" width="100%" width="auto">
