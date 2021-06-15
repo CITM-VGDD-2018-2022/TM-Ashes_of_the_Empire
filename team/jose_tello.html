@@ -50,7 +50,7 @@
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center">
             <img src="../assets/img/virtual_ragnarok/virtual_ragnarok_icon_black_transparent_no_text.png" alt="" width="50px" height="auto" style="margin-right: 3%;">
-            <a href="index.html" class="logo me-auto"><img src="../assets/img/virtual_ragnarok/game_title.png" alt="" height="auto" width="250px"></a>
+            <a href="../index.html" class="logo me-auto"><img src="../assets/img/virtual_ragnarok/game_title.png" alt="" height="auto" width="250px"></a>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
@@ -104,7 +104,6 @@
                 </div>
                 <div class="column-two">
 
-                    
                     <h4>Directional & Area lights: </h4>
                     <p>&emsp; Normal and specular maps</p>
                     <p>&emsp; Bump depth</p>
@@ -112,6 +111,7 @@
                     <p>&emsp; Activate / deactivate shadow casting</p>
                     <p>&emsp; Size, area, fade distance and max distance (area light only)</p>
 
+                    <br />
                     <h4>Area light shadows: </h4>
                     <p>Implemented using omnidirectional shadowmaping</p>
 
@@ -148,12 +148,18 @@
                 </div>
 
                 <div>
-                    <p>Each particle system can hold multiple emitters, with different settings such as:</p>
-                    <p>&emsp;&emsp;· Particle rate  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Color</p>
-                    <p>&emsp;&emsp;· Texture        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Max - min life time</p>
-                    <p>&emsp;&emsp;· Delay          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Max - min size</p>
+                    <p>Each particle system can hold <strong>multiple emitters</strong>, with <strong>different</strong> settings such as:</p>
 
-                    <p>The emitters can also have different effects applied to them, for example the ones shown in the left have: Color over life time and area spawn.</p>
+                    <ul>
+                        <li>Particle rate</li>
+                        <li>Texture</li>
+                        <li>Delay</li>
+                        <li>Color</li>
+                        <li>Max - min life time</li>
+                        <li>Max - min size</li>
+                    </ul>
+
+                    <p>The emitters can also have <strong>different effects</strong> applied to them, for example the ones shown in the left have: Color over life time and area spawn.</p>
                 </div>
             </div>
         </section>
@@ -166,25 +172,31 @@
                 </div>
                 <div class="column-two">
                     <h4><strong>Rancor first implementation</strong></h4>
+                    <br />
                     <img src="../assets/img/individual-pages/JoseRancorFightGif.gif" alt="" height="100%" width="auto"> <!-- Rancor gif-->
                     <br />
                     <br />
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· State machine implementation</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Melee combo</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Projectile attack</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Decision making</p>
+                    <ul>
+                        <li>State machine implementation</li>
+                        <li>Decision making</li>
+                        <li>Melee combo</li>
+                        <li>Projectile attack</li>
+                    </ul>
 
                 </div>
 
                 <div class="column-two">
                     <h4><strong>Moff Gideon final implementation and polish</strong></h4>
+                    <br />
                     <img src="../assets/img/individual-pages/JoseMoffFightGif.gif" alt="" height="100%" width="auto"> <!-- Moff gif-->
                     <br />
                     <br />
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· State machine implementation</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Slash combo</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Lightning dash start an recovery</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;· Decision making</p>
+                    <ul>
+                        <li>State machine implementation</li>
+                        <li>Decision making</li>
+                        <li>Slash combo</li>
+                        <li>Lightning dash start an recovery</li>
+                    </ul>
 
                 </div>
             </div>
@@ -199,9 +211,12 @@
                 <div class="column-two">
                     <br />
                     <br />
-                    <p> The UI system is based on a canvas that holds all UI elements, which will be rendered to the game camera. The UI elements can be moved using the 2d transform component.</p>
-                    <p> The UI can automatically adjust to the width and height of the screen or maintain its size independent to the screen size.</p>
-                    <p> It includes a text system that supports TTF fonts, and allows to set a maximum length and change it's color</p>
+                    <p>
+                        The UI system is based on a <strong>canvas</strong> that holds all UI elements, which will be rendered to the game camera.
+                        The UI elements can be moved using the <strong>2d transform</strong> component.
+                    </p>
+                    <p> The UI can <strong>automatically adjust</strong> to the width and height of the screen or <strong>maintain it's size</strong> independent to the screen size.</p>
+                    <p> It includes a <strong>text system</strong> that supports TTF fonts, and allows to set a maximum length and change it's color.</p>
 
                     <p> I also worked on UI ease-ins, fade-ins, button transitions and the grenade reload effect. </p>
                 </div>
@@ -216,10 +231,16 @@
                 <div>
                     <h3 style="text-align: center;"><strong>Companion</strong></h3>
                     <hr>
-                    <h4>Grogu movement first implementation and push skill</h4>
                 </div>
 
                 <div class="column-two">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h4>Grogu movement first implementation and push skill</h4>
                     <p>The first movement implementation was based on colliders that defined witch positions Grogu would collide with a wall.</p>
                 </div>
                 <div class="column-two">
